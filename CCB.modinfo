@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Release ModID-->
-<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e00" version="1100">
+<!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e00" version="1200"> -->
 
 <!-- BETA ModID-->
-<!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1100"> -->
+<!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1200"> -->
 
 <!-- WIP ModID -->
-<!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1100"> -->
+<!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1200"> -->
 	<Properties>
-		<Name>CCB 基础 1.1.0</Name>
+		<Name>CCB 基础 1.2.0 WIP</Name>
 		<Description>
 			中国特色平衡模组，取代BBG。
 		</Description>
