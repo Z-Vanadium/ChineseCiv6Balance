@@ -81,6 +81,26 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD', 'BBG_WBH_FISHING_BOAT_PROD'),
     ('TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD', 'BBG_WBH_FISHING_BOAT_FOOD');
 
+-- builder no longer make whalesperm
+DELETE FROM Improvement_ValidBuildUnits WHERE ImprovementType = 'IMPROVEMENT_LIME_THULE_WHALESPERM' AND UnitType = 'UNIT_BUILDER';
+
+-- whalemaker can teleport to city or harbor
+INSERT OR IGNORE INTO TypeProperties (Type, Name, Value) VALUES
+    ('UNIT_CCB_THULE_WHALEMAKER', 'CAN_TELEPORT_TO_CITY', 1);
+
+-- Thule's palace get a whalemaker with shipbuilding
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD', 'CCB_THULE_WM_GIVER_SHIPBUILDING');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_THULE_WM_GIVER_SHIPBUILDING', 'MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL', 1, 1, 0, NULL, 'BBG_UTILS_PLAYER_HAS_TECH_SHIPBUILDING');
+
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_THULE_WM_GIVER_SHIPBUILDING', 'AllowUniqueOverride', '1'), 
+('CCB_THULE_WM_GIVER_SHIPBUILDING', 'Amount', '1'), 
+('CCB_THULE_WM_GIVER_SHIPBUILDING', 'UnitType', 'UNIT_CCB_THULE_WHALEMAKER');
+
+
 -- ==========================================================
 -- =                        DOGSLED                         =
 -- ==========================================================
