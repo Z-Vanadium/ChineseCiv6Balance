@@ -88,25 +88,17 @@ DELETE FROM Improvement_ValidBuildUnits WHERE ImprovementType = 'IMPROVEMENT_LIM
 INSERT OR IGNORE INTO TypeProperties (Type, Name, Value) VALUES
     ('UNIT_CCB_THULE_WHALEMAKER', 'CAN_TELEPORT_TO_CITY', 1);
 
--- Thule's palace get a whalemaker with shipbuilding and cartography
+-- Thule's palace get a whalemaker with shipbuilding
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
 ('TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD', 'CCB_THULE_WM_GIVER_SHIPBUILDING');
 
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_THULE_WM_GIVER_SHIPBUILDING', 'MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL', 1, 1, 0, 'BBG_UTILS_PLAYER_HAS_TECH_SHIPBUILDING', 'PLAYER_HAS_AT_LEAST_ONE_CITY_REQUIREMENTS');
+('CCB_THULE_WM_GIVER_SHIPBUILDING', 'MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL', 1, 1, 0, NULL, 'BBG_UTILS_PLAYER_HAS_TECH_SHIPBUILDING');
 
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_THULE_WM_GIVER_SHIPBUILDING', 'AllowUniqueOverride', '1'), 
 ('CCB_THULE_WM_GIVER_SHIPBUILDING', 'Amount', '1'), 
 ('CCB_THULE_WM_GIVER_SHIPBUILDING', 'UnitType', 'UNIT_CCB_THULE_WHALEMAKER');
-
-INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_THULE_WM_GIVER_CARTOGRAPHY', 'MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL', 1, 1, 0, 'BBG_UTILS_PLAYER_HAS_TECH_CARTOGRAPHY', 'PLAYER_HAS_AT_LEAST_ONE_CITY_REQUIREMENTS');
-
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_THULE_WM_GIVER_CARTOGRAPHY', 'AllowUniqueOverride', '1'), 
-('CCB_THULE_WM_GIVER_CARTOGRAPHY', 'Amount', '1'), 
-('CCB_THULE_WM_GIVER_CARTOGRAPHY', 'UnitType', 'UNIT_CCB_THULE_WHALEMAKER');
 
 
 -- ==========================================================

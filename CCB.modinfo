@@ -23,13 +23,6 @@
 		<Mod id="1B28771A-C749-434B-9053-D1380C553DE9" title="Expansion: Rise and Fall"/>
 		<Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="Expansion: Gathering Storm" />
 	</Dependencies>
-
-	
-	<References>
-	<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e30" title="CCB Expanded Release"/>
-	<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e34" title="CCB Expanded WIP"/>
-	<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e38" title="CCB Expanded beta"/>
-	</References>
 	
 	<!-- can load only select files based on these requirements, if applied -->
 	<ActionCriteria>
@@ -288,7 +281,7 @@
 		<!-- I don't know how to do an OR -->
 		<Criteria id="BBGExpanded_WIP">
 			<!-- WIP -->
-			<ModInUse>8af4fe8e-5406-7d72-d9d6-a8f5d1b66e34</ModInUse>
+			<ModInUse>8af4fe8e-5406-7d72-d9d6-a8f5d1b66e30</ModInUse>
 		</Criteria>
 		<Criteria id="BBGExpanded_Release">
 			<!-- Release -->
