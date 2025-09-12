@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Release ModID-->
-<!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e00" version="1200"> -->
+<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e00" version="102">
 
 <!-- BETA ModID-->
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1200"> -->
 
 <!-- WIP ModID -->
-<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="102">
+<!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="102"> -->
 	<Properties>
 		<Name>CCB 基础 1.0.2 beta</Name>
 		<Description>
-			中国特色平衡模组，取代BBG。（Beta测试版）
+			中国特色平衡模组，取代BBG。
 		</Description>
-		<Teaser>中国特色平衡模组，取代BBG。（Beta测试版）</Teaser>
+		<Teaser>中国特色平衡模组，取代BBG。</Teaser>
 		<Authors>github.com/CivilizationVIBetterBalancedGame</Authors>
 		<Version>102</Version>
 		<SpecialThanks>GLaYD, Violet, 千川白浪，Vanadium，煎包，猪脚，gDot，Alan, 小闹钟，以及bbg制作组以前的努力</SpecialThanks>
