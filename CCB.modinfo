@@ -281,7 +281,7 @@
 		<!-- I don't know how to do an OR -->
 		<Criteria id="BBGExpanded_WIP">
 			<!-- WIP -->
-			<ModInUse>8af4fe8e-5406-7d72-d9d6-a8f5d1b66e30</ModInUse>
+			<ModInUse>8af4fe8e-5406-7d72-d9d6-a8f5d1b66e34</ModInUse>
 		</Criteria>
 		<Criteria id="BBGExpanded_Release">
 			<!-- Release -->
