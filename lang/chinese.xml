@@ -4409,14 +4409,14 @@
 			<Text>雪橇猎人</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_LIME_THULE_DOGSLED_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>图勒远古时代特色侦查单位，替代侦察兵，造价更低。拥有一次 [ICON_CHARGES] 劳动力次数，能建造猎人小屋。</Text>
+			<Text>图勒远古时代特色侦查单位，替代侦察兵。拥有一次 [ICON_CHARGES] 劳动力次数，能建造猎人小屋。</Text>
 		</Replace>
 		<!-- = Unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_LIME_THULE_WBH_NAME" Language="zh_Hans_CN">
 			<Text>猎人小屋</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_LIME_THULE_WBH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>图勒特色改良设施，在“航海术”科技解锁。建在冻土单元格上时获得+1 [ICON_FOOD] 食物（雪地则翻倍）。每相邻1个海洋资源或营地获得+1 [ICON_CULTURE] 文化值和+1 [ICON_FAITH] 信仰值。必须建在与加成或奢侈品资源相邻的单元格。“飞行”科技后提供等同于 [ICON_FAITH] 信仰值的 [ICON_Tourism] 旅游业绩。可建造在树林上。不能建在另一个猎人小屋旁。</Text>
+			<Text>图勒特色改良设施。建在冻土单元格上时获得+1 [ICON_FOOD] 食物（雪地则翻倍）。每相邻1个海洋资源或营地获得+1 [ICON_CULTURE] 文化值和+1 [ICON_FAITH] 信仰值。必须建在与加成或奢侈品资源相邻的单元格。“飞行”科技后提供等同于 [ICON_FAITH] 信仰值的 [ICON_Tourism] 旅游业绩。可建造在树林上。不能建在另一个猎人小屋旁。</Text>
 		</Replace>
 		<!--  Cities  -->
 		<Replace Tag="LOC_CITY_NAME_LIME_THULE_DAVE_QILAKITSOQ" Language="zh_Hans_CN">
