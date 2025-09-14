@@ -297,6 +297,8 @@ INSERT INTO ModifierStrings (ModifierId , Context , Text) VALUES
 
 -- 03/03/25 Modern Armor : Gets +1 movement.  
 UPDATE Units SET BaseMoves=5 WHERE UnitType='UNIT_MODERN_ARMOR';
+-- 2025/9/14 Modern Armor : Cost 680 -> 700.
+UPDATE Units SET Cost=700 WHERE UnitType='UNIT_MODERN_ARMOR';
 -- +5 when defending inside friendly territory and +5 when attacking outside of friendly territory
 INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
     ('BBG_UNIT_IS_DEFENDER_IN_FRIENDLY_REQSET', 'REQUIREMENTSET_TEST_ALL'),
@@ -399,6 +401,8 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_ARTILLERY_DEFENSIBLE_DISTRICTS', 'Amount', 5);
 INSERT INTO ModifierStrings (ModifierId, Context , Text) VALUES
     ('BBG_ARTILLERY_DEFENSIBLE_DISTRICTS', 'Preview', 'LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_DESC');
+
+
 
 
 
