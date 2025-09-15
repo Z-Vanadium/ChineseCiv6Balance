@@ -2,7 +2,10 @@
 -- Byzantium
 --==================
 -- reduce combat bonus for holy cities
-UPDATE ModifierArguments SET Value='2' WHERE ModifierId='BYZANTIUM_COMBAT_HOLY_CITIES' AND Name='Amount';
+-- 2025/9/15 削弱拜占庭洗教加力至2->1
+UPDATE ModifierArguments SET Value='1' WHERE ModifierId='BYZANTIUM_COMBAT_HOLY_CITIES' AND Name='Amount';
+-- 2025/9/15 增加拜占庭发教加力1->2
+
 -- remove dromon combat bonus
 -- 25/10/23 remove dromon combat bonus again
 -- nerf dromon cs bonus to +5
