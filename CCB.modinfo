@@ -6,15 +6,15 @@
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1200"> -->
 
 <!-- WIP ModID -->
-<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="103">
+<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="102">
 	<Properties>
-		<Name>CCB 基础 1.0.3 beta</Name>
+		<Name>CCB 基础 1.0.2 beta</Name>
 		<Description>
 			中国特色平衡模组，取代BBG。（Beta测试版）
 		</Description>
 		<Teaser>中国特色平衡模组，取代BBG。（Beta测试版）</Teaser>
 		<Authors>github.com/CivilizationVIBetterBalancedGame</Authors>
-		<Version>103</Version>
+		<Version>102</Version>
 		<SpecialThanks>GLaYD, Violet, 千川白浪，Vanadium，煎包，猪脚，gDot，Alan, 小闹钟，以及bbg制作组以前的努力</SpecialThanks>
 		<CompatibleVersions>2.0</CompatibleVersions>
 	</Properties>
@@ -475,6 +475,7 @@
 			<File>sql/Base/Beliefs.sql</File>
 			<File>sql/Base/Features.sql</File>
 			<File>sql/Base/Buildings.sql</File>
+			<File>sql/Base/CityStates.sql</File>
 			<File>sql/Base/Districts.sql</File>
 			<File>sql/Base/Government.sql</File>
 			<File>sql/Base/GreatPeoples.sql</File>
@@ -502,16 +503,9 @@
 			<File>sql/Base/Spain.sql</File>
 			<File>sql/Base/Sumer.sql</File>
 		</UpdateDatabase>
-		<UpdateDatabase id="CityStates">
-			<Properties>
-				<LoadOrder>11612</LoadOrder>
-			</Properties>
-			<File>sql/CityStates/Chinguetti.sql</File>
-			<File>sql/CityStates/CityStates.sql</File>
-		</UpdateDatabase>
 		<UpdateDatabase id="BBG_XP1">
 			<Properties>
-				<LoadOrder>11613</LoadOrder>
+				<LoadOrder>11612</LoadOrder>
 			</Properties>
 			<Criteria>XP1</Criteria>
 			<File>sql/XP1/xp1__rise_and_fall.sql</File>
@@ -531,7 +525,7 @@
 		<!-- XP1 or XP2-->
 		<UpdateDatabase id="BBG_XP1_OR_XP2">
 			<Properties>
-				<LoadOrder>11614</LoadOrder>
+				<LoadOrder>11613</LoadOrder>
 			</Properties>
 			<Criteria>XP1_OR_XP2</Criteria>
 			<File>sql/XP1/Government_XP1_or_XP2.sql</File>
@@ -543,7 +537,7 @@
 		</UpdateDatabase>
 		<UpdateDatabase id="BBG_XP2">
 			<Properties>
-				<LoadOrder>11615</LoadOrder>
+				<LoadOrder>11614</LoadOrder>
 			</Properties>
 			<Criteria>XP2</Criteria>
 			<File>sql/XP2/xp2__gathering_storm.sql</File>
@@ -578,7 +572,7 @@
 		<!-- XP1 and XP2 -->
 		<UpdateDatabase id="BBG_XP1_AND_XP2">
 			<Properties>
-				<LoadOrder>11616</LoadOrder>
+				<LoadOrder>11615</LoadOrder>
 			</Properties>
 			<Criteria>XP1_AND_XP2</Criteria>
 			<File>sql/XP1/Buildings_XP1_and_XP2.sql</File>
@@ -587,14 +581,14 @@
 		<!-- -->
 		<UpdateDatabase id="BBG_Aztec">
 			<Properties>
-				<LoadOrder>11617</LoadOrder>
+				<LoadOrder>11616</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Aztec</Criteria>
 			<File>sql/DLC_Aztec/Aztec.sql</File>
 		</UpdateDatabase>
 		<UpdateDatabase id="BBG_Vikings">
 			<Properties>
-				<LoadOrder>11618</LoadOrder>
+				<LoadOrder>11617</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Vikings</Criteria>
 			<File>sql/DLC_Vikings/dlc_vikings.sql</File>
@@ -602,14 +596,14 @@
 		
 		<UpdateDatabase id="BBG_Poland">
 			<Properties>
-				<LoadOrder>11619</LoadOrder>
+				<LoadOrder>11618</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Poland</Criteria>
 			<File>sql/DLC_Poland/dlc_poland.sql</File>
 		</UpdateDatabase>
 		<UpdateDatabase id="BBG_XP2_Poland">
 			<Properties>
-				<LoadOrder>11620</LoadOrder>
+				<LoadOrder>11619</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Poland</Criteria>
 			<Criteria>XP2</Criteria>
@@ -618,14 +612,14 @@
 		<!-- -->
 		<UpdateDatabase id="BBG_Austrlia">
 			<Properties>
-				<LoadOrder>11621</LoadOrder>
+				<LoadOrder>11620</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Australia</Criteria>
 			<File>sql/DLC_Australia/dlc_australia.sql</File>
 		</UpdateDatabase>
 		<UpdateDatabase id="BBG_XP2_Australia">
 			<Properties>
-				<LoadOrder>11622</LoadOrder>
+				<LoadOrder>11621</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Australia</Criteria>
 			<Criteria>XP2</Criteria>
@@ -634,7 +628,7 @@
 		<!-- -->
 		<UpdateDatabase id="BBG_Macedon_Persia">
 			<Properties>
-				<LoadOrder>11623</LoadOrder>
+				<LoadOrder>11622</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Macedon_Persia</Criteria>
 			<File>sql/DLC_Macedon_Persia/Macedon.sql</File>
@@ -643,7 +637,7 @@
 		</UpdateDatabase>
 		<UpdateDatabase id="BBG_XP1_Macedon_Persia">
 			<Properties>
-				<LoadOrder>11624</LoadOrder>
+				<LoadOrder>11623</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Macedon_Persia</Criteria>
 			<Criteria>XP1</Criteria>
@@ -651,7 +645,7 @@
 		</UpdateDatabase>
 		<UpdateDatabase id="BBG_XP2_Macedon_Persia">
 			<Properties>
-				<LoadOrder>11625</LoadOrder>
+				<LoadOrder>11624</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Macedon_Persia</Criteria>
 			<Criteria>XP2</Criteria>
@@ -671,14 +665,14 @@
 		<!-- -->
 		<UpdateDatabase id="BBG_Nubia">
 			<Properties>
-				<LoadOrder>11626</LoadOrder>
+				<LoadOrder>11625</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Nubia</Criteria>
 			<File>sql/DLC_Nubia/dlc_nubia.sql</File>
 		</UpdateDatabase>
 		<UpdateDatabase id="BBG_XP2_Nubia">
 			<Properties>
-				<LoadOrder>11627</LoadOrder>
+				<LoadOrder>11626</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Nubia</Criteria>
 			<Criteria>XP2</Criteria>
@@ -686,7 +680,7 @@
 		</UpdateDatabase>
 		<UpdateDatabase id="BBG_NFP_Nubia">
 			<Properties>
-				<LoadOrder>11628</LoadOrder>
+				<LoadOrder>11626</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Nubia</Criteria>
 			<Criteria>Ethiopia</Criteria>
@@ -695,7 +689,7 @@
 		<!-- -->
 		<UpdateDatabase id="BBG_Indonesia_Khmer">
 			<Properties>
-				<LoadOrder>11629</LoadOrder>
+				<LoadOrder>11627</LoadOrder>
 			</Properties>
 			<Criteria>DLC_Indonesia_Khmer</Criteria>
 			<File>sql/DLC_Indonesia_Khmer/Other.sql</File>
