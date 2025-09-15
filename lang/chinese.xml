@@ -178,6 +178,9 @@
 		<Replace Tag="LOC_ABILITY_BYZANTIUM_RELIGIOUS_UNITS_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>每有1座圣城皈依拜占庭的宗教，单位则获得+2 [ICON_Strength] 战斗力。</Text>
 		</Replace>
+		<Replace Tag="LOC_CCB_BYZANTIUM_RELIGION_CS_BONUS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_Strength] 战斗力，来自拜占庭的圣城。</Text>
+		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_BYZANTIUM_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>每有1座圣城皈依拜占庭的宗教（也包括拜占庭的圣城），单位便获得+2 [ICON_Strength] 战斗力或 [ICON_Religion] 宗教战斗力。如城市拥有圣地区域，其提供的 [ICON_GreatProphet] 大预言家点数+1。[NEWLINE][NEWLINE]击杀敌方文明或城邦的单位时，拜占庭的宗教将传播到5单元格内的城市（宗教压力基于被击杀单位的 [ICON_Strength] 战斗力）。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：无。</Text>
 		</Replace>
