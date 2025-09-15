@@ -502,7 +502,7 @@
 			<File>sql/Base/Spain.sql</File>
 			<File>sql/Base/Sumer.sql</File>
 		</UpdateDatabase>
-		<UpdateDatabase id="CityStates">
+		<UpdateDatabase id="City_States">
 			<Properties>
 				<LoadOrder>11612</LoadOrder>
 			</Properties>
@@ -1236,7 +1236,6 @@
 		<File>sql/Base/Brazil.sql</File>
 		<File>sql/Base/Buildings.sql</File>
 		<File>sql/Base/China.sql</File>
-		<File>sql/Base/CityStates.sql</File>
 		<File>sql/Base/Districts.sql</File>
 		<File>sql/Base/Egypt.sql</File>
 		<File>sql/Base/England.sql</File>
@@ -1260,6 +1259,9 @@
 		<File>sql/Base/Sumer.sql</File>
 		<File>sql/Base/Units.sql</File>
 		<File>sql/Base/Wonders.sql</File>
+		<!-- City States-->
+		<File>sql/CityStates/Chinguetti.sql</File>
+		<File>sql/CityStates/CityStates.sql</File>
 		<!-- XP 1-->
 		<File>sql/XP1/_xp1_utils.sql</File>
 		<File>sql/XP1/xp1__rise_and_fall.sql</File>

@@ -2,7 +2,9 @@
 -- Byzantium
 --==================
 -- reduce combat bonus for holy cities
--- UPDATE ModifierArguments SET Value='2' WHERE ModifierId='BYZANTIUM_COMBAT_HOLY_CITIES' AND Name='Amount';
+-- 2025/9/15 削弱拜占庭洗教加力至2->1
+UPDATE ModifierArguments SET Value='1' WHERE ModifierId='BYZANTIUM_COMBAT_HOLY_CITIES' AND Name='Amount';
+
 -- remove dromon combat bonus
 -- 25/10/23 remove dromon combat bonus again
 -- nerf dromon cs bonus to +5
@@ -29,10 +31,6 @@ UPDATE Districts SET Cost=30 WHERE DistrictType='DISTRICT_HIPPODROME';
 -- 19/12/23 hippodromes to 2 amenities (from 3)
 -- 26/02/23 reverted to +3
 -- UPDATE Districts SET Entertainment=2 WHERE DistrictType='DISTRICT_HIPPODROME';
-
--- 2025/09/15 each holy city to +1 cs (from +2)
-UPDATE ModifierArguments SET Value=1 WHERE ModifierId='BYZANTIUM_COMBAT_HOLY_CITIES' and Name="Amount";
-UPDATE ModifierArguments SET Value=1 WHERE ModifierId='BYZANTIUM_RELIGIOUS_COMBAT_HOLY_CITIES' and Name="Amount";
 
 -- 2025/09/15 all units +1 cs when found a religion
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES ('TRAIT_CIVILIZATION_BYZANTIUM','CCB_BYZANTIUM_RELIGION_CS_BONUS');
