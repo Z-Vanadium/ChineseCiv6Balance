@@ -110,6 +110,27 @@ DELETE FROM Types WHERE Type='ABIL_LIME_THULE_DOGSLED';
 INSERT INTO Improvement_ValidBuildUnits (ImprovementType, UnitType) VALUES
     ('IMPROVEMENT_LIME_THULE_WBH', 'UNIT_LIME_THULE_DOGSLED');
 
+-- whalemaker cannot train or purchase
+UPDATE Units SET CanTrain=1, MustPurchase=1 WHERE UnitType='UNIT_CCB_THULE_WHALEMAKER';
+
+-- add a whale maker when game era change
+INSERT INTO Modifiers(ModifierId, ModifierType, SubjectRequirementSetId, RunOnce, Permanent)
+    SELECT 'CCB_THULE_GRANT_WM_ON' || EraType, 'MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL', 'BBG_GAME_IS_IN_' || EraType || '_REQUIREMENTS', 1, 1
+    FROM Eras;
+INSERT INTO ModifierArguments (ModifierId, Name, Value)
+    SELECT 'CCB_THULE_GRANT_WM_ON' || EraType, 'Amount', '1'
+    FROM Eras;
+INSERT INTO ModifierArguments (ModifierId, Name, Value)
+    SELECT 'CCB_THULE_GRANT_WM_ON' || EraType, 'AllowUniqueOverride', '1'
+    FROM Eras;
+INSERT INTO ModifierArguments (ModifierId, Name, Value)
+    SELECT 'CCB_THULE_GRANT_WM_ON' || EraType, 'UnitType', 'UNIT_CCB_THULE_WHALEMAKER'
+    FROM Eras;
+
+INSERT INTO TraitModifiers(TraitType, ModifierId)
+    SELECT 'TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD', 'CCB_THULE_GRANT_WM_ON' || EraType
+    FROM Eras;
+
 -- ==========================================================
 -- =                       WB HOUSE                         =
 -- ==========================================================
