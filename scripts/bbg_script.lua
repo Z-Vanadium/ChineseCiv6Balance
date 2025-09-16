@@ -4153,53 +4153,6 @@ local count = 0
 end
 
 -- =======================================================================================
--- 2025/09/15 by CCB
--- Thule get a whalemaker when game era change
-<<<<<<< HEAD
--- =======================================================================================
-local ThuleWhalemakerPreEras = {}
-function GetWhaleMakerByEra(playerID)
-	local CurrentEra = Game.GetEras():GetCurrentEra()
-	local pPlayerConfig:table = PlayerConfigurations[playerID]
-	if (pPlayerConfig:GetCivilizationTypeName() ~= "CIVILIZATION_LIME_THULE" ) then
-	  return
-   end
-	local ttt = Game.GetCurrentGameTurn()
-
-	print("ccb thule whalemaker debug checkpoit 1, Turn = " .. tostring(ttt))
-
-	ThuleWhalemakerPreEras[playerID] = ThuleWhalemakerPreEras[playerID] or 0
-
-	print("ccb thule whalemaker debug checkpoit 2, ThuleWhalemakerPreEras[playerID] = " .. tostring(ThuleWhalemakerPreEras[playerID]))
-
-	print("CurrentEra = " ..tostring(CurrentEra))
-
-	if CurrentEra == ThuleWhalemakerPreEras[playerID] then
-	-- 	return false
-	-- elseif CurrentEra >= 1 and CurrentEra ~= ThuleWhalemakerPreEra[playerID] then
-	print("ccb thule whalemaker debug checkpoit 3")
-
-		local playerCapital = Players[playerID]:GetCities():GetCapitalCity()
-		
-		local iX = playerCapital:GetX()
-		local iY = playerCapital:GetY()
-		UnitManager.InitUnitValidAdjacentHex(playerID, "UNIT_BUILDER", iX, iY, 1)
-		ThuleWhalemakerPreEras[playerID] = CurrentEra
-		print("creat whalemaker builder successfully, at" .. tostring(iX) .. "  " .. tostring(iY) .. " playerid = " .. tostring(playerID))
-		return 
-	end
-
-	return
-=======
--- =======================================================================================rn
->>>>>>> e492bb3cf29496d3c36731d684febe880828efca
-end
-
-
-
-
-
--- =======================================================================================
 -- 2024/5/23 by OSCAR. 
 -- The implementation of Macedon's trait: grants bonus production after conquering cities
 -- =======================================================================================
@@ -4394,12 +4347,6 @@ function Initialize()
 			--5.6. Disable: GameEvents.GameplayMvembaCityRemovedFromMap.Add(OnGameplayMvembaCityRemovedFromMap)
 			--5.6. Disable: GameEvents.GameplayMvembaGiftCity.Add(OnGameplayMvembaGiftCity)
 			--5.6. Disable: print("Mvemba religious hooks added")
-<<<<<<< HEAD
-		elseif PlayerConfigurations[iPlayerID]:GetCivilizationTypeName() == 'CIVILIZATION_LIME_THULE' then
-			print("Thule whalemaker giver check")
-			GameEvents.OnGameTurnStarted.Add(GetWhaleMakerByEra)
-=======
->>>>>>> e492bb3cf29496d3c36731d684febe880828efca
 		end
 	end
 	if BBCC_MODE ~= -1 then
