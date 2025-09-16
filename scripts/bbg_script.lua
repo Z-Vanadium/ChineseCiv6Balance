@@ -4153,8 +4153,9 @@ local count = 0
 end
 
 -- =======================================================================================
--- 2025/09/15 by Vanadium
+-- 2025/09/15 by CCB
 -- Thule get a whalemaker when game era change
+<<<<<<< HEAD
 -- =======================================================================================
 local ThuleWhalemakerPreEras = {}
 function GetWhaleMakerByEra(playerID)
@@ -4189,7 +4190,13 @@ function GetWhaleMakerByEra(playerID)
 	end
 
 	return
+=======
+-- =======================================================================================rn
+>>>>>>> e492bb3cf29496d3c36731d684febe880828efca
 end
+
+
+
 
 
 -- =======================================================================================
@@ -4387,9 +4394,12 @@ function Initialize()
 			--5.6. Disable: GameEvents.GameplayMvembaCityRemovedFromMap.Add(OnGameplayMvembaCityRemovedFromMap)
 			--5.6. Disable: GameEvents.GameplayMvembaGiftCity.Add(OnGameplayMvembaGiftCity)
 			--5.6. Disable: print("Mvemba religious hooks added")
+<<<<<<< HEAD
 		elseif PlayerConfigurations[iPlayerID]:GetCivilizationTypeName() == 'CIVILIZATION_LIME_THULE' then
 			print("Thule whalemaker giver check")
 			GameEvents.OnGameTurnStarted.Add(GetWhaleMakerByEra)
+=======
+>>>>>>> e492bb3cf29496d3c36731d684febe880828efca
 		end
 	end
 	if BBCC_MODE ~= -1 then

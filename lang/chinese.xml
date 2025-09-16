@@ -4392,7 +4392,11 @@
 			<Text>极海鲸狩</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD_DESCRIPTION" Language="zh_Hans_CN">
+<<<<<<< HEAD
 			<Text>猎人小屋可为相邻的单元格提供额外产出，冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍），营地和渔船+1 [ICON_FOOD] 食物和+1 [ICON_PRODUCTION] 生产力。[NEWLINE]每进入一个新时代在首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。</Text>
+=======
+			<Text>猎人小屋可为相邻的单元格提供额外产出，冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍），营地和渔船+1 [ICON_FOOD] 食物和+1 [ICON_PRODUCTION] 生产力。[NEWLINE]每进入一个新时代在 [ICON_CAPITAL] 首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。</Text>
+>>>>>>> e492bb3cf29496d3c36731d684febe880828efca
 		</Replace>
 		<!-- = Leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_LIME_THULE_DAVE_HEART_NOT_STONE_NAME" Language="zh_Hans_CN">
