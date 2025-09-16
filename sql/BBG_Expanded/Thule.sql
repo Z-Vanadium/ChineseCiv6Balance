@@ -114,21 +114,21 @@ INSERT INTO Improvement_ValidBuildUnits (ImprovementType, UnitType) VALUES
 UPDATE Units SET CanTrain=1, MustPurchase=1 WHERE UnitType='UNIT_CCB_THULE_WHALEMAKER';
 
 -- add a whale maker when game era change
-INSERT INTO Modifiers(ModifierId, ModifierType, SubjectRequirementSetId, RunOnce, Permanent)
-    SELECT 'CCB_THULE_GRANT_WM_ON' || EraType, 'MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL', 'BBG_GAME_IS_IN_' || EraType || '_REQUIREMENTS', 1, 1
+INSERT INTO Modifiers(ModifierId, ModifierType, OwnerRequirementSetId, RunOnce, Permanent, SubjectRequirementSetId)
+    SELECT 'CCB_THULE_GRANT_WM_ON_' || EraType, 'MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL', 'BBG_PLAYER_IS_IN_' || EraType || '_REQUIREMENTS', 1, 1, NULL
     FROM Eras;
 INSERT INTO ModifierArguments (ModifierId, Name, Value)
-    SELECT 'CCB_THULE_GRANT_WM_ON' || EraType, 'Amount', '1'
+    SELECT 'CCB_THULE_GRANT_WM_ON_' || EraType, 'Amount', '1'
     FROM Eras;
 INSERT INTO ModifierArguments (ModifierId, Name, Value)
-    SELECT 'CCB_THULE_GRANT_WM_ON' || EraType, 'AllowUniqueOverride', '1'
+    SELECT 'CCB_THULE_GRANT_WM_ON_' || EraType, 'AllowUniqueOverride', '1'
     FROM Eras;
 INSERT INTO ModifierArguments (ModifierId, Name, Value)
-    SELECT 'CCB_THULE_GRANT_WM_ON' || EraType, 'UnitType', 'UNIT_CCB_THULE_WHALEMAKER'
+    SELECT 'CCB_THULE_GRANT_WM_ON_' || EraType, 'UnitType', 'UNIT_CCB_THULE_WHALEMAKER'
     FROM Eras;
 
 INSERT INTO TraitModifiers(TraitType, ModifierId)
-    SELECT 'TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD', 'CCB_THULE_GRANT_WM_ON' || EraType
+    SELECT 'TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD', 'CCB_THULE_GRANT_WM_ON_' || EraType
     FROM Eras;
 
 -- ==========================================================
