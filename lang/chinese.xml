@@ -2624,10 +2624,10 @@
 			<Text>“全民皆兵”：在战斗中每击杀1个非蛮族 [ICON_Corps] 军团+1时代得分，或是击杀1一个非蛮族 [ICON_Army] 军队+2时代得分。如果在黄金时代开始选择此着力点，则解锁特殊战争借口，谴责之后可立刻宣战，且好战程度-75%。生产军事单位+15% [ICON_Production] 生产力，军事单位对城市+10 [ICON_Strength] 战斗力。战斗胜利后，获得等同于被击杀单位 [ICON_Strength] 战斗力50%的 [ICON_GOLD] 金币（联机速度下）。如果已解锁，提供每回合2点 [ICON_RESOURCE_NITER] 硝石、[ICON_RESOURCE_OIL] 石油和 [ICON_RESOURCE_COAL] 煤。可在文艺复兴时代和工业时代中选择。</Text>
 		</Replace>
 		<Row Tag="LOC_MILITARY_GA_BUFF_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>对城市+10 [ICON_STRENGTH] 战斗力（“全民皆兵”黄金时代着力点）</Text>
+			<Text>对城市+7 [ICON_STRENGTH] 战斗力（“全民皆兵”黄金时代着力点）</Text>
 		</Row>
 		<Row Tag="LOC_ABILITY_MILITARY_GA_BUFF_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>对城市+10 [ICON_STRENGTH] 战斗力（“全民皆兵”黄金时代着力点）</Text>
+			<Text>对城市+7 [ICON_STRENGTH] 战斗力（“全民皆兵”黄金时代着力点）</Text>
 		</Row>
 
 		<!-- == Bodyguard of Lies == -->

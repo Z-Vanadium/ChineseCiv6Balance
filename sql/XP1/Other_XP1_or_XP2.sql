@@ -2,6 +2,7 @@
 --******			  D E D I C A T I O N S				  ******
 --==============================================================
 -- To Arms +10 vs cities
+-- 2025/09/17 CCB 1.0.3 nerf to +7
 INSERT OR IGNORE INTO CommemorationModifiers (CommemorationType, ModifierId)
     VALUES ('COMMEMORATION_MILITARY', 'COMMEMORATION_MILITARY_GA_ATTACK_CITIES');
 INSERT OR IGNORE INTO Modifiers (ModifierId , ModifierType , OwnerRequirementSetId)
@@ -36,7 +37,7 @@ INSERT OR IGNORE INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
 INSERT OR IGNORE INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
 	('MOD_MILITARY_GA_BUFF', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 'UNIT_ATTACKING_DISTRICT_REQUIREMENTS');
 INSERT OR IGNORE INTO ModifierArguments (ModifierId, Name, Value) VALUES
-	('MOD_MILITARY_GA_BUFF', 'Amount', '10');
+	('MOD_MILITARY_GA_BUFF', 'Amount', '7');
 INSERT OR IGNORE INTO ModifierStrings (ModifierId, Context, Text) VALUES
 	('MOD_MILITARY_GA_BUFF', 'Preview', 'LOC_MILITARY_GA_BUFF_DESCRIPTION');
 -- 25/06/25 To Arms no longer give casus belli
