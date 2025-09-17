@@ -977,7 +977,7 @@
 		<!-- == MAORI == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MAORI_MANA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“造船术”科技后，水运单位+2 [ICON_Movement] 移动力。“帝国初期”后未改良的树林与雨林提供+1 [ICON_PRODUCTION] 生产力。“重商主义”额外提供+1 [ICON_PRODUCTION] 生产力、“保护地球”额外+2 [ICON_PRODUCTION] 生产力。渔船向相邻单元格投放文化炸弹，并在“天文导航”科技后提供+1 [ICON_FOOD] 食物。无法收获资源；无法获得 [ICON_GreatWriter] 大作家。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
+			<Text>“造船术”科技后，水运单位+2 [ICON_Movement] 移动力。“政治哲学”后未改良的树林与雨林提供+1 [ICON_PRODUCTION] 生产力。“重商主义”额外提供+1 [ICON_PRODUCTION] 生产力、“保护地球”额外+2 [ICON_PRODUCTION] 生产力。渔船向相邻单元格投放文化炸弹，并在“天文导航”科技后提供+1 [ICON_FOOD] 食物。无法收获资源；无法获得 [ICON_GreatWriter] 大作家。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_KUPES_VOYAGE_DESCRIPTION" Language="zh_Hans_CN">
