@@ -127,13 +127,14 @@ INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
 -- RII Patron Saint : Apostles/Warrior monks trained in the city receive one extra Promotion, they cost 20% less faith. Grant the ability to faith buy support unit in the city for -20%.  
 -- 28/11/24 10% faith transformed into culture and science
 -- 15/12/24 increased to 20%
+-- 2025/09/17 nerf to 10% for base, extra 10% with civic theology
 DELETE FROM GovernorPromotionModifiers WHERE GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT';
 DELETE FROM GovernorPromotionPrereqs WHERE GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT';      
 INSERT INTO GovernorPromotionPrereqs (GovernorPromotionType, PrereqGovernorPromotion) VALUES
     ('GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT', 'GOVERNOR_PROMOTION_CARDINAL_CITADEL_OF_GOD');
 UPDATE GovernorPromotions SET Level=2, Column=2 WHERE GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT';
 
--- 20% faith transformed into culture and science
+-- 10% faith transformed into culture and science
 INSERT INTO Types (Type, Kind) VALUES
     ('BBG_MODIFIER_SINGLE_CITY_ADJUST_YIELD_MODIFIER_FROM_FAITH', 'KIND_MODIFIER');
 INSERT INTO DynamicModifiers (ModifierType, CollectionType, EffectType) VALUES
@@ -144,12 +145,25 @@ INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('BBG_MOKSHA_FAITH_IN_SCIENCE', 'BBG_MODIFIER_SINGLE_CITY_ADJUST_YIELD_MODIFIER_FROM_FAITH');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_MOKSHA_FAITH_IN_CULTURE', 'YieldType', 'YIELD_CULTURE'),
-    ('BBG_MOKSHA_FAITH_IN_CULTURE', 'Amount', 20),
+    ('BBG_MOKSHA_FAITH_IN_CULTURE', 'Amount', 10),
     ('BBG_MOKSHA_FAITH_IN_SCIENCE', 'YieldType', 'YIELD_SCIENCE'),
-    ('BBG_MOKSHA_FAITH_IN_SCIENCE', 'Amount', 20);
+    ('BBG_MOKSHA_FAITH_IN_SCIENCE', 'Amount', 10);
 INSERT INTO GovernorPromotionModifiers (GovernorPromotionType, ModifierId) VALUES
     ('GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT', 'BBG_MOKSHA_FAITH_IN_CULTURE'),
     ('GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT', 'BBG_MOKSHA_FAITH_IN_SCIENCE');
+
+-- 10% faith transformed into culture and science with civic theology
+INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) VALUES 
+    ('BBG_MOKSHA_FAITH_IN_CULTURE_THEOLOGY', 'BBG_MODIFIER_SINGLE_CITY_ADJUST_YIELD_MODIFIER_FROM_FAITH', 'BBG_UTILS_PLAYER_HAS_CIVIC_THEOLOGY_REQSET'),
+    ('BBG_MOKSHA_FAITH_IN_SCIENCE_THEOLOGY', 'BBG_MODIFIER_SINGLE_CITY_ADJUST_YIELD_MODIFIER_FROM_FAITH', 'BBG_UTILS_PLAYER_HAS_CIVIC_THEOLOGY_REQSET');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('BBG_MOKSHA_FAITH_IN_CULTURE_THEOLOGY', 'YieldType', 'YIELD_CULTURE'),
+    ('BBG_MOKSHA_FAITH_IN_CULTURE_THEOLOGY', 'Amount', 10),
+    ('BBG_MOKSHA_FAITH_IN_SCIENCE_THEOLOGY', 'YieldType', 'YIELD_SCIENCE'),
+    ('BBG_MOKSHA_FAITH_IN_SCIENCE_THEOLOGY', 'Amount', 10);
+INSERT INTO GovernorPromotionModifiers (GovernorPromotionType, ModifierId) VALUES
+    ('GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT', 'BBG_MOKSHA_FAITH_IN_CULTURE_THEOLOGY'),
+    ('GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT', 'BBG_MOKSHA_FAITH_IN_SCIENCE_THEOLOGY');
 
 --     -- Warrior monks promote
 -- INSERT INTO Requirements(RequirementId, RequirementType) VALUES
