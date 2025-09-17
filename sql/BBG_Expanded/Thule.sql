@@ -113,6 +113,9 @@ INSERT INTO Improvement_ValidBuildUnits (ImprovementType, UnitType) VALUES
 -- whalemaker cannot train or purchase
 UPDATE Units SET CanTrain=1, MustPurchase=1 WHERE UnitType='UNIT_CCB_THULE_WHALEMAKER';
 
+-- whalemaker can swim after astrology
+UPDATE Technologies SET EmbarkUnitType = 'UNIT_CCB_THULE_WHALEMAKER' WHERE TechnologyType='TECH_ASTROLOGY';
+
 -- add a whale maker when game era change
 INSERT INTO Modifiers(ModifierId, ModifierType, OwnerRequirementSetId, RunOnce, Permanent, SubjectRequirementSetId)
     SELECT 'CCB_THULE_GRANT_WM_ON_' || EraType, 'MODIFIER_PLAYER_GRANT_UNIT_IN_CAPITAL', 'BBG_PLAYER_IS_IN_' || EraType || '_REQUIREMENTS', 1, 1, NULL

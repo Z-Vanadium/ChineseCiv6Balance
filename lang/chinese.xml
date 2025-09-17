@@ -4418,7 +4418,7 @@
 			<Text>鲸鱼猎人</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_CCB_THULE_WHALEMAKER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>图勒特色陆地支援单位。拥有 1 [ICON_CHARGES] 次劳动力，可以消耗1点 [ICON_CHARGES] 劳动力和1 [ICON_CITIZEN] 人口在海岸单元格上创造奢侈品资源 [ICON_RESOURCE_WHALES] “鲸鱼”。 [NEWLINE]无法训练或购买，只能通过技能获得。</Text>
+			<Text>图勒特色陆地支援单位。拥有 1 [ICON_CHARGES] 次劳动力，可以消耗1点 [ICON_CHARGES] 劳动力和1 [ICON_CITIZEN] 人口在海岸单元格上创造奢侈品资源 [ICON_RESOURCE_WHALES] “鲸鱼”。 [NEWLINE]无法训练或购买，只能通过技能获得。可以在城市间传送，解锁“占星术”科技后可以下海。</Text>
 		</Replace>
 		<!-- = Unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_LIME_THULE_WBH_NAME" Language="zh_Hans_CN">
