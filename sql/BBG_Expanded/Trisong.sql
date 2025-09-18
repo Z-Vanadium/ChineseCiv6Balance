@@ -12,6 +12,12 @@
 DELETE FROM StartBiasTerrains WHERE CivilizationType='CIVILIZATION_SUK_TIBET' AND TerrainType IN ('TERRAIN_DESERT_MOUNTAIN', 'TERRAIN_SNOW_MOUNTAIN', 'TERRAIN_TUNDRA_MOUNTAIN');
 UPDATE StartBiasTerrains SET Tier=3 WHERE CivilizationType='CIVILIZATION_SUK_TIBET';
 
+-- 2025/09/18 government faith purchase remove
+DELETE FROM TraitModifiers
+      WHERE TraitType = 'TRAIT_CIVILIZATION_SUK_DHARMA_KINGS' AND
+            ModifierId = 'SUK_DHARMA_KINGS_DISTRICT_GOVERNMENT_FAITH_PURCHASE_MODIFIER';
+
+
 -- ==========================================================
 -- =                         DZONG                          =
 -- ==========================================================
