@@ -104,7 +104,7 @@
 		<!-- == AUSTRALIA == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LAND_DOWN_UNDER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>所有海岸城市获得+3 [ICON_Housing] 住房。牧场可触发文化炸弹，“政治哲学”市政后额外+1 [ICON_Production] 生产力。若单元格魅力为“迷人的”，处于单元格中的学院、商业中心、圣地和剧院广场获得额外+1相邻加成；若单元格魅力为“惊艳的”，则上述的额外产出为+3。“帝国初期”市政后，若市中心单元格魅力为“迷人的”，则+1 [ICON_AMENITIES] 宜居度；若市中心单元格魅力为“惊艳的”，则翻倍。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸、T4牧场资源、-T2泛滥平原、-T4雨林。特殊：在海岸时可能没有淡水。</Text>
+			<Text>所有海岸城市获得+3 [ICON_Housing] 住房。牧场可触发文化炸弹，“帝国初期”市政后额外+1 [ICON_Production] 生产力。若单元格魅力为“迷人的”，处于单元格中的学院、商业中心、圣地和剧院广场获得额外+1相邻加成；若单元格魅力为“惊艳的”，则上述的额外产出为+3。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸、T4牧场资源、-T2泛滥平原、-T4雨林。特殊：在海岸时可能没有淡水。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_CITADEL_CIVILIZATION_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
