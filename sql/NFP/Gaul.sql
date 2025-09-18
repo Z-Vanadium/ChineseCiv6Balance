@@ -5,6 +5,9 @@
 UPDATE StartBiasResources SET Tier=5 WHERE CivilizationType='CIVILIZATION_GAUL' AND ResourceType IN ('RESOURCE_COPPER', 'RESOURCE_DIAMONDS', 'RESOURCE_JADE', 'RESOURCE_MERCURY', 'RESOURCE_SALT', 'RESOURCE_SILVER');
 UPDATE StartBiasResources SET Tier=3 WHERE CivilizationType='CIVILIZATION_GAUL' AND ResourceType='RESOURCE_IRON';
 -- 2025/09/18 quarry +1 food adjacent with oppidum 
+INSERT INTO Improvement_YieldChanges (YieldChange, YieldType, ImprovementType)VALUES
+(0, 'YIELD_FOOD', 'IMPROVEMENT_QUARRY');
+
 INSERT INTO Improvement_Adjacencies VALUES ('IMPROVEMENT_QUARRY', 'CCB_Quarry_Food_Oppidum');
 INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, TilesRequired, AdjacentDistrict) VALUES
     ('CCB_Quarry_Food_Oppidum', 'Placeholder', 'YIELD_FOOD', 1, 1, 'DISTRICT_OPPIDUM');
