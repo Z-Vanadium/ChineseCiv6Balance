@@ -578,7 +578,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_OPPIDUM_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>高卢特色区域，替代工业区，建造花费更低，且出现时间更早。“奥皮杜姆”区域具有防御力且可执行远程攻击。对无主领土施放文化炸弹。[NEWLINE][NEWLINE]采石场和战略资源提供+2 [ICON_Production] 相邻加成。</Text>
+			<Text>高卢特色区域，替代工业区，建造花费更低，且出现时间更早。“奥皮杜姆”区域具有防御力且可执行远程攻击。对无主领土施放文化炸弹，为相邻采石场提供 +1 [Icon_Food] 食物。[NEWLINE][NEWLINE]采石场和战略资源提供+2 [ICON_Production] 相邻加成。</Text>
 		</Replace>
 
 		<!-- == GEORGIA == -->
