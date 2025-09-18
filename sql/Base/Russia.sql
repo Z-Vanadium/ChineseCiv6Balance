@@ -61,8 +61,9 @@ INSERT INTO RequirementSetRequirements(RequirementSetId, RequirementId) VALUES
 
 -- Russia get one faith.
 -- 30/11/24 Removed
--- INSERT INTO TraitModifiers(TraitType , ModifierId) VALUES
-    -- ('TRAIT_CIVILIZATION_MOTHER_RUSSIA', 'BBG_ONE_FAITH_CAPITAL');
+-- 2025/09/18 Back
+INSERT INTO TraitModifiers(TraitType , ModifierId) VALUES
+    ('TRAIT_CIVILIZATION_MOTHER_RUSSIA', 'BBG_ONE_FAITH_CAPITAL');
     -- ('TRAIT_CIVILIZATION_MOTHER_RUSSIA', 'BBG_ONE_PROD_CAPITAL_TUNDRA'),
     -- ('TRAIT_CIVILIZATION_MOTHER_RUSSIA', 'BBG_ONE_PROD_CAPITAL_TUNDRA_HILL');
 INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
