@@ -1031,7 +1031,7 @@
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MUTAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>[ICON_Capital] 首都6个单元格范围内的非首都城市所有产出+5%。其他非首都城市所有产出-10%。[ICON_Capital] 首都6单元格范围内的单位+3 [ICON_Strength] 战斗力。</Text>
+			<Text>[ICON_Capital] 首都6个单元格范围内的非首都城市所有产出+5%。其他非首都城市所有产出-10%。[ICON_Capital] 首都6单元格范围内的单位+3 [ICON_Strength] 战斗力。[NEWLINE]游戏开始便激活“灌溉”科技 [ICON_TechBoosted] 尤里卡。</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>[ICON_Capital] 首都6个单元格范围内的单位+3 [ICON_Strength] 战斗力</Text>

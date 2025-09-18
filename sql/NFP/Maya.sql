@@ -94,3 +94,10 @@ INSERT INTO District_Adjacencies (DistrictType , YieldChangeId) VALUES
 -- 30/11/24 Ancient unit gets -5 agaisnt city center, see Base/Units.sql
 INSERT INTO TypeTags (Type, Tag) VALUES
     ('UNIT_MAYAN_HULCHE', 'CLASS_MALUS_CITY_CENTER');
+
+-- 2025/09/18 six sun lady free irrigation boost
+INSERT INTO TraitModifiers VALUES ('TRAIT_LEADER_MUTAL', 'CCB_SIXSUN_FREE_TECH_BOOST_IRRIGATION');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent) VALUES
+    ('CCB_SIXSUN_FREE_TECH_BOOST_IRRIGATION', 'MODIFIER_PLAYER_GRANT_SPECIFIC_TECH_BOOST', 1, 1);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('CCB_SIXSUN_FREE_TECH_BOOST_IRRIGATION', 'TechType', 'TECH_IRRIGATION');
