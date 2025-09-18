@@ -2,8 +2,7 @@
 -- Byzantium
 --==================
 -- reduce combat bonus for holy cities
--- 2025/9/15 削弱拜占庭洗教加力至2->1
-UPDATE ModifierArguments SET Value='1' WHERE ModifierId='BYZANTIUM_COMBAT_HOLY_CITIES' AND Name='Amount';
+UPDATE ModifierArguments SET Value='2' WHERE ModifierId='BYZANTIUM_COMBAT_HOLY_CITIES' AND Name='Amount';
 
 -- remove dromon combat bonus
 -- 25/10/23 remove dromon combat bonus again
@@ -33,10 +32,11 @@ UPDATE Districts SET Cost=30 WHERE DistrictType='DISTRICT_HIPPODROME';
 -- UPDATE Districts SET Entertainment=2 WHERE DistrictType='DISTRICT_HIPPODROME';
 
 -- 2025/09/15 all units +1 cs when found a religion
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES ('TRAIT_CIVILIZATION_BYZANTIUM','CCB_BYZANTIUM_RELIGION_CS_BONUS');
-INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) VALUES ('CCB_BYZANTIUM_RELIGION_CS_BONUS', 'MODIFIER_PLAYER_UNITS_ADJUST_COMBAT_STRENGTH', 'BBG_PLAYER_FOUNDED_RELIGION_REQSET');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES ('CCB_BYZANTIUM_RELIGION_CS_BONUS', 'Amount', '1');
-INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES ('CCB_BYZANTIUM_RELIGION_CS_BONUS', 'Preview', 'LOC_CCB_BYZANTIUM_RELIGION_CS_BONUS_DESCRIPTION');
+-- 2025/09/18 revert
+-- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES ('TRAIT_CIVILIZATION_BYZANTIUM','CCB_BYZANTIUM_RELIGION_CS_BONUS');
+-- INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) VALUES ('CCB_BYZANTIUM_RELIGION_CS_BONUS', 'MODIFIER_PLAYER_UNITS_ADJUST_COMBAT_STRENGTH', 'BBG_PLAYER_FOUNDED_RELIGION_REQSET');
+-- INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES ('CCB_BYZANTIUM_RELIGION_CS_BONUS', 'Amount', '1');
+-- INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES ('CCB_BYZANTIUM_RELIGION_CS_BONUS', 'Preview', 'LOC_CCB_BYZANTIUM_RELIGION_CS_BONUS_DESCRIPTION');
 
 -- 2025/9/14 CCB 1.0.3 把拜占庭区域送重骑兵回调
 /*

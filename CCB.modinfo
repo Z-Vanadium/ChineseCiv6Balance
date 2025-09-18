@@ -499,7 +499,6 @@
 			<File>sql/Base/Germany.sql</File>
 			<File>sql/Base/Greece.sql</File>
 			<File>sql/Base/India.sql</File>
-			<File>sql/Base/Inca.sql</File>
 			<File>sql/Base/Japan.sql</File>
 			<File>sql/Base/Kongo.sql</File>
 			<File>sql/Base/Norway.sql</File>
@@ -1254,7 +1253,6 @@
 		<File>sql/Base/GreatWorks.sql</File>
 		<File>sql/Base/Greece.sql</File>
 		<File>sql/Base/India.sql</File>
-		<File>sql/Base/Inca.sql</File>
 		<File>sql/Base/Japan.sql</File>
 		<File>sql/Base/Kongo.sql</File>
 		<File>sql/Base/Norway.sql</File>
