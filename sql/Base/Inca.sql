@@ -13,9 +13,9 @@ DELETE FROM Improvement_Adjacencies
             ImprovementType = 'IMPROVEMENT_TERRACE_FARM';
 
 -- ui +1 food with irrigation, +1 food with feudalism
-INSERT INTO Improvement_BonusYieldChanges (Id, PrereqCivic, PrereqTech, BonusYieldChange, YieldType, ImprovementType) VALUES
-('4010', NULL, 'TECH_IRRIGATION', 1, 'YIELD_FOOD', 'IMPROVEMENT_TERRACE_FARM'),
-('4013', 'CIVIC_FEUDALISM', NULL, 1, 'YIELD_FOOD', 'IMPROVEMENT_TERRACE_FARM');
+INSERT INTO Improvement_BonusYieldChanges (Id, PrereqCivic, PrereqTech, BonusYieldChange, YieldType, ImprovementType)
+VALUES ('4010', NULL, 'TECH_IRRIGATION', 1, 'YIELD_FOOD', 'IMPROVEMENT_TERRACE_FARM'),
+VALUES ('4013', 'CIVIC_FEUDALISM', NULL, 1, 'YIELD_FOOD', 'IMPROVEMENT_TERRACE_FARM');
 
 -- la no domestic trade food bonus
 DELETE FROM TraitModifiers
