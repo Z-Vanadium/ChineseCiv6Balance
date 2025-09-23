@@ -3027,7 +3027,7 @@
 			<Text>在 [ICON_Capital] 首都创建1个军事工程师。</Text>
 		</Replace>
 		<Replace Tag="LOC_GREATPERSON_AETHELFLAED_ACTIVE" Language="zh_Hans_CN">
-			<Text>在 [ICON_Capital] 首都创建1个带有1次强化等级的投石机单位。</Text>
+			<Text>在 [ICON_Capital] 首都创建1个投石机单位。</Text>
 		</Replace>
 		<!-- Ana Nzinga - no text fixes -->
 		<Replace Tag="LOC_GREATPERSON_JOAN_OF_ARC_ACTIVE" Language="zh_Hans_CN">
