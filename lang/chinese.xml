@@ -533,7 +533,7 @@
 		</Replace>
 		<!-- = leader ability (Magnificence) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MAGNIFICENCES_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“技艺”市政后，改良资源额外+1 [ICON_CULTURE] 文化值，与剧院广场区域相邻的改良资源额外+1 [ICON_CULTURE] 文化值。与法国特色城堡相邻的已改良奢侈品为该城市提供+1 [ICON_Amenities] 宜居度。幸福度为快乐的城市额外+5% [ICON_CULTURE] 文化值。快乐的城市中每个剧院+1 [ICON_GreatWriter] 大作家点数；欣喜若狂的城市获得额外+1 [ICON_GreatArtist] 大艺术家点数。解锁“军事学”科技后增加1个间谍容量。“中世纪集市”市政后，可在拥有剧院广场区域的任意城市中开展“宫廷盛会”项目。</Text>
+			<Text>“技艺”市政后，改良资源额外+1 [ICON_CULTURE] 文化值，与剧院广场区域相邻的改良资源额外+1 [ICON_CULTURE] 文化值。与法国特色城堡相邻的已改良奢侈品为该城市提供+1 [ICON_Amenities] 宜居度。幸福度为快乐的城市额外+5% [ICON_CULTURE] 文化值。快乐的城市中每个剧院+1 [ICON_GreatWriter] 大作家点数；欣喜若狂的城市获得额外+1 [ICON_GreatArtist] 大艺术家点数。“中世纪集市”市政后，可在拥有剧院广场区域的任意城市中开展“宫廷盛会”项目。</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_FRENCH_GARDE_IMPERIALE_DESCRIPTION" Language="zh_Hans_CN">
@@ -1244,6 +1244,9 @@
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_BATH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>促进城市发展的罗马特色区域。取代水渠，建造费用更低。[NEWLINE][NEWLINE] 从相邻河流、湖泊、绿洲或山脉引水，为该城市提供淡水资源。尚未拥有淡水资源的城市最多获得6个 [ICON_Housing] 住房。已有淡水资源的城市则+2 [ICON_Housing] 住房。若与地热裂缝相邻，提供+1 [ICON AMENITIES] 宜居度。在任何情况下，浴场都能额外提供+2 [ICON_Housing] 住房。干旱时可防止 [ICON_Food] 食物损失。每相邻两个区域获得+1 [ICON_CULTURE] 。必须修建在与市中心相邻的单元格中。</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_BATH_EXPANSION2_ALT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_DISTRICT_BATH_DESCRIPTION}</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_ROMAN_LEGION_DESCRIPTION" Language="zh_Hans_CN"> <!-- charge icon -->
