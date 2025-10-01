@@ -1435,7 +1435,11 @@
 		<!-- == SWEDEN == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_NOBEL_PRIZE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>瑞典招募 [ICON_GreatPerson] 伟人时可获得20点 [ICON_Favor] 外交支持（标准速度下）。工厂和大学分别提供+1 [ICON_GreatEngineer] 大工程师点数和+1 [ICON_GreatScientist] 大科学家点数。建造图书馆、大学、工作坊和工厂时+50% [ICON_PRODUCTION] 生产力。如果瑞典在游戏中，进入文艺复兴时代之后将增添3项特色世界议会竞赛。[NEWLINE]建造市政广场建筑时+50% [ICON_PRODUCTION] 生产力。[NEWLINE]一级/二级/三级市政广场建筑分别提供2点[ICON_GreatWriter] 大作家、 [ICON_GreatArtist] 大艺术家、 [ICON_GreatMusician] 大音乐家点数。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：特殊：靠近冻土。</Text>
+			<Text>瑞典招募 [ICON_GreatPerson] 伟人时可获得20点 [ICON_Favor] 外交支持（标准速度下）。工厂和大学分别提供+1 [ICON_GreatEngineer] 大工程师点数和+1 [ICON_GreatScientist] 大科学家点数。建造图书馆、大学、工作坊和工厂时+50% [ICON_PRODUCTION] 生产力。如果瑞典在游戏中，进入文艺复兴时代之后将增添3项特色世界议会竞赛。[NEWLINE]建造市政广场建筑时+50% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：特殊：靠近冻土。</Text>
+		</Replace>
+		<!-- = Leader ability = -->
+		<Replace Tag="LOC_TRAIT_LEADER_KRISTINA_AUTO_THEME_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当所有槽位填满时，拥有至少 3 个 [ICON_GREATWORK_LANDSCAPE] 巨作槽位的建筑和拥有至少 2 个 [ICON_GREATWORK_LANDSCAPE] 巨作槽位的奇观可自动获得 [ICON_THEMEBONUS_ACTIVE] 主题加成。可以在市政广场建造女王图书馆。[NEWLINE]一级/二级/三级市政广场建筑分别提供2点[ICON_GreatWriter] 大作家、 [ICON_GreatArtist] 大艺术家、 [ICON_GreatMusician] 大音乐家点数。</Text>
 		</Replace>
 		<!-- = unique building = -->
 		<Replace Tag="LOC_BUILDING_QUEENS_BIBLIOTHEQUE_DESCRIPTION" Language="zh_Hans_CN">
