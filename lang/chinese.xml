@@ -935,7 +935,7 @@
 		</Replace>
 		<!-- = leader ability (Mansa Musa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SAHEL_MERCHANTS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>若城市拥有至少两个沙漠单元格则+1 [ICON_Faith] 信仰值。“银行业”科技后获得+1 [ICON_TradeRoute] 贸易路线容量。圣地从曼丁哥市场获得标准相邻加成，建造圣地及其中的建筑时+15% [ICON_PRODUCTION] 生产力。</Text>
+			<Text>“银行业”科技后获得+1 [ICON_TradeRoute] 贸易路线容量。圣地给予曼丁哥市场大量 [ICON_GOLD] 金币标准相邻加成（而非标准）。建造圣地及其中的建筑时+15% [ICON_PRODUCTION] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_SUGUBA_HOLY_SITE_MANSA" Language="zh_Hans_CN">
 			<Text>+{1_num} [ICON_GOLD] 金币，来自相邻圣地。</Text>
