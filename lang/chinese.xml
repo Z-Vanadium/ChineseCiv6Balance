@@ -1114,6 +1114,21 @@
 		<Replace Tag="LOC_IMPROVEMENT_PYRAMID_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>随“技艺”市政解锁的努比亚特色改良设施。[NEWLINE][NEWLINE]+2 [ICON_Faith] 信仰值、+2 [ICON_FOOD] 食物。[NEWLINE][NEWLINE]可从相邻区域获得额外产出：[NEWLINE]与市中心相邻则+1 [ICON_Food] 食物，[NEWLINE]与学院相邻则+2 [ICON_SCIENCE] 科技值，[NEWLINE]与工业区相邻则+2 [ICON_PRODUCTION] 生产力，[NEWLINE]与剧院广场相邻则+2 [ICON_CULTURE] 文化值，[NEWLINE]与圣地相邻则+2 [ICON_FAITH] 信仰值，[NEWLINE]与商业中心或港口相邻则+2 [ICON_GOLD] 金币，[NEWLINE]与军营或航空港相邻则+1 [ICON_PRODUCTION] 生产力，[NEWLINE]与市政广场或外交区相邻则+1 [ICON_CULTURE] 文化值、+2 [ICON_GOLD] 金币。[NEWLINE][NEWLINE]必须建在平坦地形或沙漠丘陵上。每座城市仅限建造一座，不能建在另一个努比亚金字塔旁。</Text>
 		</Replace>
+		<Replace Tag="LOC_BBG_PYRAMID_DISTRICT_PRODUCTION_DESC" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_PRODUCTION] 生产力，来自每个相邻的努比亚金字塔单元格。</Text>
+		</Replace>
+		<Replace Tag="LOC_BBG_PYRAMID_DISTRICT_GOLD_DESCS" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_GOLD] 金币，来自每个相邻的努比亚金字塔单元格。</Text>
+		</Replace>
+		<Replace Tag="LOC_BBG_PYRAMID_DISTRICT_SCIENCE_DESC" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_SCIENCE] 科技值，来自每个相邻的努比亚金字塔单元格。</Text>
+		</Replace>
+		<Replace Tag="LOC_BBG_PYRAMID_DISTRICT_CULTURE_DESC" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_CULTURE] 文化值，来自每个相邻的努比亚金字塔单元格。</Text>
+		</Replace>
+		<Replace Tag="LOC_BBG_PYRAMID_DISTRICT_FAITH_DESC" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_FAITH] 信仰值，来自每个相邻的努比亚金字塔单元格。</Text>
+		</Replace>
 
 		<!-- == OTTOMANS == -->
 		<!-- = civilization ability = -->
