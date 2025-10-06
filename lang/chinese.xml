@@ -221,7 +221,7 @@
 		<!-- == CANADA == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_FACES_OF_PEACE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>无法对城邦宣战或发动突袭战争。无法对加拿大发动突袭战争。每回合每获得100点 [ICON_TOURISM] 旅游业绩，即可每回合获得1点 [ICON_Favor] 外交支持。成功完成紧急状况或积分竞赛后+100% [ICON_Favor] 外交支持。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土。</Text>
+			<Text>无法对城邦宣战或发动突袭战争。无法对加拿大发动突袭战争。每回合每获得100点 [ICON_TOURISM] 旅游业绩，即可每回合获得1点 [ICON_Favor] 外交支持。成功完成紧急状况或积分竞赛后+100% [ICON_Favor] 外交支持。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土。特殊：更深的冻土。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_LAST_BEST_WEST_DESCRIPTION" Language="zh_Hans_CN">
@@ -4439,7 +4439,7 @@
 			<Text>极海鲸狩</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>猎人小屋可为相邻的单元格提供额外产出，冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍），营地和渔船+1 [ICON_FOOD] 食物和+1 [ICON_PRODUCTION] 生产力。[NEWLINE]玩家通过科技或文化每进入一个新时代，在 [ICON_Capital] 首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。</Text>
+			<Text>猎人小屋可为相邻的单元格提供额外产出，冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍），营地和渔船+1 [ICON_FOOD] 食物和+1 [ICON_PRODUCTION] 生产力。[NEWLINE]玩家通过科技或文化每进入一个新时代，在 [ICON_Capital] 首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。特殊：更深的冻土。</Text>
 		</Replace>
 		<!-- = Leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_LIME_THULE_DAVE_HEART_NOT_STONE_NAME" Language="zh_Hans_CN">
