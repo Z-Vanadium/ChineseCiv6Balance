@@ -2446,8 +2446,11 @@
 			<Text>每个港口内建筑+1 [ICON_PRODUCTION] 生产力、+1 [ICON_GOLD] 金币、并向城市提供2点 [ICON_Power] 电力。</Text>
 		</Replace>
 		<!-- = Chinguetti = -->
-		<Replace Tag="LOC_LEADER_TRAIT_CHINGUETTI_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_LEADER_TRAIT_CHINGUETTI_BONUS" Language="zh_Hans_CN">
 			<Text>国际与国内 [ICON_TradeRoute] 贸易路线提供的 [ICON_FAITH] 信仰值 +2，神学和归正会后分别再 +2。</Text>
+		</Replace>
+		<Replace Tag="LOC_LEADER_TRAIT_CHINGUETTI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_LEADER_TRAIT_CHINGUETTI_BONUS}</Text>
 		</Replace>
 		<!-- = Geneva = -->
 		<Replace Tag="LOC_CIVILIZATION_GENEVA_BONUS" Language="zh_Hans_CN">
@@ -2563,6 +2566,13 @@
 		</Replace>
 		<Replace Tag="LOC_LEADER_TRAIT_KUMASI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>您通往任何城邦的 [ICON_TradeRoute] 贸易路线+2 [ICON_Culture] 文化值，并从起源城市的每个独立区域额外+1 [ICON_Culture] 文化值和+1 [ICON_Gold] 金币。</Text>
+		</Replace>
+		<!-- = Valletta = -->
+		<Replace Tag="LOC_CIVILIZATION_VALLETTA_BONUS" Language="zh_Hans_CN">
+			<Text>[ICON_Faith] 信仰值可用来购买市中心建筑和军营区的建筑。通过 [ICON_Faith] 信仰值购买购买远古、中世纪、文艺复兴城墙的费用降低 50%。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_VALLETTA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_CIVILIZATION_VALLETTA_BONUS}</Text>
 		</Replace>
 
 
