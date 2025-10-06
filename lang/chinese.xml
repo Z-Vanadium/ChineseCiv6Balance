@@ -2508,6 +2508,13 @@
 		<Replace Tag="LOC_LEADER_TRAIT_LISBON_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>您的商人单位不会被掠夺。国际 [ICON_TRADEROUTE] 贸易路线+2 [ICON_GOLD] 金币。</Text>
 		</Replace>
+		<!-- = Nazca = -->
+		<Replace Tag="LOC_CIVILIZATION_NAZCA_BONUS" Language="zh_Hans_CN">
+			<Text>建造者可以建造纳斯卡巨画改良设施。[NEWLINE][NEWLINE]纳斯卡巨画向相邻单元格提供+1 [ICON_Faith] 信仰值；拥有资源的相邻单元格+1 [ICON_Faith] 信仰值。发现“行政部门”后，相邻的沙漠、沙漠丘陵单元格+1 [ICON_FOOD] 食物。研究“批量生产”后，相邻的平原单元格+1 [ICON_PRODUCTION] 生产力；同时+1魅力。仅能建在沙漠平原中。此单元格无法派遣人口工作。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_NAZCA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_CIVILIZATION_NAZCA_BONUS}</Text>
+		</Replace>
 		<!-- = Rapa Nui = -->		
 		<Replace Tag="LOC_CIVILIZATION_RAPA_NUI_BONUS" Language="zh_Hans_CN">
 			<Text>建造者可以建造摩艾石像改良设施。[NEWLINE][NEWLINE]摩艾石像提供+1 [ICON_Culture] 文化值。每2个相邻的摩艾石像+1 [ICON_Culture] 文化值。在火山土单元格之上或与其相邻时，+2 [ICON_Culture] 文化值。与海岸或湖泊单元格相邻时，+1 [ICON_Culture] 文化值。随着市政与科技树的发展，可获得额外的 [ICON_Culture] 文化值与 [ICON_Tourism] 旅游业绩。可建在平原、平原丘陵、草原、草原丘陵或火山土之上。</Text>
