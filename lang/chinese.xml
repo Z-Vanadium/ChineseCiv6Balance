@@ -1265,7 +1265,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_BATH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>促进城市发展的罗马特色区域。取代水渠，建造费用更低。[NEWLINE][NEWLINE] 从相邻河流、湖泊、绿洲或山脉引水，为该城市提供淡水资源。尚未拥有淡水资源的城市最多获得6个 [ICON_Housing] 住房。已有淡水资源的城市则+2 [ICON_Housing] 住房。若与地热裂缝相邻，提供+1 [ICON AMENITIES] 宜居度。在任何情况下，浴场都能额外提供+2 [ICON_Housing] 住房。干旱时可防止 [ICON_Food] 食物损失。每相邻两个区域获得+1 [ICON_CULTURE] 。必须修建在与市中心相邻的单元格中。</Text>
+			<Text>促进城市发展的罗马特色区域。取代水渠，建造费用更低。[NEWLINE][NEWLINE] 从相邻河流、湖泊、绿洲或山脉引水，为该城市提供淡水资源。尚未拥有淡水资源的城市最多获得6个 [ICON_Housing] 住房。已有淡水资源的城市则+2 [ICON_Housing] 住房。若与地热裂缝相邻，提供+1 [ICON_AMENITIES] 宜居度。在任何情况下，浴场都能额外提供+2 [ICON_Housing] 住房。干旱时可防止 [ICON_Food] 食物损失。每相邻两个区域获得+1 [ICON_CULTURE] 。必须修建在与市中心相邻的单元格中。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_BATH_EXPANSION2_ALT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_DISTRICT_BATH_DESCRIPTION}</Text>
@@ -2323,13 +2323,13 @@
 			<Text>所有传教士、使徒、上师+2 [ICON_Movement] 移动力（圣索菲亚大教堂）。</Text>
 		</Row>
 		<Replace Tag="LOC_BUILDING_MEENAKSHI_TEMPLE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>获得2名使徒。帝国中所有树林和雨林单元格+1 [ICON FAITH] 信仰值。[NEWLINE][NEWLINE]必须建在圣地旁，同时必须已创立宗教。</Text>
+			<Text>获得2名使徒。帝国中所有树林和雨林单元格+1 [ICON_FAITH] 信仰值。[NEWLINE][NEWLINE]必须建在圣地旁，同时必须已创立宗教。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_MONT_ST_MICHEL_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>帝国内所有泛滥平原单元格+1 [ICON_Culture] 文化值、+1 [ICON_FOOD] 食物。您创建的所有使徒除了拥有第二个您通常选择的能力外，还获得了殉教能力。[NEWLINE][NEWLINE]必须建在泛滥平原上或沼泽上。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_UNIVERSITY_SANKORE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>+1 [ICON_TradeRoute] 贸易路线容量。所有 [ICON_TradeRoute] 贸易路线+1 [ICON_SCIENCE] 科技值、+2 [ICON_GOLD] 金币。国外通往该城的 [ICON_TradeRoute] 贸易路线为该城提供+2 [ICON_SCIENCE] 科技值。国内通往该城的 [ICON_TradeRoute] 贸易路线额外提供+2 [ICON_SCIENCE] 科技值、+1 [ICON FAITH] 信仰值。[NEWLINE][NEWLINE]必须修建在沙漠或沙漠丘陵之上，同时必须与学院区域（拥有大学）相邻。</Text>
+			<Text>+1 [ICON_TradeRoute] 贸易路线容量。所有 [ICON_TradeRoute] 贸易路线+1 [ICON_SCIENCE] 科技值、+2 [ICON_GOLD] 金币。国外通往该城的 [ICON_TradeRoute] 贸易路线为该城提供+2 [ICON_SCIENCE] 科技值。国内通往该城的 [ICON_TradeRoute] 贸易路线额外提供+2 [ICON_SCIENCE] 科技值、+1 [ICON_FAITH] 信仰值。[NEWLINE][NEWLINE]必须修建在沙漠或沙漠丘陵之上，同时必须与学院区域（拥有大学）相邻。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_GREAT_ZIMBABWE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>为该城市赠予2个免费的商人单位，+2 [ICON_TradeRoute] 贸易路线容量。该城市领土中，且在3个单元格以内的每个加成资源将为从此城市发源的 [ICON_TradeRoute] 贸易路线+2 [ICON_Gold] 金币。[NEWLINE][NEWLINE]必须建在与商业中心区域（拥有市场）和 [ICON_RESOURCE_CATTLE] 牛资源相邻的单元格上。</Text>
@@ -2446,8 +2446,11 @@
 			<Text>每个港口内建筑+1 [ICON_PRODUCTION] 生产力、+1 [ICON_GOLD] 金币、并向城市提供2点 [ICON_Power] 电力。</Text>
 		</Replace>
 		<!-- = Chinguetti = -->
-		<Replace Tag="LOC_LEADER_TRAIT_CHINGUETTI_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_LEADER_TRAIT_CHINGUETTI_BONUS" Language="zh_Hans_CN">
 			<Text>国际与国内 [ICON_TradeRoute] 贸易路线提供的 [ICON_FAITH] 信仰值 +2，神学和归正会后分别再 +2。</Text>
+		</Replace>
+		<Replace Tag="LOC_LEADER_TRAIT_CHINGUETTI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_LEADER_TRAIT_CHINGUETTI_BONUS}</Text>
 		</Replace>
 		<!-- = Geneva = -->
 		<Replace Tag="LOC_CIVILIZATION_GENEVA_BONUS" Language="zh_Hans_CN">
@@ -2508,6 +2511,13 @@
 		<Replace Tag="LOC_LEADER_TRAIT_LISBON_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>您的商人单位不会被掠夺。国际 [ICON_TRADEROUTE] 贸易路线+2 [ICON_GOLD] 金币。</Text>
 		</Replace>
+		<!-- = Nazca = -->
+		<Replace Tag="LOC_CIVILIZATION_NAZCA_BONUS" Language="zh_Hans_CN">
+			<Text>建造者可以建造纳斯卡巨画改良设施。[NEWLINE][NEWLINE]纳斯卡巨画向相邻单元格提供+1 [ICON_Faith] 信仰值；拥有资源的相邻单元格+1 [ICON_Faith] 信仰值。发现“行政部门”后，相邻的沙漠、沙漠丘陵单元格+1 [ICON_FOOD] 食物。研究“批量生产”后，相邻的平原单元格+1 [ICON_PRODUCTION] 生产力；同时+1魅力。仅能建在沙漠平原中。此单元格无法派遣人口工作。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_NAZCA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_CIVILIZATION_NAZCA_BONUS}</Text>
+		</Replace>
 		<!-- = Rapa Nui = -->		
 		<Replace Tag="LOC_CIVILIZATION_RAPA_NUI_BONUS" Language="zh_Hans_CN">
 			<Text>建造者可以建造摩艾石像改良设施。[NEWLINE][NEWLINE]摩艾石像提供+1 [ICON_Culture] 文化值。每2个相邻的摩艾石像+1 [ICON_Culture] 文化值。在火山土单元格之上或与其相邻时，+2 [ICON_Culture] 文化值。与海岸或湖泊单元格相邻时，+1 [ICON_Culture] 文化值。随着市政与科技树的发展，可获得额外的 [ICON_Culture] 文化值与 [ICON_Tourism] 旅游业绩。可建在平原、平原丘陵、草原、草原丘陵或火山土之上。</Text>
@@ -2556,6 +2566,13 @@
 		</Replace>
 		<Replace Tag="LOC_LEADER_TRAIT_KUMASI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>您通往任何城邦的 [ICON_TradeRoute] 贸易路线+2 [ICON_Culture] 文化值，并从起源城市的每个独立区域额外+1 [ICON_Culture] 文化值和+1 [ICON_Gold] 金币。</Text>
+		</Replace>
+		<!-- = Valletta = -->
+		<Replace Tag="LOC_CIVILIZATION_VALLETTA_BONUS" Language="zh_Hans_CN">
+			<Text>[ICON_Faith] 信仰值可用来购买市中心建筑和军营区的建筑。通过 [ICON_Faith] 信仰值购买购买远古、中世纪、文艺复兴城墙的费用降低 50%。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_VALLETTA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_CIVILIZATION_VALLETTA_BONUS}</Text>
 		</Replace>
 
 
@@ -2642,7 +2659,7 @@
 
 		<!-- == To Arms! == -->		
 		<Replace Tag="LOC_MOMENT_CATEGORY_MILITARY_BONUS_GOLDEN_AGE" Language="zh_Hans_CN">
-			<Text>“全民皆兵”黄金时代：[NEWLINE]解锁特殊战争借口，谴责之后可立刻宣战，且好战程度-75%。生产军事单位+15% [ICON_Production] 生产力，军事单位对阵区域防御时+10 [ICON_Strength] 战斗力。战斗胜利后，获得等同于被击杀单位 [ICON_Strength] 战斗力50%的 [ICON_GOLD] 金币（联机速度下）。如果已解锁，提供每回合2点 [ICON_RESOURCE_NITER] 硝石、[ICON_RESOURCE_OIL] 石油和 [ICON_RESOURCE_COAL] 煤。</Text>
+			<Text>“全民皆兵”黄金时代：[NEWLINE]解锁特殊战争借口，谴责之后可立刻宣战，且好战程度-75%。生产军事单位+15% [ICON_Production] 生产力，军事单位对阵区域防御时+7 [ICON_Strength] 战斗力。战斗胜利后，获得等同于被击杀单位 [ICON_Strength] 战斗力50%的 [ICON_GOLD] 金币（联机速度下）。如果已解锁，提供每回合2点 [ICON_RESOURCE_NITER] 硝石、[ICON_RESOURCE_OIL] 石油和 [ICON_RESOURCE_COAL] 煤。</Text>
 		</Replace>
 		<Replace Tag="LOC_MOMENT_CATEGORY_MILITARY_BONUS_NORMAL_AGE" Language="zh_Hans_CN">
 			<Text>“全民皆兵”着力点加成：[NEWLINE]在战斗中每击杀1个非蛮族 [ICON_Corps] 军团+1时代得分，或是击杀1一个非蛮族 [ICON_Army] 军队+2时代得分。</Text>
@@ -2651,7 +2668,7 @@
 			<Text>“全民皆兵”着力点加成：[NEWLINE]在战斗中每击杀1个非蛮族 [ICON_Corps] 军团+1时代得分，或是击杀1一个非蛮族 [ICON_Army] 军队+2时代得分。</Text>
 		</Replace>
 		<Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_DEDICATIONS_CHAPTER_CONTENT_PARA_9" Language="zh_Hans_CN">
-			<Text>“全民皆兵”：在战斗中每击杀1个非蛮族 [ICON_Corps] 军团+1时代得分，或是击杀1一个非蛮族 [ICON_Army] 军队+2时代得分。如果在黄金时代开始选择此着力点，则解锁特殊战争借口，谴责之后可立刻宣战，且好战程度-75%。生产军事单位+15% [ICON_Production] 生产力，军事单位对城市+10 [ICON_Strength] 战斗力。战斗胜利后，获得等同于被击杀单位 [ICON_Strength] 战斗力50%的 [ICON_GOLD] 金币（联机速度下）。如果已解锁，提供每回合2点 [ICON_RESOURCE_NITER] 硝石、[ICON_RESOURCE_OIL] 石油和 [ICON_RESOURCE_COAL] 煤。可在文艺复兴时代和工业时代中选择。</Text>
+			<Text>“全民皆兵”：在战斗中每击杀1个非蛮族 [ICON_Corps] 军团+1时代得分，或是击杀1一个非蛮族 [ICON_Army] 军队+2时代得分。如果在黄金时代开始选择此着力点，则解锁特殊战争借口，谴责之后可立刻宣战，且好战程度-75%。生产军事单位+15% [ICON_Production] 生产力，军事单位对城市+7 [ICON_Strength] 战斗力。战斗胜利后，获得等同于被击杀单位 [ICON_Strength] 战斗力50%的 [ICON_GOLD] 金币（联机速度下）。如果已解锁，提供每回合2点 [ICON_RESOURCE_NITER] 硝石、[ICON_RESOURCE_OIL] 石油和 [ICON_RESOURCE_COAL] 煤。可在文艺复兴时代和工业时代中选择。</Text>
 		</Replace>
 		<Row Tag="LOC_MILITARY_GA_BUFF_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>对城市+7 [ICON_STRENGTH] 战斗力（“全民皆兵”黄金时代着力点）</Text>
