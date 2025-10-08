@@ -90,6 +90,9 @@ UPDATE Districts SET AllowsHolyCity=0, RequiresPopulation=0, PlunderType='PLUNDE
 DELETE FROM District_GreatPersonPoints WHERE DistrictType='DISTRICT_LIME_TEO_TOLLAN' AND GreatPersonClassType='GREAT_PERSON_CLASS_PROPHET';
 DELETE FROM District_Adjacencies WHERE YieldChangeId LIKE 'TeotihuacanTollan%';
 
+-- 2026/10/08 ud cost to 16 (= 30 * 0.55)
+UPDATE Districts SET Cost=16 WHERE DistrictType='DISTRICT_LIME_TEO_TOLLAN';
+
 INSERT INTO RequirementSets(RequirementSetId, RequirementSetType) VALUES
     ('BBG_PLAYER_HAS_ENCLAVE_REQSET', 'REQUIREMENTSET_TEST_ALL');
 INSERT INTO RequirementSetRequirements(RequirementSetId, RequirementId) VALUES
