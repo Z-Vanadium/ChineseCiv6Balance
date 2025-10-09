@@ -66,6 +66,11 @@ DELETE FROM StartBiasTerrains WHERE CivilizationType='CIVILIZATION_GREECE' AND T
 --==============================================================
 --******				    O T H E R					  ******
 --==============================================================
+-- 2025/10/05 horses can be found on tundra or desert plain
+INSERT OR IGNORE INTO Resource_ValidTerrains (ResourceType, TerrainType) VALUES
+    ('RESOURCE_HORSES', 'TERRAIN_TUNDRA'),
+    ('RESOURCE_HORSES', 'TERRAIN_DESERT');
+
 -- oil can be found on flat plains
 INSERT OR IGNORE INTO Resource_ValidTerrains (ResourceType, TerrainType) VALUES
     ('RESOURCE_OIL', 'TERRAIN_PLAINS');
