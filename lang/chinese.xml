@@ -542,7 +542,7 @@
 		</Replace>
 		<!-- = leader ability (Black Queen) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_FLYING_SQUADRON_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>[ICON_VisLimited] 外交能见度比遇到的其他文明高1级。[NEWLINE][NEWLINE解锁“城堡”科技后免费获得一个间谍（并增加1个间谍容量）。所有间谍初始便可免费 [ICON_Promotion] 升级为探员。]</Text>
+			<Text>[ICON_VisLimited] 外交能见度比遇到的其他文明高1级。[NEWLINE][NEWLINE]解锁“城堡”科技后免费获得一个间谍（并增加1个间谍容量）。所有间谍初始便可免费 [ICON_Promotion] 升级为探员。]</Text>
 		</Replace>
 		<!-- = leader ability (Magnificence) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MAGNIFICENCES_DESCRIPTION" Language="zh_Hans_CN">
