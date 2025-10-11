@@ -94,3 +94,15 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_RAMSES', 'BBG_RAMSES_RIVER_PRODUCTION_HS');
 
+-- 2025/10/11 Ramses gets +1 faith for IZ adjacent to river
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_RAMSES', 'CCB_RAMSES_IZ_STANDARD_PROD_RIVER');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_RAMSES_IZ_STANDARD_PROD_RIVER', 'MODIFIER_PLAYER_CITIES_RIVER_ADJACENCY', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_RAMSES_IZ_STANDARD_PROD_RIVER', 'Amount', '1'), 
+('CCB_RAMSES_IZ_STANDARD_PROD_RIVER', 'Description', 'LOC_CCB_DISTRICT_RIVER_PROD'), 
+('CCB_RAMSES_IZ_STANDARD_PROD_RIVER', 'DistrictType', 'DISTRICT_INDUSTRIAL_ZONE'), 
+('CCB_RAMSES_IZ_STANDARD_PROD_RIVER', 'YieldType', 'YIELD_PRODUCTION');
+
+
