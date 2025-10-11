@@ -43,10 +43,13 @@ INSERT OR IGNORE INTO StartBiasTerrains (CivilizationType , TerrainType , Tier)
 --==============================================================
 
 -- Nubian Pyramid can also be built on flat plains
+-- 2025/10/11 Nubian Pyramid can be built on hills as well
 INSERT OR IGNORE INTO Improvement_ValidTerrains (ImprovementType, TerrainType)
     VALUES
     ('IMPROVEMENT_PYRAMID' , 'TERRAIN_PLAINS'),
-    ('IMPROVEMENT_PYRAMID' , 'TERRAIN_GRASS');
+    ('IMPROVEMENT_PYRAMID' , 'TERRAIN_GRASS'),
+    ('IMPROVEMENT_PYRAMID' , 'TERRAIN_PLAINS_HILLS'),
+    ('IMPROVEMENT_PYRAMID' , 'TERRAIN_GRASS_HILLS');
 -- 05/09/2021 Pyramid moved to craftsmanship
 UPDATE Improvements SET PrereqTech=NULL, PrereqCivic='CIVIC_CRAFTSMANSHIP' WHERE ImprovementType='IMPROVEMENT_PYRAMID';
 
@@ -68,6 +71,14 @@ INSERT INTO ImprovementModifiers (ImprovementType, ModifierID) VALUES
 -- Pyramid can be placed on any flat tiles, limited to one per city and non adjacent to another pyramid
 UPDATE Improvements SET OnePerCity=1, SameAdjacentValid=0 WHERE ImprovementType='IMPROVEMENT_PYRAMID';
 
+INSERT INTO ImprovementModifiers (ImprovementType, ModifierId) VALUES 
+('IMPROVEMENT_PYRAMID', 'CCB_NUBIAN_UI_FOOD_ON_FLAT');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_NUBIAN_UI_FOOD_ON_FLAT', 'MODIFIER_SINGLE_PLOT_ADJUST_PLOT_YIELDS', 0, 0, 0, NULL, 'BBG_PLOT_IS_FLAT');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_NUBIAN_UI_FOOD_ON_FLAT', 'Amount', '1'), 
+('CCB_NUBIAN_UI_FOOD_ON_FLAT', 'YieldType', 'YIELD_FOOD');
+
 -- 01/12/24 removed
 -- Base Nubian Pyramid is +2 food/2 faith
 -- Nubian Pyramid gets double adjacency yields
@@ -80,7 +91,9 @@ UPDATE Improvements SET OnePerCity=1, SameAdjacentValid=0 WHERE ImprovementType=
 -- UPDATE Adjacency_YieldChanges SET YieldChange=2 WHERE ID='Pyramid_TheaterAdjacency';
 -- Nubian Pyramid -1 food (to avoid +4 foods tile)
 -- 01/12/24 removed
--- UPDATE Improvement_YieldChanges SET YieldChange=1 WHERE ImprovementType='IMPROVEMENT_PYRAMID' AND YieldType='YIELD_FOOD';
+-- 2025/10/11 changed to +1 food, +1 food extra when on flat
+UPDATE Improvement_YieldChanges SET YieldChange=1 WHERE ImprovementType='IMPROVEMENT_PYRAMID' AND YieldType='YIELD_FOOD';
+
 
 -- Nubian district gets standard adjacency from nubian pyramid
 INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, TilesRequired, AdjacentImprovement) VALUES
