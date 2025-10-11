@@ -182,14 +182,17 @@ DELETE FROM Improvement_Adjacencies
       WHERE YieldChangeId IN ('Terrace_GrassMountainAdjacency', 'Terrace_PlainsMountainAdjacency', 'Terrace_DesertMountainAdjacency', 'Terrace_TundraMountainAdjacency', 'Terrace_SnowMountainAdjacency') AND
             ImprovementType = 'IMPROVEMENT_TERRACE_FARM';
 
+-- housing remove
+UPDATE Improvements SET Housing=0 WHERE ImprovementType='IMPROVEMENT_TERRACE_FARM';
+
 -- base +2 food
-UPDATE Improvement_YieldChanges SET Value=2 WHERE ImprovementType='IMPROVEMENT_TERRACE_FARM' AND YieldType='YIELD_FOOD';
+UPDATE Improvement_YieldChanges SET YieldChange=2 WHERE ImprovementType='IMPROVEMENT_TERRACE_FARM' AND YieldType='YIELD_FOOD';
 
 -- base +1 food from adj 2 self
 UPDATE Adjacency_YieldChanges SET PrereqCivic=NULL, ObsoleteCivic='CIVIC_FEUDALISM', ObsoleteTech=NULL WHERE ID='Terrace_MedievalAdjacency';
 
 -- bonus +1 food from adj 1 self with civic feudalism
-UPDATE Adjacency_YieldChanges SET PrereqCivic='CIVIC_FEUDALISM', ObsoleteCivic=NULL, ObsoleteTech=NULL WHERE ID='Terrace_MechanizedAdjacency';
+UPDATE Adjacency_YieldChanges SET PrereqTech=NULL, PrereqCivic='CIVIC_FEUDALISM', ObsoleteCivic=NULL, ObsoleteTech=NULL WHERE ID='Terrace_MechanizedAdjacency';
 
 INSERT INTO Improvement_BonusYieldChanges (Id, ImprovementType, BonusYieldChange, YieldType, PrereqCivic) VALUES
     ('3030', 'IMPROVEMENT_TERRACE_FARM', '1', 'YIELD_PRODUCTION', 'CIVIC_CIVIL_ENGINEERING');
