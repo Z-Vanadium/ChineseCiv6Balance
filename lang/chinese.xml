@@ -1294,7 +1294,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_BATH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>促进城市发展的罗马特色区域。取代水渠，建造费用更低。[NEWLINE][NEWLINE] 从相邻河流、湖泊、绿洲或山脉引水，为该城市提供淡水资源。尚未拥有淡水资源的城市最多获得6个 [ICON_Housing] 住房。已有淡水资源的城市则+2 [ICON_Housing] 住房。若与地热裂缝相邻，提供+1 [ICON_AMENITIES] 宜居度。在任何情况下，浴场都能额外提供+2 [ICON_Housing] 住房。干旱时可防止 [ICON_Food] 食物损失。每相邻两个区域获得+1 [ICON_CULTURE] 。必须修建在与市中心相邻的单元格中。</Text>
+			<Text>促进城市发展的罗马特色区域。取代水渠，建造费用更低。[NEWLINE][NEWLINE] 从相邻河流、湖泊、绿洲或山脉引水，为该城市提供淡水资源。尚未拥有淡水资源的城市最多获得6个 [ICON_Housing] 住房。已有淡水资源的城市则+2 [ICON_Housing] 住房。若与地热裂缝相邻，提供+1 [ICON_AMENITIES] 宜居度。在任何情况下，浴场都能额外提供+2 [ICON_Housing] 住房。干旱时可防止 [ICON_Food] 食物损失。每相邻两个区域获得+1 [ICON_CULTURE] 文化值。必须修建在与市中心相邻的单元格中。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_BATH_EXPANSION2_ALT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_DISTRICT_BATH_DESCRIPTION}</Text>
