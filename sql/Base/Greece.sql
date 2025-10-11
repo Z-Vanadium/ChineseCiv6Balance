@@ -14,6 +14,25 @@ UPDATE ModifierArguments SET Value='7' WHERE ModifierId='HOPLITE_NEIGHBOR_COMBAT
 --******            PERICLES                         ******
 --==============================================================================================
 
+-- 2025/10/11 Pericles +1 envoy when getting great writer
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_SURROUNDED_BY_GLORY', 'CCB_PERICLE_ENVOY');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_PERICLE_ENVOY', 'MODIFIER_PLAYER_UNITS_ATTACH_MODIFIER', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_IS_GREAT_WRITER');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_PERICLE_ENVOY', 'ModifierId', 'GREATPERSON_INFLUENCE_TOKENS_SMALL');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_UNIT_IS_GREAT_WRITER', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_UNIT_IS_GREAT_WRITER', 'REQ_CCB_UNIT_IS_GREAT_WRITER');
+
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQ_CCB_UNIT_IS_GREAT_WRITER', 'REQUIREMENT_GREAT_PERSON_TYPE_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_UNIT_IS_GREAT_WRITER', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER');
+
+
 -- Pericles gets their extra envoy at amphitheater instead of acropolis
 DELETE FROM DistrictModifiers WHERE DistrictType='DISTRICT_ACROPOLIS';
 INSERT OR IGNORE INTO TraitModifiers VALUES
