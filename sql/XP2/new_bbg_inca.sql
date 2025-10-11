@@ -156,3 +156,40 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value)
     SELECT 'BBG_INCA_REVOLT_NO_NEGATIVE_' || YieldType, 'Amount', (SELECT -NonFoodYieldModifier FROM Happinesses WHERE HappinessType='HAPPINESS_REVOLT') FROM Yields WHERE NOT YieldType='YIELD_FOOD';
 INSERT INTO TraitModifiers (TraitType, ModifierId)
     SELECT 'TRAIT_CIVILIZATION_GREAT_MOUNTAINS', 'BBG_INCA_REVOLT_NO_NEGATIVE_' || YieldType FROM Yields WHERE NOT YieldType='YIELD_FOOD';
+
+
+-- 2025/10/11 UI rework: built on mountains or volcanic soil, base +2 food, +2 prod adj to aqueduct, +1 food adj to 2 self ( 1 with civic feudalism), +1 prod with civic civil engineering
+-- valid on mountains or volcanic soil
+DELETE FROM Improvement_ValidTerrains WHERE ImprovementType = 'IMPROVEMENT_TERRACE_FARM';
+INSERT INTO Improvement_ValidTerrains(ImprovementType, TerrainType) SELECT
+'IMPROVEMENT_TERRACE_FARM',TerrainType
+FROM Improvement_ValidTerrains WHERE ImprovementType = 'IMPROVEMENT_SKI_RESORT';
+INSERT INTO Improvements_XP2(ImprovementType,BuildOnAdjacentPlot)VALUES
+('IMPROVEMENT_TERRACE_FARM', 1);
+
+-- remove adjacency bonus to mountains
+DELETE FROM TraitModifiers
+      WHERE TraitType = 'TRAIT_CIVILIZATION_GREAT_MOUNTAINS' AND
+            ModifierId IN ('TRAIT_TERRACE_DESERT_MOUNTAIN', 'TRAIT_TERRACE_GRASS_MOUNTAIN', 'TRAIT_TERRACE_PLAINS_MOUNTAIN', 'TRAIT_TERRACE_SNOW_MOUNTAIN', 'TRAIT_TERRACE_TUNDRA_MOUNTAIN');
+
+-- remove prod from fresh resource
+DELETE FROM ImprovementModifiers
+      WHERE ImprovementType = 'IMPROVEMENT_TERRACE_FARM' AND
+            ModifierID = 'TERRACE_FARM_PRODUCTION_FRESH_WATER_NO_AQUEDUCT';
+
+-- remove mountain adjacency bonus
+DELETE FROM Improvement_Adjacencies
+      WHERE YieldChangeId IN ('Terrace_GrassMountainAdjacency', 'Terrace_PlainsMountainAdjacency', 'Terrace_DesertMountainAdjacency', 'Terrace_TundraMountainAdjacency', 'Terrace_SnowMountainAdjacency') AND
+            ImprovementType = 'IMPROVEMENT_TERRACE_FARM';
+
+-- base +2 food
+UPDATE Improvement_YieldChanges SET Value=2 WHERE ImprovementType='IMPROVEMENT_TERRACE_FARM' AND YieldType='YIELD_FOOD';
+
+-- base +1 food from adj 2 self
+UPDATE Adjacency_YieldChanges SET PrereqCivic=NULL, ObsoleteCivic='CIVIC_FEUDALISM', ObsoleteTech=NULL WHERE ID='Terrace_MedievalAdjacency';
+
+-- bonus +1 food from adj 1 self with civic feudalism
+UPDATE Adjacency_YieldChanges SET PrereqCivic='CIVIC_FEUDALISM', ObsoleteCivic=NULL, ObsoleteTech=NULL WHERE ID='Terrace_MechanizedAdjacency';
+
+INSERT INTO Improvement_BonusYieldChanges (Id, ImprovementType, BonusYieldChange, YieldType, PrereqCivic) VALUES
+    ('3030', 'IMPROVEMENT_TERRACE_FARM', '1', 'YIELD_PRODUCTION', 'CIVIC_CIVIL_ENGINEERING');
