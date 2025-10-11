@@ -114,9 +114,9 @@ INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
     ('BBG_MALI_GOLD_DESERT_HILLS_MINES', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'BBG_PLOT_IS_DESERT_HILLS_MINE_REQSET');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_MALI_GOLD_DESERT_MINES', 'YieldType', 'YIELD_GOLD'),
-    ('BBG_MALI_GOLD_DESERT_MINES', 'Amount', 2),
+    ('BBG_MALI_GOLD_DESERT_MINES', 'Amount', 1),
     ('BBG_MALI_GOLD_DESERT_HILLS_MINES', 'YieldType', 'YIELD_GOLD'),
-    ('BBG_MALI_GOLD_DESERT_HILLS_MINES', 'Amount', 2);
+    ('BBG_MALI_GOLD_DESERT_HILLS_MINES', 'Amount', 1);
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'BBG_MALI_GOLD_DESERT_MINES'),
     ('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'BBG_MALI_GOLD_DESERT_HILLS_MINES');
@@ -127,8 +127,8 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 
 -- Cheaper purchase
 -- 30/06/25 20% discount, from 10
-UPDATE ModifierArguments SET Value=20 WHERE ModifierId IN ('SUGUBA_CHEAPER_BUILDING_PURCHASE', 'SUGUBA_CHEAPER_DISTRICT_PURCHASE');
-UPDATE ModifierArguments SET Value=20 WHERE ModifierId='SUGUBA_CHEAPER_UNIT_PURCHASE' AND Name='Amount';
+UPDATE ModifierArguments SET Value=10 WHERE ModifierId IN ('SUGUBA_CHEAPER_BUILDING_PURCHASE', 'SUGUBA_CHEAPER_DISTRICT_PURCHASE');
+UPDATE ModifierArguments SET Value=10 WHERE ModifierId='SUGUBA_CHEAPER_UNIT_PURCHASE' AND Name='Amount';
 
 -- Normal adj from HS, City center, Rivers, Oasis and Gov Plaza
 INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentFeature) VALUES
@@ -175,7 +175,7 @@ INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, Adja
 INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
     ('DISTRICT_SUGUBA', 'BBG_SUGUBA_HOLY_SITE_MANSA');
 
--- 15% towards Holy Sites and its building
+-- 25% towards Holy Sites and its building
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('BBG_MANSA_HOLY_SITE_BONUS_PRODUCTION', 'MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
@@ -187,7 +187,7 @@ INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('BBG_MANSA_HOLY_SITE_BONUS_PRODUCTION_BUILDING', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_MANSA_HOLY_SITE_BONUS_PRODUCTION_BUILDING', 'DistrictType', 'DISTRICT_HOLY_SITE'),
-    ('BBG_MANSA_HOLY_SITE_BONUS_PRODUCTION_BUILDING', 'Amount', 15);
+    ('BBG_MANSA_HOLY_SITE_BONUS_PRODUCTION_BUILDING', 'Amount', 25);
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_SAHEL_MERCHANTS', 'BBG_MANSA_HOLY_SITE_BONUS_PRODUCTION_BUILDING');
 
