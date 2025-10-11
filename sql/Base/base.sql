@@ -355,7 +355,12 @@ UPDATE Boosts SET NumItems=2 WHERE CivicType='CIVIC_CRAFTSMANSHIP';
 UPDATE Boosts SET Unit1Type='UNIT_SCOUT', NumItems=1, BoostClass='BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE' WHERE CivicType='CIVIC_FOREIGN_TRADE';
 
 -- 30/03/25 Guidance Systems : Kill a unit with a Fighter [Kill a Fighter]
+-- 2025/10/11 Guidance Systems : Own 3 antiair gun
 UPDATE Boosts SET BoostClass='BOOST_TRIGGER_KILL_WITH' WHERE TechnologyType='TECH_GUIDANCE_SYSTEMS';
+UPDATE Boosts SET Unit1Type='UNIT_ANTIAIR_GUN', NumItems=3, BoostClass='BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE', Unit2Type='UNIT_ANTI_AIRCRAFT' WHERE TechnologyType='TECH_GUIDANCE_SYSTEMS';
 
 -- 30/03/25 Humanism : Own 2 Amphiteater [Recruit an Artist]
 UPDATE Boosts SET Unit1Type=NULL, NumItems=2, BoostClass='BOOST_TRIGGER_HAVE_X_BUILDINGS', BuildingType='BUILDING_AMPHITHEATER' WHERE CivicType='CIVIC_HUMANISM';
+
+-- 2025/10/11 Stealth Technology : Own 2 lab
+UpDATE Boosts SET TriggerDescription='LOC_CCB_BOOST_TECH_STEALTH_TECHNOLOGY', TriggerLongDescription='LOC_CCB_BOOST_TECH_STEALTH_TECHNOLOGY', NumItems=2, BoostClass='BOOST_TRIGGER_HAVE_X_BUILDINGS', BuildingType='BUILDING_RESEARCH_LAB' WHERE TechnologyType='TECH_STEALTH_TECHNOLOGY';
