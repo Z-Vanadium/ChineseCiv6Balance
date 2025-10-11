@@ -111,3 +111,11 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_TRAIT_ARCHAEOLOGIST_PROD', 'Amount', '100');
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_CIVILIZATION_NKISI', 'BBG_TRAIT_ARCHAEOLOGIST_PROD');
+
+-- 2025/10/11 Kongo +1 amenity from ud
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_NKISI', 'CCB_KONGO_AMENITY_FROM_MBANZA');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_KONGO_AMENITY_FROM_MBANZA', 'MODIFIER_PLAYER_CITIES_ADJUST_TRAIT_AMENITY', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_MBANZA');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_KONGO_AMENITY_FROM_MBANZA', 'Amount', '1');
