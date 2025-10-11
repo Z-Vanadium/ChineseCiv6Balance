@@ -148,6 +148,21 @@ UPDATE BeliefModifiers SET ModifierID='FERTILITY_RITES_TAG_FOOD' WHERE BeliefTyp
 -- 11/09/23 Fertility remove builder
 DELETE FROM BeliefModifiers WHERE ModifierID='FERTILITY_RITES_BUILDER';
 
+-- 2025/10/11 Fertility rites +10% prod for builders
+INSERT INTO BeliefModifiers (BeliefType, ModifierId) VALUES 
+('BELIEF_FERTILITY_RITES', 'CCB_FERTILITY_RITES_BUILDER_PROD_GIVER');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_FERTILITY_RITES_BUILDER_PROD_GIVER', 'MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER', 0, 0, 0, NULL, 'PLAYER_HAS_PANTHEON_REQUIREMENTS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_FERTILITY_RITES_BUILDER_PROD_GIVER', 'ModifierId', 'CCB_FERTILITY_RITES_BUILDER_PROD');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_FERTILITY_RITES_BUILDER_PROD', 'MODIFIER_PLAYER_UNITS_ADJUST_UNIT_PRODUCTION', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_FERTILITY_RITES_BUILDER_PROD', 'Amount', '10'), 
+('CCB_FERTILITY_RITES_BUILDER_PROD', 'UnitType', 'UNIT_BUILDER');
+
+
 --==========================
 --*      SACRED PATH       *
 --==========================
