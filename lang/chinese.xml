@@ -212,10 +212,10 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_HIPPODROME_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>拜占庭特色区域。替代“娱乐设施”区域，提供+3 [ICON_Amenities] 宜居度，且建造花费更低。在此区域中建成建筑后，将获得1个重骑兵单位。</Text>
+			<Text>拜占庭特色区域。替代“娱乐设施”区域，提供+3 [ICON_Amenities] 宜居度，且建造花费更低。建成该区域或在此区域中建成建筑后，将获得1个重骑兵单位。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_HIPPODROME_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>拜占庭特色区域。替代“娱乐设施”区域，提供+3 [ICON_Amenities] 宜居度，且建造花费更低。在此区域中建成建筑后，将获得1个重骑兵单位（此单位不消耗资源）。无法建在拥有“水上乐园”的城市中。</Text>
+			<Text>拜占庭特色区域。替代“娱乐设施”区域，提供+3 [ICON_Amenities] 宜居度，且建造花费更低。建成该区域或在此区域中建成建筑后，将获得1个重骑兵单位（此单位不消耗资源）。无法建在拥有“水上乐园”的城市中。</Text>
 		</Replace>
 
 		<!-- == CANADA == -->
