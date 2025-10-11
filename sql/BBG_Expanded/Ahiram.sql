@@ -21,11 +21,12 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 -- =                      ROYAL TOMB                        =
 -- ==========================================================
 
+-- 2025/10/11 remove bonus science from admiral, base sci to +2, give gold equals to adj sci
 -- 19/08/25 Bonus Science moved from Merchants to Admirals, base science reduced to +1
--- DELETE FROM TraitModifiers WHERE ModifierId='MOD_LIME_ATTACH_TOMB_SCIENCE_BUFF';
+DELETE FROM TraitModifiers WHERE ModifierId='MOD_LIME_ATTACH_TOMB_SCIENCE_BUFF';
 UPDATE Modifiers SET SubjectRequirementSetId='UNIT_IS_ADMIRAL' WHERE ModifierId='MOD_LIME_ATTACH_TOMB_SCIENCE_BUFF';
-UPDATE Building_YieldChanges SET YieldChange=0 WHERE YieldType='YIELD_SCIENCE' AND BuildingType='LEADER_BUILDING_LIME_PHOE_AHIRAM_TOMB';
+UPDATE Building_YieldChanges SET YieldChange=2 WHERE YieldType='YIELD_SCIENCE' AND BuildingType='LEADER_BUILDING_LIME_PHOE_AHIRAM_TOMB';
 
 UPDATE Buildings SET Maintenance=0 WHERE BuildingType='LEADER_BUILDING_LIME_PHOE_AHIRAM_TOMB';
 
-DELETE FROM Building_YieldDistrictCopies WHERE BuildingType='LEADER_BUILDING_LIME_PHOE_AHIRAM_TOMB';
+-- DELETE FROM Building_YieldDistrictCopies WHERE BuildingType='LEADER_BUILDING_LIME_PHOE_AHIRAM_TOMB';
