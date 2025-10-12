@@ -31,6 +31,9 @@ INSERT OR IGNORE INTO UnitAbilities (UnitAbilityType, Name, Description)
 INSERT OR IGNORE INTO UnitAbilityModifiers (UnitAbilityType, ModifierId)
     VALUES ('ABILITY_SIEGE_RANGED_DEFENSE', 'SIEGE_DEFENSE_BONUS_VS_RANGED_COMBAT');
 
+-- 2025/10/12 carrier +1 airslot (from 2)
+UPDATE Units SET AirSlots=3 WHERE UnitType='UNIT_AIRCRAFT_CARRIER';
+
 -- -5 combat strength to all airplanes (P-51 change in America section)
 UPDATE Units SET Combat=75,  RangedCombat=70  WHERE UnitType='UNIT_BIPLANE';
 UPDATE Units SET Combat=95,  RangedCombat=95  WHERE UnitType='UNIT_FIGHTER';
