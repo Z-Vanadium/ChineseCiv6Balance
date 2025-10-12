@@ -171,3 +171,19 @@ INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, Ow
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_LAVRA_T3_ARTIST_POINTS', 'Amount', '1'), 
 ('CCB_LAVRA_T3_ARTIST_POINTS', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST');
+
+-- 2025/10/12 Russia avoid blizzard damage
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_MOTHER_RUSSIA', 'CCB_AVOID_BLIZZARD_SIGNIFICANT');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_AVOID_BLIZZARD_SIGNIFICANT', 'MODIFIER_PLAYER_ADJUST_AVOID_RANDOM_EVENT', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_AVOID_BLIZZARD_SIGNIFICANT', 'RandomEventType', 'RANDOM_EVENT_BLIZZARD_SIGNIFICANT');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_MOTHER_RUSSIA', 'CCB_AVOID_BLIZZARD_CRIPPLING');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_AVOID_BLIZZARD_CRIPPLING', 'MODIFIER_PLAYER_ADJUST_AVOID_RANDOM_EVENT', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_AVOID_BLIZZARD_CRIPPLING', 'RandomEventType', 'RANDOM_EVENT_BLIZZARD_CRIPPLING');
+
