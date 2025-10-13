@@ -52,3 +52,19 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 -- 30/03/25 Combat bonus now works on gdr
 INSERT INTO TypeTags (Type, Tag) VALUES
     ('ABILITY_TRIEU_FEATURES', 'CLASS_GIANT_DEATH_ROBOT');
+
+-- 2025/10/12 Vietnam avoid fire damage
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_VIETNAM', 'CCB_AVOID_JUNGLE_FIRE');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_AVOID_JUNGLE_FIRE', 'MODIFIER_PLAYER_ADJUST_AVOID_RANDOM_EVENT', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_AVOID_JUNGLE_FIRE', 'RandomEventType', 'RANDOM_EVENT_JUNGLE_FIRE');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_VIETNAM', 'CCB_AVOID_FOREST_FIRE');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_AVOID_FOREST_FIRE', 'MODIFIER_PLAYER_ADJUST_AVOID_RANDOM_EVENT', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_AVOID_FOREST_FIRE', 'RandomEventType', 'RANDOM_EVENT_FOREST_FIRE');
+
