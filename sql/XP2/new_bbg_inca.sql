@@ -177,14 +177,6 @@ DELETE FROM ImprovementModifiers
       WHERE ImprovementType = 'IMPROVEMENT_TERRACE_FARM' AND
             ModifierID = 'TERRACE_FARM_PRODUCTION_FRESH_WATER_NO_AQUEDUCT';
 
--- remove mountain adjacency bonus
-DELETE FROM Improvement_Adjacencies
-      WHERE YieldChangeId IN ('Terrace_GrassMountainAdjacency', 'Terrace_PlainsMountainAdjacency', 'Terrace_DesertMountainAdjacency', 'Terrace_TundraMountainAdjacency', 'Terrace_SnowMountainAdjacency') AND
-            ImprovementType = 'IMPROVEMENT_TERRACE_FARM';
-
--- housing remove
-UPDATE Improvements SET Housing=0 WHERE ImprovementType='IMPROVEMENT_TERRACE_FARM';
-
 -- base +2 food
 UPDATE Improvement_YieldChanges SET YieldChange=2 WHERE ImprovementType='IMPROVEMENT_TERRACE_FARM' AND YieldType='YIELD_FOOD';
 
