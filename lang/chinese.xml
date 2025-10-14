@@ -702,7 +702,7 @@
 		<!-- == INCA == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_GREAT_MOUNTAINS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>公民可改良山脉单元格。山脉单元格提供+2 [ICON_PRODUCTION] 生产力，通过科技或市政进入工业时代后额外+1 [ICON_PRODUCTION] 生产力。[NEWLINE]城市不受非 [ICON_Food] 食物产出的负宜居惩罚。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3草原山脉与平原山脉。特殊：允许周边存在大量山脉。</Text>
+			<Text>公民可改良山脉单元格。山脉单元格提供+2 [ICON_PRODUCTION] 生产力，通过科技或市政进入工业时代后额外+1 [ICON_PRODUCTION] 生产力。每与一个梯田农场相邻，山脉单元格则+1 [ICON_FOOD] 食物。[NEWLINE]城市不受非 [ICON_Food] 食物产出的负宜居惩罚。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3草原山脉与平原山脉。特殊：允许周边存在大量山脉。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_PACHACUTI_QHAPAQ_NAN_DESCRIPTION" Language="zh_Hans_CN">
@@ -710,7 +710,7 @@
 		</Replace>
 		<!-- = unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_TERRACE_FARM_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>解锁建造者建造印加特色改良梯田农场的能力。[NEWLINE][NEWLINE]+2 [ICON_FOOD] 食物。[NEWLINE]每与一个水渠区域相邻则+2 [ICON_PRODUCTION] 生产力。[NEWLINE]每与 2 个印加梯田相邻 +1 [ICON_FOOD] 食物（封建主义后，提升至每与 1 个印加梯田相邻 +1 [ICON_FOOD] 食物）。[NEWLINE]发现“土木工程”后，+1 [ICON_PRODUCTION] 生产力。[NEWLINE]可建在山脉和火山土上。</Text>
+			<Text>解锁建造者建造印加特色改良梯田农场的能力。[NEWLINE][NEWLINE]+2 [ICON_FOOD] 食物、+1 [ICON_HOUSING] 住房。[NEWLINE]每与一个水渠区域相邻则+2 [ICON_PRODUCTION] 生产力。[NEWLINE]每与 2 个印加梯田相邻 +1 [ICON_FOOD] 食物（封建主义后，提升至每与 1 个印加梯田相邻 +1 [ICON_FOOD] 食物）。[NEWLINE]发现“土木工程”后，+1 [ICON_PRODUCTION] 生产力。[NEWLINE]可建在山脉和火山土上。</Text>
 		</Replace>
 
 		<!-- == INDIA == -->
@@ -967,7 +967,7 @@
 		<!-- == MALI == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MALI_GOLD_DESERT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+1 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源。</Text>
+			<Text>首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+1 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。。所有城市-10% [ICON_PRODUCTION] 生产力[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源。</Text>
 		</Replace>
 		<!-- = leader ability (Mansa Musa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SAHEL_MERCHANTS_DESCRIPTION" Language="zh_Hans_CN">
@@ -1133,7 +1133,7 @@
 		<!-- == NUBIA == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_TA_SETI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>生产陆地及海军远程单位时+30% [ICON_Production] 生产力。所有陆地及海军远程单位战斗经验值+50%。战略资源矿产提供+1 [ICON_Production] 生产力。加成和奢侈品资源矿产提供+2 [ICON_Gold] 金币。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T2平原、T5矿山资源。</Text>
+			<Text>生产陆地及海军远程单位时+30% [ICON_Production] 生产力。所有陆地及海军远程单位战斗经验值+50%。战略资源矿产提供+1 [ICON_Production] 生产力。加成和奢侈品资源矿产提供+2 [ICON_Gold] 金币。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T5矿山资源。</Text>
 		</Replace>
 		<!-- = leader ability = --> <!-- production icon -->
 		<Replace Tag="LOC_TRAIT_LEADER_KANDAKE_OF_MEROE_DESCRIPTION" Language="zh_Hans_CN">
@@ -1810,7 +1810,7 @@
 			<Text>城市中格位收获和移除地貌的产出+40%。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市的 [ICON_Food] 食物增长+20%。以此处为终点的 [ICON_TradeRoute] 国内贸易路线+1 [ICON_Food] 食物、+1 [ICON_PRODUCTION] 生产力。</Text>
+			<Text>城市的 [ICON_Food] 食物增长+20%。以此处为终点的 [ICON_TradeRoute] 国内贸易路线+1 [ICON_Food] 食物、+2 [ICON_PRODUCTION] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>建造工业区建筑时+25% [ICON_PRODUCTION] 生产力。城市中生产的开拓者不消耗 [ICON_Citizen] 人口。</Text>
