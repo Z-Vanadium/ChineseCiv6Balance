@@ -967,7 +967,7 @@
 		<!-- == MALI == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MALI_GOLD_DESERT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+1 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。。所有城市-10% [ICON_PRODUCTION] 生产力[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源。</Text>
+			<Text>首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+2 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。所有城市-10% [ICON_PRODUCTION] 生产力[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源。</Text>
 		</Replace>
 		<!-- = leader ability (Mansa Musa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SAHEL_MERCHANTS_DESCRIPTION" Language="zh_Hans_CN">
