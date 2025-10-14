@@ -5,7 +5,6 @@
 --===========================================================================
 UPDATE Units SET Combat=53 WHERE UnitType='UNIT_MALI_MANDEKALU_CAVALRY';
 
--- 2025/10/11 remove
 -- 25/10/23 Remove 30% prod malus for units/buildings, add global 10% prod malus
 DELETE FROM TraitModifiers WHERE TraitType = 'TRAIT_CIVILIZATION_MALI_GOLD_DESERT' AND ModifierId = 'TRAIT_LESS_UNIT_PRODUCTION';
 DELETE FROM TraitModifiers WHERE TraitType = 'TRAIT_CIVILIZATION_MALI_GOLD_DESERT' AND ModifierId = 'TRAIT_LESS_BUILDING_PRODUCTION';
@@ -16,7 +15,7 @@ INSERT INTO Modifiers(ModifierId, ModifierType) VALUES
     ('BBG_TRAIT_MALI_LESS_CITY_PRODUCTION', 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER');
 INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
     ('BBG_TRAIT_MALI_LESS_CITY_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION'),
-    ('BBG_TRAIT_MALI_LESS_CITY_PRODUCTION', 'Amount', '0');
+    ('BBG_TRAIT_MALI_LESS_CITY_PRODUCTION', 'Amount', '10');
 
 -- Faith on cities removed
 DELETE FROM TraitModifiers WHERE TraitType = 'TRAIT_CIVILIZATION_MALI_GOLD_DESERT' AND ModifierId = 'TRAIT_DESERT_CITY_CENTER_FAITH';
@@ -104,7 +103,6 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     -- ('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'BBG_MALI_FOOD_DESERT'),
     ('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'BBG_MALI_FOOD_DESERT_HILLS');
 
--- 2025/10/11 nurf to +1
 -- 30/06/25 +2 Gold on mines only on desert tiles
 INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
     ('BBG_PLOT_IS_DESERT_MINE_REQSET', 'REQUIREMENTSET_TEST_ALL'),
@@ -119,9 +117,9 @@ INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
     ('BBG_MALI_GOLD_DESERT_HILLS_MINES', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'BBG_PLOT_IS_DESERT_HILLS_MINE_REQSET');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_MALI_GOLD_DESERT_MINES', 'YieldType', 'YIELD_GOLD'),
-    ('BBG_MALI_GOLD_DESERT_MINES', 'Amount', 1),
+    ('BBG_MALI_GOLD_DESERT_MINES', 'Amount', 2),
     ('BBG_MALI_GOLD_DESERT_HILLS_MINES', 'YieldType', 'YIELD_GOLD'),
-    ('BBG_MALI_GOLD_DESERT_HILLS_MINES', 'Amount', 1);
+    ('BBG_MALI_GOLD_DESERT_HILLS_MINES', 'Amount', 2);
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'BBG_MALI_GOLD_DESERT_MINES'),
     ('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'BBG_MALI_GOLD_DESERT_HILLS_MINES');
