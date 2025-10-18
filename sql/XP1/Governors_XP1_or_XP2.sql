@@ -311,15 +311,16 @@ INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
 INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
     ('GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION', 'BBG_MAGNUS_DOMESTIC_TRADE_ROUTE_PROD');
 
+-- 2025/10/18 IZ prod removed
 -- 06/07/23 RI Industrialist: +25% Production toward Industrial Zone buildings in the city. Settlers trained in the city do not consume a Citizen Population. 
 DELETE FROM GovernorPromotionModifiers WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST';
-INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
-    ('BBG_GOVERNOR_MAGNUS_PROD_IZ', 'MODIFIER_SINGLE_CITY_ADJUST_BUILDING_PRODUCTION');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-    ('BBG_GOVERNOR_MAGNUS_PROD_IZ', 'DistrictType', 'DISTRICT_INDUSTRIAL_ZONE'),
-    ('BBG_GOVERNOR_MAGNUS_PROD_IZ', 'Amount', 25);
-INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
-    ('GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST', 'BBG_GOVERNOR_MAGNUS_PROD_IZ');
+-- INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+--     ('BBG_GOVERNOR_MAGNUS_PROD_IZ', 'MODIFIER_SINGLE_CITY_ADJUST_BUILDING_PRODUCTION');
+-- INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+--     ('BBG_GOVERNOR_MAGNUS_PROD_IZ', 'DistrictType', 'DISTRICT_INDUSTRIAL_ZONE'),
+--     ('BBG_GOVERNOR_MAGNUS_PROD_IZ', 'Amount', 25);
+-- INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
+--     ('GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST', 'BBG_GOVERNOR_MAGNUS_PROD_IZ');
 UPDATE GovernorPromotionPrereqs SET PrereqGovernorPromotion='GOVERNOR_PROMOTION_RESOURCE_MANAGER_GROUNDBREAKER' WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST';
 UPDATE GovernorPromotions SET Level=1, Column=2 WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST';
 UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST' WHERE ModifierId='EXPEDITION_ADJUST_SETTLERS_CONSUME_POPULATION';
