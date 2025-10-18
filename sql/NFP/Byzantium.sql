@@ -27,9 +27,10 @@ INSERT OR IGNORE INTO TypeTags (Type , Tag) VALUES
 UPDATE Districts SET CostProgressionParam1=35 WHERE DistrictType='DISTRICT_HIPPODROME';
 UPDATE Districts SET Cost=30 WHERE DistrictType='DISTRICT_HIPPODROME';
 
+-- 2025/10/18 revert to +3
 -- 19/12/23 hippodromes to 2 amenities (from 3)
 -- 26/02/23 reverted to +3
--- UPDATE Districts SET Entertainment=2 WHERE DistrictType='DISTRICT_HIPPODROME';
+UPDATE Districts SET Entertainment=3 WHERE DistrictType='DISTRICT_HIPPODROME';
 
 -- 2025/09/15 all units +1 cs when found a religion
 -- 2025/09/18 revert
