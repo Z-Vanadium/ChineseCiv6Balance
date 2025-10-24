@@ -702,7 +702,7 @@
 		<!-- == INCA == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_GREAT_MOUNTAINS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>公民可改良山脉单元格。山脉单元格提供+2 [ICON_PRODUCTION] 生产力，通过科技或市政进入工业时代后额外+1 [ICON_PRODUCTION] 生产力。每与一个梯田农场相邻，山脉单元格则+1 [ICON_FOOD] 食物。[NEWLINE]城市不受非 [ICON_Food] 食物产出的负宜居惩罚。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3草原山脉与平原山脉。特殊：允许周边存在大量山脉。</Text>
+			<Text>公民可改良山脉单元格。山脉单元格提供+2 [ICON_PRODUCTION] 生产力，通过科技或市政进入工业时代后额外+1 [ICON_PRODUCTION] 生产力。[NEWLINE]城市不受非 [ICON_Food] 食物产出的负宜居惩罚。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3草原山脉与平原山脉。特殊：允许周边存在大量山脉。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_PACHACUTI_QHAPAQ_NAN_DESCRIPTION" Language="zh_Hans_CN">
@@ -710,7 +710,7 @@
 		</Replace>
 		<!-- = unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_TERRACE_FARM_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>解锁建造者建造印加特色改良梯田农场的能力。[NEWLINE][NEWLINE]+2 [ICON_FOOD] 食物、+1 [ICON_HOUSING] 住房。[NEWLINE]每与一个水渠区域相邻则+2 [ICON_PRODUCTION] 生产力。[NEWLINE]每与 2 个印加梯田相邻 +1 [ICON_FOOD] 食物（封建主义后，提升至每与 1 个印加梯田相邻 +1 [ICON_FOOD] 食物）。[NEWLINE]发现“土木工程”后，+1 [ICON_PRODUCTION] 生产力。[NEWLINE]可建在山脉和火山土上。</Text>
+			<Text>解锁建造者建造印加特色改良梯田农场的能力。[NEWLINE][NEWLINE]+2 [ICON_FOOD] 食物、+1 [ICON_HOUSING] 住房。[NEWLINE]每与 1 个水渠区域相邻则 +2 [ICON_PRODUCTION] 生产力。[NEWLINE]每与 1 个山脉相邻则 +1 [icon_food] 食物。[NEWLINE]每与 2 个印加梯田相邻 +1 [ICON_FOOD] 食物（封建主义后，提升至每与 1 个印加梯田相邻 +1 [ICON_FOOD] 食物）。[NEWLINE]发现“土木工程”后，+1 [ICON_PRODUCTION] 生产力。[NEWLINE]可建在山脉和火山土上。</Text>
 		</Replace>
 
 		<!-- == INDIA == -->
@@ -1856,7 +1856,7 @@
 			<Text>每一个有 [ICON_RESOURCE_CATTLE] 牛、 [ICON_RESOURCE_RICE] 大米、和 [ICON_RESOURCE_WHEAT] 小麦的单元格+1 [ICON_FOOD] 食物。[NEWLINE] 生产建造者时+10% [ICON_PRODUCTION] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_FERTILITY_RITES_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>每一个有 [ICON_RESOURCE_CATTLE] 牛、 [ICON_RESOURCE_RICE] 大米、 [ICON_RESOURCE_WHEAT] 小麦、和 [ICON_RESOURCE_MAIZE] 玉米的单元格+1 [ICON_FOOD] 食物。</Text>
+			<Text>{LOC_BELIEF_FERTILITY_RITES_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_RELIGIOUS_SETTLEMENTS_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>生产开拓者时+20% [ICON_PRODUCTION] 生产力。[NEWLINE]边界扩张速度提升50%。[NEWLINE]建立新城市时获得额外两格领土。</Text>
@@ -2270,7 +2270,7 @@
 			<Text>占2个单元格的自然奇观，无法通行，表现为山脉。所有相邻单元格的地形产量翻倍。</Text>
 		</Replace>
 		<Replace Tag="LOC_FEATURE_ZHANGYE_DANXIA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>占3个单元格的自然奇观，无法通行，表现为山脉。若文明拥有至少1个该奇观单元格，每回合获得2点 [ICON_GREATGENERAL] 大将军点数和2点 [ICON_GREATMERCHANT] 大商人点数。</Text>
+			<Text>占3个单元格的自然奇观，无法通行，表现为山脉。若文明拥有至少1个该奇观单元格，每回合获得 1 点 [ICON_GREATGENERAL] 大将军点数和 1 点 [ICON_GREATMERCHANT] 大商人点数。游戏每进入一个新时代（古典时代开始），这两种点数便 +1。</Text>
 		</Replace>
 		<Replace Tag="LOC_FEATURE_FOUNTAIN_OF_YOUTH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>占1个单元格的自然奇观，表现为绿洲。提供+4 [ICON_Science] 科技值、+4 [ICON_Faith] 信仰值。进入此奇观的陆地战斗单位将获得能力“生命之水”（在任意领土中+10生命值恢复）。</Text>
@@ -3210,7 +3210,7 @@
 			<Text>源自盟友城市的 [ICON_TradeRoute] 贸易路线所提供的 [ICON_GOLD] 金币+6</Text>
 		</Replace>
 		<Replace Tag="LOC_ALLIANCE_LV2_ECONOMIC_EFFECT_1" Language="zh_Hans_CN">
-			<Text>盟友的每座附属城邦将提供+1 [ICON_InfluencePerTurn] 影响力点数</Text>
+			<Text>盟友的每座附属城邦将提供+1 [ICON_InfluencePerTurn] 影响力点数。从通往盟友城市的 [ICON_TradeRoute] 贸易路线处为双方城市+1 [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_ALLIANCE_LV1_RELIGIOUS_EFFECT_1" Language="zh_Hans_CN">
 			<Text>从通往盟友城市的 [ICON_TradeRoute] 贸易路线处获得的 [ICON_FOOD] 食物+1、[ICON_FAITH] 信仰值+4</Text>
@@ -3223,6 +3223,9 @@
 		</Replace>
 		<Replace Tag="LOC_ALLIANCE_LV3_MILITARY_EFFECT_1" Language="zh_Hans_CN">
 			<Text>单位初始便获得一次 [ICON_Promotion] 升级</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_ALLIANCES_1_CHAPTER_CONTENT_PARA_1" Language="zh_Hans_CN">
+			<Text>同盟是两个不同文明相互协商、在某方面进行合作的一种关系。结尾同盟之前双方必须首先宣布友谊，且均已完成市政“行政部分”的研究。[NEWLINE][NEWLINE]同盟类型有数种，提供的益处皆有不同。与其他玩家处于同盟关系时，每回合将获得同盟点数。获得足够的点数后同盟等级将提升，产生更多益处。与盟友进行贸易可提升获得的同盟点数。同盟等级效果叠加计算，如果处于第3级同盟，则也会获得第1级和第2级效果。[NEWLINE][NEWLINE]每种同盟均会使双方开放边界并共同防御。盟友之间无法宣战。[NEWLINE][NEWLINE]您只能和其他文明结成一种同盟。一旦结成同盟，则无法与其他文明再次结成此类同盟，但可与之结成其他类型的同盟。举例而言，您与朝鲜结成研究同盟后便无法再与克里结成研究同盟，但却可以与其建立军事、文化、宗教或经济同盟。注意，游戏中最多只能结缔5个同盟。[NEWLINE][NEWLINE]研究同盟[NEWLINE][ICON_BULLET]第1级：盟友之间的 [ICON_TradeRoute] 贸易路线可产出更多 [ICON_SCIENCE] 科技值。[NEWLINE][ICON_BULLET]第2级：盟友每30回合共享一个科技提升（标准速度下）。[NEWLINE][ICON_BULLET]第3级：与盟友研究相同科技、或研究盟友已研究完成的科技时获得 [ICON_SCIENCE] 科技值加成；盟友已研究您完成的科技是也可获得科技加成。[NEWLINE][NEWLINE]文化同盟[NEWLINE][ICON_BULLET]第1级：盟友之间的 [ICON_TradeRoute] 贸易路线可产出更多 [ICON_Culture] 文化值。[NEWLINE][ICON_BULLET]第2级：城市与盟友之间存在 [ICON_TradeRoute] 贸易路线时，将根据起源城市中建造的区域获得更多 [ICON_GreatPerson] 伟人点数。[NEWLINE][ICON_BULLET]第3级：您将获得盟友城市产出的部分 [ICON_Tourism] 旅游业绩和 [ICON_Culture] 文化值。[NEWLINE][NEWLINE]军事同盟[NEWLINE][ICON_BULLET]第1级：与双方盟友均已宣战的文明作战时将获得 [ICON_Strength] 战斗力加成。[NEWLINE][ICON_BULLET]第2级：盟友之间共享能见度；其中一个盟友处于战争状态时，双方军事单位都将获得 [ICON_Production] 生产力加成。[NEWLINE][ICON_BULLET]第3级：单位初始便拥有一次奖励升级。[NEWLINE][NEWLINE]宗教同盟[NEWLINE][ICON_BULLET]第1级：盟友之间的 [ICON_TradeRoute] 贸易路线可产出更多 [ICON_FOOD] 食物和 [ICON_FAITH] 信仰值。[NEWLINE][ICON_BULLET]第2级：与非盟友宗教进行宗教战争时获得 [ICON_RELIGION] 宗教战斗力加成。[NEWLINE][ICON_BULLET]第3级：基于信仰盟友宗教的 [ICON_Citizen] 公民数量获得信仰值；在没有盟友宗教信徒的城市中获得宗教压力。[NEWLINE][NEWLINE]经济同盟[NEWLINE][ICON_BULLET]第1级：盟友之间的 [ICON_TradeRoute] 贸易路线可产出更多 [ICON_GOLD] 金币。[NEWLINE][ICON_BULLET]第2级：与非盟友宗教进行宗教战争时获得 [ICON_RELIGION] 宗教战斗力加成；盟友之间的 [ICON_TradeRoute] 贸易路线可产出更多 [ICON_Production] 生产力。[NEWLINE][ICON_BULLET]第3级：盟友之间共享双方获得的全部城邦宗主国加成。</Text>
 		</Replace>
 
 
@@ -3745,7 +3748,7 @@
 		</Replace>
 		<!-- = leader ability (Olympia) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_JFD_CABEIRI_MYSTERIES_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>创建万神殿后获得一个 [ICON_ENVOY] 使者。（即将重做请期待）</Text>
+			<Text>拥有皇家学堂和圣地的城市每个人口+1 [ICON_SCIENCE] 科技值并获得1[ICON_ENVOY] 使者。每宗主一个城邦可为近战和重骑兵单位+2 [ICON_STRENGTH] 战斗力。</Text>
         </Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_JFD_CABEIRI_MYSTERIES_NAME" Language="zh_Hans_CN">
 			<Text>众卡比洛斯之秘仪</Text>
@@ -4212,10 +4215,10 @@
 			<Text>柱墓</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_SUK_PILLAR_TOMB_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>斯瓦西里特色市中心建筑，替代“纪念碑”。+1 [ICON_CULTURE] 文化值，+1忠诚度。若忠诚度已满，则获得+1 [ICON_CULTURE] 文化值。若城市拥有此建筑，每两个市中心二环内区域（最多6个区域）可为该城市的每条国际 [ICON_TradeRoute] 贸易路线提供+2 [ICON_GOLD] 金币和+1 [ICON_SCIENCE] 科技值。</Text>
+			<Text>斯瓦西里特色市中心建筑，替代“纪念碑”。+1 [ICON_CULTURE] 文化值，+1忠诚度。若忠诚度已满，则获得+1 [ICON_CULTURE] 文化值。若城市拥有此建筑，每两个市中心二环内区域（最多4个区域）可为该城市的每条国际 [ICON_TradeRoute] 贸易路线提供+2 [ICON_GOLD] 金币和+1 [ICON_SCIENCE] 科技值。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_SUK_PILLAR_TOMB_XP1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>斯瓦西里特色市中心建筑，替代“纪念碑”。+1 [ICON_CULTURE] 文化值，+1忠诚度。若忠诚度已满，则获得+1 [ICON_CULTURE] 文化值。若城市拥有此建筑，每两个市中心二环内区域（最多6个区域）可为该城市的每条国际 [ICON_TradeRoute] 贸易路线提供+2 [ICON_GOLD] 金币和+1 [ICON_SCIENCE] 科技值。</Text>
+			<Text>{LOC_BUILDING_SUK_PILLAR_TOMB_DESCRIPTION}</Text>
 		</Replace>
 		<!--  Cities  -->
 		<Replace Tag="LOC_CITY_NAME_SUK_SWAHILI_KILWA_KISIWANI" Language="zh_Hans_CN">
@@ -4522,7 +4525,7 @@
 			<Text>猎人小屋</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_LIME_THULE_WBH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>图勒特色改良设施。建在冻土单元格上时获得+1 [ICON_FOOD] 食物（雪地则翻倍）。每相邻1个海洋资源或营地获得+1 [ICON_CULTURE] 文化值和+1 [ICON_FAITH] 信仰值。必须建在与加成或奢侈品资源相邻的单元格。“飞行”科技后提供等同于 [ICON_FAITH] 信仰值的 [ICON_Tourism] 旅游业绩。可建造在树林上。不能建在另一个猎人小屋旁。</Text>
+			<Text>图勒特色改良设施。建在冻土单元格上时获得+1 [ICON_FOOD] 食物（雪地则翻倍）。解锁“对外贸易”市政后，每相邻1个海洋资源或营地获得+1 [ICON_CULTURE] 文化值和+1 [ICON_FAITH] 信仰值。必须建在与加成或奢侈品资源相邻的单元格。“飞行”科技后提供等同于 [ICON_FAITH] 信仰值的 [ICON_Tourism] 旅游业绩。可建造在树林上。不能建在另一个猎人小屋旁。</Text>
 		</Replace>
 		<!--  Cities  -->
 		<Replace Tag="LOC_CITY_NAME_LIME_THULE_DAVE_QILAKITSOQ" Language="zh_Hans_CN">
