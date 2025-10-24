@@ -397,6 +397,8 @@ UPDATE ModifierArguments SET Value=2 WHERE ModifierId='BBG_MAGNUS_DOMESTIC_TRADE
 -- 3 turns
 
 -- Base Redoubt : Increase city garrison CS by 5.               
+-- 2025/10/24 give 6 loyalty bonus (start at 8)
+UPDATE Governors SET IdentityPressure=14 WHERE GovernorType='GOVERNOR_THE_DEFENDER';
 
 -- LI Garrison Commander : Units defending within the city's territory get +3 CS. Your other cities within 9 tiles gain +4 Loyalty per turn towards your civilization.
 UPDATE ModifierArguments SET Value=3 WHERE ModifierId='GARRISON_COMMANDER_ADJUST_CITY_COMBAT_BONUS' AND Name='Amount';
