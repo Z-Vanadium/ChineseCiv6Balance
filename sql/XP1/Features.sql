@@ -30,3 +30,31 @@ INSERT OR IGNORE INTO Feature_YieldChanges (FeatureType, YieldType, YieldChange)
 
 UPDATE Feature_YieldChanges SET YieldChange=2 WHERE FeatureType='FEATURE_UBSUNUR_HOLLOW' AND YieldType='YIELD_PRODUCTION';
 UPDATE Feature_YieldChanges SET YieldChange=2 WHERE FeatureType='FEATURE_UBSUNUR_HOLLOW' AND YieldType='YIELD_FOOD';
+
+-- 2025/10/24 Zhangye Danxia give 1 point per era (instead of 2 all the time)
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) SELECT
+    'BBG_PLAYER_HAS_ZHANGYE_DANXIA_' || EraType, 'REQUIREMENTSET_TEST_ALL' FROM Eras;
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) SELECT
+    'BBG_PLAYER_HAS_ZHANGYE_DANXIA_' || EraType, 'PLAYER_HAS_ZHANGYE_DANXIA' FROM Eras;
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) SELECT
+    'BBG_PLAYER_HAS_ZHANGYE_DANXIA_' || EraType, 'BBG_GAME_IS_IN_' || EraType || '_REQUIREMENT' FROM Eras;
+
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) SELECT
+    'BBG_ZHANGYE_DANXIA_GREAT_MERCHANT_' || EraType, 'MODIFIER_ALL_PLAYERS_ADJUST_GREAT_PERSON_POINTS', 'BBG_PLAYER_HAS_ZHANGYE_DANXIA_' || EraType FROM Eras;
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'BBG_ZHANGYE_DANXIA_GREAT_MERCHANT_' || EraType, 'GreatPersonClassType', 'GREAT_PERSON_CLASS_MERCHANT' FROM Eras;
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'BBG_ZHANGYE_DANXIA_GREAT_MERCHANT_' || EraType, 'Amount', 1 FROM Eras;
+INSERT INTO GameModifiers (ModifierId) SELECT
+    'BBG_ZHANGYE_DANXIA_GREAT_MERCHANT_' || EraType FROM Eras;
+
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) SELECT
+    'BBG_ZHANGYE_DANXIA_GREAT_GENERAL_' || EraType, 'MODIFIER_ALL_PLAYERS_ADJUST_GREAT_PERSON_POINTS', 'BBG_PLAYER_HAS_ZHANGYE_DANXIA_' || EraType FROM Eras;
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'BBG_ZHANGYE_DANXIA_GREAT_GENERAL_' || EraType, 'GreatPersonClassType', 'GREAT_PERSON_CLASS_GENERAL' FROM Eras;
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'BBG_ZHANGYE_DANXIA_GREAT_GENERAL_' || EraType, 'Amount', 1 FROM Eras;
+INSERT INTO GameModifiers (ModifierId) SELECT
+    'BBG_ZHANGYE_DANXIA_GREAT_GENERAL_' || EraType FROM Eras;
+
+DELETE FROM GameModifiers WHERE ModifierId IN ('GREAT_GENERAL_ZHANGYE', 'GREAT_MERCHANT_ZHANGYE')
