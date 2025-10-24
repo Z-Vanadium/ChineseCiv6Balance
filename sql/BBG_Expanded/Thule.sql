@@ -170,10 +170,6 @@ INSERT INTO ImprovementModifiers (ImprovementType, ModifierId) VALUES
     ('IMPROVEMENT_LIME_THULE_WBH', 'BBG_WBH_FOOD_TUNDRA'),
     ('IMPROVEMENT_LIME_THULE_WBH', 'BBG_WBH_FOOD_SNOW');
 
-INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, TilesRequired, AdjacentImprovement) VALUES
-    ('BBG_WBH_CULTURE_CAMP', 'Placeholder', 'YIELD_CULTURE', 1, 1, 'IMPROVEMENT_CAMP'),
-    ('BBG_WBH_FAITH_CAMP', 'Placeholder', 'YIELD_FAITH', 1, 1, 'IMPROVEMENT_CAMP');
-
 INSERT INTO Improvement_Adjacencies (ImprovementType, YieldChangeId) VALUES
     ('IMPROVEMENT_LIME_THULE_WBH', 'BBG_WBH_CULTURE_CAMP'),
     ('IMPROVEMENT_LIME_THULE_WBH', 'BBG_WBH_FAITH_CAMP');
