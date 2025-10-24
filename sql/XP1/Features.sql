@@ -31,8 +31,7 @@ INSERT OR IGNORE INTO Feature_YieldChanges (FeatureType, YieldType, YieldChange)
 UPDATE Feature_YieldChanges SET YieldChange=2 WHERE FeatureType='FEATURE_UBSUNUR_HOLLOW' AND YieldType='YIELD_PRODUCTION';
 UPDATE Feature_YieldChanges SET YieldChange=2 WHERE FeatureType='FEATURE_UBSUNUR_HOLLOW' AND YieldType='YIELD_FOOD';
 
--- 2025/10/24
--- 30/09/25: Zhangye Danxia give 1 point per era (instead of 2 all the time)
+-- 2025/10/24 Zhangye Danxia give 1 point per era (instead of 2 all the time)
 INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) SELECT
     'BBG_PLAYER_HAS_ZHANGYE_DANXIA_' || EraType, 'REQUIREMENTSET_TEST_ALL' FROM Eras;
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) SELECT
@@ -84,4 +83,4 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
 INSERT INTO GameModifiers (ModifierId) SELECT
     'BBG_ZHANGYE_DANXIA_GREAT_GENERAL_' || EraType FROM Eras;
 
-DELETE FROM GameModifiers WHERE ModifierId IN ('GREAT_GENERAL_ZHANGYE', 'GREAT_MERCHANT_ZHANGYE')
+DELETE FROM GameModifiers WHERE ModifierId IN ('GREAT_GENERAL_ZHANGYE', 'GREAT_MERCHANT_ZHANGYE');
