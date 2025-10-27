@@ -3748,7 +3748,8 @@
 		</Replace>
 		<!-- = leader ability (Olympia) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_JFD_CABEIRI_MYSTERIES_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>拥有皇家学堂和圣地的城市每个人口+1 [ICON_SCIENCE] 科技值并获得1[ICON_ENVOY] 使者。每宗主一个城邦可为近战和重骑兵单位+2 [ICON_STRENGTH] 战斗力。</Text>
+			<!-- <Text>拥有皇家学堂和圣地的城市每个人口+1 [ICON_SCIENCE] 科技值并获得1[ICON_ENVOY] 使者。每宗主一个城邦可为近战和重骑兵单位+2 [ICON_STRENGTH] 战斗力。</Text> -->
+			<Text>军营提供的 [ICON_GreatProphet] 大预言家点数 +1。皇家学堂+1 [ICON_InfluencePerTurn] 影响力点数。可以使用 [Icon_Faith] 信仰值购买军营内建筑。[NEWLINE][NEWLINE]创立  [ICON_Religion] 宗教后，信仰马其顿的宗教且拥有皇家学堂的己方城市，每个 [ICON_Citizen] 人口提供 +0.5 [Icon_Science] 科技值。[NEWLINE][NEWLINE]每宗主 1 个城邦，所有陆地战斗单位 +1 [ICON_STRENGTH] 战斗力。</Text>
         </Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_JFD_CABEIRI_MYSTERIES_NAME" Language="zh_Hans_CN">
 			<Text>众卡比洛斯之秘仪</Text>
