@@ -50,7 +50,7 @@ INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, Ow
 
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_ADMIRAL_LIGHTHORSE_DOCKYARD', 'Amount', '1'), 
-('CCB_ADMIRAL_LIGHTHORSE_DOCKYARD', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ADMIRAL');
+('CCB_ADMIRAL_LIGHTHORSE_DOCKYARD', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_GENERAL');
 
 
 -- 04/07/24 England rework
