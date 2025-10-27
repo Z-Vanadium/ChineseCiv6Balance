@@ -3,13 +3,13 @@
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e00" version="1100"> -->
 
 <!-- BETA ModID-->
-<!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1201"> -->
+<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1203">
 
 <!-- WIP ModID -->
-<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1100">
+<!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1100"> -->
 	<Properties>
-		<Name>CCB 基础 WIP 1.2.0b</Name>
-		<Version>1100</Version>
+		<Name>CCB 基础 BETA 1.2.0c</Name>
+		<Version>1203</Version>
 		<Description>
 			中国特色平衡模组，取代BBG。
 		</Description>
