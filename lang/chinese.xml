@@ -406,7 +406,7 @@
 		</Replace>
 		<!-- = leader ability (Egypt, Cleopatra Egyptian) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MEDITERRANEAN_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>您通往其他文明的 [ICON_TradeRoute] 贸易路线为埃及+4 [ICON_Gold] 金币。其他文明通往埃及的 [ICON_TradeRoute] 贸易路线为其+1 [ICON_Food] 食物、为埃及+2 [ICON_Gold] 金币。与盟友进行贸易可获得双倍同盟点数。[NEWLINE][NEWLINE]城市若建立在河流旁，建造商业中心和剧院广场时+15% [ICON_Production] 生产力。商业中心和剧院广场从河流获得 +1 [ICON_CULTURE] 文化值相邻加成。</Text>
+			<Text>您通往其他文明的 [ICON_TradeRoute] 贸易路线为埃及+4 [ICON_Gold] 金币。其他文明通往埃及的 [ICON_TradeRoute] 贸易路线为其+1 [ICON_Food] 食物、为埃及+2 [ICON_Gold] 金币。与盟友进行贸易可获得双倍同盟点数。[NEWLINE][NEWLINE]城市若建立在河流旁，建造商业中心和剧院广场时+15% [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_DISTRICT_RIVER_CULTURE" Language="zh_Hans_CN">
 			<Text> +1 [ICON_CULTURE] 文化值，来自相邻河流。</Text>
@@ -471,10 +471,10 @@
 		<!-- = leader ability = -->
 		<!-- = leader ability (Victoria Age of Empire) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_PAX_BRITANNICA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>在 [ICON_Capital] 首都10个单元格之外建立或占领城市时，免费获得1个近战单位。建造“皇家海军船坞”后，获得可生产的最强海军单位。研究“军事学”科技后，获得特色单位“红衫军”。[NEWLINE][NEWLINE]灯塔每回合提供+1 [ICON_GREATADMIRAL] 海军统帅点数。海军近战单位编队时，所有编队单位将继承护卫队的 [ICON_Movement] 移动力。</Text>
+			<Text>在 [ICON_Capital] 首都10个单元格之外建立或占领城市时，免费获得1个近战单位。建造“皇家海军船坞”后，获得可生产的最强海军单位。研究“军事学”科技后，获得特色单位“红衫军”。[NEWLINE][NEWLINE]灯塔每回合提供+1 [ICON_GreatGeneral] 大将军点数。海军近战单位编队时，所有编队单位将继承护卫队的 [ICON_Movement] 移动力。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_PAX_BRITANNICA_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>在 [ICON_Capital] 首都10个单元格之外建立或占领城市时，免费获得1个近战单位。建造“皇家海军船坞”后，获得可生产的最强海军单位。研究“军事学”科技后，获得特色单位“红衫军”。[NEWLINE][NEWLINE]灯塔每回合提供+1 [ICON_GREATADMIRAL] 海军统帅点数。海军近战单位编队时，所有编队单位将继承护卫队的 [ICON_Movement] 移动力。</Text>
+			<Text>{LOC_TRAIT_LEADER_PAX_BRITANNICA_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_ABILITY_AOE_MELEE_NAVAL_ESCORT_CIVILIANS_DESC" Language="zh_Hans_CN">
 			<Text>海军近战单位编队时，所有编队单位将继承护卫队的 [ICON_Movement] 移动力。</Text>
@@ -781,7 +781,7 @@
 			<Text>印度尼西亚特色文艺复兴时期海军单位，替代护卫舰。{LOC_ABILITY_JONG_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_JONG_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>编队时，所有编队单位将继承护卫队的 [ICON_Movement] 移动力并+5 [ICON_Strength] 战斗力。[NEWLINE]研究“横帆装置”后 +5 [ICON_Strength] 战斗力，+5 [ICON_Ranged] 远程攻击力。</Text>
+			<Text>编队时，所有编队单位将继承护卫队的 [ICON_Movement] 移动力并+5 [ICON_Strength] 战斗力。</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_ABILITY_JONG_COMBAT_SQUARE_RIGGING_NAME" Language="zh_Hans_CN">
 			<Text>研究“横帆装置”后 +5 [ICON_Strength] 战斗力，+5 [ICON_Ranged] 远程攻击力。</Text>
