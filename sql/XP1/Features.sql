@@ -83,4 +83,6 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
 INSERT INTO GameModifiers (ModifierId) SELECT
     'BBG_ZHANGYE_DANXIA_GREAT_GENERAL_' || EraType FROM Eras;
 
-DELETE FROM GameModifiers WHERE ModifierId IN ('GREAT_GENERAL_ZHANGYE', 'GREAT_MERCHANT_ZHANGYE');
+UPDATE ModifierArguments SET Value=0 WHERE ModifierId='GREAT_GENERAL_ZHANGYE' AND Name='Amount';
+UPDATE ModifierArguments SET Value=0 WHERE ModifierId='GREAT_MERCHANT_ZHANGYE' AND Name='Amount';
+-- DELETE FROM GameModifiers WHERE ModifierId='GREAT_GENERAL_ZHANGYE' OR ModifierId='GREAT_MERCHANT_ZHANGYE';
