@@ -778,7 +778,7 @@
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_INDONESIAN_JONG_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>印度尼西亚特色中世纪海军单位，替代护卫舰。{LOC_ABILITY_JONG_DESCRIPTION}</Text>
+			<Text>印度尼西亚特色文艺复兴时期海军单位，替代护卫舰。{LOC_ABILITY_JONG_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_JONG_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>编队时，所有编队单位将继承护卫队的 [ICON_Movement] 移动力并+5 [ICON_Strength] 战斗力。[NEWLINE]研究“横帆装置”后 +5 [ICON_Strength] 战斗力，+5 [ICON_Ranged] 远程攻击力。</Text>
