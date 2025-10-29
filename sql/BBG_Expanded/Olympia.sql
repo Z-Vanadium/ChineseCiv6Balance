@@ -5,13 +5,13 @@
 DELETE FROM TraitModifiers WHERE TraitType='TRAIT_LEADER_JFD_CABEIRI_MYSTERIES';
 
 
--- 2025/10/27 removed, but reqset will be used later
+-- 2025/10/27 removed, but reqset will be used later, change HS req to religion req
 -- 30/07/25 Basilikoi grant 1 envoy if city follows Olympia religion
 INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
     ('BBG_HAVE_BASILIKOI_AND_HOLY_SITE_REQSET', 'REQUIREMENTSET_TEST_ALL');
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
     ('BBG_HAVE_BASILIKOI_AND_HOLY_SITE_REQSET', 'REQUIRES_CITY_HAS_BASILIKOI'),
-    ('BBG_HAVE_BASILIKOI_AND_HOLY_SITE_REQSET', 'REQUIRES_CITY_HAS_HOLY_SITE');
+    ('BBG_HAVE_BASILIKOI_AND_HOLY_SITE_REQSET', 'REQUIRES_CITY_FOLLOWS_RELIGION');
 INSERT INTO Requirements (RequirementId, RequirementType) VALUES
     ('REQUIRES_CITY_HAS_BASILIKOI', 'REQUIREMENT_CITY_HAS_BUILDING');
 INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
