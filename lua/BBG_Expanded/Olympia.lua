@@ -136,7 +136,7 @@ function JFD_MacedonOlympias_PantheonFounded(playerID)
 		Game.AddWorldViewText(ReportingStatusTypes.DEFAULT, Locale.Lookup("LOC_TRAIT_LEADER_JFD_CABEIRI_MYSTERIES_ENVOY_NOTIFICATION", numEnvoys), -1, -1, -1)
 	end
 end
-Events.PantheonFounded.Add(JFD_MacedonOlympias_PantheonFounded);
+-- Events.PantheonFounded.Add(JFD_MacedonOlympias_PantheonFounded);
 --==========================================================================================================================
 --==========================================================================================================================
 
