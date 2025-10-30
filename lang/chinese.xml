@@ -710,7 +710,7 @@
 		</Replace>
 		<!-- = unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_TERRACE_FARM_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>解锁建造者建造印加特色改良梯田农场的能力。[NEWLINE][NEWLINE]+2 [ICON_FOOD] 食物、+1 [ICON_HOUSING] 住房。[NEWLINE]每与 1 个水渠区域相邻则 +2 [ICON_PRODUCTION] 生产力。[NEWLINE]每与 1 个山脉相邻则 +1 [icon_food] 食物。[NEWLINE]每与 2 个印加梯田相邻 +1 [ICON_FOOD] 食物（封建主义后，提升至每与 1 个印加梯田相邻 +1 [ICON_FOOD] 食物）。[NEWLINE]发现“土木工程”后，+1 [ICON_PRODUCTION] 生产力。[NEWLINE]可建在山脉和火山土上。</Text>
+			<Text>解锁建造者建造印加特色改良梯田农场的能力。[NEWLINE][NEWLINE]+1 [ICON_FOOD] 食物、+1 [ICON_HOUSING] 住房。[NEWLINE]研究“灌溉”后，+1 [ICON_FOOD] 食物。[NEWLINE]每与 1 个水渠区域相邻则 +2 [ICON_PRODUCTION] 生产力。[NEWLINE]每与 1 个山脉相邻则 +1 [icon_food] 食物。[NEWLINE]每与 2 个印加梯田相邻 +1 [ICON_FOOD] 食物（封建主义后，提升至每与 1 个印加梯田相邻 +1 [ICON_FOOD] 食物）。[NEWLINE]发现“土木工程”后，+1 [ICON_PRODUCTION] 生产力。[NEWLINE]可建在山脉和火山土上。</Text>
 		</Replace>
 
 		<!-- == INDIA == -->

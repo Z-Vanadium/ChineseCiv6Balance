@@ -177,8 +177,12 @@ DELETE FROM ImprovementModifiers
       WHERE ImprovementType = 'IMPROVEMENT_TERRACE_FARM' AND
             ModifierID = 'TERRACE_FARM_PRODUCTION_FRESH_WATER_NO_AQUEDUCT';
 
--- base +2 food
-UPDATE Improvement_YieldChanges SET YieldChange=2 WHERE ImprovementType='IMPROVEMENT_TERRACE_FARM' AND YieldType='YIELD_FOOD';
+-- base +1 food
+UPDATE Improvement_YieldChanges SET YieldChange=1 WHERE ImprovementType='IMPROVEMENT_TERRACE_FARM' AND YieldType='YIELD_FOOD';
+
+-- bonus +1 food with irrigation
+INSERT INTO Improvement_BonusYieldChanges (Id, ImprovementType, BonusYieldChange, YieldType, PrereqTech) VALUES
+    ('3050', 'IMPROVEMENT_TERRACE_FARM', '1', 'YIELD_FOOD', 'TECH_IRRIGATION');
 
 -- base +1 food from adj 2 self
 UPDATE Adjacency_YieldChanges SET PrereqCivic=NULL, ObsoleteCivic='CIVIC_FEUDALISM', ObsoleteTech=NULL WHERE ID='Terrace_MedievalAdjacency';
