@@ -3808,89 +3808,89 @@
 		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_Hans_CN">
 			<Text>好吧。这场毫无意义的战争已经持续得够久了。</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Cette guerre doit continuer. Mon peuple l'exige !</Text>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>这场战争必须继续。我的人民要求如此！</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Je suis fatigué de cette guerre. Cherchons la paix.</Text>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>我已厌倦这场战争。让我们寻求和平吧。</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Nous nous sommes battus jusqu'au dernier souffle - et avons perdu. Je vous remets mes armes et j'attends votre jugement.</Text>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>我们战斗至最后一息——但还是失败了。我向您交出武器，等待您的裁决。</Text>
 		</Replace>
 		<!--  DoF  -->
-		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Annonçons notre amitié mutuelle. Ensemble, nous mettrons fin aux tyrans de ce monde !</Text>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>让我们宣告彼此的友谊。携手终结世间的暴君！</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Excellent ! Cela donnera à réfléchir à nos ennemis !</Text>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>太好了！这会让我们的敌人好好思量！</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Je suis déçu. Peut-être la prochaine fois ?</Text>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>我很失望。或许下次？</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Nous sommes honorés. Merci beaucoup.</Text>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>我们深感荣幸。非常感谢。</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>La Gaule ne reconnaît aucune amitié avec vous.</Text>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>高卢不承认与您的任何友谊。</Text>
 		</Replace>
 		<!--  Delegation  -->
-		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Je vous envoie un cadeau digne de votre position de chef et de guerrier : un torque en or pesant 100 livres.</Text>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>我送给您一份配得上您首领和战士身份的礼物：一条重达100磅的金项圈。</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Votre délégation et les cadeaux que vous avez apportés sont les bienvenus. Merci beaucoup.</Text>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>欢迎您的代表团和您带来的礼物。非常感谢。</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Malheureusement, je suis actuellement occupé par une querelle entre mes chefs et je n'ai pas le temps de recevoir une délégation.</Text>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>遗憾的是，我目前正忙于处理首领间的纷争，无暇接待代表团。</Text>
 		</Replace>
 		<!--  Denounce  -->
-		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Mes amis et mes compatriotes gaulois se rassembleront pour me défendre. Qui avez-vous pour soutenir vos paroles méchantes ?</Text>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>我的朋友和高卢同胞将集结起来保卫我。您又有谁来支持您这些恶毒的言论？</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Vous n'êtes rien de plus qu'un tyran qui veut voir le monde enchaîné !</Text>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>您不过是个想看见世界被枷锁束缚的暴君！</Text>
 		</Replace>
 		<!--  Alliance  -->
-		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Mon peuple recherche une alliance contre les dangers de ce monde. Voulez-vous vous joindre à nous ?</Text>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>我的人民寻求结盟以应对世间的危险。您愿意加入我们吗？</Text>
 		</Replace>
 		<!--  Misc Standard Lines  -->
-		<Replace Tag="LOC_DIPLO_GREETING_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Salut !</Text>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>向您致意！</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Ce n'est pas acceptable.</Text>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>这无法接受。</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Une bonne proposition. D'accord !</Text>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>不错的提议。同意！</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Mes chefs estiment que l'ouverture des frontières améliorera les relations entre nous.</Text>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>我的首领们认为开放边界将改善我们之间的关系。</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Très bien. Je ne pense pas que nous ayons grand-chose à craindre de vous.</Text>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>很好。我想我们没什么需要防备您的。</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Non, je ne permettrai pas à des soldats ennemis de parcourir le territoire gaulois.</Text>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>不，我不会允许敌军士兵在高卢领土上随意穿行。</Text>
 		</Replace>
-		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="fr_FR">
-			<Text>Nos troupes sont bien protégées contre toute menace, comme vos soldats peuvent le constater. Êtes-vous satisfait de la reconnaissance de votre armée ?</Text>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_SUK_VERCINGETORIX_DLC_ANY" Language="zh_CN">
+			<Text>我们的军队对任何威胁都严阵以待，正如您的士兵所见。对您的这次军事侦察还满意吗？</Text>
 		</Replace>
 		<!--  Quote and Pedia  -->
-		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_SUK_VERCINGETORIX_DLC_QUOTE" Language="fr_FR">
-			<Text>Vous voulez vous battre ? Vous voulez vivre éternellement ? Alors je vous guiderai.</Text>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_SUK_VERCINGETORIX_DLC_QUOTE" Language="zh_CN">
+			<Text>想要战斗吗？想要永生吗？那么我来指引你。</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_SUK_VERCINGETORIX_DLC_TITLE" Language="fr_FR">
-			<Text>Vercingétorix</Text>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_SUK_VERCINGETORIX_DLC_TITLE" Language="zh_CN">
+			<Text>维钦托利</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_SUK_VERCINGETORIX_DLC_SUBTITLE" Language="fr_FR">
-			<Text>Verrix le Gaulois</Text>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_SUK_VERCINGETORIX_DLC_SUBTITLE" Language="zh_CN">
+			<Text>高卢之王</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_SUK_VERCINGETORIX_DLC_CHAPTER_CAPSULE_BODY" Language="fr_FR">
-			<Text>Vercingétorix tire sa force de son habileté diplomatique avec les cités-états. Unissez les tribus, et vos troupes deviendront continuellement plus fortes. Érigez des mines et des ateliers pour alimenter la machine de guerre, tout en assurant votre valeur culturelle et votre influence dans le monde.</Text>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_SUK_VERCINGETORIX_DLC_CHAPTER_CAPSULE_BODY" Language="zh_CN">
+			<Text>维钦托利的力量源于他与城邦的外交手腕。团结各部族，您的军队将持续变强。建立矿场和工坊来为战争机器提供动力，同时确保您的文化价值和世界影响力。</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_SUK_VERCINGETORIX_DLC_CHAPTER_DETAILED_BODY" Language="fr_FR">
-			<Text>La question la plus importante pour la Gaule est de savoir où s'installer. La majeure partie de leurs capacités uniques dépend du fait qu'ils s'installent sur des ressources exploitables, mais cela peut signifier qu'ils doivent s'installer à un ou deux champs d'une rivière ou d'un endroit plus avantageux. Cela est encore compliqué par les Dunons, qui sont également puissants, mais ont des exigences tout aussi strictes. La recherche d'endroits où vous pouvez exploiter pleinement les deux capacités est la clé du succès dans le jeu. Les capacités de Vercingétorix contribuent à la sécurité de votre empire : vous pouvez rapidement ériger des murs partout où ils sont nécessaires et obtenir un bonus de combat important tant que tout le monde reste loyal.</Text>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_SUK_VERCINGETORIX_DLC_CHAPTER_DETAILED_BODY" Language="zh_CN">
+			<Text>对高卢而言，最重要的问题是在何处定居。他们大部分独特能力都依赖于在可开发资源上建立城市，但这可能意味着他们需要在距离河流或更有利位置一两格的地方定居。杜农要塞的存在使情况更加复杂，它虽然强大，但要求同样严格。寻找能充分发挥这两种能力的地方是游戏成功的关键。维钦托利的能力有助于保障您的帝国安全：您可以在任何需要的地方快速筑起城墙，并且只要所有人保持忠诚，就能获得巨大的战斗加成。</Text>
 		</Replace>
 		
 		<!-- == MAYA == -->
