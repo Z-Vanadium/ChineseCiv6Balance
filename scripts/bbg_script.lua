@@ -4198,6 +4198,78 @@ function MacedonUpdateRemainingTurns(turn:number)
     end
 end
 
+-- function to clean Sweden ui in city-states
+function CleanSwedenUiInCityState(PlotX, PlotY, ImprovementID)
+	if ImprovementID == GameInfo.Improvements['IMPROVEMENT_OPEN_AIR_MUSEUM'].Index then
+		local pPlot = Map.GetPlot(PlotX, PlotY) 
+		if pPlot == nil then
+			return
+		end
+		local pCity = Cities.GetPlotPurchaseCity(pPlot)
+		if pCity == nil then
+			return
+		end
+		local pOnwer = pCity:GetOwner()
+		if pOnwer == nil then
+			return
+		end
+		if Players[pOnwer]:IsHuman() == false then
+			ImprovementBuilder.SetImprovementType(pPlot, -1, 0)
+		end
+	end
+end
+
+-- function to fix the bug that setting a city makas the city own duplicate unique improvements limited to one per city (take Sweden, Canada as example)
+local limited_ui_table = {}
+function ExtraUiCleanInitialize()
+	print("CCB: ExtraUiCleanInitialize")
+	for row in GameInfo.Improvements() do
+		if row ~= nil and row.OnePerCity == true then
+			limited_ui_table[row.Index] = row.ImprovementType
+			print("Add " .. tostring(row.ImprovementType) .. " to limited ui table")
+		end
+	end
+end
+
+function OnCityBuiltExtraUiClean(iPlayerID, iCityID, iX, iY)
+	print("CCB: check city adjacent ui")
+	local pPlayer = Players[iPlayerID]
+	if pPlayer == nil or pPlayer:IsMajor() == false then
+		return
+	end
+	local pCity = CityManager.GetCityAt(iX,iY)
+	if pCity == nil then
+		return
+	end
+	
+	for index, row in pairs(limited_ui_table) do
+		local count = 0
+		for direction = 0, 5 do
+			local adjacentPlot = Map.GetAdjacentPlot(iX, iY, direction)
+			if adjacentPlot ~= nil then
+				local adjacent_plot_improvement_type = adjacentPlot:GetImprovementType()
+				if adjacent_plot_improvement_type ~= nil and adjacent_plot_improvement_type > -1 and GameInfo.Improvements[adjacent_plot_improvement_type].Index == index then
+					count = count + 1
+				end
+			end
+		end
+
+		if count >= 2 then
+			for direction = 0, 5 do
+				local adjacentPlot = Map.GetAdjacentPlot(iX, iY, direction)
+				if adjacentPlot ~= nil then
+					local adjacent_plot_improvement_type = adjacentPlot:GetImprovementType()
+					-- print("check plot", iX, iY, direction, adjacent_plot_improvement_type)
+					if adjacent_plot_improvement_type ~= nil and adjacent_plot_improvement_type > -1 and GameInfo.Improvements[adjacent_plot_improvement_type].Index == index then
+						ImprovementBuilder.SetImprovementType(adjacentPlot, -1, 0)
+						print("Removed duplicate limited improvement " .. tostring(row) .. " at (" .. tostring(adjacentPlot:GetX()) .. "," .. tostring(adjacentPlot:GetY()) .. ")")
+					end
+				end
+			end
+		end
+	end
+end
+
 
 -- ===========================================================================
 --	Initialize
@@ -4233,6 +4305,12 @@ function Initialize()
 	GameEvents.OnCombatOccurred.Add(OnMonkCombatOccurred);
 
 	GameEvents.CityConquered.Add(OnMacedonConqueredCity);
+
+	ExtraUiCleanInitialize();
+	Events.CityAddedToMap.Add(OnCityBuiltExtraUiClean);
+	-- print("CCB - OnCityBuiltExtraUiClean initialized")
+
+	Events.ImprovementAddedToMap.Add(CleanSwedenUiInCityState);
 
 	--print("BBG Monk Hook Added")
 	-- upgradable uu exp bug fix
