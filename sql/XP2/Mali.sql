@@ -129,10 +129,40 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 --===========================================================================
 
 -- Cheaper purchase
+-- set to 0, since rewrite
 -- 2025/10/11 back to 10%
 -- 30/06/25 20% discount, from 10
-UPDATE ModifierArguments SET Value=10 WHERE ModifierId IN ('SUGUBA_CHEAPER_BUILDING_PURCHASE', 'SUGUBA_CHEAPER_DISTRICT_PURCHASE');
-UPDATE ModifierArguments SET Value=10 WHERE ModifierId='SUGUBA_CHEAPER_UNIT_PURCHASE' AND Name='Amount';
+UPDATE ModifierArguments SET Value=0 WHERE ModifierId IN ('SUGUBA_CHEAPER_BUILDING_PURCHASE', 'SUGUBA_CHEAPER_DISTRICT_PURCHASE');
+UPDATE ModifierArguments SET Value=0 WHERE ModifierId='SUGUBA_CHEAPER_UNIT_PURCHASE' AND Name='Amount';
+
+-- rewrite the algo
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'CCB_MALI_SUGUBA_CHEAPER_BUILDING_PURCHASE_NO_BUG');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MALI_SUGUBA_CHEAPER_BUILDING_PURCHASE_NO_BUG', 'MODIFIER_PLAYER_CITIES_ADJUST_ALL_BUILDINGS_PURCHASE_COST', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_SUGUBA');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MALI_SUGUBA_CHEAPER_BUILDING_PURCHASE_NO_BUG', 'Amount', '10');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'CCB_MALI_SUGUBA_CHEAPER_DISTRICT_PURCHASE_NO_BUG');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MALI_SUGUBA_CHEAPER_DISTRICT_PURCHASE_NO_BUG', 'MODIFIER_CCB_PLAYER_CITIES_ADJUST_ALL_DISTRICTS_PURCHASE_COST', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_SUGUBA');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MALI_SUGUBA_CHEAPER_DISTRICT_PURCHASE_NO_BUG', 'Amount', '10');
+
+INSERT INTO Types (Type, Kind) VALUES 
+('MODIFIER_CCB_PLAYER_CITIES_ADJUST_ALL_DISTRICTS_PURCHASE_COST', 'KIND_MODIFIER');
+INSERT INTO DynamicModifiers (ModifierType, CollectionType, EffectType) VALUES 
+('MODIFIER_CCB_PLAYER_CITIES_ADJUST_ALL_DISTRICTS_PURCHASE_COST', 'COLLECTION_PLAYER_CITIES', 'EFFECT_ADJUST_ALL_DISTRICTS_PURCHASE_COST');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'CCB_MALI_SUGUBA_CHEAPER_UNITS_PURCHASE_NO_BUG');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MALI_SUGUBA_CHEAPER_UNITS_PURCHASE_NO_BUG', 'MODIFIER_PLAYER_CITIES_ADJUST_UNITS_PURCHASE_COST', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_SUGUBA');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MALI_SUGUBA_CHEAPER_UNITS_PURCHASE_NO_BUG', 'Amount', '10'), 
+('CCB_MALI_SUGUBA_CHEAPER_UNITS_PURCHASE_NO_BUG', 'IncludeCivilian', '1'), 
+('CCB_MALI_SUGUBA_CHEAPER_UNITS_PURCHASE_NO_BUG', 'UnitDomain', 'DOMAIN_ALL');
 
 -- Normal adj from HS, City center, Rivers, Oasis and Gov Plaza
 INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentFeature) VALUES
