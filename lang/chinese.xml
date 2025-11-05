@@ -139,10 +139,10 @@
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_HAMMURABI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>首次建造出一种 [ICON_DISTRICT] 特色区域时，获得当前可在该区域中建造的、所需 [ICON_PRODUCTION] 生产力最低的建筑。</Text>
+			<Text>首次建造出一种 [ICON_DISTRICT] 专业化区域时，获得当前可在该区域中建造的、所需 [ICON_PRODUCTION] 生产力最低的建筑。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_HAMMURABI_XP1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>首次建造出一种 [ICON_DISTRICT] 特色区域（市政广场除外）时，获得当前可在该区域中建造的、所需 [ICON_PRODUCTION] 生产力最低的建筑。</Text>
+			<Text>首次建造出一种 [ICON_DISTRICT] 专业化区域（市政广场除外）时，获得当前可在该区域中建造的、所需 [ICON_PRODUCTION] 生产力最低的建筑。</Text>
 		</Replace>
 		<!-- = unique building = -->
 		<Replace Tag="LOC_BUILDING_PALGUM_DESCRIPTION" Language="zh_Hans_CN">
@@ -163,11 +163,11 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_STREET_CARNIVAL_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>巴西特色区域，替代娱乐中心，不占用区域槽位。提供+2 [ICON_Amenities] 宜居度，并且解锁“狂欢节”项目，启动后额外提供+1 [ICON_Amenities] 宜居度，项目完成后获得若干 [ICON_GreatPerson] 伟人点数。不能在拥有科帕卡瓦纳的城市建造。</Text>
+			<Text>巴西特色娱乐设置区域，替代“娱乐中心”，不占用区域槽位。提供+2 [ICON_Amenities] 宜居度，并且解锁“狂欢节”项目，启动后额外提供+1 [ICON_Amenities] 宜居度，项目完成后获得若干 [ICON_GreatPerson] 伟人点数。不能在拥有科帕卡瓦纳的城市建造。</Text>
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_WATER_STREET_CARNIVAL_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>巴西特色区域，替代水上乐园，不占用区域槽位。提供+2 [ICON_Amenities] 宜居度，并且解锁“狂欢节”项目，启动后额外提供+1 [ICON_Amenities] 宜居度，项目完成后获得若干 [ICON_GreatPerson] 伟人点数。不能在拥有街头狂欢节的城市建造。不能在礁石上建造。</Text>
+			<Text>巴西特色娱乐设置区域，替代“水上乐园”，不占用区域槽位。提供+2 [ICON_Amenities] 宜居度，并且解锁“狂欢节”项目，启动后额外提供+1 [ICON_Amenities] 宜居度，项目完成后获得若干 [ICON_GreatPerson] 伟人点数。不能在拥有街头狂欢节的城市建造。不能在礁石上建造。</Text>
 		</Replace>
 
 		<!-- == BYZANTIUM == -->
@@ -212,10 +212,10 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_HIPPODROME_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>拜占庭特色区域。替代“娱乐设施”区域，提供+3 [ICON_Amenities] 宜居度，且建造花费更低。在此区域中建成建筑后，将获得1个重骑兵单位。</Text>
+			<Text>拜占庭专业化娱乐设施区域。替代“娱乐中心”，提供+3 [ICON_Amenities] 宜居度，且造价更低。在此区域中建成建筑后，将获得1个重骑兵单位。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_HIPPODROME_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>拜占庭特色区域。替代“娱乐设施”区域，提供+3 [ICON_Amenities] 宜居度，且建造花费更低。在此区域中建成建筑后，将获得1个重骑兵单位（此单位不消耗资源）。无法建在拥有“水上乐园”的城市中。</Text>
+			<Text>拜占庭专业化娱乐设施区域。替代“娱乐中心”，提供+3 [ICON_Amenities] 宜居度，且造价更低。在此区域中建成建筑后，将获得1个重骑兵单位（此单位不消耗资源）。无法建在拥有“水上乐园”的城市中。</Text>
 		</Replace>
 
 		<!-- == CANADA == -->
@@ -488,7 +488,7 @@
 		</Replace>
 		<!-- = leader ability (Elizabeth) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_ELIZABETH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>完成“造船术”、“探索”、“重商主义”后，均获得 [ICON_TradeRoute] 贸易路线容量+1。起源城市中每有一个特色区域，[ICON_TradeRoute] 通往任意城邦的贸易路线便+3 [ICON_GOLD] 金币。[NEWLINE][NEWLINE]用海军单位掠夺 [ICON_TradeRoute] 贸易路线的收益+100%。海军袭击者单位+1 [ICON_Movement] 移动力、+1视野。[ICON_PROMOTION] 升级海军袭击者单位时不会结束其回合。</Text>
+			<Text>完成“造船术”、“探索”、“重商主义”后，均获得 [ICON_TradeRoute] 贸易路线容量+1。起源城市中每有一个专业化区域，[ICON_TradeRoute] 通往任意城邦的贸易路线便+3 [ICON_GOLD] 金币。[NEWLINE][NEWLINE]用海军单位掠夺 [ICON_TradeRoute] 贸易路线的收益+100%。海军袭击者单位+1 [ICON_Movement] 移动力、+1视野。[ICON_PROMOTION] 升级海军袭击者单位时不会结束其回合。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_ABILITY_ELISABETH_RAIDER_MOVE_PROMOTE_ATTACK_DESC" Language="zh_Hans_CN">
 			<Text>[ICON_PROMOTION] 升级海军袭击者单位时不会结束其回合。</Text>
@@ -499,13 +499,13 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中的英国特色海军活动区域，取代港口，造价更低。单位在该单元格无上下船 [ICON_Movement] 行动力减益。必须建在与陆地相邻的海岸或湖泊地形上，不能在礁石上建造。[NEWLINE][NEWLINE]皇家海军船坞中建造的单位+1 [ICON_Movement] 行动力。[NEWLINE]在非 [ICON_Capital] 首都大陆城市中建造则额外+2 [ICON_Gold] 金币相邻加成。[NEWLINE]+1 [ICON_TradeRoute] 贸易路线。</Text>
+			<Text>英国专业化海军活动区域。替代“港口”，造价更低。单位在该单元格无上下船 [ICON_Movement] 行动力减益。必须建在与陆地相邻的海岸或湖泊地形上，不能在礁石上建造。[NEWLINE][NEWLINE]皇家海军船坞中建造的单位+1 [ICON_Movement] 行动力。[NEWLINE]在非 [ICON_Capital] 首都大陆城市中建造则额外+2 [ICON_Gold] 金币相邻加成。[NEWLINE]+1 [ICON_TradeRoute] 贸易路线。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中的英国特色海军活动区域，取代港口，造价更低。单位在该单元格无上下船 [ICON_Movement] 行动力减益。必须建在与陆地相邻的海岸或湖泊地形上，不能再礁石上建造。[NEWLINE][NEWLINE]皇家海军船坞中建造的单位+1 [ICON_Movement] 行动力。[NEWLINE]在非 [ICON_Capital] 首都大陆城市中建造则额外+2 [ICON_Gold] 金币相邻加成，+4忠诚度。</Text>
+			<Text>英国专业化海军活动区域。替代“港口”，造价更低。单位在该单元格无上下船 [ICON_Movement] 行动力减益。必须建在与陆地相邻的海岸或湖泊地形上，不能再礁石上建造。[NEWLINE][NEWLINE]皇家海军船坞中建造的单位+1 [ICON_Movement] 行动力。[NEWLINE]在非 [ICON_Capital] 首都大陆城市中建造则额外+2 [ICON_Gold] 金币相邻加成，+4忠诚度。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中的英国特色海军活动区域，取代港口，造价更低。单位在该单元格无上下船 [ICON_Movement] 行动力减益。必须建在与陆地相邻的海岸或湖泊地形上，不能再礁石上建造。[NEWLINE][NEWLINE]皇家海军船坞中建造的单位+1 [ICON_Movement] 行动力。[NEWLINE]在非 [ICON_Capital] 首都大陆城市中建造则额外+2 [ICON_Gold] 金币相邻加成，+4忠诚度。</Text>
+			<Text>英国专业化海军活动区域。替代“港口”，造价更低。单位在该单元格无上下船 [ICON_Movement] 行动力减益。必须建在与陆地相邻的海岸或湖泊地形上，不能再礁石上建造。[NEWLINE][NEWLINE]皇家海军船坞中建造的单位+1 [ICON_Movement] 行动力。[NEWLINE]在非 [ICON_Capital] 首都大陆城市中建造则额外+2 [ICON_Gold] 金币相邻加成，+4忠诚度。</Text>
 		</Replace>
 
 		<!-- == ETHIOPIA == -->
@@ -570,7 +570,7 @@
 		<!-- == GAUL == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_GAUL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>矿山为所有区域提供少量相邻加成。采石场为所有区域提供标准相邻加成。特色区域与其他区域相邻时不会获得少量相邻加成；特色区域也无法建在市中心旁。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3铁、T5采石场资源、T5矿山奢侈品与加成资源。</Text>
+			<Text>矿山为所有区域提供少量相邻加成。采石场为所有区域提供标准相邻加成。专业化区域与其他区域相邻时不会获得少量相邻加成；专业化区域也无法建在市中心旁。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3铁、T5采石场资源、T5矿山奢侈品与加成资源。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_AMBIORIX_DESCRIPTION" Language="zh_Hans_CN">
@@ -588,7 +588,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_OPPIDUM_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>高卢特色区域，替代工业区，建造花费更低，且出现时间更早。“奥皮杜姆”区域具有防御力且可执行远程攻击。对无主领土施放文化炸弹，为相邻采石场提供 +1 [Icon_Food] 食物。[NEWLINE][NEWLINE]采石场和战略资源提供+2 [ICON_Production] 相邻加成。</Text>
+			<Text>高卢专业化工业活动区域。替代“工业区”，造价更低，且出现时间更早。“奥皮杜姆”区域具有防御力且可执行远程攻击。对无主领土施放文化炸弹，为相邻采石场提供 +1 [Icon_Food] 食物。[NEWLINE][NEWLINE]采石场和战略资源提供+2 [ICON_Production] 相邻加成。</Text>
 		</Replace>
 
 		<!-- == GEORGIA == -->
@@ -618,7 +618,7 @@
 		<!-- == GERMANY == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_IMPERIAL_FREE_CITIES_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>获得“公会”市政后，每座城市都能建造比平常多一个 [ICON_DISTRICT] 区域（无视 [ICON_Citizen] 人口数量限制）。建成商业中心后对相邻单元格施放文化炸弹。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3河流。</Text>
+			<Text>获得“公会”市政后，每座城市都能建造比平常多一个 [ICON_DISTRICT] 专业化区域（无视 [ICON_Citizen] 人口数量限制）。建成商业中心后对相邻单元格施放文化炸弹。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3河流。</Text>
 		</Replace>
 		<!-- = leader ability (Frederick Barbarossa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_HOLY_ROMAN_EMPEROR_DESCRIPTION" Language="zh_Hans_CN"> <!-- add icon -->
@@ -660,13 +660,13 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>希腊特色文化遗址区域，替代剧院广场，建造费用更低。[NEWLINE][NEWLINE]每个相邻区域+1 [ICON_Culture] 文化值，相邻市中心额外+1 [ICON_Culture] 文化值，相邻奇观、娱乐中心及水上乐园额外+2 [ICON_Culture] 文化值。只能建在丘陵上。</Text>
+			<Text>希腊专业化文化遗址区域。替代“剧院广场”，造价更低。[NEWLINE][NEWLINE]每个相邻区域+1 [ICON_Culture] 文化值，相邻市中心额外+1 [ICON_Culture] 文化值，相邻奇观、娱乐中心及水上乐园额外+2 [ICON_Culture] 文化值。只能建在丘陵上。</Text>
 		</Replace>	
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>希腊特色文化遗址区域，替代剧院广场，建造费用更低。[NEWLINE][NEWLINE]每个相邻区域+1 [ICON_Culture] 文化值，相邻市中心额外+1 [ICON_Culture] 文化值，相邻奇观、娱乐中心及水上乐园额外+2 [ICON_Culture] 文化值。只能建在丘陵上。</Text>
+			<Text>希腊专业化文化遗址区域。替代“剧院广场”，造价更低。[NEWLINE][NEWLINE]每个相邻区域+1 [ICON_Culture] 文化值，相邻市中心额外+1 [ICON_Culture] 文化值，相邻奇观、娱乐中心及水上乐园额外+2 [ICON_Culture] 文化值。只能建在丘陵上。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>希腊特色文化遗址区域，替代剧院广场，建造费用更低。[NEWLINE][NEWLINE]每个相邻区域+1 [ICON_Culture] 文化值，相邻市中心额外+1 [ICON_Culture] 文化值，相邻奇观、娱乐中心及水上乐园额外+2 [ICON_Culture] 文化值。只能建在丘陵上。</Text>
+			<Text>希腊专业化文化遗址区域。替代“剧院广场”，造价更低。[NEWLINE][NEWLINE]每个相邻区域+1 [ICON_Culture] 文化值，相邻市中心额外+1 [ICON_Culture] 文化值，相邻奇观、娱乐中心及水上乐园额外+2 [ICON_Culture] 文化值。只能建在丘陵上。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_DESCRIPTION_ADJACENCY" Language="zh_Hans_CN">
 			<Text>相邻加成:+1 [ICON_Culture] 文化值，来自每个相邻的市中心区域。+1 [ICON_Culture] 文化值，来自每个相邻的区域单元格。+2 [ICON_Culture] 文化值，来自每个相邻的奇观、娱乐中心、水上乐园、棉花堡及帕依提提单元格。</Text>
@@ -770,7 +770,7 @@
 
 		<!-- == INDONESIA == -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_INDONESIA_NUSANTARA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>海岸和湖泊单元格可为圣地、学院、工业区和剧院广场提供少量相邻加成。如与海岸或湖泊单元格相邻，娱乐设施+1 [ICON_AMENITIES] 宜居度。相邻海岸和湖泊的市中心和区域 +1 [ICON_Faith] 信仰值（“造船术”科技后+2 [ICON_Faith] 信仰值）。可以使用 [ICON_FAITH] 信仰购买港口建筑。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
+			<Text>海岸和湖泊单元格可为圣地、学院、工业区和剧院广场提供少量相邻加成。如与海岸或湖泊单元格相邻，娱乐设施+1 [ICON_AMENITIES] 宜居度。相邻海岸和湖泊的市中心和专业化区域 +1 [ICON_Faith] 信仰值（“造船术”科技后+2 [ICON_Faith] 信仰值）。可以使用 [ICON_FAITH] 信仰购买港口建筑。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
 		</Replace>
 		<!-- = leader ability (Gitarja) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_EXALTED_GODDESS_DESCRIPTION" Language="zh_Hans_CN">
@@ -797,7 +797,7 @@
 		<!-- == JAPAN == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_ADJACENT_DISTRICTS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>当 [ICON_DISTRICT] 区域与 [ICON_DISTRICT] 区域相邻时，所有 [ICON_DISTRICT] 区域获得标准相邻加成。商业中心不受到河流的相邻加成。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
+			<Text>当 [ICON_DISTRICT] 区域与 [ICON_DISTRICT] 区域相邻时，所有 [ICON_DISTRICT] 专业化区域获得标准相邻加成。商业中心不受到河流的相邻加成。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
 		</Replace>
 		<!-- = leader ability (Hojo Tokimune) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_DIVINE_WIND_DESCRIPTION" Language="zh_Hans_CN">
@@ -820,10 +820,10 @@
 		</Replace>
 		<!-- = leader ability (Tokugawa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_TOKUGAWA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>国际 [ICON_TradeRoute] 贸易路线的产出和 [ICON_Tourism] 旅游业绩-25%；目的地城市中每有一个特色区域，国内 [ICON_TradeRoute] 贸易路线便提供+0.5 [ICON_Culture] 文化值（“人文主义”市政后提升至+1）、+0.5 [ICON_Science] 科技值（“教育”科技后提升至+1）、+1 [Icon_Gold] 金币。在日本 [ICON_Capital] 首都6单元格内的城市为100%忠诚；研究完“飞行”后，每有一个区域则+1 [ICON_Tourism] 旅游业绩。</Text>
+			<Text>国际 [ICON_TradeRoute] 贸易路线的产出和 [ICON_Tourism] 旅游业绩-25%；目的地城市中每有一个专业化区域，国内 [ICON_TradeRoute] 贸易路线便提供+0.5 [ICON_Culture] 文化值（“人文主义”市政后提升至+1）、+0.5 [ICON_Science] 科技值（“教育”科技后提升至+1）、+1 [Icon_Gold] 金币。在日本 [ICON_Capital] 首都6单元格内的城市为100%忠诚；研究完“飞行”后，每有一个区域则+1 [ICON_Tourism] 旅游业绩。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_TOKUGAWA_XP_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>国际 [ICON_TradeRoute] 贸易路线的产出和 [ICON_Tourism] 旅游业绩-25%；目的地城市中每有一个特色区域，国内 [ICON_TradeRoute] 贸易路线便提供+0.5 [ICON_Culture] 文化值（“人文主义”市政后提升至+1）、+0.5 [ICON_Science] 科技值（“教育”科技后提升至+1）、+1 [Icon_Gold] 金币。在日本 [ICON_Capital] 首都6单元格内的城市为100%忠诚；研究完“飞行”后，每有一个区域则+1 [ICON_Tourism] 旅游业绩。</Text>
+			<Text>国际 [ICON_TradeRoute] 贸易路线的产出和 [ICON_Tourism] 旅游业绩-25%；目的地城市中每有一个专业化区域，国内 [ICON_TradeRoute] 贸易路线便提供+0.5 [ICON_Culture] 文化值（“人文主义”市政后提升至+1）、+0.5 [ICON_Science] 科技值（“教育”科技后提升至+1）、+1 [Icon_Gold] 金币。在日本 [ICON_Capital] 首都6单元格内的城市为100%忠诚；研究完“飞行”后，每有一个区域则+1 [ICON_Tourism] 旅游业绩。</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_JAPANESE_SAMURAI_DESCRIPTION" Language="zh_Hans_CN">
@@ -905,7 +905,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_SEOWON_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>朝鲜特色区域，替代学院。必须建在丘陵上。基础+1 [ICON_SCIENCE] 科技值，每与2个矿山相邻+1 [ICON_SCIENCE] 科技值。每与1个地热裂缝相邻，则+2 [ICON_Science] 科技值。其中的专家额外+1 [ICON_FOOD] 食物。建成时向相邻单元格施放文化炸弹。</Text>
+			<Text>朝鲜专业化科学研究区域。替代“学院”，造价更低。必须建在丘陵上。基础+1 [ICON_SCIENCE] 科技值，每与2个矿山相邻+1 [ICON_SCIENCE] 科技值。每与1个地热裂缝相邻，则+2 [ICON_Science] 科技值。其中的专家额外+1 [ICON_FOOD] 食物。建成时向相邻单元格施放文化炸弹。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_SEOWON_DESCRIPTION_ADJACENCY" Language="zh_Hans_CN">
 			<Text>相邻加成：+1 [ICON_SCIENCE] 科技值，来自每2个相邻矿山。-1 [ICON_Science] 科技值，来自每个相邻的区域单元格，剧院广场除外。为相邻的剧院广场提供+1 [ICON_Culture] 文化值。</Text>
@@ -998,7 +998,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_SUGUBA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>马里特色区域，专精于经济与贸易，取代商业中心。使用 [ICON_GOLD] 金币和 [ICON_FAITH] 信仰值在此城中购买单位、建筑和区域时，费用减少10%。[NEWLINE][NEWLINE]每个相邻市中心、圣地、河流、绿洲、市政广场获得+1 [ICON_Gold] 金币加成。每两个相邻区域单元格获得+1 [ICON_Gold] 金币加成。</Text>
+			<Text>马里专业化金融贸易区域。替代“商业中心”，造价更低。使用 [ICON_GOLD] 金币和 [ICON_FAITH] 信仰值在此城中购买单位、建筑和区域时，费用减少10%。[NEWLINE][NEWLINE]每个相邻市中心、圣地、河流、绿洲、市政广场获得+1 [ICON_Gold] 金币加成。每两个相邻区域单元格获得+1 [ICON_Gold] 金币加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_SUGUBA_RIVER_GOLD" Language="zh_Hans_CN">
 			<Text>+1 [ICON_GOLD] 金币来自相邻河流。</Text>
@@ -1067,7 +1067,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_OBSERVATORY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>玛雅特色科学研究区域。替代“学院”区域，且建造花费更低。[NEWLINE][NEWLINE]+1 [ICON_HOUSING] 住房，与种植园相邻则+1 [ICON_Science] 科技值。每与2个农场或区域单元格相邻，则+1 [ICON_Science] 科技值。每与1个地热裂缝相邻，则+2 [ICON_Science] 科技值。</Text>
+			<Text>玛雅专业化科学研究区域。替代“学院”区域，造价更低。[NEWLINE][NEWLINE]+1 [ICON_HOUSING] 住房，与种植园相邻则+1 [ICON_Science] 科技值。每与2个农场或区域单元格相邻，则+1 [ICON_Science] 科技值。每与1个地热裂缝相邻，则+2 [ICON_Science] 科技值。</Text>
 		</Replace>
 
 		<!-- == MONGOLIA == -->
@@ -1236,7 +1236,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_COTHON_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>腓尼基特色城市海军活动区域，取代港口且建造成本更低。必须修建在海岸或与陆地相邻的湖泊地貌上。[NEWLINE][NEWLINE]该城市生产海军单位与开拓者时+25% [ICON_PRODUCTION] 生产力。</Text>
+			<Text>腓尼基专业化海军活动区域。替代“港口”，造价更低。必须修建在海岸或与陆地相邻的湖泊地貌上。[NEWLINE][NEWLINE]该城市生产海军单位与开拓者时+25% [ICON_PRODUCTION] 生产力。</Text>
 		</Replace>
 
 		<!-- == POLAND == -->
@@ -1294,7 +1294,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_BATH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>促进城市发展的罗马特色区域。取代水渠，建造费用更低。[NEWLINE][NEWLINE] 从相邻河流、湖泊、绿洲或山脉引水，为该城市提供淡水资源。尚未拥有淡水资源的城市最多获得6个 [ICON_Housing] 住房。已有淡水资源的城市则+2 [ICON_Housing] 住房。若与地热裂缝相邻，提供+1 [ICON_AMENITIES] 宜居度。在任何情况下，浴场都能额外提供+2 [ICON_Housing] 住房。干旱时可防止 [ICON_Food] 食物损失。每相邻两个区域获得+1 [ICON_CULTURE] 文化值。必须修建在与市中心相邻的单元格中。</Text>
+			<Text>促进城市发展的罗马特色区域。取代“水渠”，造价更低。[NEWLINE][NEWLINE] 从相邻河流、湖泊、绿洲或山脉引水，为该城市提供淡水资源。尚未拥有淡水资源的城市最多获得6个 [ICON_Housing] 住房。已有淡水资源的城市则+2 [ICON_Housing] 住房。若与地热裂缝相邻，提供+1 [ICON_AMENITIES] 宜居度。在任何情况下，浴场都能额外提供+2 [ICON_Housing] 住房。干旱时可防止 [ICON_Food] 食物损失。每相邻两个区域获得+1 [ICON_CULTURE] 文化值。必须修建在与市中心相邻的单元格中。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_BATH_EXPANSION2_ALT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_DISTRICT_BATH_DESCRIPTION}</Text>
@@ -1321,7 +1321,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_LAVRA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>俄罗斯特色宗教活动区域，取代圣地，且建造费用更低。[NEWLINE][NEWLINE]此城市中每消耗一位 [ICON_GreatPerson] 伟人，城市边界则扩大一单元格的范围。拥有寺庙的修道院每回合提供+1 [ICON_GREATWRITER] 大作家点数；拥有祭祀建筑的修道院每回合提供+1 [ICON_GREATArtist] 大艺术家点数。</Text>
+			<Text>俄罗斯专业化宗教活动区域。替代“圣地”，且建造费用更低。[NEWLINE][NEWLINE]此城市中每消耗一位 [ICON_GreatPerson] 伟人，城市边界则扩大一单元格的范围。拥有寺庙的修道院每回合提供+1 [ICON_GREATWRITER] 大作家点数；拥有祭祀建筑的修道院每回合提供+1 [ICON_GREATArtist] 大艺术家点数。</Text>
 		</Replace>
 
 		<!-- == SCOTLAND == -->
@@ -1478,7 +1478,7 @@
 		<!-- == VIETNAM == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_VIETNAM_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>所有陆地特色区域只能建造在雨林、沼泽、树林或泛滥平原上。建在这些地貌上的建筑将获得以下收益（泛滥平原除外）：建在树林上提供+1 [ICON_CULTURE] 文化值、建在雨林上提供+1 [ICON_SCIENCE] 科技值、建在沼泽上提供+1 [ICON_PRODUCTION] 生产力。拥有“中世纪集市”市政后即可栽种树林。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3树林、T3雨林、T3沼泽。</Text>
+			<Text>所有陆地专业化区域只能建造在雨林、沼泽、树林或泛滥平原上。建在这些地貌上的建筑将获得以下收益（泛滥平原除外）：建在树林上提供+1 [ICON_CULTURE] 文化值、建在雨林上提供+1 [ICON_SCIENCE] 科技值、建在沼泽上提供+1 [ICON_PRODUCTION] 生产力。拥有“中世纪集市”市政后即可栽种树林。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3树林、T3雨林、T3沼泽。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_TRIEU_DESCRIPTION" Language="zh_Hans_CN">
@@ -1493,7 +1493,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_THANH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>越南特色区域，替代“军营”。每与1个区域相邻，则+2 [ICON_CULTURE] 文化值。研究完“飞行”科技后，将获得与 [ICON_CULTURE] 文化值产量相等的 [ICON_TOURISM] 旅游业绩。此区域不需要人口、建造花费更低、无法建在市中心旁，不提供 [ICON_GreatPerson] 伟人点数，也并非特色区域。[NEWLINE][NEWLINE]建成后对相邻无主单元格施放文化炸弹。</Text>
+			<Text>越南特色军事机构区域。替代“军营”，造价更低。每与1个区域相邻，则+2 [ICON_CULTURE] 文化值。研究完“飞行”科技后，将获得与 [ICON_CULTURE] 文化值产量相等的 [ICON_TOURISM] 旅游业绩。此区域不需要人口、无法建在市中心旁，不提供 [ICON_GreatPerson] 伟人点数。[NEWLINE][NEWLINE]建成后对相邻无主单元格施放文化炸弹。</Text>
 		</Replace>
 
 		<!-- == ZULU == -->
@@ -1507,7 +1507,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_IKANDA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>祖鲁特色区域，替代军营。+1 [ICON_Housing] 住房。满足市政或科技先决条件后即可创建军团和军队。伊坎达中的建筑+2 [ICON_GOLD] 金币和+1 [ICON_CULTURE] 文化值。解锁相应的市政后即可直接生产 [ICON_Corps] 军团和 [ICON_Army] 军队，并使 [ICON_Corps] 军团和 [ICON_Army] 军队生产费用降低25%。</Text>
+			<Text>祖鲁专业化军事机构区域。替代“军营”，造价更低。+1 [ICON_Housing] 住房。满足市政或科技先决条件后即可创建军团和军队。伊坎达中的建筑+2 [ICON_GOLD] 金币和+1 [ICON_CULTURE] 文化值。解锁相应的市政后即可直接生产 [ICON_Corps] 军团和 [ICON_Army] 军队，并使 [ICON_Corps] 军团和 [ICON_Army] 军队生产费用降低25%。此区域无法建在市中心旁。</Text>
 		</Replace>
 		
 		
