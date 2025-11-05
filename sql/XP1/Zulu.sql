@@ -108,3 +108,19 @@ UPDATE ModifierArguments SET Value='YIELD_CULTURE' WHERE Name='YieldType' AND Mo
 
 -- citizen yields
 UPDATE District_CitizenYieldChanges SET YieldChange=2 WHERE YieldType='YIELD_PRODUCTION'    AND DistrictType='DISTRICT_IKANDA';
+
+-- rewrite the algo of ikanda discount to avoid bug
+DELETE FROM DistrictModifiers WHERE DistrictType = 'DISTRICT_IKANDA' AND ModifierId = 'IKANDA_TRAINED_CORPS_ARMY_DISCOUNT';
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_ZULU_ISIBONGO', 'CCB_ZULU_IKANDA_DISCOUNT_NO_BUG');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_ZULU_IKANDA_DISCOUNT_NO_BUG', 'MODIFIER_CCB_PLAYER_CITIES_CITY_CORPS_ARMY_ADJUST_DISCOUNT', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_IKANDA');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_ZULU_IKANDA_DISCOUNT_NO_BUG', 'Amount', '25'), 
+('CCB_ZULU_IKANDA_DISCOUNT_NO_BUG', 'UnitDomain', 'DOMAIN_LAND');
+
+INSERT INTO Types (Type, Kind) VALUES 
+('MODIFIER_CCB_PLAYER_CITIES_CITY_CORPS_ARMY_ADJUST_DISCOUNT', 'KIND_MODIFIER');
+INSERT INTO DynamicModifiers (ModifierType, CollectionType, EffectType) VALUES 
+('MODIFIER_CCB_PLAYER_CITIES_CITY_CORPS_ARMY_ADJUST_DISCOUNT', 'COLLECTION_PLAYER_CITIES', 'EFFECT_ADJUST_CITY_CORPS_ARMY_PRODUCTION');
