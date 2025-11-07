@@ -9,7 +9,7 @@
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1100"> -->
 	<Properties>
 		<Name>CCB 基础 1.2.0</Name>
-		<Version>1200</Version> <!--填写3位数字-->
+		<Version>1200</Version>
 		<Description>
 			中国特色平衡模组，取代BBG。
 		</Description>
