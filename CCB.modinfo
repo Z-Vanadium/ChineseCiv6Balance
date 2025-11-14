@@ -330,7 +330,6 @@
 		    <File>sql/colors.sql</File>
 	    </UpdateColors>
 
-
 	</FrontEndActions>
 
 	<!-- defines modifications to games (requires any LocalizedText from Settings above, and must import files before modifying any SQL tables) -->
