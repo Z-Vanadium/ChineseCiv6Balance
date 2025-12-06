@@ -85,7 +85,14 @@ INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, Til
 --     ('TRAIT_LEADER_MUTAL', 'BBG_TRAIT_PLANTATIONS_SCIENCE_OBSERVATORY');
 
 -- 16/12/24 Observatories give +1 housing
-UPDATE Districts SET Housing=1 WHERE DistrictType='DISTRICT_OBSERVATORY';
+-- 2025/12/06 move to civilization trait
+-- UPDATE Districts SET Housing=1 WHERE DistrictType='DISTRICT_OBSERVATORY';
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_MAYAB', 'CCB_MAYA_UD_HOUSING');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MAYA_UD_HOUSING', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_HOUSING', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_CAMPUS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MAYA_UD_HOUSING', 'Amount', '1');
 
 -- 08/01/25 Observatories gets +2 from geothermal
 INSERT INTO District_Adjacencies (DistrictType , YieldChangeId) VALUES

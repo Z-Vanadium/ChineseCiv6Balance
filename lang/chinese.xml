@@ -1056,7 +1056,7 @@
 		<!-- == MAYA == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MAYAB_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>在淡水和海岸旁定居时不提供额外 [ICON_HOUSING] 住房；但每座农场额外+1 [ICON_HOUSING] 住房、+1 [ICON_GOLD] 金币，每与一座天文台相邻则+1 [ICON_Production] 生产力。种植园每与一座天文台相邻则+1 [ICON_Science] 科技值，“教育”科技后提升至+2 [ICON_Science] 科技值。每有一种奢侈品与市中心相邻，则+1 [ICON_AMENITIES] 宜居度。[NEWLINE][NEWLINE][ICON_Capital] 首都+1 [ICON_HOUSING] 住房。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3种植园资源、T4香蕉。特殊：距离水域更远。</Text>
+			<Text>在淡水和海岸旁定居时不提供额外 [ICON_HOUSING] 住房；但每座农场额外+1 [ICON_HOUSING] 住房、+1 [ICON_GOLD] 金币，每与一座天文台相邻则+1 [ICON_Production] 生产力。种植园每与一座天文台相邻则+1 [ICON_Science] 科技值，“教育”科技后提升至+2 [ICON_Science] 科技值。每有一种奢侈品与市中心相邻，则+1 [ICON_AMENITIES] 宜居度。[NEWLINE][NEWLINE][ICON_Capital] 首都+1 [ICON_HOUSING] 住房。拥有天文台的城市 +1 [ICON_HOUSING] 住房。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3种植园资源、T4香蕉。特殊：距离水域更远。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MUTAL_DESCRIPTION" Language="zh_Hans_CN">
@@ -1067,7 +1067,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_OBSERVATORY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>玛雅专业化科学研究区域。替代“学院”区域，造价更低。[NEWLINE][NEWLINE]+1 [ICON_HOUSING] 住房，与种植园相邻则+1 [ICON_Science] 科技值。每与2个农场或区域单元格相邻，则+1 [ICON_Science] 科技值。每与1个地热裂缝相邻，则+2 [ICON_Science] 科技值。</Text>
+			<Text>玛雅专业化科学研究区域。替代“学院”区域，造价更低。[NEWLINE][NEWLINE]与种植园相邻则+1 [ICON_Science] 科技值。每与2个农场或区域单元格相邻，则+1 [ICON_Science] 科技值。每与1个地热裂缝相邻，则+2 [ICON_Science] 科技值。</Text>
 		</Replace>
 
 		<!-- == MONGOLIA == -->
