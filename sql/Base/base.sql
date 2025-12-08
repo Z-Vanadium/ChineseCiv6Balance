@@ -368,3 +368,104 @@ UPDATE Boosts SET Unit1Type=NULL, NumItems=2, BoostClass='BOOST_TRIGGER_HAVE_X_B
 
 -- 2025/10/11 Stealth Technology : Own 2 lab
 UpDATE Boosts SET TriggerDescription='LOC_CCB_BOOST_TECH_STEALTH_TECHNOLOGY', TriggerLongDescription='LOC_CCB_BOOST_TECH_STEALTH_TECHNOLOGY', NumItems=2, BoostClass='BOOST_TRIGGER_HAVE_X_BUILDINGS', BuildingType='BUILDING_RESEARCH_LAB' WHERE TechnologyType='TECH_STEALTH_TECHNOLOGY';
+
+--=======================================================================
+--******                         BONUS                             ******
+--=======================================================================
+
+-- 2025/12/08 future techs bonus
+-- advanced ai: project +20% prod
+INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
+('TECH_ADVANCED_AI', 'CCB_AA_PROJECT_PROD');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_AA_PROJECT_PROD', 'MODIFIER_PLAYER_CITIES_ADJUST_PROJECT_PRODUCTION', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_AA_PROJECT_PROD', 'Amount', '20');
+
+-- advanced power cell: all plants +6 prod
+INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
+('TECH_ADVANCED_POWER_CELLS', 'CCB_APC_PROD_COAL_POWER_PLANT');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_APC_PROD_COAL_POWER_PLANT', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_APC_PROD_COAL_POWER_PLANT', 'Amount', '6'), 
+('CCB_APC_PROD_COAL_POWER_PLANT', 'BuildingType', 'BUILDING_COAL_POWER_PLANT'), 
+('CCB_APC_PROD_COAL_POWER_PLANT', 'YieldType', 'YIELD_PRODUCTION');
+
+INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
+('TECH_ADVANCED_POWER_CELLS', 'CCB_APC_PROD_FOSSIL_FUEL_POWER_PLANT');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_APC_PROD_FOSSIL_FUEL_POWER_PLANT', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_APC_PROD_FOSSIL_FUEL_POWER_PLANT', 'Amount', '6'), 
+('CCB_APC_PROD_FOSSIL_FUEL_POWER_PLANT', 'BuildingType', 'BUILDING_FOSSIL_FUEL_POWER_PLANT'), 
+('CCB_APC_PROD_FOSSIL_FUEL_POWER_PLANT', 'YieldType', 'YIELD_PRODUCTION');
+
+INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
+('TECH_ADVANCED_POWER_CELLS', 'CCB_APC_PROD_POWER_PLANT');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_APC_PROD_POWER_PLANT', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_APC_PROD_POWER_PLANT', 'Amount', '6'), 
+('CCB_APC_PROD_POWER_PLANT', 'BuildingType', 'BUILDING_POWER_PLANT'), 
+('CCB_APC_PROD_POWER_PLANT', 'YieldType', 'YIELD_PRODUCTION');
+
+-- cybernetics: all infomation era units +1 move
+INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
+('TECH_CYBERNETICS', 'CCB_CYB_INFO_UNIT_MOVE');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_CYB_INFO_UNIT_MOVE', 'MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_IS_INFO_ERA');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_CYB_INFO_UNIT_MOVE', 'Amount', '1');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_UNIT_IS_INFO_ERA', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_UNIT_IS_INFO_ERA', 'REQ_CCB_UNIT_IS_INFO_ERA');
+
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQ_CCB_UNIT_IS_INFO_ERA', 'REQUIREMENT_UNIT_ERA_TYPE_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_UNIT_IS_INFO_ERA', 'EraType', 'ERA_INFORMATION');
+
+-- smart materials: all units +3 defense strength
+INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
+('TECH_SMART_MATERIALS', 'CCB_SM_UNITS_DEFENSE_BONUS_GIVER');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_SM_UNITS_DEFENSE_BONUS_GIVER', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_IS_INFO_ERA');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_SM_UNITS_DEFENSE_BONUS_GIVER', 'AbilityType', 'CCB_SM_UNITS_DEFENSE_BONUS');
+
+INSERT INTO Types (Type, Kind) VALUES
+    ('CCB_SM_UNITS_DEFENSE_BONUS', 'KIND_ABILITY');
+INSERT INTO TypeTags (Type, Tag) VALUES
+    ('CCB_SM_UNITS_DEFENSE_BONUS', 'CLASS_ALL_UNITS');
+
+INSERT INTO UnitAbilities (UnitAbilityType, Name, Description, Inactive) VALUES
+    ('CCB_SM_UNITS_DEFENSE_BONUS', 'LOC_CCB_SM_UNITS_DEFENSE_BONUS_NAME', 'LOC_CCB_SM_UNITS_DEFENSE_BONUS_DESC', 1);
+
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
+('CCB_SM_UNITS_DEFENSE_BONUS', 'CCB_SM_UNITS_DEFENSE_BONUS_MOD');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_SM_UNITS_DEFENSE_BONUS_MOD', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_IS_DEFENDER');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_SM_UNITS_DEFENSE_BONUS_MOD', 'Amount', '3');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_UNIT_IS_DEFENDER', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_UNIT_IS_DEFENDER', 'PLAYER_IS_DEFENDER_REQUIREMENTS');
+
+-- sea stead: farm, pasture and fishery +1 food
+INSERT INTO Improvement_BonusYieldChanges (Id, ImprovementType, YieldType, BonusYieldChange, PrereqTech) VALUES
+    (3060, 'IMPROVEMENT_FARM', 'YIELD_FOOD', 1, 'TECH_SEASTEADS'),
+    (3061, 'IMPROVEMENT_PASTURE', 'YIELD_FOOD', 1, 'TECH_SEASTEADS'),
+    (3062, 'IMPROVEMENT_FISHERY', 'YIELD_FOOD', 1, 'TECH_SEASTEADS');
+
+-- predictive system: all cities prevent structual damage
+INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
+('TECH_PREDICTIVE_SYSTEMS', 'CCB_PS_DAMAGE_FREE_GIVER');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_PS_DAMAGE_FREE_GIVER', 'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_PS_DAMAGE_FREE_GIVER', 'ModifierId', 'MODIFIER_GOVERNOR_ADJUST_PREVENET_STRUCTURAL_DAMAGE');
