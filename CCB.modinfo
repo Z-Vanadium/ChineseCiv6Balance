@@ -330,6 +330,12 @@
 		    <File>sql/colors.sql</File>
 	    </UpdateColors>
 
+		<UpdateText id="NewAction">
+			<File>MABC/NEW_ADJACENCY_BONUS_BY_RUIVO_CORE_TEXT.xml</File>
+			<File>MABC/Localization/MAB_China_Taiwan.xml</File>
+			<File>MABC/Localization/MAB_en_US.xml</File>
+		</UpdateText>
+
 	</FrontEndActions>
 
 	<!-- defines modifications to games (requires any LocalizedText from Settings above, and must import files before modifying any SQL tables) -->
@@ -1205,6 +1211,44 @@
       		<File>lua/BBG_Expanded/Al_Hasan.lua</File>
       		<File>lua/BBG_Expanded/Olympia.lua</File>
     	</AddGameplayScripts>
+
+		<AddGameplayScripts id="GP">
+			<File>MABC/NEW_ADJACENCY_BONUS_BY_RUIVO_GP.lua</File>
+		</AddGameplayScripts>
+		<UpdateDatabase id="CREATE_TABLE">
+			<Properties>
+				<LoadOrder>-1</LoadOrder>
+			</Properties>
+			<File>MABC/NEW_ADJACENCY_BONUS_BY_RUIVO_CORE_TABLE.sql</File>
+			<File>MABC/MAB_CORE_TABLE_INFO.sql</File>
+		</UpdateDatabase>
+		<UpdateDatabase id="TRANVERSE_INSERT">
+			<Properties>
+				<LoadOrder>1919810</LoadOrder>
+			</Properties>
+			<File>MABC/NEW_ADJACENCY_BONUS_BY_RUIVO_CORE_INSERT.sql</File>
+		</UpdateDatabase>
+		<ImportFiles id="MODULES">
+			<File>MABC/RUIVO_STAT_MODULE_GP.lua</File>
+		</ImportFiles>
+		<UpdateText id="TEXT">
+			<File>MABC/NEW_ADJACENCY_BONUS_BY_RUIVO_CORE_TEXT.xml</File>
+			<File>MABC/Localization/MAB_China_Taiwan.xml</File>
+			<File>MABC/Localization/MAB_en_US.xml</File>
+		</UpdateText>
+		<ImportFiles id="ImportFiles_Common">
+		<Properties>
+				<LoadOrder>11</LoadOrder>
+			</Properties>
+			<File>MABC/UI/Common/AdjacencyBonusSupport.lua</File>
+		</ImportFiles>
+			<AddUserInterfaces id="UI">
+			<Properties>
+				<Context>InGame</Context>
+			</Properties>
+			<File>MABC/UI/RUIVO_MODULAR_UI.xml</File>
+		</AddUserInterfaces>
+
 	</InGameActions>
 
 	<!-- defines file dependencies -->
@@ -1458,5 +1502,18 @@
 	    <File>sql/bbcc/core_bbcc.sql</File>
 	    <File>sql/bbcc/no_rng_bbcc.sql</File>
 	    <File>sql/bbcc/cap_only_bbcc.sql</File>
+
+		<File>MABC/Localization/MAB_China_Taiwan.xml</File>
+		<File>MABC/Localization/MAB_en_US.xml</File>
+		<File>MABC/MAB_CORE_TABLE_INFO.sql</File>
+		<File>MABC/NEW_ADJACENCY_BONUS_BY_RUIVO_CORE_INSERT.sql</File>
+		<File>MABC/NEW_ADJACENCY_BONUS_BY_RUIVO_CORE_TABLE.sql</File>
+		<File>MABC/NEW_ADJACENCY_BONUS_BY_RUIVO_CORE_TEXT.xml</File>
+		<File>MABC/NEW_ADJACENCY_BONUS_BY_RUIVO_GP.lua</File>
+		<File>MABC/RUIVO_STAT_MODULE_GP.lua</File>
+		<File>MABC/UI/Common/AdjacencyBonusSupport.lua</File>
+		<File>MABC/UI/RUIVO_MODULAR_UI.lua</File>
+		<File>MABC/UI/RUIVO_MODULAR_UI.xml</File>
+		<File>MABC/标准写法.sql</File>
 	</Files>
 </Mod>

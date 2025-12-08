@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameData>
+	<LocalizedText>
+		<Row Tag="LOC_RUIVO_FROM_CAO_IMPROVEMENT_RESOURCE_TYPES" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} types of {4_CAO} improved resources owned by the player.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_RINGS" Language="en_US">
+			<Text>{1_Rings} rings</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UNCONDITIONAL_BONUS" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon}.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_STORM_HAPPEND" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} storm events in this game.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_STANDARDIZE_TURNS" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} for Turn {3_AdjacentSubjectNum} under standardization.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_SEA_LEVEL" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Climate Change Points in this game.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_HIGHEST_HUMAN_YIELD" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from the highest {3_AdjacentSubjectNum} {4_CAO} yield among human players this game.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_RESOURCE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent {4_CAO} resources</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_IMPROVEMENT" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent {4_CAO} improvements</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_DISTRICT" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent {4_CAO} districts</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_FEATURE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent {4_CAO} features</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_TERRAIN_SETS" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent {4_CAO} terrains</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_TERRAIN" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} nearby {4_CAO} terrain(s).</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISMOUNTAIN" Language="en_US">
+			<Text>Mountains</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISHILLS" Language="en_US">
+			<Text>Hills</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISFLATLANDS" Language="en_US">
+			<Text>Plains</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISWATER" Language="en_US">
+			<Text>Water</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISSHALLOWWATER" Language="en_US">
+			<Text>Shallow Water</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISLAKE" Language="en_US">
+			<Text>Lakes</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISCANYON" Language="en_US">
+			<Text>Canyons</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISCOASTALLAND" Language="en_US">
+			<Text>Coastal Land</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISRIVERCROSSING" Language="en_US">
+			<Text>River Basin</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISOPENGROUND" Language="en_US">
+			<Text>Open Land</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISROUGHGROUND" Language="en_US">
+			<Text>Rugged land</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_LAND_WATER_PAIR" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent land-water pairs.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RIVER_CROSSING" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent river segments.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_ROUTE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent route levels.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SELF_ROUTE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} route levels of this tile</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_WORKER" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent worked tiles.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_UNIT" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent units.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SELF_WORKER" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} worked tiles in this district.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_DISTRICT_AND_WONDER" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent districts and wonders.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_DISTRICT" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent districts.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CLIFF" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from adjacent cliffs.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_LATITUDE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} based on {3_AdjacentSubjectNum}% proximity to the equator.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_POLE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} based on {3_AdjacentSubjectNum}% proximity to the poles.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_LAKE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent freshwater lakes.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_WATER_LEVEL" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent freshwater levels.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SELF_WATER_LEVEL" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} freshwater levels of this tile.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_RESOURCE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent resources.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_WONDERS" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} adjacent man-made wonders.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_SELF_UNIT_LEVELS" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} unit levels on this tile.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_UNIT_LEVELS" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} unit levels from adjacent tiles</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_SELF_APPEAL" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Appeal of this tile.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_APPEAL" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} Appeal from adjacent tiles</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_FOOD" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} [ICON_Food] Food on adjacent tiles.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_PRODUCTION" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} [ICON_Production] Production on adjacent tiles.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_GOLD" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} [ICON_Gold] Gold on adjacent tiles.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_SCIENCE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} [ICON_Science] Science on adjacent tiles.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_CULTURE" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} [ICON_Culture] Culture on adjacent tiles.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_FAITH" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} [ICON_Faith] Faith on adjacent tiles.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_POPULATION" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Population in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_TOTAL_HOUSING" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} total Housing in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_HOUSING" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} surplus Housing in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_DISTRICTS_NUM" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} city districts (excluding the City Center)</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_FOOD" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} surplus Food in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_AMENITIES" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} surplus Amenities in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_AMENITIES_OVER_HIGHEST_LEVEL_HAPPINESS" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} surplus Amenities exceeding maximum Happiness</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_DEFENSE_STRENGTH" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} City Center Defense Strength</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_CAO_YIELD" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from the city's {3_AdjacentSubjectNum} {4_CAO} yield</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_DISTRICT_SLOT" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} district slots in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_SURPLUS_DISTRICT_SLOT" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} surplus district slots in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_FREE_POWER" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Clean Power in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_TEMPORARY_POWER" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Temporary Power in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_REQUIRED_POWER" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Power Deficit in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_CURRENT_POWER" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Total Power in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_SURPLUS_POWER" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Surplus Power in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_POWER_RATIO" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum}% Power Coverage in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_LOYALTY_PERTURN" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Loyalty overflow per turn</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_LOYALTY_PERCENT" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum}% Loyalty Rate in the city</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_MILITARY" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Military Policy slots</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_ECONOMIC" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Economic Policy slots</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_DIPLOMATIC" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Diplomatic Policy slots</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_GREAT_PERSON" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Great Person Policy slots</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_WILDCARD" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} Wildcard Policy slots</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_PLAYER_TOTAL_UNITS" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} units owned by the player.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_PLAYER_RESOURCES_TYPES" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} resource types held by the player.</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_OUTGOING_ROUTES" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from {3_AdjacentSubjectNum} trade routes operated by the player</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_MILITARY_STRENGTH" Language="en_US">
+			<Text>+{1_iBonus} {2_YieldIcon} from a total of {3_AdjacentSubjectNum} [ICON_Strength] Military Strength of the player.</Text>
+		</Row>
+	</LocalizedText>
+</GameData>

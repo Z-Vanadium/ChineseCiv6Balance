@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameData>
+	<LocalizedText>
+<!--中文文本-->
+	<!--模组标题-->
+		<Row Tag="1LOC_NEW_ADJACENCY_BONUS_BY_RUIVO_NAME" Language="zh_Hans_CN">
+			<Text>[COLOR:ResGoldLabelCS]【未来已至】模块化相邻加成[ENDCOLOR]·[COLOR:PiratesButtonCS]核心[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="1LOC_NEW_ADJACENCY_BONUS_BY_RUIVO_TEASER" Language="zh_Hans_CN">
+			<Text>[COLOR:ResFaithLabelCS]本mod设计了一套全新的相邻加成体系，除极端情况下，几乎不会与任何mod发生冲突。[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="1LOC_NEW_ADJACENCY_BONUS_BY_RUIVO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+		[COLOR_FLOAT_CULTURE]
+		[ICON_New]本mod设计了一套全新的相邻加成体系，除极端情况下，几乎不会与任何mod发生冲突。
+		[ENDCOLOR]
+		[newline][newline]
+		[COLOR_FLOAT_SCIENCE]
+		[ICON_New]本mod新增了多种全新的相邻加成，并且能够复现原版所有可能的相邻加成，在此基础上，还能进行更为可控的拓展。相邻类型包括但不限于：相邻每段河流（区别于原版商业中心的仅一条河流），相邻每位在岗公民（完全可以拓展专家岗位体系）。相邻加成产出在原版6种产出的基础上，还增加了住房、宜居、忠诚度、电力等广义产出。同时，绝大部分对象都能作为相邻加成：如建筑、政策、科技市政、信仰等，而且能被二次发起：文明特质/领袖特质发起的由建筑或其他对象进行二次发起。
+		[ENDCOLOR]
+		[newline][newline]
+		[COLOR_FLOAT_GOLD]
+		[ICON_New]感谢各位modder大佬/前人的耐心指导与帮助，以及广大文明6玩家的热情测试与游玩，我们齐心协力，共同创造文明6新的未来！
+		[ENDCOLOR]
+			</Text>
+		</Row>
+	<!--多环相邻加成的文本-->
+		<Row Tag="LOC_RUIVO_RINGS" Language="zh_Hans_CN">
+			<Text>来自{1_Rings}环内</Text>
+		</Row>
+	<!--无条件加成-->
+		<Row Tag="LOC_RUIVO_FROM_UNCONDITIONAL_BONUS" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon}。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_STORM_HAPPEND" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自本局游戏{3_AdjacentSubjectNum}次风暴类灾害。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_STANDARDIZE_TURNS" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自标准化下的第{3_AdjacentSubjectNum}回合。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_SEA_LEVEL" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自本局游戏{3_AdjacentSubjectNum}点气候变化点数。</Text>
+		</Row>
+	<!--自定义相邻对象-->
+		<Row Tag="LOC_RUIVO_FROM_HIGHEST_HUMAN_YIELD" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自本局游戏人类玩家最高{3_AdjacentSubjectNum}点{4_CAO}产出。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_TYPETAG_RESOURCE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻范围内{3_AdjacentSubjectNum}个 {4_CAO} 资源。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_RESOURCE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻范围内{3_AdjacentSubjectNum}个 {4_CAO} 资源。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_IMPROVEMENT" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻范围内{3_AdjacentSubjectNum}个 {4_CAO} 改良。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_DISTRICT" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻范围内{3_AdjacentSubjectNum}个 {4_CAO} 区域。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_FEATURE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻范围内{3_AdjacentSubjectNum}个 {4_CAO} 地貌。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_TERRAIN_SETS" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻范围内{3_AdjacentSubjectNum}个 {4_CAO} 地形。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_TERRAIN" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻范围内{3_AdjacentSubjectNum}个 {4_CAO} 地形。</Text>
+		</Row>
+
+	
+	<!--地形函数-->
+		<Row Tag="LOC_RUIVO_ISMOUNTAIN" Language="zh_Hans_CN">
+			<Text>山地</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISHILLS" Language="zh_Hans_CN">
+			<Text>丘陵</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISFLATLANDS" Language="zh_Hans_CN">
+			<Text>平原</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISWATER" Language="zh_Hans_CN">
+			<Text>水域</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISSHALLOWWATER" Language="zh_Hans_CN">
+			<Text>浅水</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISLAKE" Language="zh_Hans_CN">
+			<Text>湖泊</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISCANYON" Language="zh_Hans_CN">
+			<Text>峡谷</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISCOASTALLAND" Language="zh_Hans_CN">
+			<Text>沿海陆地</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISRIVERCROSSING" Language="zh_Hans_CN">
+			<Text>河流流域</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISOPENGROUND" Language="zh_Hans_CN">
+			<Text>开阔地</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISROUGHGROUND" Language="zh_Hans_CN">
+			<Text>崎岖地</Text>
+		</Row>
+	
+	<!--资源类型-->
+		<Row Tag="LOC_RUIVO_CLASS_FOOD" Language="zh_Hans_CN">
+			<Text>粮食类</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_CLASS_CULTURE" Language="zh_Hans_CN">
+			<Text>文化类</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_CLASS_GOLD" Language="zh_Hans_CN">
+			<Text>金币类</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_CLASS_PRODUCTION" Language="zh_Hans_CN">
+			<Text>生产类</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_CLASS_SCIENCE" Language="zh_Hans_CN">
+			<Text>科研类</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_CLASS_ORAL_TRADITION" Language="zh_Hans_CN">
+			<Text>口述传统的</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_CLASS_GODDESS_OF_FESTIVALS" Language="zh_Hans_CN">
+			<Text>丰收女神的</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_CLASS_SEA" Language="zh_Hans_CN">
+			<Text>海洋类</Text>
+		</Row>
+	<!--产出类型的名称-->
+		<Row Tag="LOC_RUIVO_HealRings" Language="zh_Hans_CN">
+			<Text>治疗光环治疗量</Text>
+		</Row>
+	<!--单元格属性-->
+		<Row Tag="LOC_RUIVO_FROM_RINGS_NATIONALPARK" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻范围内{3_AdjacentSubjectNum}格国家公园。</Text>
+		</Row>
+
+		<Row Tag="LOC_RUIVO_FROM_LAND_WATER_PAIR" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}对水域与陆地地势。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RIVER_CROSSING" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}段河流。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_ROUTE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}个等级的道路。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SELF_ROUTE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自本格的{3_AdjacentSubjectNum}级道路。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_WORKER" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}个在岗公民。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_UNIT" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}个单位。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SELF_WORKER" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自本区域内{3_AdjacentSubjectNum}个在岗公民。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_DISTRICT_AND_WONDER" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}个区域与奇观。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_DISTRICT" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}个区域。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CLIFF" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻悬崖。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_LATITUDE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自赤道{3_AdjacentSubjectNum}%的接近程度。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_POLE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自极地{3_AdjacentSubjectNum}%的接近程度。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_LAKE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}个淡水湖。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_WATER_LEVEL" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}个等级的淡水。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SELF_WATER_LEVEL" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自本格{3_AdjacentSubjectNum}个等级的淡水。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_RESOURCE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}个资源。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_WONDERS" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻{3_AdjacentSubjectNum}个已完工的人造奇观。</Text>
+		</Row>
+	<!--单元格属性：UI部分-->
+		<Row Tag="LOC_RUIVO_FROM_UI_SELF_UNIT_LEVELS" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自本单元格总计{3_AdjacentSubjectNum}个单位等级。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_UNIT_LEVELS" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻单元格总计{3_AdjacentSubjectNum}个单位等级。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_SELF_APPEAL" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自本单元格{3_AdjacentSubjectNum}点魅力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_APPEAL" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻单元格总计{3_AdjacentSubjectNum}点魅力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_FOOD" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻单元格总计{3_AdjacentSubjectNum} [ICON_Food] 食物。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_PRODUCTION" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻单元格总计{3_AdjacentSubjectNum} [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_GOLD" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻单元格总计{3_AdjacentSubjectNum} [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_SCIENCE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻单元格总计{3_AdjacentSubjectNum} [ICON_Science] 科技值。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_CULTURE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻单元格总计{3_AdjacentSubjectNum} [ICON_Culture] 文化值。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_FAITH" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自相邻单元格总计{3_AdjacentSubjectNum} [ICON_Faith] 信仰值。</Text>
+		</Row>
+
+	<!--城市属性-->
+		<Row Tag="LOC_RUIVO_FROM_CITY_POPULATION" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点人口</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_TOTAL_HOUSING" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点住房</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_HOUSING" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点剩余住房</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_DISTRICTS_NUM" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}座区域（不含市中心）</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_FOOD" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点余粮</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_AMENITIES" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点宜居度</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_AMENITIES_OVER_HIGHEST_LEVEL_HAPPINESS" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市超过顶级幸福度{3_AdjacentSubjectNum}点的宜居度</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_DEFENSE_STRENGTH" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}市中心防御力</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_CAO_YIELD" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点{4_CAO}产出</Text>
+		</Row>
+	<!--城市属性：UI部分-->
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_DISTRICT_SLOT" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}个区域位</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_SURPLUS_DISTRICT_SLOT" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}个剩余区域位</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_FREE_POWER" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点清洁电力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_TEMPORARY_POWER" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点临时电力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_REQUIRED_POWER" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点电力缺口。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_CURRENT_POWER" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点总电力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_SURPLUS_POWER" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点溢出电力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_POWER_RATIO" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}%的供电率。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_LOYALTY_PERTURN" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}点溢出忠诚度。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_LOYALTY_PERCENT" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自城市{3_AdjacentSubjectNum}%的忠诚率。</Text>
+		</Row>
+	<!--玩家属性-->
+		<Row Tag="LOC_RUIVO_FROM_PLAYER_TECHS_NUM" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家{3_AdjacentSubjectNum}种科技。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_PLAYER_CIVICS_NUM" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家{3_AdjacentSubjectNum}种市政。</Text>
+		</Row>
+
+		<Row Tag="LOC_RUIVO_FROM_SLOT_MILITARY" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家{3_AdjacentSubjectNum}张军事卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_ECONOMIC" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家{3_AdjacentSubjectNum}张经济卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_DIPLOMATIC" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家{3_AdjacentSubjectNum}张外交卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_GREAT_PERSON" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家{3_AdjacentSubjectNum}张伟人卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_WILDCARD" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家{3_AdjacentSubjectNum}张通配卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_PLAYER_TOTAL_UNITS" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家{3_AdjacentSubjectNum}个单位。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_PLAYER_RESOURCES_TYPES" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家持有的{3_AdjacentSubjectNum}种资源。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_OUTGOING_ROUTES" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家运营的{3_AdjacentSubjectNum}条商路。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CAO_IMPROVEMENT_RESOURCE_TYPES" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家持有的{3_AdjacentSubjectNum}种 {4_CAO} 改良资源。</Text>
+		</Row>
+	<!--玩家属性：UI部分-->
+		<Row Tag="LOC_RUIVO_FROM_UI_MILITARY_STRENGTH" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 来自玩家总计{3_AdjacentSubjectNum}点 [ICON_Strength] 军事力量。</Text>
+		</Row>
+
+<!--中文文本-->
+	</LocalizedText>
+</GameData>

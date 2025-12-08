@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameData>
+	<LocalizedText>
+		<Row Tag="LOC_RUIVO_FROM_CAO_IMPROVEMENT_RESOURCE_TYPES" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家持有的 {3_AdjacentSubjectNum} 種 {4_CAO} 改良資源。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_RINGS" Language="zh_Hant_HK">
+			<Text>來自{1_Rings}環內</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UNCONDITIONAL_BONUS" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon}。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_STORM_HAPPEND" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自本局遊戲{3_AdjacentSubjectNum}次風暴類災害。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_STANDARDIZE_TURNS" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自標準化下的第{3_AdjacentSubjectNum}回合。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_SEA_LEVEL" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自本局遊戲{3_AdjacentSubjectNum}點氣候變化點數。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_HIGHEST_HUMAN_YIELD" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自本局遊戲人類玩家最高{3_AdjacentSubjectNum}點{4_CAO}產出。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_RESOURCE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰範圍內{3_AdjacentSubjectNum}個 {4_CAO} 資源。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_IMPROVEMENT" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰範圍內{3_AdjacentSubjectNum}個 {4_CAO} 改良。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_DISTRICT" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰範圍內{3_AdjacentSubjectNum}個 {4_CAO} 區域。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_FEATURE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰範圍內{3_AdjacentSubjectNum}個 {4_CAO} 地貌。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_TERRAIN_SETS" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰範圍內{3_AdjacentSubjectNum}個 {4_CAO} 地形。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RINGS_CAO_TERRAIN" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰範圍內{3_AdjacentSubjectNum}個 {4_CAO} 地形。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISMOUNTAIN" Language="zh_Hant_HK">
+			<Text>山地</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISHILLS" Language="zh_Hant_HK">
+			<Text>丘陵</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISFLATLANDS" Language="zh_Hant_HK">
+			<Text>平原</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISWATER" Language="zh_Hant_HK">
+			<Text>水域</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISSHALLOWWATER" Language="zh_Hant_HK">
+			<Text>淺水</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISLAKE" Language="zh_Hant_HK">
+			<Text>湖泊</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISCANYON" Language="zh_Hant_HK">
+			<Text>峽谷</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISCOASTALLAND" Language="zh_Hant_HK">
+			<Text>沿海陸地</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISRIVERCROSSING" Language="zh_Hant_HK">
+			<Text>河流流域</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISOPENGROUND" Language="zh_Hant_HK">
+			<Text>開闊地</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_ISROUGHGROUND" Language="zh_Hant_HK">
+			<Text>崎嶇地</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_LAND_WATER_PAIR" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰的{3_AdjacentSubjectNum}對水域與陸地地勢。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_RIVER_CROSSING" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}段河流。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_ROUTE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}個等級的道路。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SELF_ROUTE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自本格的{3_AdjacentSubjectNum}級道路。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_WORKER" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}個在崗公民。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_UNIT" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}個單位。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SELF_WORKER" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自本區域內{3_AdjacentSubjectNum}個在崗公民。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_DISTRICT_AND_WONDER" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}個區域與奇觀。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_DISTRICT" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}個區域。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CLIFF" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰懸崖。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_LATITUDE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自赤道{3_AdjacentSubjectNum}%的接近程度。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_POLE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自極地{3_AdjacentSubjectNum}%的接近程度。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_LAKE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}個淡水湖。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_WATER_LEVEL" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}個等級的淡水。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SELF_WATER_LEVEL" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自本格{3_AdjacentSubjectNum}個等級的淡水。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_RESOURCE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}個資源。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_ADJACENT_WONDERS" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰{3_AdjacentSubjectNum}個已完工的人造奇觀。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_SELF_UNIT_LEVELS" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自本單元格總計{3_AdjacentSubjectNum}個單位等級。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_UNIT_LEVELS" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰單元格總計{3_AdjacentSubjectNum}個單位等級。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_SELF_APPEAL" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自本單元格{3_AdjacentSubjectNum}點魅力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_APPEAL" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰單元格總計{3_AdjacentSubjectNum}點魅力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_FOOD" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰單元格總計{3_AdjacentSubjectNum}食物。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_PRODUCTION" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰單元格總計{3_AdjacentSubjectNum}生產力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_GOLD" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰單元格總計{3_AdjacentSubjectNum}金幣。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_SCIENCE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰單元格總計{3_AdjacentSubjectNum}科技值。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_CULTURE" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰單元格總計{3_AdjacentSubjectNum}文化值。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_ADJACENT_YIELD_FAITH" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自相鄰單元格總計{3_AdjacentSubjectNum}信仰值。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_POPULATION" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點人口</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_TOTAL_HOUSING" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點住房</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_HOUSING" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點剩餘住房</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_DISTRICTS_NUM" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}座區域（不含市中心）</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_FOOD" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點餘糧</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_AMENITIES" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點宜居度</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_SURPLUS_AMENITIES_OVER_HIGHEST_LEVEL_HAPPINESS" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市超過頂級幸福度{3_AdjacentSubjectNum}點的宜居度</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_DEFENSE_STRENGTH" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}市中心防禦力</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_CITY_CAO_YIELD" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點{4_CAO}產出</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_DISTRICT_SLOT" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}個區域位</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_SURPLUS_DISTRICT_SLOT" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}個剩餘區域位</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_FREE_POWER" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點清潔電力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_TEMPORARY_POWER" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點臨時電力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_REQUIRED_POWER" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點電力缺口。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_CURRENT_POWER" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點總電力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_SURPLUS_POWER" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點溢出電力。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_POWER_RATIO" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}%的供電率。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_LOYALTY_PERTURN" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}點溢出忠誠度。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_CITY_LOYALTY_PERCENT" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自城市{3_AdjacentSubjectNum}%的忠誠率。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_MILITARY" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家{3_AdjacentSubjectNum}張軍事卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_ECONOMIC" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家{3_AdjacentSubjectNum}張經濟卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_DIPLOMATIC" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家{3_AdjacentSubjectNum}張外交卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_GREAT_PERSON" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家{3_AdjacentSubjectNum}張偉人卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_SLOT_WILDCARD" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家{3_AdjacentSubjectNum}張通配卡。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_PLAYER_TOTAL_UNITS" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家{3_AdjacentSubjectNum}個單位。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_PLAYER_RESOURCES_TYPES" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家持有的{3_AdjacentSubjectNum}種資源。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_OUTGOING_ROUTES" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家運營的{3_AdjacentSubjectNum}條商路。</Text>
+		</Row>
+		<Row Tag="LOC_RUIVO_FROM_UI_MILITARY_STRENGTH" Language="zh_Hant_HK">
+			<Text>+{1_iBonus} {2_YieldIcon} 來自玩家總計{3_AdjacentSubjectNum}點軍事力量。</Text>
+		</Row>
+	</LocalizedText>
+</GameData>
