@@ -107,6 +107,8 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO DistrictModifiers (DistrictType, ModifierId) VALUES
     ('DISTRICT_HARBOR', 'BBG_HARBOR_HOUSING');
 
+-- lighthouse housing only on coastal city (exclude lake)
+UPDATE Modifiers SET SubjectRequirementSetId='PLOT_IS_COASTAL_LAND_REQUIREMENTS' WHERE ModifierId='LIGHTHOUSE_COASTAL_CITY_HOUSING';
 
 -- Citizen specialists give +1 main yield
 UPDATE District_CitizenYieldChanges SET YieldChange=3 WHERE YieldType='YIELD_CULTURE' AND DistrictType='DISTRICT_ACROPOLIS';
