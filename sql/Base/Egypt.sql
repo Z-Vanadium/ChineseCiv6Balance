@@ -97,7 +97,8 @@ INSERT OR IGNORE INTO RequirementSetRequirements (RequirementSetId , Requirement
 
 --14/07/2022: Egypt 6 golds per international traderoutes instead of 4
 -- 02/12/24 reverted
--- UPDATE ModifierArguments SET Value='6' WHERE ModifierId='TRAIT_INTERNATIONAL_TRADE_GAIN_GOLD' AND Name='Amount';
+-- 2025/12/08 changed to 5 golds
+UPDATE ModifierArguments SET Value='5' WHERE ModifierId='TRAIT_INTERNATIONAL_TRADE_GAIN_GOLD' AND Name='Amount';
 -- 02/12/24 food reduced to 1
 UPDATE ModifierArguments SET Value=1 WHERE ModifierId='TRAIT_INCOMING_TRADE_OFFER_FOOD' AND Name='Amount';
 
