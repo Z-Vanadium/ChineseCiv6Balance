@@ -79,6 +79,20 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 	('CCB_JETBOMBER_VS_CAVALRY_MODIFIER', 'Preview', 'LOC_ABILITY_CCB_JETBOMBER_VS_CAVALRY_DESC');
 
+-- 2025/12/08 all civ: plane promotion no finish move
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_MAJOR_CIV', 'CCB_PLANE_PROMOTE_NO_FINISH_MOVES');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_PLANE_PROMOTE_NO_FINISH_MOVES', 'MODIFIER_PLAYER_UNITS_PROMOTE_NO_FINISH_MOVES', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_IS_PLAVE');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_PLANE_PROMOTE_NO_FINISH_MOVES', 'NoFinishMoves', '1');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_UNIT_IS_PLAVE', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_UNIT_IS_PLAVE', 'REQUIRES_AIR_DOMAIN');
+
+
 -- Military Engineers get tunnels at military science
 UPDATE Improvements SET PrereqTech='TECH_MILITARY_SCIENCE' WHERE ImprovementType='IMPROVEMENT_MOUNTAIN_TUNNEL';
 -- 09/03/2024 Fort to military engineering
