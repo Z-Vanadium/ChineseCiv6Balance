@@ -10,5 +10,6 @@ INSERT OR IGNORE INTO ModifierArguments (ModifierId, Name, Value)
 	('TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2', 'Amount', '50');
 
 -- Australia reduce production on liberation for gathering storm
-UPDATE ModifierArguments SET Value='50' WHERE ModifierId='TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2' and Name='Amount';
+-- 2025/12/09: austrilia: liberation prod nerf to +20%
+UPDATE ModifierArguments SET Value='20' WHERE ModifierId='TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2' and Name='Amount';
 UPDATE ModifierArguments SET Value='10' WHERE ModifierId='TRAIT_CITADELCIVILIZATION_LIBERATION_PRODUCTION_XP2' and Name='TurnsActive';
