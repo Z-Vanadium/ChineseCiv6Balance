@@ -343,13 +343,45 @@ INSERT INTO ModifierStrings (ModifierId , Context , Text) VALUES
     ('BBG_STRENGTH_ATTACKING_UNFRIENDLY', 'Preview', 'LOC_BBG_ABILITY_STRENGTH_ATTACKING_UNFRIENDLY_DESC');
 
 -- 03/03/25 UNIT_MECHANIZED_INFANTRY 5 mov and ignores zoc
-UPDATE Units SET BaseMoves=5 WHERE UnitType='UNIT_MECHANIZED_INFANTRY';
+-- 2025/12/09 mechanized infantry: basemove nerf to 4; unlock with tech lases; +5 strength when adj to tank or modern armor
+UPDATE Units SET BaseMoves=4, PrereqTech='TECH_LASERS' WHERE UnitType='UNIT_MECHANIZED_INFANTRY';
 INSERT INTO Tags (Tag, Vocabulary) VALUES
     ('CLASS_MECHANIZED_INFANTRY', 'ABILITY_CLASS');
 INSERT INTO TypeTags (Type, Tag) VALUES
     ('UNIT_MECHANIZED_INFANTRY', 'CLASS_MECHANIZED_INFANTRY'),
     ('ABILITY_IGNORE_ZOC', 'CLASS_MECHANIZED_INFANTRY');
 
+INSERT INTO Types (Type, Kind) VALUES
+    ('CCB_ABL_MI_BONUS_ADJ_TO_TANKS', 'KIND_ABILITY');
+INSERT INTO TypeTags (Type, Tag) VALUES
+    ('CCB_ABL_MI_BONUS_ADJ_TO_TANKS', 'CLASS_MECHANIZED_INFANTRY');
+INSERT INTO UnitAbilities (UnitAbilityType, Name, Description) VALUES
+    ('CCB_ABL_MI_BONUS_ADJ_TO_TANKS', 'LOC_CCB_ABL_MI_BONUS_ADJ_TO_TANKS_NAME', 'LOC_CCB_ABL_MI_BONUS_ADJ_TO_TANKS_DESC');
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
+('CCB_ABL_MI_BONUS_ADJ_TO_TANKS', 'CCB_MI_BONUS_ADJ_TO_TANKS_MOD');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MI_BONUS_ADJ_TO_TANKS_MOD', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_ADJ_TO_TANKS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MI_BONUS_ADJ_TO_TANKS_MOD', 'Amount', '5');
+INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
+('CCB_MI_BONUS_ADJ_TO_TANKS_MOD', 'Preview', 'LOC_CCB_ABL_MI_BONUS_ADJ_TO_TANKS_DESC');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_UNIT_ADJ_TO_TANKS', 'REQUIREMENTSET_TEST_ANY');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_UNIT_ADJ_TO_TANKS', 'REQ_CCB_UNIT_ADJ_TO_TANK'), 
+('REQSET_CCB_UNIT_ADJ_TO_TANKS', 'REQ_CCB_UNIT_ADJ_TO_MODERN_ARMOR');
+
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQ_CCB_UNIT_ADJ_TO_TANK', 'REQUIREMENT_PLOT_ADJACENT_UNIT_TYPE_MATCHES'), 
+('REQ_CCB_UNIT_ADJ_TO_MODERN_ARMOR', 'REQUIREMENT_PLOT_ADJACENT_UNIT_TYPE_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_UNIT_ADJ_TO_TANK', 'MaxRange', '1'), 
+('REQ_CCB_UNIT_ADJ_TO_TANK', 'MinRange', '0'), 
+('REQ_CCB_UNIT_ADJ_TO_TANK', 'UnitType', 'UNIT_TANK'), 
+('REQ_CCB_UNIT_ADJ_TO_MODERN_ARMOR', 'MaxRange', '1'), 
+('REQ_CCB_UNIT_ADJ_TO_MODERN_ARMOR', 'MinRange', '0'), 
+('REQ_CCB_UNIT_ADJ_TO_MODERN_ARMOR', 'UnitType', 'UNIT_MODERN_ARMOR');
 
 -- 03/03/25 Aircraft carrier +25 def against planes when next to aa unit
 INSERT INTO Tags (Tag, Vocabulary) VALUES
