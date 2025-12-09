@@ -9,6 +9,8 @@ INSERT INTO DistrictModifiers (DistrictType, ModifierId) VALUES
 -- Sea Dog available at Exploration now
 UPDATE Units SET PrereqCivic='CIVIC_EXPLORATION' WHERE UnitType='UNIT_ENGLISH_SEADOG';
 
+-- 2025/12/09 redcoast move to tech industrialization, strength nerfed to 65
+UPDATE Units SET Combat=65, PrereqTech='TECH_INDUSTRIALIZATION' WHERE UnitType='UNIT_ENGLISH_REDCOAT';
 -- 15/05/2021: redcoast ability to +5 (from +10)
 UPDATE ModifierArguments SET Value='5' WHERE ModifierId='REDCOAT_FOREIGN_COMBAT' AND Name='Amount';
 
