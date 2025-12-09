@@ -10,7 +10,8 @@ UPDATE ModifierArguments SET Value='1' WHERE ModifierId='YONGLE_GOLD_POPULATION'
 -- 14/10/23 doubled project yield
 -- 25/10/23 nerf project yield to 60%
 -- 03/07/24 project to 70%
-UPDATE Project_YieldConversions SET PercentOfProductionRate=70 WHERE ProjectType='PROJECT_LIJIA_FOOD';
+-- 2025/12/09 Yongle: lijia food nerf to 60%
+UPDATE Project_YieldConversions SET PercentOfProductionRate=60 WHERE ProjectType='PROJECT_LIJIA_FOOD';
 UPDATE Project_YieldConversions SET PercentOfProductionRate=70 WHERE ProjectType='PROJECT_LIJIA_FAITH';
 UPDATE Project_YieldConversions SET PercentOfProductionRate=150 WHERE ProjectType='PROJECT_LIJIA_GOLD';
 
