@@ -66,6 +66,38 @@ DELETE FROM StartBiasTerrains WHERE CivilizationType='CIVILIZATION_GREECE' AND T
 --==============================================================
 --******				    O T H E R					  ******
 --==============================================================
+-- 2025/12/09 Olives, salt +1 gold; coffee, tabbaco no longer spawn without feature; amber +1 food in water (when the plot belongs to any civ)
+INSERT OR REPLACE INTO Resource_YieldChanges (ResourceType, YieldType, YieldChange) VALUES
+    ('RESOURCE_OLIVES', 'YIELD_GOLD', 2),
+    ('RESOURCE_SALT', 'YIELD_GOLD', 2);
+DELETE FROM Resource_ValidTerrains
+      WHERE ResourceType = 'RESOURCE_TOBACCO' AND
+            TerrainType IN ('TERRAIN_GRASS', 'TERRAIN_PLAINS');
+DELETE FROM Resource_ValidTerrains
+      WHERE ResourceType = 'RESOURCE_COFFEE' AND
+            TerrainType = 'TERRAIN_GRASS';
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_MAJOR_CIV', 'CCB_AMBER_FOOD_WATER');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_AMBER_FOOD_WATER', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 0, 0, 0, NULL, 'REQSET_CCB_PLOT_IS_AMBER_WATER');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_AMBER_FOOD_WATER', 'Amount', '1'), 
+('CCB_AMBER_FOOD_WATER', 'YieldType', 'YIELD_FOOD');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_PLOT_IS_AMBER_WATER', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_PLOT_IS_AMBER_WATER', 'REQ_CCB_PLOT_IS_AMBER'), 
+('REQSET_CCB_PLOT_IS_AMBER_WATER', 'REQ_CCB_PLOT_IS_WATER');
+
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQ_CCB_PLOT_IS_AMBER', 'REQUIREMENT_PLOT_RESOURCE_TYPE_MATCHES'), 
+('REQ_CCB_PLOT_IS_WATER', 'REQUIREMENT_PLOT_TERRAIN_TYPE_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_PLOT_IS_AMBER', 'ResourceType', 'RESOURCE_AMBER'), 
+('REQ_CCB_PLOT_IS_WATER', 'TerrainType', 'TERRAIN_COAST');
+
 -- 2025/10/05 horses can be found on tundra plain
 INSERT OR IGNORE INTO Resource_ValidTerrains (ResourceType, TerrainType) VALUES
     ('RESOURCE_HORSES', 'TERRAIN_TUNDRA');
