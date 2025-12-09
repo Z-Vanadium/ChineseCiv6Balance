@@ -110,6 +110,7 @@ UPDATE ModifierArguments SET Value='YIELD_CULTURE' WHERE Name='YieldType' AND Mo
 UPDATE District_CitizenYieldChanges SET YieldChange=2 WHERE YieldType='YIELD_PRODUCTION'    AND DistrictType='DISTRICT_IKANDA';
 
 -- rewrite the algo of ikanda discount to avoid bug
+-- 2025/12/09: zulu: discount remove (for code cause, to -1%)
 DELETE FROM DistrictModifiers WHERE DistrictType = 'DISTRICT_IKANDA' AND ModifierId = 'IKANDA_TRAINED_CORPS_ARMY_DISCOUNT';
 
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
@@ -117,7 +118,7 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
 ('CCB_ZULU_IKANDA_DISCOUNT_NO_BUG', 'MODIFIER_CCB_PLAYER_CITIES_CITY_CORPS_ARMY_ADJUST_DISCOUNT', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_IKANDA');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_ZULU_IKANDA_DISCOUNT_NO_BUG', 'Amount', '25'), 
+('CCB_ZULU_IKANDA_DISCOUNT_NO_BUG', 'Amount', '1'), 
 ('CCB_ZULU_IKANDA_DISCOUNT_NO_BUG', 'UnitDomain', 'DOMAIN_LAND');
 
 INSERT INTO Types (Type, Kind) VALUES 
