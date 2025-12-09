@@ -501,3 +501,13 @@ INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, Ow
 ('CCB_PS_DAMAGE_FREE_GIVER', 'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER', 0, 0, 0, NULL, NULL);
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_PS_DAMAGE_FREE_GIVER', 'ModifierId', 'MODIFIER_GOVERNOR_ADJUST_PREVENET_STRUCTURAL_DAMAGE');
+
+-- 2025/12/09 launch earth satellite: all units +3 combat strength
+INSERT INTO ProjectCompletionModifiers (ProjectType, ModifierId) VALUES 
+('PROJECT_LAUNCH_EARTH_SATELLITE', 'CCB_PROJECT_COMPLETION_STRENGTH_BONUS');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_PROJECT_COMPLETION_STRENGTH_BONUS', 'MODIFIER_PLAYER_UNITS_ADJUST_COMBAT_STRENGTH', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_PROJECT_COMPLETION_STRENGTH_BONUS', 'Amount', '3');
+INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
+	('CCB_PROJECT_COMPLETION_STRENGTH_BONUS', 'Preview', 'LOC_CCB_PROJECT_COMPLETION_STRENGTH_BONUS_DESC');
