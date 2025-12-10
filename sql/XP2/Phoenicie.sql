@@ -26,9 +26,10 @@ INSERT INTO TypeTags (Type, Tag) VALUES
 
 
 -- 31/07/25 Delete project because bug
-DELETE FROM Projects WHERE ProjectType='PROJECT_COTHON_CAPITAL_MOVE';
+-- 2025/12/10 Phoenicie: project back, but bug not fixed yet
+-- DELETE FROM Projects WHERE ProjectType='PROJECT_COTHON_CAPITAL_MOVE';
 
-DELETE FROM TraitModifiers WHERE ModifierId='DISTRICT_COMPLETE_MOVE_CAPITAL';
+-- DELETE FROM TraitModifiers WHERE ModifierId='DISTRICT_COMPLETE_MOVE_CAPITAL';
 
 
 -- 19/08/25 Move Settler speed from Phoenicia to Dido
