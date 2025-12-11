@@ -39,8 +39,51 @@ UPDATE ModifierArguments SET Value='40' WHERE ModifierId='CITY_PATRON_GODDESS_DI
 --==========================
 --*    DANSE OF AURORA     *
 --==========================
+--==========================
+--*       RAIN GOD         *
+--==========================
 -- Dance of aurora only on flat tile
 UPDATE ModifierArguments SET Value='0' WHERE ModifierId='DANCE_OF_THE_AURORA_FAITHTUNDRAHILLSADJACENCY' AND Name='Amount';
+
+-- 2025/12/11 Dance of aurora removed, replace with rain god: capatal city +1 housing, city without any water +3 housing
+DELETE FROM BeliefModifiers
+      WHERE ModifierID IN ('DANCE_OF_THE_AURORA_FAITHTUNDRAADJACENCY', 'DANCE_OF_THE_AURORA_FAITHTUNDRAHILLSADJACENCY') AND
+            BeliefType = 'BELIEF_DANCE_OF_THE_AURORA';
+
+INSERT INTO BeliefModifiers (BeliefType, ModifierId) VALUES 
+('BELIEF_DANCE_OF_THE_AURORA', 'CCB_RAINGOD_CAPITAL_HOUSING');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_RAINGOD_CAPITAL_HOUSING', 'MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER', 0, 0, 0, NULL, 'PLAYER_HAS_PANTHEON_REQUIREMENTS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_RAINGOD_CAPITAL_HOUSING', 'ModifierId', 'CCB_RAINGOD_CAPITAL_HOUSING_MODIFIER');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_RAINGOD_CAPITAL_HOUSING_MODIFIER', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_HOUSING', 0, 0, 0, NULL, 'BUILDING_IS_PALACE');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_RAINGOD_CAPITAL_HOUSING_MODIFIER', 'Amount', '1');
+
+-- no water city housing
+INSERT INTO BeliefModifiers (BeliefType, ModifierId) VALUES 
+('BELIEF_DANCE_OF_THE_AURORA', 'CCB_RAINGOD_NO_WATER_HOUSING');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_RAINGOD_NO_WATER_HOUSING', 'MODIFIER_ALL_CITIES_ATTACH_MODIFIER', 0, 0, 0, NULL, 'CITY_FOLLOWS_PANTHEON_REQUIREMENTS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_RAINGOD_NO_WATER_HOUSING', 'ModifierId', 'CCB_RAINGOD_NO_WATER_HOUSING_MODIFIER');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_RAINGOD_NO_WATER_HOUSING_MODIFIER', 'MODIFIER_CITY_DISTRICTS_ADJUST_DISTRICT_HOUSING', 0, 0, 0, NULL, 'REQSET_CCB_RAINGOD_NO_WATER_CITY_CENTER');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_RAINGOD_NO_WATER_HOUSING_MODIFIER', 'Amount', '3');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_RAINGOD_NO_WATER_CITY_CENTER', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_RAINGOD_NO_WATER_CITY_CENTER', 'REQ_CCB_RAINGOD_NO_FRESH_WATER'), 
+('REQSET_CCB_RAINGOD_NO_WATER_CITY_CENTER', 'REQ_CCB_RAINGOD_NO_COAST'), 
+('REQSET_CCB_RAINGOD_NO_WATER_CITY_CENTER', 'BBG_REQUIRES_PLOT_IS_CITY_CENTER');
+INSERT INTO Requirements (RequirementId, RequirementType, Inverse) VALUES 
+('REQ_CCB_RAINGOD_NO_FRESH_WATER', 'REQUIREMENT_PLOT_IS_FRESH_WATER', 1), 
+('REQ_CCB_RAINGOD_NO_COAST', 'REQUIREMENT_PLOT_IS_COASTAL_LAND', 1);
 
 --==========================
 --*     STONE CIRCLES      *
