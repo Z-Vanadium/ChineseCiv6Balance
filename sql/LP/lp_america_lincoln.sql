@@ -29,4 +29,5 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 --     ('TRAIT_LEADER_LINCOLN', 'BBG_LINCOLN_UNITMAINTENANCEDISCOUNT');
 
 -- 19/06/25 Free units no longer get +5
-DELETE FROM UnitAbilityModifiers WHERE ModifierId='LINCOLN_MELEE_BUFF';
+-- 2025/12/11 +5 back
+-- DELETE FROM UnitAbilityModifiers WHERE ModifierId='LINCOLN_MELEE_BUFF';
