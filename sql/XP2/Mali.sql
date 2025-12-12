@@ -128,6 +128,9 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 --=                                 SUGUBA                                  =
 --===========================================================================
 
+-- 2025/12/12 Mali Suguba specialist yield bonus to +6 gold
+UPDATE District_CitizenYieldChanges SET YieldChange=6 WHERE YieldType='YIELD_GOLD' AND DistrictType='DISTRICT_SUGUBA';
+
 -- Cheaper purchase
 -- set to 0, since rewrite
 -- 2025/10/11 back to 10%
