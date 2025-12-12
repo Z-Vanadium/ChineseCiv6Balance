@@ -192,16 +192,42 @@ DELETE FROM TraitModifiers WHERE ModifierId='TRADE_ROUTE_GOLD_DESERT_ORIGIN';
 
 -- 19/03/24 Remove free trader per golden Mansa
 -- Moved to 1 traderoute at Banking
+-- 2025/12/12 removed
 DELETE FROM TraitModifiers WHERE ModifierId='GOLDEN_AGE_TRADE_ROUTE';
 DELETE FROM Modifiers WHERE ModifierId='GOLDEN_AGE_TRADE_ROUTE';
 DELETE FROM ModifierArguments WHERE ModifierId='GOLDEN_AGE_TRADE_ROUTE';
 
-INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
-    ('TRAIT_BBG_MANSA_FREE_TRADER_BANKS', 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY', 'BBG_UTILS_PLAYER_HAS_TECH_BANKING');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-    ('TRAIT_BBG_MANSA_FREE_TRADER_BANKS', 'Amount', 1);
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
-    ('TRAIT_LEADER_SAHEL_MERCHANTS', 'TRAIT_BBG_MANSA_FREE_TRADER_BANKS');
+-- INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+--     ('TRAIT_BBG_MANSA_FREE_TRADER_BANKS', 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY', 'BBG_UTILS_PLAYER_HAS_TECH_BANKING');
+-- INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+--     ('TRAIT_BBG_MANSA_FREE_TRADER_BANKS', 'Amount', 1);
+-- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+--     ('TRAIT_LEADER_SAHEL_MERCHANTS', 'TRAIT_BBG_MANSA_FREE_TRADER_BANKS');
+
+-- unlock suguba when founding religion (reqset defined in dlc_poland.sql)
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_SAHEL_MERCHANTS', 'CCB_MALI_UNLOCK_CH');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MALI_UNLOCK_CH', 'MODIFIER_PLAYER_ADJUST_DISTRICT_UNLOCK', 0, 0, 0, NULL, 'BBG_PLAYER_FOUNDED_RELIGION_REQSET');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MALI_UNLOCK_CH', 'DistrictType', 'DISTRICT_SUGUBA'), 
+('CCB_MALI_UNLOCK_CH', 'TechType', 'TECH_ASTROLOGY');
+
+-- +1 trade route when founding/completing religion
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_SAHEL_MERCHANTS', 'CCB_MALI_MANSA_FREE_TRADER_1');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MALI_MANSA_FREE_TRADER_1', 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY', 1, 1, 0, NULL, 'BBG_PLAYER_FOUNDED_RELIGION_REQSET');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MALI_MANSA_FREE_TRADER_1', 'Amount', '1');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_SAHEL_MERCHANTS', 'CCB_MALI_MANSA_FREE_TRADER_2');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MALI_MANSA_FREE_TRADER_2', 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY', 1, 1, 0, NULL, 'REQUIRES_PLAYER_COMPLETED_RELIGION_RELIC_CPLMOD');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MALI_MANSA_FREE_TRADER_2', 'Amount', '1');
+
 
 -- Holy site +1 to Suguba / Sundiata is excluded in LP/Sundiata.sql
 -- remove the classic +1 and give +2 on the Mansa one
