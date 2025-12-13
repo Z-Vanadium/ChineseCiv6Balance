@@ -272,6 +272,9 @@
 		<Row Tag="LOC_CCB_DISTRICT_HARBOR_YIELD_GOLD_FROM_WONDER" Language="zh_Hans_CN">
 			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 奇观单元格。</Text>
 		</Row>
+		<Row Tag="LOC_CCB_DISTRICT_THEATER_YIELD_CULTURE_FROM_WONDER" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 奇观单元格。</Text>
+		</Row>
 		<!-- = leader ability (Qin Shi Huang, Unifier) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_QIN_ALT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>近战单位获得“蛮族归顺”操作。此操作能将蛮族单位转化为你的单位，但会移除近战单位。[NEWLINE][NEWLINE]军营获得+1 [ICON_GREATWRITER] 大作家点数，建造军营建筑时+50% [Icon_Production] 生产力，兵营获得2个 [ICON_GreatWork_WRITING] 著作槽位。[ICON_GreatWork_WRITING] 著作+1 [ICON_FOOD] 食物。[NEWLINE][NEWLINE]招募 [ICON_GreatGeneral] 大将军或 [ICON_GREATWRITER] 大作家时获得一项随机 [ICON_TechBoosted] 尤里卡和 [ICON_CivicBoosted] 鼓舞（如可用）。若相邻长城，长城获得1点 [ICON_PRODUCTION] 生产力。</Text>
