@@ -59,28 +59,28 @@ INSERT INTO ModifierStrings (ModifierId , Context , Text)
 
 -- UPDATE 10/01/2023 Give back eureka to all China and move back builder to Qin-Shin only
 
--- 2025/12/11 Qinshi wonder food and prod removed, but special districts (except theater) get +1 yield per wonder adjacent
+-- 2025/12/13 Qinshi special districts (except theater) get +1 yield per wonder adjacent
 -- 10/03/24 QinShi +1 food per wonder
--- INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
---     ('BBG_TRAIT_WONDER_FOOD', 'MODIFIER_SINGLE_CITY_ADJUST_WONDER_YIELD_CHANGE'),
---     ('BBG_TRAIT_ATTACH_WONDER_FOOD', 'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER');
--- INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
---     ('BBG_TRAIT_ATTACH_WONDER_FOOD', 'ModifierId', 'BBG_TRAIT_WONDER_FOOD'),
---     ('BBG_TRAIT_WONDER_FOOD', 'Amount', '1'),
---     ('BBG_TRAIT_WONDER_FOOD', 'YieldType', 'YIELD_FOOD');
--- INSERT INTO TraitModifiers VALUES
---     ('FIRST_EMPEROR_TRAIT', 'BBG_TRAIT_ATTACH_WONDER_FOOD');
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+    ('BBG_TRAIT_WONDER_FOOD', 'MODIFIER_SINGLE_CITY_ADJUST_WONDER_YIELD_CHANGE'),
+    ('BBG_TRAIT_ATTACH_WONDER_FOOD', 'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('BBG_TRAIT_ATTACH_WONDER_FOOD', 'ModifierId', 'BBG_TRAIT_WONDER_FOOD'),
+    ('BBG_TRAIT_WONDER_FOOD', 'Amount', '1'),
+    ('BBG_TRAIT_WONDER_FOOD', 'YieldType', 'YIELD_FOOD');
+INSERT INTO TraitModifiers VALUES
+    ('FIRST_EMPEROR_TRAIT', 'BBG_TRAIT_ATTACH_WONDER_FOOD');
 
 -- 2025/10/11 Qinshi +1 prod per wonder
--- INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
---     ('BBG_TRAIT_WONDER_PRODUCTION', 'MODIFIER_SINGLE_CITY_ADJUST_WONDER_YIELD_CHANGE'),
---     ('BBG_TRAIT_ATTACH_WONDER_PRODUCTION', 'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER');
--- INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
---     ('BBG_TRAIT_ATTACH_WONDER_PRODUCTION', 'ModifierId', 'BBG_TRAIT_WONDER_PRODUCTION'),
---     ('BBG_TRAIT_WONDER_PRODUCTION', 'Amount', '1'),
---     ('BBG_TRAIT_WONDER_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION');
--- INSERT INTO TraitModifiers VALUES
---     ('FIRST_EMPEROR_TRAIT', 'BBG_TRAIT_ATTACH_WONDER_PRODUCTION');
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+    ('BBG_TRAIT_WONDER_PRODUCTION', 'MODIFIER_SINGLE_CITY_ADJUST_WONDER_YIELD_CHANGE'),
+    ('BBG_TRAIT_ATTACH_WONDER_PRODUCTION', 'MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('BBG_TRAIT_ATTACH_WONDER_PRODUCTION', 'ModifierId', 'BBG_TRAIT_WONDER_PRODUCTION'),
+    ('BBG_TRAIT_WONDER_PRODUCTION', 'Amount', '1'),
+    ('BBG_TRAIT_WONDER_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION');
+INSERT INTO TraitModifiers VALUES
+    ('FIRST_EMPEROR_TRAIT', 'BBG_TRAIT_ATTACH_WONDER_PRODUCTION');
 
 INSERT INTO Ruivo_New_Adjacency
 (ID, DistrictType, ProvideType, YieldType, YieldChange, AdjacencyType, CustomAdjacentObject,DistrictModifiers, TraitType, ModifierOwner, WhoIsTheOwner, CollectionType, Only, FreeCompose)
