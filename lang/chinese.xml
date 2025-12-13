@@ -1634,7 +1634,7 @@
 			<Text>在非友方领土进攻时+5 [ICON_Strength] 战斗力。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MECHANIZED_INFANTRY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>信息时代的近战单位。拥有 4  点 [ICON_Movement] 移动力，能忽略控制区。位于坦克或现代坦克一环时 +5 [ICON_STRENGTH] 战斗力。</Text>
+			<Text>信息时代的近战单位。拥有 4 点 [ICON_Movement] 移动力，能忽略控制区。位于坦克或现代坦克一环时 +5 [ICON_STRENGTH] 战斗力。</Text>
 		</Replace>
 		<Row Tag="LOC_CCB_ABL_MI_BONUS_ADJ_TO_TANKS_NAME" Language="zh_Hans_CN">
 			<Text>步坦协同：+5 [ICON_STRENGTH] 战斗力。</Text>
@@ -2903,6 +2903,12 @@
 			<!-- must use tag Row here -->
 		<Row Tag="LOC_CCB_TECH_PREDICTIVE_SYSTEMS_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>所有城市的改良设施、建筑和区域将免疫自然灾害影响。</Text>
+		</Row>
+		<Row Tag="LOC_CCB_SM_UNITS_DEFENSE_BONUS_NAME" Language="zh_Hans_CN">
+			<Text>所有单位防御时 +3 [ICON_STRENGTH] 战斗力。（智能材料）</Text>
+		</Row>
+		<Row Tag="LOC_CCB_SM_UNITS_DEFENSE_BONUS_DESC" Language="zh_Hans_CN">
+			<Text>所有单位防御时 +3 [ICON_STRENGTH] 战斗力。（智能材料）</Text>
 		</Row>
 		<Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>水运单位+2 [ICON_Movement] 移动力。[ICON_GreatWork_Landscape] 艺术巨作+50% [ICON_Tourism] 旅游业绩。</Text>
