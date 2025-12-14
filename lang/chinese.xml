@@ -1497,7 +1497,7 @@
 		</Replace>
 		<!-- = Leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_KRISTINA_AUTO_THEME_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>当所有槽位填满时，拥有至少 3 个 [ICON_GREATWORK_LANDSCAPE] 巨作槽位的建筑和拥有至少 2 个 [ICON_GREATWORK_LANDSCAPE] 巨作槽位的奇观可自动获得 [ICON_THEMEBONUS_ACTIVE] 主题加成。可以在市政广场建造女王图书馆。[NEWLINE]一级/二级/三级市政广场建筑分别提供2点[ICON_GreatWriter] 大作家、 [ICON_GreatArtist] 大艺术家、 [ICON_GreatMusician] 大音乐家点数。</Text>
+			<Text>当所有槽位填满时，拥有至少 3 个 [ICON_GREATWORK_LANDSCAPE] 巨作槽位的建筑和拥有至少 2 个 [ICON_GREATWORK_LANDSCAPE] 巨作槽位的奇观可自动获得 [ICON_THEMEBONUS_ACTIVE] 主题加成。可以在市政广场建造女王图书馆。[NEWLINE]一级/二级/三级市政广场建筑分别为您的帝国提供2点[ICON_GreatWriter] 大作家、 [ICON_GreatArtist] 大艺术家、 [ICON_GreatMusician] 大音乐家点数。</Text>
 		</Replace>
 		<!-- = unique building = -->
 		<Replace Tag="LOC_BUILDING_QUEENS_BIBLIOTHEQUE_DESCRIPTION" Language="zh_Hans_CN">
