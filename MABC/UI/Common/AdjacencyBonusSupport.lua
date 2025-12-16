@@ -189,11 +189,11 @@ function GetAdjacentYieldBonusString( eDistrict:number, pkCity:table, plot:table
 		YIELD_AMENITY = 0
 	}
         -- 插入所有伟人的显示类型
-        for row in GameInfo.District_GreatPersonPoints() do
-			if row.DistrictType == GameInfo.Districts[eDistrict].DistrictType then
-				Yield_Table[row.GreatPersonClassType] = row.PointsPerTurn
-			end
-        end
+        -- for row in GameInfo.District_GreatPersonPoints() do
+		-- 	if row.DistrictType == GameInfo.Districts[eDistrict].DistrictType then
+		-- 		Yield_Table[row.GreatPersonClassType] = row.PointsPerTurn
+		-- 	end
+        -- end
 
 
 
