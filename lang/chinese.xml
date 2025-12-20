@@ -1926,9 +1926,9 @@
 		<Replace Tag="LOC_BELIEF_CITY_PATRON_GODDESS_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>没有 [ICON_DISTRICT] 专业化区域的城市修建所有 [ICON_DISTRICT] 区域时+40% [ICON_Production] 生产力。</Text>
 		</Replace>
-		<Replace Tag="LOC_BELIEF_DANCE_OF_THE_AURORA_DESCRIPTION" Language="zh_Hans_CN">
+		<!-- <Replace Tag="LOC_BELIEF_DANCE_OF_THE_AURORA_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>圣地从相邻冻土平原获得+1 [ICON_Faith] 信仰值相邻加成。</Text>
-		</Replace>
+		</Replace> -->
 		<Replace Tag="LOC_DISTRICT_TUNDRA_FAITH" Language="zh_Hans_CN">
 			<Text>+{1_num} [ICON_Faith] 信仰值，来自相邻的冻土平原 {1_Num : plural 1?tile; other?tiles;}。</Text>
 		</Replace>
@@ -1981,7 +1981,7 @@
 			<Text>雨神</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_DANCE_OF_THE_AURORA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>[ICON_CAPITAL]首都 +1 [ICON_HOUSING] 住房，没有水资源的城市 +3 [ICON_HOUSING] 住房。</Text>
+			<Text>[ICON_CAPITAL]首都 +1 [ICON_HOUSING] 住房，不靠近河流、湖泊或海岸的城市 +3 [ICON_HOUSING] 住房。</Text>
 		</Replace>
 
 
