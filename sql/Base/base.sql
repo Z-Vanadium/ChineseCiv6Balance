@@ -304,6 +304,9 @@ UPDATE GoodyHutSubTypes SET Turn=30 WHERE ModifierID='GOODY_CULTURE_GRANT_ONE_RE
 -- 30/06/25 Governor titles delayed to turn 25. Free technology delayed to turn 31.
 UPDATE GoodyHutSubTypes SET Turn=50 WHERE ModifierID='GOODY_DIPLOMACY_GRANT_GOVERNOR_TITLE';
 UPDATE GoodyHutSubTypes SET Turn=62 WHERE ModifierID='GOODY_SCIENCE_GRANT_ONE_TECH';
+-- 2025/12/24 Pop and Builder delayed to turn 10
+UPDATE GoodyHutSubTypes SET Turn=20 WHERE ModifierID='GOODY_SURVIVORS_ADD_POPULATION';
+UPDATE GoodyHutSubTypes SET Turn=20 WHERE ModifierID='GOODY_SURVIVORS_GRANT_BUILDER';
 
 --=======================================================================
 --******                       DISTRICTS                          ******
