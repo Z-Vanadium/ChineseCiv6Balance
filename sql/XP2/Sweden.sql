@@ -29,11 +29,11 @@ UPDATE Improvements SET PrereqCivic='CIVIC_DIPLOMATIC_SERVICE' WHERE Improvement
 -- Queens Bibliotheque can be build with other t2 gouv
 DELETE FROM MutuallyExclusiveBuildings WHERE Building='BUILDING_QUEENS_BIBLIOTHEQUE' OR MutuallyExclusiveBuilding='BUILDING_QUEENS_BIBLIOTHEQUE';
 
--- 2025/12/12 Queen Biblioteque move to t1 gouv
+-- 2025/12/12 Queen Biblioteque move to t1 gouv, need pre civic recorded history
 DELETE FROM BuildingPrereqs
       WHERE Building = 'BUILDING_QUEENS_BIBLIOTHEQUE' AND
             PrereqBuilding IN ('BUILDING_GOV_CONQUEST', 'BUILDING_GOV_TALL', 'BUILDING_GOV_WIDE');
-UPDATE Buildings SET GovernmentTierRequirement='Tier1' WHERE BuildingType='BUILDING_QUEENS_BIBLIOTHEQUE';
+UPDATE Buildings SET PrereqCivic='CIVIC_RECORDED_HISTORY', GovernmentTierRequirement='Tier1' WHERE BuildingType='BUILDING_QUEENS_BIBLIOTHEQUE';
 
 -- 29/08/2021: +50% Production toward Gov plaza buildings
 INSERT INTO Modifiers(ModifierId, ModifierType) VALUES
