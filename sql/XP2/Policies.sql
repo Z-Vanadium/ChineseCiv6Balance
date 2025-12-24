@@ -73,3 +73,22 @@ INSERT INTO PolicyModifiers(PolicyType, ModifierId) VALUES
 INSERT INTO TypeTags (Type, Tag) VALUES
     ('ABILITY_GLOBAL_COALITION_FRIENDLY_TERRITORY', 'CLASS_AIR_FIGHTER'),
     ('ABILITY_GLOBAL_COALITION_FRIENDLY_TERRITORY', 'CLASS_AIR_BOMBER');
+
+-- space tourism: reduce increase to -33%
+UPDATE ModifierArguments SET Value='33' WHERE ModifierId='FUTURE_COUNTER_CULTURE_TOURISM_REDUCTION' AND Name='Modifier';
+
+-- === New Policies ===
+-- Peaceful Evolution: -20% tourism from other players
+INSERT INTO Types(Type, Kind) VALUES
+	('POLICY_PEACEFUL_EVOLUTION', 'KIND_POLICY');
+
+INSERT INTO Policies (PolicyType, Name, Description, PrereqCivic, GovernmentSlotType) VALUES
+    ('POLICY_PEACEFUL_EVOLUTION', 'LOC_POLICY_PEACEFUL_EVOLUTION_NAME', 'LOC_POLICY_PEACEFUL_EVOLUTION_DESCRIPTION', 'CIVIC_COLD_WAR', 'SLOT_WILDCARD');
+INSERT INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
+    ('POLICY_PEACEFUL_EVOLUTION', 'POLICY_FUTURE_COUNTER_CULTURE');
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES 
+('POLICY_PEACEFUL_EVOLUTION', 'CCB_COLD_WAR_TOURISM_REDUCTION');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_COLD_WAR_TOURISM_REDUCTION', 'MODIFIER_PLAYER_ADJUST_OVERALL_TOURISM_REDUCTION', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_COLD_WAR_TOURISM_REDUCTION', 'Modifier', '25');
