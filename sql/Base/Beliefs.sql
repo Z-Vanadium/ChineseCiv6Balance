@@ -351,6 +351,9 @@ DELETE FROM AbstractModifiers WHERE ParentObjectID IN ('BELIEF_LADY_OF_THE_REEDS
 
 -- Earth Godess +1 faith on appeal
 UPDATE Modifiers SET SubjectRequirementSetId='PLOT_CHARMING_APPEAL' WHERE ModifierId='EARTH_GODDESS_APPEAL_FAITH_MODIFIER';
+-- 2025/12/24 no longer work on city center
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+    ('PLOT_CHARMING_APPEAL', 'BBG_REQUIRES_DISTRICT_IS_NOT_CITY_CENTER');
 
 -- Fire Goddess +3
 UPDATE ModifierArguments SET Value='3' WHERE ModifierId='GODDESS_OF_FIRE_FEATURES_FAITH_MODIFIER' AND Name='Amount';
