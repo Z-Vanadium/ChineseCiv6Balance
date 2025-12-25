@@ -297,7 +297,6 @@ UPDATE ModifierArguments SET Value=40 WHERE ModifierId='GROUNDBREAKER_BONUS_HARV
 -- L1 Expedition : +20% Growth in the city. Internal traderoute +2 food 
 -- 11/08/24 L1 Expedition : +20% Growth in the city. Internal traderoute +1 food / +1 prod
 UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION' WHERE ModifierId='SURPLUS_LOGISTICS_TRADE_ROUTE_FOOD';
-UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION' WHERE ModifierId='SURPLUS_LOGISTICS_EXTRA_GROWTH';
 UPDATE GovernorPromotions SET Level=1, Column=0 WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION';
     -- food to 1 (from base game)
 UPDATE ModifierArguments SET Value=1 WHERE ModifierId='SURPLUS_LOGISTICS_TRADE_ROUTE_FOOD' AND Name='Amount';
@@ -311,6 +310,7 @@ INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
 INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
     ('GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION', 'BBG_MAGNUS_DOMESTIC_TRADE_ROUTE_PROD');
 
+-- 2025/12/25 +20% growth move to RI
 -- 2025/10/18 IZ prod removed
 -- 06/07/23 RI Industrialist: +25% Production toward Industrial Zone buildings in the city. Settlers trained in the city do not consume a Citizen Population. 
 DELETE FROM GovernorPromotionModifiers WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST';
@@ -324,6 +324,8 @@ DELETE FROM GovernorPromotionModifiers WHERE GovernorPromotionType='GOVERNOR_PRO
 UPDATE GovernorPromotionPrereqs SET PrereqGovernorPromotion='GOVERNOR_PROMOTION_RESOURCE_MANAGER_GROUNDBREAKER' WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST';
 UPDATE GovernorPromotions SET Level=1, Column=2 WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST';
 UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST' WHERE ModifierId='EXPEDITION_ADJUST_SETTLERS_CONSUME_POPULATION';
+INSERT OR IGNORE INTO GovernorPromotionModifiers (GovernorPromotionType, ModifierId) VALUES
+    ('GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST', 'SURPLUS_LOGISTICS_EXTRA_GROWTH');
 
 -- 24/04/23 Magnus' expedition gives +2 production to domestic trade routes
 -- 10/03/24 Swapped with +2 food promotion
@@ -331,6 +333,7 @@ UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_
 -- 11/08/24 LII Surplus Logistic : +20% prod toward building, district and units
 -- 30/06/25 fixed so the prod doesn't work on wonders
 
+DELETE FROM GovernorPromotionModifiers WHERE ModifierId = 'SURPLUS_LOGISTICS_EXTRA_GROWTH' AND GovernorPromotionType = 'GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS';
 UPDATE GovernorPromotionPrereqs SET PrereqGovernorPromotion='GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION' WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS';
 UPDATE GovernorPromotions SET Level=2, Column=0 WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS';
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
