@@ -1,9 +1,10 @@
+-- 2025/12/27: Tokugawa gold per internal per district nerfed to +0.5
 -- 15/06/23 Tokugawa gets +1 gold per internal per district (instead of +2 basegame)
 -- UPDATE Modifiers SET ModifierType = 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC' WHERE ModifierId = 'TOKUGAWA_POSITIVE_DOMESTIC_GOLD_DISTRICTS';
 -- 6.3 Tokugawa +0.5 sci/cul base scaling at +1 at Education/Humanism
 -- 6.4 +.5 again at Chemistry/Radio
 -- 20/06/25 removed 6.4
-UPDATE ModifierArguments SET Value=1 WHERE ModifierId='TOKUGAWA_POSITIVE_DOMESTIC_GOLD_DISTRICTS' AND Name='Amount';
+UPDATE ModifierArguments SET Value=0.5 WHERE ModifierId='TOKUGAWA_POSITIVE_DOMESTIC_GOLD_DISTRICTS' AND Name='Amount';
 
 UPDATE ModifierArguments SET Value=0.5 WHERE ModifierId='TOKUGAWA_POSITIVE_DOMESTIC_SCIENCE_DISTRICTS' AND Name='Amount';
 UPDATE ModifierArguments SET Value=0.5 WHERE ModifierId='TOKUGAWA_POSITIVE_DOMESTIC_CULTURE_DISTRICTS' AND Name='Amount';
