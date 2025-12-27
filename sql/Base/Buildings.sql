@@ -144,3 +144,6 @@ UPDATE ModifierArguments SET Value=15 WHERE Name='STADIUM_10_POPULATION_TOURISM'
 
 -- 2025/12/24 Stable production cost reduced to 90 (from 120)
 UPDATE Buildings SET Cost=90 WHERE BuildingType='BUILDING_STABLE';
+
+-- 2025/12/27 Seaport advanced to Steam Power, production cost reduced to 180 (from 220)
+UPDATE Buildings SET PrereqTech='TECH_STEAM_POWER', Cost=360 WHERE BuildingType='BUILDING_SEAPORT';

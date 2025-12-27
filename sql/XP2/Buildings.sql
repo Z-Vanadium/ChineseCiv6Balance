@@ -48,6 +48,14 @@ INSERT OR IGNORE INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('COAL_FROM_SHIPYARD_BBG', 'ResourceType', 'RESOURCE_COAL'),
     ('COAL_FROM_SHIPYARD_BBG', 'Amount', '1');
 
+-- 2025/12/27 Seaport now give +2 oil per turn
+INSERT OR IGNORE INTO BuildingModifiers (BuildingType, ModifierId) VALUES
+    ('BUILDING_SEAPORT', 'BBG_OIL_SEAPORT_BONUS');
+INSERT OR IGNORE INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+    ('BBG_OIL_SEAPORT_BONUS', 'MODIFIER_PLAYER_ADJUST_FREE_RESOURCE_IMPORT_EXTRACTION', 'BBG_PLAYER_CAN_SEE_RESOURCE_OIL_REQSET');
+INSERT OR IGNORE INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('BBG_OIL_SEAPORT_BONUS', 'ResourceType', 'RESOURCE_OIL'),
+    ('BBG_OIL_SEAPORT_BONUS', 'Amount', '2');
 
 
 -- 08/04/25 Barracks and Stables get +2 Iron/Horses
