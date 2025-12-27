@@ -428,7 +428,7 @@
 		<!-- == EGYPT == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_ITERU_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>区域和奇观可建在泛滥平原上，如建在河边则+15% [ICON_Production] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T2泛滥平原、T5河流。</Text>
+			<Text>区域和奇观可建在泛滥平原上，如建在河边则+15% [ICON_Production] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T2泛滥平原、T5河流、T-5海洋。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_ITERU_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>在江河旁建造 [ICON_DISTRICT] 区域与奇观时 [ICON_Production] 生产力+15%。不会受到洪水的损害。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T2泛滥平原、T5河流。</Text>
@@ -647,7 +647,7 @@
 		<!-- == GERMANY == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_IMPERIAL_FREE_CITIES_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>获得“公会”市政后，每座城市都能建造比平常多一个 [ICON_DISTRICT] 专业化区域（无视 [ICON_Citizen] 人口数量限制）。建成商业中心后对相邻单元格施放文化炸弹。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3河流。</Text>
+			<Text>获得“公会”市政后，每座城市都能建造比平常多一个 [ICON_DISTRICT] 专业化区域（无视 [ICON_Citizen] 人口数量限制）。建成商业中心后对相邻单元格施放文化炸弹。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3河流、T-3海洋。</Text>
 		</Replace>
 		<!-- = leader ability (Frederick Barbarossa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_HOLY_ROMAN_EMPEROR_DESCRIPTION" Language="zh_Hans_CN"> <!-- add icon -->
@@ -704,7 +704,7 @@
 		<!-- == HUNGARY == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_PEARL_DANUBE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>在市中心河对岸修建区域与建筑时+50% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T4河流、T5地热裂缝。</Text>
+			<Text>在市中心河对岸修建区域与建筑时+50% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T4河流、T5地热裂缝、T-5海洋。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_RAVEN_KING_DESCRIPTION" Language="zh_Hans_CN">
@@ -892,7 +892,7 @@
 		<!-- == KONGO == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_NKISI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>从每个 [ICON_GreatWork_Relic] 遗物获得额外+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [Icon_Faith] 信仰值。除了通常的 [ICON_CULTURE] 文化值，还会从每个 [ICON_GreatWork_Artifact] 文物以及 [ICON_GreatWork_Sculpture] 雕塑艺术巨作获得+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [ICON_Faith] 信仰值。每次建造完成一个市政广场建筑后，获得一个 [ICON_GreatWork_Relic] 遗物。[NEWLINE][NEWLINE]拥有姆班赞的城市 +1 [ICON_AMENITIES] 宜居度。获得的 [ICON_GreatWriter] 大作家、 [ICON_GreatArtist] 大艺术家、 [ICON_GreatMusician] 大音乐家和 [ICON_GreatMerchant] 大商人点数+50%。生产考古学家时+100% [ICON_PRODUCTION] 生产力。宫殿有5个巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3雨林、T5树林。</Text>
+			<Text>从每个 [ICON_GreatWork_Relic] 遗物获得额外+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [Icon_Faith] 信仰值。除了通常的 [ICON_CULTURE] 文化值，还会从每个 [ICON_GreatWork_Artifact] 文物以及 [ICON_GreatWork_Sculpture] 雕塑艺术巨作获得+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [ICON_Faith] 信仰值。每次建造完成一个市政广场建筑后，获得一个 [ICON_GreatWork_Relic] 遗物。[NEWLINE][NEWLINE]拥有姆班赞的城市 +1 [ICON_AMENITIES] 宜居度。获得的 [ICON_GreatWriter] 大作家、 [ICON_GreatArtist] 大艺术家、 [ICON_GreatMusician] 大音乐家和 [ICON_GreatMerchant] 大商人点数+50%。生产考古学家时+100% [ICON_PRODUCTION] 生产力。宫殿有5个巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3雨林、T5树林、T-3海洋。</Text>
 		</Replace>
 		<!-- = leader ability (Mvemba a Nzinga) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_RELIGIOUS_CONVERT_DESCRIPTION" Language="zh_Hans_CN">
@@ -996,7 +996,7 @@
 		<!-- == MALI == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MALI_GOLD_DESERT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+2 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。所有城市-10% [ICON_PRODUCTION] 生产力[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源。</Text>
+			<Text>首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+2 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。所有城市-10% [ICON_PRODUCTION] 生产力[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源、T-1海洋。</Text>
 		</Replace>
 		<!-- = leader ability (Mansa Musa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SAHEL_MERCHANTS_DESCRIPTION" Language="zh_Hans_CN">
@@ -1191,7 +1191,7 @@
 		<!-- == OTTOMANS == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_GREAT_TURKISH_BOMBARD_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>生产攻城单位时 [ICON_Production] 生产力+50%。所有攻城单位+3 [ICON_Strength] 战斗力。征服城市不会造成 [ICON_Citizen] 人口损失。非奥斯曼建立的城市每回合+1 [ICON_AMENITIES] 宜居度和+4忠诚度。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3河流、T5硝石。</Text>
+			<Text>生产攻城单位时 [ICON_Production] 生产力+50%。所有攻城单位+3 [ICON_Strength] 战斗力。征服城市不会造成 [ICON_Citizen] 人口损失。非奥斯曼建立的城市每回合+1 [ICON_AMENITIES] 宜居度和+4忠诚度。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3河流、T5硝石、T-3海洋。</Text>
 		</Replace>
 		<!-- = leader ability (Suleiman Muhtesem, Magnificent) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SULEIMAN_ALT_DESCRIPTION" Language="zh_Hans_CN">
