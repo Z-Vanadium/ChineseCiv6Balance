@@ -151,14 +151,7 @@ UPDATE Buildings SET PrereqTech='TECH_STEAM_POWER', Cost=360 WHERE BuildingType=
 -- 2025/12/27 T3 gov building sci: buffed to 4% per builder charge(from 2%)
 UPDATE ModifierArguments SET Value=4 WHERE ModifierId='GOV_PROJECT_ABILITY' AND Name='Amount';
 
--- T3 gov building cul: can auto theming; +10% GP points towards writer, artist and musician
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
-('TRAIT_LEADER_MAJOR_CIV', 'CCB_T3_GOV_CUL_AUTOTHEMING');
-INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_T3_GOV_CUL_AUTOTHEMING', 'MODIFIER_PLAYER_ADJUST_AUTO_THEMED_BUILDING', 0, 0, 0, NULL, NULL);
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_T3_GOV_CUL_AUTOTHEMING', 'BuildingType', 'BUILDING_GOV_CULTURE');
-
+-- T3 gov building cul: +10% GP points towards writer, artist and musician
 INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES 
 ('BUILDING_GOV_CULTURE', 'CCB_T3_GOV_CUL_GP_BONUS_WRITER');
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
