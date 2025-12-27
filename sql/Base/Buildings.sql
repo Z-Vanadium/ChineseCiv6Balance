@@ -147,3 +147,38 @@ UPDATE Buildings SET Cost=90 WHERE BuildingType='BUILDING_STABLE';
 
 -- 2025/12/27 Seaport advanced to Steam Power, production cost reduced to 180 (from 220)
 UPDATE Buildings SET PrereqTech='TECH_STEAM_POWER', Cost=360 WHERE BuildingType='BUILDING_SEAPORT';
+
+-- 2025/12/27 T3 gov building sci: buffed to 4% per builder charge(from 2%)
+UPDATE ModifierArguments SET Value=4 WHERE ModifierId='GOV_PROJECT_ABILITY' AND Name='Amount';
+
+-- T3 gov building cul: can auto theming; +10% GP points towards writer, artist and musician
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_MAJOR_CIV', 'CCB_T3_GOV_CUL_AUTOTHEMING');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_T3_GOV_CUL_AUTOTHEMING', 'MODIFIER_PLAYER_ADJUST_AUTO_THEMED_BUILDING', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_T3_GOV_CUL_AUTOTHEMING', 'BuildingType', 'BUILDING_GOV_CULTURE');
+
+INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES 
+('BUILDING_GOV_CULTURE', 'CCB_T3_GOV_CUL_GP_BONUS_WRITER');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_T3_GOV_CUL_GP_BONUS_WRITER', 'MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS_PERCENT', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_T3_GOV_CUL_GP_BONUS_WRITER', 'Amount', '10'), 
+('CCB_T3_GOV_CUL_GP_BONUS_WRITER', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER');
+
+INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES 
+('BUILDING_GOV_CULTURE', 'CCB_T3_GOV_CUL_GP_BONUS_ARTIST');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_T3_GOV_CUL_GP_BONUS_ARTIST', 'MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS_PERCENT', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_T3_GOV_CUL_GP_BONUS_ARTIST', 'Amount', '10'), 
+('CCB_T3_GOV_CUL_GP_BONUS_ARTIST', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST');
+
+INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES 
+('BUILDING_GOV_CULTURE', 'CCB_T3_GOV_CUL_GP_BONUS_MUSICIAN');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_T3_GOV_CUL_GP_BONUS_MUSICIAN', 'MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS_PERCENT', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_T3_GOV_CUL_GP_BONUS_MUSICIAN', 'Amount', '10'), 
+('CCB_T3_GOV_CUL_GP_BONUS_MUSICIAN', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_MUSICIAN');
