@@ -2991,7 +2991,7 @@
 			<Text>政体加成</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_PEACEFUL_EVOLUTION_NAME" Language="zh_Hans_CN">
-			<Text>和平演变</Text>
+			<Text>铁幕</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_PEACEFUL_EVOLUTION_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>其他文明对您的 [ICON_TOURISM] 旅游业绩减少 20%。</Text>
