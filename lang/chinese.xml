@@ -19,7 +19,7 @@
 		</Row>
 		<!-- = leader ability (Bull Moose)= -->
 		<Replace Tag="LOC_TRAIT_LEADER_ANTIQUES_AND_PARKS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“法典”市政后：与自然奇观或山脉相邻时，魅力值为“惊艳”的单元格+1 [ICON_SCIENCE] 科技值，研究“天文学”后翻倍；与自然奇观或树林相邻时，魅力值为“惊艳”的单元格+1 [ICON_CULTURE] 文化值，解锁“启蒙运动”后翻倍。[NEWLINE]拥有“中世纪集市”市政后即可栽种树林。</Text>
+			<Text>“法典”市政后，魅力值为“惊艳”的单元格：[NEWLINE][ICON_BULLET]与自然奇观或山脉相邻时，+1 [ICON_SCIENCE] 科技值，研究“天文学”后翻倍；[NEWLINE][ICON_BULLET]与自然奇观或树林相邻时，+1 [ICON_CULTURE] 文化值，解锁“启蒙运动”后翻倍。[NEWLINE]拥有“中世纪集市”市政后即可栽种树林。</Text>
 		</Replace>
 		<!-- = leader ability (Rough Rider)= -->
 		<Replace Tag="LOC_TRAIT_LEADER_ROOSEVELT_COROLLARY_ROUGH_RIDER_DESCRIPTION" Language="zh_Hans_CN">
@@ -126,7 +126,7 @@
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_GIFTS_FOR_TLATOANI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>领地内的奢侈品提供额外2个城市 [ICON_AMENITIES] 宜居度。[NEWLINE]阿兹特克领地内每改良并且保留不同的奢侈品使所有单位（飞机和末日机甲除外）在进攻时获得 +1 [ICON_STRENGTH] 战斗力。</Text>
+			<Text>领地内的奢侈品提供额外2个城市 [ICON_AMENITIES] 宜居度。[NEWLINE]阿兹特克领地内每改良并且保留不同的奢侈品使所有陆地和海军单位（末日机甲除外）在进攻时获得 +1 [ICON_STRENGTH] 战斗力。</Text>
 		</Replace>
 		<!-- = unique building = -->
 		<Replace Tag="LOC_BUILDING_TLACHTLI_DESCRIPTION" Language="zh_Hans_CN">
@@ -869,7 +869,7 @@
 		<!-- == KHMER == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_KHMER_BARAYS_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>拥有“水渠”的城市从娱乐设施获得的 [ICON_AMENITIES] 宜居度+1。农场与水渠相邻时，提供的 [ICON_FOOD] 食物+2； 与圣地相邻时，提供+1 [ICON_FAITH] 信仰值。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3河流。</Text>
+			<Text>拥有水渠的城市+1 [ICON_AMENITIES] 宜居度。农场与水渠相邻时，提供的 [ICON_FOOD] 食物+2； 与圣地相邻时，提供+1 [ICON_FAITH] 信仰值。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3河流。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MONASTERIES_KING_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
@@ -1039,7 +1039,7 @@
 		<!-- == MAORI == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MAORI_MANA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“造船术”科技后，水运单位+2 [ICON_Movement] 移动力。“政治哲学”后未改良的树林与雨林提供+1 [ICON_PRODUCTION] 生产力。“重商主义”额外提供+1 [ICON_PRODUCTION] 生产力、“保护地球”额外+2 [ICON_PRODUCTION] 生产力。渔船向相邻单元格投放文化炸弹，并在“天文导航”科技后提供+1 [ICON_FOOD] 食物。无法收获资源；无法获得 [ICON_GreatWriter] 大作家。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
+			<Text>“造船术”科技后，水运单位+2 [ICON_Movement] 移动力。渔船向相邻单元格投放文化炸弹，并在“天文导航”科技后提供+1 [ICON_FOOD] 食物。无法收获资源；无法获得 [ICON_GreatWriter] 大作家。[NEWLINE][NEWLINE]未改良的树林与雨林：[NEWLINE]在“政治哲学”后提供+1 [ICON_PRODUCTION] 生产力；[NEWLINE]在“重商主义”后额外提供+1 [ICON_PRODUCTION] 生产力；[NEWLINE]在“保护地球”后额外+2 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_KUPES_VOYAGE_DESCRIPTION" Language="zh_Hans_CN">
@@ -1988,7 +1988,7 @@
 		
 		<!-- === BELIEFS === -->
 		<Replace Tag="LOC_BELIEF_FEED_THE_WORLD_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>神社和寺庙提供的 [ICON_FOOD] 食物等于其固定产出的 [ICON_Faith] 信仰值，并分别+1 [ICON_HOUSING] 住房。</Text>
+			<Text>神社和寺庙分别为城市提供提供+2 [ICON_FOOD] 食物，+4 [ICON_FOOD] 食物，并分别+1 [ICON_HOUSING] 住房。</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_TITHE_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>信奉宗教的每个城市+2 [ICON_GOLD] 金币，“神学”后额外+1 [ICON_GOLD] 金币。</Text>
@@ -2027,7 +2027,10 @@
 			<Text>允许建造拜火神庙（+3 [ICON_Faith] 信仰值，+3 [ICON_Culture] 文化值）。无法被自然灾害掠夺。</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_WORK_ETHIC_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>神社和寺庙提供的 [ICON_Production] 生产力等于其固定产出的 [ICON_Faith] 信仰值</Text>
+			<Text>神社和寺庙分别为城市提供提供+2 [ICON_Production] 生产力，+4 [ICON_Production] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_BELIEF_CHORAL_MUSIC_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>神社和寺庙分别为城市提供提供+2 [ICON_CULTURE] 文化值，+4 [ICON_CULTURE] 文化值。</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_JUST_WAR_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>战斗单位处于信奉该宗教的外国城市境内时+5 [ICON_Strength] 战斗力</Text>
@@ -2036,7 +2039,7 @@
 			<Text>信仰此宗教的每座城市的每座圣地或剧院广场相应提供+2 [ICON_Faith] 信仰值或+2 [ICON_Culture] 文化值。</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_ZEN_MEDITATION_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>拥有2个专业化区域的城市+1 [ICON_Amenities] 宜居度。</Text>
+			<Text>拥有至少 1 个专业化区域的城市+1 [ICON_Amenities] 宜居度。</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_RELIGIOUS_COMMUNITY_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>圣地，神社和寺庙分别提供+1 [ICON_Housing] 住房。</Text>
@@ -2961,6 +2964,9 @@
 		</Replace>
 		<Replace Tag="LOC_BOOST_TRIGGER_NATIONALISM" Language="zh_Hans_CN">
 			<Text>拥有一个升级三次的陆地战斗单位。</Text>
+		</Replace>
+		<Replace Tag="LOC_BOOST_TRIGGER_RAPID_DEPLOYMENT" Language="zh_Hans_CN">
+			<Text>在与 [ICON_Capital] 首都不同的大陆修建一个飞机跑道。</Text>
 		</Replace>
 		<Replace Tag="BBG_LOC_CIVIC_CULTURAL_HEGEMONY_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>在帝国全境内+25% [ICON_Tourism] 旅游业绩。</Text>
@@ -4738,7 +4744,7 @@
 			<Text>极海鲸狩</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>猎人小屋可为相邻的单元格提供额外产出，冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍），营地和渔船+1 [ICON_FOOD] 食物和+1 [ICON_PRODUCTION] 生产力。[NEWLINE]玩家通过科技或文化每进入一个新时代，在 [ICON_Capital] 首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。特殊：更深的冻土。</Text>
+			<Text>猎人小屋可为相邻的单元格提供额外产出：[NEWLINE]冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍）；[NEWLINE]营地和渔船+1 [ICON_FOOD] 食物和+1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]玩家通过科技或文化每进入一个新时代，在 [ICON_Capital] 首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。特殊：更深的冻土。</Text>
 		</Replace>
 		<!-- = Leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_LIME_THULE_DAVE_HEART_NOT_STONE_NAME" Language="zh_Hans_CN">
