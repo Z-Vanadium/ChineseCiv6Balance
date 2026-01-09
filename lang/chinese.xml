@@ -1618,6 +1618,32 @@
 		<Replace Tag="LOC_BBG_ABILITY_STRENGTH_NEXT_TO_ANTI_AIR_DESC" Language="zh_Hans_CN">
 			<Text>相邻具有防空力量的单位防御空袭时+25 [ICON_Strength] 战斗力。</Text>
 		</Replace>
+		<!-- == Siege Units == -->
+		<!-- = Catapult = -->
+		<Replace Tag="LOC_UNIT_CATAPULT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>古典时代攻城单位，适合攻击城市。除非拥有“专家组”升级，否则不能在同一回合内移动和攻击。</Text>
+		</Replace>
+		<!-- = Trebuchet = -->
+		<Replace Tag="LOC_UNIT_TREBUCHET_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>中世纪攻城单位，适合攻击城市。除非拥有“专家组”升级，否则不能在同一回合内移动和攻击。</Text>
+		</Replace>
+		<!-- = Bombard = -->
+		<Replace Tag="LOC_UNIT_BOMBARD_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>文艺复兴时代攻城单位，适合攻击城市。除非拥有“专家组”升级，否则不能在同一回合内移动和攻击。</Text>
+		</Replace>
+		<!-- = Artillery = -->
+		<Replace Tag="LOC_UNIT_ARTILLERY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>现代时代攻城单位，适合攻击城市。除非拥有“专家组”升级，否则不能在同一回合内移动和攻击。[NEWLINE]{LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_DESC}</Text>
+		</Replace>
+		<Row Tag="LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_NAME" Language="zh_Hans_CN">
+			<Text>火力网</Text>
+		</Row>
+		<Row Tag="LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_DESC" Language="zh_Hans_CN">
+			<Text>对抗城市防御时 +5 [ICON_STRENGTH] 战斗力。</Text>
+		</Row>
+		<Replace Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>信息时代攻城单位，适合攻击城市。除非拥有“专家组”升级，否则不能在同一回合内移动和攻击。[NEWLINE]{LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_DESC}</Text>
+		</Replace>
 		<Replace Tag="LOC_UNIT_MODERN_ARMOR_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>又快又强大的信息时代重骑兵单位。+1 [ICON_Movement] 移动力。在友方领土防御时+5 [ICON_Strength] 战斗力，在非友方领土进攻时+5 [ICON_Strength] 战斗力。</Text>
 		</Replace>
