@@ -1281,7 +1281,7 @@
 		<!-- == PORTUGAL == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_PORTUGAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>国际 [ICON_TradeRoute] 贸易路线必须起源于海岸城市，并只能通往处于海岸上或拥有港口的城市，但“制图学”科技后+50% [ICON_GOLD] 金币产出、“教育”科技后+50% [ICON_SCIENCE] 科技值产出、“中世纪集市”市政后+50% [ICON_Culture] 文化值产出。商人单位在水域中的行动范围+50%，且解锁之后可立即在水域中行动。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
+			<Text>国际 [ICON_TradeRoute] 贸易路线必须起源于海岸城市，并只能在水域或运河单元格上通行，但“制图学”科技后+50% [ICON_GOLD] 金币产出、“教育”科技后+50% [ICON_SCIENCE] 科技值产出、“中世纪集市”市政后+50% [ICON_Culture] 文化值产出。商人单位在水域中的行动范围+50%，且解锁之后可立即在水域中行动。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_JOAO_III_DESCRIPTION" Language="zh_Hans_CN">
