@@ -36,6 +36,7 @@ AND ModifierId NOT LIKE 'BBG_INTERNATIONAL_%'
 AND ModifierId NOT LIKE 'BBG_ENCLAVE_GRANT_GOVERNOR_POINT';
 
 -- International trade routes to allies gain yields per type of CS under your control
+-- 2026/02/26 also work on internal trade routes
 CREATE TEMPORARY TABLE "Teotihucan_trades"(
         'LeaderType' TEXT,
         'YieldType' TEXT,
@@ -59,6 +60,15 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
 INSERT INTO TraitModifiers (TraitType, ModifierId) SELECT
     'TRAIT_CIVILIZATION_LIME_TEO_MEN_BECOME_GODS', 'BBG_INTERNATIONAL_' || LeaderType || '_ONE' FROM Teotihucan_trades;
 
+INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) SELECT
+    'CCB_INTERNAL_' || LeaderType || '_ONE', 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC', 'SUK_GALLIC_WAR_COMBAT_REQUIREMENTS_' || LeaderType FROM Teotihucan_trades;
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'CCB_INTERNAL_' || LeaderType || '_ONE', 'YieldType', YieldType FROM Teotihucan_trades; 
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'CCB_INTERNAL_' || LeaderType || '_ONE', 'Amount', Amount FROM Teotihucan_trades; 
+INSERT INTO TraitModifiers (TraitType, ModifierId) SELECT
+    'TRAIT_CIVILIZATION_LIME_TEO_MEN_BECOME_GODS', 'CCB_INTERNAL_' || LeaderType || '_ONE' FROM Teotihucan_trades;
+
 INSERT INTO RequirementSets(RequirementSetId, RequirementSetType) SELECT
     'BBG_PLAYER_SUZ_2_' || LeaderType || '_REQSET', 'REQUIREMENTSET_TEST_ALL' FROM Leaders WHERE InheritFrom = 'LEADER_MINOR_CIV_DEFAULT';
 INSERT INTO RequirementSetRequirements(RequirementSetId , RequirementId) SELECT
@@ -78,6 +88,15 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
     'BBG_INTERNATIONAL_' || LeaderType || '_TWO', 'Amount', Amount*2 FROM Teotihucan_trades; 
 INSERT INTO TraitModifiers (TraitType, ModifierId) SELECT
     'TRAIT_CIVILIZATION_LIME_TEO_MEN_BECOME_GODS', 'BBG_INTERNATIONAL_' || LeaderType || '_TWO' FROM Teotihucan_trades;
+
+INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) SELECT
+    'CCB_INTERNAL_' || LeaderType || '_TWO', 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_YIELD_FOR_DOMESTIC', 'BBG_PLAYER_SUZ_2_' || LeaderType || '_REQSET' FROM Teotihucan_trades;
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'CCB_INTERNAL_' || LeaderType || '_TWO', 'YieldType', YieldType FROM Teotihucan_trades; 
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'CCB_INTERNAL_' || LeaderType || '_TWO', 'Amount', Amount*2 FROM Teotihucan_trades; 
+INSERT INTO TraitModifiers (TraitType, ModifierId) SELECT
+    'TRAIT_CIVILIZATION_LIME_TEO_MEN_BECOME_GODS', 'CCB_INTERNAL_' || LeaderType || '_TWO' FROM Teotihucan_trades;
 
 
 -- ==========================================================
