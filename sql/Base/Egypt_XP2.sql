@@ -15,3 +15,44 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 UPDATE Units SET StrategicResource='RESOURCE_HORSES' WHERE UnitType='UNIT_EGYPTIAN_CHARIOT_ARCHER';
 INSERT INTO Units_XP2 (UnitType, ResourceCost) VALUES
     ('UNIT_EGYPTIAN_CHARIOT_ARCHER', 10);
+
+--==========
+-- SPHINX
+--==========
+-- +1 food on plains and +1 prod on grass (including hills)
+INSERT INTO ImprovementModifiers (ImprovementType, ModifierId) VALUES 
+('IMPROVEMENT_SPHINX', 'CCB_SPHINX_FOOD');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_SPHINX_FOOD', 'MODIFIER_SINGLE_PLOT_ADJUST_PLOT_YIELDS', 0, 0, 0, NULL, 'REQSET_CCB_PLOT_IS_PLAINS_CLASS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_SPHINX_FOOD', 'Amount', '1'), 
+('CCB_SPHINX_FOOD', 'YieldType', 'YIELD_FOOD');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_PLOT_IS_PLAINS_CLASS', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_PLOT_IS_PLAINS_CLASS', 'REQSET_CCB_PLOT_IS_PLAINS_CLASS');
+
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQSET_CCB_PLOT_IS_PLAINS_CLASS', 'REQUIREMENT_PLOT_TERRAIN_CLASS_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQSET_CCB_PLOT_IS_PLAINS_CLASS', 'TerrainClass', 'TERRAIN_CLASS_PLAINS');
+
+
+INSERT INTO ImprovementModifiers (ImprovementType, ModifierId) VALUES 
+('IMPROVEMENT_SPHINX', 'CCB_SPHINX_PRODUCTION');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_SPHINX_PRODUCTION', 'MODIFIER_SINGLE_PLOT_ADJUST_PLOT_YIELDS', 0, 0, 0, NULL, 'REQSET_CCB_PLOT_IS_GRASS_CLASS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_SPHINX_PRODUCTION', 'Amount', '1'), 
+('CCB_SPHINX_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_PLOT_IS_GRASS_CLASS', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_PLOT_IS_GRASS_CLASS', 'REQSET_CCB_PLOT_IS_GRASS_CLASS');
+
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQSET_CCB_PLOT_IS_GRASS_CLASS', 'REQUIREMENT_PLOT_TERRAIN_CLASS_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQSET_CCB_PLOT_IS_GRASS_CLASS', 'TerrainClass', 'TERRAIN_CLASS_GRASS');
