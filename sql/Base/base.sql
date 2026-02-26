@@ -373,6 +373,13 @@ UPDATE Technologies SET Description='BBG_LOC_TECH_MILITARY_SCIENCE_DESCRIPTION' 
 UPDATE Happinesses SET GrowthModifier=8, NonFoodYieldModifier=8 WHERE HappinessType='HAPPINESS_HAPPY';
 UPDATE Happinesses SET GrowthModifier=16, NonFoodYieldModifier=16 WHERE HappinessType='HAPPINESS_ECSTATIC';
 
+-- 2026/02/26 happiness unhappy removed; old unhappy renamed euphoric with the same bonus as ecstatic in range [8, +infinity)
+UPDATE Happinesses SET MaximumAmenityScore=-4 WHERE HappinessType='HAPPINESS_UNREST';
+UPDATE Happinesses SET MinimumAmenityScore=-3 WHERE HappinessType='HAPPINESS_DISPLEASED';
+
+UPDATE Happinesses SET MinimumAmenityScore=8, MaximumAmenityScore=NULL, GrowthModifier=16, NonFoodYieldModifier=16 WHERE HappinessType='HAPPINESS_UNHAPPY';
+UPDATE Happinesses_XP1 SET IdentityPerTurnChange=6 WHERE HappinessType='HAPPINESS_UNHAPPY';
+
 -- 30/11/24 Pillage nerf
 -- Improvement pillage value to 35/20
 UPDATE Improvements SET PlunderAmount=35 WHERE PlunderType='PLUNDER_GOLD';
