@@ -355,9 +355,79 @@ UPDATE Modifiers SET SubjectRequirementSetId='PLOT_CHARMING_APPEAL' WHERE Modifi
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
     ('PLOT_CHARMING_APPEAL', 'BBG_REQUIRES_DISTRICT_IS_NOT_CITY_CENTER');
 
--- Fire Goddess +3
-UPDATE ModifierArguments SET Value='3' WHERE ModifierId='GODDESS_OF_FIRE_FEATURES_FAITH_MODIFIER' AND Name='Amount';
+-- 2026/02/26 Fire Goddess rework: +1 faith for volcanic soil, +2 faith for tiles adjacent to volcano, +3 faith for geotermal
+DELETE FROM BeliefModifiers WHERE ModifierID = 'GODDESS_OF_FIRE_FEATURES_FAITH' AND BeliefType = 'BELIEF_GODDESS_OF_FIRE';
 
+-- +1 faith for volcanic soil
+INSERT INTO BeliefModifiers (BeliefType, ModifierID)
+    VALUES ('BELIEF_GODDESS_OF_FIRE', 'CCB_FIRE_GODDESS_VOLCANIC_SOIL_GIVER');
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId)
+    VALUES ('CCB_FIRE_GODDESS_VOLCANIC_SOIL_GIVER', 'MODIFIER_ALL_CITIES_ATTACH_MODIFIER', 'CITY_FOLLOWS_PANTHEON_REQUIREMENTS');
+INSERT INTO ModifierArguments(ModifierId, Name, Value)
+    VALUES ('CCB_FIRE_GODDESS_VOLCANIC_SOIL_GIVER', 'ModifierId', 'CCB_FIRE_GODDESS_VOLCANIC_SOIL');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_FIRE_GODDESS_VOLCANIC_SOIL', 'MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD', 0, 0, 0, NULL, 'REQSET_CCB_PLOT_HAS_VOLCANIC_SOIL');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_FIRE_GODDESS_VOLCANIC_SOIL', 'Amount', '1'), 
+('CCB_FIRE_GODDESS_VOLCANIC_SOIL', 'YieldType', 'YIELD_FAITH');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_PLOT_HAS_VOLCANIC_SOIL', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_PLOT_HAS_VOLCANIC_SOIL', 'REQ_CCB_PLOT_HAS_VOLCANIC_SOIL');
+
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQ_CCB_PLOT_HAS_VOLCANIC_SOIL', 'REQUIREMENT_PLOT_FEATURE_TYPE_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_PLOT_HAS_VOLCANIC_SOIL', 'FeatureType', 'FEATURE_VOLCANIC_SOIL');
+
+-- +2 faith for tiles adjacent to volcano
+INSERT INTO BeliefModifiers (BeliefType, ModifierID)
+    VALUES ('BELIEF_GODDESS_OF_FIRE', 'CCB_FIRE_GODDESS_VOLCANO_GIVER');
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId)
+    VALUES ('CCB_FIRE_GODDESS_VOLCANO_GIVER', 'MODIFIER_ALL_CITIES_ATTACH_MODIFIER', 'CITY_FOLLOWS_PANTHEON_REQUIREMENTS');
+INSERT INTO ModifierArguments(ModifierId, Name, Value)
+    VALUES ('CCB_FIRE_GODDESS_VOLCANO_GIVER', 'ModifierId', 'CCB_FIRE_GODDESS_VOLCANO');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_FIRE_GODDESS_VOLCANO', 'MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD', 0, 0, 0, NULL, 'REQSET_CCB_PLOT_NEXT_VOLCANO');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_FIRE_GODDESS_VOLCANO', 'Amount', '2'), 
+('CCB_FIRE_GODDESS_VOLCANO', 'YieldType', 'YIELD_FAITH');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+    ('REQSET_CCB_PLOT_NEXT_VOLCANO', 'REQUIREMENTSET_TEST_ANY');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) 
+    SELECT 'REQSET_CCB_PLOT_NEXT_VOLCANO', 'CCB_PLOT_ADJACENT_TO_' || FeatureType FROM Features_XP2 WHERE Features_XP2.Volcano=1;
+INSERT INTO Requirements (RequirementId, RequirementType)
+    SELECT 'CCB_PLOT_ADJACENT_TO_' || FeatureType, 'REQUIREMENT_PLOT_ADJACENT_FEATURE_TYPE_MATCHES' FROM Features_XP2 WHERE Features_XP2.Volcano=1;
+INSERT INTO RequirementArguments (RequirementId, Name, Value)
+    SELECT 'CCB_PLOT_ADJACENT_TO_' || FeatureType, 'FeatureType', FeatureType FROM Features_XP2 WHERE Features_XP2.Volcano=1;
+
+-- +3 faith for geotermal
+INSERT INTO BeliefModifiers (BeliefType, ModifierID)
+    VALUES ('BELIEF_GODDESS_OF_FIRE', 'CCB_FIRE_GODDESS_GEOTHERMAL_FISSURE_GIVER');
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId)
+    VALUES ('CCB_FIRE_GODDESS_GEOTHERMAL_FISSURE_GIVER', 'MODIFIER_ALL_CITIES_ATTACH_MODIFIER', 'CITY_FOLLOWS_PANTHEON_REQUIREMENTS');
+INSERT INTO ModifierArguments(ModifierId, Name, Value)
+    VALUES ('CCB_FIRE_GODDESS_GEOTHERMAL_FISSURE_GIVER', 'ModifierId', 'CCB_FIRE_GODDESS_GEOTHERMAL_FISSURE');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_FIRE_GODDESS_GEOTHERMAL_FISSURE', 'MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD', 0, 0, 0, NULL, 'REQSET_CCB_PLOT_HAS_GEOTHERMAL_FISSURE');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_FIRE_GODDESS_GEOTHERMAL_FISSURE', 'Amount', '3'), 
+('CCB_FIRE_GODDESS_GEOTHERMAL_FISSURE', 'YieldType', 'YIELD_FAITH');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_PLOT_HAS_GEOTHERMAL_FISSURE', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_PLOT_HAS_GEOTHERMAL_FISSURE', 'REQ_CCB_PLOT_HAS_GEOTHERMAL_FISSURE');
+
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQ_CCB_PLOT_HAS_GEOTHERMAL_FISSURE', 'REQUIREMENT_PLOT_FEATURE_TYPE_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_PLOT_HAS_GEOTHERMAL_FISSURE', 'FeatureType', 'FEATURE_GEOTHERMAL_FISSURE');
 
 -- Religious settlement: +20% production towards settler and 3 free tiles
 INSERT INTO Modifiers(ModifierId, ModifierType, SubjectRequirementSetId) VALUES
