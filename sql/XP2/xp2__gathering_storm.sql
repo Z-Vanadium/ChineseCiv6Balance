@@ -282,6 +282,10 @@ UPDATE Projects SET Cost=1700 WHERE ProjectType='PROJECT_BUILD_THERMONUCLEAR_DEV
 UPDATE Project_ResourceCosts SET StartProductionCost=15 WHERE ProjectType='PROJECT_BUILD_NUCLEAR_DEVICE';
 UPDATE Project_ResourceCosts SET StartProductionCost=30 WHERE ProjectType='PROJECT_BUILD_THERMONUCLEAR_DEVICE';
 
+-- 2026/02/26 wmds: fallout duration reduced to 5/5 (from 5/10)
+UPDATE WMDs SET FalloutDuration=10 WHERE WeaponType='WMD_NUCLEAR_DEVICE';
+UPDATE WMDs SET FalloutDuration=10 WHERE WeaponType='WMD_THERMONUCLEAR_DEVICE';
+
 --=======================================================================
 --******               Wonder+Terrain/Feature                      ******
 --=======================================================================
