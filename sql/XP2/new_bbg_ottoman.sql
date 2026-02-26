@@ -64,6 +64,15 @@ UPDATE Modifiers SET SubjectRequirementSetId=NULL WHERE ModifierId='GREAT_TURKIS
 UPDATE ModifierArguments SET Value=25 WHERE ModifierId='PASHA_BONUS_UNIT_PRODUCTION';
 UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_PASHA' WHERE ModifierId='KHASS_ODA_BASHI_ADJUST_ALLIANCE_POINTS';
 
+
+-- INSERT INTO GovernorPromotionModifiers (GovernorPromotionType, ModifierId) VALUES 
+-- ('GOVERNOR_PROMOTION_PASHA', 'CCB_IBRAHIM_RETURN_GOVERNOR_POINT');
+-- INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+-- ('CCB_IBRAHIM_RETURN_GOVERNOR_POINT', 'MODIFIER_PLAYER_ADJUST_GOVERNOR_POINTS', 1, 0, 1, NULL, NULL);
+-- INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+-- ('CCB_IBRAHIM_RETURN_GOVERNOR_POINT', 'Delta', '1');
+
+
 -- LI Head Falconer : Grant +1culture/faith per population.
 DELETE FROM GovernorPromotionModifiers WHERE GovernorPromotionType='GOVERNOR_PROMOTION_HEAD_FALCONER';
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
