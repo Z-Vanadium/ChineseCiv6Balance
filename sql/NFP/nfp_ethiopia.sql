@@ -30,6 +30,13 @@ UPDATE Improvement_YieldChanges SET YieldChange=0 WHERE ImprovementType='IMPROVE
 /*
 UPDATE Modifiers SET ModifierType='MODIFIER_PLAYER_ADJUST_PLOT_YIELD', SubjectRequirementSetId='STAVE_CHURCH_RESOURCE_REQUIREMENTS' WHERE ModifierId='TRAIT_FAITH_RESOURCES';
 */
+
+-- +1 prod with civic reformed church
+INSERT OR IGNORE INTO Improvement_YieldChanges (ImprovementType, YieldType, YieldChange) VALUES
+    ('IMPROVEMENT_ROCK_HEWN_CHURCH', 'YIELD_PRODUCTION', 0);
+INSERT INTO Improvement_BonusYieldChanges (Id, ImprovementType, YieldType, BonusYieldChange, PrereqTech, PrereqCivic) VALUES
+    (3031, 'IMPROVEMENT_ROCK_HEWN_CHURCH', 'YIELD_PRODUCTION', 1, NULL, 'CIVIC_REFORMED_CHURCH');
+
 -- Delete Base Trait
 DELETE FROM TraitModifiers WHERE TraitType='TRAIT_CIVILIZATION_ETHIOPIA' AND ModifierId='TRAIT_FAITH_RESOURCES';
 
