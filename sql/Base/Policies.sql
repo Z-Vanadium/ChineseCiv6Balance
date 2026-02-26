@@ -356,3 +356,6 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 
 INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
     ('CCB_IDEOLOGY_WAR_OF_RELIGION_COMBAT_STRENGTH_MODIFIER', 'Preview', 'LOC_PROMOTION_COMBAT_WARS_OF_RELIGION');
+
+-- 2026/01/26 Sports Media: Now give +1 amenity in every cities (from +1 from Stadium)
+UPDATE Modifiers SET SubjectRequirementSetId=NULL WHERE ModifierId='SPORTSMEDIA_STADIUMENTERTAINMENT';
