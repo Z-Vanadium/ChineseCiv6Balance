@@ -216,11 +216,12 @@ INSERT INTO GovernorPromotionModifiers (GovernorPromotionType, ModifierId)
     VALUES ('BBG_AGRICULTURE_PROMOTION', 'BBG_LIANG_AGRICULTURE_FOOD');
 
 -- LII Park & Recreation : The City Park unique improvement can be built in the city. Yields 2 Appeal, 3 science, 2 culture, +1 amenity and +2 housing.  
+-- 2026/02/26 +3 culture (from +2)
 DELETE FROM GovernorPromotionPrereqs WHERE GovernorPromotionType='GOVERNOR_PROMOTION_PARKS_RECREATION';
 INSERT INTO GovernorPromotionPrereqs (GovernorPromotionType, PrereqGovernorPromotion) VALUES
     ('GOVERNOR_PROMOTION_PARKS_RECREATION', 'GOVERNOR_PROMOTION_REINFORCED_INFRASTRUCTURE');
 UPDATE GovernorPromotions SET Level=2, Column=0 WHERE GovernorPromotionType='GOVERNOR_PROMOTION_PARKS_RECREATION';      
-UPDATE Improvement_YieldChanges SET YieldChange=2 WHERE ImprovementType='IMPROVEMENT_CITY_PARK' AND YieldType='YIELD_CULTURE';
+UPDATE Improvement_YieldChanges SET YieldChange=3 WHERE ImprovementType='IMPROVEMENT_CITY_PARK' AND YieldType='YIELD_CULTURE';
 INSERT INTO Improvement_YieldChanges (ImprovementType, YieldType, YieldChange) VALUES
     ('IMPROVEMENT_CITY_PARK', 'YIELD_SCIENCE', 3);
 UPDATE Modifiers SET SubjectRequirementSetId=NULL WHERE ModifierId='CITY_PARK_WATER_AMENITY';
