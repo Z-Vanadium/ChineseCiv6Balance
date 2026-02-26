@@ -287,7 +287,7 @@
 		</Row>
 		<!-- = leader ability (Qin Shi Huang, Unifier) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_QIN_ALT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>近战单位获得“蛮族归顺”操作。此操作能将蛮族单位转化为你的单位，但会移除近战单位。[NEWLINE][NEWLINE]军营获得+1 [ICON_GREATWRITER] 大作家点数，建造军营建筑时+50% [Icon_Production] 生产力，兵营获得2个 [ICON_GreatWork_WRITING] 著作槽位。[ICON_GreatWork_WRITING] 著作+1 [ICON_FOOD] 食物。[NEWLINE][NEWLINE]招募 [ICON_GreatGeneral] 大将军或 [ICON_GREATWRITER] 大作家时获得一项随机 [ICON_TechBoosted] 尤里卡和 [ICON_CivicBoosted] 鼓舞（如可用）。若相邻长城，长城获得1点 [ICON_PRODUCTION] 生产力。</Text>
+			<Text>近战单位获得“蛮族归顺”操作。此操作能将蛮族单位转化为你的单位，但会移除近战单位。[NEWLINE][NEWLINE]军营获得+1 [ICON_GREATWRITER] 大作家点数，建造军营建筑时+50% [Icon_Production] 生产力，兵营和马厩获得2个 [ICON_GreatWork_WRITING] 著作槽位。[ICON_GreatWork_WRITING] 著作+1 [ICON_FOOD] 食物。[NEWLINE][NEWLINE]招募 [ICON_GreatGeneral] 大将军或 [ICON_GREATWRITER] 大作家时获得一项随机 [ICON_TechBoosted] 尤里卡和 [ICON_CivicBoosted] 鼓舞（如可用）。若相邻长城，长城获得1点 [ICON_PRODUCTION] 生产力。</Text>
 		</Replace>
 		<!-- = leader ability (Yongle) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_YONGLE_XP_DESCRIPTION" Language="zh_Hans_CN">
@@ -435,7 +435,7 @@
 		</Replace>
 		<!-- = leader ability (Egypt, Cleopatra Egyptian) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MEDITERRANEAN_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>您通往其他文明的 [ICON_TradeRoute] 贸易路线为埃及+5 [ICON_Gold] 金币。其他文明通往埃及的 [ICON_TradeRoute] 贸易路线为其+1 [ICON_Food] 食物、为埃及+2 [ICON_Gold] 金币。与盟友进行贸易可获得双倍同盟点数。[NEWLINE][NEWLINE]城市若建立在河流旁，建造商业中心和剧院广场时+15% [ICON_Production] 生产力。</Text>
+			<Text>您通往其他文明的 [ICON_TradeRoute] 贸易路线为埃及+6 [ICON_Gold] 金币。其他文明通往埃及的 [ICON_TradeRoute] 贸易路线为其+1 [ICON_Food] 食物、为埃及+2 [ICON_Gold] 金币。与盟友进行贸易可获得双倍同盟点数。[NEWLINE][NEWLINE]城市若建立在河流旁，建造商业中心和剧院广场时+15% [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_DISTRICT_RIVER_CULTURE" Language="zh_Hans_CN">
 			<Text> +1 [ICON_CULTURE] 文化值，来自相邻河流。</Text>
@@ -472,10 +472,10 @@
 		</Replace>
 		<!-- = unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“技艺”市政解锁建造者建造埃及特色改良“狮身人面像”的能力。[NEWLINE][NEWLINE]提供+2 [ICON_Faith] 信仰值，+1 [ICON_Culture] 文化值，向周围单元格提供+1魅力。[NEWLINE][NEWLINE]与奇观相邻则额外+1 [ICON_Faith] 信仰值和+1 [ICON_CULTURE] 文化值。若在沙漠或沙漠丘陵（非泛滥平原）上建造则提供+1 [ICON_FOOD] 食物和+1 [ICON_PRODUCTION] 生产力；在泛滥平原上建造则+1 [ICON_CULTURE] 文化值。“外交部门”市政后+1 [ICON_CULTURE] 文化值。研究“飞行”科技则提供 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]不能建在雪地，雪地丘陵或另一个狮身人面像旁。</Text>
+			<Text>“技艺”市政解锁建造者建造埃及特色改良“狮身人面像”的能力。[NEWLINE][NEWLINE]提供 +2 [ICON_Faith] 信仰值，+1 [ICON_Culture] 文化值，向周围单元格提供+1魅力。[NEWLINE][NEWLINE]与奇观相邻则额外 +1 [ICON_Faith] 信仰值和 +1 [ICON_CULTURE] 文化值。[NEWLINE]若在平原或平原丘陵上建造则提供 +1 [ICON_FOOD]食物；若在草原或草原丘陵上建造则提供 +1 [ICON_PRODUCTION]生产力。[NEWLINE]若在沙漠或沙漠丘陵（非泛滥平原）上建造则提供 +1 [ICON_FOOD] 食物和 +1 [ICON_PRODUCTION] 生产力；在泛滥平原上建造则 +1 [ICON_CULTURE] 文化值。[NEWLINE]“外交部门”市政后 +1 [ICON_CULTURE] 文化值。[NEWLINE]研究“飞行”科技则提供 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]不能建在雪地，雪地丘陵或另一个狮身人面像旁。</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_SPHINX_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“技艺”市政解锁建造者建造埃及特色改良“狮身人面像”的能力。[NEWLINE][NEWLINE]提供+2 [ICON_Faith] 信仰值，+1 [ICON_Culture] 文化值，向周围单元格提供+2魅力。[NEWLINE][NEWLINE]与奇观相邻则额外+1 [ICON_Faith] 信仰值和+1 [ICON_CULTURE] 文化值。若在沙漠或沙漠丘陵（非泛滥平原）上建造则提供+1 [ICON_FOOD] 食物和+1 [ICON_PRODUCTION] 生产力；在泛滥平原上建造则+1 [ICON_CULTURE] 文化值。“外交部门”市政后+1 [ICON_CULTURE] 文化值。研究“飞行”科技则提供 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]不能建在雪地，雪地丘陵或另一个狮身人面像旁。</Text>
+			<Text>{LOC_IMPROVEMENT_SPHINX_DESCRIPTION}</Text>
 		</Replace>
 
 		<!-- == ELEANOR (LEADER) == -->
@@ -558,10 +558,10 @@
 		</Replace>
 		<!-- = unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_ROCK_HEWN_CHURCH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“戏剧与诗歌”市政解锁建造者建造埃塞俄比亚特色改良“独石教堂”的能力。[NEWLINE][NEWLINE]每与1个山脉和丘陵单元格相邻，便+1 [ICON_Faith] 信仰值。为相邻单元格+1魅力。[NEWLINE][NEWLINE]研究完“飞行”后，可从 [ICON_FAITH] 信仰值获得 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]只能建在丘陵上，不能与另一座独石教堂相邻。</Text>
+			<Text>“戏剧与诗歌”市政解锁建造者建造埃塞俄比亚特色改良“独石教堂”的能力。[NEWLINE][NEWLINE]每与 1 个山脉和丘陵单元格相邻，便 +1 [ICON_Faith] 信仰值。[NEWLINE]为相邻单元格 +1 魅力。[NEWLINE]市政“归正会”后，提供 +1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]研究完“飞行”后，可从 [ICON_FAITH] 信仰值获得 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]只能建在丘陵上，不能与另一座独石教堂相邻。</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_ROCK_HEWN_CHURCH_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“戏剧与诗歌”市政解锁建造者建造埃塞俄比亚特色改良“独石教堂”的能力。[NEWLINE][NEWLINE]每与1个山脉和丘陵单元格相邻，便+1 [ICON_Faith] 信仰值。为相邻单元格+1魅力。[NEWLINE][NEWLINE]研究完“飞行”后，可从 [ICON_FAITH] 信仰值获得 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]只能建在丘陵或火山土上，不能与另一座独石教堂相邻。只能被自然灾害掠夺（无法被摧毁）。</Text>
+			<Text>{LOC_IMPROVEMENT_ROCK_HEWN_CHURCH_DESCRIPTION}</Text>
 		</Replace>
 
 		<!-- == FRANCE == -->
@@ -575,7 +575,7 @@
 		</Replace>
 		<!-- = leader ability (Magnificence) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MAGNIFICENCES_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“技艺”市政后，改良资源额外+1 [ICON_CULTURE] 文化值，与剧院广场区域相邻的改良资源额外+1 [ICON_CULTURE] 文化值。幸福度为快乐的城市额外+5% [ICON_CULTURE] 文化值。快乐的城市中每个剧院+1 [ICON_GreatWriter] 大作家点数；欣喜若狂的城市获得额外+1 [ICON_GreatArtist] 大艺术家点数。“中世纪集市”市政后，可在拥有剧院广场区域的任意城市中开展“宫廷盛会”项目。</Text>
+			<Text>“技艺”市政后，改良资源额外 +1 [ICON_CULTURE] 文化值，与剧院广场区域相邻的改良资源额外 +1 [ICON_CULTURE] 文化值。“中世纪集市”市政后，可在拥有剧院广场区域的任意城市中开展“宫廷盛会”项目。[NEWLINE][NEWLINE]快乐的城市额外 +5% [ICON_CULTURE] 文化值，若拥有剧院广场，则 +1 [ICON_GreatWriter] 大作家点数；[NEWLINE]欣喜若狂的城市获得双倍上述 [ICON_CULTURE] 文化值加成，若拥有剧院广场，则 +1 [ICON_GreatArtist] 大艺术家点数。[NEWLINE]极乐的城市获得三倍上述 [ICON_CULTURE] 文化值加成，若拥有剧院广场，则 +1 [ICON_GREATMUSICIAN] 大音乐家点数。</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_FRENCH_GARDE_IMPERIALE_DESCRIPTION" Language="zh_Hans_CN">
@@ -603,7 +603,7 @@
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_AMBIORIX_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>解锁“铸铜术”科技后，生产出一个军事单位时，您的文明将获得等同于该单位成本25%的 [ICON_Culture] 文化值。每与1个军事单位相邻，近战和抗骑兵单位便+1 [ICON_Strength] 战斗力。</Text>
+			<Text>矿山对相邻无主单元格释放文化炸弹。每与 1 个军事单位相邻，近战和抗骑兵单位便 +1 [ICON_Strength] 战斗力。[NEWLINE][NEWLINE]解锁“铸铜术”科技后，生产出一个军事单位时，您的文明将获得等同于该单位成本 25% 的 [ICON_Culture] 文化值。</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>每个相邻的友方陆地战斗单位提供+1 [ICON_Strength] 战斗力（厄勃隆尼斯之王）</Text>
@@ -996,7 +996,7 @@
 		<!-- == MALI == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MALI_GOLD_DESERT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+2 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。所有城市-10% [ICON_PRODUCTION] 生产力[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源、T-1海洋。</Text>
+			<Text>“对外贸易”市政后，首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+2 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。所有城市-5% [ICON_PRODUCTION] 生产力[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源、T-1海洋。</Text>
 		</Replace>
 		<!-- = leader ability (Mansa Musa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SAHEL_MERCHANTS_DESCRIPTION" Language="zh_Hans_CN">
@@ -1089,7 +1089,7 @@
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MUTAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>[ICON_Capital] 首都6个单元格范围内的非首都城市所有产出+5%。其他非首都城市所有产出-10%。[ICON_Capital] 首都6单元格范围内的单位+3 [ICON_Strength] 战斗力。[NEWLINE]游戏开始便激活“灌溉”科技 [ICON_TechBoosted] 尤里卡。</Text>
+			<Text>[ICON_Capital] 首都 6 个单元格范围内的非首都城市所有产出 +5%。[ICON_Capital] 首都 6 单元格范围内的单位 +3 [ICON_Strength] 战斗力。游戏开始便激活“灌溉”科技 [ICON_TechBoosted] 尤里卡。</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_MUTAL_COMBAT_STRENGTH_NEAR_CAPITAL_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>[ICON_Capital] 首都6个单元格范围内的单位+3 [ICON_Strength] 战斗力</Text>
@@ -1356,7 +1356,7 @@
 		<!-- == SCOTLAND == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_SCOTTISH_ENLIGHTENMENT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>幸福度为快乐的城市额外+5% [ICON_SCIENCE] 科技值、+5% [ICON_PRODUCTION] 生产力。快乐的城市中每个学院+1 [ICON_GreatScientist] 大科学家点数、每个工业区+1 [ICON_GreatEngineer] 大工程师点数。欣喜若狂的城市获得的加成将加倍。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：无。</Text>
+			<Text>快乐的城市额外 +5% [ICON_SCIENCE] 科技值、+5% [ICON_PRODUCTION] 生产力；若拥有学院，则 +1 [ICON_GreatScientist] 大科学家点数；若拥有工业区，则 +1 [ICON_GreatEngineer] 大工程师点数。[NEWLINE]欣喜若狂的城市获得双倍上述加成；极乐的城市获得三倍上述加成。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：无。</Text>
 		</Replace>
 		<!-- leader ability-->
 		<Replace Tag="LOC_TRAIT_LEADER_BANNOCKBURN_DESCRIPTION" Language="zh_Hans_CN">
@@ -1449,7 +1449,7 @@
 			<Text>超越万王</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>根据你最高的同盟等级，获得+1，+2或者+3 [ICON_STRENGTH] 战斗力。[NEWLINE][NEWLINE]与盟友和同一个敌人作战时，若盟友和己方单位处于5单元格内，分享战斗经验和掠夺收益。与同一个敌人作战时盟友双方获得同盟点数。[NEWLINE][NEWLINE]占领 [ICON_BARBARIAN] 蛮族哨站时除正常的 [ICON_Gold] 金币外，还会获得部落村庄奖励。征用城邦单位费用降低一半。</Text>
+			<Text>根据你最高的同盟等级，获得 +1/+2/+3 [ICON_STRENGTH] 战斗力和 +2/+4/+6 [ICON_InfluencePerTurn] 影响力点数。征用城邦单位费用降低 -50%。[NEWLINE][NEWLINE]与盟友和同一个敌人作战时，若盟友和己方单位处于5单元格内，分享战斗经验和掠夺收益。与同一个敌人作战时盟友双方获得同盟点数。[NEWLINE]占领 [ICON_BARBARIAN] 蛮族哨站时除正常的 [ICON_Gold] 金币外，还会获得部落村庄奖励。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>根据你最高的同盟等级，获得+1，+2或者+3 [ICON_STRENGTH] 战斗力。[NEWLINE][NEWLINE]与盟友和同一个敌人作战时，若盟友和己方单位处于5单元格内，分享战斗经验和掠夺收益。与同一个敌人作战时盟友双方获得同盟点数。[NEWLINE][NEWLINE]占领 [ICON_BARBARIAN] 蛮族哨站时除正常的 [ICON_Gold] 金币外，还会获得部落村庄奖励。征用城邦单位费用降低一半。</Text>
@@ -1793,7 +1793,7 @@
 			<Text>为该城市的火山土与泛滥平原+1 [ICON_PRODUCTION] 生产力。该城市的改良设施、建筑和区域将免疫自然灾害影响。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_PARKS_RECREATION_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>解锁“游戏和娱乐”市政后可以在平地上建造市立公园。每个城市仅限建造一座。+3 [ICON_SCIENCE] 科技值、+2 [ICON_Culture] 文化值、+2 [ICON_HOUSING] 住房、+1 [ICON_Amenities] 宜居度和+2魅力。</Text>
+			<Text>解锁“游戏和娱乐”市政后可以在平地上建造市立公园。每个城市仅限建造一座。+3 [ICON_SCIENCE] 科技值、+3 [ICON_Culture] 文化值、+2 [ICON_HOUSING] 住房、+1 [ICON_Amenities] 宜居度和 +2 魅力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_ZONING_COMMISSIONER_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>城市中所有的露天资源（加成、战略、奢侈品）提供额外+1 [ICON_PRODUCTION] 生产力。</Text>
@@ -1959,7 +1959,7 @@
 			<Text>+{1_num} [ICON_Faith] 信仰值，来自相邻的冻土平原 {1_Num : plural 1?tile; other?tiles;}。</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_GODDESS_OF_FIRE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>地热裂缝和火山土提供+3 [ICON_FAITH] 信仰值。</Text>
+			<Text>火山土提供 +1 [ICON_FAITH] 信仰值。相邻火山的单元格提供 +2 [ICON_FAITH] 信仰值。地热裂缝提供 +3 [ICON_FAITH] 信仰值</Text>
 		</Replace>
 		<Replace Tag="LOC_BELIEF_INITIATION_RITES_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>在首都 [ICON_Capital] 中获得一个勇士。生产非平民单位时获得相当于该单位生产力25%的 [ICON_FAITH] 信仰值。</Text>
@@ -2538,22 +2538,22 @@
 		</Replace>
 		<!-- = Armagh = -->
 		<Replace Tag="LOC_CIVILIZATION_ARMAGH_BONUS" Language="zh_Hans_CN">
-			<Text>建造者可以建造修道院改良设施。[NEWLINE][NEWLINE]修道院提供+3 [ICON_Faith] 信仰值。每2个相邻的区域使其+1 [ICON_FAITH] 信仰值。此单元格上暂未发动攻击的友方宗教单位生命值+15。[NEWLINE][NEWLINE]无法建在另一座修道院旁。</Text>
+			<Text>建造者可以建造修道院改良设施。[NEWLINE][NEWLINE]修道院提供+2 [ICON_Faith] 信仰值。每2个相邻的区域使其+1 [ICON_FAITH] 信仰值。此单元格上暂未发动攻击的友方宗教单位生命值+15。[NEWLINE][NEWLINE]无法建在另一座修道院旁。</Text>
 		</Replace>
 		<Replace Tag="LOC_LEADER_TRAIT_ARMAGH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建造者可以建造修道院改良设施。[NEWLINE][NEWLINE]修道院提供+3 [ICON_Faith] 信仰值。每2个相邻的区域使其+1 [ICON_FAITH] 信仰值。此单元格上暂未发动攻击的友方宗教单位生命值+15。[NEWLINE][NEWLINE]无法建在另一座修道院旁。</Text>
+			<Text>建造者可以建造修道院改良设施。[NEWLINE][NEWLINE]修道院提供+2 [ICON_Faith] 信仰值。每2个相邻的区域使其+1 [ICON_FAITH] 信仰值。此单元格上暂未发动攻击的友方宗教单位生命值+15。[NEWLINE][NEWLINE]无法建在另一座修道院旁。</Text>
 		</Replace>
 		<Replace Tag="LOC_CIVILIZATION_ARMAGH_BONUS_XP2" Language="zh_Hans_CN">
-			<Text>建造者现在能够建造修道院改良设施。[NEWLINE][NEWLINE]修道院提供+1 [ICON_FOOD] 食物、+3 [ICON_Faith] 信仰值、+1 [ICON_HOUSING] 住房。此单元格上的友方宗教单位生命值恢复+15（前提是其当前回合未发动攻击）。[NEWLINE][NEWLINE]每2个相邻的区域使其+1 [ICON_FAITH] 信仰值，“归正会”市政后提升至每1个相邻的区域使其+1 [ICON_FAITH] 信仰值。“殖民主义”市政后额外+1 [ICON_HOUSING] 住房。[NEWLINE][NEWLINE]无法建在另一座修道院旁。</Text>
+			<Text>建造者现在能够建造修道院改良设施。[NEWLINE][NEWLINE]修道院提供+1 [ICON_FOOD] 食物、+2 [ICON_Faith] 信仰值、+1 [ICON_HOUSING] 住房。此单元格上的友方宗教单位生命值恢复+15（前提是其当前回合未发动攻击）。[NEWLINE][NEWLINE]每2个相邻的区域使其+1 [ICON_FAITH] 信仰值，“归正会”市政后提升至每1个相邻的区域使其+1 [ICON_FAITH] 信仰值。“殖民主义”市政后额外+1 [ICON_HOUSING] 住房。[NEWLINE][NEWLINE]无法建在另一座修道院旁。</Text>
 		</Replace>
 		<Replace Tag="LOC_LEADER_TRAIT_ARMAGH_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建造者现在能够建造修道院改良设施。[NEWLINE][NEWLINE]修道院提供+1 [ICON_FOOD] 食物、+3 [ICON_Faith] 信仰值、+1 [ICON_HOUSING] 住房。此单元格上的友方宗教单位生命值恢复+15（前提是其当前回合未发动攻击）。[NEWLINE][NEWLINE]每2个相邻的区域使其+1 [ICON_FAITH] 信仰值，“归正会”市政后提升至每1个相邻的区域使其+1 [ICON_FAITH] 信仰值。“殖民主义”市政后额外+1 [ICON_HOUSING] 住房。[NEWLINE][NEWLINE]无法建在另一座修道院旁。</Text>
+			<Text>建造者现在能够建造修道院改良设施。[NEWLINE][NEWLINE]修道院提供+1 [ICON_FOOD] 食物、+2 [ICON_Faith] 信仰值、+1 [ICON_HOUSING] 住房。此单元格上的友方宗教单位生命值恢复+15（前提是其当前回合未发动攻击）。[NEWLINE][NEWLINE]每2个相邻的区域使其+1 [ICON_FAITH] 信仰值，“归正会”市政后提升至每1个相邻的区域使其+1 [ICON_FAITH] 信仰值。“殖民主义”市政后额外+1 [ICON_HOUSING] 住房。[NEWLINE][NEWLINE]无法建在另一座修道院旁。</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_MONASTERY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>解锁建造者修建修道院的能力。[NEWLINE][NEWLINE]+3 [ICON_Faith] 信仰值。每2个相邻的区域使其+1 [ICON_FAITH] 信仰值。此单元格上的友方宗教单位生命值+15（前提是当前回合未进行攻击）。[NEWLINE][NEWLINE]研究完“飞行”后，可从 [ICON_FAITH] 信仰值获得 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]无法修建在另一座修道院旁。</Text>
+			<Text>解锁建造者修建修道院的能力。[NEWLINE][NEWLINE]+2 [ICON_Faith] 信仰值。每2个相邻的区域使其+1 [ICON_FAITH] 信仰值。此单元格上的友方宗教单位生命值+15（前提是当前回合未进行攻击）。[NEWLINE][NEWLINE]研究完“飞行”后，可从 [ICON_FAITH] 信仰值获得 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]无法修建在另一座修道院旁。</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_MONASTERY_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>解锁建造者修建修道院的能力。[NEWLINE][NEWLINE]+1 [ICON_FOOD] 食物、+3 [ICON_Faith] 信仰值、+1 [ICON_HOUSING] 住房。此单元格上的友方宗教单位生命值+15（前提是当前回合未进行攻击）。[NEWLINE][NEWLINE]每2个相邻的区域使其+1 [ICON_FAITH] 信仰值，“归正会”市政后提升至每1个相邻的区域使其+1 [ICON_FAITH] 信仰值。“殖民主义”市政后额外+1 [ICON_HOUSING] 住房。[NEWLINE][NEWLINE]研究完“飞行”后，可从 [ICON_FAITH] 信仰值获得 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]无法修建在另一座修道院旁。</Text>
+			<Text>解锁建造者修建修道院的能力。[NEWLINE][NEWLINE]+1 [ICON_FOOD] 食物、+2 [ICON_Faith] 信仰值、+1 [ICON_HOUSING] 住房。此单元格上的友方宗教单位生命值+15（前提是当前回合未进行攻击）。[NEWLINE][NEWLINE]每2个相邻的区域使其+1 [ICON_FAITH] 信仰值，“归正会”市政后提升至每1个相邻的区域使其+1 [ICON_FAITH] 信仰值。“殖民主义”市政后额外+1 [ICON_HOUSING] 住房。[NEWLINE][NEWLINE]研究完“飞行”后，可从 [ICON_FAITH] 信仰值获得 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]无法修建在另一座修道院旁。</Text>
 		</Replace>
 		<!-- = Auckland = -->
 		<Replace Tag="LOC_CIVILIZATION_AUCKLAND_BONUS" Language="zh_Hans_CN">
@@ -2613,7 +2613,7 @@
 		</Replace>
 		<!-- = Jerusalem = -->
 		<Replace Tag="LOC_CIVILIZATION_JERUSALEM_BONUS_XP1" Language="zh_Hans_CN">
-			<Text>您拥有圣地的城市将释放压力，效果与圣城相同（对10个单元格范围内的所有城市施加4倍宗教压力）。拥有圣地的城市+1 [ICON_GOLD] 金币。</Text>
+			<Text>您拥有圣地的城市将释放压力，效果与圣城相同（对10个单元格范围内的所有城市施加4倍宗教压力）。圣地和每个圣地内建筑为城市提供 +1 [ICON_GOLD] 金币。</Text>
 		</Replace>
 		<Replace Tag="LOC_LEADER_TRAIT_JERUSALEM_DESCRIPTION_EXPANSION" Language="zh_Hans_CN">
 			<Text>您拥有圣地的城市将释放压力，效果与圣城相同（对10个单元格范围内的所有城市施加4倍宗教压力）。拥有圣地的城市+1 [ICON_GOLD] 金币。</Text>
@@ -3001,7 +3001,7 @@
 			<Text>与每2个农场改良设施相邻时，农场提供的 [ICON_Food] 食物+1。</Text>
 		</Replace>
 		<Replace Tag="LOC_CIVIC_IDEOLOGY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>可额外招募一名间谍。开放所有城邦的边境。</Text>
+			<Text>可额外招募一名间谍。开放所有城邦的边境。[NEWLINE]如果解锁市政“归正会”，非宗教单位与信奉其他宗教的文明进行战争时，+4 [ICON_Strength] 战斗力。</Text>
 		</Replace>
 		<Replace Tag="LOC_CIVIC_MEDIEVAL_FAIRES_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>种植园改良设施提供的 [ICON_Food] 食物+1。</Text>
@@ -3239,9 +3239,15 @@
 			<Text>通往城邦的 [ICON_TradeRoute] 贸易路线额外+1 [ICON_Food] 食物、+1 [ICON_PRODUCTION] 生产力、+2 [ICON_Science] 科技值、+2 [ICON_Culture] 文化值、+2 [ICON_Faith] 信仰值、+2 [ICON_Gold] 金币。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_ARMS_RACE_NAME" Language="zh_Hans_CN">
-			<Text>军备竞赛</Text>
+			<Text>军事指挥中心</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_ARMS_RACE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>建造核装置时 +25% [ICON_Production] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_ARMS_RACE_T_NAME" Language="zh_Hans_CN">
+			<Text>军备竞赛</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_ARMS_RACE_T_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>建造军营、港口、航空港和这些区域中的建筑时+30% [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_BATTLEFIELD_MEDICINE_NAME" Language="zh_Hans_CN">
@@ -3249,6 +3255,15 @@
 		</Replace>
 		<Replace Tag="LOC_POLICY_BATTLEFIELD_MEDICINE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>陆地单位在友方领土外生命值回复量+10。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_MILITARY_RESEARCH_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
+		<Text>兵工厂、造船厂和中世纪城墙墙提供的 [ICON_Science] 科技值+1；军事学院、码头、文艺复兴城墙和机库提供的 [ICON_Science] 科技值+2。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_SPORTS_MEDIA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+100%剧院广场区相邻加成，所有城市+1 [ICON_Amenities] 宜居度。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_DEFENSE_OF_MOTHERLAND_DESCRIPTION_XP2" Language="zh_Hans_CN">
+			<Text>生产现代、原子时代和信息时代支援单位时+100% [ICON_Production] 生产力。</Text>
 		</Replace>
 
 
@@ -3368,8 +3383,36 @@
 
 
 		<!-- === WORLD CONGRESS === -->
+		<!-- == Border Control Treaty == -->		
+		<!-- = Vote A = -->
+		<Replace Tag="LOC_WORLD_CONGRESS_DISTRICTS_CULTURE_BOMB_DESC" Language="zh_Hans_CN">
+			<Text>该文明的单元格购买费用降低 50%。</Text>
+		</Replace>
+		<!-- = Vote B = -->
+		<Replace Tag="LOC_WORLD_CONGRESS_NO_CULTURE_BORDER_GROWTH_DESC" Language="zh_Hans_CN">
+			<Text>该文明的边界不会因为 [ICON_CULTURE] 文化值自然扩张。</Text>
+		</Replace>
+		<!-- == Heritage Organization == -->
+		<!-- = Vote A = -->			
+		<Replace Tag="LOC_WORLD_CONGRESS_BUFF_WORK_TOURISM_DESC" Language="zh_Hans_CN">
+			<Text>该类型的巨作提供的 [ICON_Tourism] 旅游业绩 +100%。</Text>
+		</Replace>
+		<!-- = Vote B = -->	
+		<Replace Tag="LOC_WORLD_CONGRESS_NO_WORK_TOURISM_DESC" Language="zh_Hans_CN">
+			<Text>该类型的巨作提供的 [ICON_Tourism] 旅游业绩 -50%。</Text>
+		</Replace>
+		<!-- == Urban Development == -->
+		<!-- = Vote A = -->			
+		<Replace Tag="LOC_WORLD_CONGRESS_DISTRICT_BUILDING_PRODUCTION_DESC" Language="zh_Hans_CN">
+			<Text>建造该区域内建筑时 +100% [ICON_Production] 生产力。</Text>
+		</Replace>
+		<!-- = Vote B = -->	
+		<Replace Tag="LOC_WORLD_CONGRESS_NO_DISTRICT_BUILDING_DESC" Language="zh_Hans_CN">
+			<Text>建造该区域内建筑时 -50% [ICON_Production] 生产力。</Text>
+		</Replace>
+
 		<Replace Tag="LOC_WORLD_CONGRESS_IMPROVE_TRADE_WTH_PLAYER_DESC" Language="zh_Hans_CN">
-			<Text>通往所选国家的 [ICON_TradeRoute] 贸易路线可为其发起者提供+4 [ICON_Gold] 金币。所选国家获得+1 [ICON_TradeRoute] 贸易路线容量。</Text>
+			<Text>通往所选国家的 [ICON_TradeRoute] 贸易路线可为其发起者提供 +4 [ICON_Gold] 金币，为其接收者提供 +2 [ICON_Gold] 金币。[NEWLINE]所选国家获得 +1 [ICON_TradeRoute] 贸易路线容量。</Text>
 		</Replace>
 		<Replace Tag="LOC_WORLD_CONGRESS_BAN_TRADE_WITH_PLAYER_DESC" Language="zh_Hans_CN">
 			<Text>通往或源自所选文明的国际 [ICON_TradeRoute] 贸易路线-4金币。（可变为负值）</Text>
@@ -3382,9 +3425,6 @@
 		</Replace>
 		<Replace Tag="LOC_WORLD_CONGRESS_BUFF_PRODUCTION_YIELD_DESC" Language="zh_Hans_CN">
 			<Text>下次世界议会召开前，使用此类型货币建造或购买军事单位时花费-25%。</Text>
-		</Replace>
-		<Replace Tag="LOC_WORLD_CONGRESS_DISTRICTS_CULTURE_BOMB_DESC" Language="zh_Hans_CN">
-			<Text>该文明的单元格购买费用降低50%。</Text>
 		</Replace>
 		<Replace Tag="LOC_WORLD_CONGRESS_MILITARY_ADVISORY_BUFF_DESC" Language="zh_Hans_CN">
 			<Text>拥有所选升级类型的单位+3战斗力。</Text>
@@ -3757,6 +3797,11 @@
 		</Replace>
 		<Replace Tag="LOC_GAME_REALISM_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>设置自然灾害强度。在0（无自然灾害）到4（频率最高、强度最高）之间进行选择。注意：如设为3和4，严重的火山喷发可能会对2个格位外的单元格造成破坏。</Text>
+		</Replace>
+		
+		<!-- euphoric -->
+		<Replace Tag="LOC_HAPPINESS_UNHAPPY_NAME" Language="zh_Hans_CN">
+			<Text>极乐</Text>
 		</Replace>
 
 
@@ -4602,7 +4647,7 @@
 			<Text>众神诞生之地</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LIME_TEO_MEN_BECOME_GODS_DESC" Language="zh_Hans_CN">
-			<Text>国际 [ICON_TradeRoute] 贸易路线会根据所宗主城邦类型获得额外产出：[NEWLINE]宗主宗教城邦则获得+1 [ICON_FOOD] 食物。[NEWLINE]宗主军事或工业城邦则获得+1 [ICON_PRODUCTION] 生产力。[NEWLINE]宗主贸易城邦则获得+3 [ICON_GOLD] 金币。[NEWLINE]宗主科技城邦则获得+1 [ICON_SCIENCE] 科技值。[NEWLINE]宗主文化城邦则获得+1 [ICON_CULTURE] 文化值。[NEWLINE]若宗主两个同样类型城邦，则额外产出增至三倍。</Text>
+			<Text>[ICON_TradeRoute] 贸易路线会根据所宗主城邦类型获得额外产出：[NEWLINE]宗主宗教城邦则获得 +1 [ICON_FOOD] 食物。[NEWLINE]宗主军事或工业城邦则获得 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]宗主贸易城邦则获得 +3 [ICON_GOLD] 金币。[NEWLINE]宗主科技城邦则获得 +1 [ICON_SCIENCE] 科技值。[NEWLINE]宗主文化城邦则获得 +1 [ICON_CULTURE] 文化值。[NEWLINE]若宗主两个同样类型城邦，则额外产出增至三倍。</Text>
 		</Replace>
 		<!-- = Leader ability -->
 		<Replace Tag="LOC_TRAIT_LEADER_LIME_TEO_OWL_FIRE_IS_BORN_NAME" Language="zh_Hans_CN">
@@ -4770,7 +4815,7 @@
 			<Text>极海鲸狩</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>猎人小屋可为相邻的单元格提供额外产出：[NEWLINE]冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍）；[NEWLINE]营地和渔船+1 [ICON_FOOD] 食物和+1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]玩家通过科技或文化每进入一个新时代，在 [ICON_Capital] 首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。特殊：更深的冻土。</Text>
+			<Text>猎人小屋可为相邻的单元格提供额外产出：[NEWLINE]冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍）；[NEWLINE]营地和渔船+1 [ICON_FOOD] 食物，“制图学”后 +1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]玩家通过科技或文化每进入一个新时代，在 [ICON_Capital] 首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。特殊：更深的冻土。</Text>
 		</Replace>
 		<!-- = Leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_LIME_THULE_DAVE_HEART_NOT_STONE_NAME" Language="zh_Hans_CN">
@@ -4931,7 +4976,22 @@
 			<Text>投石重步兵</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_SUK_TIBET_RTA_PA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>吐蕃特色中世纪近战单位，替代披甲战士。可以进行 [ICON_Range] 射程为1的远程攻击。从冻土或雪地单元格开始回合时，+1 [ICON_Movement] 移动力。</Text>
+			<Text>吐蕃特色中世纪近战单位，替代披甲战士。可以进行 [ICON_Range] 射程为1的远程攻击。相邻山脉单元格时，+1 [ICON_Movement] 移动力、+3 [ICON_STRENGTH] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ABILITY_RTA_PA_MOVEMENT_NAME" Language="zh_Hans_CN">
+			<Text>相邻山脉单元格时，+1 [ICON_Movement] 移动力。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ABILITY_RTA_PA_MOVEMENT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_CCB_ABILITY_RTA_PA_MOVEMENT_NAME}</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ABILITY_RTA_PA_CS_NAME" Language="zh_Hans_CN">
+			<Text>相邻山脉单元格时，+3 [ICON_STRENGTH] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ABILITY_RTA_PA_CS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_CCB_ABILITY_RTA_PA_CS_NAME}</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_RTA_PA_CS" Language="zh_Hans_CN">
+			<Text>{LOC_CCB_ABILITY_RTA_PA_CS_NAME}</Text>
 		</Replace>
 		<!-- = Unique district -->
 		<Replace Tag="LOC_DISTRICT_SUK_DZONG_NAME" Language="zh_Hans_CN">
