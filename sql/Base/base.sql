@@ -142,6 +142,10 @@ INSERT INTO DistrictModifiers (DistrictType, ModifierId) VALUES
 -- lighthouse housing only on coastal city (exclude lake)
 UPDATE Modifiers SET SubjectRequirementSetId='PLOT_IS_COASTAL_LAND_REQUIREMENTS' WHERE ModifierId='LIGHTHOUSE_COASTAL_CITY_HOUSING';
 
+-- 2026/02/26 amphitheater: prod cost reduced to 60 (from 75), culture yield increased to +3 (from +2)
+UPDATE Buildings SET Cost='120' WHERE BuildingType='BUILDING_AMPHITHEATER';
+UPDATE Building_YieldChanges SET YieldChange='3' WHERE BuildingType='BUILDING_AMPHITHEATER' AND YieldType='YIELD_CULTURE';
+
 -- Citizen specialists give +1 main yield
 -- 2025/12/08 CH bonus to +6/+9
 UPDATE District_CitizenYieldChanges SET YieldChange=3 WHERE YieldType='YIELD_CULTURE' AND DistrictType='DISTRICT_ACROPOLIS';

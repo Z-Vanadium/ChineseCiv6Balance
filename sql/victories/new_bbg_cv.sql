@@ -43,8 +43,9 @@ UPDATE GreatWork_YieldChanges SET YieldChange=4 WHERE YieldType='YIELD_FAITH' AN
          GreatWorks.GreatWorkType = GreatWork_YieldChanges.GreatWorkType);
 
 -- Writing
+-- 2026/02/26 gw writing: culture yield reduced to +3 (from +4)
 UPDATE GreatWorks SET Tourism=2 WHERE GreatWorkObjectType='GREATWORKOBJECT_WRITING';
-UPDATE GreatWork_YieldChanges SET YieldChange=4 WHERE YieldType='YIELD_CULTURE' AND
+UPDATE GreatWork_YieldChanges SET YieldChange=3 WHERE YieldType='YIELD_CULTURE' AND
   EXISTS(SELECT * FROM GreatWorks WHERE GreatWorkObjectType='GREATWORKOBJECT_WRITING' AND
          GreatWorks.GreatWorkType = GreatWork_YieldChanges.GreatWorkType);
 
