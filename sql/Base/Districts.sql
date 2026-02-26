@@ -16,8 +16,11 @@ INSERT INTO District_TradeRouteYields(DistrictType, YieldType, YieldChangeAsOrig
 --    ('DISTRICT_PRESERVE', 'BBG_PRESERVE_PLANT_WOOD');
 
 --5.2.5 buff commercial hub +1 gold on hub close to city center / -1 gold on market 
+-- 2026/02/26 commercial hub: +2 gold from city center (from +1); +1 gold from river (from +2)
 INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentDistrict) VALUES
-    ('BBG_COMMERCIAL_HUB_CITY_CENTER', 'LOC_DISTRICT_CITY_CENTER_GOLD', 'YIELD_GOLD', 1, 'DISTRICT_CITY_CENTER');
+    ('BBG_COMMERCIAL_HUB_CITY_CENTER', 'LOC_DISTRICT_CITY_CENTER_GOLD', 'YIELD_GOLD', 2, 'DISTRICT_CITY_CENTER');
 INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
     ('DISTRICT_COMMERCIAL_HUB', 'BBG_COMMERCIAL_HUB_CITY_CENTER');
 UPDATE Building_YieldChanges SET YieldChange=2 WHERE BuildingType='BUILDING_MARKET' AND YieldType='YIELD_GOLD';
+
+UPDATE Adjacency_YieldChanges SET YieldChange='1' WHERE ID='River_Gold';
