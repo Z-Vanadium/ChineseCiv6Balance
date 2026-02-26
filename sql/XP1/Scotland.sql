@@ -74,6 +74,42 @@ INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
 -- INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 -- 	('BBG_UNIT_IS_SCOUT_REQSET', 'BBG_UNIT_IS_SCOUT');
 
+-- +5% science and production, +1 scientist gpp and engineer gpp for euphoric cities
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_SCOTTISH_ENLIGHTENMENT', 'CCB_SCIENCE_EUPHORIC');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_SCIENCE_EUPHORIC', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_SCIENCE_EUPHORIC', 'Amount', '15'), 
+('CCB_SCIENCE_EUPHORIC', 'HappinessType', 'HAPPINESS_UNHAPPY'), 
+('CCB_SCIENCE_EUPHORIC', 'YieldType', 'YIELD_SCIENCE');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_SCOTTISH_ENLIGHTENMENT', 'CCB_PRODUCTION_EUPHORIC');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_PRODUCTION_EUPHORIC', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_PRODUCTION_EUPHORIC', 'Amount', '15'), 
+('CCB_PRODUCTION_EUPHORIC', 'HappinessType', 'HAPPINESS_UNHAPPY'), 
+('CCB_PRODUCTION_EUPHORIC', 'YieldType', 'YIELD_PRODUCTION');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_SCOTTISH_ENLIGHTENMENT', 'CCB_SCIENTIST_EUPHORIC');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_SCIENTIST_EUPHORIC', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_GREAT_PERSON', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_CAMPUS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_SCIENTIST_EUPHORIC', 'Amount', '3'), 
+('CCB_SCIENTIST_EUPHORIC', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_SCIENTIST'), 
+('CCB_SCIENTIST_EUPHORIC', 'HappinessType', 'HAPPINESS_UNHAPPY');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_SCOTTISH_ENLIGHTENMENT', 'CCB_ENGINEER_EUPHORIC');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_ENGINEER_EUPHORIC', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_GREAT_PERSON', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_CAMPUS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_ENGINEER_EUPHORIC', 'Amount', '3'), 
+('CCB_ENGINEER_EUPHORIC', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ENGINEER'), 
+('CCB_ENGINEER_EUPHORIC', 'HappinessType', 'HAPPINESS_UNHAPPY');
 
 --============================
 -- Golf Course Related Changes
