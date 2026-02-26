@@ -359,3 +359,7 @@ INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 
 -- 2026/01/26 Sports Media: Now give +1 amenity in every cities (from +1 from Stadium)
 UPDATE Modifiers SET SubjectRequirementSetId=NULL WHERE ModifierId='SPORTSMEDIA_STADIUMENTERTAINMENT';
+
+-- 2026/02/26 Defense of the Motherlands: No longer remove war weariness from combat in your territory. Is now a red card.
+UPDATE Policies SET GovernmentSlotType='SLOT_MILITARY' WHERE PolicyType='POLICY_DEFENSE_OF_MOTHERLAND';
+DELETE FROM PolicyModifiers WHERE ModifierId='DEFENSEOFMOTHERLAND_DOMESTICWARWEARINESS' AND PolicyType='POLICY_DEFENSE_OF_MOTHERLAND';
