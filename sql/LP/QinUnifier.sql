@@ -31,6 +31,15 @@ INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
 INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_QIN', 'BBG_QIN_UNIFIER_BARRACK_GIVE_GREAT_WORK_SLOT');
 
+-- 2026/02/26 gw slot per stable
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_QIN', 'CCB_QIN_UNIFIER_STABLE_GIVE_GW_SLOT');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_QIN_UNIFIER_STABLE_GIVE_GW_SLOT', 'MODIFIER_PLAYER_CITIES_ADJUST_EXTRA_GREAT_WORK_SLOTS', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_QIN_UNIFIER_STABLE_GIVE_GW_SLOT', 'Amount', '2'), 
+('CCB_QIN_UNIFIER_STABLE_GIVE_GW_SLOT', 'BuildingType', 'BUILDING_STABLE'), 
+('CCB_QIN_UNIFIER_STABLE_GIVE_GW_SLOT', 'GreatWorkSlotType', 'GREATWORKSLOT_WRITING');
 
 -- 02/07/24 General/writers give inspiration and eureka when recruited
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
