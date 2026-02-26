@@ -52,6 +52,7 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 
 DELETE FROM Improvement_Adjacencies WHERE YieldChangeId IN ('Lime_WBH_FishingBoats_Food', 'Lime_WBH_FishingBoats_Production');
 
+-- 2026/02/26 camp and fishing boat extra prod from wbh need tech catrography
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
     ('BBG_WBH_CAMP_PROD', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'BBG_UTILS_PLAYER_HAS_TECH_CARTOGRAPHY', 'BBG_CAMP_NEXT_WBH_REQSET'),
     ('BBG_WBH_CAMP_FOOD', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', NULL, 'BBG_CAMP_NEXT_WBH_REQSET'),
