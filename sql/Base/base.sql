@@ -361,6 +361,15 @@ INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
 UPDATE Technologies SET UITreeRow=0 WHERE TechnologyType='TECH_LASERS';
 UPDATE Technologies SET UITreeRow=1 WHERE TechnologyType='TECH_GUIDANCE_SYSTEMS';
 
+-- 2026/02/26 Nuclear Fusion requires Composite
+INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
+    ('TECH_NUCLEAR_FUSION', 'TECH_COMPOSITES');
+
+-- 2026/02/26 Composite requires Combined Arms (also moved nuclear fusion one line up)
+INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
+    ('TECH_COMPOSITES', 'TECH_COMBINED_ARMS');
+UPDATE Technologies SET UITreeRow=0 WHERE TechnologyType='TECH_NUCLEAR_FISSION';
+
 -- 30/06/25 Military Science grant 1 Spy cap
 INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES
     ('TECH_MILITARY_SCIENCE', 'CIVIC_GRANT_SPY');
