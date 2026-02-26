@@ -1452,10 +1452,10 @@
 			<Text>根据你最高的同盟等级，获得 +1/+2/+3 [ICON_STRENGTH] 战斗力和 +2/+4/+6 [ICON_InfluencePerTurn] 影响力点数。征用城邦单位费用降低 -50%。[NEWLINE][NEWLINE]与盟友和同一个敌人作战时，若盟友和己方单位处于5单元格内，分享战斗经验和掠夺收益。与同一个敌人作战时盟友双方获得同盟点数。[NEWLINE]占领 [ICON_BARBARIAN] 蛮族哨站时除正常的 [ICON_Gold] 金币外，还会获得部落村庄奖励。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>根据你最高的同盟等级，获得+1，+2或者+3 [ICON_STRENGTH] 战斗力。[NEWLINE][NEWLINE]与盟友和同一个敌人作战时，若盟友和己方单位处于5单元格内，分享战斗经验和掠夺收益。与同一个敌人作战时盟友双方获得同盟点数。[NEWLINE][NEWLINE]占领 [ICON_BARBARIAN] 蛮族哨站时除正常的 [ICON_Gold] 金币外，还会获得部落村庄奖励。征用城邦单位费用降低一半。</Text>
+			<Text>{LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>根据你最高的同盟等级，获得+1，+2或者+3 [ICON_STRENGTH] 战斗力。[NEWLINE][NEWLINE]与盟友和同一个敌人作战时，若盟友和己方单位处于5单元格内，分享战斗经验和掠夺收益。与同一个敌人作战时盟友双方获得同盟点数。[NEWLINE][NEWLINE]占领 [ICON_BARBARIAN] 蛮族哨站时除正常的 [ICON_Gold] 金币外，还会获得部落村庄奖励。征用城邦单位费用降低一半。</Text>
+			<Text>{LOC_TRAIT_LEADER_ADVENTURES_ENKIDU_DESCRIPTION}</Text>
 		</Replace>
 		<Row Tag="LOC_BBG_SUMMER_COMBAT_ALLY_1" Language="zh_Hans_CN">
 			<Text>根据同盟等级+1 [ICON_STRENGTH] 战斗力。(超越万王)</Text>
@@ -3242,13 +3242,13 @@
 			<Text>军事指挥中心</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_ARMS_RACE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建造核装置时 +25% [ICON_Production] 生产力。</Text>
+			<Text>建造军营、港口、航空港和这些区域中的建筑时+30% [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_ARMS_RACE_T_NAME" Language="zh_Hans_CN">
 			<Text>军备竞赛</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_ARMS_RACE_T_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建造军营、港口、航空港和这些区域中的建筑时+30% [ICON_Production] 生产力。</Text>
+			<Text>建造核装置时 +25% [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_BATTLEFIELD_MEDICINE_NAME" Language="zh_Hans_CN">
 			<Text>战地医疗</Text>
