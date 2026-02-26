@@ -37,8 +37,9 @@ DELETE FROM StartBiasTerrains WHERE CivilizationType='CIVILIZATION_MAYA';
 DELETE FROM TraitModifiers WHERE TraitType='TRAIT_LEADER_MUTAL' AND ModifierId='TRAIT_LEADER_NEARBY_CITIES_GAIN_BUILDER';
 
 -- 24/04/23 Reduced bonus/malus to cities
+-- 2026/02/26 no malus
 UPDATE ModifierArguments SET Value='5, 5, 5, 5, 5, 5' WHERE ModifierId='TRAIT_LEADER_NEARBY_CITIES_GAIN_YIELDS' AND Name='Amount';
-UPDATE ModifierArguments SET Value='-10, -10, -10, -10, -10, -10' WHERE ModifierId='TRAIT_LEADER_NEARBY_CITIES_LOSE_YIELDS' AND Name='Amount';
+UPDATE ModifierArguments SET Value='0, 0, 0, 0, 0, 0' WHERE ModifierId='TRAIT_LEADER_NEARBY_CITIES_LOSE_YIELDS' AND Name='Amount';
 
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('BBG_MAYA_CAPITAL_HOUSING', 'MODIFIER_PLAYER_CAPITAL_CITY_ADJUST_BUILDING_HOUSING');
