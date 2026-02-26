@@ -82,7 +82,8 @@ INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
 --=======================================================================
 
 -- Torre de Belem : Cost reduced to 400 [from 460] 
-UPDATE Buildings SET Cost=800 WHERE BuildingType='BUILDING_TORRE_DE_BELEM';
+-- 2026/02/26 Cost reduced to 200, early to civic exploration
+UPDATE Buildings SET Cost=400, PrereqCivic='CIVIC_EXPLORATION' WHERE BuildingType='BUILDING_TORRE_DE_BELEM';
 -- Give one promotion to every naval units (Terracotta no longer work on naval units)
 DELETE FROM BuildingModifiers WHERE BuildingType='BUILDING_TORRE_DE_BELEM';
 
