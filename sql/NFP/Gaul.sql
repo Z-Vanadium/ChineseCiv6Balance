@@ -126,3 +126,6 @@ DELETE FROM TypeTags WHERE Type='ABILITY_AMBIORIX_NEIGHBOR_COMBAT_BONUS' AND Tag
 --     'BBG_' || Units.UnitType || '_IS_ADJACENT_REQSET', 'REQUIREMENTSET_TEST_ALL' FROM Units WHERE FormationClass='FORMATION_CLASS_LAND_COMBAT';
 -- INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) SELECT
 --     'BBG_' || Units.UnitType || '_IS_ADJACENT_REQSET', 'BBG_' || Units.UnitType || '_IS_ADJACENT_REQ' FROM Units WHERE FormationClass='FORMATION_CLASS_LAND_COMBAT';
+
+-- 2026/02/26 Ambiorix: add mine culture bomb back
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES ('TRAIT_LEADER_AMBIORIX', 'GAUL_MINE_CULTURE_BOMB');
