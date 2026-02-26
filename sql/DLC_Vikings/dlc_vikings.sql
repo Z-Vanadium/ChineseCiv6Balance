@@ -86,10 +86,11 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 UPDATE Modifiers SET SubjectRequirementSetId='BBG_PLOT_IS_IMPROVED_IN_SHALLOW_WATER' WHERE ModifierId='MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_BASE';
 UPDATE Modifiers SET SubjectRequirementSetId='BBG_PLOT_IS_IMPROVED_IN_SHALLOW_WATER_AND_INDUSTRIAL' WHERE ModifierId='MINOR_CIV_AUCKLAND_SHALLOW_WATER_PRODUCTION_BONUS_INDUSTRIAL';
     
+-- 2026/02/26 Monastry reduced to +2 faith (from +3)
 -- 09/03/2024 Monastery +1 food, +1faith per adjacent district at reformed church (instead of 2)
 INSERT INTO Improvement_YieldChanges (ImprovementType, YieldType, YieldChange) VALUES
     ('IMPROVEMENT_MONASTERY', 'YIELD_FOOD', 1);
-UPDATE Improvement_YieldChanges SET YieldChange=3 WHERE ImprovementType='IMPROVEMENT_MONASTERY' AND YieldType='YIELD_FAITH';
+UPDATE Improvement_YieldChanges SET YieldChange=2 WHERE ImprovementType='IMPROVEMENT_MONASTERY' AND YieldType='YIELD_FAITH';
 UPDATE Adjacency_YieldChanges SET ObsoleteCivic='CIVIC_REFORMED_CHURCH' WHERE ID='Monastery_DistrictAdjacency';
 INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, TilesRequired, OtherDistrictAdjacent, PrereqCivic) VALUES
     ('Monastery_DistrictAdjacency_ReformedChurch', 'Placeholder', 'YIELD_FAITH', 1, 1, 1, 'CIVIC_REFORMED_CHURCH');
