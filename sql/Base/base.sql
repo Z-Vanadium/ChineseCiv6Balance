@@ -1,6 +1,8 @@
 
 UPDATE GlobalParameters SET Value=2 WHERE Name='FORTIFY_BONUS_PER_TURN';
 
+-- 2026/02/26 loyalty after transferred by combat before occupation increased to 75 (from 50)
+UPDATE GlobalParameters SET Value=75 WHERE Name='LOYALTY_AFTER_TRANSFERRED_BY_COMBAT_OWNER_BEFORE_OCCUPATION';
 
 UPDATE GlobalParameters SET Value=0.5 WHERE Name='TRADE_ROUTE_TRANSPORTATION_EFFICIENCY_MAX_RATIO';
 
