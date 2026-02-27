@@ -64,7 +64,7 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
 ('CCB_ABILITY_RTA_PA_CS', 'CCB_RTA_PA_CS');
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_RTA_PA_CS', 'MODIFIER_PLAYER_UNITS_ADJUST_COMBAT_STRENGTH', 0, 0, 0, NULL, 'CCB_REQSET_UNIT_IS_ADJACENT_MOUNTAINS');
+('CCB_RTA_PA_CS', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, NULL, 'CCB_REQSET_UNIT_IS_ADJACENT_MOUNTAINS');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_RTA_PA_CS', 'Amount', '3');
 
