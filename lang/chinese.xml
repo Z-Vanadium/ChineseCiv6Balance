@@ -95,7 +95,7 @@
 		</Replace>
 		<!-- = leader ability (Saladin Sultan) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SALADIN_ALT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>玩家可以使用平时 [ICON_Faith] 信仰值消耗的9/10 来购买他们的军营和学院建筑。使徒使一环内的陆地军事单位获得+5[ICON_Strength]战斗力。每回合、每单位维护费用减少1 [Icon_Gold] 金币。</Text>
+			<Text>玩家可以使用平时 [ICON_Faith] 信仰值消耗的9/10 来购买他们的学院建筑。使徒使一环内的陆地军事单位获得+5[ICON_Strength]战斗力。每回合、每单位维护费用减少1 [Icon_Gold] 金币。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_SULTAN_COMBAT_ADJACENT_APOSTLE_ABILITY_NAME" Language="zh_Hans_CN">
 			<Text>圣战</Text>
@@ -1111,6 +1111,10 @@
 		<Replace Tag="LOC_ABILITY_ORDU_INCREASED_MOVEMENT_DESCRIPTION" Language="zh_Hans_CN">
  			<Text>在平坦地形上+1[ICON_MOVEMENT] 移动力。</Text>
  		</Replace>
+		<!-- = leader ability = -->
+		<Replace Tag="LOC_TRAIT_LEADER_GENGHIS_KHAN_ABILITY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>轻重骑兵类单位 [ICON_Strength] 战斗力+3，击败敌方骑兵类单位后有几率将其俘获。</Text>
+		</Replace>
 
 		<!-- == NORWAY == -->
 		<!-- = civilization ability = -->
@@ -1271,7 +1275,7 @@
 		<!-- == POLAND == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_GOLDEN_LIBERTY_DESCRIPTION" Language="zh_Hans_CN"> <!-- government icon -->
-			<Text>在友好领土内建成军营或堡垒后对相邻单元格施放文化炸弹。当前 [ICON_Government] 政体的一个军事政策槽位将转换为一个通配符槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：无。</Text>	
+			<Text>在友好领土内建成军营或堡垒后对相邻单元格施放文化炸弹。[NEWLINE][NEWLINE]“政治哲学”后，当前 [ICON_Government] 政体的一个军事政策槽位将转换为一个通配符槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：无。</Text>	
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_LITHUANIAN_UNION_DESCRIPTION" Language="zh_Hans_CN">
