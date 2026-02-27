@@ -27,3 +27,6 @@ UPDATE Building_YieldChanges SET YieldChange=2 WHERE BuildingType='BUILDING_ORDU
 
 -- 08/04/25 Ordu movement now only works if unit starts turn on flat terrain
 UPDATE Modifiers SET SubjectRequirementSetId='BBG_PLOT_IS_FLAT' WHERE ModifierId='ORDU_ADJUST_MOVEMENT';
+
+-- 2026/02/27 cs for keshig removed
+DELETE FROM TypeTags WHERE Type='ABILITY_GENGHIS_KHAN_CAVALRY_BONUS' AND Tag='CLASS_RANGED_CAVALRY';
