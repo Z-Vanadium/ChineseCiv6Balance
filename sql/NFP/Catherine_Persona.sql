@@ -122,7 +122,6 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 
 -- 30/06/25 Happy cities gain +5% Culture, and generate +1 Great Writer, Artist, and Musician point in their Theater. Ecstatic cities double these bonuses.
 -- 28/07/25 Happy cities gain +5% Culture, and generate +1 Great Writer with theater, Ecstatic +10% culture and generate +1 Artist with theater
--- 2026/02/26 Euphoric cities gain +15% culture, and generate +1 Musician with theater
 INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
     ('BBG_MAGNIFICENT_CULTURE_HAPPY', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD', NULL),
     ('BBG_MAGNIFICENT_CULTURE_ECSTATIC', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD', NULL),
@@ -152,39 +151,3 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_MAGNIFICENCES', 'BBG_MAGNIFICENT_WRITER_POINT_ECSTATIC'),
     ('TRAIT_LEADER_MAGNIFICENCES', 'BBG_MAGNIFICENT_ARTIST_POINT_ECSTATIC');
 
-
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
-('TRAIT_LEADER_MAGNIFICENCES', 'CCB_MAGNIFICENT_CULTURE_EUPHORIC');
-INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_MAGNIFICENT_CULTURE_EUPHORIC', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_YIELD', 0, 0, 0, NULL, NULL);
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_MAGNIFICENT_CULTURE_EUPHORIC', 'Amount', '15'), 
-('CCB_MAGNIFICENT_CULTURE_EUPHORIC', 'HappinessType', 'HAPPINESS_UNHAPPY'), 
-('CCB_MAGNIFICENT_CULTURE_EUPHORIC', 'YieldType', 'YIELD_CULTURE');
-
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
-('TRAIT_LEADER_MAGNIFICENCES', 'CCB_MAGNIFICENT_WRITER_EUPHORIC');
-INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_MAGNIFICENT_WRITER_EUPHORIC', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_GREAT_PERSON', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_THEATER');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_MAGNIFICENT_WRITER_EUPHORIC', 'Amount', '1'), 
-('CCB_MAGNIFICENT_WRITER_EUPHORIC', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER'), 
-('CCB_MAGNIFICENT_WRITER_EUPHORIC', 'HappinessType', 'HAPPINESS_UNHAPPY');
-
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
-('TRAIT_LEADER_MAGNIFICENCES', 'CCB_MAGNIFICENT_ARTIST_EUPHORIC');
-INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_MAGNIFICENT_ARTIST_EUPHORIC', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_GREAT_PERSON', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_THEATER');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_MAGNIFICENT_ARTIST_EUPHORIC', 'Amount', '1'), 
-('CCB_MAGNIFICENT_ARTIST_EUPHORIC', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST'), 
-('CCB_MAGNIFICENT_ARTIST_EUPHORIC', 'HappinessType', 'HAPPINESS_UNHAPPY');
-
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
-('TRAIT_LEADER_MAGNIFICENCES', 'CCB_MAGNIFICENT_MUSICIAN_EUPHORIC');
-INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_MAGNIFICENT_MUSICIAN_EUPHORIC', 'MODIFIER_PLAYER_CITIES_ADJUST_HAPPINESS_GREAT_PERSON', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_THEATER');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_MAGNIFICENT_MUSICIAN_EUPHORIC', 'Amount', '1'), 
-('CCB_MAGNIFICENT_MUSICIAN_EUPHORIC', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_MUSICIAN'), 
-('CCB_MAGNIFICENT_MUSICIAN_EUPHORIC', 'HappinessType', 'HAPPINESS_UNHAPPY');
