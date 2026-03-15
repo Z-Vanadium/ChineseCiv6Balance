@@ -6,7 +6,32 @@
 -- Poland
 --==================
 -- 19/05/2021, 05/09/2021: Poland's Winged Hussar
-UPDATE Units SET Combat=64, PrereqCivic='CIVIC_REFORMED_CHURCH' WHERE UnitType='UNIT_POLISH_HUSSAR';
+-- 2025/03/15 combat reduced to 60, revert with tech ballistics
+UPDATE Units SET Combat=60, PrereqCivic='CIVIC_REFORMED_CHURCH' WHERE UnitType='UNIT_POLISH_HUSSAR';
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_GOLDEN_LIBERTY', 'CCB_POLISH_HUSSAR_COMBAT_REVERT_GIVER');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_POLISH_HUSSAR_COMBAT_REVERT_GIVER', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_TECH_BALLISTICS', NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_POLISH_HUSSAR_COMBAT_REVERT_GIVER', 'AbilityType', 'CCB_POLISH_HUSSAR_COMBAT_REVERT');
+
+INSERT INTO Tags (Tag, Vocabulary) VALUES ('CLASS_POLISH_HUSSAR', 'ABILITY_CLASS');
+INSERT INTO Types (Type, Kind) VALUES ('CCB_POLISH_HUSSAR_COMBAT_REVERT', 'KIND_ABILITY');
+INSERT INTO TypeTags (Type, Tag) VALUES 
+('UNIT_POLISH_HUSSAR', 'CLASS_POLISH_HUSSAR'),
+('CCB_POLISH_HUSSAR_COMBAT_REVERT', 'CLASS_POLISH_HUSSAR');
+
+INSERT INTO UnitAbilities (UnitAbilityType, Name, Description, Inactive) VALUES
+    ('CCB_POLISH_HUSSAR_COMBAT_REVERT', 'LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_NAME', 'LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_DESC', 1);
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
+('CCB_POLISH_HUSSAR_COMBAT_REVERT', 'CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD', 'Amount', '4');
+INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
+('CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD', 'Preview', 'LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD_DESC');
 
 -- Poland gets a relic when founding and completeing a religion
 --Grants Relic Upon Founding Religion
