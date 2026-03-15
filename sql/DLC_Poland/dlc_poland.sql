@@ -6,11 +6,7 @@
 -- Poland
 --==================
 -- 19/05/2021, 05/09/2021: Poland's Winged Hussar
--- 2026/02/27 combat reduced to 58 (from 64), cost reduced to 125 (from 165)
-UPDATE Units SET Combat=58, Cost=250, PrereqCivic='CIVIC_REFORMED_CHURCH' WHERE UnitType='UNIT_POLISH_HUSSAR';
-
--- 2026/02/27 wild card delayed to civic political philosophy
-UPDATE Modifiers SET OwnerRequirementSetId='BBG_UTILS_PLAYER_HAS_CIVIC_POLITICAL_PHILOSOPHY_REQSET' WHERE ModifierID='TRAIT_REPLACE_MILITARY_SLOT_WITH_WILDCARD';
+UPDATE Units SET Combat=64, PrereqCivic='CIVIC_REFORMED_CHURCH' WHERE UnitType='UNIT_POLISH_HUSSAR';
 
 -- Poland gets a relic when founding and completeing a religion
 --Grants Relic Upon Founding Religion
