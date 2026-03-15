@@ -472,7 +472,7 @@
 		</Replace>
 		<!-- = unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“技艺”市政解锁建造者建造埃及特色改良“狮身人面像”的能力。[NEWLINE][NEWLINE]提供 +2 [ICON_Faith] 信仰值，+1 [ICON_Culture] 文化值，向周围单元格提供+1魅力。[NEWLINE][NEWLINE]与奇观相邻则额外 +1 [ICON_Faith] 信仰值和 +1 [ICON_CULTURE] 文化值。[NEWLINE]若在平原或平原丘陵上建造则提供 +1 [ICON_FOOD]食物；若在草原或草原丘陵上建造则提供 +1 [ICON_PRODUCTION]生产力。[NEWLINE]若在沙漠或沙漠丘陵（非泛滥平原）上建造则提供 +1 [ICON_FOOD] 食物和 +1 [ICON_PRODUCTION] 生产力；在泛滥平原上建造则 +1 [ICON_CULTURE] 文化值。[NEWLINE]“外交部门”市政后 +1 [ICON_CULTURE] 文化值。[NEWLINE]研究“飞行”科技则提供 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]不能建在雪地，雪地丘陵或另一个狮身人面像旁。</Text>
+			<Text>“技艺”市政解锁建造者建造埃及特色改良“狮身人面像”的能力。[NEWLINE][NEWLINE]提供 +2 [ICON_Faith] 信仰值，+1 [ICON_Culture] 文化值，向周围单元格提供+1魅力。[NEWLINE][NEWLINE]与奇观相邻则额外 +1 [ICON_Faith] 信仰值和 +1 [ICON_CULTURE] 文化值。[NEWLINE]若在沙漠或沙漠丘陵（非泛滥平原）上建造则提供 +1 [ICON_FOOD] 食物和 +1 [ICON_PRODUCTION] 生产力；在泛滥平原上建造则 +1 [ICON_CULTURE] 文化值。[NEWLINE]“外交部门”市政后 +1 [ICON_CULTURE] 文化值。[NEWLINE]研究“飞行”科技则提供 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]不能建在雪地，雪地丘陵或另一个狮身人面像旁。</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_SPHINX_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_IMPROVEMENT_SPHINX_DESCRIPTION}</Text>
@@ -575,7 +575,7 @@
 		</Replace>
 		<!-- = leader ability (Magnificence) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MAGNIFICENCES_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“技艺”市政后，改良资源额外 +1 [ICON_CULTURE] 文化值，与剧院广场区域相邻的改良资源额外 +1 [ICON_CULTURE] 文化值。“中世纪集市”市政后，可在拥有剧院广场区域的任意城市中开展“宫廷盛会”项目。[NEWLINE][NEWLINE]快乐的城市额外 +5% [ICON_CULTURE] 文化值，若拥有剧院广场，则 +1 [ICON_GreatWriter] 大作家点数；[NEWLINE]欣喜若狂的城市获得双倍上述 [ICON_CULTURE] 文化值加成，若拥有剧院广场，则 +1 [ICON_GreatArtist] 大艺术家点数。[NEWLINE]极乐的城市获得三倍上述 [ICON_CULTURE] 文化值加成，若拥有剧院广场，则 +1 [ICON_GREATMUSICIAN] 大音乐家点数。</Text>
+			<Text>“技艺”市政后，改良资源额外 +1 [ICON_CULTURE] 文化值。与剧院广场相邻的改良资源额外 +1 [ICON_CULTURE] 文化值。与城堡相邻的改良资源额外 +1 [ICON_CULTURE] 文化值。“中世纪集市”市政后，可在拥有剧院广场区域的任意城市中开展“宫廷盛会”项目。[NEWLINE][NEWLINE]快乐的城市额外 +5% [ICON_CULTURE] 文化值，若拥有剧院广场，则 +1 [ICON_GreatWriter] 大作家点数；[NEWLINE]欣喜若狂的城市获得双倍上述 [ICON_CULTURE] 文化值加成，若拥有剧院广场，则 +1 [ICON_GreatArtist] 大艺术家点数。</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_FRENCH_GARDE_IMPERIALE_DESCRIPTION" Language="zh_Hans_CN">
@@ -1275,11 +1275,24 @@
 		<!-- == POLAND == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_GOLDEN_LIBERTY_DESCRIPTION" Language="zh_Hans_CN"> <!-- government icon -->
-			<Text>在友好领土内建成军营或堡垒后对相邻单元格施放文化炸弹。[NEWLINE][NEWLINE]“政治哲学”后，当前 [ICON_Government] 政体的一个军事政策槽位将转换为一个通配符槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：无。</Text>	
+			<Text>在友好领土内建成军营或堡垒后对相邻单元格施放文化炸弹。[NEWLINE][NEWLINE]当前 [ICON_Government] 政体的一个军事政策槽位将转换为一个通配符槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：无。</Text>	
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_LITHUANIAN_UNION_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>如果相邻城市在波兰文化炸弹的攻击下失去单元格，则波兰创立的宗教将成为此城的主流宗教。[NEWLINE][NEWLINE]圣地将从相邻区域获得标准信仰值相邻加成。[NEWLINE][NEWLINE][ICON_GreatWork_Relic] 遗物提供的 [ICON_Faith] 信仰值+2、[ICON_Culture] 文化值+2、[ICON_Gold] 金币+4。创始和完成宗教时各获得一个遗物。</Text>
+		</Replace>
+		<!-- = unique unit = -->
+		<Replace Tag="LOC_UNIT_POLISH_HUSSAR_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>文艺复兴时期波兰特色单位，替代胸甲骑兵。如果输出的伤害点数高于敌方，则会将防守的敌方单位弹至后方的单元格中。如防守单位无法后退，则将受到更高的伤害。[NEWLINE][NEWLINE]{LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_NAME}</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_NAME" Language="zh_Hans_CN">
+			<Text>研究“弹道学”科技后 +4 [ICON_STRENGTH] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_DESC" Language="zh_Hans_CN">
+			<Text>{LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_NAME}</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD_DESC" Language="zh_Hans_CN">
+			<Text>+4 [ICON_STRENGTH] 战斗力，来自“弹道学”科技。</Text>
 		</Replace>
 
 		<!-- == PORTUGAL == -->
@@ -4819,7 +4832,7 @@
 			<Text>极海鲸狩</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LIME_THULE_HUNTING_BOWHEAD_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>猎人小屋可为相邻的单元格提供额外产出：[NEWLINE]冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍）；[NEWLINE]营地和渔船+1 [ICON_FOOD] 食物，“制图学”后 +1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]玩家通过科技或文化每进入一个新时代，在 [ICON_Capital] 首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。特殊：更深的冻土。</Text>
+			<Text>猎人小屋可为相邻的单元格提供额外产出：[NEWLINE]冻土单元格+1 [ICON_FOOD] 食物（雪地则翻倍）；[NEWLINE]营地和渔船+1 [ICON_FOOD] 食物、+1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]玩家通过科技或文化每进入一个新时代，在 [ICON_Capital] 首都获得一个“鲸鱼猎人”。[NEWLINE][NEWLINE]出生地关联：T2海岸、T1冻土。特殊：更深的冻土。</Text>
 		</Replace>
 		<!-- = Leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_LIME_THULE_DAVE_HEART_NOT_STONE_NAME" Language="zh_Hans_CN">
@@ -4852,7 +4865,7 @@
 			<Text>猎人小屋</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_LIME_THULE_WBH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>图勒特色改良设施。建在冻土单元格上时获得+1 [ICON_FOOD] 食物（雪地则翻倍）。解锁“对外贸易”市政后，每相邻1个海洋资源或营地获得+1 [ICON_CULTURE] 文化值和+1 [ICON_FAITH] 信仰值。必须建在与加成或奢侈品资源相邻的单元格。“飞行”科技后提供等同于 [ICON_FAITH] 信仰值的 [ICON_Tourism] 旅游业绩。可建造在树林上。不能建在另一个猎人小屋旁。</Text>
+			<Text>图勒特色改良设施。[NEWLINE][NEWLINE]修建在冻土单元格上时提供 +1 [ICON_FOOD] 食物（雪地则翻倍）。[NEWLINE]解锁“对外贸易”市政后，相邻渔船或营地时分别提供 +1 [ICON_CULTURE] 文化值、+1 [ICON_FAITH] 信仰值。[NEWLINE][NEWLINE]必须建在与加成或奢侈品资源相邻的单元格。“飞行”科技后提供等同于 [ICON_FAITH] 信仰值的 [ICON_Tourism] 旅游业绩。可建造在树林上。不能建在另一个猎人小屋旁。</Text>
 		</Replace>
 		<!--  Cities  -->
 		<Replace Tag="LOC_CITY_NAME_LIME_THULE_DAVE_QILAKITSOQ" Language="zh_Hans_CN">
