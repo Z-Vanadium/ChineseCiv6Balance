@@ -49,7 +49,12 @@ DELETE FROM UnitReplaces WHERE CivUniqueUnitType='UNIT_MACEDONIAN_HETAIROI';
 -- 13/01/25 Hetairoi cost to 110 (from 100)
 UPDATE Units SET Cost=110 WHERE UnitType='UNIT_MACEDONIAN_HETAIROI';
 
-
+-- 2026/04/23: +25% Production toward encampent buildings
+INSERT INTO Modifiers(ModifierId, ModifierType) VALUES ('CCB_ALEXANDER_ENCAMPMENT_BUILDING_PRODUCTION', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION');
+INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES ('CCB_ALEXANDER_ENCAMPMENT_BUILDING_PRODUCTION', 'DistrictType', 'DISTRICT_ENCAMPMENT'),
+('CCB_ALEXANDER_ENCAMPMENT_BUILDING_PRODUCTION', 'Amount', '25');
+INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
+('TRAIT_LEADER_QIN', 'CCB_ALEXANDER_ENCAMPMENT_BUILDING_PRODUCTION');
 
 -- =======================================================================================
 -- 2024/5/23 by OSCAR. 
