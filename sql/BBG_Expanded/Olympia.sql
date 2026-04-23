@@ -32,8 +32,9 @@ INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
 
 -- 2025/10/27 combat to +1, reange to all land units
 -- 30/07/25 +2 combat strength for melee and heavy cav units per city state suzed
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
-    ('TRAIT_LEADER_JFD_CABEIRI_MYSTERIES', 'BBG_OLYMPIA_MELEE_HEAVY_CS_PER_SUZ');
+-- 2026/04/23: cs from suzerain cs removed
+-- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+--     ('TRAIT_LEADER_JFD_CABEIRI_MYSTERIES', 'BBG_OLYMPIA_MELEE_HEAVY_CS_PER_SUZ');
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('BBG_OLYMPIA_MELEE_HEAVY_CS_PER_SUZ', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY');
 INSERT INTO Modifiers(ModifierId, ModifierType, SubjectRequirementSetId)
@@ -99,8 +100,9 @@ INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, Ow
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_ENCAMPMENT_PROPHET_GIVER', 'ModifierId', 'CCB_ENCAMPMENT_PROPHET');
 
+-- 2026/04/23: prophet point from encampment needed civ political philosophy
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_ENCAMPMENT_PROPHET', 'MODIFIER_SINGLE_CITY_DISTRICTS_ADJUST_GREAT_PERSON_POINTS', 0, 0, 0, NULL, 'BBG_DISTRICT_IS_DISTRICT_ENCAMPMENT_REQSET');
+('CCB_ENCAMPMENT_PROPHET', 'MODIFIER_SINGLE_CITY_DISTRICTS_ADJUST_GREAT_PERSON_POINTS', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_CIVIC_POLITICAL_PHILOSOPHY_REQSET', 'BBG_DISTRICT_IS_DISTRICT_ENCAMPMENT_REQSET');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_ENCAMPMENT_PROPHET', 'Amount', '1'), 
 ('CCB_ENCAMPMENT_PROPHET', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_PROPHET');
