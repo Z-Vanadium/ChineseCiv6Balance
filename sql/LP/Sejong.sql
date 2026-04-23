@@ -9,7 +9,8 @@
 -- SEJONG_INFORMATION_SCIENCE_INTO_CULTURE
 -- SEJONG_FUTURE_SCIENCE_INTO_CULTURE
 -- 01/12/24 reverted to x2
-UPDATE ModifierArguments SET Value=2 WHERE ModifierId LIKE "SEJONG%SCIENCE_INTO_CULTURE" AND Name="Multiplier";
+-- 2026/04/23 reduced to x1.5
+UPDATE ModifierArguments SET Value=1.5 WHERE ModifierId LIKE "SEJONG%SCIENCE_INTO_CULTURE" AND Name="Multiplier";
 
 -- Sejong exclusion from .5 adjacency
 INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
