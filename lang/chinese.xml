@@ -3291,6 +3291,8 @@
 
 
 		<!-- === GREAT PEOPLE === -->
+		<Replace Tag="LOC_GREATPERSON_BOUDICA_ACTIVE" Language="zh_Hans_CN">
+			<Text>在 [ICON_Capital] 首都创建1个军事工程师。</Text>
 		<Replace Tag="LOC_GREATPERSON_EUCLID_ACTIVE" Language="zh_Hans_CN">
 			<Text>创作 1 本 [ICON_GreatWork_WRITING] 巨著《几何原本》，提供 +2 [ICON_CULTURE] 文化值 +2 [ICON_Science] 科技值。</Text>
 		</Replace>
