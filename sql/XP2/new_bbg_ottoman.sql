@@ -54,6 +54,9 @@ INSERT INTO StartBiasRivers (CivilizationType, Tier) VALUES
 UPDATE ModifierArguments SET Value=3 WHERE ModifierId='GREAT_TURKISH_BOMBARD_STRENGTH';
 UPDATE Modifiers SET SubjectRequirementSetId=NULL WHERE ModifierId='GREAT_TURKISH_BOMBARD_STRENGTH';
 
+-- 2026/04/23 gov point forwarded to civ civil service instead of tech gunpowder
+UPDATE Modifiers SET SubjectRequirementSetId='BBG_UTILS_PLAYER_HAS_CIVIC_CIVIL_SERVICE_REQSET' WHERE ModifierId='SULEIMAN_GOVERNOR_POINTS';
+
 -- =============================================================================================
 -- =                                       IBRAHIM                                             =
 -- =============================================================================================
