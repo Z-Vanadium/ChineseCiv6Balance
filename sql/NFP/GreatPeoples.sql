@@ -1,6 +1,17 @@
 -- Reduce Imhotep to 1 charge
 UPDATE GreatPersonIndividuals SET ActionCharges=1 WHERE GreatPersonIndividualType='GREAT_PERSON_INDIVIDUAL_IMHOTEP';
 
+-- Euclid rework: give a book offering +2 culture/science
+DELETE FROM GreatPersonIndividualActionModifiers
+      WHERE ModifierId IN ('GREATPERSON_1MEDIEVALTECHBOOST', 'GREATPERSON_MATHTECHBOOST') AND
+            GreatPersonIndividualType = 'GREAT_PERSON_INDIVIDUAL_EUCLID';
+INSERT INTO GreatWorks (EraType, Tourism, Quote, Image, Audio, Name, GreatPersonIndividualType, GreatWorkObjectType, GreatWorkType)
+VALUES (NULL, 0, 'LOC_GREATWORK_EUCLID_QUOTE', NULL, NULL, 'LOC_GREATWORK_EUCLID_NAME', 'GREAT_PERSON_INDIVIDUAL_EUCLID', 'GREATWORKOBJECT_WRITING', 'GREATWORK_EUCLID');
+INSERT INTO GreatWork_YieldChanges (GreatWorkType, YieldType, YieldChange) VALUES
+    ('GREATWORK_EUCLID', 'YIELD_SCIENCE', 2),
+    ('GREATWORK_EUCLID', 'YIELD_CULTURE', 2);
+UPDATE GreatPersonIndividuals SET ActionRequiresCompletedDistrictType=NULL WHERE GreatPersonIndividualType='GREAT_PERSON_INDIVIDUAL_EUCLID';
+
 -- Dandara gives the most advanced support unit (instead of a warrior monk with experience)
 UPDATE Modifiers SET ModifierType='MODIFIER_SINGLE_CITY_GRANT_UNIT_BY_CLASS_IN_NEAREST_CITY' WHERE ModifierId='GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE';
 DELETE FROM ModifierArguments WHERE ModifierId='GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE';

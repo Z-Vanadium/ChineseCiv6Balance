@@ -13,7 +13,7 @@ UPDATE ModifierArguments SET Value='50' WHERE ModifierId='COMPUTERS_BOOST_ALL_TO
 UPDATE GlobalParameters SET Value='5' WHERE Name='TOURISM_BASE_FROM_WONDER';
 -- Reduce amount of tourism needed for foreign tourist from 200 to 150
 UPDATE GlobalParameters SET Value='150' WHERE Name='TOURISM_TOURISM_TO_MOVE_CITIZEN';
--- lower number of turns to move greatworks between cities
+-- lower number of turns to move  between cities
 UPDATE GlobalParameters SET Value='2' WHERE Name='GREATWORK_ART_LOCK_TIME';
 
 
@@ -44,10 +44,11 @@ UPDATE GreatWork_YieldChanges SET YieldChange=4 WHERE YieldType='YIELD_FAITH' AN
 
 -- Writing
 -- 2026/02/26 gw writing: culture yield reduced to +3 (from +4) 
-UPDATE GreatWorks SET Tourism=2 WHERE GreatWorkObjectType='GREATWORKOBJECT_WRITING';
+UPDATE GreatWorks SET Tourism=2 WHERE GreatWorkObjectType='GREATWORKOBJECT_WRITING' AND GreatWorkType NOT IN ('GREATWORK_EUCLID');
 UPDATE GreatWork_YieldChanges SET YieldChange=3 WHERE YieldType='YIELD_CULTURE' AND
   EXISTS(SELECT * FROM GreatWorks WHERE GreatWorkObjectType='GREATWORKOBJECT_WRITING' AND
-         GreatWorks.GreatWorkType = GreatWork_YieldChanges.GreatWorkType);
+         GreatWorks.GreatWorkType = GreatWork_YieldChanges.GreatWorkType)
+        AND GreatWorks.GreatWorkType NOT IN ('GREATWORK_EUCLID');
 
 -- Music
 UPDATE GreatWorks SET Tourism=8 WHERE GreatWorkObjectType='GREATWORKOBJECT_MUSIC';
