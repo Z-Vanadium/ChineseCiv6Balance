@@ -502,8 +502,17 @@ UPDATE BeliefModifiers SET ModifierID='OPEN_SEA_FISHINGBOATS_CULTURE' WHERE Beli
 --==============================================================================================
 
 -- DOF nerf
+-- 2026/04/23: DOF only applies when player is defender
+UPDATE Modifiers SET SubjectRequirementSetId='CCB_REQSET_PLAYER_IS_DEFENDER' WHERE ModifierId='DEFENDER_OF_FAITH_COMBAT_BONUS_MODIFIER';
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES ('CCB_REQSET_PLAYER_IS_DEFENDER', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES ('CCB_REQSET_PLAYER_IS_DEFENDER', 'PLAYER_IS_DEFENDER_REQUIREMENTS');
+
 UPDATE ModifierArguments SET Value='3' WHERE ModifierId='DEFENDER_OF_FAITH_COMBAT_BONUS_MODIFIER' AND Name='Amount';
 -- Crusade nerf to +5
+-- 2026/04/23: Crusade only applies when player is attacker
+UPDATE Modifiers SET SubjectRequirementSetId='CCB_REQSET_PLAYER_IS_ATTACKER' WHERE ModifierId='JUST_WAR_COMBAT_BONUS_MODIFIER';
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES ('CCB_REQSET_PLAYER_IS_ATTACKER', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES ('CCB_REQSET_PLAYER_IS_ATTACKER', 'PLAYER_IS_ATTACKER_REQUIREMENTS');
 UPDATE ModifierArguments SET Value='5' WHERE ModifierId='JUST_WAR_COMBAT_BONUS_MODIFIER' AND Name='Amount';
 
 -- Stewardship to +2/+2
