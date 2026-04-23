@@ -69,6 +69,7 @@ INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_QIN', 'BBG_QIN_UNIFIER_GENERAL_GIVE_EUREKA');
     
 -- 02/07/24 Books give +1 food
+-- 2026/04/23: books give +1 culture
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('BBG_QIN_UNIFIER_BOOKS_GIVE_FOOD', 'MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
@@ -77,6 +78,15 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_QIN_UNIFIER_BOOKS_GIVE_FOOD', 'YieldChange', 1);
 INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_QIN', 'BBG_QIN_UNIFIER_BOOKS_GIVE_FOOD');
+
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+    ('BBG_QIN_UNIFIER_BOOKS_GIVE_CULTURE', 'MODIFIER_PLAYER_CITIES_ADJUST_GREATWORK_YIELD');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('BBG_QIN_UNIFIER_BOOKS_GIVE_CULTURE', 'GreatWorkObjectType', 'GREATWORKOBJECT_WRITING'),
+    ('BBG_QIN_UNIFIER_BOOKS_GIVE_CULTURE', 'YieldType', 'YIELD_CULTURE'),
+    ('BBG_QIN_UNIFIER_BOOKS_GIVE_CULTURE', 'YieldChange', 1);
+INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
+    ('TRAIT_LEADER_QIN', 'BBG_QIN_UNIFIER_BOOKS_GIVE_CULTURE');
 
 -- Strength from books try, it necessits the book to be moved at least once for it to work /:
 -- INSERT INTO RequirementSets(RequirementSetId , RequirementSetType) VALUES
