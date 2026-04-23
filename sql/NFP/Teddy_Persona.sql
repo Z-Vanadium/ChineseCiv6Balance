@@ -22,7 +22,7 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 INSERT INTO Modifiers(ModifierId, ModifierType) VALUES
     ('CCB_TEDDY_RAINFOREST_EXTRA_APPEAL', 'MODIFIER_PLAYER_CITIES_ADJUST_FEATURE_APPEAL_MODIFIER');
 INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
-    ('CCB_TEDDY_RAINFOREST_EXTRA_APPEAL', 'FeatureType', 'FEATURE_RAINFOREST'),
+    ('CCB_TEDDY_RAINFOREST_EXTRA_APPEAL', 'FeatureType', 'FEATURE_JUNGLE'),
     ('CCB_TEDDY_RAINFOREST_EXTRA_APPEAL', 'Amount', 1);
 
 -- 19/03/24 BM bonus delayed to code of laws

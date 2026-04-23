@@ -8,7 +8,23 @@ INSERT INTO StartBiasResources(CivilizationType, ResourceType, Tier) VALUES
     ('CIVILIZATION_CREE', 'RESOURCE_DEER', '4');
 
 -- Delete free trader (keep tradetoute capacity)
-UPDATE ModifierArguments SET Value='0' WHERE ModifierId='TRAIT_POTTERY_ADD_TRADER' AND Name='Amount';
+-- 2026/04/23: free trader back at civic foreign trade; get trade route capacity at tech currency and civic diplomatic service
+-- UPDATE ModifierArguments SET Value='0' WHERE ModifierId='TRAIT_POTTERY_ADD_TRADER' AND Name='Amount';
+UPDATE Modifiers SET OwnerRequirementSetId='REQSET_CCB_PLAYER_HAS_CIVIC_FOREIGN_TRADE_AND_CAPITAL' WHERE ModifierId='TRAIT_POTTERY_ADD_TRADER';
+UPDATE Modifiers SET SubjectRequirementSetId='BBG_UTILS_PLAYER_HAS_TECH_CURRENCY' WHERE ModifierId='TRAIT_POTTERY_TRADE_ROUTE';
+
+INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
+    ('TRAIT_CIVILIZATION_CREE_TRADE_GAIN_TILES', 'CCB_DIPLOMATIC_SERVICE_TRADE_ROUTE');
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+    ('CCB_DIPLOMATIC_SERVICE_TRADE_ROUTE', 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY', 'BBG_UTILS_PLAYER_HAS_CIVIC_DIPLOMATIC_SERVICE_REQSET');
+INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
+    ('CCB_DIPLOMATIC_SERVICE_TRADE_ROUTE', 'Amount', '1');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+    ('REQSET_CCB_PLAYER_HAS_CIVIC_FOREIGN_TRADE_AND_CAPITAL', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+    ('REQSET_CCB_PLAYER_HAS_CIVIC_FOREIGN_TRADE_AND_CAPITAL', 'BBG_UTILS_PLAYER_HAS_CIVIC_FOREIGN_TRADE_REQUIREMENT'),
+    ('REQSET_CCB_PLAYER_HAS_CIVIC_FOREIGN_TRADE_AND_CAPITAL', 'REQUIRES_CAPITAL_CITY');
 
 -- 17/04/23 Oki loses 5 base str but gain 5 against stronger units
 UPDATE Units SET Combat=15 WHERE UnitType='UNIT_CREE_OKIHTCITAW';
