@@ -168,6 +168,9 @@ UPDATE Building_CitizenYieldChanges SET YieldChange=3 WHERE YieldType='YIELD_GOL
 UPDATE GlobalParameters SET Value=1 WHERE Name='CITY_AMENITIES_FOR_FREE';
 UPDATE Buildings SET Entertainment=1 WHERE BuildingType='BUILDING_PALACE';
 
+-- 2026/04/23: fishing boats on reef after cartography
+INSERT OR IGNORE INTO Improvement_ValidFeatures (ImprovementType, FeatureType, PrereqTech) VALUES
+    ('IMPROVEMENT_FISHING_BOATS', 'FEATURE_REEF', 'TECH_CARTOGRAPHY');
 -- Seaside Ressort buildable on hills
 INSERT INTO Improvement_ValidTerrains(ImprovementType, TerrainType) VALUES
     ('IMPROVEMENT_BEACH_RESORT', 'TERRAIN_GRASS_HILLS'),
