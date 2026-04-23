@@ -385,7 +385,7 @@
 		<!-- == CREE == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_CREE_TRADE_GAIN_TILES_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>解锁“货币”科技和“外交部门”后分别+1 [ICON_TradeRoute] 贸易路线容量。解锁“对外贸易”市政后在 [ICON_Capital] 首都获得 1 个免费的商人。[NEWLINE]商人首次进入克里城市3个单元格内的无主单元格后，这些单元格将划入克里领土中。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T4牧场资源、T4鹿。</Text>
+			<Text>解锁“货币”科技和“外交部门”市政后分别+1 [ICON_TradeRoute] 贸易路线容量。解锁“对外贸易”市政后在 [ICON_Capital] 首都获得 1 个免费的商人。[NEWLINE]商人首次进入克里城市3个单元格内的无主单元格后，这些单元格将划入克里领土中。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T4牧场资源、T4鹿。</Text>
 		</Replace>
 		<Replace Tag="LOC_LEADER_POUNDMAKER_ABILITY_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>所有同盟类型均可形成共享视野。[NEWLINE]你的输出 [ICON_TradeRoute] 贸易路线，目的地城市每拥有一座营地或牧场，便为你提供+1 [ICON_Food] 食物。[NEWLINE]通往你城市的 [ICON_TradeRoute] 贸易路线，目的地城市每拥有一座营地或牧场，便为你提供+1 [ICON_Gold] 金币。</Text>
