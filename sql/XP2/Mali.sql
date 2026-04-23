@@ -10,13 +10,61 @@ UPDATE Units SET Combat=53 WHERE UnitType='UNIT_MALI_MANDEKALU_CAVALRY';
 DELETE FROM TraitModifiers WHERE TraitType = 'TRAIT_CIVILIZATION_MALI_GOLD_DESERT' AND ModifierId = 'TRAIT_LESS_UNIT_PRODUCTION';
 DELETE FROM TraitModifiers WHERE TraitType = 'TRAIT_CIVILIZATION_MALI_GOLD_DESERT' AND ModifierId = 'TRAIT_LESS_BUILDING_PRODUCTION';
 
+-- 2026/04/23: -10% production at ancient era and +1% per era after that, up to -5% at modern and later eras
 INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
     ('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'BBG_TRAIT_MALI_LESS_CITY_PRODUCTION');
 INSERT INTO Modifiers(ModifierId, ModifierType) VALUES
     ('BBG_TRAIT_MALI_LESS_CITY_PRODUCTION', 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER');
 INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
     ('BBG_TRAIT_MALI_LESS_CITY_PRODUCTION', 'YieldType', 'YIELD_PRODUCTION'),
-    ('BBG_TRAIT_MALI_LESS_CITY_PRODUCTION', 'Amount', '-5');
+    ('BBG_TRAIT_MALI_LESS_CITY_PRODUCTION', 'Amount', '-10');
+
+-- INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
+--     ('TRAIT_CIVILIZATION_MALI_GOLD_DESERT', 'CCB_TRAIT_MALI_CITY_PRODUCTION_OFFSET_ERA_CLASSICAL');
+-- INSERT INTO Modifiers(ModifierId, ModifierType, OwnerRequirementSetId) VALUES
+--     ('CCB_TRAIT_MALI_CITY_PRODUCTION_OFFSET_ERA_CLASSICAL', 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER', 'BBG_PLAYER_IS_IN_ERA_CLASSICAL_REQUIREMENTS');
+-- INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
+--     ('CCB_TRAIT_MALI_CITY_PRODUCTION_OFFSET_ERA_CLASSICAL', 'YieldType', 'YIELD_PRODUCTION'),
+--     ('CCB_TRAIT_MALI_CITY_PRODUCTION_OFFSET_ERA_CLASSICAL', 'Amount', '1');
+
+CREATE TEMP TABLE IF NOT EXISTS tmp_mali_era_offset (
+    era TEXT PRIMARY KEY,
+    amount INTEGER NOT NULL
+);
+
+DELETE FROM tmp_mali_era_offset;
+INSERT INTO tmp_mali_era_offset(era, amount) VALUES
+    ('ERA_CLASSICAL', 1),
+    ('ERA_MEDIEVAL', 2),
+    ('ERA_RENAISSANCE', 3),
+    ('ERA_INDUSTRIAL', 4),
+    ('ERA_MODERN', 5),
+    ('ERA_ATOMIC', 5);
+
+INSERT INTO TraitModifiers(TraitType, ModifierId)
+SELECT
+    'TRAIT_CIVILIZATION_MALI_GOLD_DESERT',
+    'CCB_TRAIT_MALI_CITY_PRODUCTION_OFFSET_' || era
+FROM tmp_mali_era_offset;
+INSERT INTO Modifiers(ModifierId, ModifierType, OwnerRequirementSetId)
+SELECT
+    'CCB_TRAIT_MALI_CITY_PRODUCTION_OFFSET_' || era,
+    'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER',
+    'BBG_PLAYER_IS_IN_' || era || '_REQUIREMENTS'
+FROM tmp_mali_era_offset;
+INSERT INTO ModifierArguments(ModifierId, Name, Value)
+SELECT
+    'CCB_TRAIT_MALI_CITY_PRODUCTION_OFFSET_' || era,
+    'YieldType',
+    'YIELD_PRODUCTION'
+FROM tmp_mali_era_offset;
+INSERT INTO ModifierArguments(ModifierId, Name, Value)
+SELECT
+    'CCB_TRAIT_MALI_CITY_PRODUCTION_OFFSET_' || era,
+    'Amount',
+    1
+FROM tmp_mali_era_offset;
+DROP TABLE tmp_mali_era_offset;
 
 -- Faith on cities removed
 DELETE FROM TraitModifiers WHERE TraitType = 'TRAIT_CIVILIZATION_MALI_GOLD_DESERT' AND ModifierId = 'TRAIT_DESERT_CITY_CENTER_FAITH';
