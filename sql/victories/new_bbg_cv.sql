@@ -48,7 +48,7 @@ UPDATE GreatWorks SET Tourism=2 WHERE GreatWorkObjectType='GREATWORKOBJECT_WRITI
 UPDATE GreatWork_YieldChanges SET YieldChange=3 WHERE YieldType='YIELD_CULTURE' AND
   EXISTS(SELECT * FROM GreatWorks WHERE GreatWorkObjectType='GREATWORKOBJECT_WRITING' AND
          GreatWorks.GreatWorkType = GreatWork_YieldChanges.GreatWorkType)
-        AND GreatWorks.GreatWorkType NOT IN ('GREATWORK_EUCLID');
+        AND GreatWorkType NOT IN ('GREATWORK_EUCLID');
 
 -- Music
 UPDATE GreatWorks SET Tourism=8 WHERE GreatWorkObjectType='GREATWORKOBJECT_MUSIC';
