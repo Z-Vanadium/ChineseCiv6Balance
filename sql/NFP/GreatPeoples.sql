@@ -10,7 +10,7 @@ VALUES (NULL, 0, 'LOC_GREATWORK_EUCLID_QUOTE', NULL, NULL, 'LOC_GREATWORK_EUCLID
 INSERT INTO GreatWork_YieldChanges (GreatWorkType, YieldType, YieldChange) VALUES
     ('GREATWORK_EUCLID', 'YIELD_SCIENCE', 2),
     ('GREATWORK_EUCLID', 'YIELD_CULTURE', 2);
-UPDATE GreatPersonIndividuals SET ActionRequiresCompletedDistrictType=NULL WHERE GreatPersonIndividualType='GREAT_PERSON_INDIVIDUAL_EUCLID';
+UPDATE GreatPersonIndividuals SET ActionRequiresCompletedDistrictType=NULL, ActionCharges=0, ActionEffectTextOverride=NULL WHERE GreatPersonIndividualType='GREAT_PERSON_INDIVIDUAL_EUCLID';
 
 -- Dandara gives the most advanced support unit (instead of a warrior monk with experience)
 UPDATE Modifiers SET ModifierType='MODIFIER_SINGLE_CITY_GRANT_UNIT_BY_CLASS_IN_NEAREST_CITY' WHERE ModifierId='GREAT_PERSON_INDIVIDUAL_DANDARA_ACTIVE';
