@@ -5,5 +5,7 @@
 		<Row Name="ICON_POLICY_HARD_SHELL_EXPLOSIVES" Atlas="ICON_ATLAS_POLICIES" Index="1"/>
 		<Row Name="ICON_POLICY_TRENCH_WARFARE" Atlas="ICON_ATLAS_POLICIES" Index="1"/>
 		<Row Name="ICON_VICTORY_TRADITIONAL_DOMINATION" Atlas="ICON_ATLAS_VICTORIES" Index="3"/>
+	
+		<Row Name="ICON_GREATWORK_EUCLID"		Atlas="ICON_ATLAS_GREATWORKS"			Index="0"/>
   	</IconDefinitions>                                                                
 </GameInfo>  
