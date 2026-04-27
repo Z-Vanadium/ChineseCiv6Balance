@@ -54,7 +54,7 @@ INSERT INTO Modifiers(ModifierId, ModifierType) VALUES ('CCB_ALEXANDER_ENCAMPMEN
 INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES ('CCB_ALEXANDER_ENCAMPMENT_BUILDING_PRODUCTION', 'DistrictType', 'DISTRICT_ENCAMPMENT'),
 ('CCB_ALEXANDER_ENCAMPMENT_BUILDING_PRODUCTION', 'Amount', '25');
 INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
-('TRAIT_LEADER_QIN', 'CCB_ALEXANDER_ENCAMPMENT_BUILDING_PRODUCTION');
+('TRAIT_LEADER_TO_WORLDS_END', 'CCB_ALEXANDER_ENCAMPMENT_BUILDING_PRODUCTION');
 
 -- =======================================================================================
 -- 2024/5/23 by OSCAR. 
