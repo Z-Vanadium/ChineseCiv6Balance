@@ -92,6 +92,10 @@ INSERT OR IGNORE INTO TypeProperties (Type, Name, Value) VALUES
 -- =                        DOGSLED                         =
 -- ==========================================================
 
+-- 2026/04/27: Ancient unit gets -5 against city center, see Base/Units.sql
+INSERT OR IGNORE INTO TypeTags (Type, Tag) VALUES
+    ('UNIT_LIME_THULE_DOGSLED', 'CLASS_MALUS_CITY_CENTER');
+
 DELETE FROM UnitReplaces WHERE CivUniqueUnitType='UNIT_LIME_THULE_DOGSLED';
 INSERT INTO UnitReplaces (CivUniqueUnitType, ReplacesUnitType) VALUES
     ('UNIT_LIME_THULE_DOGSLED', 'UNIT_SCOUT');
