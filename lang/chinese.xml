@@ -48,7 +48,7 @@
 			<Text>建造工业区、水渠时+100% [ICON_PRODUCTION] 生产力。工业区+2 [ICON_Amenities] 宜居度。建造工业区和其建筑后获得1个免费近战单位。免费单位的生成或维护不需要资源。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_LINCOLN_EXPANSION_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建造工业区、水渠时+100% [ICON_PRODUCTION] 生产力。工业区+2 [ICON_Amenities] 宜居度，+3每回合忠诚度，但种植园-2每回合忠诚度。[NEWLINE][NEWLINE]建造工业区和其建筑后获得1个免费近战单位。免费单位 +5 [ICON_Strength] 战斗力，生成或维护不需要资源。</Text>
+			<Text>建造工业区、水渠时 +100% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]工业区提供 +2 [ICON_Amenities] 宜居度，+3 每回合忠诚度；[NEWLINE]水渠提供 +2 [ICON_FOOD] 食物；[NEWLINE]但种植园提供 -2 每回合忠诚度。[NEWLINE][NEWLINE]建造工业区和其建筑后获得1个免费近战单位。免费单位 +5 [ICON_Strength] 战斗力，生成或维护不需要资源。</Text>
 		</Replace>
 		<Row Tag="LOC_ABILITY_LINCOLN_MELEE_UNITS_COMBAT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>+5 [ICON_Strength] 战斗力 (解放黑奴宣言)</Text>
@@ -510,11 +510,18 @@
 		</Replace>
 		<!-- = leader ability (Victoria Age of Steam) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_VICTORIA_ALT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中每有一座工厂或发电厂，便+5% [ICON_PRODUCTION] 生产力。建造工业区建筑时+20% [ICON_PRODUCTION] 生产力。拥有电力供给时，建筑的额外产出+4。[NEWLINE][NEWLINE]拥有灯塔的城市+1 [ICON_GreatEngineer] 大工程师点数。工业区从皇家海军船坞获得标准相邻加成。</Text>
+			<Text>获得“探索”市政后，每座拥有工业区的城市都能建造比平常多一个 [ICON_DISTRICT] 专业化区域（无视 [ICON_Citizen] 人口数量限制）。城市中每有一座工厂或发电厂，便 +5% [ICON_PRODUCTION] 生产力。拥有电力供给时，建筑的额外产出+4。[NEWLINE][NEWLINE]灯塔提供 +1 [ICON_GreatEngineer] 大工程师点数。工业区从皇家海军船坞互相获得大量 [ICON_PRODUCTION] 生产力相邻加成，皇家海军船坞从工业区获得大量 [ICON_GOLD] 金币相邻加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_AOS_ADJENCY_IZ_RND_DESC" Language="zh_Hans_CN">
 			<Text>+{1_num} [ICON_PRODUCTION] 生产力，来自相邻皇家海军船坞</Text>
 		</Replace>
+			<!-- Here must use tag 'Row' -->
+		<Row Tag="LOC_CCB_DISTRICT_INDUSTRIAL_ZONE_YIELD_PRODUCTION_FROM_DISTRICT_ROYAL_NAVY_DOCKYARD" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 皇家海军船坞区域。</Text>
+		</Row>
+		<Row Tag="LOC_CCB_DISTRICT_ROYAL_NAVY_DOCKYARD_YIELD_GOLD_FROM_DISTRICT_INDUSTRIAL_ZONE" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 工业区区域。</Text>
+		</Row>
 		<!-- = leader ability (Elizabeth) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_ELIZABETH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>完成“造船术”、“探索”、“重商主义”后，均获得 [ICON_TradeRoute] 贸易路线容量+1。起源城市中每有一个专业化区域，[ICON_TradeRoute] 通往任意城邦的贸易路线便+3 [ICON_GOLD] 金币。[NEWLINE][NEWLINE]用海军单位掠夺 [ICON_TradeRoute] 贸易路线的收益+100%。海军袭击者单位+1 [ICON_Movement] 移动力、+1视野。[ICON_PROMOTION] 升级海军袭击者单位时不会结束其回合。</Text>
@@ -2423,6 +2430,9 @@
 
 
 		<!-- === WORLD WONDERS === -->
+		<Replace Tag="LOC_BUILDING_GOLDEN_GATE_BRIDGE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>陆地单位无需上船便可从桥上跨越。大桥的效果与现代道路相同，并会在桥头两端的陆地单元格中建造现代道路（若未修建）。[NEWLINE]为该城市提供 +3 [ICON_Amenities] 宜居度。为所有单位提供 +1 [ICON_Movement] 移动力。[NEWLINE]如 [ICON_TradeRoute] 贸易路线途径此处，其将从目的地的区域处获得成倍 [ICON_Gold] 金币。[NEWLINE][NEWLINE]必须修建在海岸单元格中。大桥必须修建在相隔一个单元格并正对的两个陆地单元格中。大桥左右两侧必须各有至少1个水域单元格。</Text>
+		</Replace>
 		<Replace Tag="LOC_BUILDING_ST_BASILS_CATHEDRAL_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>建成后提供1个 [ICON_GreatWork_Relic] 遗物。此城市产出的宗教 [ICON_Tourism] 旅游业绩+100%。此城市所有冻土单元格+1 [ICON_Food] 食物、+1 [ICON_Production] 生产力、和+1 [ICON_Culture] 文化。[NEWLINE][NEWLINE]必须建在市中心旁。</Text>
 		</Replace>
@@ -2475,7 +2485,7 @@
 			<Text>此奇观建成后，提供2点或以上 [ICON_GLORY_GOLDEN_AGE] 时代得分的历史时刻所提供的 [ICON_GLORY_GOLDEN_AGE] 时代得分+1。处于 [ICON_GLORY_GOLDEN_AGE] 黄金或 [ICON_GLORY_SUPER_GOLDEN_AGE] 英雄时代时，所有城市+10% [ICON_GOLD] 金币产出。[NEWLINE][NEWLINE]必须建在河流旁。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_CHICHEN_ITZA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>帝国中所有雨林单元格 +1 [ICON_Production] 生产力。本城市中所有雨林单元格 +1 [ICON_Culture] 文化值。[NEWLINE][NEWLINE]必须建在雨林。</Text>
+			<Text>帝国中所有雨林单元格 +1 [ICON_Production] 生产力, +1 [ICON_Culture] 文化值。[NEWLINE][NEWLINE]必须建在雨林。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_HAGIA_SOPHIA_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>神社提供2点 [ICON_SCIENCE] 科技值。[NEWLINE][NEWLINE]必须建在靠近圣地的平坦地形上，同时必须已创立宗教。</Text>
@@ -2914,7 +2924,25 @@
 			<Text>建造 2 个研究实验室。</Text>
 		</Replace>
 		<Replace Tag="BBG_LOC_TECH_MILITARY_SCIENCE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>+1间谍容量。</Text>
+			<Text>间谍容量 +1。军事工程师 +1 [ICON_Movement] 移动力。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVIC_SUFFRAGE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>获得“贸易银行”政策卡的效果。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVIC_TOTALITARIANISM_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>获得“国家认同”政策卡的效果。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVIC_CLASS_STRUGGLE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>获得“公共工程”和“摩天大楼”政策卡的效果。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVIC_CORPORATE_LIBERTARIANISM_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>获得“第三选择”政策卡的效果。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVIC_DIGITAL_DEMOCRACY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>获得“新政”政策卡的效果。</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVIC_SYNTHETIC_TECHNOCRACY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>获得“集体化”政策卡的效果。</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_MILITARY_SCIENCE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>长城+1 [ICON_Culture] 文化值。</Text>
@@ -3021,7 +3049,10 @@
 			<Text>在帝国全境内+25% [ICON_Tourism] 旅游业绩。</Text>
 		</Replace>
 		<Replace Tag="LOC_CIVIC_FEUDALISM_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>与每2个农场改良设施相邻时，农场提供的 [ICON_Food] 食物+1。</Text>
+			<Text>与每个农场改良设施相邻时，农场提供的 [ICON_Food] 食物+1。</Text>
+		</Replace>
+		<Replace Tag="LOC_TECH_REPLACEABLE_PARTS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>将农场改良设施升级为机械化农业。为相邻的每个农场改良设施 +1 [ICON_Production] 生产力。牧场改良设施提供的 [ICON_Production] 生产力 +1。</Text>
 		</Replace>
 		<Replace Tag="LOC_CIVIC_IDEOLOGY_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>可额外招募一名间谍。开放所有城邦的边境。[NEWLINE]如果解锁市政“归正会”，非宗教单位与信奉其他宗教的文明进行战争时，+4 [ICON_Strength] 战斗力。</Text>
@@ -3055,10 +3086,10 @@
 			<Text>每回合额外获得2点 [ICON_RESOURCE_HORSES] 马与 [ICON_RESOURCE_IRON] 铁资源。所有对应改良设施每回合额外产出1点。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_DRILL_MANUALS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>每回合额外获得2点 [ICON_RESOURCE_NITER] 硝石与 [ICON_RESOURCE_COAL] 煤资源。所有对应改良设施每回合额外产出1点。</Text>
+			<Text>每回合额外获得4点 [ICON_RESOURCE_NITER] 硝石与 [ICON_RESOURCE_COAL] 煤资源。所有对应改良设施每回合额外产出2点。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_RESOURCE_MANAGEMENT_DESCRIPTION_XP2" Language="zh_Hans_CN">
-			<Text>每回合额外获得2点 [ICON_RESOURCE_ALUMINUM] 铝与 [ICON_RESOURCE_OIL] 石油资源。所有对应改良设施每回合额外产出1点。</Text>
+			<Text>每回合额外获得4点 [ICON_RESOURCE_ALUMINUM] 铝与 [ICON_RESOURCE_OIL] 石油资源。所有对应改良设施每回合额外产出2点。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_SIEGE_NAME" Language="zh_Hans_CN">
 			<Text>攻城器械</Text>
@@ -3127,10 +3158,10 @@
 			<Text>每回合+2 [ICON_InfluencePerTurn] 影响力点数。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_GUNBOAT_DIPLOMACY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>每回合+4 [ICON_InfluencePerTurn] 影响力点数。来自每位城邦 [ICON_Envoy] 使者的 [ICON_Gold] 金币+1。</Text>
+			<Text>每回合+4 [ICON_InfluencePerTurn] 影响力点数；+25% [ICON_InfluencePerTurn] 影响力点数。来自每位城邦 [ICON_Envoy] 使者的 [ICON_Gold] 金币+1。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_NUCLEAR_ESPIONAGE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>窃取到 [ICON_TechBoosted] 科技提升而未被发现的间谍获得额外 [ICON_TechBoosted] 提升。</Text>
+			<Text>{LOC_POLICY_MACHIAVELLIANISM_DESCRIPTION}[NEWLINE]窃取到 [ICON_TechBoosted] 科技提升而未被发现的间谍获得额外 [ICON_TechBoosted] 提升。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_INSULAE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>拥有 [ICON_DISTRICT] 专业化区域的所有城市+1 [ICON_Housing] 住房。</Text>
@@ -3166,7 +3197,7 @@
 			<Text>建造 [ICON_DISTRICT] 区域时+15% [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVT_ACCUMULATED_BONUS_BRIEF_MONARCHY_XP1" Language="zh_Hans_CN">
-			<Text>+50% [ICON_InfluencePerTurn] 影响力点数。</Text>
+			<Text>+25% [ICON_InfluencePerTurn] 影响力点数。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVT_ACCUMULATED_BONUS_BRIEF_FASCISM_XP1" Language="zh_Hans_CN">
 			<Text>生产单位时+50% [ICON_Production] 生产力。</Text>
@@ -3222,6 +3253,21 @@
 		<Replace Tag="LOC_POLICY_FINEST_HOUR_DESCRIPTION_XP2" Language="zh_Hans_CN">
 			<Text>所有单位在本国领土中作战时+5 [ICON_Strength] 战斗力。</Text>
 		</Replace>
+		<Replace Tag="LOC_POLICY_CULTURE_EDUCATION_NAME" Language="zh_Hans_CN">
+			<Text>文艺教育</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_CULTURE_EDUCATION_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>每回合的 [ICON_GreatWriter] 大作家、[ICON_GreatArtist] 大艺术家和 [ICON_GreatMusician] 大音乐家点数 +4。每有一个古罗马剧场，每回合的 [ICON_GreatWriter] 大作家点数便 +2；每有一个艺术博物馆，每回合的 [ICON_GreatArtist] 大作家点数便 +2；每有一个广播中心，每回合的 [ICON_GreatMusician] 大音乐家点数便 +4。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_WAR_HOSPITAL_NAME" Language="zh_Hans_CN">
+			<Text>综合后勤保障</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_WAR_HOSPITAL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>所有军事单位每回合恢复的生命值 +20。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_AFTER_ACTION_REPORTS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>所有单位的战斗经验值 +25%，[ICON_Promotion] 晋升不会结束回合。</Text>
+		</Replace>
 		<Replace Tag="LOC_ABILITY_FINEST_HOUR_FRIENDLY_TERRITORY_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>荣光时刻：在本国领土中作战时+5 [ICON_Strength] 战斗力。</Text>
 		</Replace>
@@ -3271,7 +3317,7 @@
 			<Text>军备竞赛</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_ARMS_RACE_T_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建造核装置时 +25% [ICON_Production] 生产力。</Text>
+			<Text>建造核装置时 +25% [ICON_Production] 生产力。维护核装置的 [ICON_Gold] 金币费用 -25%。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_BATTLEFIELD_MEDICINE_NAME" Language="zh_Hans_CN">
 			<Text>战地医疗</Text>
