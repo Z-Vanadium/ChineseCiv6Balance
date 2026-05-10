@@ -540,3 +540,7 @@ INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 	('CCB_PROJECT_COMPLETION_STRENGTH_BONUS', 'Preview', 'LOC_CCB_PROJECT_COMPLETION_STRENGTH_BONUS_DESC');
 
 UPDATE Technologies SET Description='LOC_CCB_TECH_PREDICTIVE_SYSTEMS_DESCRIPTION' WHERE TechnologyType='TECH_PREDICTIVE_SYSTEMS';
+
+-- 2026/05/10: farm +1 prod from each farm with tech replacable part, +1 food from each farm with civic feudelism
+UPDATE Adjacency_YieldChanges SET TilesRequired=1, ObsoleteTech=NULL WHERE ID="Farms_MedievalAdjacency";
+UPDATE Adjacency_YieldChanges SET YieldType='YIELD_PRODUCTION' WHERE ID="Farms_MechanizedAdjacency";
