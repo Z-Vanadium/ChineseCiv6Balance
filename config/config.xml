@@ -15,6 +15,8 @@
 
 		<Row ParameterId="SettlersConfig" Name="LOC_BBG_SETTLER_CONFIG_NAME" Description="BBG_SETTLER_CONFIG_DESC" Domain="SettlersConfig" DefaultValue="-1" ConfigurationGroup="Game" ConfigurationId="SettlersConfig" GroupId="GameOptions" SupportsSinglePlayer="1" SupportsPlayByCloud="1" SupportsHotSeat="1" SortIndex="12" />
 
+		<Row ParameterId="SettlersEmbarkConfig" Name="LOC_CCB_SETTLER_EMBARK_CONFIG_NAME" Description="LOC_CCB_SETTLER_EMBARK_CONFIG_DESC" Domain="SettlersEmbarkConfig" DefaultValue="-1" ConfigurationGroup="Game" ConfigurationId="SettlersEmbarkConfig" GroupId="GameOptions" SupportsSinglePlayer="1" SupportsPlayByCloud="1" SupportsHotSeat="1" SortIndex="13" />
+
 		<Row ParameterId="TRADITIONAL_DOMINATION_LEVEL" Name="Domination Level" Description="Description" Visible="0"  Domain="int" DefaultValue="66" ConfigurationGroup="Game" ConfigurationId="TRADITIONAL_DOMINATION_LEVEL" GroupId="AdvancedOptions" />
 		<Row ParameterId="VICTORY_TRADITIONAL_DOMINATION" Name="LOC_VICTORY_TRADITIONAL_DOMINATION_NAME" Description="LOC_VICTORY_TRADITIONAL_DOMINATION_TT" Visible="1"  Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="VICTORY_TRADITIONAL_DOMINATION" GroupId="Victories" />
 		<Row ParameterId="VICTORY_CONQUEST" Name="LOC_VICTORY_DOMINATION_NAME" Description="LOC_VICTORY_DOMINATION_TT" Visible="1" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="VICTORY_CONQUEST" GroupId="Victories" />
@@ -114,6 +116,9 @@
 		
 		<Row Domain="SettlersConfig" Value="-1" Name="LOC_BBG_SETTLER_CONFIG_BASEGAME_NAME" Description="LOC_BBG_SETTLER_CONFIG_BASEGAME_DESC" SortIndex="10"/>
 		<Row Domain="SettlersConfig" Value="0" Name="LOC_BBG_SETTLER_CONFIG_CHILL_NAME" Description="LOC_BBG_SETTLER_CONFIG_CHILL_DESC" SortIndex="20"/>
+		
+		<Row Domain="SettlersEmbarkConfig" Value="-1" Name="LOC_CCB_SETTLER_EMBARK_CONFIG_BASEGAME_NAME" Description="LOC_CCB_SETTLER_EMBARK_CONFIG_BASEGAME_DESC" SortIndex="10"/>
+		<Row Domain="SettlersEmbarkConfig" Value="0" Name="LOC_CCB_SETTLER_EMBARK_CONFIG_EARLY_NAME" Description="LOC_CCB_SETTLER_EMBARK_CONFIG_EARLY_DESC" SortIndex="20"/>
 
 		<Row Domain="BBGBarbsSetting" Value="0" Name="BBG_FRONT_BARB_SETTING_0_NAME" Description="BBG_FRONT_BARB_SETTING_0_DESC" SortIndex="10"/>
 		<Row Domain="BBGBarbsSetting" Value="3" Name="BBG_FRONT_BARB_SETTING_3_NAME" Description="BBG_FRONT_BARB_SETTING_3_DESC" SortIndex="20"/>

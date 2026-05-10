@@ -284,6 +284,14 @@
 			</ConfigurationValueMatches>
 		</Criteria>
 
+		<Criteria id="Settlers_Embark_Early">
+			<ConfigurationValueMatches>
+				<ConfigurationId>SettlersEmbarkConfig</ConfigurationId>
+				<Group>Game</Group>
+				<Value>0</Value>
+			</ConfigurationValueMatches>
+		</Criteria>
+
 
 		<!-- BBG Expanded -->
 		<!-- I don't know how to do an OR -->
@@ -1123,6 +1131,14 @@
 			<Criteria>Settlers_Sent_Back</Criteria>
 			<File>sql/Settlers/Settlers.sql</File>
 		</UpdateDatabase>
+	
+		<UpdateDatabase id="Settlers">
+			<Properties>
+				<LoadOrder>20000</LoadOrder>
+			</Properties>
+			<Criteria>Settlers_Embark_Early</Criteria>
+			<File>sql/Settlers/EmbarkEarly.sql</File>
+		</UpdateDatabase>
 
 		<!-- -->
 		<UpdateIcons id="bbg_Icons">
@@ -1498,6 +1514,7 @@
 		<File>sql/victories/new_bbg_new_domination.sql</File>
 
 		<File>sql/Settlers/Settlers.sql</File>
+		<File>sql/Settlers/EmbarkEarly.sql</File>
 
 		<File>sql/bbcc/bbcc_configvalues.sql</File>
 	    <File>sql/bbcc/core_bbcc.sql</File>

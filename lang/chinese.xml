@@ -3859,6 +3859,28 @@
 			<Text>移民被敌方单位俘获时会被送回最近的城市类似于伟人。</Text>
 		</Row>
 
+		<!-- === SETTLER EMBARK === -->
+		<Row Tag="LOC_CCB_SETTLER_EMBARK_CONFIG_NAME" Language="zh_Hans_CN">
+			<Text>[COLOR:92,216,92]开拓者上船[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_CCB_SETTLER_EMBARK_CONFIG_DESC" Language="zh_Hans_CN">
+			<Text>开拓者可以更早上，适配海图铺城节奏。</Text>
+		</Row>
+		<!-- == Firaxis == -->
+		<Row Tag="LOC_CCB_SETTLER_EMBARK_CONFIG_BASEGAME_NAME" Language="zh_Hans_CN">
+			<Text>原版</Text>
+		</Row>
+		<Row Tag="LOC_CCB_SETTLER_EMBARK_CONFIG_BASEGAME_DESC" Language="zh_Hans_CN">
+			<Text>Firaxis默认设定。开拓者在“造船术”科技后可以上船。</Text>
+		</Row>
+		<!-- == Earlier == -->		
+		<Row Tag="LOC_CCB_SETTLER_EMBARK_CONFIG_EARLY_NAME" Language="zh_Hans_CN">
+			<Text>更早</Text>
+		</Row>
+		<Row Tag="LOC_CCB_SETTLER_EMBARK_CONFIG_EARLY_DESC" Language="zh_Hans_CN">
+			<Text>开拓者在“航海术”科技后可以上船。</Text>
+		</Row>
+
 		<!-- === New Map === -->
 		<Row Tag="LOC_MAP_PANGAEA_ULTIMA_NAME" Language="zh_Hans_CN">
 			<Text>终极盘古</Text>
