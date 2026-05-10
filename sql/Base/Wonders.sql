@@ -378,13 +378,11 @@ UPDATE Building_YieldChanges SET YieldChange=1 WHERE BuildingType='BUILDING_COLO
 
 
 -- Chichen Itza - Culture +1 / prod +1 for all jungle in the empire.
--- 2026/04/23: culture removed, now applies to single city only
--- UPDATE Modifiers SET ModifierType='MODIFIER_PLAYER_ADJUST_PLOT_YIELD' WHERE ModifierId='CHICHEN_ITZA_JUNGLE_CULTURE';
--- UPDATE Modifiers SET SubjectRequirementSetId='PLOT_HAS_JUNGLE_REQUIREMENTS' WHERE ModifierId='CHICHEN_ITZA_JUNGLE_CULTURE';
--- INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
---     ('CHICHEN_ITZA_JUNGLE_CULTURE', 'YieldType', 'YIELD_CULTURE'),
---     ('CHICHEN_ITZA_JUNGLE_CULTURE', 'Amount', '1');
-UPDATE ModifierArguments SET Value=1 WHERE ModifierId='CHICHEN_ITZA_JUNGLE_CULTURE_MODIFIER' AND Name='Amount';
+UPDATE Modifiers SET ModifierType='MODIFIER_PLAYER_ADJUST_PLOT_YIELD' WHERE ModifierId='CHICHEN_ITZA_JUNGLE_CULTURE';
+UPDATE Modifiers SET SubjectRequirementSetId='PLOT_HAS_JUNGLE_REQUIREMENTS' WHERE ModifierId='CHICHEN_ITZA_JUNGLE_CULTURE';
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('CHICHEN_ITZA_JUNGLE_CULTURE', 'YieldType', 'YIELD_CULTURE'),
+    ('CHICHEN_ITZA_JUNGLE_CULTURE', 'Amount', '1');
 
 UPDATE Modifiers SET ModifierType='MODIFIER_PLAYER_ADJUST_PLOT_YIELD' WHERE ModifierId='CHICHEN_ITZA_JUNGLE_PRODUCTION';
 UPDATE Modifiers SET SubjectRequirementSetId='PLOT_HAS_JUNGLE_REQUIREMENTS' WHERE ModifierId='CHICHEN_ITZA_JUNGLE_PRODUCTION';
