@@ -19,6 +19,16 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('BBG_LINCOLN_AQUEDUCT_BONUS_PRODUCTION', 'DistrictType', 'DISTRICT_AQUEDUCT'),
 	('BBG_LINCOLN_AQUEDUCT_BONUS_PRODUCTION', 'Amount', '100');
 
+-- 2026/05/10 +2 food for aqueducts
+-- BBG_CITY_HAS_DISTRICT_AQUEDUCT see also at sql/CityStates/CityStates.sql
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_LINCOLN', 'CCB_LINCOLN_AQUEDUCT_BONUS_FOOD');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_LINCOLN_AQUEDUCT_BONUS_FOOD', 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_CHANGE', 0, 0, 0, NULL, 'BBG_CITY_HAS_DISTRICT_AQUEDUCT');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_LINCOLN_AQUEDUCT_BONUS_FOOD', 'Amount', '2'), 
+('CCB_LINCOLN_AQUEDUCT_BONUS_FOOD', 'YieldType', 'YIELD_FOOD');
+
 -- Base unit discount
 -- 14/10/23 removed
 -- INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
