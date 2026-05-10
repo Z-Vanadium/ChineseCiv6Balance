@@ -119,6 +119,15 @@ INSERT INTO CustomPlacement(ObjectType, Hash, PlacementFunction)
     SELECT Types.Type, Types.Hash, 'BBG_PANAMA_CANAL_CUSTOM_PLACEMENT'
     FROM Types WHERE Type = 'BUILDING_PANAMA_CANAL';
 
+-- appeal and tourism bonus removed, +1 movement for land units
+DELETE FROM BuildingModifiers WHERE BuildingType='BUILDING_GOLDEN_GATE_BRIDGE' AND ModifierId IN ('GOLDENGATE_CITYAPPEAL', 'GOLDENGATE_NATIONAL_PARK_TOURISM');
+INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES 
+('BUILDING_GOLDEN_GATE_BRIDGE', 'CCB_GOLDEN_GATE_BRIDGE_MOVEMENT');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_GOLDEN_GATE_BRIDGE_MOVEMENT', 'MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT', 0, 0, 0, NULL, 'REQUIREMENTS_UNIT_LAND_DOMAIN');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_GOLDEN_GATE_BRIDGE_MOVEMENT', 'Amount', '1');
+
 -- University of Sankore - new bonus : Add +1 trader capacity AND add +1science +2gold for your all your traders (internal/external)
 DELETE FROM BuildingModifiers WHERE BuildingType='BUILDING_UNIVERSITY_SANKORE' AND ModifierId='SANKORE_TRADE_OFFER_SCIENCE';
 INSERT INTO Modifiers (ModifierId , ModifierType) VALUES
