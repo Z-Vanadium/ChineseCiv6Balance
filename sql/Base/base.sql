@@ -544,3 +544,20 @@ UPDATE Technologies SET Description='LOC_CCB_TECH_PREDICTIVE_SYSTEMS_DESCRIPTION
 -- 2026/05/10: farm +1 prod from each farm with tech replacable part, +1 food from each farm with civic feudelism
 UPDATE Adjacency_YieldChanges SET TilesRequired=1, ObsoleteTech=NULL WHERE ID="Farms_MedievalAdjacency";
 UPDATE Adjacency_YieldChanges SET YieldType='YIELD_PRODUCTION' WHERE ID="Farms_MechanizedAdjacency";
+
+-- 2026/05/10: tech military science +1 movement for military engineer
+INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
+('TECH_MILITARY_SCIENCE', 'CCB_MILITARY_SCIENCE_MOVEMENT_FOR_UNIT_MILITARY_ENGINEER');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MILITARY_SCIENCE_MOVEMENT_FOR_UNIT_MILITARY_ENGINEER', 'MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT', 0, 0, 0, NULL, 'CCB_REQSET_UNIT_IS_UNIT_MILITARY_ENGINEER');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MILITARY_SCIENCE_MOVEMENT_FOR_UNIT_MILITARY_ENGINEER', 'Amount', '1');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('CCB_REQSET_UNIT_IS_UNIT_MILITARY_ENGINEER', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('CCB_REQSET_UNIT_IS_UNIT_MILITARY_ENGINEER', 'REQ_CCB_UNIT_IS_UNIT_MILITARY_ENGINEER');
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQ_CCB_UNIT_IS_UNIT_MILITARY_ENGINEER', 'REQUIREMENT_UNIT_TYPE_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_UNIT_IS_UNIT_MILITARY_ENGINEER', 'UnitType', 'UNIT_MILITARY_ENGINEER');

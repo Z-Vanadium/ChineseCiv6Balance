@@ -384,3 +384,147 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
     ('POLICY_ARMS_RACE_T', 'CCB_ARMS_RACE_FASTER_NUKE'),
     ('POLICY_ARMS_RACE_T', 'CCB_ARMS_RACE_FASTER_THERMO');
+
+-- 2026/05/10: policies rework
+-- nation identity obsolete at totalitarism, and work auyomatically
+INSERT OR IGNORE INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
+	('POLICY_NATIONAL_IDENTITY', 'POLICY_THIRD_ALTERNATIVE');
+INSERT OR IGNORE INTO CivicModifiers (CivicType, ModifierId) SELECT 
+	'CIVIC_TOTALITARIANISM', ModifierId
+FROM PolicyModifiers
+WHERE PolicyType='POLICY_NATIONAL_IDENTITY';
+
+-- wisselbanken obsolete at suffrage, and work automatically
+INSERT OR IGNORE INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
+	('POLICY_WISSELBANKEN', 'POLICY_NEW_DEAL');
+INSERT OR IGNORE INTO CivicModifiers (CivicType, ModifierId) SELECT 
+	'CIVIC_SUFFRAGE', ModifierId
+FROM PolicyModifiers
+WHERE PolicyType='POLICY_WISSELBANKEN';
+
+-- public works and skyscrapers obsolete at class struggle, and work automatically
+INSERT OR IGNORE INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
+	('POLICY_PUBLIC_WORKS', 'POLICY_COLLECTIVIZATION');
+INSERT OR IGNORE INTO CivicModifiers (CivicType, ModifierId) SELECT 
+	'CIVIC_CLASS_STRUGGLE', ModifierId
+FROM PolicyModifiers
+WHERE PolicyType='POLICY_PUBLIC_WORKS';
+
+INSERT OR IGNORE INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
+	('POLICY_SKYSCRAPERS', 'POLICY_COLLECTIVIZATION');
+INSERT OR IGNORE INTO CivicModifiers (CivicType, ModifierId) SELECT 
+	'CIVIC_CLASS_STRUGGLE', ModifierId
+FROM PolicyModifiers
+WHERE PolicyType='POLICY_SKYSCRAPERS';
+
+-- civic corporate libertarianism automatically act third alternative
+INSERT OR IGNORE INTO CivicModifiers (CivicType, ModifierId) SELECT 
+	'CIVIC_CORPORATE_LIBERTARIANISM', ModifierId
+FROM PolicyModifiers
+WHERE PolicyType='POLICY_THIRD_ALTERNATIVE';
+
+-- civic digital democracy automatically act new deal
+INSERT OR IGNORE INTO CivicModifiers (CivicType, ModifierId) SELECT 
+	'CIVIC_DIGITAL_DEMOCRACY', ModifierId
+FROM PolicyModifiers
+WHERE PolicyType='POLICY_NEW_DEAL';
+
+-- civic synthetic technocracy automatically act collectivization
+INSERT OR IGNORE INTO CivicModifiers (CivicType, ModifierId) SELECT 
+	'CIVIC_SYNTHETIC_TECHNOCRACY', ModifierId
+FROM PolicyModifiers
+WHERE PolicyType='POLICY_COLLECTIVIZATION';
+
+-- new policies
+-- culture education: +4 gpp for artists, musicians and writers. +2/+2/+4 gpp for each corresponding building
+INSERT INTO Types(Type, Kind) VALUES
+	('POLICY_CULTURE_EDUCATION', 'KIND_POLICY');
+INSERT INTO Policies(PolicyType, Name, Description, PrereqCivic, GovernmentSlotType) VALUES
+	('POLICY_CULTURE_EDUCATION', 'LOC_POLICY_CULTURE_EDUCATION_NAME', 'LOC_POLICY_CULTURE_EDUCATION_DESCRIPTION', 'CIVIC_CULTURAL_HERITAGE', 'SLOT_GREAT_PERSON');
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+	('CCB_CULTURE_EDUCATION_ARTIST_GPP', 'MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS', NULL),
+	('CCB_CULTURE_EDUCATION_MUSICIAN_GPP', 'MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS', NULL),
+	('CCB_CULTURE_EDUCATION_WRITER_GPP', 'MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS', NULL),
+	('CCB_CULTURE_EDUCATION_ARTIST_BUILDING_GPP', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT', 'BUILDING_IS_MUSEUM_ART'),
+	('CCB_CULTURE_EDUCATION_MUSICIAN_BUILDING_GPP', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT', 'BUILDING_IS_BROADCAST_CENTER'),
+	('CCB_CULTURE_EDUCATION_WRITER_BUILDING_GPP', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT', 'BUILDING_IS_AMPHITHEATER');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+	('CCB_CULTURE_EDUCATION_ARTIST_GPP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST'),
+	('CCB_CULTURE_EDUCATION_ARTIST_GPP', 'Amount', 4),
+	('CCB_CULTURE_EDUCATION_MUSICIAN_GPP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_MUSICIAN'),
+	('CCB_CULTURE_EDUCATION_MUSICIAN_GPP', 'Amount', 4),
+	('CCB_CULTURE_EDUCATION_WRITER_GPP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER'),
+	('CCB_CULTURE_EDUCATION_WRITER_GPP', 'Amount', 4),
+	('CCB_CULTURE_EDUCATION_ARTIST_BUILDING_GPP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST'),
+	('CCB_CULTURE_EDUCATION_ARTIST_BUILDING_GPP', 'Amount', 2),
+	('CCB_CULTURE_EDUCATION_MUSICIAN_BUILDING_GPP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_MUSICIAN'),
+	('CCB_CULTURE_EDUCATION_MUSICIAN_BUILDING_GPP', 'Amount', 2),
+	('CCB_CULTURE_EDUCATION_WRITER_BUILDING_GPP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER'),
+	('CCB_CULTURE_EDUCATION_WRITER_BUILDING_GPP', 'Amount', 4);
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
+	('POLICY_CULTURE_EDUCATION', 'CCB_CULTURE_EDUCATION_ARTIST_GPP'),
+	('POLICY_CULTURE_EDUCATION', 'CCB_CULTURE_EDUCATION_MUSICIAN_GPP'),
+	('POLICY_CULTURE_EDUCATION', 'CCB_CULTURE_EDUCATION_WRITER_GPP'),
+	('POLICY_CULTURE_EDUCATION', 'CCB_CULTURE_EDUCATION_ARTIST_BUILDING_GPP'),
+	('POLICY_CULTURE_EDUCATION', 'CCB_CULTURE_EDUCATION_MUSICIAN_BUILDING_GPP'),
+	('POLICY_CULTURE_EDUCATION', 'CCB_CULTURE_EDUCATION_WRITER_BUILDING_GPP');
+INSERT INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
+	('POLICY_LITERARY_TRADITION', 'POLICY_CULTURE_EDUCATION'),
+	('POLICY_FRESCOES', 'POLICY_CULTURE_EDUCATION'),
+	('POLICY_SYMPHONIES', 'POLICY_CULTURE_EDUCATION');
+
+-- war hospital: +20 healing for units
+INSERT INTO Types(Type, Kind) VALUES
+	('POLICY_WAR_HOSPITAL', 'KIND_POLICY');
+INSERT INTO Policies(PolicyType, Name, Description, PrereqCivic, GovernmentSlotType) VALUES
+	('POLICY_WAR_HOSPITAL', 'LOC_POLICY_WAR_HOSPITAL_NAME', 'LOC_POLICY_WAR_HOSPITAL_DESCRIPTION', 'CIVIC_MOBILIZATION', 'SLOT_MILITARY');
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES 
+('POLICY_WAR_HOSPITAL', 'CCB_WAR_HOSPITAL_HEALING');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_WAR_HOSPITAL_HEALING', 'MODIFIER_PLAYER_UNITS_ADJUST_HEAL_PER_TURN', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_WAR_HOSPITAL_HEALING', 'Amount', '20'), 
+('CCB_WAR_HOSPITAL_HEALING', 'Type', 'ALL');
+
+-- machiavellianism now is replaced by nuclear espionage; nuclear espionage now cover old traits of machiavellianism
+INSERT INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
+	('POLICY_MACHIAVELLIANISM', 'POLICY_NUCLEAR_ESPIONAGE');
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) SELECT
+	'POLICY_NUCLEAR_ESPIONAGE', ModifierId
+FROM PolicyModifiers
+WHERE PolicyType='POLICY_MACHIAVELLIANISM';
+
+-- gunboat diplomacy +25% favor
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES 
+('POLICY_GUNBOAT_DIPLOMACY', 'CCB_GUNBOAT_DIPLOMACY_FAVOR');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_GUNBOAT_DIPLOMACY_FAVOR', 'MODIFIER_PLAYER_GOVERNMENT_FLAT_BONUS', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_GUNBOAT_DIPLOMACY_FAVOR', 'Amount', '25'), 
+('CCB_GUNBOAT_DIPLOMACY_FAVOR', 'BonusType', 'GOVERNMENTBONUS_ENVOYS');
+
+-- after action reports no finish moves
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES 
+('POLICY_AFTER_ACTION_REPORTS', 'CCB_AFTER_ACTION_REPORTS_NO_FINISH_MOVES');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_AFTER_ACTION_REPORTS_NO_FINISH_MOVES', 'MODIFIER_PLAYER_UNITS_PROMOTE_NO_FINISH_MOVES', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_AFTER_ACTION_REPORTS_NO_FINISH_MOVES', 'NoFinishMoves', '1');
+
+-- drill manuals: bonus to +4/+4/+2/+2
+UPDATE ModifierArguments SET Value=4 WHERE ModifierId='BBG_POLICY_GIVE_FREE_COAL' AND Name='Amount';
+UPDATE ModifierArguments SET Value=4 WHERE ModifierId='BBG_POLICY_GIVE_FREE_NITER' AND Name='Amount';
+UPDATE ModifierArguments SET Value=2 WHERE ModifierId='DRILL_MANUALS_ADDITIONAL_COAL_EXTRACTION' AND Name='Amount';
+UPDATE ModifierArguments SET Value=2 WHERE ModifierId='DRILL_MANUALS_ADDITIONAL_NITER_EXTRACTION' AND Name='Amount';
+
+-- resource management: bonus to +4/+4/+2/+2
+UPDATE ModifierArguments SET Value=4 WHERE ModifierId='BBG_POLICY_GIVE_FREE_OIL' AND Name='Amount';
+UPDATE ModifierArguments SET Value=4 WHERE ModifierId='BBG_POLICY_GIVE_FREE_ALUMINUM' AND Name='Amount';
+UPDATE ModifierArguments SET Value=2 WHERE ModifierId='RESOURCE_MANAGEMENT_ADDITIONAL_OIL_EXTRACTION' AND Name='Amount';
+UPDATE ModifierArguments SET Value=2 WHERE ModifierId='RESOURCE_MANAGEMENT_ADDITIONAL_ALUMINUM_EXTRACTION' AND Name='Amount';
+
+-- secend strike capability removed and merged into arm race t
+DELETE FROM Types WHERE Type='POLICY_SECOND_STRIKE_CAPABILITY';
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) SELECT
+	'POLICY_ARMS_RACE_T', ModifierId
+FROM PolicyModifiers WHERE PolicyType='POLICY_SECOND_STRIKE_CAPABILITY';
