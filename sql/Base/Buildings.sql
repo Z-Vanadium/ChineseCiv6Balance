@@ -75,8 +75,8 @@ UPDATE Buildings SET Cost=330 WHERE BuildingType='BUILDING_COAL_POWER_PLANT';
 -- Commercial hub buildings buff :
 UPDATE Building_GreatPersonPoints SET PointsPerTurn=2 WHERE BuildingType='BUILDING_BANK';
 UPDATE Building_GreatPersonPoints SET PointsPerTurn=3 WHERE BuildingType='BUILDING_STOCK_EXCHANGE';
-UPDATE Building_YieldChanges SET YieldChange=6 WHERE BuildingType='BUILDING_BANK' AND YieldType='YIELD_GOLD';
-UPDATE Building_YieldChanges SET YieldChange=8 WHERE BuildingType='BUILDING_STOCK_EXCHANGE' AND YieldType='YIELD_GOLD';
+UPDATE Building_YieldChanges SET YieldChange=8 WHERE BuildingType='BUILDING_BANK' AND YieldType='YIELD_GOLD';
+UPDATE Building_YieldChanges SET YieldChange=10 WHERE BuildingType='BUILDING_STOCK_EXCHANGE' AND YieldType='YIELD_GOLD';
 
 
 -- Commercial hub building traderoute modifier :
