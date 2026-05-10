@@ -80,3 +80,6 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value)
     SELECT 'BBG_DIGITAL_DEMOCRACY_TOURISM_' || DistrictType || '_MODIFIER', 'Amount', 2 FROM Districts WHERE DistrictType NOT IN ('DISTRICT_CITY_CENTER', 'DISTRICT_WONDER') AND Districts.TraitType IS NULL;
 INSERT INTO GovernmentModifiers (GovernmentType, ModifierId)
     SELECT 'GOVERNMENT_DIGITAL_DEMOCRACY', 'BBG_DIGITAL_DEMOCRACY_TOURISM_' || DistrictType || '_MODIFIER' FROM Districts WHERE DistrictType NOT IN ('DISTRICT_CITY_CENTER', 'DISTRICT_WONDER') AND Districts.TraitType IS NULL;
+
+-- 2026/05/10 monarchy envoy nerfed to +25%
+UPDATE ModifierArguments SET Value=25 WHERE ModifierId='MONARCHY_ENVOYS' AND Name='Amount';
