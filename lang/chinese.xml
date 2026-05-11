@@ -510,7 +510,7 @@
 		</Replace>
 		<!-- = leader ability (Victoria Age of Steam) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_VICTORIA_ALT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>获得“探索”市政后，每座拥有工业区的城市都能建造比平常多一个 [ICON_DISTRICT] 专业化区域（无视 [ICON_Citizen] 人口数量限制）。城市中每有一座工厂或发电厂，便 +5% [ICON_PRODUCTION] 生产力。拥有电力供给时，建筑的额外产出+4。[NEWLINE][NEWLINE]灯塔提供 +1 [ICON_GreatEngineer] 大工程师点数。工业区从皇家海军船坞互相获得大量 [ICON_PRODUCTION] 生产力相邻加成，皇家海军船坞从工业区获得大量 [ICON_GOLD] 金币相邻加成。</Text>
+			<Text>获得“探索”市政后，每座拥有工业区的城市都能建造比平常多一个 [ICON_DISTRICT] 专业化区域（无视 [ICON_Citizen] 人口数量限制）。城市中每有一座工厂或发电厂，便 +5% [ICON_PRODUCTION] 生产力。拥有电力供给时，建筑的额外产出+4。[NEWLINE][NEWLINE]灯塔提供 +1 [ICON_GreatEngineer] 大工程师点数。工业区从皇家海军船坞获得大量 [ICON_PRODUCTION] 生产力相邻加成，皇家海军船坞从工业区获得大量 [ICON_GOLD] 金币相邻加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_AOS_ADJENCY_IZ_RND_DESC" Language="zh_Hans_CN">
 			<Text>+{1_num} [ICON_PRODUCTION] 生产力，来自相邻皇家海军船坞</Text>
@@ -3052,7 +3052,7 @@
 			<Text>与每个农场改良设施相邻时，农场提供的 [ICON_Food] 食物+1。</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_REPLACEABLE_PARTS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>将农场改良设施升级为机械化农业。为相邻的每个农场改良设施 +1 [ICON_Production] 生产力。牧场改良设施提供的 [ICON_Production] 生产力 +1。</Text>
+			<Text>将农场改良设施升级为机械化农业。每相邻 3 个农场改良设施 +1 [ICON_Production] 生产力。牧场改良设施提供的 [ICON_Production] 生产力 +1。</Text>
 		</Replace>
 		<Replace Tag="LOC_CIVIC_IDEOLOGY_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>可额外招募一名间谍。开放所有城邦的边境。[NEWLINE]如果解锁市政“归正会”，非宗教单位与信奉其他宗教的文明进行战争时，+4 [ICON_Strength] 战斗力。</Text>
