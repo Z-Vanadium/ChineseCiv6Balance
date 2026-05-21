@@ -26,26 +26,24 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 
 -- 04/07/24 AoS RND give +2 adjency to IZ
 -- 04/08/24 Reduced to +1
--- INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, AdjacentDistrict) VALUES
---     ('BBG_AOS_ADJENCY_IZ_RND', 'LOC_BBG_AOS_ADJENCY_IZ_RND_DESC', 'YIELD_PRODUCTION', 1, 'DISTRICT_ROYAL_NAVY_DOCKYARD');
--- INSERT INTO District_Adjacencies (DistrictType, YieldChangeId) VALUES
---     ('DISTRICT_INDUSTRIAL_ZONE', 'BBG_AOS_ADJENCY_IZ_RND');
--- INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId)
---    SELECT TraitType, 'BBG_AOS_ADJENCY_IZ_RND' FROM CivilizationTraits WHERE CivilizationType != 'CIVILIZATION_ENGLAND' GROUP BY CivilizationType;
--- INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
--- 	('TRAIT_LEADER_PAX_BRITANNICA', 'BBG_AOS_ADJENCY_IZ_RND'),
--- 	('TRAIT_LEADER_ELIZABETH', 'BBG_AOS_ADJENCY_IZ_RND'),
--- 	('TRAIT_LEADER_ELEANOR_LOYALTY', 'BBG_AOS_ADJENCY_IZ_RND');
+-- 2026/05/22 IZ and harbor get +2 from each other
+INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, AdjacentDistrict) VALUES
+    ('BBG_AOS_ADJENCY_IZ_RND', 'LOC_BBG_AOS_ADJENCY_IZ_RND_DESC', 'YIELD_PRODUCTION', 2, 'DISTRICT_ROYAL_NAVY_DOCKYARD');
+INSERT INTO District_Adjacencies (DistrictType, YieldChangeId) VALUES
+    ('DISTRICT_INDUSTRIAL_ZONE', 'BBG_AOS_ADJENCY_IZ_RND');
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId)
+   SELECT TraitType, 'BBG_AOS_ADJENCY_IZ_RND' FROM CivilizationTraits WHERE CivilizationType != 'CIVILIZATION_ENGLAND' GROUP BY CivilizationType;
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) SELECT
+TraitType, 'BBG_AOS_ADJENCY_RND_IZ' FROM LeaderTraits WHERE 
+LeaderType NOT IN ('LEADER_VICTORIA_ALT') GROUP BY LeaderType;
 
--- 2026/05/10 recoded by Ruivo, and IZ and harbor get +2 from each other
-INSERT INTO Ruivo_New_Adjacency (ID, DistrictType, ProvideType, YieldType, YieldChange, AdjacencyType, CustomAdjacentObject,DistrictModifiers, TraitType, ModifierOwner, WhoIsTheOwner, CollectionType, Only, FreeCompose)
-VALUES 
-('CCB_DISTRICT_INDUSTRIAL_ZONE_YIELD_PRODUCTION_FROM_DISTRICT_ROYAL_NAVY_DOCKYARD', 'DISTRICT_INDUSTRIAL_ZONE', 'SelfBonus', 'YIELD_PRODUCTION', 2, 'FROM_RINGS_CAO_DISTRICT', 'DISTRICT_ROYAL_NAVY_DOCKYARD', 0, 'TRAIT_LEADER_VICTORIA_ALT', 'DistrictModifiers', NULL, 'COLLECTION_CITY_DISTRICTS', 'Human&AI', 0),
-('CCB_DISTRICT_ROYAL_NAVY_DOCKYARD_YIELD_GOLD_FROM_DISTRICT_INDUSTRIAL_ZONE', 'DISTRICT_ROYAL_NAVY_DOCKYARD', 'SelfBonus', 'YIELD_GOLD', 2, 'FROM_RINGS_CAO_DISTRICT', 'DISTRICT_INDUSTRIAL_ZONE', 0, 'TRAIT_LEADER_VICTORIA_ALT', 'DistrictModifiers', NULL, 'COLLECTION_CITY_DISTRICTS', 'Human&AI', 0);
-
-INSERT INTO Ruivo_New_Adjacency_Text (ID, Tooltip) VALUES
-('CCB_DISTRICT_INDUSTRIAL_ZONE_YIELD_PRODUCTION_FROM_DISTRICT_ROYAL_NAVY_DOCKYARD','LOC_CCB_DISTRICT_INDUSTRIAL_ZONE_YIELD_PRODUCTION_FROM_DISTRICT_ROYAL_NAVY_DOCKYARD'),
-('CCB_DISTRICT_ROYAL_NAVY_DOCKYARD_YIELD_GOLD_FROM_DISTRICT_INDUSTRIAL_ZONE','LOC_CCB_DISTRICT_ROYAL_NAVY_DOCKYARD_YIELD_GOLD_FROM_DISTRICT_INDUSTRIAL_ZONE');
+INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, AdjacentDistrict) VALUES
+    ('BBG_AOS_ADJENCY_RND_IZ', 'LOC_BBG_AOS_ADJENCY_RND_IZ_DESC', 'YIELD_GOLD', 2, 'DISTRICT_INDUSTRIAL_ZONE');
+INSERT INTO District_Adjacencies (DistrictType, YieldChangeId) VALUES
+    ('DISTRICT_ROYAL_NAVY_DOCKYARD', 'BBG_AOS_ADJENCY_RND_IZ');
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) SELECT
+TraitType, 'BBG_AOS_ADJENCY_RND_IZ' FROM LeaderTraits WHERE 
+LeaderType NOT IN ('LEADER_VICTORIA_ALT') GROUP BY LeaderType;
 
 -- 04/07/24 Lighthouse give +1 great engineer point (requirement is coded in England.sql)
 -- INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
