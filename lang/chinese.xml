@@ -515,6 +515,9 @@
 		<Replace Tag="LOC_BBG_AOS_ADJENCY_IZ_RND_DESC" Language="zh_Hans_CN">
 			<Text>+{1_num} [ICON_PRODUCTION] 生产力，来自相邻皇家海军船坞</Text>
 		</Replace>
+		<Replace Tag="LOC_BBG_AOS_ADJENCY_RND_IZ_DESC" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_GOLD] 金币，来自相邻工业区</Text>
+		</Replace>
 			<!-- Here must use tag 'Row' -->
 		<Row Tag="LOC_CCB_DISTRICT_INDUSTRIAL_ZONE_YIELD_PRODUCTION_FROM_DISTRICT_ROYAL_NAVY_DOCKYARD" Language="zh_Hans_CN">
 			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 皇家海军船坞区域。</Text>

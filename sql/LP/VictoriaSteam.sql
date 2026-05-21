@@ -33,17 +33,22 @@ INSERT INTO District_Adjacencies (DistrictType, YieldChangeId) VALUES
     ('DISTRICT_INDUSTRIAL_ZONE', 'BBG_AOS_ADJENCY_IZ_RND');
 INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId)
    SELECT TraitType, 'BBG_AOS_ADJENCY_IZ_RND' FROM CivilizationTraits WHERE CivilizationType != 'CIVILIZATION_ENGLAND' GROUP BY CivilizationType;
-INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) SELECT
-TraitType, 'BBG_AOS_ADJENCY_RND_IZ' FROM LeaderTraits WHERE 
-LeaderType NOT IN ('LEADER_VICTORIA_ALT') GROUP BY LeaderType;
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
+	('TRAIT_LEADER_PAX_BRITANNICA', 'BBG_AOS_ADJENCY_IZ_RND'),
+	('TRAIT_LEADER_ELIZABETH', 'BBG_AOS_ADJENCY_IZ_RND'),
+	('TRAIT_LEADER_ELEANOR_LOYALTY', 'BBG_AOS_ADJENCY_IZ_RND');
+-- 这里必须这么写，不能模仿上一个insert的写法，否则会使得major_leader trait也被排除掉，导致=无法享受这个加成
 
 INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, AdjacentDistrict) VALUES
     ('BBG_AOS_ADJENCY_RND_IZ', 'LOC_BBG_AOS_ADJENCY_RND_IZ_DESC', 'YIELD_GOLD', 2, 'DISTRICT_INDUSTRIAL_ZONE');
 INSERT INTO District_Adjacencies (DistrictType, YieldChangeId) VALUES
     ('DISTRICT_ROYAL_NAVY_DOCKYARD', 'BBG_AOS_ADJENCY_RND_IZ');
-INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) SELECT
-TraitType, 'BBG_AOS_ADJENCY_RND_IZ' FROM LeaderTraits WHERE 
-LeaderType NOT IN ('LEADER_VICTORIA_ALT') GROUP BY LeaderType;
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId)
+   SELECT TraitType, 'BBG_AOS_ADJENCY_RND_IZ' FROM CivilizationTraits WHERE CivilizationType != 'CIVILIZATION_ENGLAND' GROUP BY CivilizationType;
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
+	('TRAIT_LEADER_PAX_BRITANNICA', 'BBG_AOS_ADJENCY_RND_IZ'),
+	('TRAIT_LEADER_ELIZABETH', 'BBG_AOS_ADJENCY_RND_IZ'),
+	('TRAIT_LEADER_ELEANOR_LOYALTY', 'BBG_AOS_ADJENCY_RND_IZ');
 
 -- 04/07/24 Lighthouse give +1 great engineer point (requirement is coded in England.sql)
 -- INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
