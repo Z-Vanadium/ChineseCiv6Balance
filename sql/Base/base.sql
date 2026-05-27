@@ -541,8 +541,8 @@ INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 
 UPDATE Technologies SET Description='LOC_CCB_TECH_PREDICTIVE_SYSTEMS_DESCRIPTION' WHERE TechnologyType='TECH_PREDICTIVE_SYSTEMS';
 
--- 2026/05/10: farm +1 prod from each farm with tech replacable part, +1 food from each farm with civic feudelism
-UPDATE Adjacency_YieldChanges SET TilesRequired=1, ObsoleteTech=NULL WHERE ID="Farms_MedievalAdjacency";
+-- 2026/05/10: farm +1 prod from each farm with tech replacable part
+UPDATE Adjacency_YieldChanges SET ObsoleteTech=NULL WHERE ID="Farms_MedievalAdjacency";
 UPDATE Adjacency_YieldChanges SET TilesRequired=3, YieldType='YIELD_PRODUCTION' WHERE ID="Farms_MechanizedAdjacency";
 
 -- 2026/05/10: tech military science +1 movement for military engineer
