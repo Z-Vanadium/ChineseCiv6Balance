@@ -959,6 +959,11 @@
 			<File>sql/BBG_Expanded/Al_Hasan.sql</File>
 			<File>sql/BBG_Expanded/Spearthrower.sql</File>
 			<File>sql/BBG_Expanded/Resources.sql</File>
+
+			<File>sql/BBG_Expanded/Argentina.sql</File>
+			<File>sql/BBG_Expanded/Denmark.sql</File>
+			<File>sql/BBG_Expanded/Finland.sql</File>
+			<File>sql/BBG_Expanded/Switzerland.sql</File>
 		</UpdateDatabase>
 		<!-- I don't know how to do an OR -->
 		<UpdateDatabase id="BBG_Expanded_Release">
@@ -980,6 +985,11 @@
 			<File>sql/BBG_Expanded/Al_Hasan.sql</File>
 			<File>sql/BBG_Expanded/Spearthrower.sql</File>
 			<File>sql/BBG_Expanded/Resources.sql</File>
+
+			<File>sql/BBG_Expanded/Argentina.sql</File>
+			<File>sql/BBG_Expanded/Denmark.sql</File>
+			<File>sql/BBG_Expanded/Finland.sql</File>
+			<File>sql/BBG_Expanded/Switzerland.sql</File>
 		</UpdateDatabase>
 
 
@@ -1475,6 +1485,11 @@
 		<File>sql/BBG_Expanded/Al_Hasan.sql</File>
 		<File>sql/BBG_Expanded/Spearthrower.sql</File>
 		<File>sql/BBG_Expanded/Resources.sql</File>
+		
+		<File>sql/BBG_Expanded/Argentina.sql</File>
+		<File>sql/BBG_Expanded/Denmark.sql</File>
+		<File>sql/BBG_Expanded/Finland.sql</File>
+		<File>sql/BBG_Expanded/Switzerland.sql</File>
 		<!-- BBG Expanded lua -->
       	<File>lua/BBG_Expanded/Thule.lua</File>
       	<File>lua/BBG_Expanded/Te_Kinich.lua</File>
