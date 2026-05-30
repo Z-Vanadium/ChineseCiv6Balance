@@ -928,6 +928,16 @@
 		<Replace Tag="LOC_ABILITY_NAGAO_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>防御远程攻击时+5 [ICON_Strength] 战斗力。[NEWLINE][ICON_Bullet] 视野能穿过树林和雨林。</Text>
 		</Replace>
+		<!-- = unique district = -->
+		<Replace Tag="LOC_DISTRICT_MBANZA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>刚果特色区域，仅能建造在雨林或树林中。替代社区区域，但更早可用且建造成本更低。无论魅力值多少，提供+5 [ICON_HOUSING] 住房、+2 [ICON_FOOD] 食物和+4 [ICON_GOLD] 金币。</Text>
+		</Replace>
+		<Replace Tag="BBG_LOC_MBANDE_COMMERCIAL_MBANZA" Language="zh_Hans_CN">
+			<Text>相邻姆班赞提供 +{1_num} [ICON_GOLD] 金币。</Text>
+		</Replace>
+		<Replace Tag="BBG_LOC_MBANDE_THEATRE_MBANZA" Language="zh_Hans_CN">
+			<Text>相邻姆班赞提供 +{1_num} [ICON_CULTURE] 文化值。</Text>
+		</Replace>
 
 		<!-- == KOREA == -->
 		<!-- = civilization ability = -->
@@ -1171,6 +1181,9 @@
 		<!-- = unique building = -->
 		<Replace Tag="LOC_BUILDING_STAVE_CHURCH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>挪威特色建筑，替代寺庙。建成后可使用 [ICON_Faith] 信仰值购买使徒和审判官。城市中每个资源单元格+1 [ICON_Faith] 信仰值，每个海岸资源单元格额外+1 [ICON_PRODUCTION] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_NORWEGIAN_LONGSHIP_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>哈拉尔德·哈德拉达（北境王）作为领袖时，挪威特色远古时代海军单位，替代桨帆船。可使用其海岸劫掠能力掠夺敌方沿海土地并俘获相邻平民单位。可以忽视控制区。从海岸单元格开始回合时 +1 [ICON_Movement] 移动力。</Text>
 		</Replace>
 
 		<!-- == NUBIA == -->
@@ -1701,8 +1714,21 @@
 		<Row Tag="LOC_CCB_ABL_MI_BONUS_ADJ_TO_TANKS_DESC" Language="zh_Hans_CN">
 			<Text>步坦协同：+5 [ICON_STRENGTH] 战斗力。</Text>
 		</Row>
-
-
+		<Replace Tag="LOC_UNIT_GIANT_DEATH_ROBOT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>信息时代超级单位。可在水域中移动和战斗。可抵御大规模杀伤性武器。可通过研究未来科技升级战斗能力。</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HEAVY_CHARIOT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>远古时代的强力重骑兵单位。在无树林、雨林或丘陵的平坦单元格上开始回合时获得+1 [ICON_MOVEMENT] 移动力。</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_KNIGHT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>中世纪时代的强力重骑兵单位。</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_MILITARY_ENGINEER_ALT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>中世纪时代支援单位。需要军械库才能生产。可建造道路、铁路、堡垒、机场、导弹发射井和穿山隧道。其中一次建造次数也可用于完成20%的运河、水坝或水渠区域，或50%的防洪堤建筑。</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_TANK_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>现代时代的快速重骑兵单位，无视控制区。在无树林、雨林或丘陵的平坦单元格上开始回合时获得+1 [ICON_MOVEMENT] 移动力。</Text>
+		</Replace>
 
 		<!-- === UNIT PROMOTIONS === -->
 		<Replace Tag="LOC_PROMOTION_SENTRY_DESCRIPTION" Language="zh_Hans_CN">
@@ -1765,8 +1791,12 @@
 		<Replace Tag="LOC_PROMOTION_LINE_OF_BATTLE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>与海军单位战斗时+5 [ICON_Strength] 战斗力。</Text>
 		</Replace>
-
-
+		<Replace Tag="LOC_PROMOTION_GDR_AA_DEFENSE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>[ICON_ANTIAIR_LARGE] 防空战斗力提升至140。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_GDR_SIEGE_LASER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>对抗区域防御时获得 +30 [ICON_RANGED] 远程和 +30 [ICON_STRENGTH] 近战战斗力，且对城墙达到 100% 攻城效率。</Text>
+		</Replace>
 
 		<!-- === GOVERNORS === -->
 		<!-- == Victor == -->
@@ -1914,6 +1944,10 @@
 			<Text>派遣到城邦后使当地的 [ICON_Envoy] 使者数量加倍。</Text>
 		</Replace>
 
+		<Replace Tag="LOC_GOVERNOR_PROMOTION_AMBASSADOR_EMISSARY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>9格范围内的所有城市每回合向你的文明+4忠诚度。</Text>
+		</Replace>
+
 		<!-- == Magnus == -->
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_GROUNDBREAKER_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>城市中格位收获和移除地貌的产出+40%。</Text>
@@ -2045,7 +2079,8 @@
 
 
 		
-		<!-- === BELIEFS === -->
+
+<!-- === BELIEFS === -->
 		<Replace Tag="LOC_BELIEF_FEED_THE_WORLD_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>神社和寺庙分别为城市提供提供+2 [ICON_FOOD] 食物，+4 [ICON_FOOD] 食物，并分别+1 [ICON_HOUSING] 住房。</Text>
 		</Replace>
@@ -2154,8 +2189,9 @@
 		<Replace Tag="LOC_BELIEF_HOLY_ORDER_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>购买传教士和使徒的费用降低25%。</Text>
 		</Replace>
-
-
+		<Replace Tag="LOC_BBG_DISTRICT_SACREDPATH_MARSHES_FAITH" Language="zh_Hans_CN">
+			<Text>相邻沼泽单元格提供 +{1_num} [ICON_FAITH] 信仰值。</Text>
+		</Replace>
 
 		<!-- === IMPROVEMENTS === -->
 		<Replace Tag="LOC_IMPROVEMENT_PLANTATION_DESCRIPTION" Language="zh_Hans_CN">
@@ -2182,8 +2218,12 @@
 		<Replace Tag="LOC_IMPROVEMENT_FORT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>进驻单位+4 [ICON_Strength] 防御力、+1视野，并自动获得两回合驻扎加成。</Text>
 		</Replace>
-		
-
+		<Replace Tag="LOC_IMPROVEMENT_LUMBER_MILL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>解锁建造者建造伐木场的能力。[NEWLINE][NEWLINE]+2 [ICON_PRODUCTION] 生产力。研究"弹道学"后+1 [ICON_PRODUCTION] 生产力，研究"合成材料"后再+1 [ICON_PRODUCTION] 生产力。仅能建造在树林单元格上，或在研究"重商主义"后建造在雨林单元格上。</Text>
+		</Replace>
+		<Replace Tag="LOC_IMPROVEMENT_QUARRY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>解锁建造者建造采石场的能力。[NEWLINE][NEWLINE]+1 [ICON_PRODUCTION] 生产力。研究"军事工程学"后+1 [ICON_PRODUCTION] 生产力，研究"火箭学"后再+2 [ICON_PRODUCTION] 生产力。相邻单元格-1魅力。仅能建造在有效的加成或奢侈资源上。</Text>
+		</Replace>
 
 		<!-- === BUILDINGS === -->
 		<Replace Tag="LOC_BUILDING_LIGHTHOUSE_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
@@ -2291,6 +2331,19 @@
 			<Text>能保护该城市的海岸低地单元格不受洪水侵袭。初次修建与每回合维护的成本将根据城中海岸低地数量和当前海平面高度而定。如在城市单元格受到洪水侵袭后修建，则可将这些单元格完全修复。但沉入海底的单元格无法复原。[NEWLINE][NEWLINE]必须修建在拥有1个或以上海岸低地单元格的城市中。城市被占领时不会遭到掠夺。军事工程师可消耗1次使用次数来完成拦洪坝50%的修建进度。</Text>
 		</Replace>
 
+		<Replace Tag="LOC_BUILDING_BARRACKS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>此城市训练的所有近战和远程陆地单位+25%战斗经验。[NEWLINE][NEWLINE]不能在已拥有马厩的军营区域中建造。[NEWLINE][NEWLINE]发现后每回合提供+2 [ICON_RESOURCE_IRON] 铁。</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_STABLE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>此城市训练的所有骑兵和攻城单位+25%战斗经验。不能在已拥有兵营的军营区域中建造。[NEWLINE][NEWLINE]发现后每回合提供+2 [ICON_RESOURCE_HORSES] 马匹。</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_ORDU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>蒙古特色建筑。为此城市训练的重型和轻型骑兵单位提供在平坦地形上开始回合时+1 [ICON_MOVEMENT] 移动力的能力。此城市训练的所有骑兵和攻城单位+25%战斗经验。不能在已拥有兵营的军营区域中建造。[NEWLINE][NEWLINE]发现后每回合提供+2 [ICON_RESOURCE_HORSES] 马匹。</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_ELECTRONICS_FACTORY_DESCRIPTION2" Language="zh_Hans_CN">
+			<Text>日本特色建筑。为6格范围内的所有城市中心提供+3 [ICON_Production] 生产力。此建筑额外为其所在城市提供+5 [ICON_Culture] 文化值。此加成对每座城市仅生效一次，城市中心6格范围内的多个此建筑不会提供额外加成。</Text>
+		</Replace>
+
 		<!-- === DISTRICTS === -->
 		<!-- WIP BBG v5.2 Beta build 1, NOT IMPLEMENTED
 		<Replace Tag="LOC_DISTRICT_CANAL_DESCRIPTION" Language="zh_Hans_CN">
@@ -2301,8 +2354,9 @@
 		</Replace>
 		-->
 
-
-
+		<Replace Tag="LOC_DISTRICT_HARBOR_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>城市的海军活动区域。同时移除此单元格登船和登陆的 [ICON_Movement] 移动力惩罚。+1 [ICON_HOUSING] 住房。必须建造在与陆地相邻的海岸或湖泊地形上。不能建造在礁石上。</Text>
+		</Replace>
 
 		<!-- === NATURAL WONDERS === -->
 		<!-- TIP: XP2 tag used for Natural Wonders picker (in game lobby) for specified Natural Wonders -->
@@ -2429,8 +2483,9 @@
 		<Row Tag="LOC_CAMPUS_MOUNTAIN_WONDER_ADJACENCY_BBG" Language="zh_Hans_CN">
 			<Text>+{1_num} [ICON_Science] 科技值来自相邻山脉自然奇观。</Text>
 		</Row>
-
-
+		<Replace Tag="LOC_REEF_WONDER_SCIENCE" Language="zh_Hans_CN">
+			<Text>相邻自然奇观大堡礁提供+{1_num} [ICON_SCIENCE] 科技值。</Text>
+		</Replace>
 
 		<!-- === WORLD WONDERS === -->
 		<Replace Tag="LOC_BUILDING_GOLDEN_GATE_BRIDGE_DESCRIPTION" Language="zh_Hans_CN">
@@ -2520,7 +2575,9 @@
 		<Replace Tag="LOC_BUILDING_SYDNEY_OPERA_HOUSE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>获得两个摇滚乐队。+8 [ICON_Culture] 文化值。每回合+5大 [ICON_GreatMusician] 音乐家点数。+3 [ICON_GreatWork_MUSIC] 音乐剧作槽位。 </Text>
 		</Replace>
-
+		<Replace Tag="LOC_BUILDING_TEMPLE_ARTEMIS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>此奇观周围4格范围内的每个营地、牧场和种植园改良设施提供+1 [ICON_AMENITIES] 宜居度。必须与营地改良设施相邻。</Text>
+		</Replace>
 
 		<!-- === CITY-STATES === -->
 		<!-- BONUS tag for City-States picker, DESCRIPTION tag for gameplay description -->
@@ -3017,8 +3074,9 @@
 		<Replace Tag="BBG_LOC_TECH_BALLISTICS_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>伐木场改良设施+1 [ICON_Production] 生产力。</Text>
 		</Replace>
-		
-
+		<Replace Tag="LOC_TECH_FLIGHT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>单元格改良设施根据其 [ICON_Culture] 文化值产出提供等量的 [ICON_Tourism] 旅游业绩。提供的 [ICON_Tourism] 旅游业绩等同于改良设施的 [ICON_Culture] 文化值产出。</Text>
+		</Replace>
 
 		<!-- === CULTURE TREE DESCRIPTIONS === -->
 		<Replace Tag="LOC_BOOST_TRIGGER_CRAFTSMANSHIP" Language="zh_Hans_CN">
@@ -3554,12 +3612,35 @@
 			<Text>攻击市中心时-5 [ICON_Strength] 战斗力</Text>
 		</Replace>
 
-		<!-- === CIVILOPEDIA === -->
+		<Replace Tag="LOC_ABILITY_GAESATAE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>对基础战斗力更高的单位+10 [ICON_STRENGTH] 战斗力。[NEWLINE][ICON_BULLET]对区域防御+5 [ICON_STRENGTH] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_HEAVY_CHARIOT_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>在开阔地形上开始回合时+1 [ICON_MOVEMENT] 移动力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_SAMURAI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>此单位不会因受伤而承受战斗力减益。</Text>
+		</Replace>
+		<Replace Tag="LOC_BBG_CAESAR_DOUBLE_XP_BONUS_MODIFIER_DESC" Language="zh_Hans_CN">
+			<Text>+100%战斗经验（我来，我见，我征服）</Text>
+		</Replace>
+		<Replace Tag="LOC_BBG_CAESAR_DOUBLE_XP_BONUS_MODIFIER_NAME" Language="zh_Hans_CN">
+			<Text>+100%战斗经验（我来，我见，我征服）</Text>
+		</Replace>
+		<Replace Tag="LOC_BBG_TOMYRIS_BONUS_VS_WOUNDED_UNITS_STIRRUPS_MODIFIER_DESC" Language="zh_Hans_CN">
+			<Text>攻击受伤单位时+5 [ICON_STRENGTH] 战斗力。</Text>
+		</Replace>
+
+<!-- === CIVILOPEDIA === -->
 		<Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_CITIES_16_CHAPTER_CONTENT_PARA_1" Language="zh_Hans_CN">
 			<Text>幸福度用来衡量在单个城市中您的国民的满意度，衡量的方式是看该城市的 [ICON_Citizen] 人口是否拥有所需的相应 [ICON_Amenities] 宜居度。从 [ICON_Citizen] 人口达到3起，每2个 [ICON_Citizen] 人口需要1点 [ICON_Amenities] 宜居度。满意状态的城市不会受到任何影响，而高兴状态的城市会得到8%的发展和8%的收益加成。此外，欣喜若狂状态的城市会得到16%的发展和16%的收益加成。[ICON_Amenities] 宜居度过低则会引发 [ICON_Citizen] 公民的不满情绪，并对发展和收益产生负面影响。当幸福度状态为不安时，您的城市会停止发展，并且有可能出现叛军。</Text>
 		</Replace>
 
-		<!-- === SPLASH TEXT === -->
+				<Replace Tag="LOC_PEDIA_CONCEPTS_PAGE_LOYALTY_1_CHAPTER_CONTENT_PARA_1" Language="zh_Hans_CN">
+			<Text>忠诚度是城市对你文明拥护程度的衡量。每座城市拥有从0到100的忠诚度值，反映城市市民希望作为你文明一部分的意愿。[NEWLINE][NEWLINE]只要忠诚度至少为76（忠诚），增长和产出无惩罚。当忠诚度降至76以下（忠诚动摇），城市的产出和增长受到25%惩罚。当忠诚度降至51以下（不忠），城市产出受50%惩罚，增长受75%惩罚。当忠诚度降至26以下（动荡），城市产出和增长受100%惩罚。当忠诚度降至0，城市将反叛其所有者并成为自由城市。[NEWLINE][NEWLINE]自由城市不属于任何文明，将寻求军事防御免受入侵。如果自由城市的忠诚度降至0，其独立的尝试将失败，并将寻求加入一个文明。它们请求加入哪个文明取决于在其独立期间谁对自由城市施加了最大的压力。通过这种方式，自由城市可能和平地加入你的文明（或回到你的文明中）。</Text>
+		</Replace>
+
+<!-- === SPLASH TEXT === -->
 		<Row Tag="LOC_BBG_METOR_GOODIES_FREE_TECH_DESC" Language="zh_Hans_CN">
 			<Text>[COLOR_FLOAT_SCIENCE]2项科技获得提升！[ENDCOLOR]</Text>
 		</Row>
