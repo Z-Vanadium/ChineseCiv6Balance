@@ -43,3 +43,101 @@ UPDATE PlayerColors SET Alt3PrimaryColor='COLOR_STANDARD_CCB_AZURE_LT', Alt3Seco
 
 -- Spearthrower Owl
 UPDATE PlayerColors SET Alt1PrimaryColor='COLOR_STANDARD_CCB_MAROON_MD', Alt1SecondaryColor='COLOR_STANDARD_CCB_YELLOW_MD' WHERE Type='LEADER_LIME_TEO_OWL';
+
+--======================================================================
+--	COLORS
+--======================================================================
+--	Colors
+-------------------------------------
+INSERT OR REPLACE INTO Colors
+		(Type,							Color)
+VALUES
+		("COLOR_STANDARD_INDIGO_MD",	"0,119,168,255"),
+		("COLOR_STANDARD_INDIGO_LT",	"148,215,234,255");
+-------------------------------------
+--	PlayerColors
+-------------------------------------
+INSERT OR REPLACE INTO PlayerColors
+		(
+			Type,
+			Usage,
+
+			PrimaryColor,
+			SecondaryColor,
+
+			Alt1PrimaryColor,
+			Alt1SecondaryColor,
+
+			Alt2PrimaryColor,
+			Alt2SecondaryColor,
+
+			Alt3PrimaryColor,
+			Alt3SecondaryColor
+		)
+VALUES
+		(
+			"LEADER_LEU_SANMARTIN",
+			"Unique",
+
+			"COLOR_STANDARD_INDIGO_LT",
+			"COLOR_STANDARD_ORANGE_MD",
+
+			"COLOR_STANDARD_INDIGO_MD",
+			"COLOR_STANDARD_WHITE_LT",
+
+			"COLOR_STANDARD_GREEN_LT",
+			"COLOR_STANDARD_WHITE_LT",
+
+			"COLOR_STANDARD_ORANGE_MD",
+			"COLOR_STANDARD_WHITE_MD"
+		);
+--======================================================================
+--======================================================================
+--======================================================================
+--	COLORS
+--======================================================================
+--	Colors
+-------------------------------------
+INSERT OR REPLACE INTO Colors
+		(Type,							Color)
+VALUES
+		("COLOR_STANDARD_INDIGO_MD",	"0,119,168,255");
+-------------------------------------
+--	PlayerColors
+-------------------------------------
+INSERT OR REPLACE INTO PlayerColors
+		(
+			Type,
+			Usage,
+
+			PrimaryColor,
+			SecondaryColor,
+
+			Alt1PrimaryColor,
+			Alt1SecondaryColor,
+
+			Alt2PrimaryColor,
+			Alt2SecondaryColor,
+
+			Alt3PrimaryColor,
+			Alt3SecondaryColor
+		)
+VALUES
+		(
+			"LEADER_MER_MANNERHEIM",
+			"Unique",
+
+			"COLOR_STANDARD_WHITE_MD2",
+			"COLOR_STANDARD_BLUE_DK",
+
+			"COLOR_STANDARD_BLUE_DK",
+			"COLOR_STANDARD_WHITE_MD2",
+
+			"COLOR_STANDARD_YELLOW_MD",
+			"COLOR_STANDARD_INDIGO_MD",
+
+			"COLOR_STANDARD_WHITE_MD",
+			"COLOR_STANDARD_WHITE_LT"
+		);
+--======================================================================
+--======================================================================

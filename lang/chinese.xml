@@ -5508,6 +5508,2587 @@
 			<Text></Text>
 		</Replace>
 
+		<!-- = ARGENTINA = -->
+		<!-- = Civilization = -->
+		<Replace Tag="LOC_CIVILIZATION_LEU_ARGENTINA_NAME" Language="zh_Hans_CN">
+			<Text>阿根廷</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_LEU_ARGENTINA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>阿根廷文明</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_LEU_ARGENTINA_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>阿根廷的</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_LEU_ARGENTINA_DESCRIPTION_JFD_CIVILIZATION" Language="zh_Hans_CN">
+			<Text>阿根廷文明</Text>
+		</Replace>
+		<!-- = Civilization ability = -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_LEU_ARGENTINA_NAME" Language="zh_Hans_CN">
+			<Text>潘帕斯、马兰博与探戈</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_LEU_ARGENTINA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>获得 [ICON_ENVOY] 城邦“布宜诺斯艾利斯”的宗主国效果：加成资源如同奢侈品资源一样，每种类型资源提供 1 点 [ICON_AMENITIES] 宜居度。[NEWLINE]若相邻牧场，学院、娱乐中心和工业区提供 +1 [ICON_GreatMusician]大音乐家点数。[NEWLINE]宫殿提供 2 个 [ICON_GreatWork_MUSIC] 音乐巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3牧场资源。</Text>
+		</Replace>
+		<!-- = Leader = -->
+		<Replace Tag="LOC_LEADER_LEU_EVITA_NAME" Language="zh_Hans_CN">
+			<Text>伊娃·庇隆</Text>
+		</Replace>
+		<Replace Tag="LOC_LOADING_INFO_LEADER_LEU_EVITA" Language="zh_Hans_CN">
+			<Text>阿根廷骄傲的人民仰望您，伊娃·庇隆。聆听您子民的疾苦，为需要帮助的人争取更多权利。让无衫者的劳作将您的国家建设成文化与产业的典范。召唤高乔人，让他们养育您的子民，在您的郊野区创作优美的探戈音乐。当人民被他们亲切称为"艾薇塔"的您所引领时，让他们再次欢欣鼓舞。</Text>
+		</Replace>
+		<!-- = Leader ability = -->
+		<Replace Tag="LOC_TRAIT_LEADER_LEU_EVITA_NAME" Language="zh_Hans_CN">
+			<Text>无衫移民</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_LEU_EVITA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>建造剧院广场和工业区时获得1 [ICON_CITIZEN] 人口。这两个区域还额外提供+2 [ICON_FOOD] 食物和 [ICON_TOURISM] 旅游业绩。</Text>
+		</Replace>
+		<!-- = Leader Agenda = -->
+		<Replace Tag="LOC_AGENDA_LEU_EVITA_NAME" Language="zh_Hans_CN">
+			<Text>正义主义</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_LEU_EVITA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>喜欢拥有快乐市民和高 [ICON_PRODUCTION] 生产力的文明。厌恶市民不满、生产力低下或政体不同的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_LEADER_LEU_EVITA_REASON_ANY" Language="zh_Hans_CN">
+			<Text>（您拥有高生产力或快乐的市民）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_LEU_EVITA_FRIEND" Language="zh_Hans_CN">
+			<Text>伊娃·庇隆很高兴您能让市民保持快乐和高产。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_LEU_EVITA_REASON_ANY" Language="zh_Hans_CN">
+			<Text>（她不赞同您的政体）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_LEU_EVITA_FOE" Language="zh_Hans_CN">
+			<Text>伊娃·庇隆不喜欢您当前的政体。</Text>
+		</Replace>
+		<!-- = Unique unit = -->
+		<Replace Tag="LOC_UNIT_LEU_GAUCHO_NAME" Language="zh_Hans_CN">
+			<Text>爱国军</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_LEU_GAUCHO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>阿根廷特色现代近战单位，替代步兵。解锁于“动员”市政，+1 [ICON_MOVEMENT] 移动力并能忽视控制区。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEU_GAUCHO_NAME" Language="zh_Hans_CN">
+			<Text>庄园高乔人</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEU_GAUCHO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>位于牧场或农场上时+10 [ICON_STRENGTH] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_GAUCHO_BONUS" Language="zh_Hans_CN">
+			<Text>位于牧场或农场上时+10 [ICON_STRENGTH] 战斗力。</Text>
+		</Replace>
+		<!-- = Unique district = -->
+		<Replace Tag="LOC_DISTRICT_LEU_ARRABAL_NAME" Language="zh_Hans_CN">
+			<Text>阿尔拉巴尔</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_LEU_ARRABAL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>阿根廷特色社区，解锁于“重商主义”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得少量 [ICON_PRODUCTION] 生产力相邻加成。[NEWLINE]相邻区域时，提供 +1 [ICON_GreatMusician] 大音乐家点数。</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_ARRABAL_PRODUCTION" Language="zh_Hans_CN">
+			<Text>来自相邻区域的 [ICON_PRODUCTION] 生产力和。</Text>
+		</Replace>
+		<!-- = Diplo = -->
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>很高兴见到您。我叫伊娃·庇隆，不过您可以叫我艾薇塔。什么风把您吹到阿根廷来了？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>卡米尼托马上有一场探戈表演，您愿意加入我们，顺便尝尝美味的恩帕纳达斯馅饼吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>感谢您的盛情。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>让我们交换首都的信息，更多地了解彼此的风俗吧！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>您好。音乐还动听吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>阿根廷感谢您的善意。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>恐怕我不能接受，我必须尊重我的人民的意愿。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>我已派遣代表团前往您的首都，带着高乔人亲手挑选的最好的肉类。希望您喜欢！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>我接受您的请求。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>目前我对这个安排没有兴趣。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>让我们携手并肩，共享领土！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>很好。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>恐怕我不能接受您的提议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>我很高兴将您视为朋友。您也这么觉得吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>很高兴能与您合作。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>这实在令人不安。但没关系，即使没有您的认可，我的人民也爱戴我。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>让我们为了我们人民的共同福祉携手合作。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>您真是榜样。您让人民快乐，让产业繁荣！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>您的人民骚动不安，毫无产出。恐怕我同意他们的看法，您那卑鄙的政府只是在压迫他们。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>请您知道，我会保卫阿根廷免受任何外来威胁。所以我请求您撤走您的部队。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>您竟敢谴责我？我打败过比您强大得多的帝王。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>我受够了。我将代表我的人民说：您不值得信任！（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>我一直知道您在搞鬼。我的子民将用他们的心捍卫他们的土地！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>我这样做是为了我的人民！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>我接受这份和平。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>我不能接受您的提议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>我认为是时候讲和了。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>别为我哭泣，阿根廷……说实话，我从未离开过你，在我疯狂的岁月和狂野的人生中，我一直恪守诺言……请不要与我疏远。</Text>
+		</Replace>
+		<!-- = Pedia = -->
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEU_EVITA_TITLE" Language="zh_Hans_CN">
+			<Text>玛丽亚·伊娃·杜阿尔特·德·庇隆</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEU_EVITA_QUOTE" Language="zh_Hans_CN">
+			<Text>我知道，像每一个属于人民的女性一样，我拥有比外表更强大的力量。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEU_EVITA_SUBTITLE" Language="zh_Hans_CN">
+			<Text>阿根廷民族精神领袖</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_EVITA_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>艾薇塔的主要关注点在于生产和文化。凭借额外的音乐巨作槽位和牧场提供的大音乐家点数，她可以同时获得大量产出，并朝着文化胜利迈进。她还可以借助郊野区专注于城市发展。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_EVITA_CHAPTER_DETAILED_BODY" Language="zh_Hans_CN">
+			<Text>充分利用市民是阿根廷玩法的重要组成部分。对于艾薇塔来说，在高魅力值地块附近定居有助于获得更多市民，这将有助于开发所有可用的地块。</Text>
+		</Replace>
+
+		<!-- = ISKANDAR = -->
+		<!-- = Leader = -->
+		<Replace Tag="LOC_LEADER_CVS_ISKANDAR_NAME" Language="zh_Hans_CN">
+			<Text>伊斯干达</Text>
+		</Replace>
+		<Replace Tag="LOC_LOADING_INFO_LEADER_CVS_ISKANDAR" Language="zh_Hans_CN">
+			<Text>马六甲的商贾静候您的召唤，传奇的伊斯干达——淡马锡失位的沙阿。与环绕您的城邦交好，最伟大的商贾、学者与巧匠终将云集这金色的半岛。掌控海上贸易的先机，拓展马六甲的实力与影响，她将谱写属于自己的传奇。</Text>
+		</Replace>
+		<!-- = Leader ability = -->
+		<Replace Tag="LOC_TRAIT_LEADER_CVS_ISKANDAR_UA_NAME" Language="zh_Hans_CN">
+			<Text>王者世系</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_CVS_ISKANDAR_UA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>建立在海岸 3 个单元格范围内的城市初始即获得 1 [ICON_CITIZEN] 人口。</Text>
+		</Replace>
+		<!-- = Agenda = -->
+		<Replace Tag="LOC_AGENDA_CVS_ISKANDAR_NAME" Language="zh_Hans_CN">
+			<Text>团结之力</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_CVS_ISKANDAR_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>喜欢人口众多且拥有许多伟人的文明。厌恶经济薄弱的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_LEADER_CVS_ISKANDAR_REASON_ANY" Language="zh_Hans_CN">
+			<Text>（您拥有高人口城市和众多伟人。）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_CVS_ISKANDAR_HAPPY" Language="zh_Hans_CN">
+			<Text>伊斯干达钦佩拥有众多伟人的民众。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_CVS_ISKANDAR_REASON_ANY" Language="zh_Hans_CN">
+			<Text>（您的经济薄弱。）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_CVS_ISKANDAR_UNHAPPY" Language="zh_Hans_CN">
+			<Text>伊斯干达对您薄弱的经济感到失望。</Text>
+		</Replace>
+		<!-- = Diplo = -->
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>您好旅行者！我是伊斯干达，马六甲的首任苏丹。告诉我，您来自哪片海岸？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>您旅途一定疲惫了。如果您愿意，可以造访我们附近的城市。稍作休息，享受我们的款待，并分享您文化的故事。您意下如何？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>太好了！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>让我们交换首都的信息，或许可以规划出一条繁荣的贸易路线？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_CVS_ISKANDAR_HAPPY" Language="zh_Hans_CN">
+			<Text>很高兴再次见到您，朋友。我能为您做些什么？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_CVS_ISKANDAR_UNHAPPY" Language="zh_Hans_CN">
+			<Text>洗耳恭听。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>我很乐意接受。您的代表欢迎留在马六甲，享受这里的时光。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>抱歉，我目前不能允许此事。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>我已派遣代表团，携山竹、粥品和上等糕点，以表达对您盛情的感激。希望您喜欢。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>当然，请在这里享受您的时光。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>抱歉，我目前不能允许此事。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>如果不能自由通行，贸易又如何发展？我谦卑地请求您开放边境。您意下如何？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>这是我的荣幸。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>我看不出您有朋友的影子。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>您是一位天赋异禀的统治者，深知良好关系的价值。我正式向您伸出友谊之手。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>多美好的一天！愿这成为美好事物的开端。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>真遗憾。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>这世界上存在着危险，若不加以遏制，它们将毁灭我们。让我们结成联盟，以威慑那些投机取巧之徒。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>您对这个世界上最杰出人才的热情，堪称世界的楷模。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>忽视经济的国家注定灭亡。您难道不关心人民的繁荣吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_CVS_ISKANDAR_HAPPY" Language="zh_Hans_CN">
+			<Text>我怀着善意说：请将您的部队从我的边境撤走，否则这将被视为侵略行为。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_CVS_ISKANDAR_UNHAPPY" Language="zh_Hans_CN">
+			<Text>哇，好一番壮观的武力展示。当然，如果您要的是战争，请知道，我们的力量远不止于马六甲的港口。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_CVS_ISKANDAR_HAPPY" Language="zh_Hans_CN">
+			<Text>太好了！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_CVS_ISKANDAR_UNHAPPY" Language="zh_Hans_CN">
+			<Text>这暂时还可以接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_CVS_ISKANDAR_HAPPY" Language="zh_Hans_CN">
+			<Text>我希望得到一个比这更好的交易。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_CVS_ISKANDAR_UNHAPPY" Language="zh_Hans_CN">
+			<Text>您把我当成傻子吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>言语常常被那些不值得尊重的人所忽略。您是谁来着？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>今天强大的经济是我们为明天所做的准备。我看不到您王国的未来。（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>我赞赏您的勇气，但您的智慧有待提高。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>我对此决定并不乐见，但您迫使我出手。您的暴政到此为止。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>我同意，和平条约似乎符合我们双方的利益。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>不，若战争现在结束，您将一无所获。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>是时候放下武器了。让我们之间恢复和平吧。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_CVS_ISKANDAR_ANY" Language="zh_Hans_CN">
+			<Text>今日您或许享有荣耀，但明天会比您想象的来得更快。</Text>
+		</Replace>
+		<!-- = Pedia = -->
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_CVS_ISKANDAR_QUOTE" Language="zh_Hans_CN">
+			<Text>谁掌控马六甲，谁便扼住威尼斯的咽喉。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_CVS_ISKANDAR_TITLE" Language="zh_Hans_CN">
+			<Text>伊斯干达</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_CVS_ISKANDAR_SUBTITLE" Language="zh_Hans_CN">
+			<Text>拜里米苏拉，马六甲首任苏丹</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_CVS_ISKANDAR_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>在伊斯干达的领导下，丰富的伟人资源将引领城市走向伟大。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_CVS_ISKANDAR_CHAPTER_DETAILED_BODY" Language="zh_Hans_CN">
+			<Text>利用马来西亚在为其他文明宗主的城邦完成任务时获得额外使者的能力，伊斯干达绝不会缺少几位伟人来发展他的城市。通过伟人获得额外人口和边境增长，伊斯干达可能适合他选择的任何胜利方式，但很可能利用高脚屋的住房加成来支撑人口众多的城市，从而为文化或科技胜利奠定基础。</Text>
+		</Replace>
+
+		<!-- = MALAYSIA = -->
+		<!-- = Civilization = -->
+		<Replace Tag="LOC_CIVILIZATION_CVS_MALAYSIA_NAME" Language="zh_Hans_CN">
+			<Text>马来西亚</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_CVS_MALAYSIA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>马来帝国</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_CVS_MALAYSIA_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>马来</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_CVS_MALAYSIA_DESCRIPTION_JFD_CIVILIZATION" Language="zh_Hans_CN">
+			<Text>马来帝国</Text>
+		</Replace>
+		<!-- = Civilization ability = -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_MALAYSIA_UA_NAME" Language="zh_Hans_CN">
+			<Text>马来世界</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_MALAYSIA_UA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>[ICON_CVS_MALAYSIA_CSQ] 完成已经被其他文明宗主城邦的任务时，额外奖励 1 个 [ICON_ENVOY] 使者。每宗主一个城邦，则 +1 [ICON_TRADEROUTE] 贸易路线容量。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
+		</Replace>
+		<!-- = Unique district = -->
+		<Replace Tag="LOC_DISTRICT_CVS_MALAYSIA_UI_NAME" Language="zh_Hans_CN">
+			<Text>德马加港</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_CVS_MALAYSIA_UI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>马来西亚特色港口，造价更低。建成时建立 [ICON_TRADINGPOST] 贸易站。为海岸单元格提供 +1 [ICON_SCIENCE] 科技值。</Text>
+		</Replace>
+		<!-- = Unique unit = -->
+		<Replace Tag="LOC_UNIT_CVS_MALAYSIA_UU_NAME" Language="zh_Hans_CN">
+			<Text>兰查兰快船</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_CVS_MALAYSIA_UU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>马来西亚文艺复兴时期特色海军近战单位，替代轻快帆船。+4 [ICON_STRENGTH] 战斗力，消灭敌方单位时恢复 30 点生命值。</Text>
+		</Replace>
+		<!-- = Named Places = -->
+		<Replace Tag="LOC_NAMED_RIVER_KLANG" Language="zh_Hans_CN">
+			<Text>巴生河</Text>
+		</Replace>
+		<Replace Tag="LOC_NAMED_RIVER_PAHANG" Language="zh_Hans_CN">
+			<Text>彭亨河</Text>
+		</Replace>
+		<Replace Tag="LOC_NAMED_RIVER_PERAK" Language="zh_Hans_CN">
+			<Text>霹雳河</Text>
+		</Replace>
+		<Replace Tag="LOC_NAMED_RIVER_RAJANG" Language="zh_Hans_CN">
+			<Text>拉让江</Text>
+		</Replace>
+		<Replace Tag="LOC_NAMED_RIVER_KINABATANGAN" Language="zh_Hans_CN">
+			<Text>京那巴当岸河</Text>
+		</Replace>
+		<Replace Tag="LOC_NAMED_RIVER_KELANTAN" Language="zh_Hans_CN">
+			<Text>吉兰丹河</Text>
+		</Replace>
+		<!-- = Cities = -->
+		<Replace Tag="LOC_CITY_NAME_KADARAM" Language="zh_Hans_CN">
+			<Text>迦荼罗</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_JOHOR" Language="zh_Hans_CN">
+			<Text>柔佛</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MALACCA" Language="zh_Hans_CN">
+			<Text>马六甲</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KELANTAN" Language="zh_Hans_CN">
+			<Text>吉兰丹</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_SINGAPURA" Language="zh_Hans_CN">
+			<Text>新加坡</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LANGKASUKA" Language="zh_Hans_CN">
+			<Text>狼牙脩</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_TAMBRALINGA" Language="zh_Hans_CN">
+			<Text>单马令</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_TAKOLA" Language="zh_Hans_CN">
+			<Text>塔科拉</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_PERAK" Language="zh_Hans_CN">
+			<Text>霹雳</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KELANG" Language="zh_Hans_CN">
+			<Text>巴生</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_PENANG" Language="zh_Hans_CN">
+			<Text>槟城</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_GUANTOLI" Language="zh_Hans_CN">
+			<Text>官陀利</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_JAMBI" Language="zh_Hans_CN">
+			<Text>占碑</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_PALEMBANG" Language="zh_Hans_CN">
+			<Text>巨港</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_PATTANI" Language="zh_Hans_CN">
+			<Text>北大年</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BIAWAK_BUSUK" Language="zh_Hans_CN">
+			<Text>比亚瓦布苏</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_GANGGA_NEGARA" Language="zh_Hans_CN">
+			<Text>甘加尼加拉</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_GUNUNG_JERAI" Language="zh_Hans_CN">
+			<Text>日莱峰</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KOTA_BURUK" Language="zh_Hans_CN">
+			<Text>哥打布鲁</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_SABAH" Language="zh_Hans_CN">
+			<Text>沙巴</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_PAHANG" Language="zh_Hans_CN">
+			<Text>彭亨</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_THARRA" Language="zh_Hans_CN">
+			<Text>塔拉</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_PALANDA" Language="zh_Hans_CN">
+			<Text>帕兰达</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KALONKA" Language="zh_Hans_CN">
+			<Text>卡隆卡</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LIGOR" Language="zh_Hans_CN">
+			<Text>洛坤</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_ACEH" Language="zh_Hans_CN">
+			<Text>亚齐</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_SARAWAK" Language="zh_Hans_CN">
+			<Text>砂拉越</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_RIAU" Language="zh_Hans_CN">
+			<Text>廖内</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KUANTAN" Language="zh_Hans_CN">
+			<Text>关丹</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_TERENGGANU" Language="zh_Hans_CN">
+			<Text>登嘉楼</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BANTAM" Language="zh_Hans_CN">
+			<Text>万丹</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MAKASSAR" Language="zh_Hans_CN">
+			<Text>望加锡</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BATU" Language="zh_Hans_CN">
+			<Text>巴都</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KUALA_BERANG" Language="zh_Hans_CN">
+			<Text>瓜拉勿浪</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_AMBON" Language="zh_Hans_CN">
+			<Text>安汶</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KUALA_LUMPUR" Language="zh_Hans_CN">
+			<Text>吉隆坡</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_IPOH" Language="zh_Hans_CN">
+			<Text>怡保</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KOTA_BHARU" Language="zh_Hans_CN">
+			<Text>哥打峇鲁</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_SUNGAI_UJONG" Language="zh_Hans_CN">
+			<Text>双溪乌戎</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BAGAN" Language="zh_Hans_CN">
+			<Text>巴甘</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_PEKANBARU" Language="zh_Hans_CN">
+			<Text>北干巴鲁</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_ALOR_SETAR" Language="zh_Hans_CN">
+			<Text>亚罗士打</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_PAGOH" Language="zh_Hans_CN">
+			<Text>巴莪</Text>
+		</Replace>
+		<!-- = Info = -->
+		<Replace Tag="LOC_CIVINFO_CVS_MALAYSIA_LOCATION" Language="zh_Hans_CN">
+			<Text>东南亚</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVINFO_CVS_MALAYSIA_SIZE" Language="zh_Hans_CN">
+			<Text>330,803 平方公里</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVINFO_CVS_MALAYSIA_POPULATION" Language="zh_Hans_CN">
+			<Text>约3120万</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVINFO_CVS_MALAYSIA_CAPITAL" Language="zh_Hans_CN">
+			<Text>吉隆坡</Text>
+		</Replace>
+
+		<!-- = BISMARCK = -->
+		<Replace Tag="LOC_LEADER_GEDEMO_BISMARK" Language="zh_Hans_CN">
+			<Text>奥托·冯·俾斯麦</Text>
+		</Replace>
+		<Replace Tag="LOC_LOADING_INFO_LEADER_GEDEMO_BISMARK" Language="zh_Hans_CN">
+			<Text>向强大的俾斯麦致敬，德意志帝国的首任宰相！德国是一个新兴国家，从神圣罗马帝国的废墟中锻造而成，最终于1871年统一，距今仅一个多世纪。德国人民已证明自己是富有创造力、勤奋且凶猛的战士。尽管在20世纪上半叶经历了巨大的灾难，德国仍保持着全球经济、艺术和科技的领先地位。伟大的俾斯麦亲王，德国人民寄望于您引领他们走向更加辉煌的未来。他们的决心坚定，他们仰望您——他们敬爱的铁血宰相——再次指引他们前行。您将以铁和血统治和征服，还是培育日耳曼的艺术与工业？您能建立一个经得起时间考验的文明吗？</Text>
+		</Replace>
+		<!-- = Leader ability = -->
+		<Replace Tag="LOC_TRAIT_LEADER_GEDEMO_BISMARK_NAME" Language="zh_Hans_CN">
+			<Text>文化斗争</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_GEDEMO_BISMARK_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>解锁科技铸铜术后，立即解锁商业中心。军营区域从商业中心获得标准 [ICON_CULTURE] 文化值相邻加成，从商业同业公会获得大量 [ICON_PRODUCTION] 生产力相邻加成。</Text>
+		</Replace>
+		<!-- = Agenda = -->
+		<Replace Tag="LOC_AGENDA_GEDEMO_BISMARK_NAME" Language="zh_Hans_CN">
+			<Text>铁血宰相</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_GEDEMO_BISMARK_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>在和平协议中从不放弃任何条件，并喜欢采取同样做法的文明。厌恶曾经投降或从未参战的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_LEADER_GEDEMO_BISMARK_REASON_ANY" Language="zh_Hans_CN">
+			<Text>（您光荣战斗且未在和平协议中投降。）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_GEDEMO_BISMARK_REASON_ANY" Language="zh_Hans_CN">
+			<Text>（您从未参战或在和平协议中投降过。）</Text>
+		</Replace>
+		<!-- = Diplo = -->
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我以伟大的德意志人民之名欢迎您！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>您好，我是奥托·冯·俾斯麦，德意志宰相！您想参观我们最近的城市吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>谢谢。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我邀请您交换各自首都的信息。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>您好！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我愉快地接受您的代表团！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>很遗憾，不行。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我派遣一支商务代表团，携带来自我国的礼物：香肠和啤酒，许多啤酒……</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>是的，我同意向您的小士兵们开放边境。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我们目前没有兴趣。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>您是否同意我们的部队穿越您的领土？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我同意向世界宣告我们的友谊。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我拒绝向世界宣告我们的友谊。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>仔细考虑这份友谊的提议将符合您的利益。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>谢谢您，朋友。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>真是令人失望。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>您愿意结成同盟吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>您真是顽强！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>您真是个懦夫！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>一堆令人作呕的士兵聚集在我们边境附近……您想在不愉快的事件发生之前将他们撤走吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我公开谴责您！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>您在我们背后密谋。请放心，我会警告其他人的！（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我不能等到您变得更加强大。所以，准备迎接战争吧！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>堕落的恶棍！我们会把您送入地底！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>让我们和平相处吧！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>当然不行。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我提议停战，您怎么看？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>德国已被摧毁。我为未来的世代哭泣。</Text>
+		</Replace>
+		<!-- = Pedia = -->
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_GEDEMO_BISMARK_TITLE" Language="zh_Hans_CN">
+			<Text>奥托·冯·俾斯麦</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_GEDEMO_BISMARK_SUBTITLE" Language="zh_Hans_CN">
+			<Text>德意志帝国宰相</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_GEDEMO_BISMARK_QUOTE" Language="zh_Hans_CN">
+			<Text>没有武装的外交，如同没有乐器的音乐。</Text>
+		</Replace>
+
+		<!-- = FINLAND = -->
+		<!-- = Civilization = -->
+		<Replace Tag="LOC_CIVILIZATION_MER_FINLAND_NAME" Language="zh_Hans_CN">
+			<Text>芬兰</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_MER_FINLAND_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>芬兰</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_MER_FINLAND_DESCRIPTION_JFD_CIVILIZATION" Language="zh_Hans_CN">
+			<Text>芬兰文明</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_MER_FINLAND_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>芬兰的</Text>
+		</Replace>
+		<!-- = Civilization ability = -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_MER_KALEVALA_NAME" Language="zh_Hans_CN">
+			<Text>卡勒瓦拉</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_MER_KALEVALA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>冻土和冻土丘陵上的树林提供 +1 [ICON_FOOD] 食物，拥有资源则额外提供 +1 [ICON_FOOD] 食物。
+伐木场提供 +2 [ICON_GOLD] 金币。建立在湖泊 2 个单元格范围内的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土。</Text>
+		</Replace>
+		<!-- = Leader = -->
+		<Replace Tag="LOC_LEADER_MER_MANNERHEIM_NAME" Language="zh_Hans_CN">
+			<Text>曼纳海姆</Text>
+		</Replace>
+		<!-- = Leader ability = -->
+		<Replace Tag="LOC_TRAIT_LEADER_MER_OUR_HOMES_OUR_FAITH_OUR_COUNTRY_NAME" Language="zh_Hans_CN">
+			<Text>凛冬之韧</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_MER_OUR_HOMES_OUR_FAITH_OUR_COUNTRY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>所有单位受伤带来的战斗力减益 -50%。</Text>
+		</Replace>
+		<Replace Tag="LOC_MODIFIER_MER_OUR_HOMES_OUR_FAITH_OUR_COUNTRY_AVERAGE_STRENGTH_DESC" Language="zh_Hans_CN">
+			<Text>在普通魅力单元格作战时+3 [ICON_Strength] 战斗力加成。</Text>
+		</Replace>
+		<Replace Tag="LOC_MODIFIER_MER_OUR_HOMES_OUR_FAITH_OUR_COUNTRY_CHARMING_STRENGTH_DESC" Language="zh_Hans_CN">
+			<Text>在迷人魅力单元格作战时+4 [ICON_Strength] 战斗力加成。</Text>
+		</Replace>
+		<Replace Tag="LOC_MODIFIER_MER_OUR_HOMES_OUR_FAITH_OUR_COUNTRY_BREATHTAKING_STRENGTH_DESC" Language="zh_Hans_CN">
+			<Text>在惊艳魅力单元格作战时+5 [ICON_Strength] 战斗力加成。</Text>
+		</Replace>
+		<!-- = Unique unit = -->
+		<Replace Tag="LOC_UNIT_MER_SISSI_NAME" Language="zh_Hans_CN">
+			<Text>雪地猎兵</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_MER_SISSI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>芬兰现代特色近战单位，替代步兵。夹击战斗力加成 +100%。允许进行 [ICON_Range] 范围为 2，[ICON_Ranged] 远程攻击力为 75 的远程攻击。无需维护资源。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_MER_SISSI_NAME" Language="zh_Hans_CN">
+			<Text>莫蒂战术</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_MER_SISSI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>双倍夹击加成。</Text>
+		</Replace>
+		<!-- = Unique improvement = -->
+		<Replace Tag="LOC_IMPROVEMENT_MER_SAUNA_NAME" Language="zh_Hans_CN">
+			<Text>桑拿房</Text>
+		</Replace>
+		<Replace Tag="LOC_IMPROVEMENT_MER_SAUNA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>芬兰特色改良，解锁于“游戏与娱乐”市政。[NEWLINE]提供 +2 [ICON_FOOD] 食物、+1 [ICON_CULTURE] 文化、+1 [ICON_AMENITIES] 宜居度、+1 [ICON_HOUSING] 住房。[NEWLINE]若建于冻土或雪地单元格，额外提供 +1 [ICON_AMENITIES] 宜居度；[NEWLINE]每相邻 2 个森林单元格提供 +1 [ICON_CULTURE] 文化值（研究完“自然历史”市政后每相邻 1 个森林则提供 +1 [ICON_CULTURE] 文化值）；[NEWLINE]相邻河流、湖泊、水渠提供 +2 [ICON_CULTURE] 文化值（研究完“文化遗产”市政后则提供 +4 [ICON_CULTURE] 文化值）。研究完“飞行”科技后，根据文化值提供旅游业绩。研究"飞行"科技后，提供等同于单元格魅力的 [ICON_Tourism] 旅游业绩。每个城市仅限建造一座。仅可建造在冻土、雪地、森林和沼泽单元格。无法与另一个桑拿房相邻。</Text>
+		</Replace>
+		<!-- = Cities = -->
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_1" Language="zh_Hans_CN">
+			<Text>赫尔辛基</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_2" Language="zh_Hans_CN">
+			<Text>埃斯波</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_3" Language="zh_Hans_CN">
+			<Text>坦佩雷</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_4" Language="zh_Hans_CN">
+			<Text>万塔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_5" Language="zh_Hans_CN">
+			<Text>奥卢</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_6" Language="zh_Hans_CN">
+			<Text>图尔库</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_7" Language="zh_Hans_CN">
+			<Text>于韦斯屈莱</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_8" Language="zh_Hans_CN">
+			<Text>拉赫蒂</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_9" Language="zh_Hans_CN">
+			<Text>库奥皮奥</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_10" Language="zh_Hans_CN">
+			<Text>波里</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_11" Language="zh_Hans_CN">
+			<Text>科沃拉</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_12" Language="zh_Hans_CN">
+			<Text>约恩苏</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_13" Language="zh_Hans_CN">
+			<Text>拉彭兰塔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_14" Language="zh_Hans_CN">
+			<Text>海门林纳</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_15" Language="zh_Hans_CN">
+			<Text>瓦萨</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_16" Language="zh_Hans_CN">
+			<Text>塞伊奈约基</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_17" Language="zh_Hans_CN">
+			<Text>罗瓦涅米</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_18" Language="zh_Hans_CN">
+			<Text>米凯利</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_19" Language="zh_Hans_CN">
+			<Text>萨洛</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_20" Language="zh_Hans_CN">
+			<Text>波尔沃</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_21" Language="zh_Hans_CN">
+			<Text>科科拉</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_22" Language="zh_Hans_CN">
+			<Text>洛赫亚</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_23" Language="zh_Hans_CN">
+			<Text>许温凯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_24" Language="zh_Hans_CN">
+			<Text>耶尔文佩</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_25" Language="zh_Hans_CN">
+			<Text>劳马</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_26" Language="zh_Hans_CN">
+			<Text>卡亚尼</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_27" Language="zh_Hans_CN">
+			<Text>凯拉瓦</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_28" Language="zh_Hans_CN">
+			<Text>萨翁林纳</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_29" Language="zh_Hans_CN">
+			<Text>诺基亚</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_30" Language="zh_Hans_CN">
+			<Text>卡里纳</Text>
+		</Replace>
+
+		<!-- = SWITZERLAND = -->
+		<!-- = Civilization = -->
+		<Replace Tag="LOC_CIVILIZATION_CVS_SWITZERLAND_NAME" Language="zh_Hans_CN">
+			<Text>瑞士</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_CVS_SWITZERLAND_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>瑞士帝国</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_CVS_SWITZERLAND_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>瑞士的</Text>
+		</Replace>
+		<Replace Tag="LOC_CIVILIZATION_CVS_SWITZERLAND_DESCRIPTION_JFD_CIVILIZATION" Language="zh_Hans_CN">
+			<Text>瑞士联邦</Text>
+		</Replace>
+		<!-- = Civilization ability = -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_SWITZERLAND_UA_NAME" Language="zh_Hans_CN">
+			<Text>日内瓦公约</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_SWITZERLAND_UA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>“政治哲学”市政后，获得城邦“日内瓦”的宗主国效果：[ICON_TechBoosted] 尤里卡提供 +5% [ICON_Science] 科技开销。[NEWLINE]训练间谍时 +50% [ICON_Production] 生产力。敌方间谍在我方城市中，效力降低 1 级。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T4草原山脉、T4平原山脉。</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_SWITZERLAND_UA_XP2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_TRAIT_CIVILIZATION_CVS_SWITZERLAND_UA_DESCRIPTION}</Text>
+		</Replace>
+		<!-- = Leader = -->
+		<Replace Tag="LOC_LEADER_CVS_ESCHER_NAME" Language="zh_Hans_CN">
+			<Text>阿尔弗雷德·埃舍尔</Text>
+		</Replace>
+		<Replace Tag="LOC_LOADING_INFO_LEADER_CVS_ESCHER" Language="zh_Hans_CN">
+			<Text>相信您的雄心，阿尔弗雷德·埃舍尔，铁路的伟大先驱，因为瑞士各州呼唤着您的领导。在您谦逊的国家内，您将睿智规划，利用山地地形推动工业发展。忠于您的议会，善待小国，您的各州必将获得回报。</Text>
+		</Replace>
+		<!-- = Leader ability = -->
+		<Replace Tag="LOC_TRAIT_LEADER_CVS_ESCHER_UA_NAME" Language="zh_Hans_CN">
+			<Text>十字路口的先驱</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_CVS_ESCHER_UA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>商业中心和工业区从山脉获得标准相邻加成。修建这些区域内的建筑时 +50% [ICON_Production] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_MODIFIER_CVS_ESCHER_UA_INDUSTRIAL_ADJ_MOUNTAIN" Language="zh_Hans_CN">
+			<Text>来自相邻山脉的+{1_num} [ICON_Production] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_MODIFIER_CCB_ESCHER_UA_COMMERCIAL_ADJ_MOUNTAIN" Language="zh_Hans_CN">
+			<Text>来自相邻山脉的+{1_num} [ICON_GOLD] 金币。</Text>
+		</Replace>
+		<!-- = Agenda = -->
+		<Replace Tag="LOC_AGENDA_CVS_ESCHER_NAME" Language="zh_Hans_CN">
+			<Text>瑞士元首</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_CVS_ESCHER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>尽量避免战争，喜欢工业发达、经济繁荣的文明。厌恶生产力低下的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_LEADER_CVS_ESCHER_REASON_ANY" Language="zh_Hans_CN">
+			<Text>（您富有且生产力高。）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_CVS_ESCHER_HAPPY" Language="zh_Hans_CN">
+			<Text>埃舍尔赞赏您的经济并称赞您的生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_CVS_ESCHER_REASON_ANY" Language="zh_Hans_CN">
+			<Text>（您的生产力薄弱。）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_CVS_ESCHER_UNHAPPY" Language="zh_Hans_CN">
+			<Text>埃舍尔对您缺乏生产力感到不满。</Text>
+		</Replace>
+		<!-- = Diplo = -->
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>啊，一位旅行者？欢迎，我的朋友，来到这个我们称之为瑞士的最美丽的国家。我是约翰·海因里希·阿尔弗雷德·埃舍尔·冯·格拉斯——但请叫我阿尔弗雷德就好。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我们离我的一座城市很近，碰巧如此。您愿意与我同行吗？或许我们可以探讨新的商业机会。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>太好了！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我提议我们分享各自国家首都的信息。这无疑会增进我们两国人民之间的关系。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>请讲。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>您的代表团受到各州的热烈欢迎！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>啊，恐怕我目前不能同意此事。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>瑞士政府已派遣代表团，携带奶酪、巧克力和一些黄金作为礼物赠予您的国库。请接受我们的款待。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>当然可以，开放边界协议将十分有益。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我抱歉，但目前我无意接受这个协议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>开放边界是信任与友谊的伟大展示，今天我必须向您请求这样的承诺；您是否愿意答应我呢？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我们的两国人民能发表这份宣言让我深感欣慰！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我怀着沉重的心情必须拒绝您的提议，但请随时在日后再次提出。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>您的国家和人民对我们来说是伟大的激励和榜样，怀着感激之情，我向您献上瑞士的友谊。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>太好了，我必须立即将这好消息传达给各州！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>真遗憾，但我能理解。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我很少能称周围的人为"盟友"，但您确实是值得这个称号的人。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>一个缺乏生产力的国家将一无是处——而生产力若无资本则无法建成。您深谙此道。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>尽管您能够或已经做了许多，但您的人民产出甚微，国库也几乎空虚。您给周围的人树立了一个糟糕的榜样。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我当然希望您不是在计划入侵我的国家。请在犯下大错之前，将您的部队从我的边境撤走。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>这很好，谢谢您。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>遗憾我们未能达成协议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>您的言辞空洞无物。我的人民将不会忘记，也不会原谅。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>您不值得我尊重，也不值得周围人的尊重，我已确保世人知道这一点。（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>愚蠢。我们并非好战之邦，但我们这个弹丸小国能屹立不倒，就应当向您表明我们绝非毫无防备。这种无知将是您的覆灭。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>请知悉，我并不想要这场战争。然而，您迫使我出手，使它成为唯一的选择。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我同意。从长远来看，和平对我们双方都更加有利可图。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>面对生死攸关，即使不懂商业的人也能看出这份协议的本质。这样的协议是不可接受的。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我前来请求我们放下武器。我相信我们可以达成一个对双方都有利的协议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我可能会倒下，但瑞士过去曾被占领也曾重获自由。毫无疑问，我们将再次回归并繁荣昌盛。</Text>
+		</Replace>
+		<!-- = Unique unit = -->
+		<Replace Tag="LOC_UNIT_CVS_SWITZERLAND_UU_NAME" Language="zh_Hans_CN">
+			<Text>行军者</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_CVS_SWITZERLAND_UU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>瑞士中世纪时期特色抗骑兵单位，取代长矛兵。拥有一组独特的 [ICON_PROMOTION] 晋升，且每次 [ICON_PROMOTION] 晋升从以下选项中随机选择 3 个。无需维护费，初始获得 1 次 [ICON_PROMOTION] 晋升。[NEWLINE][NEWLINE][ICON_BULLET]{LOC_PROMOTION_CVS_SWITZERLAND_HALBERDIER_NAME}：{LOC_PROMOTION_CVS_SWITZERLAND_HALBERDIER_DESCRIPTION}[NEWLINE][ICON_BULLET]{LOC_PROMOTION_CVS_SWITZERLAND_PIKE_SQUARE_NAME}：{LOC_PROMOTION_CVS_SWITZERLAND_PIKE_SQUARE_DESCRIPTION}[NEWLINE][ICON_BULLET]{LOC_PROMOTION_CVS_SWITZERLAND_VANGUARD_NAME}：{LOC_PROMOTION_CVS_SWITZERLAND_VANGUARD_DESCRIPTION}[NEWLINE][ICON_BULLET]{LOC_PROMOTION_CVS_SWITZERLAND_WEDGE_NAME}：{LOC_PROMOTION_CVS_SWITZERLAND_WEDGE_DESCRIPTION}[NEWLINE][ICON_BULLET]{LOC_PROMOTION_CVS_SWITZERLAND_HELVETII_DOCTRINE_NAME}：{LOC_PROMOTION_CVS_SWITZERLAND_HELVETII_DOCTRINE_DESCRIPTION}[NEWLINE][ICON_BULLET]{LOC_PROMOTION_CVS_SWITZERLAND_COLUMNS_NAME}：{LOC_PROMOTION_CVS_SWITZERLAND_COLUMNS_DESCRIPTION}[NEWLINE][ICON_BULLET]{LOC_PROMOTION_CVS_SWITZERLAND_CANTONAL_BANNERS_NAME}：{LOC_PROMOTION_CVS_SWITZERLAND_CANTONAL_BANNERS_DESCRIPTION}</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CLASS_CVS_SWITZERLAND_UU_NAME" Language="zh_Hans_CN">
+			<Text>瑞士佣兵</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_HALBERDIER_NAME" Language="zh_Hans_CN">
+			<Text>戟兵</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_HALBERDIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>攻击时+5 [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_PIKE_SQUARE_NAME" Language="zh_Hans_CN">
+			<Text>长枪方阵</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_PIKE_SQUARE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>防御时+5 [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_VANGUARD_NAME" Language="zh_Hans_CN">
+			<Text>先锋</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_VANGUARD_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>攻击受伤单位时+5 [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_WEDGE_NAME" Language="zh_Hans_CN">
+			<Text>楔形阵</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_WEDGE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>可击退敌方单位。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_HELVETII_DOCTRINE_NAME" Language="zh_Hans_CN">
+			<Text>赫尔维蒂战法</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_HELVETII_DOCTRINE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>攻击后可移动。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_COLUMNS_NAME" Language="zh_Hans_CN">
+			<Text>纵队</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_COLUMNS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>双倍夹击加成。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_CANTONAL_BANNERS_NAME" Language="zh_Hans_CN">
+			<Text>州旗</Text>
+		</Replace>
+		<Replace Tag="LOC_PROMOTION_CVS_SWITZERLAND_CANTONAL_BANNERS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>在丘陵上忽略地形惩罚。</Text>
+		</Replace>
+		<!-- = Unique building = -->
+		<Replace Tag="LOC_BUILDING_CVS_SWITZERLAND_UI_NAME" Language="zh_Hans_CN">
+			<Text>州议会大厦</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_CVS_SWITZERLAND_UI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>瑞士特色建筑，替代银行。提供 +8 [ICON_GOLD] 金币，每有一个宗主城邦额外提供 +1 [ICON_GOLD] 金币。城市中有 [ICON_GOVERNOR] 总督就职时每回合提供 +1 [ICON_INFLUENCEPERTURN] 影响力点数。</Text>
+		</Replace>
+		<!-- = Swiss city names = -->
+		<Replace Tag="LOC_CITY_NAME_BERN" Language="zh_Hans_CN">
+			<Text>伯尔尼</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_ZURICH" Language="zh_Hans_CN">
+			<Text>苏黎世</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_GENEVA" Language="zh_Hans_CN">
+			<Text>日内瓦</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LUCERNE" Language="zh_Hans_CN">
+			<Text>卢塞恩</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BASEL" Language="zh_Hans_CN">
+			<Text>巴塞尔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LAUSANNE" Language="zh_Hans_CN">
+			<Text>洛桑</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_ST_GALLEN" Language="zh_Hans_CN">
+			<Text>圣加仑</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LUGANO" Language="zh_Hans_CN">
+			<Text>卢加诺</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_WINTERTHUR" Language="zh_Hans_CN">
+			<Text>温特图尔</Text>
+		</Replace>
+		<!-- = Pedia = -->
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_CVS_ESCHER_QUOTE" Language="zh_Hans_CN">
+			<Text>运气可能眷顾勇者，但成功青睐持之以恒者。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_CVS_ESCHER_TITLE" Language="zh_Hans_CN">
+			<Text>阿尔弗雷德·埃舍尔</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_CVS_ESCHER_SUBTITLE" Language="zh_Hans_CN">
+			<Text>瑞士政治家、商界领袖与铁路先驱</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_CVS_ESCHER_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>凭借前瞻性规划，埃舍尔擅长打造一个高生产力、高利润的国家。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_CVS_ESCHER_CHAPTER_DETAILED_BODY" Language="zh_Hans_CN">
+			<Text>瑞士城市可以在盟邦城邦的帮助下智取大多数对手，但在埃舍尔的领导下，生产力才是通往胜利的道路。借助瑞士从治理中获得回报的能力，埃舍尔必将部署州议会独特建筑来支撑经济并赢得小文明的青睐。如此依赖城邦外交的命运，保护将由瑞士雇佣兵独特单位及其特殊的晋升树提供。然而，真正让埃舍尔的帝国受益的是工业区沿山脉的巧妙布置。凭借额外的生产力和金币区域性产出，处于区域辐射范围内的新城可以迅速起步，让埃舍尔在他所选择的任何胜利类型中都能稳占一席之地。</Text>
+		</Replace>
+
+
+		<!-- = SAN MARTIN (Argentina) = -->
+		<Replace Tag="LOC_LEADER_LEU_SANMARTIN_NAME" Language="zh_Hans_CN">
+			<Text>何塞·德·圣马丁</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_LEU_SANMARTIN_NAME" Language="zh_Hans_CN">
+			<Text>安第斯远征</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_LEU_SANMARTIN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击败敌方单位时获得 5 点 [ICON_GreatPerson] 大将军和 5 点大音乐家 [ICON_GREATMUSICIAN] 伟人点数（联机速度下）。[NEWLINE]近战、远程单位和摇滚乐队 [ICON_PROMOTION] 晋升时不会结束回合。</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_LEU_SANMARTIN_NAME" Language="zh_Hans_CN">
+			<Text>劳塔罗会</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_LEU_SANMARTIN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>喜欢专注于训练骑兵单位的领袖。厌恶从其他玩家手中占领过多城市的领袖。</Text>
+		</Replace>
+		<Replace Tag="LOC_LOADING_INFO_LEADER_LEU_SANMARTIN" Language="zh_Hans_CN">
+			<Text>一片大陆与您一同崛起，何塞·德·圣马丁，尊贵的将军与自由的守护者。您的安第斯军团是自由的不朽力量，您忠诚的掷弹骑兵无与伦比。去吧，解放者，打破束缚这片大陆人民的外来枷锁。让自由降临，其余皆不足道！</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_LEU_GRANADERO_NAME" Language="zh_Hans_CN">
+			<Text>掷弹骑兵</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_LEU_GRANADERO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>何塞·德·圣马丁的特色骑兵单位，替代骑兵，通过"民族主义"解锁。除普通近战攻击外还拥有较弱的远程攻击，受伤时不承受战斗力减益。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>您好！我是何塞·德·圣马丁将军，阿根廷的解放者，秘鲁的保护者。国家万岁，自由万岁，独立万岁！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>您愿意造访阿根廷引以为傲的定居点之一吗？那里充满了自由而勤劳的公民！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我接受您的邀请。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我建议我们交换首都位置的信息。我想更多地了解您遥远的国度。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>您好。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我接受您慷慨的礼物。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我不能接受这些馈赠。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我已派遣代表团，带来上等肉类和布匹作为礼物。驼运这些礼物的健壮骡子，如果您需要，也一并赠予您。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>自由之友在这里永远受欢迎。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>阿根廷的大门对暴君紧闭。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>反抗暴政的革命必须继续！您是否允许我的部队穿越您的领土以实现这一目标？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我乐意与热爱自由的志同道合者携手并肩。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>不。我只愿与雄狮为友。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>真正的朋友是纠正我错误、责备我过失之人。您愿意成为那个人吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>除了最诚挚的感谢，我已别无他物可奉。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>您伤我心了。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我们土地的士兵不知奢华，唯知荣耀。与我联手，我们将与您和您的部队分享这份荣耀。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>愿上苍主宰您的命运，愿您抵达幸福与和平的巅峰。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_LEU_SANMARTIN_HORSES" Language="zh_Hans_CN">
+			<Text>在这片美丽的土地上，训练精湛骑兵是明智之举。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_LEADER_LEU_SANMARTIN_HORSES" Language="zh_Hans_CN">
+			<Text>（您拥有可观的骑兵单位数量）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_LEU_SANMARTIN_HORSES" Language="zh_Hans_CN">
+			<Text>圣马丁因您对骑兵的投入而尊敬您。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>世上真正的较量在于珍视自由者与漠视自由者之间，而您……您站错了队。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_LEU_SANMARTIN_CITIES" Language="zh_Hans_CN">
+			<Text>我看您以为这些土地是您的。这些土地属于高乔人，我们将为之而战。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_LEU_SANMARTIN_CITIES" Language="zh_Hans_CN">
+			<Text>（您占领了过多城市）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_LEU_SANMARTIN_CITIES" Language="zh_Hans_CN">
+			<Text>圣马丁不喜您占领的城市数量。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>您的部队在我边境集结。我警告您：若您意图战争，即便是阿根廷的岩石也会挺身而出，抵抗外来侵略者。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我不能接受这个提议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我不惧怕暴君的言辞。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>自由与独立的时代即将到来，强者不再以铁腕统治弱小。改变您的方式，否则将面对解放之军。（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_REASON_FROM_AI_LEADER_ANY_REASON_AGENDAREASON" Language="zh_Hans_CN">
+			<Text>（您拥有更多的城市）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>您粗鄙无礼地迫使我以剑为兵，简直匪夷所思。您这傲慢的恶棍，您将为这个决定追悔莫及！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>暴君的时代已经过去！我曾立下神圣誓言：若自由遭受侵犯，我必将捍卫受压迫者的自由。如今，是时候兑现那个诺言了。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>我对那些我为之奋战的人民所做的承诺已得到兑现。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>不。要么取得胜利，要么我将一无所有。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>一场光荣的失败胜过一次随意的胜利。现在是放下武器的时候了，您不这样认为吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN">
+			<Text>这是死亡带来的耗竭……我唯一遗憾的是，再也没有任何东西能奉献给为祖国自由而战的渴望。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEU_SANMARTIN_TITLE" Language="zh_Hans_CN">
+			<Text>何塞·德·圣马丁</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEU_SANMARTIN_QUOTE" Language="zh_Hans_CN">
+			<Text>若战胜敌人是一种胜利，那么战胜自我则是更伟大的胜利。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEU_SANMARTIN_SUBTITLE" Language="zh_Hans_CN">
+			<Text>解放者</Text>
+		</Replace>
+
+		<!-- = ROCA (Argentina) = -->
+		<Replace Tag="LOC_LEADER_LEU_ROCA_NAME" Language="zh_Hans_CN">
+			<Text>胡利奥·罗卡</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_LEU_ROCA_NAME" Language="zh_Hans_CN">
+			<Text>征服沙漠</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_LEU_ROCA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>在文明边境旁作战时获得 [ICON_STRENGTH] 战斗力加成。在己方堡垒或牧场旁击败敌方单位时，获得所有相邻单元格。完成"骑马"科技后可建造庄园区域。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEU_ROCA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>相邻边境时+10 [ICON_STRENGTH] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_LEU_ROCA_NAME" Language="zh_Hans_CN">
+			<Text>文明与野蛮</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_LEU_ROCA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>尽可能扩张领土。厌恶有相邻单位或领土的文明，以及科技比其落后的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_LOADING_INFO_LEADER_LEU_ROCA" Language="zh_Hans_CN">
+			<Text>阿根廷骄傲的人民仰望您，胡利奥·罗卡，伟大的总统与中尉。领导您的国家走向荣耀，击败胆敢在您边境立足的敌人，拓展阿根廷的领土与力量。利用殖民庄园养育并强大您的子民，将其作为征服中的战略据点。您被召唤引领阿根廷进入超越邻国的辉煌新时代。若您成功，伟大的胡利奥·阿根蒂诺·罗卡，您的人民将永远铭记您。</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_LEU_ESTANCIA_NAME" Language="zh_Hans_CN">
+			<Text>庄园</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_LEU_ESTANCIA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>罗卡领导的阿根廷特色区域，替代军营，通过"骑马"解锁。庄园允许无需军械库即可训练军事工程师，且速度提升25%，边境扩张速率+25%。与牧场和堡垒相邻时获得 [ICON_FOOD] 食物相邻加成。</Text>
+		</Replace>
+		<Replace Tag="LOC_PASTURE_ESTANCIA_PRODUCTION" Language="zh_Hans_CN">
+			<Text>来自相邻牧场的 [ICON_PRODUCTION] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_FORT_ESTANCIA_PRODUCTION" Language="zh_Hans_CN">
+			<Text>来自相邻堡垒的 [ICON_PRODUCTION] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>幸会。我是胡利奥·阿根蒂诺·罗卡。没错，我的中间名就是阿根廷，我以此自豪而活，并以征服与进步荣耀它和我的国家。您是谁？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>附近就有一处庄园，有上等的肉类可供享用，愿意像文明人一样加入我们吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>深感感激。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>让我们交换首都的信息，以促进我们人民的共同发展。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>您的到访受欢迎，只要您不靠近我的土地。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>好吧。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>不。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>我已派遣我的部队，带来阿根廷的肉类和书籍，以滋养我们的胃口和进步。您会接受，还是您只是个野蛮人？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>我接受您的请求。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>这些土地很美丽，但不适合像您这样不文明的人。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>别让我后悔这个提议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>很好。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>恐怕我不能接受您的提议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>您的人民很文明。阿根廷与您建立友谊将受益。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>我接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>哼。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>让我们结成同盟，消灭周围不文明的野蛮人！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>您是个值得效仿的榜样，您确实进步非凡。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>我警告您，我会消灭任何威胁我正当领土的不文明的野蛮人！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>我的部队已准备好摧毁您在我边境附近的部队。离开。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>如此不文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>您根本不配被称为"人类"，您和您的子民不过是禽兽罢了。（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>终于！来点行动了！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>让这一天被铭记，因为今天开始了我对属于我而您却踏足其上的土地的伟大征服。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>打得不错……</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>我的人民绝不可能投降！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>我从您那里已经足够多了，我的部队有时也需要休息……我们签个条约什么的？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN">
+			<Text>我不敢相信我的人民输给了你们这些野蛮之徒！但要知道，没有什么能阻挡进步的道路！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_LEU_ROCA_REASON_BORDERS" Language="zh_Hans_CN">
+			<Text>（您离他的边境太近了）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_LEU_ROCA_BORDERS" Language="zh_Hans_CN">
+			<Text>罗卡厌恶在他边境附近定居或有单位的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_LEU_ROCA_REASON_TECH" Language="zh_Hans_CN">
+			<Text>（您发现的科技比他少）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_LEU_ROCA_TECH" Language="zh_Hans_CN">
+			<Text>罗卡不尊重科技比他少的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEU_ROCA_TITLE" Language="zh_Hans_CN">
+			<Text>胡利奥·阿根蒂诺·罗卡</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEU_ROCA_QUOTE" Language="zh_Hans_CN">
+			<Text>我们将用我们的鲜血和刀剑，一劳永逸地铸就这个阿根廷民族，它必如埃及金字塔和帝国的力量一般，以许多代人的血汗为代价发展壮大。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEU_ROCA_SUBTITLE" Language="zh_Hans_CN">
+			<Text>狐狸</Text>
+		</Replace>
+
+
+		<!-- = Argentina city names = -->
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_01" Language="zh_Hans_CN">
+			<Text>布宜诺斯艾利斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_02" Language="zh_Hans_CN">
+			<Text>科尔多瓦</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_03" Language="zh_Hans_CN">
+			<Text>罗萨里奥</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_04" Language="zh_Hans_CN">
+			<Text>拉普拉塔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_05" Language="zh_Hans_CN">
+			<Text>图库曼</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_06" Language="zh_Hans_CN">
+			<Text>马德普拉塔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_07" Language="zh_Hans_CN">
+			<Text>萨尔塔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_08" Language="zh_Hans_CN">
+			<Text>圣菲</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_09" Language="zh_Hans_CN">
+			<Text>拉努斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_10" Language="zh_Hans_CN">
+			<Text>科连特斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_11" Language="zh_Hans_CN">
+			<Text>布兰卡港</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_12" Language="zh_Hans_CN">
+			<Text>圣伊西德罗</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_13" Language="zh_Hans_CN">
+			<Text>雷西斯滕西亚</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_14" Language="zh_Hans_CN">
+			<Text>维森特洛佩斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_15" Language="zh_Hans_CN">
+			<Text>波萨达斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_16" Language="zh_Hans_CN">
+			<Text>巴拉那</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_17" Language="zh_Hans_CN">
+			<Text>梅洛</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_18" Language="zh_Hans_CN">
+			<Text>胡胡伊</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_19" Language="zh_Hans_CN">
+			<Text>基尔梅斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_20" Language="zh_Hans_CN">
+			<Text>圣地亚哥德尔埃斯特罗</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_21" Language="zh_Hans_CN">
+			<Text>皮拉尔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_22" Language="zh_Hans_CN">
+			<Text>班菲尔德</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_23" Language="zh_Hans_CN">
+			<Text>瓜伊马延</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_24" Language="zh_Hans_CN">
+			<Text>福莫萨</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_25" Language="zh_Hans_CN">
+			<Text>内乌肯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_26" Language="zh_Hans_CN">
+			<Text>拉斯埃拉斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_27" Language="zh_Hans_CN">
+			<Text>贝拉萨特吉</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_28" Language="zh_Hans_CN">
+			<Text>拉里奥哈</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_29" Language="zh_Hans_CN">
+			<Text>里奥夸尔托</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_30" Language="zh_Hans_CN">
+			<Text>圣胡安</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_31" Language="zh_Hans_CN">
+			<Text>萨莫拉</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_32" Language="zh_Hans_CN">
+			<Text>坦珀利</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_33" Language="zh_Hans_CN">
+			<Text>门多萨</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_34" Language="zh_Hans_CN">
+			<Text>蒙特格兰德</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_35" Language="zh_Hans_CN">
+			<Text>利伯塔德</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_36" Language="zh_Hans_CN">
+			<Text>乌斯怀亚</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_37" Language="zh_Hans_CN">
+			<Text>里瓦达维亚</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_38" Language="zh_Hans_CN">
+			<Text>巴兰克拉斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_39" Language="zh_Hans_CN">
+			<Text>圣马丁</Text>
+		</Replace>
+
+		<!-- = Mannerheim missing diplo = -->
+		<Replace Tag="LOC_LOADING_INFO_LEADER_MER_MANNERHEIM" Language="zh_Hans_CN">
+			<Text>芬兰人民仰望您，曼纳海姆元帅，祖国的守护者。在冰天雪地的北方，您的士兵以不屈的意志坚守每一寸土地。让桑拿房温暖您的子民，让芬兰轻步兵在森林中如幽灵般穿梭。您的国家虽小，但芬兰人的勇气可以撼动整个世界。</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_MER_MARSHAL_OF_FINLAND_NAME" Language="zh_Hans_CN">
+			<Text>芬兰元帅</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_MER_MARSHAL_OF_FINLAND_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>喜欢与己方政体相同且拥有高魅力领土的文明。厌恶政体不同或占据同一大陆的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>欢迎。我是卡尔·古斯塔夫·埃米尔·曼纳海姆，芬兰的元帅。请告诉我您的来意。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>如果您愿意，我可以带您参观我们的桑拿房。这是芬兰文化中不可或缺的一部分。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>我很荣幸。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>让我们交换首都的信息。了解彼此的国家是建立信任的第一步。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>您好。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>芬兰感谢您的善意。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>时机不适合。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>我派遣代表团，带来芬兰的礼物：驯鹿肉、云莓酱和一些暖和的羊毛制品。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>我们珍视自由通行。同意。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>芬兰的边境暂时不会开放。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>开放边境是相互信任的象征。您愿意给我们这个机会吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>芬兰接受您的友谊。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>芬兰不需要这样的友谊。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>我尊重那些坚守原则的领袖。我希望我们能成为朋友。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>这是芬兰的荣幸。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>不。我不信任您。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>芬兰虽小，但我们的盟友会知道我们的价值。您愿意与我们结盟吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>您治理国家的智慧值得钦佩。愿我们两国和平共处。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDOS_LEADER_MER_MANNERHEIM_REASON_SAME_GOVERNMENT" Language="zh_Hans_CN">
+			<Text>（您采用了相同的政体）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>您的所作所为令人不齿。芬兰不会坐视不理。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>您的军队集结在我边境附近。我建议您三思，芬兰的冬天对侵略者从不留情。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>我们达成了共识。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>这个提议不够公平。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>芬兰不会屈服于外来的压力。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>您的政策令人不安。世界应该知道您的真面目。（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>您选择了战争。芬兰人从不畏惧战斗，尤其是在保卫家园的时候。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>芬兰已经受够了。我们将用铁与火回应您的挑衅。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>和平是明智的选择。我接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>我的人民还渴望着胜利。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>战争持续得够久了。让我们寻求和平吧。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN">
+			<Text>芬兰或许倒下了，但芬兰的精神永存。记住这一点。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_MER_MANNERHEIM_MARSHAL_OF_FINLAND_SAME_GOVERNMENT" Language="zh_Hans_CN">
+			<Text>曼纳海姆尊重您选择了相同的政体。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_MER_MANNERHEIM_MARSHAL_OF_FINLAND_DIFF_GOVERNMENT" Language="zh_Hans_CN">
+			<Text>曼纳海姆对您不同的政体选择感到不快。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_MER_MANNERHEIM_REASON_DIFF_GOVERNMENT" Language="zh_Hans_CN">
+			<Text>（您采用了不同的政体）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_REASON_FROM_AI_LEADER_ANY_REASON_MER_MANNERHEIM_MARSHAL_OF_FINLAND_SAME_CONTINENT" Language="zh_Hans_CN">
+			<Text>（您与他共享同一大陆）</Text>
+		</Replace>
+
+		<!-- = Olympias missing diplo = -->
+		<Replace Tag="LOC_AGENDA_JFD_ORACLE_CHTONICS_NAME" Language="zh_Hans_CN">
+			<Text>地府神谕</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_JFD_ORACLE_CHTONICS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>确保自己在竞争城邦时拥有高 [ICON_FAITH] 信仰和 [ICON_GREATPROPHET] 大预言家点数，并希望竞争同一城邦的其他文明信仰值较低。她蔑视那些信仰值高且与她竞争同一城邦的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_LEADER_JFD_OLYMPIAS_REASON_LAGS_FAITH_AND_COMPETING_MINORS" Language="zh_Hans_CN">
+			<Text>（您与她竞争同一城邦但信仰薄弱。）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_AGENDA_JFD_ORACLE_CHTONICS_LAGS_FAITH_AND_COMPETING_MINORS" Language="zh_Hans_CN">
+			<Text>奥林匹娅斯很高兴您在城邦竞争中不构成威胁。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_JFD_OLYMPIAS_REASON_LEADS_FAITH_AND_COMPETING_MINORS" Language="zh_Hans_CN">
+			<Text>（您与她竞争同一城邦且信仰强大。）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_AGENDA_JFD_ORACLE_CHTONICS_LEADS_FAITH_AND_COMPETING_MINORS" Language="zh_Hans_CN">
+			<Text>奥林匹娅斯感到您在城邦竞争中对她的威胁。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_REASON_FROM_AI_LEADER_ANY_REASON_JFD_ORACLE_CHTONICS_LEADS_FAITH_AND_COMPETING_MINORS" Language="zh_Hans_CN">
+			<Text>（您与她竞争同一城邦且信仰强大）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>在伟大的奥林匹斯山注视下，我向您致意。我是奥林匹娅斯，涅俄普托勒摩斯之女。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我们离我的家很近。我向您表达我的盛情。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我蒙受如此厚爱与恩典。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我邀请您向我介绍您的首都，我也会同样相告。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>您的归来受到欢迎，若在意料之中。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我会与他们交谈。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>厄运跟随您的代表团。我不能接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我现在派遣代表团给您，他们蒙受福佑。愿您接纳他们，以及随之而来的神意。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>愿这证明是我们的好运。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我不能接受这类事情。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我邀请您与我达成开放边境协议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我将成全您的愿望，因这亦是众神所愿。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我不接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我相信我们必须顺应神意。我们注定成为朋友，只需要宣布这一点。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>这将为我们带来许多好运。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>不，这只会带来厄运。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>你我之间的联盟将为众神带来荣耀。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>您处理的是凡人的政治。这不会动摇到我。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>您对众神的眷顾是短暂的。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>来吧。我已准备好与您战斗。我有一个宙斯所生的儿子。您有什么？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我将成全您的愿望，因这亦是众神所愿。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我不接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>您给自己带来了何等的耻辱。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我已预见您的未来，您不是可以温言相待之人。（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>我梦见了这一刻。梦境没有以您的胜利告终。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>众神赐我力量。我们向战争进发。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>时刻已到，我接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>众神引领我走向胜利。我不会以投降来辜负他们。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>战争失败了。我们必须通过和平找到出路。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>哈迪斯带走你。</Text>
+		</Replace>
+
+		<!-- = Thule/Kiviuq missing abilities = -->
+		<Replace Tag="LOC_AGENDA_LIME_THULE_DAVE_ALWAYS_ROAMING_NAME" Language="zh_Hans_CN">
+			<Text>永思漫游</Text>
+		</Replace>
+		<Replace Tag="LOC_AGENDA_LIME_THULE_DAVE_ALWAYS_ROAMING_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>喜欢派遣探险者的文明。厌恶不探索的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDOS_LEADER_LIME_THULE_DAVE_ALWAYS_ROAMING_EXPLORERPHILE_POSITIVE" Language="zh_Hans_CN">
+			<Text>（您派出了许多探险者）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_LEADER_LIME_THULE_DAVE_ALWAYS_ROAMING_EXPLORERPHILE_POSITIVE" Language="zh_Hans_CN">
+			<Text>基维乌克视您为同伴探险者。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_LEADER_LIME_THULE_DAVE_ALWAYS_ROAMING_EXPLORERPHILE_NEGATIVE" Language="zh_Hans_CN">
+			<Text>（您忽视了探索）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_LEADER_LIME_THULE_DAVE_ALWAYS_ROAMING_EXPLORERPHILE_NEGATIVE" Language="zh_Hans_CN">
+			<Text>基维乌克认为您心胸狭窄且畏惧冒险。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_REASON_FROM_AI_LEADER_ANY_REASON_LIME_THULE_DAVE_ALWAYS_ROAMING_EXPLORERPHILE_NEGATIVE" Language="zh_Hans_CN">
+			<Text>（您没有在探索。）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>向您致意，探险的同伴！我是基维乌克，我的人民是图勒人。您也有一颗漫游者的心吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>这个季节正是捕猎弓头鲸的好时候，我正要去狩猎。您愿意一起去吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>同意。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>人生充满了冒险的机会。您愿意踏上旅程来看看我的家园吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>您好。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>谢谢，这份礼物装饰精美。有朝一日我一定会造访您的土地。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>恐怕这是禁忌。我不该同意。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>我已派遣斥候前往您的土地，携带鲸肉和装饰精美的猎刀作为礼物。您是否允许他们参观您的城市，讲述他们的传说？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>太好了！如此广阔的新土地可供探索。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>啊，您不能去别的地方探索吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>我听说过许多关于您国度的传说。我能否前往那里看看它们是否属实？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>能以您为友，我深感骄傲。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>恐怕我的道路通向别处。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>这是天意！我将欣然加入你。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>谢谢您。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>独自前行是愚蠢的——阿马鲁克猎杀独行者。我能战胜他，但我担心您的安危。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>您有点像阿格鲁利克。有兴趣和我一起去冒险吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>走得远些，愿您的旅程精彩纷呈。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>您不是旅行者。只是一个障碍，而我将克服它。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>那些在我边境上的看起来不像是冒险者。也不像猎人。事实上，他们看起来像入侵者。我的眼睛还没变成石头。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>谢谢您。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>恐怕我的道路通向别处。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>您冒着激怒赛德娜的风险！您打算把我们都拖下您的道路吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>如果您不看世界，又如何保护我们的人民？！又如何接近命运？！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>这不是战争。这是一场冒险！一场可以成为精彩故事的冒险——讲述侵略者终将被击败。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>您落后、意志薄弱、畏惧荒野。现在您看到了后果。现在您面对风暴。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>好吧。安加库特萨满将请求赛德娜原谅我们。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_REFUSE_DEAL_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>我不傻，北风还没有钝化我的智慧。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>冬天要来了，我们俩都应该为此准备。我们能同意这个停战吗？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>我想就是这样了。我最后的冒险。最后一个我无法克服的障碍，最终还是您。我能感觉到心跳在减慢，现在我化作石头。我感到寒冷……如此寒冷……</Text>
+		</Replace>
+
+		<!-- = TeK'inich II missing diplo = -->
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>一位新来者。你的到来未曾被预告。我是奥克斯维察的君主，对你带来的东西感到好奇。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我的一位忠实附庸就在附近：我们可以利用它来会面。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我将加入目光锐利的观星者与臂膀强健的战士之列。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>你尚未告知我关于你城市的任何信息。我想知道以你之名竖立了哪些宏伟纪念碑，以及你观看到哪些星辰。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>向您致意！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>将为您的代表分配一处新居所，并配备我亲自挑选的仆从和卫兵。这是我的荣幸。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我们尚未为您的代表建造合适的住所。或许改日吧。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我已向您的城市派遣了一位使节。请根据其声望予以接待，但无需为其配备仆从：他自带仆从。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>允许您的士兵通行，并将有仪仗战士陪同。此乃与其身份相称之礼遇。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我未收到惯常的献祭。边境保持关闭。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我要求自由穿越您的边境。这将有助于消除威胁，而我也会进行必要的献祭。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我将满足您的愿望，因这亦是众神所愿。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>大星位不利。此日缔结的任何友谊都将注定失败。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我的祭司们一致认为星象有利。奥克斯维察请求与您结好。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>太好了！这会让我们的敌人好好思量！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我很失望。或许下次？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>团结一致，我们将比各自为战更强大。星象与政局皆有利于结盟。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>您的王国显然受到丰收吉兆的庇佑。与您作对是不明智的。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我的祭司们想知道奥克斯维察为何要认可您的任性妄为。我看不出任何理由。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>您的计划既疯狂又透明。您毫无优势。请回吧。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>我接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>这不合适。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>一着坏棋，更是选错了时机。您一无所获。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>您是何等无价值与无礼，众人有目共睹。然而，我觉得有必要再向世界宣告一次。（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>红星不再眷顾您，大星亦不再降下甘霖。这不会持续太久。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>您是个盲目的统治者。您既看不到星辰，也看不到我的大军，更看不到我正逐步实现的计划。现在，大星在呼唤战争！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>大星要求鲜血。我不得不要求至少如此。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>战争时代即将结束。此刻正是缔约良机。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_LL_TEKINICH_II_ANY" Language="zh_Hans_CN">
+			<Text>看来我错判了星象，也错判了您。这只是应付的代价罢了。</Text>
+		</Replace>
+
+		<!-- = Teotihuacan Owl missing diplo = -->
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>一位新访客。我是掷矛者猫头鹰，特奥蒂瓦坎之主。告诉我您的来意，陌生人。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_VISIT_RECIPIENT_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>我的城市正举行献祭仪式。若您愿意观礼，我们可以同行。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NEAR_INITIATOR_POSITIVE_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>很好。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_FIRST_MEET_NO_MANS_INFO_EXCHANGE_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>交换首都的情报将有利于双方的了解。您意下如何？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_GREETING_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>说吧。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DELEGATION_FROM_HUMAN_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>您的使者将被接纳。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DELEGATION_FROM_HUMAN_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>时机不对。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DELEGATION_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>我向您派遣使者，携带着我们最珍贵的黑曜石刀刃和精美的织物。愿这些礼物彰显我们的力量。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_OPEN_BORDERS_FROM_HUMAN_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎的道路向您开放。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_OPEN_BORDERS_FROM_HUMAN_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>不。特奥蒂瓦坎的领土不容随意穿行。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_OPEN_BORDERS_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>开放边境对贸易和军事都有利。您是否愿意？</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>友谊是力量的象征。我接受。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_HUMAN_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>友谊不是轻易给予的。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_FRIEND_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>我们的力量可以结合。我提议友谊。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>众神赐福于我们的友谊。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>您不值得。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_ALLIANCE_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎寻求强大的盟友。加入我们。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_KUDO_EXIT_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>您治理国家的方式令人钦佩。特奥蒂瓦坎认可您的力量。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_EXIT_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>您的弱小令人鄙视。特奥蒂瓦坎不会尊重弱者。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_WARNING_TOO_MANY_TROOPS_NEAR_ME_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>您的军队在特奥蒂瓦坎的边境集结。这是挑衅的行为。撤走他们。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>交易达成。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>这个提议不够格。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_HUMAN_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>您竟敢公开谴责我？您会为这傲慢付出代价。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DENOUNCE_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>您的存在侮辱了诸神。世人必须知晓您的卑劣。（谴责您）</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_HUMAN_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>战争？很好。让特奥蒂瓦坎展示真正的力量！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DECLARE_WAR_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>您的势力必须被清除。特奥蒂瓦坎的军团已整装待发！</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_AI_ACCEPT_DEAL_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>和平有利于双方。我同意。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MAKE_PEACE_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>战争消耗太大。让我们寻求和平吧。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_AI_LEADER_LIME_TEO_OWL_ANY" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎或许倒下了……但我们的金字塔将与星辰共存。</Text>
+		</Replace>
+
+		<!-- = Standard diplo fillers = -->
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>很好。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>恐怕我不能接受您的提议。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我同意向世界宣告我们的友谊。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>我拒绝向世界宣告我们的友谊。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_LEU_EVITA_ANY" Language="zh_Hans_CN">
+			<Text>别为我哭泣，阿根廷……说实话，我从未离开过你，在我疯狂的岁月和狂野的人生中，我一直恪守诺言……请不要与我疏远。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_CVS_ESCHER_ANY" Language="zh_Hans_CN">
+			<Text>我可能会倒下，但瑞士过去曾被占领也曾重获自由。毫无疑问，我们将再次回归并繁荣昌盛。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_GEDEMO_BISMARK_ANY" Language="zh_Hans_CN">
+			<Text>德国已被摧毁。我为未来的世代哭泣。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_JFD_OLYMPIAS_ANY" Language="zh_Hans_CN">
+			<Text>哈迪斯带走你。</Text>
+		</Replace>
+
+
+		<!-- = PEDIA HISTORY PARAGRAPHS = -->
+
+		<!-- Argentina civilization history -->
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LEU_ARGENTINA_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>阿根廷是位于南美洲东南部的联邦共和国，覆盖了南锥体的大部分地区。它北接玻利维亚和巴拉圭，东北邻巴西，东临乌拉圭和大西洋，西接智利，南临德雷克海峡。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LEU_ARGENTINA_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>"阿根廷"一词源自拉丁语argentum（"银"）。拉普拉塔盆地本身并没有银矿，但首批西班牙征服者因听信银山存在的传闻而来到此地，因此得名。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LEU_ARGENTINA_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>"阿根廷"这一名称首次使用可追溯至马丁·德尔·巴科·森特内拉于1602年创作的诗作《阿根廷》。尽管这一名称在18世纪已被普遍用于指代拉普拉塔盆地，但该地区在殖民时期正式称为拉普拉塔总督辖区，独立后则称为拉普拉塔联合省。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LEU_ARGENTINA_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>阿根廷文化与其地理环境一样丰富多彩，融合了多个族群。现代阿根廷文化深受欧洲移民的影响，同时也包含了美洲原住民和非洲文化元素，尤其在音乐和艺术领域。其文化首都布宜诺斯艾利斯以欧洲裔人口的普遍存在和对欧洲建筑风格的刻意模仿为特征。各大城市中心遍布博物馆、电影院和画廊，以及传统场所如文学酒吧或提供各种音乐流派的现场音乐酒吧。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LEU_ARGENTINA_CHAPTER_HISTORY_PARA_5" Language="zh_Hans_CN">
+			<Text>阿根廷音乐以探戈最为著名，探戈在布宜诺斯艾利斯及周边地区以及乌拉圭的蒙得维的亚发展起来。民间音乐、流行音乐和古典音乐也很受欢迎，阿根廷艺术家如梅赛德斯·索萨和阿塔瓦尔帕·尤潘基为新歌运动的发�做出了巨大贡献。阿根廷摇滚乐也催生了阿根廷本土充满反叛精神的摇滚乐坛。</Text>
+		</Replace>
+
+		<!-- Eva Peron history -->
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_EVITA_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>玛丽亚·伊娃·杜阿尔特·德·庇隆（1919年5月7日—1952年7月26日）是阿根廷总统胡安·庇隆（1895—1974）的第二任妻子，于1946年至1952年去世期间担任阿根廷第一夫人。她通常被称为伊娃·庇隆，或亲昵的西语昵称艾薇塔。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_EVITA_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>她于1919年出生在阿根廷乡村潘帕斯草原的洛斯托尔多斯村，是五个孩子中最小的一个。1934年，15岁的她前往首都布宜诺斯艾利斯，在那里从事舞台、广播和电影演员的职业。1944年1月22日，伊娃在布宜诺斯艾利斯卢纳公园体育场的一场为圣胡安地震灾民筹款的慈善活动中与胡安·庇隆上校相识。两人于次年结婚。1946年，胡安·庇隆当选阿根廷总统。在此后的六年里，伊娃·庇隆在亲庇隆主义工会中变得极有权势，主要代表劳工权利发言。她还掌管劳工部和卫生部，创立并运营了慈善性质的伊娃·庇隆基金会，倡导阿根廷妇女选举权，并创立和领导了该国第一个大规模的妇女政党——女性庇隆党。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_EVITA_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>1951年，伊娃·庇隆宣布竞选庇隆党副总统提名，获得了庇隆主义政治基础——低收入和工人阶级阿根廷人（他们被称为"无衫者"）的巨大支持。然而，来自军方和资产阶级的反对，加上她日益恶化的健康状况，最终迫使她退出竞选。1952年，在33岁因癌症去世前不久，阿根廷国会授予伊娃·庇隆"民族精神领袖"称号。她去世后获得了国葬待遇，这一殊荣通常只保留给国家元首。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_EVITA_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>伊娃·庇隆已成为国际流行文化的一部分，最著名的是成为音乐剧《艾薇塔》（1976年）的主角。伊娃的侄孙女克里斯蒂娜·阿尔瓦雷斯·罗德里格斯声称，艾薇塔从未离开过阿根廷人的集体意识。阿根廷首位女性民选总统克里斯蒂娜·费尔南德斯·德·基什内尔表示，她那一代女性欠伊娃一笔债，因�"她的激情和斗志为我们树立了榜样"。</Text>
+		</Replace>
+
+		<!-- Roca history -->
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_ROCA_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>罗卡治下的阿根廷比艾薇塔治下的更偏军事化。以庄园作为早期游戏的强力选择，罗卡可以专注于扩张和保卫领土，同时增强文化实力。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_ROCA_CHAPTER_DETAILED_BODY" Language="zh_Hans_CN">
+			<Text>罗卡是一位强大的领袖，也是一个可怕的敌人。在边境与他的部队打交道时要小心，因为这是他主要的扩张方式。玩罗卡可以实施强力的龟缩策略，同时为阿根廷积累文化和音乐家。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_ROCA_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>胡利奥·阿根蒂诺·罗卡（1843—1914）是一位阿根廷将军，也是1880年至1916年掌控阿根廷政治的寡头集团的领袖。他是典型的19世纪考迪罗（军阀领袖）。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_ROCA_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>胡利奥·罗卡于1843年7月17日出生在图库曼一个显赫富裕的阿根廷家庭。他在乌拉圭国立学院获得学位。大约15岁时，他自愿参加内陆省份对抗布宜诺斯艾利斯军队的斗争，并被任命为少尉；此后他在军队名册上连续服役了55年。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_ROCA_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>在战争部长阿道夫·阿尔西诺去世后，罗卡对南部印第安人发动了一场成功的战役，为国家增加了大片领土——其中大部分落入了他和他的朋友们手中。此外，根据旧殖民法的适用，印第安俘虏实际上被强制沦为奴隶。这场成功战役的结果使罗卡在权势圈中广受欢迎，他于1880年当选总统。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_ROCA_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>罗卡的执政开启了阿根廷历史上被称为"寡头时代"的时期，一直持续到1916年。其核心由大地主组成，通过据称是西半球最强大的农场主组织以及与英国有着密切联系的某些商业元素来行使权力。从积极的方面来看，他的政府足够强大，结束了此前多年来他上任前的政治混乱。</Text>
+		</Replace>
+
+		<!-- San Martin history -->
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_SANMARTIN_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>圣马丁最适合文化和征服胜利。当专注于攻击拥有剧院广场或学院区域的城市时，劫掠是个好主意，因为您将获得额外的大作家点数。征服城市后，用郊野区来滋养它们。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_SANMARTIN_CHAPTER_DETAILED_BODY" Language="zh_Hans_CN">
+			<Text>郊野区在正确的位置建造时能提供大量加成。利用它们来促进城市发展，尤其是被征服的城市。请记住，它们也可以建造在湖泊和绿洲上，因此要留意这些地貌。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_SANMARTIN_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>何塞·德·圣马丁是阿根廷将军和政治家，曾帮助领导阿根廷、智利和秘鲁反对西班牙统治的革命。圣马丁被视为阿根廷和秘鲁的民族英雄，与玻利瓦尔一起被认为是南美西班牙殖民地的解放者。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_SANMARTIN_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>圣马丁的父亲胡安·德·圣马丁是一名职业军人，曾担任亚佩尤的行政长官，该地原为瓜拉尼印第安领地的一个耶稣会传教站，位于阿根廷北部边境。他的母亲格雷戈里亚·马托拉斯也是西班牙人。何塞六岁时全家返回西班牙。1785年至1789年，他在马德里贵族神学院接受教育，之后离开那里，以军校学员身份在穆尔西亚步兵团开始了军事生涯。在接下来的20年里，他一直是西班牙君主的忠诚军官，曾在奥兰与摩尔人作战，与英国人作战（英国人曾将他囚禁一年多），并在橘子战争中与葡萄牙人作战。他于1804年被提升为上尉。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_SANMARTIN_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>圣马丁职业生涯的转折点出现在1808年，当时拿破仑占领西班牙，随后发生了反对法国人的爱国起义。在接下来的两年里，他为代表被囚禁的西班牙国王费迪南七世指挥战争的塞维利亚军政府服务。因在拜伦战役中的表现，他被提升为中校军衔，在阿尔布埃拉战役后被提升为萨贡托龙骑兵的指挥官。然而，他没有接受新职位，而是请求前往秘鲁总督辖区首府利马，但途经伦敦前往布宜诺斯艾利斯——那里已成为南美洲对抗塞维利亚军政府及其继任者加的斯摄政委员会的主要抵抗中心。1812年，圣马丁在那里受命组建一支掷弹兵军团，以对抗以秘鲁为据点、威胁阿根廷革命政府的西班牙保皇党。多年后，圣马丁坚称他牺牲了在西班牙的职业生涯是因为响应了祖国的召唤，这也是阿根廷历史学家所持的观点。毫无疑问，西班牙半岛人对任何出生在殖民地的�的偏见一定在他整个西班牙职业生涯中刺痛了他，并使他认同克里奥尔革命者。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LEU_SANMARTIN_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>在为布宜诺斯艾利斯政府服务的过程中，圣马丁以训练和领导士兵而著称。他认识到只要保皇党人控制着利马，拉普拉塔联合省就永远不会安全，但他也看到了通过传统的经由上秘鲁的陆路到达总督权力中心的军事不可能性。因此，他悄悄准备了一项绝妙的计划，这是他对南美洲南部解放的最高贡献。首先，他在图库曼附近训练军队，在高乔游击队的协助下使他们能够执行牵制行动。然后，他以健康不佳为借口，使自己被任命为库约省的总督，首府为门多萨，这是通往安第斯山脉路线的关键。在那里，他开始创建一支能够与智利爱国政府军队陆路会合，然后经海路进攻秘鲁的军队。令他失望的是，当这一计划的第一阶段接近完成时，保皇派军队重新占领了智利。这使得圣马丁不得不向西穿越安第斯山脉那令人生畏的屏障。1817年2月12日，他在查卡布科出其不意地击败了保皇党人并占领了圣地亚哥，在那里他拒绝了智利总督的职位，转而支持贝尔纳多·奥希金斯。圣马丁计划的下一阶段涉及创建智利海军和积累运兵船。尽管资金短缺，这一目标在1820年8月得以实现，当时这支主要由武装商船组成的、由托马斯·科克伦指挥的简陋舰队离开瓦尔帕莱索前往秘鲁海岸。科克伦前一年未能夺取防守严密的主要港口卡亚俄。因此，该港口被封锁，部队在皮斯科以南登陆，由此可以从陆地威胁利马。圣马丁抵挡住了攻击由优势兵力防守的首都的诱惑，等待了近一年，直到保皇党人对费迪南七世的援助感到绝望，撤退到山区。圣马丁和他的军队随后进入利马，秘鲁独立于1821年7月28日宣布，胜利的革命指挥官被任命为保护者。然而，圣马丁的地位并不稳固。他与布宜诺斯艾利斯的支持者决裂了，因为他违背他们的意愿坚持向利马进军；他不确定秘鲁人民的忠诚度，也不确定他的一些军官的支持——其中许多人怀疑他有独裁或君主制的野心；而且他缺乏镇压内地保皇党残余势力的兵力。此外，解放了南美洲北部省份的西蒙·玻利瓦尔吞并了瓜亚基尔——一个圣马丁原希望会选择并入秘鲁的港口和省份。因此，他决定面对玻利瓦尔。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LEU_GAUCHO_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>高乔人是通常用来描述南美潘帕斯草原、格兰查科或巴塔哥尼亚草原居民的一个术语，主要分布于阿根廷部分地区、巴西南部的南里奥格兰德州、乌拉圭、巴拉圭、玻利维亚东部和南部以及智利南部。在巴西，gaúcho也是南里奥格兰德州人的主要称谓。高乔人大致相当于北美的"牛仔"（西班牙语vaquero）。与北美牛仔、智利瓦索、古巴瓜希罗、委内瑞拉或哥伦比亚亚内罗或墨西哥查罗一样，这个词更常让人联想到19世纪而非今天；那时高乔人构成了农村人口的大多数，在广阔的大牧场放牧牛群，并以狩猎为主要经济活动。关于这个词的起源有几种相互矛盾的假说。它可能源自马普切语的cauchu（"流浪者"）或克丘亚语的huachu（"孤儿"），后者也衍生出了美洲西班牙语中的guacho和巴西葡萄牙语中的gaúcho。该词的首次记录使用可追溯到1816年阿根廷独立前后。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LEU_GRANADERO_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>骑马掷弹兵是阿根廷军队的一个团，最初于1812年由何塞·德·圣马丁指挥。圣马丁为骑马掷弹兵制定的严格训练制度和行为规范成为阿根廷军队的典范。严格的军事纪律——特别是在演习、训练和阅兵操练方面——是该团的标志性特征。骑马掷弹兵参加了阿根廷独立战争和西斯普拉廷战争，随后于1825年成为总统仪仗队。由于拒绝补充未参加过阿根廷独立战争的士兵，该团被迫于1826年解散。然而，该团后来于1903年重建，并在1982年的福克兰群岛战争中英勇作战。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_DISTRICS_PAGE_DISTRICT_LEU_ARRABAL_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>郊野区是建于阿根廷的社区，通常与该国的工人阶级联系在一起。探戈正是在郊野区中诞生的。探戈的根源使其成为边缘人群的歌谣。探戈充满活力的节拍融合了欧洲移民、南美原住民和非洲奴隶后裔的传统。探戈是具体历史进程的产物：从19世纪末到20世纪60年代在布宜诺斯艾利斯城市郊区发生的生物和文化融合。布宜诺斯艾利斯的灵魂通过这种歌曲表达出来。探戈反映了其居民的生活方式与民俗。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_DISTRICTS_PAGE_DISTRICT_LEU_ESTANCIA_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>庄园（或称大牧场）在阿根廷的文化、经济和历史中扮演着重要角色。早期，这些机构使阿根廷成为世界上最大的肉类和谷物生产国之一。这些巨大的牧场遍布整个乡村，至今仍然是世界上最好的牛排的来源地。在与马普切人和佩尔切人的冲突中，庄园也作为边境的重要防御据点。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_BUENOS_AIRES_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>蒙得维的亚是乌拉圭最大的城市、首都和主要港口。该定居点于1724年由布鲁诺·毛里西奥·德·萨瓦拉建立，作为西班牙-葡萄牙在拉普拉塔地区争端中的战略举措，以及对葡萄牙科洛尼亚德尔萨克拉门托殖民地的制衡。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_BUENOS_AIRES_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>被描述为"一个充满活力、兼收并蓄且文化生活丰富的地方"，它是乌拉圭的商业和高等教育中心：其第一所大学——共和国大学于1849年成立。蒙得维的亚的建筑反映了其历史，从殖民风格到装饰艺术风格，并受到西班牙、葡萄牙、意大利、法国和英国移民的影响。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_BUENOS_AIRES_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>蒙得维的亚拥有非常丰富的建筑遗产和众多作家、艺术家和音乐家。乌拉圭探戈是一种独特的舞蹈形式，起源于19世纪末蒙得维的亚的社区。探戈、坎东贝和穆尔加是该城市音乐的三种主要风格。该城市也是乌拉圭电影业的中心，包括商业片、纪录片和实验电影。有两家电影院公司运营七家影院。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_CVS_MALAYSIA_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>马来半岛一直延伸到东南亚群岛的西部区域，长期以来构成了东南亚大陆与岛屿之间的关键纽带。由于马来西亚本身分为这两个地区，该国的历史只有在广阔的地理背景下才能理解。马来半岛和东马来西亚的两个州——砂拉越和沙巴——共享许多历史模式，但每个地区也有独特的发展方式。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_CVS_MALAYSIA_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>马来西亚以著名航海家的故乡而享誉国际。然而，随着声誉的增长，马来西亚越来越受到周边势力的文化影响。小型马来王国在公元2或3世纪开始出现，当时印度商人和僧侣开始沿海上路线旅行，带来了印度关于宗教、政府和艺术的理念。经过许多世纪，该地区的人民——特别是王室宫廷中的人——将印度和本土思想融合起来，有选择地利用印度模式来塑造其政治和文化模式。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_CVS_MALAYSIA_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>"马来世界"是一个源于对马来性不同解读的概念和表达，主要基于普遍的马来文化影响，表现在大发现时代不同殖民势力观察到的马来语在东南亚的传播。在7到13世纪之间，该地区的许多小型、通常繁荣的海上贸易国家处于以苏门答腊为基地的伟大印度化帝国室利佛逝的松散控制之下。在不同时期，东南亚的其他印度化势力——包括以吴哥为基地的高棉帝国、以阿瑜陀耶为基地的泰王国和以爪哇东部为中心的满者伯夷帝国——也在该地区声称宗主权。这些马来西亚的早期文化力量留下了活的遗产，其痕迹至今仍可见于马来穆斯林的政治理念、社会结构、仪式、语言、艺术和其他传统中。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_DISTRICTS_PAGE_DISTRICT_CVS_MALAYSIA_UI_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>自7世纪以来，马来半岛的居民就是重要的贸易和知识中心，他们利用了马六甲海峡的战略位置，使其成为已知世界最重要的海上商业中心之一。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_DISTRICTS_PAGE_DISTRICT_CVS_MALAYSIA_UI_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>马六甲的海港城镇主要被商人用作印度和中国之间航线上的主要转运港，因此成为各欧洲国家封锁和攻击的目标，这些国家都想将马六甲置于自己的控制之下。尽管在随后的几个世纪中马六甲在葡萄牙、荷兰和英国之间易手，但至今仍以其命名的海峡仍然是当今最重要的海上航运通道之一。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_CVS_MALAYSIA_UU_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>兰查兰快船是一种装备戎克帆或坦贾帆的快速战船，由150至200人操作。通常配备数门勒拉炮（相当于寇非林炮的中型火炮）和旋回炮。用于在马六甲海峡巡逻，兰查兰通常既用作战船也用作战商船，构成了努山塔拉群岛区域舰队的主力。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_CVS_SWITZERLAND_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>《赫尔维蒂编年史》是关于瑞士联邦早期历史的最古老记载之一。它在瑞士史学中扮演着重要角色，因为它包含了大约50份以其他形式未能保存下来的文件副本。在内容方面，尤其关注表现瑞士人民长期以来的独立、帝国与教宗之间的斗争、十字军东征，以及大量涉及瑞士城市、教区和修道院的其他问题。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_CVS_SWITZERLAND_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>瑞士的历史是一个中世纪的防御联盟，形成于一个缺乏帝国权威的时代和地区。不同的州（德语中传统上称为Orte）在很大程度上是独立的国家，通过共同捍卫自由而保持联合——这种自由被理解为对帝国特权和特许权的保护。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_CVS_SWITZERLAND_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>与类似的联盟如汉萨同盟和施瓦本同盟不同，尽管16世纪宗教改革后内部冲突不断，瑞士联邦在没有适应（君主）现代国家形成的情况下幸存了下来。与威尼斯、热那亚和荷兰一起，联邦构成了欧洲的共和例外，并且其政治结构的发展更少作为一个统一的国家，而更多是在瑞士联邦所包含的13个州的层面上。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_CVS_SWITZERLAND_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>作为欧洲力量平衡的产物，且自1499年后仅在1798年被攻击过一次，瑞士在其存在的大部分时间里享有和平，并在20世纪免于两次世界大战——当时逐渐�展起来的"武装中立"概念得到了邻国的尊重。随着瑞士适应工业革命和国际金融市场的增长，经济繁荣随之而来。如今，它�为世界上最富有的国家之一。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_BUILDINGS_PAGE_BUILDING_CVS_SWITZERLAND_UI_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>瑞士联邦分为26个州，每个州都有自己的宪法和议会（德语称"Kantonsparlament"）。各州行使广泛的权力，拥有所有未明确赋予联邦政府的权力。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_BUILDINGS_PAGE_BUILDING_CVS_SWITZERLAND_UI_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>瑞士联邦由约3,000个市镇组成，负责公共设施和道路，并且像各州一样，基本上自治。从众多小型社区共和国中，产生了每个社区的特殊品质，并自相矛盾地构成了国家统一的基础——因为每个公民都珍视并支持社区的自由，这种共同的信念以一种超越语言和党派差异的方式将公民与其他人团结在一起。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_PROJECTS_PAGE_PROJECT_CVS_SWITZERLAND_UP_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>州议会是瑞士一些州立法机构采用的制度，通过选举产生，成员受委托处理不属于联邦政府权限或不由其行使的领域内的立法程序。除立法外，其职责还包括监督行政、政府和司法，以及就税收、征税和信贷、州预算和国家账目作出决定。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_CVS_SWITZERLAND_UU_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>瑞士雇佣兵以在外国军队中的服役而闻名，特别是法国国王的军队，贯穿欧洲近代早期的历史，从中世纪晚期到欧洲启蒙时代。他们的雇佣兵役在文艺复兴时期达到顶峰，当时他们经过验证的战场能力使他们成为备受追捧的雇佣兵部队。随后是一个衰退期，因为技术和组织进步抵消了瑞士人的优势。瑞士的军事孤立主义在很大程度上结束了有组织的雇佣兵活动；这一传统的主要残余是梵蒂冈的教宗瑞士卫队。</Text>
+		</Replace>
+
+		<!-- Swiss promotion histories -->
+		<Replace Tag="LOC_PEDIA_UNITPROMOTIONS_PAGE_PROMOTION_CVS_SWITZERLAND_HALBERDIER_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>凭借众多的山脉，瑞士人可以轻松防守咽喉要道和战略位置，将敌人拒之门外。他们使用戟——一种带有刀刃和矛尖的短杆兵器——取得了巨大效果，并以此重创了奥地利军队。全副武装的戟兵对任何军队都是严重威胁，无论是步兵还是骑兵。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITPROMOTIONS_PAGE_PROMOTION_CVS_SWITZERLAND_PIKE_SQUARE_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>长枪方阵，或称"Gevierthaufen"，是瑞士联邦在15世纪发展起来的一种军事战术，并在1477年南锡战役中发挥了毁灭性的效果。长枪方阵后来主导了欧洲战场，并影响了直到17世纪的战术发展。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITPROMOTIONS_PAGE_PROMOTION_CVS_SWITZERLAND_VANGUARD_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>先锋是前进军事编队的先头部分。这个词源自中世纪法语avant-garde，即"前进的卫队"。先锋将引领行军路线并首先部署在战场上，在主力部队之前寻找敌人并确保阵地。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITPROMOTIONS_PAGE_PROMOTION_CVS_SWITZERLAND_WEDGE_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>楔形阵始于古代的一种成功军事策略，步兵部队向前冲锋以突破敌军阵线。在中世纪，这一战术对于对抗防御性的盾墙阵特别有效——防御者会将他们的盾牌连在一起形成几乎坚不可摧的屏障。步兵可以利用楔形阵的势头在盾墙上打开小缺口，使防御者暴露在侧翼攻击之下。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITPROMOTIONS_PAGE_PROMOTION_CVS_SWITZERLAND_HELVETII_DOCTRINE_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>瑞士人相信胜利的关键在于前进，无论代价或障碍如何。正是这种战法和这种勇气，在1470年代战胜了勃艮第人，并使瑞士人在接下来的50年里主导了每一场战斗。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITPROMOTIONS_PAGE_PROMOTION_CVS_SWITZERLAND_COLUMNS_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>瑞士人组成密集纵队进行攻击，每队多达八千人。每个纵队由长枪兵组成，他们前进时将长枪举到齐肩高度，戟兵和双手剑士位于中央。纵队通常由火枪手和弩手的散兵云掩护，这些人试图分散敌人的炮兵注意并保护纵队免受敌方远程武器攻击。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITPROMOTIONS_PAGE_PROMOTION_CVS_SWITZERLAND_CANTONAL_BANNERS_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>在15世纪，瑞士人依靠突击战术，寻求进行突然和猛烈的攻击来赢得战斗。作为长枪兵和戟兵作战的15世纪瑞士人使用他们标志性的10英尺长枪进行进攻。每个长枪兵携带一把短剑和匕首，但穿着相对较少的盔甲。这种轻装备与敌人的装备形成对比，并确保瑞士人能够快速前进，以承担捍卫任何瑞士编队中央的州旗的荣誉。</Text>
+		</Replace>
+
+		<!-- Escher history -->
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_CVS_ESCHER_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>阿尔弗雷德·埃舍尔是19世纪苏黎世政治中的主导人物，也是具有国家声望的立法者，作为铁路巨头，他成为反对铁路国有化的主要反对者。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_CVS_ESCHER_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>埃舍尔迅速在州政治事务中崛起，到1848年已成为苏黎世政府的主席。同年当选为国家议会议员，他四次担任议长，尤其是在与普鲁士的纳沙泰尔危机期间。作为经常倡导温和、反对雅各布·施坦普夫利激进措施的代言人，他在纳沙泰尔事件中缓和了情绪，并在1860年萨伏依割让给法国引发的争议中敦促和平调解。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_CVS_ESCHER_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>作为一家铁路公司的负责人，他支持私营铁路建设，反对施坦普夫利的国有化计划。作为圣哥达线建设的推动力，他帮助确保了该项目所需的德国和意大利合作，并留下了作为所有瑞士立法者中最有影响力者之一的遗产。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_MER_FINLAND_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>芬兰的历史深受其地理位置的影响——一个位于东西方文明交汇处的北欧国家。数千年来，芬兰的土地上居住着狩猎采集者，直到农业在中世纪晚期传入。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_MER_FINLAND_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>12世纪，瑞典王国开始将芬兰纳入其势力范围，开始了长达近700年的瑞典统治时期。在此期间，芬兰逐渐成为瑞典王国的一个组成部分，芬兰人享有与瑞典本土居民相同的权利。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_MER_FINLAND_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>1809年，芬兰在芬兰战争后被割让给俄罗斯帝国，成为拥有广泛自治权的大公国。这一时期见证了芬兰民族意识的觉醒和文化繁荣，被称为"芬兰民族觉醒"。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_MER_FINLAND_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>1917年俄国革命后，芬兰宣布独立。随后爆发的内战以白军的胜利告终——白军由卡尔·古斯塔夫·埃米尔·曼纳海姆领导。曼纳海姆后来在冬季战争（1939—1940）和继续战争（1941—1944）中担任芬兰国防军总司令，抵御苏联的入侵。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_MER_FINLAND_CHAPTER_HISTORY_PARA_5" Language="zh_Hans_CN">
+			<Text>今天的芬兰是一个高度发达的北欧福利国家，以其卓越的教育体系、技术创新和高生活水平而闻名。芬兰独特的文化遗产——《卡勒瓦拉》史诗、桑拿传统和"西苏"精神——继续塑造着这个国家的身份认同。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_MER_MANNERHEIM_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>曼纳海姆的芬兰在友方领土上拥有强大的防御能力。利用高魅力值的领土来最大化您的军事优势，同时以树林和湖泊的文化和生产力加成来构建强大的基础。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_MER_MANNERHEIM_CHAPTER_DETAILED_BODY" Language="zh_Hans_CN">
+			<Text>芬兰在曼纳海姆的领导下成为一座堡垒。利用领土魅力来获得战斗力加成，您可以在防守时无情地惩罚侵略者。桑拿房提供稳定的文化和生产力基础，而芬兰轻步兵在现代时代提供了应对任何威胁的多功能单位。专注于保持领土的高魅力值并维持满忠诚度，以最大化芬兰的所有加成。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_MER_MANNERHEIM_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>卡尔·古斯塔夫·埃米尔·曼纳海姆（1867—1951）是芬兰的军事领袖和政治家，曾担任芬兰国防军总司令、摄政以及芬兰第六任总统。他被广泛认为是芬兰最伟大的军事指挥官和政治家。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_MER_MANNERHEIM_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>曼纳海姆出生于芬兰大公国的一个瑞典语贵族家庭。他在俄罗斯帝国军队中开始了军事生涯，在日俄战争和第一次世界大战中服役，晋升为中将。俄国革命后，他回到芬兰，在内战期间（1918年）指挥白军。他后来在冬季战争和继续战争中领导芬兰国防军，以其战略性撤退和防御性的"曼纳海姆防线"而闻名。1944年，他当选为芬兰总统，并成功引导芬兰退出战争，同时保持了国家的独立。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_MER_MANNERHEIM_QUOTE" Language="zh_Hans_CN">
+			<Text>要塞、武器和外援都无济于事，除非每个士兵本人知道自己就是守卫国家的人。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_MER_MANNERHEIM_SUBTITLE" Language="zh_Hans_CN">
+			<Text>芬兰元帅</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_MER_MANNERHEIM_TITLE" Language="zh_Hans_CN">
+			<Text>卡尔·古斯塔夫·埃米尔·曼纳海姆</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_GEDEMO_BISMARK_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>奥托·冯·俾斯麦，劳恩堡公爵和俾斯麦亲王，1815年4月1日生于申豪森，1898年7月30日卒于腓特烈斯鲁，是普鲁士及后来的德意志政治家。他同时担任普鲁士王国首相（1862—1890）、北德意志联邦宰相（1867—1871），之后于1871年成为新德意志帝国的首任宰相，任职至1890年，同时保留普鲁士首相职位。他在德国统一中发挥了决定性作用。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_GEDEMO_BISMARK_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>在国内政治方面，从1866年开始，俾斯麦首先与温和自由派结盟，这导致了许多改革如民事婚姻制度的投票通过——这遭到了天主教徒的抵制，他通过推行文化斗争政策强烈反对之。在1870年代末，他与自由派决裂，回归保守派阵营。在这一阶段，通过了保护主义和国家干预主义的法律。社会保险制度也被建立。1880年代主要以反社会主义法律为标志。1890年，俾斯麦与新皇帝威廉二世的分歧导致了他的去职。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>奥林匹娅斯治下的马其顿是唯一一个准备在整个游戏中追求外交的文明。深知自己的命运在于联盟，奥林匹娅斯将寻求尽可能多的城邦的影响力。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_DETAILED_BODY" Language="zh_Hans_CN">
+			<Text>奥林匹娅斯的外交令人叹为观止。通过将马其顿的使者派遣到那些相信她命运的人那里，她可以迅速积累大将军和大预言家，以此要么进军战争，要么创立宗教。如果他们的单位在皇家学堂训练，马其顿在科技上取得进步而不必花费时间发展学院。凭借强大的信仰，奥林匹娅斯可以确保邻近城邦的效忠，这些城邦反过来又可以为她的军队和信仰提供动力，使马其顿既可以追求征服胜利又可以追求宗教胜利。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>亚历山大大帝的成功很大程度上归功于他父母的影响：从父亲腓力二世那里，他学会了战争的艺术，但对他人生影响最大的人是他的母亲奥林匹娅斯。从她那里，他不仅继承了对学习的热爱，还继承了她火热的性格、坚强的意志，以及如一位历史学家所说——"对鲜血的渴望"。奥林匹娅斯是亚历山大登上马其顿王位的推动力量，正如一位历史学家形容她的那样："……傲慢、刚愎、好管闲事。"</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>奥林匹娅斯，其本名实际上是桃金娘，是伊庇鲁斯已故国王涅俄普托勒摩斯的女儿，伊庇鲁斯是马其顿西南部的一个王国。她的祖先莫洛西亚人声称是莫洛萨斯——安德洛玛刻与涅俄普托勒摩斯之子、阿喀琉斯之子的后代——阿喀琉斯在特洛伊战争期间杀死了特洛伊国王普里阿摩斯。虽然历史学家对腓力和奥林匹娅斯如何相遇有分歧，但最广为接受的故事记载他们是在萨莫色雷斯相遇的——这是爱琴海中位于马其顿和特洛伊之间的一个岛屿。该岛以作为双神卡比洛斯的宗教中心而闻名。虽然腓力可能参加了宗教仪式，但他实际上是在那里促进联盟。当他看到年轻的奥林匹娅斯——一位红发、有着醉人美貌和炽烈脾气的女子——那是一见钟情。普鲁塔克写道："……在腓力与奥林匹娅斯一起在萨莫色雷斯接受秘仪后，他狂热地爱上了她，尽管他只是个年轻人而她是个孤儿，他还是立即与她订婚了……"</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>国王多次结婚并不罕见，在腓力的例子中，他的许多婚姻纯粹是为了建立联盟。与奥林匹娅斯的婚姻也是如此，因为她将成为他的第二任妻子。公元前357年他们结婚了；奥林匹娅斯当时约18岁，腓力约28岁。历史学家们讨论了许多围绕这对年轻夫妇新婚之夜的预兆。普鲁塔克在他的《希腊名人传》中写道："在他们被锁入洞房的前一晚，新娘做了一个梦，在梦中一声霹雳之后，一道雷电击中了她的子宫，这引发了一场猛烈的火焰，火焰蔓延到各处然后逐渐熄灭。"与腓力的梦一起——"……他在妻子的子宫上盖了一个印章，印章上的图案是一只狮子……"——他们伟大儿子的未来被预言了。腓力和奥林匹娅斯有两个孩子，亚历山大和一个女儿克娄巴特拉，但在腓力看到妻子与蛇同眠后，他造访卧室的日子就结束了。奥林匹娅斯长期以来是狄俄尼索斯崇拜的信徒，这激怒了许多马其顿人，她甚至可能将处理蛇的做法引入了该崇拜。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>公元前356年7月20日，奥林匹娅斯通过为腓力生下亚历山大这个继承人证明了她对腓力的价值。没有继承人，她只会作为与伊庇鲁斯的联盟而对腓力和马其顿有利。实际上还有一个可能的王位继承人——一个同父异母的弟弟腓力·阿里达乌斯，他母亲是一个叫菲莉娜的平民。然而，一些证据表明，总是嫉妒的奥林匹娅斯用药物毒害了他，这种药物最终"扰乱了他的心智"，因此他永远不会成为对亚历山大称王的威胁。普鲁塔克写道："……他的心智被奥林匹娅斯毒害后变得残破。"</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_5" Language="zh_Hans_CN">
+			<Text>腓力一生中的三件大事发生在未来国王出生的那天。亚历山大出生时，腓力在外作战——在波提狄亚。这一天他收到了好消息：他的一名指挥官帕曼纽在对伊利里亚人的决定性战役中获胜。其次，他的赛马在奥林匹克运动会上获胜（这就是桃金娘变成奥林匹娅斯的由来），最后，他的儿子和继承人出生了。后来一位占卜者声称，亚历山大与其他事件同时出生意味着这个年轻男孩将成长为不可战胜的人。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_6" Language="zh_Hans_CN">
+			<Text>亚历山大到来后，他母亲一生中的首要目标就是让他成为国王。奥林匹娅斯溺爱年轻的亚历山大，不断告诉他他高贵的血统和他与阿喀琉斯的联系。这个故事对亚历山大产生了强大的影响（他甚至在身边随身带着一本《伊利亚特》）。当他渡过赫勒斯滂进入小亚细亚时，他最早访问的地方之一就是特洛伊的遗址，向他祖先阿喀琉斯致敬。为了安排他的早期教育，奥林匹娅斯请来了一位亲戚——严厉的伊庇鲁斯的列奥尼达斯——来同时担任未来国王的导师和指导者。之后，亚里士多德被从雅典召来完成他的教育。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_7" Language="zh_Hans_CN">
+			<Text>然而，一个真实的局势很快出现了，可能威胁到奥林匹娅斯和她让儿子登基的追求——腓力与阿塔卢斯侄女克娄巴特拉-欧律狄刻的婚姻。据腓力周围的人所说，亚历山大只有一半马其顿血统，国王面临着娶纯正血统者的压力。于是，腓力休了奥林匹娅斯，指控她通奸，甚至声称亚历山大不是他的儿子。腓力与克娄巴特拉-欧律狄刻的婚姻加上她的怀孕使奥林匹娅斯处于危险境地。如果婴儿是个男孩，因此是合法的王位继承人，亚历山大就不会成为国王。当奥林匹娅斯的弟弟亚历山大——腓力曾让他登上伊庇鲁斯的王位——与她的女儿（也是他侄女）克娄巴特拉订婚时，情况进一步复杂化了。有了这桩婚姻，她甚至不再作为与伊庇鲁斯的外交纽带而有用。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_8" Language="zh_Hans_CN">
+			<Text>在腓力和克娄巴特拉-欧律狄刻的婚宴上，阿塔卢斯（腓力的一名指挥官）对亚历山大发表了一番贬损言论——称他为私生子——"……他呼吁马其顿人向诸神祈祷赐予一个合法的王位继承人。"在这番口头攻击之后，亚历山大愤怒地站了起来，嘲笑他那醉酒的父亲连房间都走不过去。普鲁塔克写道："腓力起身攻击亚历山大并拔出了剑，但对他们俩来说幸运的是，他的愤怒和酒使他绊倒摔倒了……在这场醉后的争吵之后，亚历山大带着奥林匹娅斯到了伊庇鲁斯，而他自己则留在了伊利里亚人中间。"可能，奥林匹娅斯回到伊庇鲁斯的目的不仅是让她远离腓力的怒火，也是劝说她的弟弟对腓力宣战。在腓力通过科林斯的德马拉特斯安排和解后，亚历山大和奥林匹娅斯被允许返回佩拉。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_9" Language="zh_Hans_CN">
+			<Text>公元前336年，在奥林匹娅斯的弟弟亚历山大与她女儿克娄巴特拉的婚宴上，腓力被心怀不满的俄瑞提斯的保萨尼阿斯刺杀——此人曾请求对阿塔卢斯进行报复却被腓力斥责。怀疑立即落到了奥林匹娅斯身上，一些人认为她鼓励保萨尼阿斯寻求复仇并杀死腓力。普鲁塔克写道："当保萨尼阿斯——他曾在阿塔卢斯和克娄巴特拉的指使下受到攻击——因腓力未能赔偿他而谋杀了腓力时，大部分责任归咎于奥林匹娅斯，理由是她鼓励了这个年轻人在愤怒中杀人……"甚至有一些证据表明，她为刺客准备了用于逃跑的马匹。腓力死后，亚历山大登基，克娄巴特拉-欧律狄刻和她年幼的女儿（可能还有一个儿子）被奥林匹娅斯下令处死——有些人声称她们被烧死，而另一些人说克娄巴特拉被迫自缢。做完这一切后，奥林匹娅斯的未来得到了保障——她是国王的母亲。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_10" Language="zh_Hans_CN">
+			<Text>当亚历山大准备渡过赫勒斯滂进入小亚细亚时，他的母亲把他拉到一边，告诉他他的真正父亲不是腓力而是宙斯；因此，他必须以勇气行事，这是与他的神圣血统相称的。他再也见不到他的故土和母亲了。在他穿越亚洲的旅途中，他和母亲经常通信——她提供建议，他则不予理会。留在后方统治马其顿和希腊的是安提帕特。亚历山大和安提帕特之间的信件以及亚历山大和奥林匹娅斯之间的信件充满了抱怨和指责——安提帕特称她为泼妇等，而她则说他更像一个国王而不是一个总督。为了解决争端，亚历山大派人召安提帕特到巴比伦来见面（有些人说这只是为了让他远离奥林匹娅斯），但安提帕特派了他的儿子卡山德代替他，这激怒了亚历山大。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_CHAPTER_HISTORY_PARA_11" Language="zh_Hans_CN">
+			<Text>公元前323年亚历山大死后，随着关于他的王国继承者的继业者战争的爆发，奥林匹娅斯召唤亚历山大的妻子罗克珊娜来到佩拉，在那里她和她的儿子——未来的亚历山大四世——会安全。公元前319年安提帕特死后，亚历山大的一位指挥官波利伯孔被任命为新摄政；然而，他被卡山德驱逐，带着罗克珊娜和年幼的亚历山大逃到伊庇鲁斯。虽然她最初试图保持中立，但奥林匹娅斯意识到只要卡山德是摄政，她的孙子就永远不能成为国王，所以她与她的堂兄埃阿喀得斯（伊庇鲁斯国王）和波利伯孔残余军队联手，入侵了马其顿。在奥林匹娅斯的命令下，亚历山大的同父异母弟弟腓力（他实际上只是名义上的国王）、他的妻子欧律狄刻以及数百名忠于卡山德的精选马其顿人在公元前317年被处决。然而，奥林匹娅斯的入侵失败了；卡山德在皮德纳俘虏了她，虽然最初他承诺放过她的性命，但他改变了主意，于公元前316年将她处死。可悲的是，奥林匹娅斯让她孙子继承亚历山大王位的梦想永远无法实现，罗克珊娜和年幼的亚历山大四世将在公元前310年遭遇与奥林匹娅斯同样的命运。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_QUOTE" Language="zh_Hans_CN">
+			<Text>奥林匹娅斯告诉亚历山大，他真正的父亲不是腓力而是宙斯。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_SUBTITLE" Language="zh_Hans_CN">
+			<Text>马其顿女王</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_JFD_OLYMPIAS_TITLE" Language="zh_Hans_CN">
+			<Text>奥林匹娅斯</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LIME_THULE_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>图勒人是现代因纽特人的祖先，居住在现代加拿大、阿拉斯加和格陵兰的北部领土。他们首先于10世纪在阿拉斯加发展起来，在接下来的300年里跨越加拿大延伸到格陵兰，取代并主导了之前的多塞特文化。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LIME_THULE_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>虽然他们直到10世纪才开始真正繁荣，但图勒传统大约始于公元前200年的白令海峡，尽管这一估计差异很大。图勒强大的海洋狩猎和艺术传统首先在这里成形，这成为图勒传统的旧白令海阶段。装饰性的象牙鱼叉头、乌米亚克（用于捕鲸的大型皮船）的残骸以及各种其他由象牙和抛光板岩制成的工具在这一时期被发现。具体来说，鱼叉式冰锥、翻转鱼叉、用于捕猎海豹和海象的精密工具以及他们对狗的驯化帮助了早期图勒人。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LIME_THULE_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>在旧白令海阶段之后是普努克阶段，在这一阶段，图勒人凭借更先进的技术得以统治多塞特文化。图勒人在其广阔的新领土上繁荣发展，以海豹和海象为基础的社会转变为以捕鲸为中心的文化——图勒人因此闻名。理想的猎物是弓头鲸，主要是因为它们游得慢且在水面附近睡觉。弓头鲸的鲸脂、肉、骨头和皮成为图勒人生活中重要并最终必不可少的资源。这些必需品被雕刻成狩猎所需的工具、鲸骨房的框架以及他们精美的文物。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LIME_THULE_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>图勒文化进入了一个冬季居住在由木头和鲸骨建造的大型半地下房屋、夏季生活在皮帐篷的循环。由一位被称为乌米亚利克的资深声望船长领导的、乘坐多艘乌米亚克的经验丰富的捕鲸人团队会在狭窄的冰缝和秋季的开阔海域中捕鲸。虽然开阔海域捕鲸是危险的，但专业的猎人和船夫开发了骨制盔甲、弓箭、更先进的狩猎工具和专家技术来减轻危险。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LIME_THULE_CHAPTER_HISTORY_PARA_5" Language="zh_Hans_CN">
+			<Text>大约在公元800年，图勒文化分化为阿拉斯加和更多加拿大大陆的西半部，以及格陵兰和北极高海的东半部。东半部被称为比尼克阶段，他们自行经历了早期、中期和晚期比尼克阶段。逐渐地，鱼叉头和箭头的风格从高度装饰的象牙尖变成了由鹿角制成的朴素版本。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LIME_THULE_CHAPTER_HISTORY_PARA_6" Language="zh_Hans_CN">
+			<Text>与此同时，东部的普努克从1100年到1400年进入了经典图勒时代。他们开始使用源自陨铁资源或与北欧人贸易获得的铁制工具，但最终铁的来源非常有限。这种金属被用于雕刻，但图勒人的艺术倾向继续衰退。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LIME_THULE_CHAPTER_HISTORY_PARA_7" Language="zh_Hans_CN">
+			<Text>图勒的信仰发展成为万物有灵论和萨满教的形式。被称为安加库特的祭司医治者在危机时期帮助社区，尤其是在捕鲸和海洋资源匮乏时。冰冷北方的严酷生活使人们生活在对看不见的超自然力量的持续恐惧中，一些主题围绕着保护者或守护者，另一些则围绕着克服超自然障碍。他们还相信所有事物都有一个"阿尼尼克"——一个灵魂——这些灵魂是从周围天空借来的，在死后持续存在并且可以自由地复仇。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LIME_THULE_CHAPTER_HISTORY_PARA_8" Language="zh_Hans_CN">
+			<Text>后经典图勒是一个因气候变化和鲸鱼匮乏而衰落的时期——定居点现在被迫使用基于陆地狩猎或捕鱼的生存策略。小冰期温度下降导致捕鲸季节缩短，捕鲸活动最终在17世纪被放弃。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_LIME_THULE_CHAPTER_HISTORY_PARA_9" Language="zh_Hans_CN">
+			<Text>图勒传统在消亡前接触了欧洲社会。虽然他们早已接触了北欧人（北欧人称他们为skrælingr），但他们遇到了巴斯克捕鲸者，后来又遇到了法国和英国探险家。瘟疫大规模地杀死了图勒人，物质财富打乱了图勒的生活方式，他们开始转变为因纽特社会。在他们的主要食物来源迅速枯竭的时期，欧洲殖民的影响是毁灭性的，最终对文化是致命的。图勒文化的最后遗迹在1850年消亡，在不列颠加拿大殖民地完全被现代因纽特人取代。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>狗……雪橇……自远古以来，人们就试图将这两个概念结合在一起。雪橇犬，被时间遗忘，从未有过什么前途。虽然尝试让雪橇与狗杂交是徒劳的努力，但人类是执着的，创造力在于他们的手中。最终，被霜冻的伊夸利克——愿他的名字令人畏惧——想出了一个革命性的想法：一个由狗拉的雪橇。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>以上所有词都是错的。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>9000多年来，狗一直被用作役畜，在零度以下的环境中拉雪橇和雪车穿越地形，最早的证据出现在西伯利亚遥远的北方。虽然选择性繁殖以培育理想雪橇犬的概念在那个时期已经存在，但现代西伯利亚哈士奇的首次出现大约是在2000年前。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>图勒人对多塞特人的统治在一定程度上归功于他们的雪橇犬。这种在崎岖的北极地形上的运输方式使他们能够比多塞特对手传播得更远并获得更多食物，不久之后图勒人就压倒了他们的前辈。新品种被培育出来，包括阿拉斯加马拉穆特犬，此后雪橇运动和雪橇比赛在整个加拿大、阿拉斯加和格陵兰一直很受欢迎。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_5" Language="zh_Hans_CN">
+			<Text>图勒人以这种方式扩张导致了不仅与多塞特人（他们成功地消灭了他们）的战争，还与他们的狗拉雪橇使他们能够进入的新土地上的新民族的战争。特别是最激烈的，德内人和克里人卷入了所有三个民族所居住的亚北极地区长达几个世纪的地方性战争。在殖民化和图勒传统演变为现代因纽特群体之后，战争以持续发动相互袭击的更加血腥的形式继续。这些袭击在严冬或歉收季节变得更加恶毒。虽然因纽特人的最大优势是他们掌握了机动性，但克里人通过更迅速地与欧洲人贸易获得了火器，不久之后许多因纽特人就被赶回了北方。这场战争在1793年戛然而止，原因尚不清楚，此后狗拉雪橇被用于运输、狩猎和比赛。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_6" Language="zh_Hans_CN">
+			<Text>雪橇历史上最著名的事件是传奇的1925年慈悲大赛跑，现在以每年一度的艾迪塔罗德比赛——地球上最后的伟大比赛——的形式永存。诺姆镇爆发了白喉疫情，镇上几个月前的抗毒素供应已经变质。小镇唯一的医生柯蒂斯·韦尔奇请求从安克雷奇获得额外的抗毒素，但天气太冷无法派船。不屈不挠的雪橇队伍合作，将一批血清送到诺姆，尽管当时有暴风雪。雪橇手们沿着艾迪塔罗德路线，从安克雷奇到诺姆，完成了1000公里的旅程，穿越可怕的地形，在气温降到零下57摄氏度（零下70华氏度）的天气中。为期30天的旅程在六天后完成，当贡纳·卡森和他的领头雪橇犬巴托抵达诺姆时，没有一支血清安瓿破损。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_7" Language="zh_Hans_CN">
+			<Text>然而，尽管巴托可能是慈悲大赛跑中最著名的狗，但完成了最困难路段的领头犬是托哥。年轻时，托哥是一只病弱的狗，看起来没有太大潜力。他是窝中最小的，他的主人莱昂哈德·塞帕拉将他作为宠物卖掉了，因为他看起来不适合当雪橇犬。几周后，托哥跳窗逃出跑回塞帕拉的犬舍，展示了非凡的耐力、忠诚和智慧。在1925年前往诺姆的赛跑中，托哥已经12岁了。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_8" Language="zh_Hans_CN">
+			<Text>托哥是塞帕拉在1925年赛跑中的领头犬，他们被分配了旅程中最困难的路段。托哥和塞帕拉在三天内从诺姆进行了170英里（274公里）的旅程，并于1月31日在沙克图利克接到了血清。气温估计为零下30华氏度（零下34摄氏度），狂风的风寒效应达到零下85华氏度（零下65摄氏度）。回程穿越了暴露的诺顿湾开阔冰面。夜晚和地面暴风雪使塞帕拉无法看清道路，但托哥导航到了海岸边的艾萨克角驿站，在晚上8点，避免了他的队伍的必然死亡。在一天内行进了84英里（134公里）后，队伍睡了六小时，然后在凌晨2点继续前进。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_9" Language="zh_Hans_CN">
+			<Text>在夜晚之前，气温下降到零下40华氏度（零下40摄氏度），风速增加到65英里/小时（105公里/小时）。队伍在冰面上奔跑，冰面正在破裂，同时沿着海岸线前进。他们回到岸上，穿越了小麦金利山，攀登了5000英尺（1500米）。下降到戈洛文的下一站后，塞帕拉将血清交给了查理·奥尔森，后者又会将其传给贡纳·卡森和巴托。此后，艾迪塔罗德比赛一直是雪橇运动中最极端、最著名的事件，每年重现从安克雷奇到诺姆的1925年赛跑。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_LIME_THULE_DOGSLED_CHAPTER_HISTORY_PARA_10" Language="zh_Hans_CN">
+			<Text>还有，我没能搞清楚如何制作雪橇模型，所以抱歉。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_IMPROVEMENTS_PAGE_IMPROVEMENT_LIME_THULE_WBH_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>图勒人建造了被称为鲸骨房的大型半地下房屋。这些房屋通常足够大，可容纳八到十人，在严酷的极地冬季充当庇护所。布局差异很大，但都是半地下建造，框架由木材和鲸骨制成（令人震惊，我知道）。所有房屋都设有炉灶，大概是因为图勒人不喜欢被冻死。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_THULE_DAVE_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>基维乌克的能力鼓励大规模探索，而基础的图勒文明则能够迅速在原本不适合居住的环境中建立强大的文化和宗教基础。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_THULE_DAVE_CHAPTER_DETAILED_BODY" Language="zh_Hans_CN">
+			<Text>图勒人是一个高度宗教化和艺术化的民族，他们的生活方式主要依赖于捕猎弓头鲸。安加库特萨满使图勒人能够通过捕鲸将极地地区变成宜居环境，而"极海鲸狩"能力以及鲸骨房独特区域将这些鲸鱼转化为宗教或文化胜利。基维乌克的"心非磐石"能力将帮助图勒人探索出好的定居地点，并直接协助增加信仰生成。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_THULE_DAVE_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>基维乌克（或称奇维奥克）是一位传奇的图勒及后来的因纽特英雄，出现在许多乌尼普卡克（发生在被称为泰马尼的不确定过去的史诗传奇）中。他是一位永恒的冒险家，永远徒步、乘狗拉雪橇、乌米亚克或骑着巨大的鱼漫游大地。他利用超自然力量在他的旅途中克服阿尼尼克精灵、神祇、巨人、食人族、熊和海怪，以及无数其他障碍。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_THULE_DAVE_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>关于基维乌克的一个著名传说讲述了他与一位老妇人的孙子的友谊。除了基维乌克，所有人都欺负和嘲笑这个男孩。老妇人决定要报仇。她把孙子变成了一只海豹，让他游向大海。男人们跟随海豹，打算捕猎它。然而，在猎人到达之前，老妇人制造了一场风暴，除了海豹和基维乌克外，淹死了所有人。海豹安全地游回岸边，老妇人将他变回了男孩。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_THULE_DAVE_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>据说基维乌克与风暴搏斗了数天，在他的皮划艇中漂流，继续他的冒险，并与许多异国土地上的人们一起生活。但在这挣扎中，他慢慢开始变成石头。在现代，人们相信他的半张脸已经变成了石头，当他的心脏最终停止跳动时，世界将终结。阿拉斯加人民给了他一个新的绰号——卡亚尔图阿伦格内尔托克，意思是"他将永远渴望在他的皮划艇中漫游。"</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_THULE_DAVE_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>口头传统保存了许多版本的基维乌克故事循环，而今天，新一代讲故事者正将这些故事以书面或图像形式带入生活中。爱斯基摩文化的复兴将注意力重新引向了基维乌克，在2000年，一颗土星的卫星以他的名字命名——尽管是一个小的非球形卫星。基维乌克的传说继续不断壮大，如今甚至已将他带到了星辰之中。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_THULE_DAVE_QUOTE" Language="zh_Hans_CN">
+			<Text>长者们说，他现在正处于他的最后一世，在某处进行着冒险。然而，在他死之前，他将返回看望他的子民。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_THULE_DAVE_SUBTITLE" Language="zh_Hans_CN">
+			<Text>北方英雄</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_THULE_DAVE_TITLE" Language="zh_Hans_CN">
+			<Text>基维乌克</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_TEO_OWL_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>掷矛者猫头鹰的特奥蒂瓦坎通过征服和城邦外交实现繁荣。利用您独特的总督来控制关键城邦，同时您的军队在远方获得力量。贸易路线会根据您宗主的城邦类型提供多样化的产出。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_TEO_OWL_CHAPTER_DETAILED_BODY" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎在掷矛者猫头鹰的领导下是一个军事外交强国。通过将您的特色总督"西雅赫·卡克"派遣到战略城邦，您可以为您的军队提供强大的战斗力加成，同时利用您广泛的贸易网络。波奇特卡聚集区提供早期外交影响力，而羽甲战士则为古典时代的扩张提供了坚实的前线。根据您宗主的城邦类型来规划您的贸易路线，以最大化从每个城邦获得的独特产出。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_TEO_OWL_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎是中美洲最伟大和最具影响力的城市之一，位于现代墨西哥城东北约30英里处。在其鼎盛时期（约公元450年），它是美洲最大的城市，拥有超过125,000名居民，使其成为前哥伦布时期世界上最大的城市之一。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_TEO_OWL_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>该城市的起源笼罩在神秘之中。它似乎是在公元前后的几个世纪内迅速发展起来的，可能是作为该地区几个较古老村庄的宗教中心的融合而成的。到公元200年，它已经发展成为一个重要的宗教和经济中心。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_TEO_OWL_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎以其宏伟的建筑而闻名，尤其是巨大的太阳金字塔和月亮金字塔，它们沿着"亡者之路"排列。该城市也是精美壁画、陶器和黑曜石工具的主要生产中心——黑曜石是一种在整个中美洲进行贸易的火山玻璃。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_TEO_OWL_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>被称为"掷矛者猫头鹰"的神秘统治者据信是特奥蒂瓦坎最具扩张性的领袖之一。玛雅碑文记载了一位来自特奥蒂瓦坎的军阀，名字翻译为"掷矛者猫头鹰"，他于公元378年入侵蒂卡尔并拥立了一位新国王。这一事件标志着特奥蒂瓦坎对玛雅地区影响力的开始，这种情况持续了一个多世纪。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_TEO_OWL_CHAPTER_HISTORY_PARA_5" Language="zh_Hans_CN">
+			<Text>公元550年左右，特奥蒂瓦坎开始衰落。该城市的核心——主要仪式建筑群——被烧毁，可能是在内部叛乱中被毁。到公元750年，这座伟大的城市基本被遗弃，尽管它的遗产通过其文化影响力的传播而延续了下来——阿兹特克人在几个世纪后发现该遗址时，仍然对其宏伟感到敬畏，并给它起了我们至今使用的名字。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_TEO_OWL_CHAPTER_HISTORY_PARA_6" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎作为向周围地区传播中美洲文化统一性的关键力量的历史意义不可低估。其贸易网络从现代的美国西南部延伸到中美洲，传播了宗教、艺术和建筑思想，这些思想塑造了后来一个又一个文明的崛起。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_LIME_TEO_OWL_QUOTE" Language="zh_Hans_CN">
+			<Text>烈火在特奥蒂瓦坎诞生，阴影覆盖大地。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_LEADERS_PAGE_LIME_TEO_OWL_SUBTITLE" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎之主</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_LIME_TEO_OWL_EMISSARY_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>西雅赫·卡克，意为"火之诞生"，是特奥蒂瓦坎最著名的军事指挥官。他因在公元378年领导了对遥远的玛雅城市蒂卡尔的征服而最为人知，在那里他废黜了本土国王并安插了一位忠于特奥蒂瓦坎的新统治者。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_LIME_TEO_OWL_EMISSARY_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
+			<Text>西雅赫·卡克抵达蒂卡尔标志着中美洲历史上的一个关键转折点。他的战役在玛雅低地建立了特奥蒂瓦坎的霸权，开启了持续一个多世纪的文化和政治影响时期。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_LIME_TEO_OWL_EMISSARY_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
+			<Text>在蒂卡尔的胜利之后，西雅赫·卡克继续在中美洲各地施加影响，可能还领导了针对其他地区势力的额外战役。他的遗产作为特奥蒂瓦坎军事力量和文化影响力的证明而流传下来。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_LIME_TEO_OWL_EMISSARY_CHAPTER_HISTORY_PARA_4" Language="zh_Hans_CN">
+			<Text>考古证据表明，西雅赫·卡克的行动不仅是军事征服，还包括在征服的领土上建立外交关系和贸易网络。这种作战与治国方略的结合是特奥蒂瓦坎在整个中美洲建立和维持影响力的典型方式。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_PAGE_GOVERNOR_LIME_TEO_OWL_EMISSARY_CHAPTER_HISTORY_PARA_5" Language="zh_Hans_CN">
+			<Text>西雅赫·卡克作为强大使者-军阀的遗产体现了特奥蒂瓦坎外交和军事力量的双重面貌。他被铭记为特奥蒂瓦坎历史上最伟大的将军，其成就与掷矛者猫头鹰本人的成就相匹配。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_PEDIA_PAGE_GOV_PROMO_LIME_TEO_OWL_EMISSARY_ARRIVAL_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎使者的到来标志着外交关系新时代的开始。正如西雅赫·卡克抵达蒂卡尔永远改变了玛雅世界的政治格局，被派遣到城邦的总督标志着该城邦与特奥蒂瓦坎帝国之间更紧密关系的开始。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_PAGE_GOV_PROMO_LIME_TEO_OWL_EMISSARY_EXPEDITION_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>特奥蒂瓦坎的远征不仅仅是军事行动；他们是精心策划的外交和军事力量展示。佩腾远征，以公元378年西雅赫·卡克对蒂卡尔的成功战役为蓝本，体现了特奥蒂瓦坎将力量投射到远离其直接领土的地方的能力。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_PAGE_GOV_PROMO_LIME_TEO_OWL_EMISSARY_FALL_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>伟�之爪——蒂卡尔本土王朝——的崩殂是中美洲历史上最戏剧性的事件之一。西雅赫·卡克推翻"大美洲虎之爪"国王标志着玛雅低地数百年来政治动荡时期的开始，在此期间，特奥蒂瓦坎的影响力以前所未有的方式塑造了该地区。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_PAGE_GOV_PROMO_LIME_TEO_OWL_EMISSARY_HEGEMONY_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>在其鼎盛时期，特奥蒂瓦坎不仅通过军事力量，还通过经济和文化影响力维持了对许多较小国家的霸权。统御诸王的能力——在保持至高地位的同时让附庸统治者各安其位——是特奥蒂瓦坎帝国在中美洲维持了三个多世纪的关键。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_PAGE_GOV_PROMO_LIME_TEO_OWL_EMISSARY_OUTPOST_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>瓦卡（今危地马拉的埃尔佩鲁）是玛雅低地最重要的特奥蒂瓦坎前哨站之一。它是特奥蒂瓦坎帝国与玛雅世界之间的重要联系，是商人和军事远征的关键中转站。考古发现表明，该遗址设有特奥蒂瓦坎风格的建筑和随葬品，表明该城市有显著的外国存在。</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_PAGE_GOV_PROMO_LIME_TEO_OWL_EMISSARY_OVERSEER_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>攻占瓦哈克通是特奥蒂瓦坎在玛雅地区军事主导地位的最终体现之一。通过在征服领土安插监督者，特奥蒂瓦坎建立了一个附庸国网络，这些附庸国承认其至高权威，同时允许当地精英保持一定程度的地方控制。</Text>
+		</Replace>
+
+		<!-- = Swiss + Buenos Aires/Montevideo city names = -->
+		<Replace Tag="LOC_CITY_NAME_AARAU" Language="zh_Hans_CN">
+			<Text>阿劳</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_ALTDORF" Language="zh_Hans_CN">
+			<Text>阿尔特多夫</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_APPENZELL" Language="zh_Hans_CN">
+			<Text>阿彭策尔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BAAR" Language="zh_Hans_CN">
+			<Text>巴尔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BELLINZONA" Language="zh_Hans_CN">
+			<Text>贝林佐纳</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BIEL" Language="zh_Hans_CN">
+			<Text>比尔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BULLE" Language="zh_Hans_CN">
+			<Text>比勒</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_CAROUGE" Language="zh_Hans_CN">
+			<Text>卡鲁日</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_CHUR" Language="zh_Hans_CN">
+			<Text>库尔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_DELEMONT" Language="zh_Hans_CN">
+			<Text>德莱蒙</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_DIETIKON" Language="zh_Hans_CN">
+			<Text>迪蒂孔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_DUBENDORF" Language="zh_Hans_CN">
+			<Text>迪本多夫</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_EMMEN" Language="zh_Hans_CN">
+			<Text>埃门</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_FRAUENFELD" Language="zh_Hans_CN">
+			<Text>弗劳恩费尔德</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_FRIBOURG" Language="zh_Hans_CN">
+			<Text>弗里堡</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_GLARUS" Language="zh_Hans_CN">
+			<Text>格拉鲁斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_GRUYERES" Language="zh_Hans_CN">
+			<Text>格吕耶尔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_HERISAU" Language="zh_Hans_CN">
+			<Text>黑里绍</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KONIZ" Language="zh_Hans_CN">
+			<Text>克尼茨</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_KRIENS" Language="zh_Hans_CN">
+			<Text>克林斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LANCY" Language="zh_Hans_CN">
+			<Text>朗西</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LA_CHAUX_DE_FONDS" Language="zh_Hans_CN">
+			<Text>拉绍德封</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LA_TOUR_DE_TREME" Language="zh_Hans_CN">
+			<Text>拉图尔德特雷姆</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_LIESTAL" Language="zh_Hans_CN">
+			<Text>利斯塔尔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MEYRIN" Language="zh_Hans_CN">
+			<Text>梅兰</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_MONTREUX" Language="zh_Hans_CN">
+			<Text>蒙特勒</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_NEUCHATEL" Language="zh_Hans_CN">
+			<Text>纳沙泰尔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_RAPPERSWIL_JONA" Language="zh_Hans_CN">
+			<Text>拉珀斯维尔-约纳</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_SARNEN" Language="zh_Hans_CN">
+			<Text>萨尔嫩</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_SCHAFFHAUSEN" Language="zh_Hans_CN">
+			<Text>沙夫豪森</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_SCHWYZ" Language="zh_Hans_CN">
+			<Text>施维茨</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_SION" Language="zh_Hans_CN">
+			<Text>锡永</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_SOLOTHURN" Language="zh_Hans_CN">
+			<Text>索洛图恩</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_STANS" Language="zh_Hans_CN">
+			<Text>施坦斯</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_THUN" Language="zh_Hans_CN">
+			<Text>图恩</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_USTER" Language="zh_Hans_CN">
+			<Text>乌斯特</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_VERNIER" Language="zh_Hans_CN">
+			<Text>韦尔涅</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_WETZIKON" Language="zh_Hans_CN">
+			<Text>韦齐孔</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_YVERDON_LES_BAINS" Language="zh_Hans_CN">
+			<Text>伊韦尔东莱班</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_ZUG" Language="zh_Hans_CN">
+			<Text>楚格</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BUENOS_AIRES" Language="zh_Hans_CN">
+			<Text>蒙得维的亚</Text>
+		</Replace>
+		<Replace Tag="LOC_CITY_NAME_BUENOS_AIRES_1" Language="zh_Hans_CN">
+			<Text>蒙得维的亚</Text>
+		</Replace>
 		<!-- === BBG new luxary resources === -->
 		<Replace Tag="LOC_RESOURCE_P0K_PENGUINS_NAME" Language="zh_Hans_CN"> <!-- BBG expanded -->
 			<Text>企鹅</Text>

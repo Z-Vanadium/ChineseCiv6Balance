@@ -26,11 +26,11 @@
 	</Dependencies>
 
 	
-	<References>
+	<!-- <References>
 	<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e30" title="CCB Expanded Release"/>
 	<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e34" title="CCB Expanded WIP"/>
 	<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e38" title="CCB Expanded beta"/>
-	</References>
+	</References> -->
 	
 	<!-- can load only select files based on these requirements, if applied -->
 	<ActionCriteria>
@@ -344,6 +344,21 @@
 			<File>MABC/Localization/MAB_China_Taiwan.xml</File>
 			<File>MABC/Localization/MAB_en_US.xml</File>
 		</UpdateText>
+
+	    <UpdateDatabase id="BBG_Expanded_MOAR_Units_WIP_front">
+			<Properties>
+				<LoadOrder>4</LoadOrder>
+			</Properties>
+			<Criteria>BBGExpanded_WIP</Criteria>
+			<File>sql/BBG_Expanded/MOARUnits_enabledconfig.sql</File>
+		</UpdateDatabase>
+		<UpdateDatabase id="BBG_Expanded_MOAR_Units_Release_front">
+			<Properties>
+				<LoadOrder>4</LoadOrder>
+			</Properties>
+			<Criteria>BBGExpanded_Release</Criteria>
+			<File>sql/BBG_Expanded/MOARUnits_enabledconfig.sql</File>
+		</UpdateDatabase>
 
 	</FrontEndActions>
 
@@ -938,7 +953,31 @@
 			<File>sql/LP/Varangian.sql</File>
 		</UpdateDatabase>
 		<!-- -->
-
+				
+		<UpdateDatabase id="BBG_Expanded_MOAR_Units_WIP">
+			<Properties>
+				<LoadOrder>4</LoadOrder>
+			</Properties>
+			<Criteria>BBGExpanded_WIP</Criteria>
+			<Criteria>XP1_AND_XP2</Criteria>
+			<Criteria>DLC_Aztec</Criteria>
+			<Criteria>DLC_Macedon_Persia</Criteria>
+			<Criteria>Byzantium_Gaul</Criteria>
+			<Criteria>GranColombia_Maya</Criteria>
+			<File>sql/BBG_Expanded/MOARUnits_enabled.sql</File>
+		</UpdateDatabase>
+		<UpdateDatabase id="BBG_Expanded_MOAR_Units_Release">
+			<Properties>
+				<LoadOrder>4</LoadOrder>
+			</Properties>
+			<Criteria>BBGExpanded_Release</Criteria>
+			<Criteria>XP1_AND_XP2</Criteria>
+			<Criteria>DLC_Aztec</Criteria>
+			<Criteria>DLC_Macedon_Persia</Criteria>
+			<Criteria>Byzantium_Gaul</Criteria>
+			<Criteria>GranColombia_Maya</Criteria>
+			<File>sql/BBG_Expanded/MOARUnits_enabled.sql</File>
+		</UpdateDatabase>
 
 		<UpdateDatabase id="BBG_Expanded_WIP">
 			<Properties>
@@ -961,8 +1000,9 @@
 			<File>sql/BBG_Expanded/Resources.sql</File>
 
 			<File>sql/BBG_Expanded/Argentina.sql</File>
-			<File>sql/BBG_Expanded/Denmark.sql</File>
+			<File>sql/BBG_Expanded/Bismark.sql</File>
 			<File>sql/BBG_Expanded/Finland.sql</File>
+			<File>sql/BBG_Expanded/Malaysia.sql</File>
 			<File>sql/BBG_Expanded/Switzerland.sql</File>
 		</UpdateDatabase>
 		<!-- I don't know how to do an OR -->
@@ -987,8 +1027,9 @@
 			<File>sql/BBG_Expanded/Resources.sql</File>
 
 			<File>sql/BBG_Expanded/Argentina.sql</File>
-			<File>sql/BBG_Expanded/Denmark.sql</File>
+			<File>sql/BBG_Expanded/Bismark.sql</File>
 			<File>sql/BBG_Expanded/Finland.sql</File>
+			<File>sql/BBG_Expanded/Malaysia.sql</File>
 			<File>sql/BBG_Expanded/Switzerland.sql</File>
 		</UpdateDatabase>
 
@@ -1237,6 +1278,8 @@
       		<File>lua/BBG_Expanded/Te_Kinich.lua</File>
       		<File>lua/BBG_Expanded/Al_Hasan.lua</File>
       		<File>lua/BBG_Expanded/Olympia.lua</File>
+      		<File>lua/BBG_Expanded/Finland.lua</File>
+      		<File>lua/BBG_Expanded/Malaysia.lua</File>
     	</AddGameplayScripts>
 
 		<AddGameplayScripts id="GP">
@@ -1485,16 +1528,21 @@
 		<File>sql/BBG_Expanded/Al_Hasan.sql</File>
 		<File>sql/BBG_Expanded/Spearthrower.sql</File>
 		<File>sql/BBG_Expanded/Resources.sql</File>
-		
+
+		<File>sql/BBG_Expanded/MOARUnits_enabled.sql</File>
+		<File>sql/BBG_Expanded/MOARUnits_enabledconfig.sql</File>
 		<File>sql/BBG_Expanded/Argentina.sql</File>
-		<File>sql/BBG_Expanded/Denmark.sql</File>
+		<File>sql/BBG_Expanded/Bismark.sql</File>
 		<File>sql/BBG_Expanded/Finland.sql</File>
+		<File>sql/BBG_Expanded/Malaysia.sql</File>
 		<File>sql/BBG_Expanded/Switzerland.sql</File>
 		<!-- BBG Expanded lua -->
       	<File>lua/BBG_Expanded/Thule.lua</File>
       	<File>lua/BBG_Expanded/Te_Kinich.lua</File>
       	<File>lua/BBG_Expanded/Al_Hasan.lua</File>
-      	<File>lua/BBG_Expanded/Olympia.lua</File>
+       	<File>lua/BBG_Expanded/Olympia.lua</File>
+       	<File>lua/BBG_Expanded/Finland.lua</File>
+		<File>lua/BBG_Expanded/Malaysia.lua</File>
 		<!-- -->
 		<File>sql/Secret_Societies.sql</File>
 		<!-- -->
