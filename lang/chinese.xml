@@ -6184,8 +6184,7 @@
 			<Text>卡勒瓦拉</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MER_KALEVALA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>冻土和冻土丘陵上的树林提供 +1 [ICON_FOOD] 食物，拥有资源则额外提供 +1 [ICON_FOOD] 食物。
-伐木场提供 +2 [ICON_GOLD] 金币。建立在湖泊 2 个单元格范围内的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土。</Text>
+			<Text>冻土和冻土丘陵上的树林提供 +1 [ICON_FOOD] 食物，拥有资源则额外提供 +1 [ICON_FOOD] 食物。[NEWLINE][NEWLINE]伐木场提供 +2 [ICON_GOLD] 金币。相邻湖泊的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土、T4树林。</Text>
 		</Replace>
 		<!-- = Leader = -->
 		<Replace Tag="LOC_LEADER_MER_MANNERHEIM_NAME" Language="zh_Hans_CN">
