@@ -476,3 +476,11 @@ UPDATE Units SET CostProgressionModel='COST_PROGRESSION_GAME_PROGRESS', CostProg
 
 -- 15/12/24 Spy can stack so Wu can faith buy spies when there is one opponent in they city 
 UPDATE Units SET Stackable=1 WHERE UnitType='UNIT_SPY';
+
+--=======================================================================
+--******                       Other                               ******
+--=======================================================================
+-- naturist and archaeologist may transport between cities
+INSERT OR IGNORE INTO TypeProperties (Type, Name, Value) VALUES
+    ('UNIT_NATURALIST', 'CAN_TELEPORT_TO_CITY', 1),
+    ('UNIT_ARCHAEOLOGIST', 'CAN_TELEPORT_TO_CITY', 1);
