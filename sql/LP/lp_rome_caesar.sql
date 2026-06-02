@@ -140,9 +140,10 @@ UPDATE ModifierArguments SET Value=200 WHERE ModifierId='BARBARIAN_CAMP_GOLD_CAP
 -- UPDATE TraitModifiers SET TraitType='TRAIT_LEADER_CAESAR' WHERE ModifierId='TRAIT_FREE_ROADS_TO_CAPITAL';
 
 -- 07/07/25 Gets amenity on Bath
-INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) VALUES
-	('BBG_BATH_AMENITY_CAESAR', 'MODIFIER_PLAYER_DISTRICT_ADJUST_DISTRICT_AMENITY', 'BBG_PLAYER_IS_LEADER_JULIUS_CAESAR_REQSET');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-	('BBG_BATH_AMENITY_CAESAR', 'Amount', 1);
-INSERT INTO DistrictModifiers (DistrictType, ModifierId) VALUES
-	('DISTRICT_BATH', 'BBG_BATH_AMENITY_CAESAR');
+-- 2026/06/02 removed
+-- INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) VALUES
+-- 	('BBG_BATH_AMENITY_CAESAR', 'MODIFIER_PLAYER_DISTRICT_ADJUST_DISTRICT_AMENITY', 'BBG_PLAYER_IS_LEADER_JULIUS_CAESAR_REQSET');
+-- INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+-- 	('BBG_BATH_AMENITY_CAESAR', 'Amount', 1);
+-- INSERT INTO DistrictModifiers (DistrictType, ModifierId) VALUES
+-- 	('DISTRICT_BATH', 'BBG_BATH_AMENITY_CAESAR');

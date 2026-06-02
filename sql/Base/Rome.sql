@@ -11,7 +11,8 @@ INSERT INTO District_Adjacencies (DistrictType, YieldChangeId) VALUES
 	('DISTRICT_BATH' , 'District_Culture');
 
 -- 07/07/25 Bath no longer give amenity
-UPDATE Districts SET Entertainment=0 WHERE DistrictType='DISTRICT_BATH';
+-- 2026/06/02 back
+-- UPDATE Districts SET Entertainment=0 WHERE DistrictType='DISTRICT_BATH';
 
 
 -- 08/04/25 Legions down to 38
