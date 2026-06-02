@@ -168,3 +168,18 @@ INSERT INTO Requirements(RequirementId , RequirementType) VALUES
 
 INSERT INTO RequirementArguments(RequirementId , Name, Value) VALUES
 	('BBG_PLAYER_IS_GORGO_REQUIREMENT' , 'LeaderType', 'LEADER_GORGO');
+
+-- 2026/06/02 ud no more from city center
+DELETE FROM District_Adjacencies
+      WHERE YieldChangeId = 'District_Culture_City_Center' AND
+            DistrictType = 'DISTRICT_ACROPOLIS';
+
+-- no more need hills
+DELETE FROM District_ValidTerrains
+      WHERE TerrainType IN ('TERRAIN_GRASS_HILLS', 'TERRAIN_PLAINS_HILLS', 'TERRAIN_TUNDRA_HILLS', 'TERRAIN_SNOW_HILLS', 'TERRAIN_DESERT_HILLS') AND
+            DistrictType = 'DISTRICT_ACROPOLIS';
+-- base +1
+INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange) VALUES
+    ('CCB_ACROPOLIS_ADJACENCY_BASE', 'LOC_CCB_ACROPOLIS_ADJACENCY_BASE', 'YIELD_CULTURE', 1);
+INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
+    ('DISTRICT_ACROPOLIS', 'CCB_ACROPOLIS_ADJACENCY_BASE');
