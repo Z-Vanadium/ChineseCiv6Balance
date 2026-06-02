@@ -699,7 +699,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>希腊专业化文化遗址区域。替代“剧院广场”，造价更低。[NEWLINE][NEWLINE]基础提供 +1 [ICON_Culture] 文化值；每个相邻区域提供 +1 [ICON_Culture] 文化值；相邻奇观、娱乐中心及水上乐园额外提供 +2 [ICON_Culture] 文化值。</Text>
+			<Text>希腊专业化文化遗址区域。替代“剧院广场”，造价更低。[NEWLINE][NEWLINE]基础提供 +1 [ICON_Culture] 文化值；{LOC_DISTRICT_ACROPOLIS_DESCRIPTION_ADJACENCY}</Text>
 		</Replace>	
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_DISTRICT_ACROPOLIS_DESCRIPTION}</Text>
@@ -708,7 +708,10 @@
 			<Text>{LOC_DISTRICT_ACROPOLIS_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_DESCRIPTION_ADJACENCY" Language="zh_Hans_CN">
-			<Text>相邻加成:+1 [ICON_Culture] 文化值，来自每个相邻的市中心区域。+1 [ICON_Culture] 文化值，来自每个相邻的区域单元格。+2 [ICON_Culture] 文化值，来自每个相邻的奇观、娱乐中心、水上乐园、棉花堡及帕依提提单元格。</Text>
+			<Text>每个相邻区域提供 +1 [ICON_Culture] 文化值；相邻奇观、娱乐中心及水上乐园额外提供 +2 [ICON_Culture] 文化值。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ACROPOLIS_ADJACENCY_BASE" Language="zh_Hans_CN">
+			<Text>基础提供 +1 [ICON_Culture] 文化值。</Text>
 		</Replace>
 
 		<!-- == HUNGARY == -->
