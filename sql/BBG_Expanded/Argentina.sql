@@ -5,8 +5,9 @@ DELETE FROM LeaderTraits WHERE LeaderType='LEADER_LEU_SANMARTIN' AND TraitType='
 -- all units get ability
 UPDATE Modifiers SET SubjectRequirementSetId=NULL WHERE ModifierId IN ('LEU_SANMARTIN_MOUNTED_GENERALS_ATTACH', 'LEU_SANMARTIN_MOUNTED_MUSICIANS_ATTACH','LEU_SANMARTIN_MOUNTED_GENERALS','LEU_SANMARTIN_MOUNTED_MUSICIANS');
 
--- musician gpp nurf to +5
-UPDATE ModifierArguments SET Value=5 WHERE Name='Amount' AND ModifierId='LEU_SANMARTIN_MOUNTED_MUSICIANS';
+-- general and musician gpp nurf to +3
+UPDATE ModifierArguments SET Value=3 WHERE Name='Amount' AND ModifierId='LEU_SANMARTIN_MOUNTED_GENERALS';
+UPDATE ModifierArguments SET Value=3 WHERE Name='Amount' AND ModifierId='LEU_SANMARTIN_MOUNTED_MUSICIANS';
 
 -- promote melee, ranged and rock band units won't finish turn
 INSERT OR IGNORE INTO TraitModifiers (TraitType, ModifierId) VALUES 
@@ -50,8 +51,8 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 
 -- musician gpp bonus
 -- campus
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
-('TRAIT_CIVILIZATION_LEU_ARGENTINA', 'CCB_ARGENTINA_MUSIC_GPP_DISTRICT_CAMPUS');
+-- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+-- ('TRAIT_CIVILIZATION_LEU_ARGENTINA', 'CCB_ARGENTINA_MUSIC_GPP_DISTRICT_CAMPUS');
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
 ('CCB_ARGENTINA_MUSIC_GPP_DISTRICT_CAMPUS', 'MODIFIER_PLAYER_DISTRICTS_ADJUST_GREAT_PERSON_POINTS', 0, 0, 0, NULL, 'REQSET_CCB_ARGENTINA_DISTRICT_CAMPUS_ADJACENT_TO_PASTURE');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 

@@ -5527,7 +5527,7 @@
 			<Text>潘帕斯、马兰博与探戈</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LEU_ARGENTINA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>获得 [ICON_ENVOY] 城邦“布宜诺斯艾利斯”的宗主国效果：加成资源如同奢侈品资源一样，每种类型资源提供 1 点 [ICON_AMENITIES] 宜居度。[NEWLINE]若相邻牧场，学院、娱乐中心和工业区提供 +1 [ICON_GreatMusician]大音乐家点数。[NEWLINE]宫殿提供 2 个 [ICON_GreatWork_MUSIC] 音乐巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3牧场资源。</Text>
+			<Text>获得 [ICON_ENVOY] 城邦“布宜诺斯艾利斯”的宗主国效果：加成资源如同奢侈品资源一样，每种类型资源提供 1 点 [ICON_AMENITIES] 宜居度。[NEWLINE]若相邻牧场，娱乐中心和工业区提供 +1 [ICON_GreatMusician]大音乐家点数。[NEWLINE]宫殿提供 2 个 [ICON_GreatWork_MUSIC] 音乐巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3牧场资源。</Text>
 		</Replace>
 		<!-- = Leader = -->
 		<Replace Tag="LOC_LEADER_LEU_EVITA_NAME" Language="zh_Hans_CN">
@@ -6585,7 +6585,7 @@
 			<Text>安第斯远征</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_LEU_SANMARTIN_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>击败敌方单位时获得 5 点 [ICON_GreatPerson] 大将军和 5 点大音乐家 [ICON_GREATMUSICIAN] 伟人点数（联机速度下）。[NEWLINE]近战、远程单位和摇滚乐队 [ICON_PROMOTION] 晋升时不会结束回合。</Text>
+			<Text>击败敌方单位时获得 3 点 [ICON_GreatPerson] 大将军和 3 点大音乐家 [ICON_GREATMUSICIAN] 伟人点数（联机速度下）。[NEWLINE]近战、远程单位和摇滚乐队 [ICON_PROMOTION] 晋升时不会结束回合。</Text>
 		</Replace>
 		<Replace Tag="LOC_AGENDA_LEU_SANMARTIN_NAME" Language="zh_Hans_CN">
 			<Text>劳塔罗会</Text>
