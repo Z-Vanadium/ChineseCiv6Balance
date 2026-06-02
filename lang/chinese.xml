@@ -6354,7 +6354,7 @@
 			<Text>十字路口的先驱</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_CVS_ESCHER_UA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>商业中心和工业区从山脉获得标准相邻加成。修建这些区域内的建筑时 +50% [ICON_Production] 生产力。</Text>
+			<Text>商业中心和工业区从山脉获得标准相邻加成。修建市场、{LOC_BUILDING_CVS_SWITZERLAND_UI_NAME}、工作坊和工厂时 +50% [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_MODIFIER_CVS_ESCHER_UA_INDUSTRIAL_ADJ_MOUNTAIN" Language="zh_Hans_CN">
 			<Text>来自相邻山脉的+{1_num} [ICON_Production] 生产力。</Text>
