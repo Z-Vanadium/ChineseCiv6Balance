@@ -2,6 +2,9 @@
 -- remove
 DELETE FROM TraitModifiers WHERE ModifierId LIKE 'MODIFIER_CVS_ISKANDAR_UA_ATTACH_%' AND TraitType='MINOR_CIV_DEFAULT_TRAIT';
 
+-- need early empire
+UPDATE Modifiers SET OwnerRequirementSetId='BBG_UTILS_PLAYER_HAS_CIVIC_EARLY_EMPIRE_REQSET' WHERE ModifierId='MODIFIER_CVS_ISKANDAR_UA_ADJUST_POPULATION';
+
 -- ca
 -- bias
 DELETE FROM StartBiasFeatures
@@ -13,8 +16,11 @@ DELETE FROM StartBiasResources
             Tier = 3 AND
             CivilizationType = 'CIVILIZATION_CVS_MALAYSIA';
 
--- uu 55+4
-UPDATE Units SET Combat=59 WHERE UnitType='UNIT_CVS_MALAYSIA_UU';
+-- uu 55+4, cost to 260 from 240
+UPDATE Units SET Combat=58, Cost=260 WHERE UnitType='UNIT_CVS_MALAYSIA_UU';
+
+-- healing nurfed to 20
+UPDATE ModifierArguments SET Value=20 WHERE ModifierId='MODIFIER_CVS_MALAYSIA_UU_KILL_HEAL' AND Name='Amount';
 
 DELETE FROM UnitAbilityModifiers WHERE ModifierId='MODTYPE_CVS_MALAYSIA_UU_KILL_GPP' AND UnitAbilityType='ABILITY_CVS_MALAYSIA_UU';
 

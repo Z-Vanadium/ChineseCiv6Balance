@@ -5700,10 +5700,10 @@
 		</Replace>
 		<!-- = Leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_CVS_ISKANDAR_UA_NAME" Language="zh_Hans_CN">
-			<Text>王者世系</Text>
+			<Text>海峡执衡</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_CVS_ISKANDAR_UA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建立在海岸 3 个单元格范围内的城市初始即获得 1 [ICON_CITIZEN] 人口。</Text>
+			<Text>“帝国初期”市政后，建立在海岸 3 个单元格范围内的城市获得 1 [ICON_CITIZEN] 人口（包括已经建立的）。</Text>
 		</Replace>
 		<!-- = Agenda = -->
 		<Replace Tag="LOC_AGENDA_CVS_ISKANDAR_NAME" Language="zh_Hans_CN">
@@ -5860,7 +5860,7 @@
 		</Replace>
 		<!-- = Civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_MALAYSIA_UA_NAME" Language="zh_Hans_CN">
-			<Text>马来世界</Text>
+			<Text>南洋聚市</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_MALAYSIA_UA_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>[ICON_CVS_MALAYSIA_CSQ] 完成已经被其他文明宗主城邦的任务时，额外奖励 1 个 [ICON_ENVOY] 使者。每宗主一个城邦，则 +1 [ICON_TRADEROUTE] 贸易路线容量。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
@@ -5870,14 +5870,14 @@
 			<Text>德马加港</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_CVS_MALAYSIA_UI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>马来西亚特色港口，造价更低。建成时建立 [ICON_TRADINGPOST] 贸易站。为海岸单元格提供 +1 [ICON_SCIENCE] 科技值。</Text>
+			<Text>马来西亚特色港口，但是造价等同于港口。建成时建立 [ICON_TRADINGPOST] 贸易站。为海岸单元格提供 +1 [ICON_SCIENCE] 科技值。</Text>
 		</Replace>
 		<!-- = Unique unit = -->
 		<Replace Tag="LOC_UNIT_CVS_MALAYSIA_UU_NAME" Language="zh_Hans_CN">
 			<Text>兰查兰快船</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_CVS_MALAYSIA_UU_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>马来西亚文艺复兴时期特色海军近战单位，替代轻快帆船。+4 [ICON_STRENGTH] 战斗力，消灭敌方单位时恢复 30 点生命值。</Text>
+			<Text>马来西亚文艺复兴时期特色海军近战单位，替代轻快帆船，造价更高。+4 [ICON_STRENGTH] 战斗力，消灭敌方单位时恢复 20 点生命值。</Text>
 		</Replace>
 		<!-- = Named Places = -->
 		<Replace Tag="LOC_NAMED_RIVER_KLANG" Language="zh_Hans_CN">
