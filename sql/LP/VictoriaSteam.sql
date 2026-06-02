@@ -4,7 +4,9 @@
 -- -- 15/06/23 bonus production only working on improved resources
 -- UPDATE Modifiers SET SubjectRequirementSetId='PLOT_HAS_STRATEGIC_IMPROVED_REQUIREMENTS' WHERE ModifierId='VICTORIA_STRATEGIC_RESOURCE';
 
-DELETE FROM TraitModifiers WHERE ModifierId='VICTORIA_STRATEGIC_RESOURCE';
+-- 2026/06/02 strategic resource bonus back, +1 prod
+-- DELETE FROM TraitModifiers WHERE ModifierId='VICTORIA_STRATEGIC_RESOURCE';
+UPDATE ModifierArguments SET Value='1' WHERE ModifierId='VICTORIA_STRATEGIC_RESOURCE' AND Name='Amount';
 
 -- 15/06/23 remove production bonus with workshop
 DELETE FROM Modifiers WHERE ModifierId='VICTORIA_PRODUCTION_WORKSHOP';
@@ -15,14 +17,6 @@ UPDATE ModifierArguments SET Value=5 WHERE Name='Amount' AND ModifierId IN ('VIC
 -- 2026/05/10 removed
 -- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 -- 	('TRAIT_LEADER_VICTORIA_ALT', 'TRAIT_ADJUST_INDUSTRIAL_ZONE_BUILDINGS_PRODUCTION');
-
--- 2026/05/10 extra district slot for cities with IZ, require Exploration civic
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
-('TRAIT_LEADER_VICTORIA_ALT', 'CCB_AOS_EXTRA_DISTRICT_SLOT');
-INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_AOS_EXTRA_DISTRICT_SLOT', 'MODIFIER_PLAYER_CITIES_EXTRA_DISTRICT', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_CIVIC_EXPLORATION_REQSET', 'BBG_CITY_HAS_DISTRICT_INDUSTRIAL_ZONE');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_AOS_EXTRA_DISTRICT_SLOT', 'Amount', '1');
 
 -- 04/07/24 AoS RND give +2 adjency to IZ
 -- 04/08/24 Reduced to +1
