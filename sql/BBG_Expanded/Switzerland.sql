@@ -60,6 +60,15 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_SWITZERLAND_SPY_PRODUCTION', 'Amount', '50'), 
 ('CCB_SWITZERLAND_SPY_PRODUCTION', 'UnitType', 'UNIT_SPY');
 
+-- uu cost from 200 to 150
+UPDATE Units SET Cost=150 WHERE UnitType='UNIT_CVS_SWITZERLAND_UU';
+
+-- uu promote
+UPDATE ModifierArguments SET Value='7' WHERE ModifierId='MODIFIER_CVS_SWITZERLAND_UU_VS_WOUNDED' AND Name='Amount';
+
+-- uu upgrade
+UPDATE UnitUpgrades SET UpgradeUnit='UNIT_PIKE_AND_SHOT' WHERE Unit='UNIT_CVS_SWITZERLAND_UU';
+
 -- spy efficiency -1
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
 ('TRAIT_CIVILIZATION_CVS_SWITZERLAND_UA', 'CCB_SWITZERLAND_SPY_BONUS');
