@@ -45,10 +45,10 @@
 		</Row>= -->
 		<!-- = leader ability (Abraham Lincoln)= -->
 		<Replace Tag="LOC_TRAIT_LEADER_LINCOLN_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建造工业区、水渠时+100% [ICON_PRODUCTION] 生产力。工业区+2 [ICON_Amenities] 宜居度。建造工业区和其建筑后获得1个免费近战单位。免费单位的生成或维护不需要资源。</Text>
+			<Text>{LOC_TRAIT_LEADER_LINCOLN_EXPANSION_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_LINCOLN_EXPANSION_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建造工业区、水渠时 +100% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]工业区提供 +2 [ICON_Amenities] 宜居度，+3 每回合忠诚度；[NEWLINE]水渠提供 +2 [ICON_FOOD] 食物；[NEWLINE]但种植园提供 -2 每回合忠诚度。[NEWLINE][NEWLINE]建造工业区和其建筑后获得1个免费近战单位。免费单位 +5 [ICON_Strength] 战斗力，生成或维护不需要资源。</Text>
+			<Text>建造工业区、水渠时 +100% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]工业区提供 +2 [ICON_Amenities] 宜居度，+3 每回合忠诚度；[NEWLINE]水渠提供 +1 [ICON_FOOD] 食物、+1 [ICON_HOUSING] 住房；[NEWLINE]但种植园提供 -2 每回合忠诚度。[NEWLINE][NEWLINE]建造工业区和其建筑后获得1个免费近战单位。免费单位 +5 [ICON_Strength] 战斗力，生成或维护不需要资源。</Text>
 		</Replace>
 		<Row Tag="LOC_ABILITY_LINCOLN_MELEE_UNITS_COMBAT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>+5 [ICON_Strength] 战斗力 (解放黑奴宣言)</Text>
@@ -510,7 +510,7 @@
 		</Replace>
 		<!-- = leader ability (Victoria Age of Steam) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_VICTORIA_ALT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>获得“探索”市政后，每座拥有工业区的城市都能建造比平常多一个 [ICON_DISTRICT] 专业化区域（无视 [ICON_Citizen] 人口数量限制）。城市中每有一座工厂或发电厂，便 +5% [ICON_PRODUCTION] 生产力。拥有电力供给时，建筑的额外产出+4。[NEWLINE][NEWLINE]灯塔提供 +1 [ICON_GreatEngineer] 大工程师点数。工业区从皇家海军船坞获得大量 [ICON_PRODUCTION] 生产力相邻加成，皇家海军船坞从工业区获得大量 [ICON_GOLD] 金币相邻加成。</Text>
+			<Text>战略资源提供 +1 [ICON_PRODUCTION] 生产力。城市中每有一座工厂或发电厂，便 +5% [ICON_PRODUCTION] 生产力。拥有电力供给时，建筑的额外产出+4。[NEWLINE][NEWLINE]灯塔提供 +1 [ICON_GreatEngineer] 大工程师点数。工业区从皇家海军船坞获得大量 [ICON_PRODUCTION] 生产力相邻加成，皇家海军船坞从工业区获得大量 [ICON_GOLD] 金币相邻加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_AOS_ADJENCY_IZ_RND_DESC" Language="zh_Hans_CN">
 			<Text>+{1_num} [ICON_PRODUCTION] 生产力，来自相邻皇家海军船坞</Text>
@@ -699,13 +699,13 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>希腊专业化文化遗址区域。替代“剧院广场”，造价更低。[NEWLINE][NEWLINE]每个相邻区域+1 [ICON_Culture] 文化值，相邻市中心额外+1 [ICON_Culture] 文化值，相邻奇观、娱乐中心及水上乐园额外+2 [ICON_Culture] 文化值。只能建在丘陵上。</Text>
+			<Text>希腊专业化文化遗址区域。替代“剧院广场”，造价更低。[NEWLINE][NEWLINE]基础提供 +1 [ICON_Culture] 文化值；每个相邻区域提供 +1 [ICON_Culture] 文化值；相邻奇观、娱乐中心及水上乐园额外提供 +2 [ICON_Culture] 文化值。</Text>
 		</Replace>	
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>希腊专业化文化遗址区域。替代“剧院广场”，造价更低。[NEWLINE][NEWLINE]每个相邻区域+1 [ICON_Culture] 文化值，相邻市中心额外+1 [ICON_Culture] 文化值，相邻奇观、娱乐中心及水上乐园额外+2 [ICON_Culture] 文化值。只能建在丘陵上。</Text>
+			<Text>{LOC_DISTRICT_ACROPOLIS_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>希腊专业化文化遗址区域。替代“剧院广场”，造价更低。[NEWLINE][NEWLINE]每个相邻区域+1 [ICON_Culture] 文化值，相邻市中心额外+1 [ICON_Culture] 文化值，相邻奇观、娱乐中心及水上乐园额外+2 [ICON_Culture] 文化值。只能建在丘陵上。</Text>
+			<Text>{LOC_DISTRICT_ACROPOLIS_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ACROPOLIS_DESCRIPTION_ADJACENCY" Language="zh_Hans_CN">
 			<Text>相邻加成:+1 [ICON_Culture] 文化值，来自每个相邻的市中心区域。+1 [ICON_Culture] 文化值，来自每个相邻的区域单元格。+2 [ICON_Culture] 文化值，来自每个相邻的奇观、娱乐中心、水上乐园、棉花堡及帕依提提单元格。</Text>
@@ -902,11 +902,11 @@
 		<!-- == KONGO == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_NKISI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>从每个 [ICON_GreatWork_Relic] 遗物获得额外+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [Icon_Faith] 信仰值。除了通常的 [ICON_CULTURE] 文化值，还会从每个 [ICON_GreatWork_Artifact] 文物以及 [ICON_GreatWork_Sculpture] 雕塑艺术巨作获得+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [ICON_Faith] 信仰值。每次建造完成一个市政广场建筑后，获得一个 [ICON_GreatWork_Relic] 遗物。[NEWLINE][NEWLINE]拥有姆班赞的城市 +1 [ICON_AMENITIES] 宜居度。获得的 [ICON_GreatWriter] 大作家、 [ICON_GreatArtist] 大艺术家、 [ICON_GreatMusician] 大音乐家和 [ICON_GreatMerchant] 大商人点数+50%。生产考古学家时+100% [ICON_PRODUCTION] 生产力。宫殿有5个巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3雨林、T5树林、T-3海洋。</Text>
+			<Text>从每个 [ICON_GreatWork_Relic] 遗物获得额外+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [Icon_Faith] 信仰值。除了通常的 [ICON_CULTURE] 文化值，还会从每个 [ICON_GreatWork_Artifact] 文物以及 [ICON_GreatWork_Sculpture] 雕塑艺术巨作获得+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [ICON_Faith] 信仰值。每次建造完成一个市政广场建筑后，获得一个 [ICON_GreatWork_Relic] 遗物。宫殿有5个巨作槽位。生产考古学家时+100% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]拥有姆班赞的城市获得下列加成：[NEWLINE][ICON_BULLET] +1 [ICON_AMENITIES] 宜居度。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3雨林、T5树林、T-3海洋。</Text>
 		</Replace>
 		<!-- = leader ability (Mvemba a Nzinga) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_RELIGIOUS_CONVERT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>无法建造圣地区、获得大预言家，或创建宗教。从刚果的主流宗教中获得强化信仰加成，而不只是信徒信仰。每次完成一个姆班赞或剧院广场区时获得一位（城市主流宗教的）使徒。城市从每个任意宗教的信徒+0.2 [ICON_CULTURE] 文化值、+1 [ICON_Gold] 金币。[NEWLINE][NEWLINE]近战、抗骑兵单位防御远程攻击时+5 [ICON_Strength] 战斗力。所有陆地战斗单位和  [ICON_GreatGeneral] 大将军在树林和雨林中移动时无 [ICON_Movement] 移动力减益。</Text>
+			<Text>无法建造圣地区、获得大预言家，或创建宗教。从刚果的主流宗教中获得强化信仰加成，而不只是信徒信仰。每次完成一个姆班赞或剧院广场时获得一位（城市主流宗教的）使徒。城市从每个任意宗教的信徒获得 +0.2 [ICON_CULTURE] 文化值、+1 [ICON_Gold] 金币。[NEWLINE][NEWLINE]兵营和马厩提供 +1 [ICON_GreatGeneral] 大将军点数。[NEWLINE]拥有姆班赞的城市获得下列加成：[NEWLINE][ICON_BULLET]兵工厂提供 +1 [ICON_GreatGeneral] 大将军点数。[NEWLINE][NEWLINE]近战、抗骑兵和骑兵类单位忽视目标单位来自树林或雨林的防守 [ICON_Strength] 战斗力增益。所有陆地战斗单位和 [ICON_GreatGeneral] 大将军在树林和雨林中移动时无 [ICON_Movement] 移动力减益。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_IGNORE_WOODS_ABILITY_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>陆地单位和大将军在树林和雨林中移动时无 [ICON_Movement] 移动力减益。（宗教转换）</Text>
@@ -917,9 +917,15 @@
 		<Replace Tag="LOC_CCB_MELEE_AND_ANTI_CAVALRY_DEFENSE_RANGED_DESC" Language="zh_Hans_CN">
 			<Text>{LOC_CCB_MELEE_AND_ANTI_CAVALRY_DEFENSE_RANGED_NAME}</Text>
 		</Replace>
+		<Replace Tag="LOC_CCB_KONGO_ATTACK_STRENGTH_NAME" Language="zh_Hans_CN">
+			<Text>进攻树林或雨林里的单位时 +3 [ICON_Strength] 战斗力。（宗教转换）</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_KONGO_ATTACK_STRENGTH_NAME" Language="zh_Hans_CN">
+			<Text>{LOC_CCB_KONGO_ATTACK_STRENGTH_DESC}</Text>
+		</Replace>
 		<!-- = leader ability (Nzinga Mbande) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_NZINGA_MBANDE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>考古学家建造或购买花费减少50%。拥有姆班赞的城市+10% [ICON_GOLD] 金币、+10% [ICON_Culture] 文化值（多个姆班赞不叠加）。姆班赞为商业中心和剧院广场提供+2相邻加成。[NEWLINE][NEWLINE]所有平民单位在树林和雨林中移动时无 [ICON_Movement] 移动力减益。</Text>
+			<Text>市场提供 +1 [ICON_GreatMerchant] 大商人点数。每回合获得的 [ICON_GreatWriter] 大作家、[ICON_GreatArtist] 大艺术家和 [ICON_GreatMusician] 大音乐家点数 +50%。考古学家建造或购买花费减少50%。[NEWLINE][NEWLINE]拥有姆班赞的城市获得下列加成：[NEWLINE][ICON_BULLET]+10% [ICON_GOLD] 金币；[NEWLINE][ICON_BULLET]+10% [ICON_Culture] 文化值；[NEWLINE][ICON_BULLET]商业中心和剧院广场从树林和雨林获得标准相邻加成。[NEWLINE][NEWLINE]所有平民单位在树林和雨林中移动时无 [ICON_Movement] 移动力减益。</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_KONGO_SHIELD_BEARER_DESCRIPTION" Language="zh_Hans_CN">
@@ -930,13 +936,25 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_MBANZA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>刚果特色区域，仅能建造在雨林或树林中。替代社区区域，但更早可用且建造成本更低。无论魅力值多少，提供+5 [ICON_HOUSING] 住房、+2 [ICON_FOOD] 食物和+4 [ICON_GOLD] 金币。</Text>
+			<Text>刚果特色区域，仅能建造在雨林或树林中。替代社区区域，但更早可用且建造成本更低。无论魅力值多少，提供 +5 [ICON_HOUSING] 住房、+2 [ICON_FOOD] 食物和 +4 [ICON_GOLD] 金币。</Text>
 		</Replace>
 		<Replace Tag="BBG_LOC_MBANDE_COMMERCIAL_MBANZA" Language="zh_Hans_CN">
 			<Text>相邻姆班赞提供 +{1_num} [ICON_GOLD] 金币。</Text>
 		</Replace>
 		<Replace Tag="BBG_LOC_MBANDE_THEATRE_MBANZA" Language="zh_Hans_CN">
 			<Text>相邻姆班赞提供 +{1_num} [ICON_CULTURE] 文化值。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_KONGO_COMMERCIAL_ADJACENCY_FOREST_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>相邻树林提供 +{1_num} [ICON_GOLD] 金币。（姆班赞）</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_KONGO_COMMERCIAL_ADJACENCY_JUNGLE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>相邻雨林提供 +{1_num} [ICON_GOLD] 金币。（姆班赞）</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_KONGO_THEATRE_ADJACENCY_FOREST_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>相邻树林提供 +{1_num} [ICON_CULTURE] 文化值。（姆班赞）</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_KONGO_THEATRE_ADJACENCY_JUNGLE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>相邻雨林提供 +{1_num} [ICON_CULTURE] 文化值。（姆班赞）</Text>
 		</Replace>
 
 		<!-- == KOREA == -->
@@ -1016,7 +1034,7 @@
 		<!-- == MALI == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MALI_GOLD_DESERT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“对外贸易”市政后，首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+2 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。所有城市-10% [ICON_PRODUCTION] 生产力。每通过科技或市政进入一个新时代，所有城市 +1% [ICON_PRODUCTION] 生产力（从古典时期开始，上限至现代 +5%）。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源、T-1海洋。</Text>
+			<Text>首都或市中心位于沙漠单元格的城市每回合获得+1 [ICON_Faith] 信仰值。[NEWLINE]未改良的沙漠单元格 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]沙漠丘陵单元格+2 [ICON_FOOD] 食物，改良为矿山提供+2 [ICON_GOLD] 金币。[NEWLINE]可用 [ICON_Faith] 信仰值购买商业中心区域建筑。所有城市-10% [ICON_PRODUCTION] 生产力。每通过科技或市政进入一个新时代，所有城市 +1% [ICON_PRODUCTION] 生产力（从古典时期开始，上限至现代 +5%）。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1沙漠、T5矿山资源、T-1海洋。</Text>
 		</Replace>
 		<!-- = leader ability (Mansa Musa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SAHEL_MERCHANTS_DESCRIPTION" Language="zh_Hans_CN">
@@ -1350,7 +1368,7 @@
 		</Replace>
 		<!-- = leader ability (Julius Caesar) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_CAESAR_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>首次征服一座城市或从蛮族哨站获得[ICON_GOLD] 金币时 +150 [ICON_GOLD] 金币。研究完“金属铸造”之后，两者提供的 [ICON_GOLD] 金币数量变为250，研究完“钢铁”之后，变为350（标准速度下）。当目标为蛮族时，获得+5 [ICON_Strength] 战斗力且总是获得正常经验值。[NEWLINE][NEWLINE]“法典”市政后，首都获得一个免费的勇士。除首都外，建立新城市时获得一个免费的近战单位。占领并保留至少一个城市时（该城市必须由任意主要文明建立，且被占领时属于主要文明），每种 [ICON_Government] 政体获得一个额外的通配符槽位。[NEWLINE][NEWLINE]所有单位获得+50%战斗经验值，通过科技或市政进入中世纪后提升至+100%。浴场获得+1 [ICON_AMENITIES] 宜居度。</Text>
+			<Text>首次征服一座城市或从蛮族哨站获得[ICON_GOLD] 金币时 +150 [ICON_GOLD] 金币。研究完“金属铸造”之后，两者提供的 [ICON_GOLD] 金币数量变为250，研究完“钢铁”之后，变为350（标准速度下）。当目标为蛮族时，获得+5 [ICON_Strength] 战斗力且总是获得正常经验值。[NEWLINE][NEWLINE]“法典”市政后，首都获得一个免费的勇士。除首都外，建立新城市时获得一个免费的近战单位。占领并保留至少一个城市时（该城市必须由任意主要文明建立，且被占领时属于主要文明），每种 [ICON_Government] 政体获得一个额外的通配符槽位。[NEWLINE][NEWLINE]所有单位获得+50%战斗经验值，通过科技或市政进入中世纪后提升至+100%。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_CAESAR_XP_BONUS_BASE_MODIFIER_NAME" Language="zh_Hans_CN">
 			<Text>+50%战斗经验值。（我来，我见，我征服）</Text>
@@ -1366,7 +1384,7 @@
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_BATH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>促进城市发展的罗马特色区域。取代“水渠”，造价更低。[NEWLINE][NEWLINE]从相邻河流、湖泊、绿洲或山脉引水，为该城市提供淡水资源。尚未拥有淡水资源的城市最多获得6个 [ICON_Housing] 住房。已有淡水资源的城市则+2 [ICON_Housing] 住房。若与地热裂缝相邻，提供+1 [ICON_AMENITIES] 宜居度。在任何情况下，浴场都能额外提供+2 [ICON_Housing] 住房。干旱时可防止 [ICON_Food] 食物损失。每相邻两个区域获得+1 [ICON_CULTURE] 文化值。必须修建在与市中心相邻的单元格中。</Text>
+			<Text>促进城市发展的罗马特色区域。取代“水渠”，造价更低。[NEWLINE][NEWLINE]从相邻河流、湖泊、绿洲或山脉引水，为该城市提供淡水资源。尚未拥有淡水资源的城市最多获得6个 [ICON_Housing] 住房。已有淡水资源的城市则+2 [ICON_Housing] 住房。若与地热裂缝相邻，提供+1 [ICON_AMENITIES] 宜居度。干旱时可防止 [ICON_Food] 食物损失。必须修建在与市中心相邻的单元格中。[NEWLINE][NEWLINE]在任何情况下，浴场都能额外提供 +2 [ICON_Housing] 住房、+1 [ICON_AMENITIES] 宜居度。从区域获得少量 [ICON_CULTURE] 文化值相邻加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_BATH_EXPANSION2_ALT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_DISTRICT_BATH_DESCRIPTION}</Text>
