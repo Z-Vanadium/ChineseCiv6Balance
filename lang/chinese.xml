@@ -920,7 +920,7 @@
 		<Replace Tag="LOC_CCB_MELEE_AND_ANTI_CAVALRY_DEFENSE_RANGED_DESC" Language="zh_Hans_CN">
 			<Text>{LOC_CCB_MELEE_AND_ANTI_CAVALRY_DEFENSE_RANGED_NAME}</Text>
 		</Replace>
-		<Replace Tag="LOC_CCB_KONGO_ATTACK_STRENGTH_NAME" Language="zh_Hans_CN">
+		<Replace Tag="LOC_CCB_KONGO_ATTACK_STRENGTH_DESC" Language="zh_Hans_CN">
 			<Text>进攻树林或雨林里的单位时 +3 [ICON_Strength] 战斗力。（宗教转换）</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_KONGO_ATTACK_STRENGTH_NAME" Language="zh_Hans_CN">
