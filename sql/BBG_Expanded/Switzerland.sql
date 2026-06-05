@@ -80,8 +80,8 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_SWITZERLAND_SPY_PRODUCTION', 'Amount', '50'), 
 ('CCB_SWITZERLAND_SPY_PRODUCTION', 'UnitType', 'UNIT_SPY');
 
--- uu cost from 200 to 150
-UPDATE Units SET Cost=150 WHERE UnitType='UNIT_CVS_SWITZERLAND_UU';
+-- uu cost from 200 to 125, combat from 45 to 48
+UPDATE Units SET Cost=125, Combat=48 WHERE UnitType='UNIT_CVS_SWITZERLAND_UU';
 
 -- uu promote
 UPDATE ModifierArguments SET Value='7' WHERE ModifierId='MODIFIER_CVS_SWITZERLAND_UU_VS_WOUNDED' AND Name='Amount';
@@ -99,3 +99,9 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 
 -- ub no gold
 UPDATE Building_YieldChanges SET YieldChange=8 WHERE BuildingType = 'BUILDING_CVS_SWITZERLAND_UI' AND YieldType = 'YIELD_GOLD';
+
+-- form bbg
+INSERT INTO BuildingModifiers (BuildingType, ModifierId) SELECT
+'BUILDING_CVS_SWITZERLAND_UI', ModifierId
+FROM BuildingModifiers
+WHERE BuildingType='BUILDING_BANK';

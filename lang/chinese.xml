@@ -6571,7 +6571,7 @@
 			<Text>州议会大厦</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_CVS_SWITZERLAND_UI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>瑞士特色建筑，替代银行。提供 +8 [ICON_GOLD] 金币，每有一个宗主城邦额外提供 +1 [ICON_GOLD] 金币。城市中有 [ICON_GOVERNOR] 总督就职时每回合提供 +1 [ICON_INFLUENCEPERTURN] 影响力点数。</Text>
+			<Text>瑞士特色建筑，替代银行。提供 +8 [ICON_GOLD] 金币，每有一个宗主城邦额外提供 +1 [ICON_GOLD] 金币。城市中有 [ICON_GOVERNOR] 总督就职时每回合提供 +1 [ICON_INFLUENCEPERTURN] 影响力点数。[NEWLINE]为该城市出发的 [ICON_TRADEROUTE] 贸易路线提供+2 [ICON_GOLD] 金币。[NEWLINE]为通往该城市的 [ICON_TRADEROUTE] 贸易路线提供+1 [ICON_GOLD] 金币。</Text>
 		</Replace>
 		<!-- = Swiss city names = -->
 		<Replace Tag="LOC_CITY_NAME_BERN" Language="zh_Hans_CN">
