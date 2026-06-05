@@ -16,8 +16,8 @@ DELETE FROM StartBiasResources
             Tier = 3 AND
             CivilizationType = 'CIVILIZATION_CVS_MALAYSIA';
 
--- uu 55+4, cost to 260 from 240
-UPDATE Units SET Combat=58, Cost=260 WHERE UnitType='UNIT_CVS_MALAYSIA_UU';
+-- uu 55+4, cost to 290 from 240
+UPDATE Units SET Combat=58, Cost=290 WHERE UnitType='UNIT_CVS_MALAYSIA_UU';
 
 -- healing nurfed to 20
 UPDATE ModifierArguments SET Value=20 WHERE ModifierId='MODIFIER_CVS_MALAYSIA_UU_KILL_HEAL' AND Name='Amount';
