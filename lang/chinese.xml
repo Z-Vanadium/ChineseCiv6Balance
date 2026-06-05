@@ -905,7 +905,7 @@
 		<!-- == KONGO == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_NKISI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>从每个 [ICON_GreatWork_Relic] 遗物获得额外+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [Icon_Faith] 信仰值。除了通常的 [ICON_CULTURE] 文化值，还会从每个 [ICON_GreatWork_Artifact] 文物以及 [ICON_GreatWork_Sculpture] 雕塑艺术巨作获得+2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [ICON_Faith] 信仰值。每次建造完成一个市政广场建筑后，获得一个 [ICON_GreatWork_Relic] 遗物。宫殿有5个巨作槽位。生产考古学家时+100% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]拥有姆班赞的城市获得下列加成：[NEWLINE][ICON_BULLET] +1 [ICON_AMENITIES] 宜居度。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3雨林、T5树林、T-3海洋。</Text>
+			<Text>每个 [ICON_GreatWork_Relic] 遗物、[ICON_GreatWork_Artifact] 文物以及 [ICON_GreatWork_Sculpture] 雕塑艺术巨作额外提供 +2 [ICON_Food] 食物、+2 [ICON_Production] 生产力、+4 [ICON_Gold] 金币、+2 [ICON_Faith] 信仰值。[NEWLINE]每次建造完成一个市政广场建筑后，获得一个 [ICON_GreatWork_Relic] 遗物。宫殿提供 5 个 [ICON_GREATWORK_LANDSCAPE] 巨作槽位。生产考古学家时+100% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]拥有姆班赞的城市获得下列加成：[NEWLINE][ICON_BULLET] +1 [ICON_AMENITIES] 宜居度。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3雨林、T5树林、T-3海洋。</Text>
 		</Replace>
 		<!-- = leader ability (Mvemba a Nzinga) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_RELIGIOUS_CONVERT_DESCRIPTION" Language="zh_Hans_CN">
@@ -5548,7 +5548,19 @@
 			<Text>潘帕斯、马兰博与探戈</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LEU_ARGENTINA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>获得 [ICON_ENVOY] 城邦“布宜诺斯艾利斯”的宗主国效果：加成资源如同奢侈品资源一样，每种类型资源提供 1 点 [ICON_AMENITIES] 宜居度。[NEWLINE]若相邻牧场，娱乐中心和工业区提供 +1 [ICON_GreatMusician]大音乐家点数。[NEWLINE]宫殿提供 2 个 [ICON_GreatWork_MUSIC] 音乐巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3牧场资源。</Text>
+			<Text>获得 [ICON_ENVOY] 城邦“布宜诺斯艾利斯”的宗主国效果：加成资源如同奢侈品资源一样，每种类型资源提供 1 点 [ICON_AMENITIES] 宜居度。[NEWLINE]“帝国初期”市政后，牧场提供 +1 [ICON_FOOD] 食物；并为圣地、学院、工业区和剧院广场提供标准相邻加成。宫殿提供 2 个 [ICON_GreatWork_MUSIC] 音乐巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3牧场资源。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ARGENTINE_DISTRICT_CAMPUS_YIELD_SCIENCE_FROM_PASTURE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 牧场单元格。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ARGENTINE_DISTRICT_THEATER_YIELD_CULTURE_FROM_PASTURE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 牧场单元格。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ARGENTINE_DISTRICT_INDUSTRIAL_ZONE_YIELD_PRODUCTION_FROM_PASTURE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 牧场单元格。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ARGENTINE_DISTRICT_HOLY_SITE_YIELD_FAITH_FROM_PASTURE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 牧场单元格。</Text>
 		</Replace>
 		<!-- = Leader = -->
 		<Replace Tag="LOC_LEADER_LEU_EVITA_NAME" Language="zh_Hans_CN">
@@ -5588,7 +5600,16 @@
 			<Text>爱国军</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_LEU_GAUCHO_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>阿根廷特色现代近战单位，替代步兵。解锁于“动员”市政，+1 [ICON_MOVEMENT] 移动力并能忽视控制区。</Text>
+			<Text>阿根廷特色现代近战单位，替代步兵，解锁于“动员”市政。基础 [ICON_STRENGTH] 战斗力更高，但是无法从大将军处获得 [ICON_STRENGTH] 战斗力加成。+1 [ICON_MOVEMENT] 移动力并能忽视控制区。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_SANMARTIN_MOUNTED_GENERAL_COMBAT_NAME" Language="zh_Hans_CN">
+			<Text>{LOC_CCB_SANMARTIN_MOUNTED_GENERAL_COMBAT_DESC}</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_SANMARTIN_MOUNTED_GENERAL_COMBAT_MOD_DESC" Language="zh_Hans_CN">
+			<Text>{LOC_CCB_SANMARTIN_MOUNTED_GENERAL_COMBAT_DESC}</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_SANMARTIN_MOUNTED_GENERAL_COMBAT_DESC" Language="zh_Hans_CN">
+			<Text>-5 [ICON_STRENGTH] 战斗力来自相邻大将军。（{LOC_UNIT_LEU_GAUCHO_NAME}特质）</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_LEU_GAUCHO_NAME" Language="zh_Hans_CN">
 			<Text>庄园高乔人</Text>
@@ -5604,7 +5625,7 @@
 			<Text>阿尔拉巴尔</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_LEU_ARRABAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>阿根廷特色社区，解锁于“重商主义”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得少量 [ICON_PRODUCTION] 生产力相邻加成。[NEWLINE]相邻区域时，提供 +1 [ICON_GreatMusician] 大音乐家点数。</Text>
+			<Text>阿根廷特色社区，解锁于“中世纪集市”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得少量 [ICON_PRODUCTION] 生产力相邻加成。[NEWLINE]相邻区域时，提供 +1 [ICON_GreatMusician] 大音乐家点数。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ARRABAL_PRODUCTION" Language="zh_Hans_CN">
 			<Text>来自相邻区域的 [ICON_PRODUCTION] 生产力和。</Text>
@@ -5898,7 +5919,7 @@
 			<Text>兰查兰快船</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_CVS_MALAYSIA_UU_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>马来西亚文艺复兴时期特色海军近战单位，替代轻快帆船，造价更高。+4 [ICON_STRENGTH] 战斗力，消灭敌方单位时恢复 20 点生命值。</Text>
+			<Text>马来西亚文艺复兴时期特色海军近战单位，替代轻快帆船，造价更高。+3 [ICON_STRENGTH] 战斗力，消灭敌方单位时恢复 20 点生命值。</Text>
 		</Replace>
 		<!-- = Named Places = -->
 		<Replace Tag="LOC_NAMED_RIVER_KLANG" Language="zh_Hans_CN">
@@ -6205,7 +6226,7 @@
 			<Text>卡勒瓦拉</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MER_KALEVALA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>冻土和冻土丘陵上的树林提供 +1 [ICON_FOOD] 食物，拥有资源则额外提供 +1 [ICON_FOOD] 食物。[NEWLINE][NEWLINE]伐木场提供 +2 [ICON_GOLD] 金币。相邻湖泊的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土、T4树林。</Text>
+			<Text>冻土和冻土丘陵单元格获得额外产出：树林提供 +1 [ICON_FOOD] 食物；资源提供 +1 [ICON_FOOD] 食物（可叠加）。[NEWLINE][NEWLINE]伐木场提供 +2 [ICON_GOLD] 金币。相邻湖泊的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土、T4树林。</Text>
 		</Replace>
 		<!-- = Leader = -->
 		<Replace Tag="LOC_LEADER_MER_MANNERHEIM_NAME" Language="zh_Hans_CN">
@@ -6245,7 +6266,7 @@
 			<Text>桑拿房</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_MER_SAUNA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>芬兰特色改良，解锁于“游戏与娱乐”市政。[NEWLINE][NEWLINE]提供 +2 [ICON_FOOD] 食物、+1 [ICON_CULTURE] 文化、+1 [ICON_AMENITIES] 宜居度、+1 [ICON_HOUSING] 住房。[NEWLINE]若建于冻土或雪地单元格，额外提供 +1 [ICON_AMENITIES] 宜居度；[NEWLINE]每相邻 2 个森林单元格提供 +1 [ICON_CULTURE] 文化值（研究完“自然历史”市政后每相邻 1 个森林则提供 +1 [ICON_CULTURE] 文化值）；[NEWLINE]相邻河流、湖泊、水渠提供 +2 [ICON_CULTURE] 文化值（不叠加，研究完“文化遗产”市政后则提供 +4 [ICON_CULTURE] 文化值）。[NEWLINE][NEWLINE]研究"飞行"科技后，提供等同于单元格魅力的 [ICON_Tourism] 旅游业绩。每个城市仅限建造一座。仅可建造在冻土、雪地、森林和沼泽单元格。无法与另一个桑拿房相邻。</Text>
+			<Text>芬兰特色改良，解锁于“游戏与娱乐”市政。[NEWLINE][NEWLINE]提供 +2 [ICON_FOOD] 食物、+1 [ICON_AMENITIES] 宜居度、+1 [ICON_HOUSING] 住房，为相邻单元格提供 +1 魅力。[NEWLINE]若建于冻土或雪地单元格，额外提供 +1 [ICON_AMENITIES] 宜居度；[NEWLINE]每相邻 3 个森林单元格提供 +1 [ICON_CULTURE] 文化值（研究完“自然历史”市政后每相邻 2 个森林则提供 +1 [ICON_CULTURE] 文化值）；[NEWLINE]相邻河流、湖泊、水渠提供 +2 [ICON_CULTURE] 文化值（不叠加，研究完“文化遗产”市政后则提供 +4 [ICON_CULTURE] 文化值）。[NEWLINE][NEWLINE]研究"飞行"科技后，提供等同于单元格魅力的 [ICON_Tourism] 旅游业绩。每个城市仅限建造一座。仅可建造在冻土、雪地、森林和沼泽单元格。无法与另一个桑拿房相邻。</Text>
 		</Replace>
 		<!-- = Cities = -->
 		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_1" Language="zh_Hans_CN">
@@ -7640,7 +7661,7 @@
 			<Text>庄园（或称大牧场）在阿根廷的文化、经济和历史中扮演着重要角色。早期，这些机构使阿根廷成为世界上最大的肉类和谷物生产国之一。这些巨大的牧场遍布整个乡村，至今仍然是世界上最好的牛排的来源地。在与马普切人和佩尔切人的冲突中，庄园也作为边境的重要防御据点。</Text>
 		</Replace>
 
-		<Replace Tag="LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_BUENOS_AIRES_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+		<!-- <Replace Tag="LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_BUENOS_AIRES_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
 			<Text>蒙得维的亚是乌拉圭最大的城市、首都和主要港口。该定居点于1724年由布鲁诺·毛里西奥·德·萨瓦拉建立，作为西班牙-葡萄牙在拉普拉塔地区争端中的战略举措，以及对葡萄牙科洛尼亚德尔萨克拉门托殖民地的制衡。</Text>
 		</Replace>
 		<Replace Tag="LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_BUENOS_AIRES_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
@@ -7648,7 +7669,7 @@
 		</Replace>
 		<Replace Tag="LOC_PEDIA_CITYSTATES_PAGE_CIVILIZATION_BUENOS_AIRES_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
 			<Text>蒙得维的亚拥有非常丰富的建筑遗产和众多作家、艺术家和音乐家。乌拉圭探戈是一种独特的舞蹈形式，起源于19世纪末蒙得维的亚的社区。探戈、坎东贝和穆尔加是该城市音乐的三种主要风格。该城市也是乌拉圭电影业的中心，包括商业片、纪录片和实验电影。有两家电影院公司运营七家影院。</Text>
-		</Replace>
+		</Replace> -->
 
 		<Replace Tag="LOC_PEDIA_CIVILIZATIONS_PAGE_CIVILIZATION_CVS_MALAYSIA_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
 			<Text>马来半岛一直延伸到东南亚群岛的西部区域，长期以来构成了东南亚大陆与岛屿之间的关键纽带。由于马来西亚本身分为这两个地区，该国的历史只有在广阔的地理背景下才能理解。马来半岛和东马来西亚的两个州——砂拉越和沙巴——共享许多历史模式，但每个地区也有独特的发展方式。</Text>
@@ -8104,10 +8125,10 @@
 			<Text>楚格</Text>
 		</Replace>
 		<Replace Tag="LOC_CITY_NAME_BUENOS_AIRES" Language="zh_Hans_CN">
-			<Text>蒙得维的亚</Text>
+			<Text>布宜诺斯艾利斯</Text>
 		</Replace>
 		<Replace Tag="LOC_CITY_NAME_BUENOS_AIRES_1" Language="zh_Hans_CN">
-			<Text>蒙得维的亚</Text>
+			<Text>布宜诺斯艾利斯</Text>
 		</Replace>
 		<!-- === BBG new luxary resources === -->
 		<Replace Tag="LOC_RESOURCE_P0K_PENGUINS_NAME" Language="zh_Hans_CN"> <!-- BBG expanded -->

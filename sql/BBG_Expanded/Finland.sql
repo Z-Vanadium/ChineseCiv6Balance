@@ -99,10 +99,10 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 ('REQSET_CCB_FINLAND_TUNDRA_HILLS_FOREST', 'REQ_CCB_FINLAND_TUNDRA_HILLS'),
 ('REQSET_CCB_FINLAND_TUNDRA_HILLS_FOREST', 'REQ_CCB_FINLAND_FOREST'),
 ('REQSET_CCB_FINLAND_TUNDRA_FOREST_RESOURCE', 'REQ_CCB_FINLAND_TUNDRA'),
-('REQSET_CCB_FINLAND_TUNDRA_FOREST_RESOURCE', 'REQ_CCB_FINLAND_FOREST'),
+-- ('REQSET_CCB_FINLAND_TUNDRA_FOREST_RESOURCE', 'REQ_CCB_FINLAND_FOREST'),
 ('REQSET_CCB_FINLAND_TUNDRA_FOREST_RESOURCE', 'REQ_CCB_FINLAND_RESOURCE'),
 ('REQSET_CCB_FINLAND_TUNDRA_HILLS_FOREST_RESOURCE', 'REQ_CCB_FINLAND_TUNDRA_HILLS'),
-('REQSET_CCB_FINLAND_TUNDRA_HILLS_FOREST_RESOURCE', 'REQ_CCB_FINLAND_FOREST'),
+-- ('REQSET_CCB_FINLAND_TUNDRA_HILLS_FOREST_RESOURCE', 'REQ_CCB_FINLAND_FOREST'),
 ('REQSET_CCB_FINLAND_TUNDRA_HILLS_FOREST_RESOURCE', 'REQ_CCB_FINLAND_RESOURCE');
 INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
 ('REQ_CCB_FINLAND_TUNDRA', 'TerrainType', 'TERRAIN_TUNDRA'),
@@ -187,7 +187,7 @@ UPDATE Improvements SET OnePerCity=1, Housing=1 WHERE ImprovementType='IMPROVEME
 DELETE FROM Improvement_YieldChanges
       WHERE YieldChange = 1 AND
             ImprovementType = 'IMPROVEMENT_MER_SAUNA' AND
-            YieldType = 'YIELD_PRODUCTION';
+            YieldType IN ('YIELD_PRODUCTION', 'YIELD_CULTURE');
 INSERT INTO Improvement_YieldChanges (ImprovementType, YieldType, YieldChange) VALUES
 ('IMPROVEMENT_MER_SAUNA', 'YIELD_FOOD', 2);
 
@@ -212,6 +212,8 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 DELETE FROM Improvement_Adjacencies
       WHERE YieldChangeId = 'Sauna_Camp' AND
             ImprovementType = 'IMPROVEMENT_MER_SAUNA';
+
+UPDATE Adjacency_YieldChanges SET TilesRequired=3 WHERE ID='Sauna_Woods';
 
 UPDATE Adjacency_YieldChanges SET ObsoleteCivic='CIVIC_NATURAL_HISTORY' WHERE ID='Sauna_Woods';
 INSERT INTO Adjacency_YieldChanges (
@@ -254,7 +256,7 @@ INSERT INTO Adjacency_YieldChanges (
                                        NULL,
                                        0,
                                        0,
-                                       1,
+                                       2,
                                        1,
                                        'YIELD_CULTURE',
                                        'Placeholder',
