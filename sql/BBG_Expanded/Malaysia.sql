@@ -22,7 +22,7 @@ UPDATE Units SET Combat=58, Cost=290 WHERE UnitType='UNIT_CVS_MALAYSIA_UU';
 -- healing nurfed to 20
 UPDATE ModifierArguments SET Value=20 WHERE ModifierId='MODIFIER_CVS_MALAYSIA_UU_KILL_HEAL' AND Name='Amount';
 
-DELETE FROM UnitAbilityModifiers WHERE ModifierId='MODTYPE_CVS_MALAYSIA_UU_KILL_GPP' AND UnitAbilityType='ABILITY_CVS_MALAYSIA_UU';
+DELETE FROM UnitAbilityModifiers WHERE ModifierId='MODIFIER_CVS_MALAYSIA_UU_KILL_GPP' AND UnitAbilityType='ABILITY_CVS_MALAYSIA_UU';
 
 -- ud
 -- from ccb
