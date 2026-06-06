@@ -5550,17 +5550,17 @@
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LEU_ARGENTINA_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>获得 [ICON_ENVOY] 城邦“布宜诺斯艾利斯”的宗主国效果：加成资源如同奢侈品资源一样，每种类型资源提供 1 点 [ICON_AMENITIES] 宜居度。[NEWLINE]“帝国初期”市政后，牧场提供 +1 [ICON_FOOD] 食物；并为圣地、学院、工业区和剧院广场提供标准相邻加成。宫殿提供 2 个 [ICON_GreatWork_MUSIC] 音乐巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3牧场资源。</Text>
 		</Replace>
-		<Replace Tag="LOC_CCB_ARGENTINE_DISTRICT_CAMPUS_YIELD_SCIENCE_FROM_PASTURE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 牧场单元格。</Text>
+		<Replace Tag="LOC_CCB_Campus_Argentina_Pasture_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+{1_inum} [ICON_SCIENCE] 科技值来自相邻牧场单元格。</Text>
 		</Replace>
-		<Replace Tag="LOC_CCB_ARGENTINE_DISTRICT_THEATER_YIELD_CULTURE_FROM_PASTURE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 牧场单元格。</Text>
+		<Replace Tag="LOC_CCB_Theater_Argentina_Pasture_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+{1_inum} [ICON_CULTURE] 文化值来自相邻牧场单元格。</Text>
 		</Replace>
-		<Replace Tag="LOC_CCB_ARGENTINE_DISTRICT_INDUSTRIAL_ZONE_YIELD_PRODUCTION_FROM_PASTURE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 牧场单元格。</Text>
+		<Replace Tag="LOC_CCB_IndustrialZone_Argentina_Pasture_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+{1_inum} [ICON_PRODUCTION] 生产力来自相邻牧场单元格。</Text>
 		</Replace>
-		<Replace Tag="LOC_CCB_ARGENTINE_DISTRICT_HOLY_SITE_YIELD_FAITH_FROM_PASTURE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>+{1_iBonus} {2_YieldIcon} 产出来自相邻 {3_AdjacentSubjectNum} 牧场单元格。</Text>
+		<Replace Tag="LOC_CCB_HolySite_Argentina_Pasture_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+{1_inum} [ICON_FAITH] 信仰值来自相邻牧场单元格。</Text>
 		</Replace>
 		<!-- = Leader = -->
 		<Replace Tag="LOC_LEADER_LEU_EVITA_NAME" Language="zh_Hans_CN">
@@ -6266,7 +6266,7 @@
 			<Text>桑拿房</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_MER_SAUNA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>芬兰特色改良，解锁于“游戏与娱乐”市政。[NEWLINE][NEWLINE]提供 +2 [ICON_FOOD] 食物、+1 [ICON_AMENITIES] 宜居度、+1 [ICON_HOUSING] 住房，为相邻单元格提供 +1 魅力。[NEWLINE]若建于冻土或雪地单元格，额外提供 +1 [ICON_AMENITIES] 宜居度；[NEWLINE]每相邻 3 个森林单元格提供 +1 [ICON_CULTURE] 文化值（研究完“自然历史”市政后每相邻 2 个森林则提供 +1 [ICON_CULTURE] 文化值）；[NEWLINE]相邻河流、湖泊、水渠提供 +2 [ICON_CULTURE] 文化值（不叠加，研究完“文化遗产”市政后则提供 +4 [ICON_CULTURE] 文化值）。[NEWLINE][NEWLINE]研究"飞行"科技后，提供等同于单元格魅力的 [ICON_Tourism] 旅游业绩。每个城市仅限建造一座。仅可建造在冻土、雪地、森林和沼泽单元格。无法与另一个桑拿房相邻。</Text>
+			<Text>芬兰特色改良，解锁于“游戏与娱乐”市政。[NEWLINE][NEWLINE]提供 +2 [ICON_FOOD] 食物、+1 [ICON_AMENITIES] 宜居度、+1 [ICON_HOUSING] 住房，为相邻单元格提供 +1 魅力。[NEWLINE]若建于冻土或雪地单元格，额外提供 +1 [ICON_AMENITIES] 宜居度；[NEWLINE]每相邻 2 个森林单元格提供 +1 [ICON_CULTURE] 文化值（研究完“自然历史”市政后每相邻 1 个森林则提供 +1 [ICON_CULTURE] 文化值）；[NEWLINE]相邻河流、湖泊、水渠提供 +2 [ICON_CULTURE] 文化值（不叠加，研究完“文化遗产”市政后则提供 +4 [ICON_CULTURE] 文化值）。[NEWLINE][NEWLINE]研究"飞行"科技后，提供等同于单元格魅力的 [ICON_Tourism] 旅游业绩。每个城市仅限建造一座。仅可建造在冻土、雪地、森林和沼泽单元格。无法与另一个桑拿房相邻。</Text>
 		</Replace>
 		<!-- = Cities = -->
 		<Replace Tag="LOC_CITY_NAME_MER_FINLAND_1" Language="zh_Hans_CN">

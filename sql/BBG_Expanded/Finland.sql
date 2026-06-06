@@ -213,7 +213,7 @@ DELETE FROM Improvement_Adjacencies
       WHERE YieldChangeId = 'Sauna_Camp' AND
             ImprovementType = 'IMPROVEMENT_MER_SAUNA';
 
-UPDATE Adjacency_YieldChanges SET TilesRequired=3 WHERE ID='Sauna_Woods';
+UPDATE Adjacency_YieldChanges SET TilesRequired=2 WHERE ID='Sauna_Woods';
 
 UPDATE Adjacency_YieldChanges SET ObsoleteCivic='CIVIC_NATURAL_HISTORY' WHERE ID='Sauna_Woods';
 INSERT INTO Adjacency_YieldChanges (
@@ -256,7 +256,7 @@ INSERT INTO Adjacency_YieldChanges (
                                        NULL,
                                        0,
                                        0,
-                                       2,
+                                       1,
                                        1,
                                        'YIELD_CULTURE',
                                        'Placeholder',
