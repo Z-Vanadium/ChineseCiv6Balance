@@ -5625,7 +5625,7 @@
 			<Text>阿尔拉巴尔</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_LEU_ARRABAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>阿根廷特色社区，解锁于“中世纪集市”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得少量 [ICON_PRODUCTION] 生产力相邻加成。[NEWLINE]相邻区域时，提供 +1 [ICON_GreatMusician] 大音乐家点数。</Text>
+			<Text>阿根廷特色社区，解锁于“中世纪集市”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得少量 [ICON_PRODUCTION] 生产力相邻加成。[NEWLINE]相邻区域时，提供 +1 [ICON_GreatMusician] 大音乐家点数。[NEWLINE]为目的地是该城市的 [ICON_TradeRoute] 贸易路线提供 +1 [ICON_PRODUCTION] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ARRABAL_PRODUCTION" Language="zh_Hans_CN">
 			<Text>来自相邻区域的 [ICON_PRODUCTION] 生产力和。</Text>
