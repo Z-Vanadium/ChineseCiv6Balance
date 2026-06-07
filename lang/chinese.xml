@@ -1173,13 +1173,13 @@
 			<Text>生产所有海军近战单位+25% [ICON_PRODUCTION] 生产力，且海军近战单位可以掠夺海岸单元格。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_THUNDERBOLT_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>在研究造船术后，单位获得进入海洋单元格的能力。生产所有海军近战单位+25% [ICON_PRODUCTION] 生产力，且海军近战单位可以掠夺海岸单元格。掠夺矿山除 [ICON_GOLD] 金币还将获得 [ICON_SCIENCE] 科技值。掠夺采石场，牧场，种植园除 [ICON_FAITH] 信仰值还将获得 [ICON_CULTURE] 文化值。挪威海军近战单位+3 [ICON_Strength] 战斗力。挪威的龙骨船不受区域控制影响。</Text>
+			<Text>海军近战单位 +3 [ICON_Strength] 战斗力。在研究造船术后，单位获得进入海洋单元格的能力。生产所有海军近战单位 +25% [ICON_PRODUCTION] 生产力，且海军近战单位可以掠夺海岸单元格。[NEWLINE]掠夺矿山除 [ICON_GOLD] 金币还将获得 [ICON_SCIENCE] 科技值。掠夺采石场，牧场，种植园除 [ICON_FAITH] 信仰值还将获得 [ICON_CULTURE] 文化值。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_NORWAY_MELEE_BOAT_COMBAT_ABILITY_NAME" Language="zh_Hans_CN">
-			<Text>挪威海军近战单位+3 [ICON_Strength] 战斗力。</Text>
+			<Text>海军近战单位 +3 [ICON_Strength] 战斗力。（北方惊雷）</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_NORWAY_MELEE_BOAT_COMBAT_ABILITY_DESC" Language="zh_Hans_CN">
-			<Text>挪威海军近战单位+3 [ICON_Strength] 战斗力。</Text>
+			<Text>{LOC_BBG_NORWAY_MELEE_BOAT_COMBAT_ABILITY_NAME}</Text>
 		</Replace>
 		
 		<!-- = leader ability (Varengian) = -->
@@ -4855,7 +4855,7 @@
 			<Text>众神诞生之地</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LIME_TEO_MEN_BECOME_GODS_DESC" Language="zh_Hans_CN">
-			<Text>[ICON_TradeRoute] 贸易路线会根据所宗主城邦类型获得额外产出：[NEWLINE]宗主宗教城邦则获得 +1 [ICON_FOOD] 食物。[NEWLINE]宗主军事或工业城邦则获得 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]宗主贸易城邦则获得 +3 [ICON_GOLD] 金币。[NEWLINE]宗主科技城邦则获得 +1 [ICON_SCIENCE] 科技值。[NEWLINE]宗主文化城邦则获得 +1 [ICON_CULTURE] 文化值。[NEWLINE]若宗主两个同样类型城邦，则额外产出增至三倍。</Text>
+			<Text>[ICON_TradeRoute] 贸易路线会根据所宗主城邦类型获得额外产出：[NEWLINE]宗主宗教城邦则获得 +1 [ICON_FOOD] 食物。[NEWLINE]宗主军事或工业城邦则获得 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]宗主贸易城邦则获得 +3 [ICON_GOLD] 金币。[NEWLINE]宗主科技城邦则获得 +1 [ICON_SCIENCE] 科技值。[NEWLINE]宗主文化城邦则获得 +1 [ICON_CULTURE] 文化值。[NEWLINE]若宗主两个同样类型城邦，则额外产出增至三倍。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：无。</Text>
 		</Replace>
 		<!-- = Leader ability -->
 		<Replace Tag="LOC_TRAIT_LEADER_LIME_TEO_OWL_FIRE_IS_BORN_NAME" Language="zh_Hans_CN">
@@ -5625,7 +5625,7 @@
 			<Text>阿尔拉巴尔</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_LEU_ARRABAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>阿根廷特色社区，解锁于“中世纪集市”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得少量 [ICON_PRODUCTION] 生产力相邻加成。[NEWLINE]相邻区域时，提供 +1 [ICON_GreatMusician] 大音乐家点数。[NEWLINE]为目的地是该城市的 [ICON_TradeRoute] 贸易路线提供 +1 [ICON_PRODUCTION] 生产力。</Text>
+			<Text>阿根廷特色社区，解锁于“中世纪集市”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得少量 [ICON_PRODUCTION] 生产力相邻加成。[NEWLINE]相邻区域时，提供 +1 [ICON_GreatMusician] 大音乐家点数。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ARRABAL_PRODUCTION" Language="zh_Hans_CN">
 			<Text>来自相邻区域的 [ICON_PRODUCTION] 生产力和。</Text>
@@ -6226,7 +6226,7 @@
 			<Text>卡勒瓦拉</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MER_KALEVALA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>冻土和冻土丘陵单元格获得额外产出：树林提供 +1 [ICON_FOOD] 食物；资源提供 +1 [ICON_FOOD] 食物（可叠加）。[NEWLINE][NEWLINE]伐木场提供 +2 [ICON_GOLD] 金币。相邻湖泊的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土、T4树林。</Text>
+			<Text>冻土和冻土丘陵的非市中心单元格上的树林或资源提供 +1 [ICON_FOOD] 食物（不可叠加）。伐木场提供 +2 [ICON_GOLD] 金币。相邻湖泊的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土、T4树林。</Text>
 		</Replace>
 		<!-- = Leader = -->
 		<Replace Tag="LOC_LEADER_MER_MANNERHEIM_NAME" Language="zh_Hans_CN">

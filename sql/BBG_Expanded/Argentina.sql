@@ -147,7 +147,8 @@ INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
 -- ud unlock early
 UPDATE Districts SET PrereqCivic='CIVIC_MEDIEVAL_FAIRES' WHERE DistrictType='DISTRICT_LEU_ARRABAL';
 
-UPDATE District_TradeRouteYields SET YieldChangeAsOrigin=0 WHERE DistrictType='DISTRICT_LEU_ARRABAL' AND YieldType='YIELD_PRODUCTION';
+-- production remove
+UPDATE District_TradeRouteYields SET YieldChangeAsOrigin=0, YieldChangeAsDomesticDestination=0, YieldChangeAsInternationalDestination=0 WHERE DistrictType='DISTRICT_LEU_ARRABAL' AND YieldType='YIELD_PRODUCTION';
 
 -- ud musician gpp remove
 DELETE FROM District_GreatPersonPoints WHERE DistrictType='DISTRICT_LEU_ARRABAL' AND GreatPersonClassType='GREAT_PERSON_CLASS_MUSICIAN';
