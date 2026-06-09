@@ -110,7 +110,7 @@ DELETE FROM District_GreatPersonPoints WHERE DistrictType='DISTRICT_LIME_TEO_TOL
 DELETE FROM District_Adjacencies WHERE YieldChangeId LIKE 'TeotihuacanTollan%';
 
 -- 2026/10/08 ud cost to 16 (= 30 * 0.55)
-UPDATE Districts SET Cost=16 WHERE DistrictType='DISTRICT_LIME_TEO_TOLLAN';
+UPDATE Districts SET Cost=16, PlunderAmount=20 WHERE DistrictType='DISTRICT_LIME_TEO_TOLLAN';
 
 INSERT INTO RequirementSets(RequirementSetId, RequirementSetType) VALUES
     ('BBG_PLAYER_HAS_ENCLAVE_REQSET', 'REQUIREMENTSET_TEST_ALL');
