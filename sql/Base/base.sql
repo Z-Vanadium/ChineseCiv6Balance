@@ -561,3 +561,11 @@ INSERT INTO Requirements (RequirementId, RequirementType) VALUES
 ('REQ_CCB_UNIT_IS_UNIT_MILITARY_ENGINEER', 'REQUIREMENT_UNIT_TYPE_MATCHES');
 INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
 ('REQ_CCB_UNIT_IS_UNIT_MILITARY_ENGINEER', 'UnitType', 'UNIT_MILITARY_ENGINEER');
+
+-- 2026/06/30 “智能材料”的前置科技固定为“纳米技术”
+UPDATE Technologies_XP2 SET RandomPrereqs = 0 WHERE TechnologyType = 'TECH_SMART_MATERIALS';
+-- UPDATE Technologies_XP2 SET RandomPrereqs = 0 WHERE TechnologyType = 'TECH_OFFWORLD_MISSION';
+
+INSERT OR REPLACE INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
+    ('TECH_SMART_MATERIALS',    'TECH_NANOTECHNOLOGY');
+    -- ('TECH_OFFWORLD_MISSION',   'TECH_SMART_MATERIALS');

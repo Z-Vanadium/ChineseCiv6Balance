@@ -2755,6 +2755,27 @@ function UpdatePlayerReligiousProperty(iPlayerID, iBeliefID, bEnable)
 	print("UpdatePlayerReligiousProperty: Founder Property Attached to iPlayerID for Belief", iPlayerID, tostring(GameInfo.Beliefs[iBeliefID].BeliefType), "plot with iX, iY", iX, iY)
 end
 -- ===========================================================================
+-- Yongle
+-- ===========================================================================
+function OnYongleCityPopulationChanged(cityOwner, cityID, change_amount)
+	local pPlayer = Players[cityOwner];
+	if pPlayer == nil then
+		return
+	end
+	local pCity = CityManager.GetCity(cityOwner, cityID)
+	if pCity == nil then
+		return
+	end
+	local flag = GameInfo.Buildings['BUILDING_CCB_LIJIA_DUMMY'];
+	print("OnYongleCityPopulationChanged: flag", flag)
+	if pCity:GetBuildings():HasBuilding(flag.Index) == false and pCity:GetPopulation() >= 2 then
+		pCity:GetBuildQueue():CreateBuilding(flag.Index);
+	end
+	if pCity:GetBuildings():HasBuilding(flag.Index) == true and pCity:GetPopulation() < 2 then
+		pCity:GetBuildings():RemoveBuilding(flag.Index);
+	end
+end
+-- ===========================================================================
 -- Mvemba
 -- ===========================================================================
 --Legend:
@@ -4472,6 +4493,11 @@ function Initialize()
 			--5.6. Disable: GameEvents.GameplayMvembaCityRemovedFromMap.Add(OnGameplayMvembaCityRemovedFromMap)
 			--5.6. Disable: GameEvents.GameplayMvembaGiftCity.Add(OnGameplayMvembaGiftCity)
 			--5.6. Disable: print("Mvemba religious hooks added")
+
+		-- 永乐 2 人口虚拟建筑
+		elseif PlayerConfigurations[iPlayerID]:GetLeaderTypeName() == "LEADER_YONGLE" then
+			GameEvents.OnCityPopulationChanged.Add(OnYongleCityPopulationChanged);
+			print("Yongle population hook added")
 		end
 	end
 	if BBCC_MODE ~= -1 then
