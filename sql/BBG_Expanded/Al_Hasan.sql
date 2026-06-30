@@ -30,6 +30,20 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_CIVILIZATION_SUK_CORAL_CONSTRUCTION', 'BBG_SWAHILI_DISTRICT_COASTAL_CITY');
 DELETE FROM UnitAbilityModifiers WHERE ModifierId='SUK_JAHAZI_IGNORE_TERRAIN';
 
+-- 2026/06/30 修建位于海洋、湖泊里的奇观时，生产力+20%
+INSERT INTO Modifiers (ModifierId, ModifierType) SELECT
+    'CCB_SWAHILI_WONDER_PRODUCTION_' || BuildingType, 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION'
+FROM Building_ValidTerrains WHERE TerrainType='TERRAIN_COAST';
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'CCB_SWAHILI_WONDER_PRODUCTION_' || BuildingType, 'Amount', 20
+FROM Building_ValidTerrains WHERE TerrainType='TERRAIN_COAST';
+INSERT INTO ModifierArguments (ModifierId, Name, Value) SELECT
+    'CCB_SWAHILI_WONDER_PRODUCTION_' || BuildingType, 'BuildingType', BuildingType
+FROM Building_ValidTerrains WHERE TerrainType='TERRAIN_COAST';
+INSERT INTO TraitModifiers (TraitType, ModifierId) SELECT
+    'TRAIT_CIVILIZATION_SUK_CORAL_CONSTRUCTION', 'CCB_SWAHILI_WONDER_PRODUCTION_' || BuildingType
+FROM Building_ValidTerrains WHERE TerrainType='TERRAIN_COAST';
+
 -- ==========================================================
 -- =                        JAHAZI                          =
 -- ==========================================================
