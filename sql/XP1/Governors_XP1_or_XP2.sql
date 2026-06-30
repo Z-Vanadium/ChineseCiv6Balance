@@ -140,7 +140,7 @@ INSERT INTO Types (Type, Kind) VALUES
 INSERT INTO DynamicModifiers (ModifierType, CollectionType, EffectType) VALUES
     ('BBG_MODIFIER_SINGLE_CITY_ADJUST_YIELD_MODIFIER_FROM_FAITH', 'COLLECTION_OWNER', 'EFFECT_ADJUST_CITY_YIELD_MODIFIER_FROM_FAITH');
 
--- 为六环内城市：寺庙+1科文、祭祀建筑+1科文
+-- 为六环内城市：寺庙+1科文、祭祀建筑+1科+2文
 INSERT INTO GovernorPromotionModifiers (GovernorPromotionType, ModifierId) VALUES
     ('GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT', 'CCB_MOKSHA_BUILDING_TEMPLE_YIELD_SCIENCE'),
     ('GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT', 'CCB_MOKSHA_BUILDING_TEMPLE_YIELD_CULTURE'),
@@ -173,7 +173,7 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('CCB_MOKSHA_BUILDING_HS_T3_YIELD_SCIENCE_MODIFIER', 'YieldType', 'YIELD_SCIENCE'),
     ('CCB_MOKSHA_BUILDING_HS_T3_YIELD_SCIENCE_MODIFIER', 'Amount', 1),
     ('CCB_MOKSHA_BUILDING_HS_T3_YIELD_CULTURE_MODIFIER', 'YieldType', 'YIELD_CULTURE'),
-    ('CCB_MOKSHA_BUILDING_HS_T3_YIELD_CULTURE_MODIFIER', 'Amount', 1);
+    ('CCB_MOKSHA_BUILDING_HS_T3_YIELD_CULTURE_MODIFIER', 'Amount', 2);
 
 INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
     ('REQSET_CCB_CITY_HAS_BUILDING_TEMPLE', 'REQUIREMENTSET_TEST_ANY'),
@@ -617,7 +617,7 @@ UPDATE Modifiers SET SubjectRequirementSetId='BBG_PLOT_HAS_ANY_FEATURE_NO_IMPROV
 
 -- MII Tax Collector : +2 gold per turn for each citizen in the city. +1 traderoute capacity. 
 -- +1 trade route
--- 2026/06/30 移除额外商路；人口金移动到 LI；新增金币购买区域，并降低 -20%；新增商路+1科技值+1文化值
+-- 2026/06/30 移除额外商路；人口金移动到 LI；新增金币购买区域，并降低 -10%；新增商路+1科技值+1文化值
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('BBG_REYNA_TRADEROUTE', 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
@@ -634,7 +634,7 @@ INSERT INTO GovernorPromotionModifiers (GovernorPromotionType, ModifierId) VALUE
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
 ('CCB_REYNA_DISTRICT_GOLD_DISCOUNT', 'MODIFIER_SINGLE_CITY_ADJUST_ALL_DISTRICTS_PURCHASE_COST', 0, 0, 0, NULL, NULL);
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_REYNA_DISTRICT_GOLD_DISCOUNT', 'Amount', '20');
+('CCB_REYNA_DISTRICT_GOLD_DISCOUNT', 'Amount', '10');
 
 INSERT INTO Modifiers(ModifierId, ModifierType) VALUES
     ('CCB_REYNA_TRADE_ROUTE_SCIENCE', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS'),
