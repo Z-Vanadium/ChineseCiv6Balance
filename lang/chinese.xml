@@ -849,7 +849,7 @@
 			<Text>{LOC_TRAIT_LEADER_DIVINE_WIND_EXPANSION2_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_DIVINE_WIND_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>建造军营、圣地和剧院广场时+100% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]陆地单位处于相邻海岸的陆地单元格时 +5 [ICON_Strength] 战斗力；浅水单元格上的海军单位+5 [ICON_Strength] 战斗力。单位不受飓风伤害。如文明与日本交战时单位处于日本领土内，遭遇飓风时受到的伤害将+100%。</Text>
+			<Text>建造军营、圣地和剧院广场时+100% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]陆地单位处于相邻海岸的陆地单元格时 +3 [ICON_Strength] 战斗力；浅水单元格上的海军单位 +5 [ICON_Strength] 战斗力。单位不受飓风伤害。如文明与日本交战时单位处于日本领土内，遭遇飓风时受到的伤害将+100%。</Text>
 		</Replace>
 		<Replace Tag="LOC_PROMOTION_COMBAT_LAND_ON_COAST_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>位于相邻海岸的陆地单元格时 +3 [ICON_Strength] 战斗力（神风）</Text>
@@ -865,7 +865,7 @@
 		</Replace>
 		<!-- = leader ability (Tokugawa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_TOKUGAWA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>国际 [ICON_TradeRoute] 贸易路线的产出和 [ICON_Tourism] 旅游业绩 -25%；[NEWLINE]国内 [ICON_TradeRoute] 贸易路线的目的地城市中每有一个专业化区域，便：[NEWLINE][ICON_BULLET]提供 +0.5 [ICON_Culture] 文化值（“人文主义”市政后翻倍）；[NEWLINE][ICON_BULLET]+0.5 [ICON_Science] 科技值（“教育”科技后翻倍）[NEWLINE][ICON_BULLET]+0.5 [Icon_Gold] 金币。[NEWLINE][NEWLINE]在日本 [ICON_Capital] 首都 6 单元格内的城市为 100% 忠诚；研究完“飞行”后，每个区域提供 +1 [ICON_Tourism] 旅游业绩。</Text>
+			<Text>国际 [ICON_TradeRoute] 贸易路线的产出和 [ICON_Tourism] 旅游业绩 -25%；[NEWLINE]国内 [ICON_TradeRoute] 贸易路线的目的地城市中每有一个专业化区域，便提供：[NEWLINE][ICON_BULLET] +0.5 [ICON_Culture] 文化值（“人文主义”市政后翻倍）；[NEWLINE][ICON_BULLET]+0.5 [ICON_Science] 科技值（“教育”科技后翻倍）[NEWLINE][ICON_BULLET]+0.5 [Icon_Gold] 金币。[NEWLINE][NEWLINE]港口不受到市中心的相邻加成。在日本 [ICON_Capital] 首都 6 单元格内的城市为 100% 忠诚；研究完“飞行”后，每个区域提供 +1 [ICON_Tourism] 旅游业绩。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_TOKUGAWA_XP_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_TRAIT_LEADER_TOKUGAWA_DESCRIPTION}</Text>
@@ -4716,20 +4716,20 @@
 			<Text>仿珊瑚式建造</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_SUK_CORAL_CONSTRUCTION_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>沿海城市建造区域+25% [ICON_PRODUCTION] 生产力。[NEWLINE]解锁“航海术”科技后，未改良的礁石+1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
+			<Text>沿海城市建造区域时 +25% [ICON_PRODUCTION] 生产力。[NEWLINE]解锁“航海术”科技后，未改良的礁石+1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_SUK_CORAL_CONSTRUCTION_DESCRIPTION_XP1" Language="zh_Hans_CN">
-			<Text>沿海城市建造区域+25% [ICON_PRODUCTION] 生产力。[NEWLINE]解锁“航海术”科技后，未改良的礁石+1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
+			<Text>{LOC_TRAIT_CIVILIZATION_SUK_CORAL_CONSTRUCTION_DESCRIPTION}</Text>
 		</Replace>
 		<!-- = Leader ability  = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SUK_HUSUNI_KUBWA_NAME" Language="zh_Hans_CN">
 			<Text>千廊之殿</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_SUK_HUSUNI_KUBWA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>相邻奇观的港口区域获得+1 [ICON_TradeRoute] 贸易路线容量。</Text>
+			<Text>修建位于湖泊和海岸的奇观时 +20% [ICON_PRODUCTION] 生产力。相邻奇观的港口区域获得+1 [ICON_TradeRoute] 贸易路线容量。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_SUK_HUSUNI_KUBWA_XP2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>相邻奇观的港口区域获得+1 [ICON_TradeRoute] 贸易路线容量。</Text>
+			<Text>{LOC_TRAIT_LEADER_SUK_HUSUNI_KUBWA_DESCRIPTION}</Text>
 		</Replace>
 		<!-- = Unique unit = -->
 		<Replace Tag="LOC_UNIT_SUK_JAHAZI_NAME" Language="zh_Hans_CN">
