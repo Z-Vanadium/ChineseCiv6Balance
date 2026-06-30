@@ -3,6 +3,8 @@
 --=======================================================================
 --=                             SEOWON                                  =
 --=======================================================================
+-- 2026/06/30 火车延后至金属铸造
+UPDATE Units SET PrereqTech='TECH_METAL_CASTING' WHERE UnitType='UNIT_KOREAN_HWACHA';
 -- 04/07/24 Korean rework 
 -- +1 for every 2 mines
 INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, TilesRequired, AdjacentImprovement) VALUES
