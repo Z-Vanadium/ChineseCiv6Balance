@@ -2759,7 +2759,7 @@ end
 -- ===========================================================================
 function OnYongleCityPopulationChanged(cityOwner, cityID, change_amount)
 	local pPlayer = Players[cityOwner];
-	if pPlayer == nil then
+	if pPlayer == nil or PlayerConfigurations[cityOwner]:GetLeaderTypeName() ~= "LEADER_YONGLE" then
 		return
 	end
 	local pCity = CityManager.GetCity(cityOwner, cityID)
