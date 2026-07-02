@@ -548,6 +548,15 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_GRANT_ALL_TECHNOLOGY_BOOST', 'EndEraType', 'ERA_FUTURE'), 
 ('CCB_GRANT_ALL_TECHNOLOGY_BOOST', 'StartEraType', 'ERA_ANCIENT');
 
+-- 2026/07/02 系外行星探索：一次性赠送 3000 金币（联机速度下）
+INSERT INTO ProjectCompletionModifiers (ProjectType, ModifierId) VALUES 
+('PROJECT_LAUNCH_EXOPLANET_EXPEDITION', 'CCB_GRANT_GOLD_ONCE');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_GRANT_GOLD_ONCE', 'MODIFIER_PLAYER_GRANT_YIELD', 1, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Type, Value) VALUES 
+('CCB_GRANT_GOLD_ONCE', 'Amount', 'ScaleByGameSpeed', '6000'), 
+('CCB_GRANT_GOLD_ONCE', 'YieldType', 'ARGTYPE_IDENTITY', 'YIELD_GOLD');
+
 UPDATE Technologies SET Description='LOC_CCB_TECH_PREDICTIVE_SYSTEMS_DESCRIPTION' WHERE TechnologyType='TECH_PREDICTIVE_SYSTEMS';
 
 -- 2026/05/10: farm +1 prod from each farm with tech replacable part
