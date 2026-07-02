@@ -5566,7 +5566,7 @@
 			<Text>潘帕斯、马兰博与探戈</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_LEU_ARGENTINA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>获得 [ICON_ENVOY] 城邦“布宜诺斯艾利斯”的宗主国效果：加成资源如同奢侈品资源一样，每种类型资源提供 1 点 [ICON_AMENITIES] 宜居度。[NEWLINE]“帝国初期”市政后，牧场提供 +1 [ICON_FOOD] 食物；并为圣地、学院、工业区和剧院广场提供标准相邻加成。宫殿提供 2 个 [ICON_GreatWork_MUSIC] 音乐巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3牧场资源。</Text>
+			<Text>获得 [ICON_ENVOY] 城邦“布宜诺斯艾利斯”的宗主国效果：加成资源如同奢侈品资源一样，每种类型资源提供 1 点 [ICON_AMENITIES] 宜居度。[NEWLINE]“帝国初期”市政后，牧场提供 +1 [ICON_FOOD] 食物；并为圣地、学院、工业区和剧院广场提供大量相邻加成。宫殿提供 2 个 [ICON_GreatWork_MUSIC] 音乐巨作槽位。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T3牧场资源。</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_Campus_Argentina_Pasture_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>+{1_inum} [ICON_SCIENCE] 科技值来自相邻牧场单元格。</Text>
@@ -5618,7 +5618,7 @@
 			<Text>爱国军</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_LEU_GAUCHO_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>阿根廷特色现代近战单位，替代步兵，解锁于“动员”市政。基础 [ICON_STRENGTH] 战斗力更高，但是无法从大将军处获得 [ICON_STRENGTH] 战斗力加成。+1 [ICON_MOVEMENT] 移动力并能忽视控制区。</Text>
+			<Text>阿根廷特色现代近战单位，替代步兵，解锁于“动员”市政。基础 [ICON_STRENGTH] 战斗力更高，但是无法从大将军处获得 [ICON_STRENGTH] 战斗力加成。能忽视控制区。</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_SANMARTIN_MOUNTED_GENERAL_COMBAT_NAME" Language="zh_Hans_CN">
 			<Text>{LOC_CCB_SANMARTIN_MOUNTED_GENERAL_COMBAT_DESC}</Text>
@@ -5643,7 +5643,7 @@
 			<Text>阿尔拉巴尔</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_LEU_ARRABAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>阿根廷特色社区，解锁于“中世纪集市”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得少量 [ICON_PRODUCTION] 生产力相邻加成。[NEWLINE]相邻区域时，提供 +1 [ICON_GreatMusician] 大音乐家点数。</Text>
+			<Text>阿根廷特色社区，解锁于“政治哲学”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得标准 [ICON_PRODUCTION] 生产力相邻加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ARRABAL_PRODUCTION" Language="zh_Hans_CN">
 			<Text>来自相邻区域的 [ICON_PRODUCTION] 生产力和。</Text>
@@ -6414,7 +6414,7 @@
 			<Text>十字路口的先驱</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_CVS_ESCHER_UA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>商业中心和工业区从山脉获得标准相邻加成。修建市场、{LOC_BUILDING_CVS_SWITZERLAND_UI_NAME}、工作坊和工厂时 +50% [ICON_Production] 生产力。</Text>
+			<Text>商业中心和工业区从山脉获得标准相邻加成。修建市场、银行、工作坊和工厂时 +100% [ICON_Production] 生产力。“帝国初期”市政后，位于山脉 2 个单元格范围内的城市 +1 [ICON_AMENITIES] 宜居度。</Text>
 		</Replace>
 		<Replace Tag="LOC_MODIFIER_CVS_ESCHER_UA_INDUSTRIAL_ADJ_MOUNTAIN" Language="zh_Hans_CN">
 			<Text>来自相邻山脉的+{1_num} [ICON_Production] 生产力。</Text>
@@ -6589,7 +6589,7 @@
 			<Text>州议会大厦</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_CVS_SWITZERLAND_UI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>瑞士特色建筑，替代银行。提供 +8 [ICON_GOLD] 金币，每有一个宗主城邦额外提供 +1 [ICON_GOLD] 金币。城市中有 [ICON_GOVERNOR] 总督就职时每回合提供 +1 [ICON_INFLUENCEPERTURN] 影响力点数。[NEWLINE]为该城市出发的 [ICON_TRADEROUTE] 贸易路线提供+2 [ICON_GOLD] 金币。[NEWLINE]为通往该城市的 [ICON_TRADEROUTE] 贸易路线提供+1 [ICON_GOLD] 金币。</Text>
+			<Text>瑞士特色建筑，替代银行。解锁于“外交部门”市政。提供 +2 [ICON_HOUSING] 住房、+8 [ICON_GOLD] 金币。[NEWLINE]每宗主一个城邦额外提供 +1 [ICON_GOLD] 金币。城市中有 [ICON_GOVERNOR] 总督就职时每回合提供 +1 [ICON_INFLUENCEPERTURN] 影响力点数。[NEWLINE][NEWLINE]为该城市出发的 [ICON_TRADEROUTE] 贸易路线提供+2 [ICON_GOLD] 金币。[NEWLINE]为通往该城市的 [ICON_TRADEROUTE] 贸易路线提供+1 [ICON_GOLD] 金币。</Text>
 		</Replace>
 		<!-- = Swiss city names = -->
 		<Replace Tag="LOC_CITY_NAME_BERN" Language="zh_Hans_CN">
@@ -6645,7 +6645,7 @@
 			<Text>安第斯远征</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_LEU_SANMARTIN_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>击败敌方单位时获得 3 点 [ICON_GreatPerson] 大将军和 3 点大音乐家 [ICON_GREATMUSICIAN] 伟人点数（联机速度下）。[NEWLINE]近战、远程单位和摇滚乐队 [ICON_PROMOTION] 晋升时不会结束回合。</Text>
+			<Text>击败敌方单位时获得 3 点 [ICON_GreatPerson] 大将军和 3 点大音乐家 [ICON_GREATMUSICIAN] 伟人点数（联机速度下）。[NEWLINE]近战、远程单位和摇滚乐队 +1 [ICON_MOVEMENT] 移动力， [ICON_PROMOTION] 晋升时不会结束回合。</Text>
 		</Replace>
 		<Replace Tag="LOC_AGENDA_LEU_SANMARTIN_NAME" Language="zh_Hans_CN">
 			<Text>劳塔罗会</Text>
