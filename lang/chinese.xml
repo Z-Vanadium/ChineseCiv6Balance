@@ -2281,7 +2281,7 @@
 			<Text>建造者和军事工程师能使用所有次数为一个区域项目提供 [ICON_Production] 生产力加成。每个剩余次数为项目提供4% [ICON_Production] 生产力。一次只能用于一座城市，每回合仅限使用一次。[NEWLINE]奖励1个 [Icon_Governor] 总督头衔。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_GOV_CULTURE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>提供任意 4 个巨作槽位，全部槽位填满时自动获得 [ICON_THEMEBONUS_ACTIVE] 主题化。每回合获得的 [ICON_GREATWRITER] 大作家点数、[ICON_GREATARTIST] 大艺术家点数和 [ICON_GREATMUSICIAN] 大音乐家点数 +10%。[NEWLINE]奖励1个 [Icon_Governor] 总督头衔。</Text>
+			<Text>提供任意 4 个巨作槽位。每回合获得的 [ICON_GREATWRITER] 大作家点数、[ICON_GREATARTIST] 大艺术家点数和 [ICON_GREATMUSICIAN] 大音乐家点数 +10%。[NEWLINE]奖励1个 [Icon_Governor] 总督头衔。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_SEAPORT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>此城中生产的所有海军单位+25%战斗经验值获取。[NEWLINE]若已解锁 [ICON_RESOURCE_OIL] 石油，每回合+2 [ICON_RESOURCE_OIL] 石油。[NEWLINE]解锁相应的市政后即可直接生产 [ICON_Corps] 舰队和 [ICON_Army] 无敌舰队。[ICON_Corps] 舰队和 [ICON_Army] 无敌舰队的生产费用降低25%。此城所有的海岸单元格+2 [ICON_GOLD] 金币。</Text>
@@ -3074,7 +3074,7 @@
 			<Text>所有信息时代军事单位 +1 [ICON_Movement] 移动力。[NEWLINE]解锁末日机甲升级：增强机动[NEWLINE]+3 [ICON_Movement] 移动力。可进行1次跳跃，跨过山脉地貌。</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_SMART_MATERIALS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>所有单位防御时 +3 [ICON_STRENGTH] 战斗力。[NEWLINE]解锁末日机甲升级：强力装甲[NEWLINE]防御陆地与海军单位时+10 [ICON_Strength] 战斗力。</Text>
+			<Text>所有单位防御时 +3 [ICON_STRENGTH] 战斗力。矿山改良设施提供 +1 [ICON_PRODUCTION] 生产力。[NEWLINE]解锁末日机甲升级：强力装甲[NEWLINE]防御陆地与海军单位时+10 [ICON_Strength] 战斗力。</Text>
 		</Replace>
 			<!-- must use tag Row here -->
 		<Row Tag="LOC_CCB_TECH_PREDICTIVE_SYSTEMS_DESCRIPTION" Language="zh_Hans_CN">
