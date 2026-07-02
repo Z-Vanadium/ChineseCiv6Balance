@@ -865,7 +865,7 @@
 		</Replace>
 		<!-- = leader ability (Tokugawa) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_TOKUGAWA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>国际 [ICON_TradeRoute] 贸易路线的产出和 [ICON_Tourism] 旅游业绩 -25%；[NEWLINE]国内 [ICON_TradeRoute] 贸易路线的目的地城市中每有一个专业化区域，便提供：[NEWLINE][ICON_BULLET] +0.5 [ICON_Culture] 文化值（“人文主义”市政后翻倍）；[NEWLINE][ICON_BULLET]+0.5 [ICON_Science] 科技值（“教育”科技后翻倍）[NEWLINE][ICON_BULLET]+0.5 [Icon_Gold] 金币。[NEWLINE][NEWLINE]港口不受到市中心的相邻加成。在日本 [ICON_Capital] 首都 6 单元格内的城市为 100% 忠诚；研究完“飞行”后，每个区域提供 +1 [ICON_Tourism] 旅游业绩。</Text>
+			<Text>国际 [ICON_TradeRoute] 贸易路线的产出和 [ICON_Tourism] 旅游业绩 -25%；[NEWLINE]国内 [ICON_TradeRoute] 贸易路线的目的地城市中每有一个专业化区域，便提供：[NEWLINE][ICON_BULLET]+0.5 [ICON_Culture] 文化值（“人文主义”市政后翻倍）；[NEWLINE][ICON_BULLET]+0.5 [ICON_Science] 科技值（“教育”科技后翻倍）[NEWLINE][ICON_BULLET]+0.5 [Icon_Gold] 金币。[NEWLINE][NEWLINE]港口不受到市中心的相邻加成。在日本 [ICON_Capital] 首都 6 单元格内的城市为 100% 忠诚；研究完“飞行”后，每个区域提供 +1 [ICON_Tourism] 旅游业绩。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_TOKUGAWA_XP_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_TRAIT_LEADER_TOKUGAWA_DESCRIPTION}</Text>
@@ -1974,22 +1974,22 @@
 
 		<!-- == Magnus == -->
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_GROUNDBREAKER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中格位收获和移除地貌的产出+40%。</Text>
+			<Text>城市中格位收获和移除地貌的产出 +40%。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>以此处为终点的 [ICON_TradeRoute] 国内贸易路线+1 [ICON_Food] 食物、+2 [ICON_PRODUCTION] 生产力。</Text>
+			<Text>以此处为终点的 [ICON_TradeRoute] 国内贸易路线提供 +1 [ICON_Food] 食物、+2 [ICON_PRODUCTION] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市的 [ICON_Food] 食物增长+20%。城市中生产的开拓者不消耗 [ICON_Citizen] 人口。</Text>
+			<Text>城市的 [ICON_Food] 食物增长 +20%。城市中生产的开拓者不消耗 [ICON_Citizen] 人口。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市生产单位、区域、建筑时+20% [ICON_PRODUCTION] 生产力。</Text>
+			<Text>城市生产单位、区域、建筑时 +20% [ICON_PRODUCTION] 生产力。城市 +4 [ICON_POWER] 电力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中的工作坊+2 [ICON_PRODUCTION] 生产力，工厂+4 [ICON_PRODUCTION] 生产力，发电厂+7 [ICON_PRODUCTION] 生产力，+4 [ICON_POWER] 电力。</Text>
+			<Text>城市中的工业区获得 +2 [ICON_PRODUCTION] 生产力相邻加成（每拥有 1 个工业区建筑，这个加成便 +2）。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_VERTICAL_INTEGRATION_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>此城市可从附近所有拥有区域加成的工业区处获得 [ICON_Production] 生产力，而不仅是从首个建成的工业区处获得。</Text>
+			<Text>此城市可从附近所有拥有辐射加成的工业区建筑处获得 [ICON_Production] 生产力，而不仅是从最高加成的建筑。</Text>
 		</Replace>
 
 		<!-- == Ibrahim == -->
@@ -2377,6 +2377,15 @@
 			<Text>+2 [ICON_Movement] Movement for embarked units. Can build Canal district on hill tile.</Text>
 		</Replace>
 		-->
+		<Replace Tag="LOC_DISTRICT_SPACEPORT_DESCRIPTION_XP2" Language="zh_Hans_CN">
+			<Text>建造科技胜利项目所需的区域。其中包括：{LOC_PROJECT_LAUNCH_EARTH_SATELLITE_NAME}、{LOC_PROJECT_LAUNCH_MOON_LANDING_NAME}、{LOC_PROJECT_LAUNCH_MARS_BASE_NAME}与{LOC_PROJECT_LAUNCH_EXOPLANET_EXPEDITION_NAME}。无法建在丘陵上。[NEWLINE]首次建成后，所有城市 +8% [ICON_SCIENCE] 科技值和 [ICON_PRODUCTION] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_LAUNCH_MARS_BASE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>太空竞赛项目，将在火星表面建立小型人类基地。完成后启动所有未来时代科技的 [ICON_TechBoosted] 尤里卡时刻。标志着迈向科技胜利的第三步完成。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_LAUNCH_EXOPLANET_EXPEDITION_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>太空竞赛项目，完成后获得 3000 [ICON_GOLD] 金币奖励（联机速度下），并且将人类以每回合1光年的速度送往其他星系。当飞船抵达时，文明便赢得科技胜利。可以通过其他项目进行加速。</Text>
+		</Replace>
 
 		<Replace Tag="LOC_DISTRICT_HARBOR_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>城市的海军活动区域。同时移除此单元格登船和登陆的 [ICON_Movement] 移动力惩罚。+1 [ICON_HOUSING] 住房。必须建造在与陆地相邻的海岸或湖泊地形上。不能建造在礁石上。</Text>
@@ -3351,7 +3360,7 @@
 			<Text>所有军事单位每回合恢复的生命值 +20。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_AFTER_ACTION_REPORTS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>所有单位的战斗经验值 +25%，[ICON_Promotion] 晋升不会结束回合。</Text>
+			<Text>所有单位的战斗经验值 +25%。除摇滚乐队外的单位 [ICON_Promotion] 晋升不会结束回合。</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_FINEST_HOUR_FRIENDLY_TERRITORY_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>荣光时刻：在本国领土中作战时+5 [ICON_Strength] 战斗力。</Text>
@@ -3369,7 +3378,7 @@
 			<Text>每个专业化区域+2 [ICON_Tourism] 旅游业绩。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVT_ACCUMULATED_BONUS_BRIEF_SYNTHETIC_TECHNOCRACY" Language="zh_Hans_CN">
-			<Text>建造宇航中心、工业区、学院、港口和这些区域中的建筑时+50% [ICON_Production] 生产力。</Text>
+			<Text>建造工业区、学院、港口和这些区域中的建筑时+50% [ICON_Production] 生产力。建造宇航中心时 +20% [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVT_ACCUMULATED_BONUS_BRIEF_THEOCRACY_XP1" Language="zh_Hans_CN">
 			<Text>使用 [ICON_Faith] 信仰值购买可享受15%折扣。</Text>
@@ -3397,6 +3406,12 @@
 		</Replace>
 		<Replace Tag="LOC_POLICY_ARMS_RACE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>建造军营、港口、航空港和这些区域中的建筑时+30% [ICON_Production] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_CCB_INFORM_MILITARY_NAME" Language="zh_Hans_CN">
+			<Text>信息化军事</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_CCB_INFORM_MILITARY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>建造军营、港口、航空港、宇航中心和这些区域中的建筑时+30% [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_ARMS_RACE_T_NAME" Language="zh_Hans_CN">
 			<Text>军备竞赛</Text>
