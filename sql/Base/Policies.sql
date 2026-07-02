@@ -538,3 +538,24 @@ DELETE FROM Types WHERE Type='POLICY_SECOND_STRIKE_CAPABILITY';
 INSERT INTO PolicyModifiers (PolicyType, ModifierId) SELECT
 	'POLICY_ARMS_RACE_T', ModifierId
 FROM PolicyModifiers WHERE PolicyType='POLICY_SECOND_STRIKE_CAPABILITY';
+
+-- new policy
+-- 冷战解锁“信息化军事建设”（红卡） 建造“军营、港口、航空港区域及其建筑时+30%生产力；建造宇航中心区域时+30%生产力”  （也即“动员”解锁“军事指挥中心”红卡的顶位替代）；
+INSERT INTO Types(Type, Kind) VALUES
+	('POLICY_CCB_INFORM_MILITARY', 'KIND_POLICY');
+INSERT INTO Policies(PolicyType, Name, Description, PrereqCivic, GovernmentSlotType) VALUES
+	('POLICY_CCB_INFORM_MILITARY', 'LOC_POLICY_CCB_INFORM_MILITARY_NAME', 'LOC_POLICY_CCB_INFORM_MILITARY_DESCRIPTION', 'CIVIC_COLD_WAR', 'SLOT_MILITARY');
+INSERT INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
+	('POLICY_ARMS_RACE', 'POLICY_CCB_INFORM_MILITARY');
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) SELECT
+	'POLICY_CCB_INFORM_MILITARY', ModifierId
+FROM PolicyModifiers
+WHERE PolicyType='POLICY_ARMS_RACE';
+
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES 
+('POLICY_CCB_INFORM_MILITARY', 'CCB_POLICY_DISTRICT_SPACEPORT_PROD_BONUS');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_POLICY_DISTRICT_SPACEPORT_PROD_BONUS', 'MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_POLICY_DISTRICT_SPACEPORT_PROD_BONUS', 'Amount', '30'), 
+('CCB_POLICY_DISTRICT_SPACEPORT_PROD_BONUS', 'DistrictType', 'DISTRICT_SPACEPORT');
