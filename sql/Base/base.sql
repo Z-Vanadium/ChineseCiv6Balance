@@ -539,6 +539,15 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 	('CCB_PROJECT_COMPLETION_STRENGTH_BONUS', 'Preview', 'LOC_CCB_PROJECT_COMPLETION_STRENGTH_BONUS_DESC');
 
+-- 2026/07/02 火星殖民：解锁全部科技的ULK；
+INSERT INTO ProjectCompletionModifiers (ProjectType, ModifierId) VALUES 
+('PROJECT_LAUNCH_MARS_BASE', 'CCB_GRANT_ALL_TECHNOLOGY_BOOST');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_GRANT_ALL_TECHNOLOGY_BOOST', 'MODIFIER_PLAYER_GRANT_ALL_TECHNOLOGY_BOOST_BY_ERA', 1, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_GRANT_ALL_TECHNOLOGY_BOOST', 'EndEraType', 'ERA_FUTURE'), 
+('CCB_GRANT_ALL_TECHNOLOGY_BOOST', 'StartEraType', 'ERA_ANCIENT');
+
 UPDATE Technologies SET Description='LOC_CCB_TECH_PREDICTIVE_SYSTEMS_DESCRIPTION' WHERE TechnologyType='TECH_PREDICTIVE_SYSTEMS';
 
 -- 2026/05/10: farm +1 prod from each farm with tech replacable part
