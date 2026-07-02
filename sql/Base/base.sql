@@ -539,14 +539,14 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 	('CCB_PROJECT_COMPLETION_STRENGTH_BONUS', 'Preview', 'LOC_CCB_PROJECT_COMPLETION_STRENGTH_BONUS_DESC');
 
--- 2026/07/02 火星殖民：解锁全部科技的ULK；
+-- 2026/07/02 火星殖民：解锁未来科技的ULK；
 INSERT INTO ProjectCompletionModifiers (ProjectType, ModifierId) VALUES 
 ('PROJECT_LAUNCH_MARS_BASE', 'CCB_GRANT_ALL_TECHNOLOGY_BOOST');
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
 ('CCB_GRANT_ALL_TECHNOLOGY_BOOST', 'MODIFIER_PLAYER_GRANT_ALL_TECHNOLOGY_BOOST_BY_ERA', 1, 0, 0, NULL, NULL);
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_GRANT_ALL_TECHNOLOGY_BOOST', 'EndEraType', 'ERA_FUTURE'), 
-('CCB_GRANT_ALL_TECHNOLOGY_BOOST', 'StartEraType', 'ERA_ANCIENT');
+('CCB_GRANT_ALL_TECHNOLOGY_BOOST', 'StartEraType', 'ERA_FUTURE');
 
 -- 2026/07/02 系外行星探索：一次性赠送 3000 金币（联机速度下）
 INSERT INTO ProjectCompletionModifiers (ProjectType, ModifierId) VALUES 
