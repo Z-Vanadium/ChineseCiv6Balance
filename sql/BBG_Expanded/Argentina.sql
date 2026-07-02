@@ -17,6 +17,14 @@ INSERT OR IGNORE INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, N
 INSERT OR IGNORE INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_SANMARTIN_PROMOTE_NO_END_TURN', 'NoFinishMoves', '1');
 
+-- 2026/07/02 近战、远程和摇滚+1移动力，爱国军移动力移除
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_LEU_SANMARTIN', 'CCB_SANMARTIN_MOVEMENT');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_SANMARTIN_MOVEMENT', 'MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT', 0, 0, 0, NULL, 'REQSET_CCB_ARGENTINA_UNIT_IS_MELEE_RANGED_ROCK_BAND');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_SANMARTIN_MOVEMENT', 'Amount', '1');
+
 INSERT OR IGNORE INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
 ('REQSET_CCB_ARGENTINA_UNIT_IS_MELEE_RANGED_ROCK_BAND', 'REQUIREMENTSET_TEST_ANY');
 INSERT OR IGNORE INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
@@ -59,11 +67,12 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_ARGENTINA_PASTURE_FOOD_BONUS', 'Amount', '1');
 
 -- adjacency bonus for pasture
+-- 2026/07/02 提升至大量
 INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentImprovement) VALUES
-('CCB_Campus_Argentina_Pasture', 'LOC_CCB_Campus_Argentina_Pasture_DESCRIPTION', 'YIELD_SCIENCE', 1, 'IMPROVEMENT_PASTURE'),
-('CCB_Theater_Argentina_Pasture', 'LOC_CCB_Theater_Argentina_Pasture_DESCRIPTION', 'YIELD_CULTURE', 1, 'IMPROVEMENT_PASTURE'),
-('CCB_IndustrialZone_Argentina_Pasture', 'LOC_CCB_IndustrialZone_Argentina_Pasture_DESCRIPTION', 'YIELD_PRODUCTION', 1, 'IMPROVEMENT_PASTURE'),
-('CCB_HolySite_Argentina_Pasture', 'LOC_CCB_HolySite_Argentina_Pasture_DESCRIPTION', 'YIELD_FAITH', 1, 'IMPROVEMENT_PASTURE');
+('CCB_Campus_Argentina_Pasture', 'LOC_CCB_Campus_Argentina_Pasture_DESCRIPTION', 'YIELD_SCIENCE', 2, 'IMPROVEMENT_PASTURE'),
+('CCB_Theater_Argentina_Pasture', 'LOC_CCB_Theater_Argentina_Pasture_DESCRIPTION', 'YIELD_CULTURE', 2, 'IMPROVEMENT_PASTURE'),
+('CCB_IndustrialZone_Argentina_Pasture', 'LOC_CCB_IndustrialZone_Argentina_Pasture_DESCRIPTION', 'YIELD_PRODUCTION', 2, 'IMPROVEMENT_PASTURE'),
+('CCB_HolySite_Argentina_Pasture', 'LOC_CCB_HolySite_Argentina_Pasture_DESCRIPTION', 'YIELD_FAITH', 2, 'IMPROVEMENT_PASTURE');
 
 INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
 ('DISTRICT_CAMPUS', 'CCB_Campus_Argentina_Pasture'),
@@ -145,7 +154,12 @@ INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
 ('REQ_CCB_ARGENTINA_DISTRICT_INDUSTRIAL_ZONE', 'DistrictType', 'DISTRICT_INDUSTRIAL_ZONE');
 
 -- ud unlock early
-UPDATE Districts SET PrereqCivic='CIVIC_MEDIEVAL_FAIRES' WHERE DistrictType='DISTRICT_LEU_ARRABAL';
+-- 2026/07/02 提前至政治哲学；不再提供大音乐家点数；从相邻区域获得标准生产力相邻加成
+UPDATE Districts SET PrereqCivic='CIVIC_POLITICAL_PHILOSOPHY' WHERE DistrictType='DISTRICT_LEU_ARRABAL';
+DELETE FROM DistrictModifiers
+      WHERE ModifierId = 'LEU_ARRABAL_MUSIC_DISTRICTS' AND
+            DistrictType = 'DISTRICT_LEU_ARRABAL';
+UPDATE Adjacency_YieldChanges SET TilesRequired=1 WHERE ID='Arrabal_Adj_Districts';
 
 -- production remove
 UPDATE District_TradeRouteYields SET YieldChangeAsOrigin=0, YieldChangeAsDomesticDestination=0, YieldChangeAsInternationalDestination=0 WHERE DistrictType='DISTRICT_LEU_ARRABAL' AND YieldType='YIELD_PRODUCTION';
@@ -156,7 +170,7 @@ DELETE FROM District_GreatPersonPoints WHERE DistrictType='DISTRICT_LEU_ARRABAL'
 -- uu replace
 DELETE FROM Units WHERE UnitType='UNIT_LEU_GAUCHO';
 INSERT OR REPLACE INTO Units (UnitType, BaseMoves, Cost, StrategicResource, AdvisorType, BaseSightRange, ZoneOfControl, Domain, FormationClass, Name, Description, MandatoryObsoleteTech, PurchaseYield, PromotionClass, Maintenance, Combat, RangedCombat, AirSlots, Range, PrereqTech, PrereqCivic, TraitType, BuildCharges) SELECT
-'UNIT_LEU_GAUCHO', 4, Cost, 'RESOURCE_NITER', AdvisorType, BaseSightRange, ZoneOfControl, Domain, FormationClass, 'LOC_UNIT_LEU_GAUCHO_NAME', 'LOC_UNIT_LEU_GAUCHO_DESCRIPTION', MandatoryObsoleteTech, PurchaseYield, PromotionClass, Maintenance, 85, RangedCombat, AirSlots, Range, NULL, 'CIVIC_MOBILIZATION', 'TRAIT_CIVILIZATION_UNIT_LEU_GAUCHO', BuildCharges
+'UNIT_LEU_GAUCHO', BaseMoves, Cost, 'RESOURCE_NITER', AdvisorType, BaseSightRange, ZoneOfControl, Domain, FormationClass, 'LOC_UNIT_LEU_GAUCHO_NAME', 'LOC_UNIT_LEU_GAUCHO_DESCRIPTION', MandatoryObsoleteTech, PurchaseYield, PromotionClass, Maintenance, 85, RangedCombat, AirSlots, Range, NULL, 'CIVIC_MOBILIZATION', 'TRAIT_CIVILIZATION_UNIT_LEU_GAUCHO', BuildCharges
 FROM Units WHERE UnitType='UNIT_INFANTRY';
 
 -- UnitUpgrades
