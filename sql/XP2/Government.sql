@@ -70,6 +70,9 @@ INSERT INTO GovernmentModifiers (GovernmentType, ModifierId)
 
 DROP TABLE TmpSyntheticTechnocracyDistricts;
 
+-- 2026/07/02 合成专家统治为宇航中心及其建筑提供的生产力加成从 50% 减少至 20%
+UPDATE ModifierArguments SET Value=20 WHERE Name='Amount' AND ModifierId LIKE 'BBG_TECHNOCRACY_SYNTHETIC_DISTRICT_SPACEPORT_BONUS_PRODUCTION_%';
+
 DELETE FROM GovernmentModifiers WHERE ModifierId IN ('CORPORATE_LIBERTARIANISM_SCIENCE_PENALTY', 'SYNTHETIC_TECHNOCRACY_TOURISM_PENALTY', 'DIGITAL_DEMOCRACY_COMBAT_STRENGTH_PENALTY');
 
 -- 07/06/23 digital democracy gives 2 tourism per district 
