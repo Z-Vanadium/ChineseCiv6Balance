@@ -25,6 +25,18 @@ UPDATE ModifierArguments SET Value=20 WHERE ModifierId='MODIFIER_CVS_MALAYSIA_UU
 DELETE FROM UnitAbilityModifiers WHERE ModifierId='MODIFIER_CVS_MALAYSIA_UU_KILL_GPP' AND UnitAbilityType='ABILITY_CVS_MALAYSIA_UU';
 
 -- ud
+-- 2026/07/02 半价港口，不提供伟人点数，不占用区域名额；科技只提供给改良单元格，新增湖泊
+UPDATE Districts SET Cost=30, RequiresPopulation=0 WHERE DistrictType='DISTRICT_CVS_MALAYSIA_UI';
+UPDATE District_GreatPersonPoints SET PointsPerTurn=0 WHERE DistrictType='DISTRICT_CVS_MALAYSIA_UI' AND GreatPersonClassType='GREAT_PERSON_CLASS_ADMIRAL';
+
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQ_CCB_MALAYSIA_PLOT_HAS_ANY_IMPROVEMENT', 'REQUIREMENT_PLOT_HAS_ANY_IMPROVEMENT');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CVS_MALAYSIA_UI_PLOT_IS_COAST', 'REQ_CCB_MALAYSIA_PLOT_HAS_ANY_IMPROVEMENT');
+DELETE FROM RequirementSetRequirements
+      WHERE RequirementSetId = 'REQSET_CVS_MALAYSIA_UI_PLOT_IS_COAST' AND
+            RequirementId = 'REQ_CVS_MALAYSIA_UI_PLOT_IS_NOT_LAKE';
+
 -- from ccb
 UPDATE District_CitizenYieldChanges SET YieldChange=3 WHERE YieldType='YIELD_GOLD' AND DistrictType='DISTRICT_CVS_MALAYSIA_UI';
 INSERT OR IGNORE INTO DistrictModifiers (DistrictType, ModifierId) VALUES

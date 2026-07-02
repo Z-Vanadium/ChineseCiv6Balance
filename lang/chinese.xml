@@ -5930,7 +5930,7 @@
 			<Text>德马加港</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_CVS_MALAYSIA_UI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>马来西亚特色港口，但是造价等同于港口。建成时建立 [ICON_TRADINGPOST] 贸易站。为海岸单元格提供 +1 [ICON_SCIENCE] 科技值。</Text>
+			<Text>马来西亚特色港口，造价更低。建成时建立 [ICON_TRADINGPOST] 贸易站。为已改良的海岸和湖泊单元格提供 +1 [ICON_SCIENCE] 科技值。[NEWLINE][NEWLINE]此区域不需要人口，不提供 [ICON_GreatPerson] 伟人点数。</Text>
 		</Replace>
 		<!-- = Unique unit = -->
 		<Replace Tag="LOC_UNIT_CVS_MALAYSIA_UU_NAME" Language="zh_Hans_CN">
