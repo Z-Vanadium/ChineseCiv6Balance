@@ -2,6 +2,33 @@
 -- regional gold and production remove
 DELETE FROM TraitModifiers WHERE TraitType = 'TRAIT_LEADER_CVS_ESCHER_UA' AND ModifierId IN ('MODIFIER_CVS_ESCHER_UA_REGIONAL_PRODUCTION', 'MODIFIER_CVS_ESCHER_UA_REGIONAL_GOLD');
 
+-- 2026/07/02 帝国初期市政后，位于山脉 2 个单元格范围内时 +1 宜居度
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_LEADER_CVS_ESCHER_UA', 'CCB_SWITZERLADN_AMENITY');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_SWITZERLADN_AMENITY', 'MODIFIER_PLAYER_CITIES_ADJUST_TRAIT_AMENITY', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_CIVIC_EARLY_EMPIRE_REQSET', 'REQSET_CCB_PLOT_IS_IN_RANG_2_OF_MOUNTAINS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_SWITZERLADN_AMENITY', 'Amount', '1');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_PLOT_IS_IN_RANG_2_OF_MOUNTAINS', 'REQUIREMENTSET_TEST_ANY');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) SELECT 
+'REQSET_CCB_PLOT_IS_IN_RANG_2_OF_MOUNTAINS', 'REQ_CCB_PLOT_IS_IN_RANG_2_OF_' || TerrainType
+FROM Terrains WHERE Mountain=1;
+INSERT INTO Requirements (RequirementId, RequirementType) SELECT
+'REQ_CCB_PLOT_IS_IN_RANG_2_OF_' || TerrainType, 'REQUIREMENT_PLOT_ADJACENT_TERRAIN_TYPE_MATCHES'
+FROM Terrains WHERE Mountain=1;
+INSERT INTO RequirementArguments (RequirementId, Name, Value) SELECT
+'REQ_CCB_PLOT_IS_IN_RANG_2_OF_' || TerrainType, 'TerrainType', TerrainType
+FROM Terrains WHERE Mountain=1;
+INSERT INTO RequirementArguments (RequirementId, Name, Value) SELECT
+'REQ_CCB_PLOT_IS_IN_RANG_2_OF_' || TerrainType, 'MinRange', 1
+FROM Terrains WHERE Mountain=1;
+INSERT INTO RequirementArguments (RequirementId, Name, Value) SELECT
+'REQ_CCB_PLOT_IS_IN_RANG_2_OF_' || TerrainType, 'MaxRange', 2
+FROM Terrains WHERE Mountain=1;
+
+-- 2026/07/02 从 +50% 提升至 +100%
 -- +50% prod for commercial hub and industrial zone T1 and T2 buildings
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
 ('TRAIT_LEADER_CVS_ESCHER_UA', 'CCB_SWITZERLADN_PRODUCTION_BUILDING_MARKET'),
@@ -13,13 +40,13 @@ INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, Ow
 ('CCB_SWITZERLADN_PRODUCTION_BUILDING_WORKSHOP', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION', 0, 0, 0, NULL, NULL),
 ('CCB_SWITZERLADN_PRODUCTION_BUILDING_FACTORY', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION', 0, 0, 0, NULL, NULL);
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_SWITZERLADN_PRODUCTION_BUILDING_MARKET', 'Amount', '50'), 
+('CCB_SWITZERLADN_PRODUCTION_BUILDING_MARKET', 'Amount', '100'), 
 ('CCB_SWITZERLADN_PRODUCTION_BUILDING_MARKET', 'BuildingType', 'BUILDING_MARKET'),
-('CCB_SWITZERLADN_PRODUCTION_BUILDING_CVS_SWITZERLAND_UI', 'Amount', '50'), 
+('CCB_SWITZERLADN_PRODUCTION_BUILDING_CVS_SWITZERLAND_UI', 'Amount', '100'), 
 ('CCB_SWITZERLADN_PRODUCTION_BUILDING_CVS_SWITZERLAND_UI', 'BuildingType', 'BUILDING_CVS_SWITZERLAND_UI'),
-('CCB_SWITZERLADN_PRODUCTION_BUILDING_WORKSHOP', 'Amount', '50'), 
+('CCB_SWITZERLADN_PRODUCTION_BUILDING_WORKSHOP', 'Amount', '100'), 
 ('CCB_SWITZERLADN_PRODUCTION_BUILDING_WORKSHOP', 'BuildingType', 'BUILDING_WORKSHOP'),
-('CCB_SWITZERLADN_PRODUCTION_BUILDING_FACTORY', 'Amount', '50'), 
+('CCB_SWITZERLADN_PRODUCTION_BUILDING_FACTORY', 'Amount', '100'), 
 ('CCB_SWITZERLADN_PRODUCTION_BUILDING_FACTORY', 'BuildingType', 'BUILDING_FACTORY');
 
 -- commercial hub bonus from mountains
@@ -96,6 +123,9 @@ INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, Ow
 ('CCB_SWITZERLAND_SPY_BONUS', 'MODIFIER_PLAYER_CITIES_ADJUST_SPY_BONUS', 0, 0, 0, NULL, NULL);
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_SWITZERLAND_SPY_BONUS', 'Amount', '1');
+
+-- 2026/07/02 ub 在外交部门而非银行业解锁；提供 +2 住房
+UPDATE Buildings SET PrereqTech=NULL, PrereqCivic='CIVIC_DIPLOMATIC_SERVICE', Housing=2 WHERE BuildingType='BUILDING_CVS_SWITZERLAND_UI';
 
 -- ub no gold
 UPDATE Building_YieldChanges SET YieldChange=8 WHERE BuildingType = 'BUILDING_CVS_SWITZERLAND_UI' AND YieldType = 'YIELD_GOLD';
