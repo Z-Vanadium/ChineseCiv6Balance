@@ -504,12 +504,22 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_GUNBOAT_DIPLOMACY_FAVOR', 'BonusType', 'GOVERNMENTBONUS_ENVOYS');
 
 -- after action reports no finish moves
+-- 2026/07/02 不再对摇滚乐队生效
 INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES 
 ('POLICY_AFTER_ACTION_REPORTS', 'CCB_AFTER_ACTION_REPORTS_NO_FINISH_MOVES');
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_AFTER_ACTION_REPORTS_NO_FINISH_MOVES', 'MODIFIER_PLAYER_UNITS_PROMOTE_NO_FINISH_MOVES', 0, 0, 0, NULL, NULL);
+('CCB_AFTER_ACTION_REPORTS_NO_FINISH_MOVES', 'MODIFIER_PLAYER_UNITS_PROMOTE_NO_FINISH_MOVES', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_IS_NOT_ROCK_BAND');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_AFTER_ACTION_REPORTS_NO_FINISH_MOVES', 'NoFinishMoves', '1');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+    ('REQSET_CCB_UNIT_IS_NOT_ROCK_BAND', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+	('REQSET_CCB_UNIT_IS_NOT_ROCK_BAND', 'REQ_CCB_UNIT_IS_NOT_ROCK_BAND');
+INSERT OR IGNORE INTO Requirements (RequirementId, RequirementType, Inverse) VALUES 
+	('REQ_CCB_UNIT_IS_NOT_ROCK_BAND', 'REQUIREMENT_UNIT_PROMOTION_CLASS_MATCHES', 1);
+INSERT OR IGNORE INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+	('REQ_CCB_UNIT_IS_NOT_ROCK_BAND', 'UnitPromotionClass', 'PROMOTION_CLASS_ROCK_BAND');
 
 -- drill manuals: bonus to +4/+4/+2/+2
 UPDATE ModifierArguments SET Value=4 WHERE ModifierId='BBG_POLICY_GIVE_FREE_COAL' AND Name='Amount';
