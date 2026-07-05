@@ -614,6 +614,7 @@ UPDATE Governors SET TransitionStrength=125 WHERE GovernorType='GOVERNOR_THE_MER
 UPDATE ModifierArguments SET Value='4' WHERE ModifierId='FOREIGN_EXCHANGE_GOLD_FROM_FOREIGN_TRADE_PASSING_THROUGH' AND Name='Amount';
 
 -- LI Harbormaster : Double adjacency bonuses from Commercial Hubs and Harbor in the city. Grant a traderoute capacity if the city has both a market and a lighthouse.
+-- 2026/07/05 不再提供内商加成
 -- 2026/06/30 港商相邻翻倍移动到 LIII，市场灯塔商路移动到 RIII；新增人口 2 金币；新增政治哲学 +1 商路；新增为国内商路+1食物+1生产力
 INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
     ('BBG_CITY_HAS_MARKET_AND_LIGHTHOUSE_REQSET', 'REQUIREMENTSET_TEST_ALL');
@@ -650,9 +651,9 @@ INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
     ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'Amount', '1'),
     ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'Domestic', '1'),
     ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'YieldType', 'YIELD_FOOD');
-INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
-    ('GOVERNOR_PROMOTION_MERCHANT_HARBORMASTER', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_PROD'),
-    ('GOVERNOR_PROMOTION_MERCHANT_HARBORMASTER', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD');
+-- INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
+--     ('GOVERNOR_PROMOTION_MERCHANT_HARBORMASTER', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_PROD'),
+--     ('GOVERNOR_PROMOTION_MERCHANT_HARBORMASTER', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD');
 
 -- RI Forestry Management : This city receives +2 gold for each uninproved feature which also grant +1 appeal.      
 INSERT INTO Requirements (RequirementId, RequirementType) VALUES
