@@ -12,8 +12,8 @@ UPDATE Units SET PrereqCivic='CIVIC_EXPLORATION' WHERE UnitType='UNIT_ENGLISH_SE
 -- 2026/06/30 回调红衫军和灯塔的点数类型回提督
 -- 2025/12/09 redcoast move to tech industrialization, strength nerfed to 65
 -- UPDATE Units SET Combat=65, PrereqTech='TECH_INDUSTRIALIZATION' WHERE UnitType='UNIT_ENGLISH_REDCOAT';
--- 15/05/2021: redcoast ability to +5 (from +10)
--- UPDATE ModifierArguments SET Value='5' WHERE ModifierId='REDCOAT_FOREIGN_COMBAT' AND Name='Amount';
+15/05/2021: redcoast ability to +5 (from +10)
+UPDATE ModifierArguments SET Value='5' WHERE ModifierId='REDCOAT_FOREIGN_COMBAT' AND Name='Amount';
 
 UPDATE District_GreatPersonPoints SET PointsPerTurn=1 WHERE DistrictType='DISTRICT_ROYAL_NAVY_DOCKYARD' AND GreatPersonClassType='GREAT_PERSON_CLASS_ADMIRAL';
 
