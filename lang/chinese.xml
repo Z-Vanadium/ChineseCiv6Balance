@@ -235,7 +235,7 @@
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_LAST_BEST_WEST_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>冻土城市的市中心获得+1 [ICON_Food] 食物。[NEWLINE]允许在冻土地貌上建造农场。解锁“土木工程”市政后，即可在冻土丘陵上建造农场。在冻土、冻土丘陵、雪地、雪地丘陵上的矿山和伐木场额外+2 [ICON_PRODUCTION] 生产力，农场和营地额外+2 [ICON_FOOD] 食物，战略资源积累速度+100%。这些地形上的单元格购买费用降低50%。</Text>
+			<Text>位于冻土的 [ICON_Capital] 首都市中心获得 +1 [ICON_Food] 食物。[NEWLINE]允许在冻土地貌上建造农场。解锁“土木工程”市政后，即可在冻土丘陵上建造农场。[NEWLINE][NEWLINE]在冻土、冻土丘陵、雪地、雪地丘陵上的改良设施：[NEWLINE][ICON_BULLET]矿山和伐木场额外提供 +2 [ICON_PRODUCTION] 生产力；[NEWLINE][ICON_BULLET]农场和营地额外提供 +2 [ICON_FOOD] 食物；[NEWLINE][ICON_BULLET]采石场额外提供 +1 [ICON_PRODUCTION] 生产力；[NEWLINE][ICON_BULLET]种植园和牧场额外提供 +1 [ICON_FOOD] 食物。[NEWLINE][NEWLINE]冻土和雪地上的战略资源积累速度 +100%；这些地形上的单元格 [ICON_GOLD] 购买费用降低 50%。</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_CANADA_MOUNTIE_DESCRIPTION" Language="zh_Hans_CN">
@@ -1470,10 +1470,10 @@
 		<!-- == SPAIN == -->
 		<!-- = civilization ability = -->
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_TREASURE_FLEET_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>可以更早组建 [ICON_Corps] 舰队和 [ICON_Army] 无敌舰队（需要“雇佣兵”和“民族主义”市政）。[ICON_Corps] 舰队和 [ICON_Army] 无敌舰队的建造成本降低25%。[NEWLINE][NEWLINE][ICON_TradeRoute] 贸易路线+3 [ICON_Gold] 金币、+2 [ICON_Faith] 信仰值、+1 [ICON_Production] 生产力。通往不同大陆的国际 [ICON_TradeRoute] 贸易路线获得双倍上述加成。[ICON_Capital] 首都8个单元格范围外的城市建造 [ICON_DISTRICT] 区域时+25% [ICON_Production] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸、T3地热裂缝。特殊：靠近大陆分界。</Text>
+			<Text>{LOC_TRAIT_CIVILIZATION_TREASURE_FLEET_EXPANSION2_DESCRIPTION}</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_TREASURE_FLEET_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>可以更早组建 [ICON_Corps] 舰队和 [ICON_Army] 无敌舰队（需要“雇佣兵”和“民族主义”市政）。[ICON_Corps] 舰队和 [ICON_Army] 无敌舰队的建造成本降低25%。[NEWLINE][NEWLINE][ICON_TradeRoute] 贸易路线+3 [ICON_Gold] 金币、+2 [ICON_Faith] 信仰值、+1 [ICON_Production] 生产力。通往不同大陆的国际 [ICON_TradeRoute] 贸易路线获得双倍上述加成。[ICON_Capital] 首都8个单元格范围外的城市建造 [ICON_DISTRICT] 区域时+25% [ICON_Production] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸、T3地热裂缝。特殊：靠近大陆分界。</Text>
+			<Text>可以更早组建 [ICON_Corps] 舰队和 [ICON_Army] 无敌舰队（需要“雇佣兵”和“民族主义”市政）。[NEWLINE][NEWLINE][ICON_TradeRoute] 贸易路线提供 +3 [ICON_Gold] 金币、+2 [ICON_Faith] 信仰值、+1 [ICON_Production] 生产力。通往不同大陆的国际 [ICON_TradeRoute] 贸易路线获得双倍上述加成。[NEWLINE][ICON_Capital] 首都 8 个单元格范围外的城市建造 [ICON_DISTRICT] 区域时 +25% [ICON_Production] 生产力。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸、T3地热裂缝。特殊：靠近大陆分界。</Text>
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_EL_ESCORIAL_DESCRIPTION" Language="zh_Hans_CN">
@@ -1848,7 +1848,7 @@
 			<Text>城市获得新单元格的速度 +20%。经过城市的每条 [ICON_TradeRoute] 国际商路每回合提供 +4 [ICON_Gold] 金币。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_HARBORMASTER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市里每位 [ICON_Citizen] 公民每回合提供 +2 [ICON_Gold] 金币。以此处为终点的 [ICON_TradeRoute] 国内贸易路线提供 +1 [ICON_Food] 食物、+1 [ICON_PRODUCTION] 生产力。解锁“政治哲学”市政后，+1 [ICON_TradeRoute] 贸易路线容量。</Text>
+			<Text>城市里每位 [ICON_Citizen] 公民每回合提供 +2 [ICON_Gold] 金币。解锁“政治哲学”市政后，+1 [ICON_TradeRoute] 贸易路线容量。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_FORESTRY_MANAGEMENT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>每个未改良的地貌和魅力为惊艳的单元格提供 +2 [ICON_Gold] 金币。该城市中未改良单元格向周围单元格提供 +1 魅力。</Text>
@@ -5643,7 +5643,7 @@
 			<Text>阿尔拉巴尔</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_LEU_ARRABAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>阿根廷特色社区，解锁于“政治哲学”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得标准 [ICON_PRODUCTION] 生产力相邻加成。</Text>
+			<Text>阿根廷特色社区，解锁于“政治哲学”市政。根据单元格吸引力获得最多 +6 [ICON_HOUSING] 住房。从相邻区域获得标准 [ICON_PRODUCTION] 生产力相邻加成。每座城市仅限建造一个。</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_ARRABAL_PRODUCTION" Language="zh_Hans_CN">
 			<Text>来自相邻区域的 [ICON_PRODUCTION] 生产力和。</Text>
@@ -5763,7 +5763,7 @@
 			<Text>海峡执衡</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_CVS_ISKANDAR_UA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“帝国初期”市政后，建立在海岸 3 个单元格范围内的城市获得 1 [ICON_CITIZEN] 人口（包括已经建立的）。</Text>
+			<Text>“帝国初期”市政后，建立在海岸 3 个单元格范围内的城市获得 1 [ICON_CITIZEN] 人口（包括已经建立的）。[NEWLINE]海军近战单位 +1 [ICON_Movement] 移动力。</Text>
 		</Replace>
 		<!-- = Agenda = -->
 		<Replace Tag="LOC_AGENDA_CVS_ISKANDAR_NAME" Language="zh_Hans_CN">
@@ -5923,21 +5923,21 @@
 			<Text>南洋聚市</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_MALAYSIA_UA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>[ICON_CVS_MALAYSIA_CSQ] 完成已经被其他文明宗主城邦的任务时，额外奖励 1 个 [ICON_ENVOY] 使者。每宗主一个城邦，则 +1 [ICON_TRADEROUTE] 贸易路线容量。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
+			<Text>无法建造圣地区、获得大预言家，或创建宗教。[NEWLINE][NEWLINE][ICON_CVS_MALAYSIA_CSQ] 完成已经被其他文明宗主城邦的任务时，额外奖励 1 个 [ICON_ENVOY] 使者。每宗主一个城邦，则 +1 [ICON_TRADEROUTE] 贸易路线容量。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1海岸。</Text>
 		</Replace>
 		<!-- = Unique district = -->
 		<Replace Tag="LOC_DISTRICT_CVS_MALAYSIA_UI_NAME" Language="zh_Hans_CN">
 			<Text>德马加港</Text>
 		</Replace>
 		<Replace Tag="LOC_DISTRICT_CVS_MALAYSIA_UI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>马来西亚特色港口，造价更低。建成时建立 [ICON_TRADINGPOST] 贸易站。为已改良的海岸和湖泊单元格提供 +1 [ICON_SCIENCE] 科技值。[NEWLINE][NEWLINE]此区域不需要人口，不提供 [ICON_GreatPerson] 伟人点数。</Text>
+			<Text>马来西亚特色港口，造价更低。建成时建立 [ICON_TRADINGPOST] 贸易站。为已改良的海岸和湖泊单元格提供 +1 [ICON_SCIENCE] 科技值。[NEWLINE][NEWLINE]此区域不需要人口，不提供 [ICON_GreatPerson] 伟人点数，不为商业中心提供相邻加成。</Text>
 		</Replace>
 		<!-- = Unique unit = -->
 		<Replace Tag="LOC_UNIT_CVS_MALAYSIA_UU_NAME" Language="zh_Hans_CN">
 			<Text>兰查兰快船</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_CVS_MALAYSIA_UU_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>马来西亚文艺复兴时期特色海军近战单位，替代轻快帆船，造价更高。+3 [ICON_STRENGTH] 战斗力，消灭敌方单位时恢复 20 点生命值。</Text>
+			<Text>马来西亚文艺复兴时期特色海军近战单位，替代轻快帆船，拥有更高的 [ICON_Movement] 移动力。消灭敌方单位时恢复 20 点生命值。</Text>
 		</Replace>
 		<!-- = Named Places = -->
 		<Replace Tag="LOC_NAMED_RIVER_KLANG" Language="zh_Hans_CN">
@@ -5972,7 +5972,7 @@
 			<Text>吉兰丹</Text>
 		</Replace>
 		<Replace Tag="LOC_CITY_NAME_SINGAPURA" Language="zh_Hans_CN">
-			<Text>新加坡</Text>
+			<Text>‌蒲罗中</Text>
 		</Replace>
 		<Replace Tag="LOC_CITY_NAME_LANGKASUKA" Language="zh_Hans_CN">
 			<Text>狼牙脩</Text>
@@ -6926,7 +6926,7 @@
 
 		<!-- = Argentina city names = -->
 		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_01" Language="zh_Hans_CN">
-			<Text>布宜诺斯艾利斯</Text>
+			<Text>布宜诺斯艾利斯市</Text>
 		</Replace>
 		<Replace Tag="LOC_CITY_NAME_LEU_ARGENTINA_02" Language="zh_Hans_CN">
 			<Text>科尔多瓦</Text>
