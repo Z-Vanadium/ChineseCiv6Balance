@@ -154,8 +154,8 @@ INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
 ('REQ_CCB_ARGENTINA_DISTRICT_INDUSTRIAL_ZONE', 'DistrictType', 'DISTRICT_INDUSTRIAL_ZONE');
 
 -- ud unlock early
--- 2026/07/02 提前至政治哲学；不再提供大音乐家点数；从相邻区域获得标准生产力相邻加成
-UPDATE Districts SET PrereqCivic='CIVIC_POLITICAL_PHILOSOPHY' WHERE DistrictType='DISTRICT_LEU_ARRABAL';
+-- 2026/07/05 提前至政治哲学；不再提供大音乐家点数；从相邻区域获得标准生产力相邻加成；每座城市最多建造一个
+UPDATE Districts SET PrereqCivic='CIVIC_POLITICAL_PHILOSOPHY', OnePerCity=1 WHERE DistrictType='DISTRICT_LEU_ARRABAL';
 DELETE FROM DistrictModifiers
       WHERE ModifierId = 'LEU_ARRABAL_MUSIC_DISTRICTS' AND
             DistrictType = 'DISTRICT_LEU_ARRABAL';
