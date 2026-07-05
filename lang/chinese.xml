@@ -1315,7 +1315,7 @@
 		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_FOUNDER_CARTHAGE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>每个市政广场建筑+1 [ICON_TradeRoute] 贸易路线容量。在拥有市政广场的城市中建造 [ICON_DISTRICT] 区域时+50% [ICON_Production] 生产力。开拓者上船后，[ICON_Movement] 移动力与视野范围各+2。开拓者上船和下船无需额外花费 [ICON_Movement] 移动力。</Text>
+			<Text>每个市政广场建筑+1 [ICON_TradeRoute] 贸易路线容量。在拥有市政广场的城市中建造 [ICON_DISTRICT] 区域时+50% [ICON_Production] 生产力。[NEWLINE][NEWLINE]拥有“造船术”科技后：开拓者上船后，[ICON_Movement] 移动力与视野范围各 +2；开拓者上船和下船无需额外花费 [ICON_Movement] 移动力。</Text>
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_COTHON_DESCRIPTION" Language="zh_Hans_CN">
