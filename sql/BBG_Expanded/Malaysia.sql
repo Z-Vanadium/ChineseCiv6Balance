@@ -16,10 +16,30 @@ DELETE FROM StartBiasResources
             Tier = 3 AND
             CivilizationType = 'CIVILIZATION_CVS_MALAYSIA';
 
--- uu 55+4, cost to 290 from 240
-UPDATE Units SET Combat=58, Cost=290 WHERE UnitType='UNIT_CVS_MALAYSIA_UU';
+-- 2026/07/05 无法修建圣地或招募大预言家；海军近战单位+1移动力
+INSERT INTO ExcludedDistricts (DistrictType, TraitType) VALUES
+    ('DISTRICT_HOLY_SITE', 'TRAIT_CIVILIZATION_CVS_MALAYSIA_UA');
+INSERT INTO ExcludedGreatPersonClasses (GreatPersonClassType, TraitType) VALUES
+    ('GREAT_PERSON_CLASS_PROPHET', 'TRAIT_CIVILIZATION_CVS_MALAYSIA_UA');
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_CVS_MALAYSIA_UA', 'CCB_MALAYSIA_NAVAL_MELEE_MOVEMENT_BONUS');
 
--- healing nurfed to 20
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MALAYSIA_NAVAL_MELEE_MOVEMENT_BONUS', 'MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MALAYSIA_NAVAL_MELEE_MOVEMENT_BONUS', 'Amount', '1');
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE', 'REQ_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE');
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+('REQ_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE', 'REQUIREMENT_UNIT_PROMOTION_CLASS_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE', 'UnitPromotionClass', 'PROMOTION_CLASS_NAVAL_MELEE');
+
+-- 2026/07/05 快船不加力，+1移动力，价格降低240
+UPDATE Units SET Combat=55, Cost=240, BaseMoves=5 WHERE UnitType='UNIT_CVS_MALAYSIA_UU';
+
 UPDATE ModifierArguments SET Value=20 WHERE ModifierId='MODIFIER_CVS_MALAYSIA_UU_KILL_HEAL' AND Name='Amount';
 
 DELETE FROM UnitAbilityModifiers WHERE ModifierId='MODIFIER_CVS_MALAYSIA_UU_KILL_GPP' AND UnitAbilityType='ABILITY_CVS_MALAYSIA_UU';
