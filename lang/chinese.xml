@@ -6599,7 +6599,7 @@
 			<Text>苏黎世</Text>
 		</Replace>
 		<Replace Tag="LOC_CITY_NAME_GENEVA" Language="zh_Hans_CN">
-			<Text>日内瓦</Text>
+			<Text>日内瓦市</Text>
 		</Replace>
 		<Replace Tag="LOC_CITY_NAME_LUCERNE" Language="zh_Hans_CN">
 			<Text>卢塞恩</Text>
