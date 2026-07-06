@@ -1986,19 +1986,10 @@
 			<Text>城市生产单位、区域、建筑时 +20% [ICON_PRODUCTION] 生产力。城市 +4 [ICON_POWER] 电力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中的工业区获得 +2 [ICON_PRODUCTION] 生产力相邻加成（每拥有 1 个工业区建筑，这个加成便 +2）。</Text>
+			<Text>城市中的工业区从区域获得额外标准 [ICON_PRODUCTION] 生产力相邻加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_BLACK_MARKETEER_IZ_ADJACENT_BONUS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>从工业区获得 +2 [ICON_PRODUCTION] 生产力相邻加成（来自黑市商人）。</Text>
-		</Replace>
-		<Replace Tag="LOC_CCB_BLACK_MARKETEER_IZ_ADJACENT_BONUS_T1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>从工作坊获得 +2 [ICON_PRODUCTION] 生产力相邻加成（来自黑市商人）。</Text>
-		</Replace>
-		<Replace Tag="LOC_CCB_BLACK_MARKETEER_IZ_ADJACENT_BONUS_T2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>从工厂获得 +2 [ICON_PRODUCTION] 生产力相邻加成（来自黑市商人）。</Text>
-		</Replace>
-		<Replace Tag="LOC_CCB_BLACK_MARKETEER_IZ_ADJACENT_BONUS_T3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>从燃煤发电厂/燃油发电厂/核电厂获得 +2 [ICON_PRODUCTION] 生产力相邻加成（来自黑市商人）。</Text>
+			<Text>从相邻区域获得 +{1_num} [ICON_PRODUCTION] 生产力相邻加成（来自黑市商人）。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_RESOURCE_MANAGER_VERTICAL_INTEGRATION_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>此城市可从附近所有拥有辐射加成的工业区建筑处获得 [ICON_Production] 生产力，而不仅是从最高加成的建筑。</Text>
