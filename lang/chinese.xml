@@ -6247,7 +6247,13 @@
 			<Text>卡勒瓦拉</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MER_KALEVALA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>冻土和冻土丘陵的非市中心单元格上的树林或资源提供 +1 [ICON_FOOD] 食物（不可叠加）。伐木场提供 +2 [ICON_GOLD] 金币。相邻湖泊的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土、T4树林。</Text>
+			<Text>冻土和冻土丘陵的非市中心单元格上的树林或资源提供 +1 [ICON_FOOD] 食物（不可叠加）。伐木场提供 +2 [ICON_GOLD] 金币。相邻湖泊的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE]拥有“法典”市政后即可在古树林 2 个单元格范围内栽种树林。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土、T4树林。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_NAME" Language="zh_Hans_CN">
+			<Text>可在古树林 2 个单元格范围内栽种树林。（来自{LOC_TRAIT_CIVILIZATION_MER_KALEVALA_NAME}）</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{LOC_ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_NAME}</Text>
 		</Replace>
 		<!-- = Leader = -->
 		<Replace Tag="LOC_LEADER_MER_MANNERHEIM_NAME" Language="zh_Hans_CN">
@@ -6274,7 +6280,7 @@
 			<Text>雪地猎兵</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MER_SISSI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>芬兰现代特色近战单位，替代步兵。夹击战斗力加成 +100%。允许进行 [ICON_Range] 范围为 2，[ICON_Ranged] 远程攻击力为 75 的远程攻击。无需维护资源。</Text>
+			<Text>芬兰现代特色近战单位，替代步兵。夹击战斗力加成 +100%。允许进行 [ICON_Range] 范围为 1，[ICON_Ranged] 远程攻击力为 75 的远程攻击。无需维护资源。</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_MER_SISSI_NAME" Language="zh_Hans_CN">
 			<Text>莫蒂战术</Text>

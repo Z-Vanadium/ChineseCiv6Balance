@@ -137,6 +137,64 @@ INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
 ('REQ_CCB_FINLAND_TUNDRA_HILLS', 'TerrainType', 'TERRAIN_TUNDRA_HILLS'),
 ('REQ_CCB_FINLAND_PLOT_IS_NOT_CITY_CENTER', 'DistrictType', 'DISTRICT_CITY_CENTER');
 
+-- 2026/07/08 允许建造者在古树林2环内种植树林
+-- 允许种植
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_MER_KALEVALA', 'CCB_FINLAND_ENABLE_PLANT_FOREST');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_FINLAND_ENABLE_PLANT_FOREST', 'MODIFIER_PLAYER_ADJUST_FEATURE_UNLOCK', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_FINLAND_ENABLE_PLANT_FOREST', 'FeatureType', 'FEATURE_FOREST'), 
+('CCB_FINLAND_ENABLE_PLANT_FOREST', 'CivicType', 'CIVIC_CODE_OF_LAWS');
+
+-- 建造者不在古树林2环时，禁止种植树林（保护地球前）
+INSERT INTO Types (Type, Kind)
+VALUES ('ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST', 'KIND_ABILITY');
+INSERT INTO TypeTags (Type, Tag)
+VALUES ('ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST', 'CLASS_BUILDER');
+INSERT INTO UnitAbilities (UnitAbilityType, Name, Inactive, Description)
+VALUES ('ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST', 'LOC_ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_NAME', 1, 'LOC_ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_DESCRIPTION');
+
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+('TRAIT_CIVILIZATION_MER_KALEVALA', 'CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY', 0, 0, 0, 'REQSET_CCB_PLAYER_HAS_NOT_CIVIC_CONSERVATION', NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST', 'AbilityType', 'ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_PLAYER_HAS_NOT_CIVIC_CONSERVATION', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_PLAYER_HAS_NOT_CIVIC_CONSERVATION', 'REQ_CCB_PLAYER_HAS_NOT_CIVIC_CONSERVATION');
+INSERT INTO Requirements (RequirementId, RequirementType, Inverse) VALUES 
+('REQ_CCB_PLAYER_HAS_NOT_CIVIC_CONSERVATION', 'REQUIREMENT_PLAYER_HAS_CIVIC', 1);
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_PLAYER_HAS_NOT_CIVIC_CONSERVATION', 'CivicType', 'CIVIC_CONSERVATION');
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
+('ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST', 'CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_MOD');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_MOD', 'MODIFIER_CCB_PLAYER_CHANGE_UNIT_OPERATION_AVAILABILITY', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_IS_NOT_IN_RING_2_OF_BUILDING_GROVE');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_MOD', 'OperationType', 'UNITOPERATION_PLANT_FOREST'), 
+('CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_MOD', 'Available', '0');
+
+INSERT INTO Types (Type, Kind) VALUES 
+('MODIFIER_CCB_PLAYER_CHANGE_UNIT_OPERATION_AVAILABILITY', 'KIND_MODIFIER');
+INSERT INTO DynamicModifiers (ModifierType, CollectionType, EffectType) VALUES 
+('MODIFIER_CCB_PLAYER_CHANGE_UNIT_OPERATION_AVAILABILITY', 'COLLECTION_OWNER', 'EFFECT_CHANGE_UNIT_OPERATION_AVAILABILITY');
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+('REQSET_CCB_UNIT_IS_NOT_IN_RING_2_OF_BUILDING_GROVE', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+('REQSET_CCB_UNIT_IS_NOT_IN_RING_2_OF_BUILDING_GROVE', 'REQ_CCB_UNIT_IS_NOT_IN_RING_2_OF_BUILDING_GROVE');
+INSERT INTO Requirements (RequirementId, RequirementType, Inverse) VALUES 
+('REQ_CCB_UNIT_IS_NOT_IN_RING_2_OF_BUILDING_GROVE', 'REQUIREMENT_PLOT_ADJACENT_BUILDING_TYPE_MATCHES', 1);
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+('REQ_CCB_UNIT_IS_NOT_IN_RING_2_OF_BUILDING_GROVE', 'BuildingType', 'BUILDING_GROVE'), 
+('REQ_CCB_UNIT_IS_NOT_IN_RING_2_OF_BUILDING_GROVE', 'MaxRange', '2'), 
+('REQ_CCB_UNIT_IS_NOT_IN_RING_2_OF_BUILDING_GROVE', 'MinRange', '1');
+
 -- lumber mill gold
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
 ('TRAIT_CIVILIZATION_MER_KALEVALA', 'CCB_FINLAND_LUMBER_MILL_GOLD');
@@ -172,9 +230,10 @@ INSERT INTO Requirements (RequirementId, RequirementType) VALUES
 ('REQ_CCB_FINLAND_CITY_IN_LAKE_RING_2', 'REQUIREMENT_PLOT_ADJACENT_TO_LAKE');
 
 -- uu replace
+-- 2026/07/08 射程削弱至1
 DELETE FROM Units WHERE UnitType='UNIT_MER_SISSI';
 INSERT OR REPLACE INTO Units (UnitType, BaseMoves, Cost, StrategicResource, AdvisorType, BaseSightRange, ZoneOfControl, Domain, FormationClass, Name, Description, MandatoryObsoleteTech, PurchaseYield, PromotionClass, Maintenance, Combat, RangedCombat, AirSlots, Range, PrereqTech, PrereqCivic, TraitType, BuildCharges) SELECT
-'UNIT_MER_SISSI', BaseMoves, Cost, NULL, AdvisorType, BaseSightRange, ZoneOfControl, Domain, FormationClass, 'LOC_UNIT_MER_SISSI_NAME', 'LOC_UNIT_MER_SISSI_DESCRIPTION', MandatoryObsoleteTech, PurchaseYield, PromotionClass, Maintenance, 80, 75, AirSlots, 2, PrereqTech, PrereqCivic, 'TRAIT_CIVILIZATION_UNIT_MER_SISSI', BuildCharges
+'UNIT_MER_SISSI', BaseMoves, Cost, NULL, AdvisorType, BaseSightRange, ZoneOfControl, Domain, FormationClass, 'LOC_UNIT_MER_SISSI_NAME', 'LOC_UNIT_MER_SISSI_DESCRIPTION', MandatoryObsoleteTech, PurchaseYield, PromotionClass, Maintenance, 80, 75, AirSlots, 1, PrereqTech, PrereqCivic, 'TRAIT_CIVILIZATION_UNIT_MER_SISSI', BuildCharges
 FROM Units WHERE UnitType='UNIT_INFANTRY';
 
 -- UnitUpgrades
@@ -241,55 +300,13 @@ DELETE FROM Improvement_Adjacencies
       WHERE YieldChangeId = 'Sauna_Camp' AND
             ImprovementType = 'IMPROVEMENT_MER_SAUNA';
 
+INSERT INTO Improvement_YieldChanges (ImprovementType, YieldType, YieldChange) VALUES
+('IMPROVEMENT_MER_SAUNA', 'YIELD_CULTURE', 0);
 UPDATE Adjacency_YieldChanges SET TilesRequired=2 WHERE ID='Sauna_Woods';
 
 UPDATE Adjacency_YieldChanges SET ObsoleteCivic='CIVIC_NATURAL_HISTORY' WHERE ID='Sauna_Woods';
-INSERT INTO Adjacency_YieldChanges (
-                                       Self,
-                                       AdjacentResourceClass,
-                                       AdjacentResource,
-                                       ObsoleteTech,
-                                       ObsoleteCivic,
-                                       PrereqTech,
-                                       PrereqCivic,
-                                       AdjacentDistrict,
-                                       AdjacentImprovement,
-                                       AdjacentNaturalWonder,
-                                       AdjacentWonder,
-                                       AdjacentRiver,
-                                       AdjacentFeature,
-                                       AdjacentTerrain,
-                                       AdjacentSeaResource,
-                                       OtherDistrictAdjacent,
-                                       TilesRequired,
-                                       YieldChange,
-                                       YieldType,
-                                       Description,
-                                       ID
-                                   )
-                                   VALUES (
-                                       0,
-                                       'NO_RESOURCECLASS',
-                                       0,
-                                       NULL,
-                                       NULL,
-                                       NULL,
-                                       'CIVIC_NATURAL_HISTORY',
-                                       NULL,
-                                       NULL,
-                                       0,
-                                       0,
-                                       0,
-                                       'FEATURE_FOREST',
-                                       NULL,
-                                       0,
-                                       0,
-                                       1,
-                                       1,
-                                       'YIELD_CULTURE',
-                                       'Placeholder',
-                                       'Sauna_Woods_2'
-                                   );
+INSERT INTO Adjacency_YieldChanges (Self, AdjacentResourceClass, AdjacentResource, ObsoleteTech, ObsoleteCivic, PrereqTech, PrereqCivic, AdjacentDistrict, AdjacentImprovement, AdjacentNaturalWonder, AdjacentWonder, AdjacentRiver, AdjacentFeature, AdjacentTerrain, AdjacentSeaResource, OtherDistrictAdjacent, TilesRequired, YieldChange, YieldType, Description, ID) 
+VALUES (0, 'NO_RESOURCECLASS', 0, NULL, NULL, NULL, 'CIVIC_NATURAL_HISTORY', NULL, NULL, 0, 0, 0, 'FEATURE_FOREST', NULL, 0, 0, 1, 1, 'YIELD_CULTURE', 'Placeholder', 'Sauna_Woods_2');
 INSERT INTO Improvement_Adjacencies (ImprovementType, YieldChangeId) VALUES 
 ('IMPROVEMENT_MER_SAUNA', 'Sauna_Woods_2');
 
