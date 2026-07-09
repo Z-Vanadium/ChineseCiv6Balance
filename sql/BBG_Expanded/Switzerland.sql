@@ -129,7 +129,7 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 UPDATE Buildings SET PrereqTech=NULL, PrereqCivic='CIVIC_DIPLOMATIC_SERVICE', Housing=1 WHERE BuildingType='BUILDING_CVS_SWITZERLAND_UI';
 
 -- ub no gold
-UPDATE Building_YieldChanges SET YieldChange=6 WHERE BuildingType = 'BUILDING_CVS_SWITZERLAND_UI' AND YieldType = 'YIELD_GOLD';
+UPDATE Building_YieldChanges SET YieldChange=4 WHERE BuildingType = 'BUILDING_CVS_SWITZERLAND_UI' AND YieldType = 'YIELD_GOLD';
 
 -- form bbg
 INSERT INTO BuildingModifiers (BuildingType, ModifierId) SELECT
