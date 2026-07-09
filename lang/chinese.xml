@@ -6406,7 +6406,7 @@
 			<Text>日内瓦公约</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_SWITZERLAND_UA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“政治哲学”市政后，获得城邦“日内瓦”的宗主国效果：[ICON_TechBoosted] 尤里卡提供 +5% [ICON_Science] 科技开销。[NEWLINE]训练间谍时 +50% [ICON_Production] 生产力。敌方间谍在我方城市中，效力降低 1 级。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T4草原山脉、T4平原山脉。</Text>
+			<Text>获得城邦“日内瓦”的宗主国效果：[ICON_TechBoosted] 尤里卡提供 +5% [ICON_Science] 科技开销。[NEWLINE]训练间谍时 +50% [ICON_Production] 生产力。敌方间谍在我方城市中，效力降低 1 级。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T4草原山脉、T4平原山脉。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_CVS_SWITZERLAND_UA_XP2_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_TRAIT_CIVILIZATION_CVS_SWITZERLAND_UA_DESCRIPTION}</Text>
@@ -6423,7 +6423,7 @@
 			<Text>十字路口的先驱</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_LEADER_CVS_ESCHER_UA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>商业中心和工业区从山脉获得标准相邻加成。修建市场、银行、工作坊和工厂时 +100% [ICON_Production] 生产力。“帝国初期”市政后，位于山脉 2 个单元格范围内的城市 +1 [ICON_AMENITIES] 宜居度。</Text>
+			<Text>商业中心和工业区从山脉获得标准相邻加成。[NEWLINE]位于山脉 2 个单元格范围内的城市：修建市场、银行、工作坊和工厂时 +100% [ICON_Production] 生产力；“帝国初期”市政后，+1 [ICON_AMENITIES] 宜居度。</Text>
 		</Replace>
 		<Replace Tag="LOC_MODIFIER_CVS_ESCHER_UA_INDUSTRIAL_ADJ_MOUNTAIN" Language="zh_Hans_CN">
 			<Text>来自相邻山脉的+{1_num} [ICON_Production] 生产力。</Text>
@@ -6607,7 +6607,7 @@
 			<Text>州议会大厦</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_CVS_SWITZERLAND_UI_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>瑞士特色建筑，替代银行。解锁于“外交部门”市政。提供 +2 [ICON_HOUSING] 住房、+8 [ICON_GOLD] 金币。[NEWLINE]每宗主一个城邦额外提供 +1 [ICON_GOLD] 金币。城市中有 [ICON_GOVERNOR] 总督就职时每回合提供 +1 [ICON_INFLUENCEPERTURN] 影响力点数。[NEWLINE][NEWLINE]为该城市出发的 [ICON_TRADEROUTE] 贸易路线提供+2 [ICON_GOLD] 金币。[NEWLINE]为通往该城市的 [ICON_TRADEROUTE] 贸易路线提供+1 [ICON_GOLD] 金币。</Text>
+			<Text>瑞士特色建筑，替代银行。解锁于“外交部门”市政。提供 +1 [ICON_HOUSING] 住房、+4 [ICON_GOLD] 金币。[NEWLINE]每宗主一个城邦额外提供 +1 [ICON_GOLD] 金币。城市中有 [ICON_GOVERNOR] 总督就职时每回合提供 +1 [ICON_INFLUENCEPERTURN] 影响力点数。[NEWLINE][NEWLINE]为该城市出发的 [ICON_TRADEROUTE] 贸易路线提供+2 [ICON_GOLD] 金币。[NEWLINE]为通往该城市的 [ICON_TRADEROUTE] 贸易路线提供+1 [ICON_GOLD] 金币。</Text>
 		</Replace>
 		<!-- = Swiss city names = -->
 		<Replace Tag="LOC_CITY_NAME_BERN" Language="zh_Hans_CN">
