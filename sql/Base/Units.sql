@@ -149,6 +149,8 @@ UPDATE Units SET AntiAirCombat=125, BaseMoves=5 WHERE UnitType='UNIT_MOBILE_SAM'
 -- 16/12/22 Obsolescence
 -- 15/10/23 Added Varus
 -- 30/03/25 Units are now obsolete when the next tech is unlocked 05/04/25 reverted
+-- 2026/07/12 抗骑兵及其UU不再过时
+UPDATE Units SET MandatoryObsoleteTech=NULL WHERE UnitType IN ('UNIT_SPEARMAN', 'UNIT_GREEK_HOPLITE', 'UNIT_PIKEMAN', 'UNIT_CVS_SWITZERLAND_UU', 'UNIT_ZULU_IMPI', 'UNIT_PIKE_AND_SHOT', 'UNIT_SWEDEN_CAROLEAN');
 UPDATE Units SET MandatoryObsoleteTech='TECH_MILITARY_TACTICS' WHERE UnitType='UNIT_WARRIOR';
 UPDATE Units SET MandatoryObsoleteTech='TECH_BALLISTICS' WHERE UnitType='UNIT_HEAVY_CHARIOT';
 UPDATE Units SET MandatoryObsoleteTech='TECH_GUNPOWDER' WHERE UnitType='UNIT_SWORDSMAN';

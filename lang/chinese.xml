@@ -6247,7 +6247,7 @@
 			<Text>卡勒瓦拉</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_MER_KALEVALA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>冻土和冻土丘陵的非市中心单元格上的树林或资源提供 +1 [ICON_FOOD] 食物（不可叠加）。伐木场提供 +2 [ICON_GOLD] 金币。相邻湖泊的城市 [ICON_CULTURE] 文化产出 +5%。[NEWLINE][NEWLINE]拥有“法典”市政后即可在古树林 2 个单元格范围内栽种树林。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土、T4树林。</Text>
+			<Text>冻土和冻土丘陵的非市中心单元格上：[NEWLINE][ICON_BULLET]树林或资源提供 +1 [ICON_FOOD] 食物（不可叠加）；[NEWLINE][ICON_BULLET]拥有“法典”市政后，魅力值为“惊艳”的资源提供 +1 [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]拥有“政治哲学”市政后即可在古树林 2 个单元格范围内栽种树林。建成 3 个古树林后，在 [ICON_CAPITAL] 首都获得 1 个自然学家。购买自然学家的 [ICON_FAITH] 花费 -50%。[NEWLINE][NEWLINE][ICON_BULLET]出生地关联：T1冻土、T4树林。</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_CCB_FINLAND_DISABLE_UNIT_BUILDER_PLANT_FOREST_NAME" Language="zh_Hans_CN">
 			<Text>可在古树林 2 个单元格范围内栽种树林。（来自{LOC_TRAIT_CIVILIZATION_MER_KALEVALA_NAME}）</Text>
