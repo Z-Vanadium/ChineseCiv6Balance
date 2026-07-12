@@ -28,13 +28,13 @@ INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, Ow
 ('CCB_MALAYSIA_NAVAL_MELEE_MOVEMENT_BONUS', 'MODIFIER_PLAYER_UNITS_ADJUST_MOVEMENT', 0, 0, 0, NULL, 'REQSET_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_MALAYSIA_NAVAL_MELEE_MOVEMENT_BONUS', 'Amount', '1');
-INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
+INSERT OR IGNORE INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES 
 ('REQSET_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE', 'REQUIREMENTSET_TEST_ALL');
-INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
+INSERT OR IGNORE INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
 ('REQSET_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE', 'REQ_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE');
-INSERT INTO Requirements (RequirementId, RequirementType) VALUES 
+INSERT OR IGNORE INTO Requirements (RequirementId, RequirementType) VALUES 
 ('REQ_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE', 'REQUIREMENT_UNIT_PROMOTION_CLASS_MATCHES');
-INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
+INSERT OR IGNORE INTO RequirementArguments (RequirementId, Name, Value) VALUES 
 ('REQ_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE', 'UnitPromotionClass', 'PROMOTION_CLASS_NAVAL_MELEE');
 
 -- 2026/07/05 快船不加力，+1移动力，价格降低240
