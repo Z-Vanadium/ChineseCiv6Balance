@@ -170,7 +170,15 @@ INSERT INTO GovernorPromotionPrereqs (GovernorPromotionType, PrereqGovernorPromo
 -- 06/07/24 Liang rework stay to 4 turns
 UPDATE Governors SET TransitionStrength=125 WHERE GovernorType='GOVERNOR_THE_BUILDER';
 
+-- 2026/07/12 基础能力：新增免疫自然灾害
+INSERT INTO GovernorPromotionModifiers (GovernorPromotionType, ModifierId) VALUES
+    ('GOVERNOR_PROMOTION_BUILDER_GUILDMASTER', 'REINFORCED_INFRASTRUCTURE_PREVENET_STRUCTURAL_DAMAGE');
+
 -- LI Reinforced Materials : Prod +1 for floodplains and volcanic soils. This city's improvements, buildings and District Districts cannot be damaged by Environmental Effects.
+-- 2026/07/12 不再免疫自然灾害
+DELETE FROM GovernorPromotionModifiers
+      WHERE GovernorPromotionType = 'GOVERNOR_PROMOTION_REINFORCED_INFRASTRUCTURE' AND
+            ModifierId = 'REINFORCED_INFRASTRUCTURE_PREVENET_STRUCTURAL_DAMAGE';
 UPDATE GovernorPromotions SET Level=1 WHERE GovernorPromotionType='GOVERNOR_PROMOTION_REINFORCED_INFRASTRUCTURE';
 DELETE FROM GovernorPromotionPrereqs WHERE GovernorPromotionType='GOVERNOR_PROMOTION_REINFORCED_INFRASTRUCTURE';
 INSERT INTO GovernorPromotionPrereqs (GovernorPromotionType, PrereqGovernorPromotion) VALUES

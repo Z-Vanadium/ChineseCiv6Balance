@@ -18,7 +18,11 @@ DELETE FROM GovernorPromotionPrereqs WHERE PrereqGovernorPromotion='GOVERNOR_PRO
 DELETE FROM GovernorPromotionModifiers WHERE GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_GRAND_INQUISITOR' OR GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_LAYING_ON_OF_HANDS';
 
 -- Base Bishop : +15% culture in city. Religious pressure to adjacent cities in 100% stronger from this city. +2 Faith per specialty district in this city.             
+-- 2026/07/12 每个专业化区域不再提供信仰值（移动到 R1）
 UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_BISHOP' WHERE GovernorPromotionType='GOVERNOR_PROMOTION_EDUCATOR_LIBRARIAN' AND ModifierId='LIBRARIAN_CULTURE_YIELD_BONUS';
+DELETE FROM GovernorPromotionModifiers
+      WHERE GovernorPromotionType = 'GOVERNOR_PROMOTION_CARDINAL_BISHOP' AND
+            ModifierId = 'CARDINAL_BISHOP_FAITH_DISTRICT';
 
 -- LI Conoisseur : +1 culture per population. Ignores pressure and combat effects from Religions not founded by the Governor's player.    
 DELETE FROM GovernorPromotionPrereqs WHERE GovernorPromotionType='GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR';
@@ -29,6 +33,7 @@ INSERT INTO GovernorPromotionPrereqs (GovernorPromotionType, PrereqGovernorPromo
 UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR' WHERE ModifierId IN ('CARDINAL_CITADEL_OF_GOD_PRESSURE', 'CARDINAL_CITADEL_OF_GOD_COMBAT');
 
 -- RI Citadel of gods : +4 prophet point when city has HS, can faith buy HS buildings -20%
+-- 2026/07/12 6 环内圣地提供 +3 信仰值（而不是 +2）；新增每个专业化区域提供 +2 信仰值
 -- 28/11/24 +2 prophet points and faith per holy site within 6 tiles of this city
 -- 15/12/24 Removed prophet points per HS but added 4 flat prophets point back
 DELETE FROM GovernorPromotionPrereqs WHERE GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_CITADEL_OF_GOD';  
@@ -61,13 +66,14 @@ INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
 
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_MOKSHA_FAITH_FOR_HS', 'ModifierId', 'BBG_MOKSHA_FAITH_FOR_HS_MODIFIER'),
-    ('BBG_MOKSHA_FAITH_FOR_HS_MODIFIER', 'Amount', 2),
+    ('BBG_MOKSHA_FAITH_FOR_HS_MODIFIER', 'Amount', 3),
     ('BBG_MOKSHA_FAITH_FOR_HS_MODIFIER', 'YieldType', 'YIELD_FAITH'),
     ('BBG_MOKSHA_GREATPROPHET_POINT_FOR_HS', 'ModifierId', 'BBG_MOKSHA_GREATPROPHET_POINT_FOR_HS_MODIFIER'),
     ('BBG_MOKSHA_GREATPROPHET_POINT_FOR_HS', 'Amount', 2),
     ('BBG_MOKSHA_GREATPROPHET_POINT_FOR_HS_MODIFIER', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_PROPHET');
 INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
-    ('GOVERNOR_PROMOTION_CARDINAL_CITADEL_OF_GOD', 'BBG_MOKSHA_FAITH_FOR_HS');
+    ('GOVERNOR_PROMOTION_CARDINAL_CITADEL_OF_GOD', 'BBG_MOKSHA_FAITH_FOR_HS'),
+    ('GOVERNOR_PROMOTION_CARDINAL_CITADEL_OF_GOD', 'CARDINAL_BISHOP_FAITH_DISTRICT');
 
 -- 4 prophets points per turn
 -- 30/06/25 Reduced to 2
@@ -371,6 +377,24 @@ UPDATE ModifierArguments SET Value=40 WHERE ModifierId='GROUNDBREAKER_BONUS_HARV
 -- 06/07/23 REMOVED, now give +2 food and 20% growth
 -- L1 Expedition : +20% Growth in the city. Internal traderoute +2 food 
 -- 11/08/24 L1 Expedition : +20% Growth in the city. Internal traderoute +1 food / +1 prod
+-- 2026/07/12 新增此城训练的移民 +1 移动力
+INSERT INTO Types(Type, Kind) VALUES
+    ('CCB_SETTLER_MOVEMENT_ABILITY', 'KIND_ABILITY');
+INSERT INTO TypeTags(Type, Tag) VALUES
+    ('CCB_SETTLER_MOVEMENT_ABILITY', 'CLASS_SETTLER');
+INSERT INTO UnitAbilities(UnitAbilityType, Name, Description, Inactive) VALUES
+    ('CCB_SETTLER_MOVEMENT_ABILITY', 'CCB_SETTLER_MOVEMENT_ABILITY_NAME', 'CCB_SETTLER_MOVEMENT_ABILITY_DESC', 1);
+INSERT INTO UnitAbilityModifiers(UnitAbilityType, ModifierId) VALUES
+    ('CCB_SETTLER_MOVEMENT_ABILITY', 'CCB_SETTLER_MOVEMENT_ABILITY_MODIFIER');
+INSERT INTO Modifiers(ModifierId, ModifierType, Permanent) VALUES
+    ('CCB_GIVE_SETTLER_MOVEMENT_ABILITY', 'MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS', 0),
+    ('CCB_SETTLER_MOVEMENT_ABILITY_MODIFIER', 'MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT', 1);
+INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
+    ('CCB_GIVE_SETTLER_MOVEMENT_ABILITY', 'AbilityType', 'CCB_SETTLER_MOVEMENT_ABILITY'),
+    ('CCB_SETTLER_MOVEMENT_ABILITY_MODIFIER', 'Amount', '1');
+INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
+    ('GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION', 'CCB_GIVE_SETTLER_MOVEMENT_ABILITY');
+
 UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION' WHERE ModifierId='SURPLUS_LOGISTICS_TRADE_ROUTE_FOOD';
 UPDATE GovernorPromotions SET Level=1, Column=0 WHERE GovernorPromotionType='GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION';
     -- food to 1 (from base game)
@@ -641,20 +665,6 @@ INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) VALUES
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('CCB_REYNA_TRADEROUTE_LATE', 'Amount', '1');
 
-INSERT INTO Modifiers(ModifierId, ModifierType) VALUES
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_PROD', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS');
-INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_PROD', 'Amount', '1'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_PROD', 'Domestic', '1'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_PROD', 'YieldType', 'YIELD_PRODUCTION'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'Amount', '1'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'Domestic', '1'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'YieldType', 'YIELD_FOOD');
--- INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
---     ('GOVERNOR_PROMOTION_MERCHANT_HARBORMASTER', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_PROD'),
---     ('GOVERNOR_PROMOTION_MERCHANT_HARBORMASTER', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD');
-
 -- RI Forestry Management : This city receives +2 gold for each uninproved feature which also grant +1 appeal.      
 INSERT INTO Requirements (RequirementId, RequirementType) VALUES
     ('BBG_REQUIRES_PLOT_HAS_ANY_FEATURE_NO_IMPROVEMENTS', 'REQUIREMENT_REQUIREMENTSET_IS_MET');
@@ -681,7 +691,7 @@ UPDATE Modifiers SET SubjectRequirementSetId='BBG_PLOT_HAS_ANY_FEATURE_NO_IMPROV
 
 -- MII Tax Collector : +2 gold per turn for each citizen in the city. +1 traderoute capacity. 
 -- +1 trade route
--- 2026/06/30 移除额外商路；人口金移动到 LI；新增金币购买区域，并降低 -10%；新增商路+1科技值+1文化值
+-- 2026/07/12 移除额外商路；人口金移动到 LI；新增金币购买区域，并降低 -10%；新增商路提供 +4 金币 +1 ⻝物
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('BBG_REYNA_TRADEROUTE', 'MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
@@ -701,32 +711,32 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_REYNA_DISTRICT_GOLD_DISCOUNT', 'Amount', '10');
 
 INSERT INTO Modifiers(ModifierId, ModifierType) VALUES
-    ('CCB_REYNA_TRADE_ROUTE_SCIENCE', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS'),
-    ('CCB_REYNA_TRADE_ROUTE_CULTURE', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS');
+    ('CCB_REYNA_TRADE_ROUTE_GOLD', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS'),
+    ('CCB_REYNA_TRADE_ROUTE_FOOD', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS');
 INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
-    ('CCB_REYNA_TRADE_ROUTE_SCIENCE', 'Amount', '1'),
-    ('CCB_REYNA_TRADE_ROUTE_SCIENCE', 'Domestic', '0'),
-    ('CCB_REYNA_TRADE_ROUTE_SCIENCE', 'YieldType', 'YIELD_SCIENCE'),
-    ('CCB_REYNA_TRADE_ROUTE_CULTURE', 'Amount', '1'),
-    ('CCB_REYNA_TRADE_ROUTE_CULTURE', 'Domestic', '0'),
-    ('CCB_REYNA_TRADE_ROUTE_CULTURE', 'YieldType', 'YIELD_CULTURE');
+    ('CCB_REYNA_TRADE_ROUTE_GOLD', 'Amount', '4'),
+    ('CCB_REYNA_TRADE_ROUTE_GOLD', 'Domestic', '0'),
+    ('CCB_REYNA_TRADE_ROUTE_GOLD', 'YieldType', 'YIELD_GOLD'),
+    ('CCB_REYNA_TRADE_ROUTE_FOOD', 'Amount', '1'),
+    ('CCB_REYNA_TRADE_ROUTE_FOOD', 'Domestic', '0'),
+    ('CCB_REYNA_TRADE_ROUTE_FOOD', 'YieldType', 'YIELD_FOOD');
 INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
-    ('GOVERNOR_PROMOTION_MERCHANT_TAX_COLLECTOR', 'CCB_REYNA_TRADE_ROUTE_SCIENCE'),
-    ('GOVERNOR_PROMOTION_MERCHANT_TAX_COLLECTOR', 'CCB_REYNA_TRADE_ROUTE_CULTURE');
+    ('GOVERNOR_PROMOTION_MERCHANT_TAX_COLLECTOR', 'CCB_REYNA_TRADE_ROUTE_GOLD'),
+    ('GOVERNOR_PROMOTION_MERCHANT_TAX_COLLECTOR', 'CCB_REYNA_TRADE_ROUTE_FOOD');
 
 INSERT INTO Modifiers(ModifierId, ModifierType) VALUES
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_SCIENCE', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_CULTURE', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS');
+    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_GOLD', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS'),
+    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS');
 INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_SCIENCE', 'Amount', '1'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_SCIENCE', 'Domestic', '1'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_SCIENCE', 'YieldType', 'YIELD_SCIENCE'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_CULTURE', 'Amount', '1'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_CULTURE', 'Domestic', '1'),
-    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_CULTURE', 'YieldType', 'YIELD_CULTURE');
+    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_GOLD', 'Amount', '4'),
+    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_GOLD', 'Domestic', '1'),
+    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_GOLD', 'YieldType', 'YIELD_GOLD'),
+    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'Amount', '1'),
+    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'Domestic', '1'),
+    ('CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD', 'YieldType', 'YIELD_FOOD');
 INSERT INTO GovernorPromotionModifiers(GovernorPromotionType, ModifierId) VALUES
-    ('GOVERNOR_PROMOTION_MERCHANT_TAX_COLLECTOR', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_SCIENCE'),
-    ('GOVERNOR_PROMOTION_MERCHANT_TAX_COLLECTOR', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_CULTURE');
+    ('GOVERNOR_PROMOTION_MERCHANT_TAX_COLLECTOR', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_GOLD'),
+    ('GOVERNOR_PROMOTION_MERCHANT_TAX_COLLECTOR', 'CCB_REYNA_DOMESTIC_TRADE_ROUTE_FOOD');
 
 
 -- LIII Contractor : Allow city to purchase districts with gold. Building cost reduced by 50%. Support unit buy reduced by 50%  
