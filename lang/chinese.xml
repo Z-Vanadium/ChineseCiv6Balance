@@ -5621,7 +5621,7 @@
 			<Text>爱国军</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_LEU_GAUCHO_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>阿根廷特色现代近战单位，替代步兵，解锁于“动员”市政。基础 [ICON_STRENGTH] 战斗力更高，但是无法从大将军处获得 [ICON_STRENGTH] 战斗力加成。能忽视控制区。</Text>
+			<Text>阿根廷特色现代近战单位，替代步兵，解锁于“动员”市政。无法从大将军处获得 [ICON_STRENGTH] 战斗力加成。能忽视控制区。</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_SANMARTIN_MOUNTED_GENERAL_COMBAT_NAME" Language="zh_Hans_CN">
 			<Text>{LOC_CCB_SANMARTIN_MOUNTED_GENERAL_COMBAT_DESC}</Text>

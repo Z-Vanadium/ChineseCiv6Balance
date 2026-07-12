@@ -168,9 +168,10 @@ UPDATE District_TradeRouteYields SET YieldChangeAsOrigin=0, YieldChangeAsDomesti
 DELETE FROM District_GreatPersonPoints WHERE DistrictType='DISTRICT_LEU_ARRABAL' AND GreatPersonClassType='GREAT_PERSON_CLASS_MUSICIAN';
 
 -- uu replace
+-- 2026/07/12 基础力降低至 80
 DELETE FROM Units WHERE UnitType='UNIT_LEU_GAUCHO';
 INSERT OR REPLACE INTO Units (UnitType, BaseMoves, Cost, StrategicResource, AdvisorType, BaseSightRange, ZoneOfControl, Domain, FormationClass, Name, Description, MandatoryObsoleteTech, PurchaseYield, PromotionClass, Maintenance, Combat, RangedCombat, AirSlots, Range, PrereqTech, PrereqCivic, TraitType, BuildCharges) SELECT
-'UNIT_LEU_GAUCHO', BaseMoves, Cost, 'RESOURCE_NITER', AdvisorType, BaseSightRange, ZoneOfControl, Domain, FormationClass, 'LOC_UNIT_LEU_GAUCHO_NAME', 'LOC_UNIT_LEU_GAUCHO_DESCRIPTION', MandatoryObsoleteTech, PurchaseYield, PromotionClass, Maintenance, 85, RangedCombat, AirSlots, Range, NULL, 'CIVIC_MOBILIZATION', 'TRAIT_CIVILIZATION_UNIT_LEU_GAUCHO', BuildCharges
+'UNIT_LEU_GAUCHO', BaseMoves, Cost, 'RESOURCE_NITER', AdvisorType, BaseSightRange, ZoneOfControl, Domain, FormationClass, 'LOC_UNIT_LEU_GAUCHO_NAME', 'LOC_UNIT_LEU_GAUCHO_DESCRIPTION', MandatoryObsoleteTech, PurchaseYield, PromotionClass, Maintenance, 80, RangedCombat, AirSlots, Range, NULL, 'CIVIC_MOBILIZATION', 'TRAIT_CIVILIZATION_UNIT_LEU_GAUCHO', BuildCharges
 FROM Units WHERE UnitType='UNIT_INFANTRY';
 
 -- UnitUpgrades
