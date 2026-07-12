@@ -124,6 +124,9 @@ INSERT INTO Modifiers(ModifierId, ModifierType) VALUES
 INSERT INTO ModifierArguments(ModifierId, Name, Value) VALUES
     ('BBG_NO_SUPPORT_BONUS_MODIFIER', 'Percent', '-100');
 
+-- 2026/07/12: 远程单位驻军升级：修改为占据堡垒或区域提供 +7 战斗力（而不是 +10）
+UPDATE ModifierArguments SET Value='7' WHERE ModifierId='GARRISON_BONUS_DISTRICTS' AND Name='Amount';
+
 -- Battlecry description is Missleading, in base it works on mele/anticav and ranged.
 -- BBG5.0 Changes it to work on Monks as well, here I also let the promo work on recon.
 -- So than it works on all land non-cavalary units
