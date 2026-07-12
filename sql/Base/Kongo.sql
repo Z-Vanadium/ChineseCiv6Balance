@@ -126,7 +126,8 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_KONGO_AMENITY_FROM_MBANZA', 'Amount', '1');
 
 -- 2025/10/11 uu +10 to +5 when defense ranged
-UPDATE ModifierArguments SET Value=5 WHERE ModifierId='NAGAO_RANGED_DEFENSE' AND Name='Amount';
+-- 2026/07/12 reverted
+-- UPDATE ModifierArguments SET Value=5 WHERE ModifierId='NAGAO_RANGED_DEFENSE' AND Name='Amount';
 
 --2025/10/11 male kongo: all melee and anti cavalry get +5 when defense ranged
 -- 2026/06/02 reverted
