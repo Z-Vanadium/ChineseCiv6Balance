@@ -3,14 +3,14 @@
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e00" version="1500"> -->
 
 <!-- BETA ModID-->
-<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1503">
+<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1504">
 
 <!-- WIP ModID -->
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1300"> -->
 	<Properties>
-		<Name>CCB BETA 1.5c</Name>
+		<Name>CCB BETA 1.5d</Name>
 		<!-- <Name>CCB WIP</Name> -->
-		<Version>1503</Version>
+		<Version>1504</Version>
 		<Description>
 			中国特色平衡模组，取代BBG。
 		</Description>
