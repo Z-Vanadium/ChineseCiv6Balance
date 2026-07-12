@@ -102,7 +102,8 @@ INSERT INTO Ruivo_New_Adjacency_Text (ID, Tooltip) VALUES
 
 -- 02/07/24 Qin Shi builder charge for wonder upgraded to +20% (from +15%)
 -- 24/07/24 No
--- UPDATE ModifierArguments SET Value=20 WHERE ModifierId='TRAIT_BUILDER_WONDER_PERCENT' AND Name='Amount';
+-- 2026/07/12 加速奇观 16%
+UPDATE ModifierArguments SET Value=16 WHERE ModifierId='TRAIT_BUILDER_WONDER_PERCENT' AND Name='Amount';
 
 INSERT INTO Requirements (RequirementId, RequirementType) VALUES
     ('BBG_REQUIRES_PLOT_ADJACENT_TO_WALL', 'REQUIREMENT_PLOT_ADJACENT_IMPROVEMENT_TYPE_MATCHES');
@@ -118,6 +119,7 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 
 
 -- 30/06/25 China leaders get different wall buffs
+-- 2026/07/12 ⻓城不再提供金币；⻓城提供 +2 信仰值
 INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
     ('BBG_QINSHI_WALL_GOLD_ADJACENT', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'BBG_PLOT_IS_WALL_NEXT_TO_WALL_REQSET'),
     ('BBG_QINSHI_WALL_FAITH_ADJACENT', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'BBG_PLOT_IS_WALL_NEXT_TO_WALL_REQSET'),
@@ -125,13 +127,13 @@ INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
     ('BBG_QINSHI_WALL_FAITH', 'MODIFIER_PLAYER_ADJUST_PLOT_YIELD', 'BBG_PLOT_IS_WALL_REQSET');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_QINSHI_WALL_GOLD_ADJACENT', 'YieldType', 'YIELD_GOLD'),
-    ('BBG_QINSHI_WALL_GOLD_ADJACENT', 'Amount', 1),
+    ('BBG_QINSHI_WALL_GOLD_ADJACENT', 'Amount', 0),
     ('BBG_QINSHI_WALL_FAITH_ADJACENT', 'YieldType', 'YIELD_FAITH'),
-    ('BBG_QINSHI_WALL_FAITH_ADJACENT', 'Amount', 1),
+    ('BBG_QINSHI_WALL_FAITH_ADJACENT', 'Amount', 2),
     ('BBG_QINSHI_WALL_GOLD', 'YieldType', 'YIELD_GOLD'),
-    ('BBG_QINSHI_WALL_GOLD', 'Amount', 1),
+    ('BBG_QINSHI_WALL_GOLD', 'Amount', 0),
     ('BBG_QINSHI_WALL_FAITH', 'YieldType', 'YIELD_FAITH'),
-    ('BBG_QINSHI_WALL_FAITH', 'Amount', 1);
+    ('BBG_QINSHI_WALL_FAITH', 'Amount', 2);
 INSERT INTO TraitModifiers VALUES
     ('FIRST_EMPEROR_TRAIT', 'BBG_QINSHI_WALL_GOLD_ADJACENT'),
     ('FIRST_EMPEROR_TRAIT', 'BBG_QINSHI_WALL_FAITH_ADJACENT');
