@@ -217,3 +217,7 @@ UPDATE GreatPersonIndividuals SET ActionEffectTileHighlighting=1 WHERE GreatPers
 
 UPDATE GreatPersonIndividuals SET ActionRequiresNonHostileTerritory=0 WHERE GreatPersonIndividualType='GREAT_PERSON_INDIVIDUAL_ZHOU_DAGUAN';
 
+-- 2026/07/12 现代大将军：对信息时代单位生效（而不是仅到原子能时代）
+-- LOC_GREATPERSON_COMBAT_STRENGTH_AOE_MODERN_LAND
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+    ('AOE_MODERN_REQUIREMENTS', 'AOE_REQUIRES_INFORMATION_UNIT');
