@@ -113,4 +113,6 @@ INSERT INTO Units_XP2 (UnitType, ResourceCost) VALUES
     ('UNIT_INDIAN_VARU', 10);
 
 -- 2025/10/11 Varus +10 prod cost
-UPDATE Units SET Cost=130 WHERE UnitType='UNIT_INDIAN_VARU';
+-- 2026/07/12 减力减低至 -3；造价降低至 55（联机速度下）
+UPDATE Units SET Cost=110 WHERE UnitType='UNIT_INDIAN_VARU';
+UPDATE ModifierArguments SET Value='-3' WHERE ModifierId='VARU_NEGATIVE_COMBAT_MODIFIER' AND Name='Amount';
