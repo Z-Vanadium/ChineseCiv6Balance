@@ -981,7 +981,7 @@
 
 		<UpdateDatabase id="BBG_Expanded_WIP">
 			<Properties>
-				<LoadOrder>100000000</LoadOrder>
+				<LoadOrder>100000</LoadOrder>
 			</Properties>
 			<Criteria>BBGExpanded_WIP</Criteria>
 			<Criteria>XP1_AND_XP2</Criteria>
@@ -1008,7 +1008,7 @@
 		<!-- I don't know how to do an OR -->
 		<UpdateDatabase id="BBG_Expanded_Release">
 			<Properties>
-				<LoadOrder>100000000</LoadOrder>
+				<LoadOrder>100000</LoadOrder>
 			</Properties>
 			<Criteria>BBGExpanded_Release</Criteria>
 			<Criteria>XP1_AND_XP2</Criteria>
@@ -1031,6 +1031,13 @@
 			<File>sql/BBG_Expanded/Finland.sql</File>
 			<File>sql/BBG_Expanded/Malaysia.sql</File>
 			<File>sql/BBG_Expanded/Switzerland.sql</File>
+		</UpdateDatabase>
+
+		<UpdateDatabase>
+			<Properties>
+				<LoadOrder>100010</LoadOrder>
+			</Properties>
+			<File>sql/Base/Excluded_Adjacencies.sql</File>
 		</UpdateDatabase>
 
 
@@ -1596,5 +1603,6 @@
 		<File>MABC/UI/RUIVO_MODULAR_UI.lua</File>
 		<File>MABC/UI/RUIVO_MODULAR_UI.xml</File>
 		<File>MABC/标准写法.sql</File>
+		<File>sql/Base/Excluded_Adjacencies.sql</File>
 	</Files>
 </Mod>
