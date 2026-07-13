@@ -108,9 +108,13 @@ INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
     ('DISTRICT_COMMERCIAL_HUB', 'CCB_CH_Kongo_Theater'),
     ('DISTRICT_THEATER', 'CCB_Theater_Kongo_CH');
 INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId)
-    SELECT TraitType, 'CCB_CH_Kongo_Theater' FROM LeaderTraits WHERE (LeaderType != 'LEADER_NZINGA_MBANDE' AND LeaderType != 'LEADER_DEFAULT') GROUP BY LeaderType;
+    SELECT TraitType, 'CCB_CH_Kongo_Theater' FROM CivilizationTraits WHERE CivilizationType != 'CIVILIZATION_KONGO';
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
+    ('TRAIT_LEADER_RELIGIOUS_CONVERT', 'CCB_CH_Kongo_Theater');
 INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId)
-    SELECT TraitType, 'CCB_Theater_Kongo_CH' FROM LeaderTraits WHERE (LeaderType != 'LEADER_NZINGA_MBANDE' AND LeaderType != 'LEADER_DEFAULT') GROUP BY LeaderType;
+    SELECT TraitType, 'CCB_Theater_Kongo_CH' FROM CivilizationTraits WHERE CivilizationType != 'CIVILIZATION_KONGO';
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
+    ('TRAIT_LEADER_RELIGIOUS_CONVERT', 'CCB_Theater_Kongo_CH');
 
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
 ('TRAIT_LEADER_NZINGA_MBANDE', 'CCB_MBANDE_TOURISM_PER_DISTRICT');
