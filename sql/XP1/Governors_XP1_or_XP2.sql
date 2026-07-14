@@ -18,11 +18,18 @@ DELETE FROM GovernorPromotionPrereqs WHERE PrereqGovernorPromotion='GOVERNOR_PRO
 DELETE FROM GovernorPromotionModifiers WHERE GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_GRAND_INQUISITOR' OR GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_LAYING_ON_OF_HANDS';
 
 -- Base Bishop : +15% culture in city. Religious pressure to adjacent cities in 100% stronger from this city. +2 Faith per specialty district in this city.             
--- 2026/07/12 每个专业化区域不再提供信仰值（移动到 R1）
+-- 2026/07/14 每个专业化区域不再提供信仰值（移动到 R1）；新增固定提供+2信仰值
 UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_BISHOP' WHERE GovernorPromotionType='GOVERNOR_PROMOTION_EDUCATOR_LIBRARIAN' AND ModifierId='LIBRARIAN_CULTURE_YIELD_BONUS';
 DELETE FROM GovernorPromotionModifiers
       WHERE GovernorPromotionType = 'GOVERNOR_PROMOTION_CARDINAL_BISHOP' AND
             ModifierId = 'CARDINAL_BISHOP_FAITH_DISTRICT';
+INSERT INTO GovernorPromotionModifiers (GovernorPromotionType, ModifierId) VALUES 
+('GOVERNOR_PROMOTION_CARDINAL_BISHOP', 'CCB_MOKSHA_BASE_FAITH');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_MOKSHA_BASE_FAITH', 'MODIFIER_SINGLE_CITY_ADJUST_YIELD_CHANGE', 0, 0, 0, NULL, NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_MOKSHA_BASE_FAITH', 'Amount', '2'), 
+('CCB_MOKSHA_BASE_FAITH', 'YieldType', 'YIELD_FAITH');
 
 -- LI Conoisseur : +1 culture per population. Ignores pressure and combat effects from Religions not founded by the Governor's player.    
 DELETE FROM GovernorPromotionPrereqs WHERE GovernorPromotionType='GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR';
@@ -33,7 +40,7 @@ INSERT INTO GovernorPromotionPrereqs (GovernorPromotionType, PrereqGovernorPromo
 UPDATE GovernorPromotionModifiers SET GovernorPromotionType='GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR' WHERE ModifierId IN ('CARDINAL_CITADEL_OF_GOD_PRESSURE', 'CARDINAL_CITADEL_OF_GOD_COMBAT');
 
 -- RI Citadel of gods : +4 prophet point when city has HS, can faith buy HS buildings -20%
--- 2026/07/12 6 环内圣地提供 +3 信仰值（而不是 +2）；新增每个专业化区域提供 +2 信仰值
+-- 2026/07/12 新增每个专业化区域提供 +2 信仰值
 -- 28/11/24 +2 prophet points and faith per holy site within 6 tiles of this city
 -- 15/12/24 Removed prophet points per HS but added 4 flat prophets point back
 DELETE FROM GovernorPromotionPrereqs WHERE GovernorPromotionType='GOVERNOR_PROMOTION_CARDINAL_CITADEL_OF_GOD';  
@@ -66,7 +73,7 @@ INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
 
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_MOKSHA_FAITH_FOR_HS', 'ModifierId', 'BBG_MOKSHA_FAITH_FOR_HS_MODIFIER'),
-    ('BBG_MOKSHA_FAITH_FOR_HS_MODIFIER', 'Amount', 3),
+    ('BBG_MOKSHA_FAITH_FOR_HS_MODIFIER', 'Amount', 2),
     ('BBG_MOKSHA_FAITH_FOR_HS_MODIFIER', 'YieldType', 'YIELD_FAITH'),
     ('BBG_MOKSHA_GREATPROPHET_POINT_FOR_HS', 'ModifierId', 'BBG_MOKSHA_GREATPROPHET_POINT_FOR_HS_MODIFIER'),
     ('BBG_MOKSHA_GREATPROPHET_POINT_FOR_HS', 'Amount', 2),
