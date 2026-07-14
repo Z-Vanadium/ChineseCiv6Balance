@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<LocalizedText>
 		<!-- === CIVILIZATIONS === -->
@@ -8327,5 +8327,316 @@
 			<Text>特拉科奇卡尔科</Text>
 		</Replace>
 
+	
+
+	
+
+		<!-- === CCB EXPANDED - Thule (Kiviuq/Dave) === -->
+		<!-- == civilization ability == -->
+		<Replace Tag="LOC_ABIL_LIME_THULE_DEFEND_WEAK_DESC" Language="zh_Hans_CN">
+			<Text>防御时-{1_Amount} [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABIL_LIME_THULE_DOGSLED_DESC" Language="zh_Hans_CN">
+			<Text>攻击满血单位时+10 [ICON_Strength] 战斗力。防御时-5 [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABIL_LIME_THULE_SNEAK_ATTACK_DESC" Language="zh_Hans_CN">
+			<Text>攻击满血单位时+{1_Amount} [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABIL_LIME_THULE_DAVE_BOREAL_RUGGEDNESS_DESC" Language="zh_Hans_CN">
+			<Text>在冻土、雪地、冻土丘陵或雪地丘陵地形作战时+{1_Amount} [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LIME_HEART_NOT_STONE_BONUS" Language="zh_Hans_CN">
+			<Text>在北方条件下+{1_Amount} [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LIME_THULE_DAVE_HEART_NOT_STONE_RECON_FAITHBURST_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>侦察单位在冻土、雪地、冻土丘陵或雪地丘陵地形上时+1 [ICON_Movement] 移动力和+5 [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LIME_THULE_DAVE_HEART_NOT_STONE_RECON_FAITHBURST_NAME" Language="zh_Hans_CN">
+			<Text>心非磐石</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LIME_THULE_DAVE_HEART_NOT_STONE_RECON_FAITHGEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>每有1个拥有至少1次晋升的侦察单位，+10% [ICON_FAITH] 信仰值。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LIME_THULE_DAVE_HEART_NOT_STONE_RECON_FAITHGEN_NAME" Language="zh_Hans_CN">
+			<Text>心非磐石</Text>
+		</Replace>
+
+		<!-- === CCB EXPANDED - Thule named places === -->
+		<Replace Tag="LOC_NAMED_MOUNTAIN_ALANGUP_QAQAI_NAME" Language="zh_Hans_CN"><Text>阿朗古普卡凯山</Text></Replace>
+		<Replace Tag="LOC_NAMED_MOUNTAIN_AUYUITTUQ_PEAKS_NAME" Language="zh_Hans_CN"><Text>奥尤伊图克峰</Text></Replace>
+		<Replace Tag="LOC_NAMED_MOUNTAIN_INNUITIAN_MOUNTAINS_NAME" Language="zh_Hans_CN"><Text>因努伊特山脉</Text></Replace>
+		<Replace Tag="LOC_NAMED_MOUNTAIN_LEMON_RANGE_NAME" Language="zh_Hans_CN"><Text>莱蒙山脉</Text></Replace>
+		<Replace Tag="LOC_NAMED_MOUNTAIN_TORNGAT_MOUNTAINS_NAME" Language="zh_Hans_CN"><Text>通加特山脉</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_AKULIARUSIARSUUP_KUUA_NAME" Language="zh_Hans_CN"><Text>阿库利亚鲁西亚苏普库阿河</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_KITLINERMIUT_RIVER_NAME" Language="zh_Hans_CN"><Text>基特利涅尔缪特河</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_KUUKPAK_RIVER_NAME" Language="zh_Hans_CN"><Text>库克帕克河</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_MELIADINE_RIVER_NAME" Language="zh_Hans_CN"><Text>梅利亚丁河</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_QINNGUATA_KUUSSUA_NAME" Language="zh_Hans_CN"><Text>金瓜塔库苏阿河</Text></Replace>
+
+		<!-- === CCB EXPANDED - Finland named places === -->
+		<Replace Tag="LOC_NAMED_MOUNTAIN_HALTI_NAME" Language="zh_Hans_CN"><Text>哈尔蒂山</Text></Replace>
+		<Replace Tag="LOC_NAMED_MOUNTAIN_RIDNITSOHKKA_NAME" Language="zh_Hans_CN"><Text>里德尼索卡山</Text></Replace>
+		<Replace Tag="LOC_NAMED_MOUNTAIN_KOVDDSOSKAISI_NAME" Language="zh_Hans_CN"><Text>科夫多斯凯西山</Text></Replace>
+		<Replace Tag="LOC_NAMED_MOUNTAIN_KIEDDITSOHKKA_NAME" Language="zh_Hans_CN"><Text>基迪索卡山</Text></Replace>
+		<Replace Tag="LOC_NAMED_MOUNTAIN_RUVDNAOAIVI_NAME" Language="zh_Hans_CN"><Text>鲁夫道艾维山</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_TORNIONJOKI_NAME" Language="zh_Hans_CN"><Text>托尔尼奥河</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_KEMIJOKI_NAME" Language="zh_Hans_CN"><Text>凯米河</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_IIJOKI_NAME" Language="zh_Hans_CN"><Text>伊河</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_OULUJOKI_NAME" Language="zh_Hans_CN"><Text>奥卢河</Text></Replace>
+		<Replace Tag="LOC_NAMED_RIVER_SIMOJOKI_NAME" Language="zh_Hans_CN"><Text>西莫河</Text></Replace>
+
+		<!-- === CCB EXPANDED - Diplo === -->
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_LIME_THULE_DAVE_ANY" Language="zh_Hans_CN">
+			<Text>你不必成为我的敌人；我只是想去探索。事实上，我有些羡慕你——现在你踏上了前往阿德利文的旅程，那是我从未有机会踏上的旅途。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_WITH_SHIELD_NEVER_WARRED" Language="zh_Hans_CN">
+			<Text>领袖希望看到你战斗。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_WITH_SHIELD_OR_ON_IT" Language="zh_Hans_CN">
+			<Text>领袖希望看到你战斗，或者知道你花钱买了和平。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_MODIFIER_WITH_SHIELD_PAID_FOR_PEACE" Language="zh_Hans_CN">
+			<Text>领袖知道你花钱买了和平。</Text>
+		</Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN"><Text>[LOC_DIPLO_DEFEAT_FROM_AI_LEADER_LEU_ROCA_ANY]</Text></Replace>
+		<Replace Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN"><Text>{LOC_DIPLO_ACCEPT_DECLARE_FRIEND_FROM_AI_LEADER_LEU_ROCA_ANY}</Text></Replace>
+		<Replace Tag="LOC_DIPLO_REJECT_MAKE_DEAL_FROM_AI_LEADER_LEU_ROCA_ANY" Language="zh_Hans_CN"><Text>{LOC_DIPLO_REJECT_DECLARE_FRIEND_FROM_AI_LEADER_LEU_ROCA_ANY}</Text></Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_LEU_SANMARTIN_ANY" Language="zh_Hans_CN"><Text>这是死亡的终结……我只遗憾没有更多的东西可以奉献给祖国的自由事业。</Text></Replace>
+		<Replace Tag="LOC_DIPLO_DEFEAT_FROM_HUMAN_LEADER_MER_MANNERHEIM_ANY" Language="zh_Hans_CN"><Text>我深知作为指挥官的责任，要保护芬兰人免受像你这样的暴政之苦。</Text></Replace>
+
+		<!-- === CCB EXPANDED - Tooltips === -->
+		<Replace Tag="LOC_TOOLTIP_ARRABAL_APPEAL_AVERAGE" Language="zh_Hans_CN"><Text>普通。</Text></Replace>
+		<Replace Tag="LOC_TOOLTIP_ARRABAL_APPEAL_BREATHTAKING" Language="zh_Hans_CN"><Text>惊艳。</Text></Replace>
+		<Replace Tag="LOC_TOOLTIP_ARRABAL_APPEAL_CHARMING" Language="zh_Hans_CN"><Text>迷人。</Text></Replace>
+		<Replace Tag="LOC_TOOLTIP_ARRABAL_APPEAL_DISGUSTING" Language="zh_Hans_CN"><Text>令人厌恶。</Text></Replace>
+		<Replace Tag="LOC_TOOLTIP_ARRABAL_APPEAL_UNINVITING" Language="zh_Hans_CN"><Text>不讨喜。</Text></Replace>
+
+		<!-- === CCB EXPANDED - JFD === -->
+		<Replace Tag="LOC_MOD_JFD_MACEDON_OLYMPIAS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>[NEWLINE]领袖 — 奥林匹亚斯[NEWLINE][NEWLINE]特质 — 卡贝里秘仪[NEWLINE]创立万神殿时获得1位 [ICON_ENVOY] 使者。向城邦派遣 [ICON_ENVOY] 使者时获得 [ICON_GREATGENERAL] 大将军和 [ICON_GREATPROPHET] 大预言家点数，军事型和宗教型城邦翻倍。[NEWLINE][NEWLINE]议程 — 地下神谕者[NEWLINE]确保自己的 [ICON_FAITH] 信仰值和 [ICON_GREATPROPHET] 大预言家点数处于高位，同时争夺城邦，并希望竞争同一城邦的其他文明 [ICON_FAITH] 信仰值较低。她鄙视那些 [ICON_FAITH] 信仰值高且争夺同一城邦的文明。</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_JFD_CABEIRI_MYSTERIES_ENVOY_NOTIFICATION" Language="zh_Hans_CN">
+			<Text>我们因众神的光辉而欢欣。获得+{1_Num} [COLOR_GREEN][ICON_ENVOY] 使者[ENDCOLOR]。</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_JFD_CABEIRI_MYSTERIES_POINTS_NOTIFICATION" Language="zh_Hans_CN">
+			<Text>他人听闻了我们关于宙斯之子的愿景。获得+{1_Num} [COLOR_GREEN][ICON_GREATGENERAL] 大将军点数[ENDCOLOR]和+{2_Num} [COLOR_GREEN][ICON_GREATPROPHET] 大预言家点数[ENDCOLOR]。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LIME_THULE_DAVE_HEART_NOT_STONE_RECON_EXP_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>侦察单位在冻土或雪地单元格上+1 [ICON_Movement] 移动力和+10 [ICON_Strength] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LIME_THULE_DAVE_HEART_NOT_STONE_RECON_EXP_NAME" Language="zh_Hans_CN">
+			<Text>非石之心</Text>
+		</Replace>
+
+		<!-- === CCB EXPANDED - Civinfo === -->
+		<Replace Tag="LOC_CIVINFO_LIME_THULE_CAPITAL" Language="zh_Hans_CN"><Text>基拉基特索克</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_LIME_THULE_LOCATION" Language="zh_Hans_CN"><Text>加拿大北部、阿拉斯加北部、北极群岛、格陵兰</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_LIME_THULE_POPULATION" Language="zh_Hans_CN"><Text>约5.5万</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_LIME_THULE_SIZE" Language="zh_Hans_CN"><Text>约600万平方英里（155万平方公里）</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_LEU_ARGENTINA_CAPITAL" Language="zh_Hans_CN"><Text>布宜诺斯艾利斯，曾短暂为巴拉那</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_LEU_ARGENTINA_LOCATION" Language="zh_Hans_CN"><Text>南美洲</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_LEU_ARGENTINA_POPULATION" Language="zh_Hans_CN"><Text>约4350万</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_LEU_ARGENTINA_SIZE" Language="zh_Hans_CN"><Text>约197万平方英里（270万平方公里）</Text></Replace>
+		<Replace Tag="LOC_CIVINFO_MER_FINLAND_LOCATION" Language="zh_Hans_CN"><Text>芬兰</Text></Replace>
+
+		<!-- === CCB EXPANDED - Thule citizens === -->
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_1" Language="zh_Hans_CN"><Text>努塔伊科</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_2" Language="zh_Hans_CN"><Text>帕努克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_3" Language="zh_Hans_CN"><Text>西拉</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_4" Language="zh_Hans_CN"><Text>库马格拉克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_5" Language="zh_Hans_CN"><Text>帕纳</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_6" Language="zh_Hans_CN"><Text>奇米</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_7" Language="zh_Hans_CN"><Text>纳努尔朱克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_8" Language="zh_Hans_CN"><Text>纳努</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_9" Language="zh_Hans_CN"><Text>基维亚</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MALE_10" Language="zh_Hans_CN"><Text>阿尔纳萨克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_1" Language="zh_Hans_CN"><Text>塔加克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_2" Language="zh_Hans_CN"><Text>蒂维</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_3" Language="zh_Hans_CN"><Text>奥苏伊托克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_4" Language="zh_Hans_CN"><Text>奥林加利克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_5" Language="zh_Hans_CN"><Text>阿朱</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_6" Language="zh_Hans_CN"><Text>库皮克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_7" Language="zh_Hans_CN"><Text>安冈加</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_8" Language="zh_Hans_CN"><Text>乌纳拉克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_9" Language="zh_Hans_CN"><Text>伊皮尔维克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_MALE_10" Language="zh_Hans_CN"><Text>戴夫</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_1" Language="zh_Hans_CN"><Text>塔纳拉克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_2" Language="zh_Hans_CN"><Text>阿提塔利克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_3" Language="zh_Hans_CN"><Text>努瓦</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_4" Language="zh_Hans_CN"><Text>梅里瓦</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_5" Language="zh_Hans_CN"><Text>卡齐塔诺隆</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_6" Language="zh_Hans_CN"><Text>普克图</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_7" Language="zh_Hans_CN"><Text>阿塔克萨克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_8" Language="zh_Hans_CN"><Text>库普恩</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_9" Language="zh_Hans_CN"><Text>伊基亚克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_FEMALE_10" Language="zh_Hans_CN"><Text>卡利克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_1" Language="zh_Hans_CN"><Text>阿图阿特</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_2" Language="zh_Hans_CN"><Text>米提亚尔朱克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_3" Language="zh_Hans_CN"><Text>塔库利图克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_4" Language="zh_Hans_CN"><Text>乌瓦夫努克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_5" Language="zh_Hans_CN"><Text>基亚</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_6" Language="zh_Hans_CN"><Text>皮特塞奥拉克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_7" Language="zh_Hans_CN"><Text>伊努纳克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_8" Language="zh_Hans_CN"><Text>米基朱克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_9" Language="zh_Hans_CN"><Text>基提克米奥特</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LIME_THULE_MODERN_FEMALE_10" Language="zh_Hans_CN"><Text>金努阿尤阿克</Text></Replace>
+
+		<!-- === CCB EXPANDED - Argentina citizens === -->
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_1" Language="zh_Hans_CN"><Text>何塞</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_2" Language="zh_Hans_CN"><Text>曼努埃尔</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_3" Language="zh_Hans_CN"><Text>埃内斯托</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_4" Language="zh_Hans_CN"><Text>胡安</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_5" Language="zh_Hans_CN"><Text>卡洛斯</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_6" Language="zh_Hans_CN"><Text>弗朗西斯科</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_7" Language="zh_Hans_CN"><Text>米格尔</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_8" Language="zh_Hans_CN"><Text>哈维尔</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_9" Language="zh_Hans_CN"><Text>恩里克</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MALE_10" Language="zh_Hans_CN"><Text>莱昂纳多</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_1" Language="zh_Hans_CN"><Text>迭戈·阿曼多</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_2" Language="zh_Hans_CN"><Text>莱昂内尔</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_3" Language="zh_Hans_CN"><Text>拜戈里</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_4" Language="zh_Hans_CN"><Text>贝戈格里奥</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_5" Language="zh_Hans_CN"><Text>佩莱格里尼</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_6" Language="zh_Hans_CN"><Text>加德尔</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_7" Language="zh_Hans_CN"><Text>萨尔瓦多</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_8" Language="zh_Hans_CN"><Text>丰塔纳罗萨</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_9" Language="zh_Hans_CN"><Text>埃内斯托</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_MALE_10" Language="zh_Hans_CN"><Text>卡洛斯</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_1" Language="zh_Hans_CN"><Text>胡安娜</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_2" Language="zh_Hans_CN"><Text>克里斯蒂娜</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_3" Language="zh_Hans_CN"><Text>梅赛德斯</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_4" Language="zh_Hans_CN"><Text>苏珊娜</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_5" Language="zh_Hans_CN"><Text>曼努埃拉</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_6" Language="zh_Hans_CN"><Text>弗朗西斯卡</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_7" Language="zh_Hans_CN"><Text>维多利亚</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_8" Language="zh_Hans_CN"><Text>弗洛伦西亚</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_9" Language="zh_Hans_CN"><Text>恩里克塔</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_FEMALE_10" Language="zh_Hans_CN"><Text>阿尔方西娜</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_1" Language="zh_Hans_CN"><Text>伊娃</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_2" Language="zh_Hans_CN"><Text>玛丽亚</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_3" Language="zh_Hans_CN"><Text>洛拉</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_4" Language="zh_Hans_CN"><Text>伊莎贝尔</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_5" Language="zh_Hans_CN"><Text>苏莉</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_6" Language="zh_Hans_CN"><Text>马卡雷娜</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_7" Language="zh_Hans_CN"><Text>加布里埃拉</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_8" Language="zh_Hans_CN"><Text>费尔南达</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_9" Language="zh_Hans_CN"><Text>吉尔达</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_LEU_ARGENTINA_MODERN_FEMALE_10" Language="zh_Hans_CN"><Text>阿尔方西娜</Text></Replace>
+
+		<!-- === CCB EXPANDED - Finland citizens === -->
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_1" Language="zh_Hans_CN"><Text>阿库</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_2" Language="zh_Hans_CN"><Text>阿尔莫</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_3" Language="zh_Hans_CN"><Text>耶雷</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_4" Language="zh_Hans_CN"><Text>塔皮奥</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_5" Language="zh_Hans_CN"><Text>考科</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_6" Language="zh_Hans_CN"><Text>阿波</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_7" Language="zh_Hans_CN"><Text>阿塔米</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_8" Language="zh_Hans_CN"><Text>埃利亚斯</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_9" Language="zh_Hans_CN"><Text>艾莫</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MALE_10" Language="zh_Hans_CN"><Text>吐温</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_1" Language="zh_Hans_CN"><Text>扬内</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_2" Language="zh_Hans_CN"><Text>雅尔科</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_3" Language="zh_Hans_CN"><Text>埃诺</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_4" Language="zh_Hans_CN"><Text>约埃尔</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_5" Language="zh_Hans_CN"><Text>埃米利</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_6" Language="zh_Hans_CN"><Text>爱德华</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_7" Language="zh_Hans_CN"><Text>基米</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_8" Language="zh_Hans_CN"><Text>克里斯蒂安</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_9" Language="zh_Hans_CN"><Text>拉西</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_MALE_10" Language="zh_Hans_CN"><Text>卢卡斯</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_1" Language="zh_Hans_CN"><Text>莉娜</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_2" Language="zh_Hans_CN"><Text>安萨</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_3" Language="zh_Hans_CN"><Text>伊纳里</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_4" Language="zh_Hans_CN"><Text>安内利</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_5" Language="zh_Hans_CN"><Text>米拉</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_6" Language="zh_Hans_CN"><Text>因卡</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_7" Language="zh_Hans_CN"><Text>卡蒂亚</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_8" Language="zh_Hans_CN"><Text>桑纳</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_9" Language="zh_Hans_CN"><Text>玛丽亚</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_FEMALE_10" Language="zh_Hans_CN"><Text>阿达</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_1" Language="zh_Hans_CN"><Text>阿洛塔尔</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_2" Language="zh_Hans_CN"><Text>艾娜</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_3" Language="zh_Hans_CN"><Text>艾诺</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_4" Language="zh_Hans_CN"><Text>亚历山德拉</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_5" Language="zh_Hans_CN"><Text>安妮基</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_6" Language="zh_Hans_CN"><Text>艾娃</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_7" Language="zh_Hans_CN"><Text>艾维</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_8" Language="zh_Hans_CN"><Text>汉娜</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_9" Language="zh_Hans_CN"><Text>珍娜</Text></Replace>
+		<Replace Tag="LOC_CITIZEN_MER_FINLAND_MODERN_FEMALE_10" Language="zh_Hans_CN"><Text>凯苏</Text></Replace>
+
+		<!-- === CCB EXPANDED - Government Titles (JFD) === -->
+		<Replace Tag="LOC_GOVERNMENT_JFD_AUTOCRACY_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>大酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_AUTOCRACY_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>总督</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_AUTOCRACY_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>女总督</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_AUTOCRACY_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>女总督</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_AUTOCRACY_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>中尉</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_AUTOCRACY_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>中尉</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CHIEFDOM_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CHIEFDOM_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CHIEFDOM_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CHIEFDOM_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CHIEFDOM_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CHIEFDOM_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CLASSICAL_DEMOCRACY_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>伊苏马塔克</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CLASSICAL_DEMOCRACY_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>参议员</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CLASSICAL_DEMOCRACY_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>女参议员</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CLASSICAL_DEMOCRACY_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>执政官</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CLASSICAL_DEMOCRACY_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>执政官</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_CLASSICAL_DEMOCRACY_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>执政官</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_EMPIRE_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>金古德勒克</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_EMPIRE_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>皇帝</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_EMPIRE_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>女皇</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_EMPIRE_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>女皇</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_EMPIRE_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>皇帝</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_EMPIRE_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>皇帝</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_HORDE_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>卡扎克</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_HORDE_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_HORDE_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_LIBERAL_DEMOCRACY_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>总理</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_LIBERAL_DEMOCRACY_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>总统</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_LIBERAL_DEMOCRACY_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>女总统</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_LIBERAL_DEMOCRACY_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>总统</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_LIBERAL_DEMOCRACY_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>总统</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_LIBERAL_DEMOCRACY_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>总统</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MERCHANT_REPUBLIC_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>乌米亚利克</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MERCHANT_REPUBLIC_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>地主</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MERCHANT_REPUBLIC_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>夫人</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MERCHANT_REPUBLIC_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>女监护者</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MERCHANT_REPUBLIC_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>监护者</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MERCHANT_REPUBLIC_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>监护者</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MILITARY_GUARDIANSHIP_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>战争酋长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MILITARY_GUARDIANSHIP_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>将军</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MILITARY_GUARDIANSHIP_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>女将军</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MILITARY_GUARDIANSHIP_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>女将军</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MILITARY_GUARDIANSHIP_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>将军</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MILITARY_GUARDIANSHIP_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>将军</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MONARCHY_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>桑吉拉克</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MONARCHY_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>总督</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MONARCHY_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>女总督</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MONARCHY_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>女总督</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MONARCHY_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>总督</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_MONARCHY_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>总督</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_NOBLE_REPUBLIC_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>伊索拉图约克</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_NOBLE_REPUBLIC_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>贵族</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_NOBLE_REPUBLIC_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>夫人</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_NOBLE_REPUBLIC_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>第一夫人</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_NOBLE_REPUBLIC_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>侯爵</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_NOBLE_REPUBLIC_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>侯爵</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_OLIGARCHY_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>伊努亚</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_OLIGARCHY_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>庄园主</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_OLIGARCHY_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>女庄园主</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_OLIGARCHY_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>第一夫人</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_OLIGARCHY_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>贵族</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_OLIGARCHY_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>贵族</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_PEOPLES_REPUBLIC_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>主席</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_PEOPLES_REPUBLIC_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>指挥官</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_PEOPLES_REPUBLIC_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>指挥官</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_PEOPLES_REPUBLIC_LEADER_TITLE_LEU_EVITA" Language="zh_Hans_CN"><Text>伊娃</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_PEOPLES_REPUBLIC_LEADER_TITLE_LEU_ROCA" Language="zh_Hans_CN"><Text>指挥官</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_PEOPLES_REPUBLIC_LEADER_TITLE_LEU_SANMARTIN" Language="zh_Hans_CN"><Text>指挥官</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_POLIS_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>伊利图约克</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_POLIS_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>市长</Text></Replace>
+		<Replace Tag="LOC_GOVERNMENT_JFD_POLIS_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>女市长</Text></Replace>
 	</LocalizedText>
 </GameData>
