@@ -888,7 +888,7 @@
 			<Text>日本特色建筑。6个单元格以内的所有市中心+4 [ICON_Production] 生产力。此建筑为其所在城市额外提供+4 [ICON_Culture] 文化值。此加成仅限应用到城市1次，因此市中心6个单元格以内相同的此建筑不会再额外提供加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_ELECTRONICS_FACTORY_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>日本特色建筑。+4 [ICON_Culture] 文化值。其 [ICON_Production] 生产力加成延伸到6单元格内的所有市中心（前提是其尚未从其他的此建筑获得加成）。</Text>
+			<Text>日本特色建筑。+4 [ICON_Culture] 文化值。其 [ICON_Production] 生产力和 [ICON_Culture] 文化值加成延伸到6单元格内的所有市中心（前提是其尚未从其他的此建筑获得加成）。</Text>
 		</Replace>
 
 		<!-- == KHMER == -->
