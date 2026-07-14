@@ -34,7 +34,7 @@ INSERT INTO RequirementSetRequirements(RequirementSetId, RequirementId) VALUES
 UPDATE Modifiers SET SubjectRequirementSetId='BBG_PLOT_HAS_FOREST_EARLY_EMPIRE' WHERE ModifierId='TRAIT_MAORI_PRODUCTION_WOODS';
 UPDATE Modifiers SET SubjectRequirementSetId='BBG_PLOT_HAS_JUNGLE_EARLY_EMPIRE' WHERE ModifierId='TRAIT_MAORI_PRODUCTION_RAINFOREST';
 
--- 2026/07/12 保护地球提供 +1 生产力（而不是 +2）；冷战后提供 +1 生产力；毛利会堂降低至 60（联机速度下）
+-- 2026/07/12 保护地球提供 +1 生产力（而不是 +2）；冷战后提供 +1 生产力
 UPDATE ModifierArguments SET Value=1 WHERE (ModifierId='TRAIT_MAORI_PRODUCTION_RAINFOREST_CONSERVATION' OR ModifierId='TRAIT_MAORI_PRODUCTION_WOODS_CONSERVATION') AND Name='Amount';
 
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
@@ -59,8 +59,6 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 ('REQSET_CCB_PLOT_HAS_FOREST_COLD_WAR', 'REQUIRES_PLOT_HAS_NO_IMPROVEMENT'), 
 ('REQSET_CCB_PLOT_HAS_FOREST_COLD_WAR', 'PLOT_IS_FOREST_REQUIREMENT'), 
 ('REQSET_CCB_PLOT_HAS_FOREST_COLD_WAR', 'BBG_UTILS_PLAYER_HAS_CIVIC_COLD_WAR_REQUIREMENT');
-
-UPDATE Buildings SET Cost=120 WHERE BuildingType='BUILDING_MARAE';
 
 -- Complete reset to vanilla +
 -- spawn on coast like other naval civ x
