@@ -12,11 +12,10 @@ UPDATE Units SET PrereqCivic='CIVIC_MERCENARIES', PrereqTech=NULL WHERE UnitType
 -- UPDATE ModifierArguments SET Value = '3' WHERE ModifierId = 'HOJO_TOKIMUNE_SHALLOW_WATER_COMBAT_BONUS' AND Name = 'Amount';
 UPDATE ModifierArguments SET Value = '3' WHERE ModifierId = 'HOJO_TOKIMUNE_COASTAL_COMBAT_BONUS' AND Name = 'Amount';
 
--- 2026/07/14 修复文化辐射的 BUG
 --26/02/25 Culture from electronic factory is now base bonus of the building
--- DELETE FROM BuildingModifiers WHERE ModifierId='ELECTRONICSFACTORY_CULTURE';
-UPDATE Modifiers
- SET SubjectRequirementSetId=NULL WHERE ModifierId='ELECTRONICSFACTORY_CULTURE';
+DELETE FROM BuildingModifiers WHERE ModifierId='ELECTRONICSFACTORY_CULTURE';
+INSERT INTO Building_YieldChanges (BuildingType, YieldType, YieldChange) VALUES
+    ('BUILDING_ELECTRONICS_FACTORY', 'YIELD_CULTURE', 4);
 
 -- 2025/10/12 devine wind avoid damage from hurricanes
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
