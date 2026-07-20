@@ -1680,7 +1680,7 @@
 			<Text>能创建和维护一条 [ICON_TradeRoute] 贸易路线。随着旅途进行，自动创建道路。研究“天文导航”或“造船术”科技后即可进入水域。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_QUADRIREME_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>古典时期远程海军单位，拥有2格 [ICON_Range] 射程。在研究出制图学之前，只能用于沿海水域。</Text>
+			<Text>古典时期远程海军单位，拥有1格 [ICON_Range] 射程。在研究出制图学之前，只能用于沿海水域。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_FRIGATE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>文艺复兴时期远程海军单位，拥有2格 [ICON_Range] 射程。</Text>

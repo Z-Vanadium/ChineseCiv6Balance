@@ -282,9 +282,6 @@ UPDATE ModifierArguments SET Value=5 WHERE ModifierId='LINE_OF_BATTLE_BONUS_VS_N
 -- 02/07/24 Recon Units get +1 sight (except scouts/oki)
 UPDATE Units SET BaseSightRange=BaseSightRange+1 WHERE PromotionClass='PROMOTION_CLASS_RECON' AND UnitType NOT IN ('UNIT_SCOUT', 'UNIT_CREE_OKIHTCITAW');
 
--- 2026/07/12 四段帆船：攻击范围提升至 2（而不是 1）
-UPDATE Units SET Range=2 WHERE UnitType='UNIT_QUADRIREME';
-
 -- 30/11/24 Ancient unit gets -5 agaisnt city center
     -- UNIT_WARRIOR
     -- UNIT_AZTEC_EAGLE_WARRIOR
