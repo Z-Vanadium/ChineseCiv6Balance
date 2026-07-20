@@ -985,7 +985,7 @@
 		</Replace>
 		<!-- = leader ability (Seondeok) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_HWARANG_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>拥有总督的城市+1 [ICON_Amenities] 宜居度，每次升级（包括首次升级）都将提供+20%书院建筑产出。[NEWLINE][NEWLINE]“封建主义”市政后，奖励1个 [Icon_Governor] 总督头衔，但由您建立且无 [ICON_Governor] 总督就职的城市-5%所有产出。</Text>
+			<Text>拥有总督的城市+1 [ICON_Amenities] 宜居度，每次升级（包括首次升级）都将提供+30%书院建筑产出。[NEWLINE][NEWLINE]“封建主义”市政后，奖励1个 [Icon_Governor] 总督头衔，但由您建立且无 [ICON_Governor] 总督就职的城市-10%所有产出。</Text>
 		</Replace>
 		<!-- = leader ability (Sejong) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SEJONG_DESCRIPTION" Language="zh_Hans_CN">
