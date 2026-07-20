@@ -5,7 +5,7 @@
 UPDATE Modifiers SET SubjectRequirementSetId='BBG_UTILS_PLAYER_HAS_CIVIC_FOREIGN_TRADE_REQSET' WHERE ModifierId='TRAIT_ADJUST_NON_CAPITAL_FREE_CHEAPEST_BUILDING';
 
 --====Rome======--
--- 2026/07/12 浴场：不再提供文化；罗马军团：基础力提升至 40
+-- 2026/07/12 浴场：不再提供文化
 -- reverted 04/10/22
 -- back to the menu 07/07/25
 -- INSERT INTO District_Adjacencies (DistrictType, YieldChangeId) VALUES
@@ -16,5 +16,5 @@ UPDATE Modifiers SET SubjectRequirementSetId='BBG_UTILS_PLAYER_HAS_CIVIC_FOREIGN
 -- UPDATE Districts SET Entertainment=0 WHERE DistrictType='DISTRICT_BATH';
 
 
--- 08/04/25 Legions down to 38
--- UPDATE Units SET Combat=38 WHERE UnitType='UNIT_ROMAN_LEGION';
+08/04/25 Legions down to 38
+UPDATE Units SET Combat=38 WHERE UnitType='UNIT_ROMAN_LEGION';
