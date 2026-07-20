@@ -492,7 +492,7 @@
 		</Replace> -->
 
 		<Replace Tag="LOC_TRAIT_LEADER_ELEANOR_LOYALTY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>仅埃莉诺（法国）：建造远古时代和古典时期奇观时+20% [ICON_Production] 生产力。[NEWLINE]仅埃莉诺（英国）：灯塔提供 +1 [ICON_GreatWriter] 大作家点数，造船厂提供 +1 [ICON_GreatArtist] 大艺术家点数，码头提供 +1 [ICON_GreatMusician] 大音乐家点数。[NEWLINE][NEWLINE]建造剧院广场区域内建筑时+100% [ICON_PRODUCTION] 生产力。城市中的每个巨作使9格内外国城市每回合-1忠诚度。因忠诚度而脱离其他文明的城市，若对你有最高忠诚度压力，则跳过自由城市阶段直接加入你。[NEWLINE][NEWLINE]巨作根据所在城市拥有的区域获得额外产出：（著作和遗物+1，艺术和文物+2，音乐+4）[NEWLINE]拥有学院则获得 [ICON_SCIENCE] 科技值。[NEWLINE]拥有剧院广场则获得 [ICON_CULTURE] 文化值。[NEWLINE]拥有港口或商业中心则获得 [ICON_GOLD] 金币。[NEWLINE]拥有圣地则获得 [ICON_FAITH] 信仰值。[NEWLINE]拥有工业区或军营则获得 [ICON_PRODUCTION] 生产力。[NEWLINE]拥有社区则获得 [ICON_FOOD] 食物。[NEWLINE]（巨作无法获得城邦宗主提供的额外产出）</Text>
+			<Text>仅埃莉诺（法国）：建造远古时代和古典时期奇观时+20% [ICON_Production] 生产力。[NEWLINE]仅埃莉诺（英国）：灯塔提供 1 个 [ICON_GREATWORK_LANDSCAPE] 巨作槽位。[NEWLINE][NEWLINE]建造剧院广场区域内建筑时+100% [ICON_PRODUCTION] 生产力。城市中的每个巨作使9格内外国城市每回合-1忠诚度。因忠诚度而脱离其他文明的城市，若对你有最高忠诚度压力，则跳过自由城市阶段直接加入你。[NEWLINE][NEWLINE]巨作根据所在城市拥有的区域获得额外产出：（著作和遗物+1，艺术和文物+2，音乐+4）[NEWLINE]拥有学院则获得 [ICON_SCIENCE] 科技值。[NEWLINE]拥有剧院广场则获得 [ICON_CULTURE] 文化值。[NEWLINE]拥有港口或商业中心则获得 [ICON_GOLD] 金币。[NEWLINE]拥有圣地则获得 [ICON_FAITH] 信仰值。[NEWLINE]拥有工业区或军营则获得 [ICON_PRODUCTION] 生产力。[NEWLINE]拥有社区则获得 [ICON_FOOD] 食物。[NEWLINE]（巨作无法获得城邦宗主提供的额外产出）</Text>
 		</Replace>
 
 		<!-- == ENGLAND == -->
@@ -1912,13 +1912,13 @@
 		
 		<!-- == Moksha == -->
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_CARDINAL_BISHOP_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>该城市每回合产出的 [ICON_Culture] 文化值+15%，对相邻城市的宗教压力+100%。</Text>
+			<Text>该城市每回合产出的 [ICON_Culture] 文化值+15%，对相邻城市的宗教压力+100%。城市提供 +2 [ICON_Faith] 信仰值。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>城市中每位 [ICON_Citizen] 公民每回合可带来 +1 [ICON_CULTURE] 文化值。城市将不会受到来自非 [ICON_Governor] 总督所属文明宗教的压力与战斗加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_CARDINAL_CITADEL_OF_GOD_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中的每个专业化区域提供 +2 [ICON_Faith] 信仰值。城市拥有圣地时，每回合产生+2 [ICON_GreatProphet] 大预言家点数。6 单元格内的城市获得如下效果：圣地提供 +3 [ICON_Faith] 信仰值。</Text>
+			<Text>城市中的每个专业化区域提供 +2 [ICON_Faith] 信仰值。城市拥有圣地时，每回合产生+2 [ICON_GreatProphet] 大预言家点数。6 单元格内的城市获得如下效果：圣地提供 +2 [ICON_Faith] 信仰值。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_CARDINAL_DIVINE_ARCHITECT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>以此处为终点的 [ICON_TradeRoute] 国内贸易路线 +1 [ICON_FOOD] 食物、+2 [ICON_CULTURE] 文化值。城市可用 [ICON_Faith] 信仰值购买 [ICON_DISTRICT] 区域，购买 [ICON_DISTRICT] 区域时-10% [ICON_Faith] 信仰值消耗。</Text>
