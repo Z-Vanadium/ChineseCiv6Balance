@@ -16,5 +16,5 @@ UPDATE Modifiers SET SubjectRequirementSetId='BBG_UTILS_PLAYER_HAS_CIVIC_FOREIGN
 -- UPDATE Districts SET Entertainment=0 WHERE DistrictType='DISTRICT_BATH';
 
 
-08/04/25 Legions down to 38
+-- 08/04/25 Legions down to 38
 UPDATE Units SET Combat=38 WHERE UnitType='UNIT_ROMAN_LEGION';
