@@ -1037,6 +1037,7 @@
 			<Properties>
 				<LoadOrder>100010</LoadOrder>
 			</Properties>
+			<Criteria>BBGExpanded_Release</Criteria>
 			<File>sql/Base/Excluded_Adjacencies.sql</File>
 		</UpdateDatabase>
 
