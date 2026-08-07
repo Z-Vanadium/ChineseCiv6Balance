@@ -2,7 +2,7 @@
 --******                ENGLAND                           ******
 --==============================================================================================
 
--- 2026/07/12 移除特色港口为海军+1速、移除海狗抓船能力（在对应领袖中用 REQSET 实现）
+-- 2026/08/07 移除特色港口为海军+1速（在对应领袖中用 REQSET 实现）
 
 -- Harbor gives 1 housing [Lighthouse loses 1]
 INSERT INTO DistrictModifiers (DistrictType, ModifierId) VALUES
@@ -95,7 +95,7 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_PAX_BRITANNICA', 'BBG_ABILITY_AOE_MELEE_NAVAL_ESCORT_CIVILIANS_GIVER');
 --     
 
--- 2026/07/12 拥有港口的城市训练的海军+1速；海军近战单位+1视野、晋升不结束回合
+-- 2026/07/12 拥有港口的城市训练的海军+1速
 UPDATE Modifiers SET OwnerRequirementSetId='BBG_PLAYER_IS_LEADER_VICTORIA_REQSET' WHERE ModifierId='ROYAL_NAVY_DOCKYARD_GRANT_MOVEMENT_BONUS';
 
 INSERT INTO Types (Type, Kind) VALUES
@@ -110,15 +110,15 @@ INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('CCB_MODIFIER_AOE_NAVAL_MELEE_GRANT_EXTRA_SIGHT', 'MODIFIER_PLAYER_UNIT_ADJUST_SIGHT');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('CCB_MODIFIER_AOE_NAVAL_MELEE_GRANT_EXTRA_SIGHT', 'Amount', '1');
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
-    ('TRAIT_LEADER_PAX_BRITANNICA', 'CCB_ABILITY_AOE_NAVAL_MELEE_GRANT_BONUS_GIVER');
+-- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+--     ('TRAIT_LEADER_PAX_BRITANNICA', 'CCB_ABILITY_AOE_NAVAL_MELEE_GRANT_BONUS_GIVER');
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
     ('CCB_ABILITY_AOE_NAVAL_MELEE_GRANT_BONUS_GIVER', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('CCB_ABILITY_AOE_NAVAL_MELEE_GRANT_BONUS_GIVER', 'AbilityType', 'CCB_ABILITY_AOE_NAVAL_MELEE_GRANT_BONUS');
 
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
-    ('TRAIT_LEADER_PAX_BRITANNICA', 'CCB_ABILITY_AOE_NAVAL_MELEE_PROMOTION_NO_END_TURN');
+-- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+--     ('TRAIT_LEADER_PAX_BRITANNICA', 'CCB_ABILITY_AOE_NAVAL_MELEE_PROMOTION_NO_END_TURN');
 INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
     ('CCB_ABILITY_AOE_NAVAL_MELEE_PROMOTION_NO_END_TURN', 'MODIFIER_PLAYER_UNITS_PROMOTE_NO_FINISH_MOVES', 'REQSET_CCB_UNIT_PROMOTION_IS_NAVAL_MELEE');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES

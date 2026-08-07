@@ -22,6 +22,8 @@ INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, Ow
 ('CCB_KOREAN_HWACHA_RANGE_LATE', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_TECH_BALLISTICS', NULL);
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_KOREAN_HWACHA_RANGE_LATE', 'Amount', '3');
+INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
+	('CCB_KOREAN_HWACHA_RANGE_LATE', 'Preview', 'LOC_ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE_DESC');
 
 -- 04/07/24 Korean rework 
 -- +1 for every 2 mines

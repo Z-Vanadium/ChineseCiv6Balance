@@ -492,7 +492,7 @@
 		</Replace> -->
 
 		<Replace Tag="LOC_TRAIT_LEADER_ELEANOR_LOYALTY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>仅埃莉诺（法国）：建造远古时代和古典时期奇观时+20% [ICON_Production] 生产力。[NEWLINE]仅埃莉诺（英国）：灯塔提供 1 个 [ICON_GREATWORK_LANDSCAPE] 巨作槽位。[NEWLINE][NEWLINE]建造剧院广场区域内建筑时+100% [ICON_PRODUCTION] 生产力。城市中的每个巨作使9格内外国城市每回合-1忠诚度。因忠诚度而脱离其他文明的城市，若对你有最高忠诚度压力，则跳过自由城市阶段直接加入你。[NEWLINE][NEWLINE]巨作根据所在城市拥有的区域获得额外产出：（著作和遗物+1，艺术和文物+2，音乐+4）[NEWLINE]拥有学院则获得 [ICON_SCIENCE] 科技值。[NEWLINE]拥有剧院广场则获得 [ICON_CULTURE] 文化值。[NEWLINE]拥有港口或商业中心则获得 [ICON_GOLD] 金币。[NEWLINE]拥有圣地则获得 [ICON_FAITH] 信仰值。[NEWLINE]拥有工业区或军营则获得 [ICON_PRODUCTION] 生产力。[NEWLINE]拥有社区则获得 [ICON_FOOD] 食物。[NEWLINE]（巨作无法获得城邦宗主提供的额外产出）</Text>
+			<Text>仅埃莉诺（法国）：建造远古时代和古典时期奇观时+20% [ICON_Production] 生产力。[NEWLINE]仅埃莉诺（英国）：灯塔提供 +1 [ICON_GreatWriter] 大作家点数，造船厂提供 +1 [ICON_GreatArtist] 大艺术家点数，码头提供 +1 [ICON_GreatMusician] 大音乐家点数。[NEWLINE][NEWLINE]建造剧院广场区域内建筑时+100% [ICON_PRODUCTION] 生产力。城市中的每个巨作使9格内外国城市每回合-1忠诚度。因忠诚度而脱离其他文明的城市，若对你有最高忠诚度压力，则跳过自由城市阶段直接加入你。[NEWLINE][NEWLINE]巨作根据所在城市拥有的区域获得额外产出：（著作和遗物+1，艺术和文物+2，音乐+4）[NEWLINE]拥有学院则获得 [ICON_SCIENCE] 科技值。[NEWLINE]拥有剧院广场则获得 [ICON_CULTURE] 文化值。[NEWLINE]拥有港口或商业中心则获得 [ICON_GOLD] 金币。[NEWLINE]拥有圣地则获得 [ICON_FAITH] 信仰值。[NEWLINE]拥有工业区或军营则获得 [ICON_PRODUCTION] 生产力。[NEWLINE]拥有社区则获得 [ICON_FOOD] 食物。[NEWLINE]（巨作无法获得城邦宗主提供的额外产出）</Text>
 		</Replace>
 
 		<!-- == ENGLAND == -->
@@ -503,7 +503,7 @@
 		<!-- = leader ability = -->
 		<!-- = leader ability (Victoria Age of Empire) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_PAX_BRITANNICA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>在 [ICON_Capital] 首都 10 个单元格之外建立或占领城市时，免费获得 1 个近战单位。[NEWLINE][NEWLINE]建造“皇家海军船坞”后，获得可生产的 [ICON_PRODUCTION] 生产力需求最高的海军单位。皇家海军船坞中建造的海军单位 +1 [ICON_Movement] 移动力。[NEWLINE][NEWLINE]海军近战单位 +1 视野；[ICON_Promotion] 晋升时不会结束回合；编队时，所有编队单位将继承护卫队的 [ICON_Movement] 移动力。[NEWLINE]灯塔每回合提供 +1 [ICON_GreatAdmiral] 海军统帅点数。[NEWLINE][NEWLINE]研究“军事学”科技后，获得特色单位“红衫军”。</Text>
+			<Text>在 [ICON_Capital] 首都 10 个单元格之外建立或占领城市时，免费获得 1 个近战单位。[NEWLINE][NEWLINE]建造“皇家海军船坞”后，获得可生产的 [ICON_PRODUCTION] 生产力需求最高的海军单位。皇家海军船坞中建造的海军单位 +1 [ICON_Movement] 移动力。[NEWLINE][NEWLINE]海军近战单位编队时，所有编队单位将继承护卫队的 [ICON_Movement] 移动力。[NEWLINE]灯塔每回合提供 +1 [ICON_GreatAdmiral] 海军统帅点数。[NEWLINE][NEWLINE]研究“军事学”科技后，获得特色单位“红衫军”。</Text>
 		</Replace>
 		<Replace Tag="LOC_TRAIT_CIVILIZATION_PAX_BRITANNICA_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_TRAIT_LEADER_PAX_BRITANNICA_DESCRIPTION}</Text>
@@ -536,7 +536,7 @@
 		</Row>
 		<!-- = leader ability (Elizabeth) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_ELIZABETH_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>完成“造船术”、“探索”、“重商主义”后，均获得 [ICON_TradeRoute] 贸易路线容量+1。起源城市中每有一个专业化区域，[ICON_TradeRoute] 通往任意城邦的贸易路线便+3 [ICON_GOLD] 金币。[NEWLINE][NEWLINE]用海军单位掠夺 [ICON_TradeRoute] 贸易路线的收益+100%。海军袭击者单位+1 [ICON_Movement] 移动力、+1视野。[ICON_PROMOTION] 升级海军袭击者单位时不会结束其回合。[NEWLINE][NEWLINE]海猎犬击败敌方船只后有几率将其俘获。</Text>
+			<Text>完成“造船术”、“探索”、“重商主义”后，均获得 [ICON_TradeRoute] 贸易路线容量+1。起源城市中每有一个专业化区域，[ICON_TradeRoute] 通往任意城邦的贸易路线便+3 [ICON_GOLD] 金币。[NEWLINE][NEWLINE]用海军单位掠夺 [ICON_TradeRoute] 贸易路线的收益+100%。海军袭击者单位+2 [ICON_Movement] 移动力、+1视野。[ICON_PROMOTION] 升级海军袭击者单位时不会结束其回合。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_ABILITY_ELISABETH_RAIDER_MOVE_PROMOTE_ATTACK_DESC" Language="zh_Hans_CN">
 			<Text>[ICON_PROMOTION] 升级海军袭击者单位时不会结束其回合。</Text>
@@ -546,7 +546,7 @@
 			<Text>维多利亚作为领袖时的工业时代英国特色单位，替代线列步兵。在非首都所处大陆作战时+5 [ICON_Strength] 战斗力。下船不消耗移动力。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_ENGLISH_SEADOG_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>文艺复兴时代英国特色海军单位，取代私掠船。除非与单位相邻，否则只能被其他海军袭击者发现。能使视线范围中的海军袭击者暴露位置。</Text>
+			<Text>文艺复兴时代英国特色海军单位，取代私掠船。除非与单位相邻，否则只能被其他海军袭击者发现。能使视线范围中的海军袭击者暴露位置。海猎犬击败敌方船只后有几率将其俘获。</Text>
 		</Replace>
 		<!-- = unique district = -->
 		<Replace Tag="LOC_DISTRICT_ROYAL_NAVY_DOCKYARD_DESCRIPTION" Language="zh_Hans_CN">
@@ -940,7 +940,7 @@
 		</Replace>
 		<!-- = leader ability (Nzinga Mbande) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_NZINGA_MBANDE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>市场提供 +1 [ICON_GreatMerchant] 大商人点数。每回合获得的 [ICON_GreatWriter] 大作家、[ICON_GreatArtist] 大艺术家和 [ICON_GreatMusician] 大音乐家点数 +50%。商业中心和剧院广场为彼此提供额外标准相邻加成。考古学家购买花费减少50%。[NEWLINE][NEWLINE]拥有姆班赞的城市获得下列加成：[NEWLINE][ICON_BULLET]+10% [ICON_GOLD] 金币；[NEWLINE][ICON_BULLET]+10% [ICON_Culture] 文化值；[NEWLINE][ICON_BULLET]研究“飞行”科技后，每个区域提供 +2 [ICON_Tourism] 旅游业绩。[NEWLINE][NEWLINE]所有平民单位在树林和雨林中移动时无 [ICON_Movement] 移动力减益。</Text>
+			<Text>每回合获得的 [ICON_GreatWriter] 大作家、[ICON_GreatArtist] 大艺术家和 [ICON_GreatMusician] 大音乐家点数 +50%。商业中心和剧院广场为彼此提供额外大量相邻加成。考古学家购买花费减少50%。[NEWLINE][NEWLINE]拥有姆班赞的城市获得下列加成：[NEWLINE][ICON_BULLET]研究“飞行”科技后，每个区域提供 +2 [ICON_Tourism] 旅游业绩。[NEWLINE][NEWLINE]所有平民单位在树林和雨林中移动时无 [ICON_Movement] 移动力减益。</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_KONGO_SHIELD_BEARER_DESCRIPTION" Language="zh_Hans_CN">
@@ -1010,6 +1010,16 @@
 		<Row Tag="LOC_DISTRICT_THEATER_SEOWON_BONUS" Language="zh_Hans_CN">
 			<Text>相邻书院区域提供+{1_num} [ICON_CULTURE] 文化值。</Text>
 		</Row>
+		<!-- = unique unit = -->
+		<Replace Tag="LOC_UNIT_KOREAN_HWACHA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>朝鲜文艺复兴时期特色单位，取代野战加农炮。在一回合中移动后无法攻击。[NEWLINE][NEWLINE]{LOC_ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE_NAME}</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE_NAME" Language="zh_Hans_CN">
+			<Text>研究“弹道学”科技后 +3 [ICON_STRENGTH] 战斗力。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE_DESC" Language="zh_Hans_CN">
+			<Text>{LOC_ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE_NAME}</Text>
+		</Replace>
 
 		<!-- == KUBLAI (LEADER) == -->
 		<!-- = leader ability = -->
@@ -1066,13 +1076,28 @@
 		</Replace>
 		<!-- = leader ability (Sundiata) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_SUNDIATA_KEITA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>招募伟人所花费的 [ICON_GOLD] 金币 -30%，马里所建城市的市场获得2个 [ICON_GreatWork_WRITING] 著作槽位。[ICON_GreatWork_WRITING] 著作 +4 [ICON_GOLD] 金币、+2 [ICON_Culture] 文化值。[NEWLINE][NEWLINE]曼丁哥市场从剧院广场获得标准相邻加成。拥有曼丁哥市场和剧院的城市+1 [ICON_GREATWRITER] 大作家点数。</Text>
+			<Text>招募伟人所花费的 [ICON_GOLD] 金币 -30%，马里所建城市的市场获得2个 [ICON_GreatWork_WRITING] 著作槽位。[ICON_GreatWork_WRITING] 著作 +4 [ICON_GOLD] 金币、+2 [ICON_Culture] 文化值。[NEWLINE][NEWLINE]曼丁哥市场从剧院广场获得标准 [ICON_GOLD] 金币相邻加成；从市中心、圣地、河流、绿洲和剧院广场获得标准 [ICON_FAITH] 信仰值相邻加成。拥有曼丁哥市场和剧院的城市+1 [ICON_GREATWRITER] 大作家点数。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_THEATER_SUGUBA_SUNDIATA" Language="zh_Hans_CN">
 			<Text>+{1_num} [ICON_CULTURE] 文化值，来自相邻曼丁哥市场。</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_SUGUBA_THEATER_SUNDIATA" Language="zh_Hans_CN">
 			<Text>+{1_num} [ICON_GOLD] 金币，来自相邻剧院广场。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_SUGUBA_FAITH_CITY_CENTER_SUNDIATA" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_FAITH] 信仰值，来自相邻市中心。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_SUGUBA_FAITH_HOLY_SITE_SUNDIATA" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_FAITH] 信仰值，来自相邻圣地。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_SUGUBA_FAITH_OASIS_SUNDIATA" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_FAITH] 信仰值，来自相邻绿洲。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_SUGUBA_FAITH_RIVER_SUNDIATA" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_FAITH] 信仰值，来自相邻河流。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_SUGUBA_FAITH_THEATER_SUNDIATA" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_FAITH] 信仰值，来自相邻剧院广场。</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_MALI_MANDEKALU_CAVALRY_DESCRIPTION" Language="zh_Hans_CN">
@@ -1629,7 +1654,16 @@
 			<Text>现代抗骑兵类单位。+1 [ICON_MOVEMENT] 移动力。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MODERN_AT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>信息时代的抗骑兵类单位。+1 [ICON_MOVEMENT] 移动力。</Text>
+			<Text>原子能时代的抗骑兵类单位。+1 [ICON_MOVEMENT] 移动力。</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_MACHINE_GUN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>原子能时代远程单位。[NEWLINE]{LOC_ABILITY_CCB_MACHINE_GUN_RANGE_LATE_DESC}</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_MACHINE_GUN_RANGE_LATE_NAME" Language="zh_Hans_CN">
+			<Text>{LOC_ABILITY_CCB_MACHINE_GUN_RANGE_LATE_DESC}</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_MACHINE_GUN_RANGE_LATE_DESC" Language="zh_Hans_CN">
+			<Text>研究“制导系统”后 +1 [ICON_Range] 远程攻击范围。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_BIPLANE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>最早的空战单位，现代可用。[ICON_PROMOTION] 晋升时不会结束回合。</Text>
@@ -1727,7 +1761,13 @@
 			<Text>对抗城市防御时 +5 [ICON_STRENGTH] 战斗力。</Text>
 		</Row>
 		<Replace Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>信息时代攻城单位，适合攻击城市。除非拥有“专家组”升级，否则不能在同一回合内移动和攻击。[NEWLINE]{LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_DESC}</Text>
+			<Text>原子能时代时代攻城单位，适合攻击城市。除非拥有“专家组”升级，否则不能在同一回合内移动和攻击。[NEWLINE]{LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_DESC}[NEWLINE]{LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_DESC}</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_NAME" Language="zh_Hans_CN">
+			<Text>{LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_DESC}</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_DESC" Language="zh_Hans_CN">
+			<Text>研究“制导系统”科技后 +5 [ICON_STRENGTH] 战斗力。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MODERN_ARMOR_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>又快又强大的信息时代重骑兵单位。+1 [ICON_Movement] 移动力。在友方领土防御时+5 [ICON_Strength] 战斗力，在非友方领土进攻时+5 [ICON_Strength] 战斗力。</Text>
@@ -1863,25 +1903,25 @@
 
 		<!-- == Reyna == -->
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_LAND_ACQUISITION_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市获得新单元格的速度 +20%。经过城市的每条 [ICON_TradeRoute] 国际商路每回合提供 +4 [ICON_Gold] 金币。</Text>
+			<Text>城市获得新单元格的速度加快。经过城市的每条外国 [ICON_TradeRoute] 商路每回合提供+4 [ICON_Gold] 金币。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_HARBORMASTER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市里每位 [ICON_Citizen] 公民每回合提供 +2 [ICON_Gold] 金币。解锁“政治哲学”市政后，+1 [ICON_TradeRoute] 贸易路线容量。</Text>
+			<Text>城市中商业中心和港口的相邻加成加倍。若城市同时拥有市场和灯塔，则额外+1 [ICON_TradeRoute] 贸易路线容量。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_FORESTRY_MANAGEMENT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>每个未改良的地貌和魅力为惊艳的单元格提供 +2 [ICON_Gold] 金币。该城市中未改良单元格向周围单元格提供 +1 魅力。</Text>
+			<Text>每个未改良的地貌和魅力为惊艳的单元格可向该城市提供+2 [ICON_Gold] 金币。该城市中未改良单元格向周围单元格提供+1魅力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_TAX_COLLECTOR_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>以此处为终点的 [ICON_TradeRoute] 贸易路线为起源城市提供 +4 [ICON_GOLD] 金币、+1 [ICON_FOOD] 食物。城市可使用 [ICON_Gold] 金币购买 [ICON_DISTRICT] 区域，购买 [ICON_DISTRICT] 区域时 -10% [ICON_GOLD] 金币消耗。</Text>
+			<Text>城市里的每一位 [ICON_Citizen] 公民每回合提供+2 [ICON_Gold] 金币，+1 [ICON_TradeRoute] 贸易路线容量。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_CONTRACTOR_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中商业中心和港口的相邻加成 +100%。该城市购买建筑和支援单位花费的 [ICON_GOLD] 金币 -50%。</Text>
+			<Text>城市可使用 [ICON_Gold] 金币购买区域。该城市购买建筑和支援单位花费的 [ICON_GOLD] 金币减半。</Text>
 		</Replace>
 		<Row Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_INVESTOR_NAME" Language="zh_Hans_CN">
 			<Text>外汇资金</Text>
 		</Row>
 		<Row Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_INVESTOR_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>若城市同时拥有市场和灯塔，则额外提供 +1 [ICON_TradeRoute] 贸易路线容量。经过城市的每条 [ICON_TradeRoute] 国际商路每回合提供 +1 [ICON_SCIENCE] 科技值、+1 [ICON_CULTURE] 文化值。“经济”科技后提升至+2 [ICON_SCIENCE] 科技值、+2 [ICON_CULTURE] 文化值。</Text>
+			<Text>经过城市的每条外国 [ICON_TradeRoute] 商路每回合提供+1 [ICON_SCIENCE] 科技值、+1 [ICON_CULTURE] 文化值。“经济”科技后提升至+2 [ICON_SCIENCE] 科技值、+2 [ICON_CULTURE] 文化值。</Text>
 		</Row>
 
 		<!-- == Liang == -->
@@ -1912,19 +1952,19 @@
 		
 		<!-- == Moksha == -->
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_CARDINAL_BISHOP_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>该城市每回合产出的 [ICON_Culture] 文化值+15%，对相邻城市的宗教压力+100%。城市提供 +2 [ICON_Faith] 信仰值。</Text>
+			<Text>该城市每回合产出的 [ICON_Culture] 文化值+15%，对相邻城市的宗教压力+100%。城市中的每个专业化区域提供+2 [ICON_Faith] 信仰值。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中每位 [ICON_Citizen] 公民每回合可带来 +1 [ICON_CULTURE] 文化值。城市将不会受到来自非 [ICON_Governor] 总督所属文明宗教的压力与战斗加成。</Text>
+			<Text>城市中每位 [ICON_Citizen] 公民每回合可带来+1 [ICON_CULTURE] 文化值。城市将不会受到来自非 [ICON_Governor] 总督所属文明宗教的压力与战斗加成。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_CARDINAL_CITADEL_OF_GOD_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>城市中的每个专业化区域提供 +2 [ICON_Faith] 信仰值。城市拥有圣地时，每回合产生+2 [ICON_GreatProphet] 大预言家点数。6 单元格内的城市获得如下效果：圣地提供 +2 [ICON_Faith] 信仰值。</Text>
+			<Text>城市拥有圣地时，每回合产生+2 [ICON_GreatProphet] 大预言家点数。6单元格内每个拥有圣地的城市为该城市+2 [ICON_Faith] 信仰值。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_CARDINAL_DIVINE_ARCHITECT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>以此处为终点的 [ICON_TradeRoute] 国内贸易路线 +1 [ICON_FOOD] 食物、+2 [ICON_CULTURE] 文化值。城市可用 [ICON_Faith] 信仰值购买 [ICON_DISTRICT] 区域，购买 [ICON_DISTRICT] 区域时-10% [ICON_Faith] 信仰值消耗。</Text>
+			<Text>以此处为终点的 [ICON_TradeRoute] 国内贸易路线+1 [ICON_FOOD] 食物、+2 [ICON_CULTURE] 文化值。城市可用 [ICON_Faith] 信仰值购买 [ICON_DISTRICT] 区域，购买 [ICON_DISTRICT] 区域时-10% [ICON_Faith] 信仰值消耗。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_CARDINAL_PATRON_SAINT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>6 单元格内的城市获得如下效果：寺庙提供 +1 [ICON_SCIENCE] 科技值、+1 [ICON_CULTURE] 文化值；祭祀建筑提供 +1 [ICON_SCIENCE] 科技值、+2 [ICON_CULTURE] 文化值。</Text>
+			<Text>获得等同于城市所产生 [ICON_FAITH] 信仰值10%的 [ICON_SCIENCE] 科技值和 [ICON_CULTURE] 文化值，“归正会”后这个加成提升至 20%。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVERNOR_PROMOTION_MERCHANT_CURATOR_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>城市中艺术、音乐和著作巨作提供的 [ICON_Tourism] 旅游业绩+100%。</Text>
@@ -3040,6 +3080,12 @@
 		<Replace Tag="BBG_LOC_TECH_MILITARY_SCIENCE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>间谍容量 +1。军事工程师 +1 [ICON_Movement] 移动力。</Text>
 		</Replace>
+		<Replace Tag="LOC_CIVIC_MOBILIZATION_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>间谍容量 +1。大将军、海军统帅和总指挥 +2 [ICON_Movement] 移动力。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_MILITARY_ORGANIZATION_DESCRIPTION_XP2" Language="zh_Hans_CN">
+			<Text>每有一座兵工厂，每回合的 [ICON_GreatGeneral] 大将军点数便+2；每有一所军事学院，每回合的 [ICON_GreatGeneral] 大将军点数便+4。</Text>
+		</Replace>
 		<Replace Tag="LOC_CIVIC_SUFFRAGE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>获得“贸易银行”政策卡的效果。</Text>
 		</Replace>
@@ -3390,7 +3436,7 @@
 			<Text>拥有 [ICON_Governor] 总督的城市中每位 [ICON_Citizen] 公民+1 [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVT_INHERENT_BONUS_AUTOCRACY_ETHIOPIA" Language="zh_Hans_CN">
-			<Text>宫殿、市政广场及外交区的所有产出+1。拥有 [ICON_DISTRICT] 区域的城市中纪念碑+1 [ICON_FOOD] 食物、+1 [ICON_Production] 生产力。</Text>
+			<Text>宫殿、市政广场、外交区及其中建筑的所有产出+1。拥有 [ICON_DISTRICT] 区域的城市中纪念碑+1 [ICON_FOOD] 食物、+1 [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVT_ACCUMULATED_BONUS_BRIEF_CORPORATE_LIBERTARIANISM" Language="zh_Hans_CN">
 			<Text>每回合额外获得5点 [ICON_RESOURCE_URANIUM] 铀、[ICON_RESOURCE_ALUMINUM] 铝、[ICON_RESOURCE_OIL] 石油资源。</Text>
@@ -3458,9 +3504,9 @@
 
 
 		<!-- === GREAT PEOPLE === -->
-		<Replace Tag="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_MODERN_LAND" Language="zh_Hans_CN">
+		<!-- <Replace Tag="LOC_GREATPERSON_COMBAT_STRENGTH_AOE_MODERN_LAND" Language="zh_Hans_CN">
 			<Text>在两个单元格以内，为现代、原子能和信息时代的陆地单位+5 [ICON_Strength] 战斗力和+1 [ICON_Movement] 移动力。</Text>
-		</Replace>
+		</Replace> -->
 		<Replace Tag="LOC_GREATPERSON_BOUDICA_ACTIVE" Language="zh_Hans_CN">
 			<Text>在 [ICON_Capital] 首都创建1个军事工程师。</Text>
 		</Replace>

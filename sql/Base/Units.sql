@@ -483,6 +483,8 @@ INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, Ow
 ('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_TECH_GUIDANCE_SYSTEMS', NULL);
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
 ('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'Amount', '5');
+INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
+	('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'Preview', 'LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_DESC');
 
 -- 2026/08/07 现代反坦克组（调整）  前置到“合成材料”解锁（原：复合材料），变为原子能单位，基础力：86（原：90），3移速，520锤（原：580锤）
 UPDATE Units SET Combat=86, BaseMoves=3, Cost=520, PrereqTech='TECH_SYNTHETIC_MATERIALS', Maintenance=7 WHERE UnitType='UNIT_MODERN_AT';
