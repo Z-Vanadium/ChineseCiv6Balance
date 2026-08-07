@@ -503,11 +503,11 @@ INSERT INTO TypeTags (Type, Tag) VALUES
 INSERT INTO UnitAbilities (UnitAbilityType, Name, Description) VALUES
     ('ABILITY_CCB_MACHINE_GUN_RANGE_LATE', 'LOC_ABILITY_CCB_MACHINE_GUN_RANGE_LATE_NAME', 'LOC_ABILITY_CCB_MACHINE_GUN_RANGE_LATE_DESC');
 INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
-('ABILITY_CCB_MACHINE_GUN_RANGE_LATE', 'CCB_ROCKET_ARTILLERY_STRENGTH_LATE');
+('ABILITY_CCB_MACHINE_GUN_RANGE_LATE', 'CCB_MACHINE_GUN_RANGE_LATE');
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'MODIFIER_UNIT_ADJUST_ATTACK_RANGE', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_TECH_GUIDANCE_SYSTEMS', NULL);
+('CCB_MACHINE_GUN_RANGE_LATE', 'MODIFIER_UNIT_ADJUST_ATTACK_RANGE', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_TECH_GUIDANCE_SYSTEMS', NULL);
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'Amount', '1');
+('CCB_MACHINE_GUN_RANGE_LATE', 'Amount', '1');
 
 --=======================================================================
 --******                        Spy                                ******
