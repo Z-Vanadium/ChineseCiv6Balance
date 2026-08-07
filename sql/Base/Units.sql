@@ -53,9 +53,8 @@ UPDATE Units SET BaseMoves=3 WHERE UnitType='UNIT_MACHINE_GUN';
 UPDATE Units SET Combat=80 WHERE UnitType='UNIT_AIRCRAFT_CARRIER';
 UPDATE Units SET Combat=90 WHERE UnitType='UNIT_DESTROYER';
 -- UPDATE Units SET Combat=75 WHERE UnitType='UNIT_ROCKET_ARTILLERY';
-UPDATE Units SET Combat=90, BaseMoves=4 WHERE UnitType='UNIT_MODERN_AT';
 UPDATE Units SET Combat=90 WHERE UnitType='UNIT_MECHANIZED_INFANTRY';
--- UPDATE Units SET Combat=85, RangedCombat=95 WHERE UnitType='UNIT_NUCLEAR_SUBMARINE';
+UPDATE Units SET Combat=85, RangedCombat=95 WHERE UnitType='UNIT_NUCLEAR_SUBMARINE';
 -- UPDATE Units SET Combat=80, RangedCombat=95 WHERE UnitType='UNIT_MISSILE_CRUISER';
 UPDATE Units SET Combat=140, AntiAirCombat=120 WHERE UnitType='UNIT_GIANT_DEATH_ROBOT';
 UPDATE ModifierArguments SET Value='20' WHERE ModifierId='GDR_AA_DEFENSE' AND Name='Amount';
@@ -465,9 +464,48 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO ModifierStrings (ModifierId, Context , Text) VALUES
     ('BBG_ARTILLERY_DEFENSIBLE_DISTRICTS', 'Preview', 'LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_DESC');
 
+-- 2026/08/07 火箭炮（调整）  前置到“火箭研究”解锁（原：制导系统），变为原子能单位，基础力：65,90（原：70,100），3射程，3移速，生产力：600锤（原：680）。完成制导系统后，基础力+5提升为70,95。
+UPDATE Units SET Combat=65, Bombard=90, Cost=600, PrereqTech='TECH_ROCKETRY', Maintenance=7 WHERE UnitType='UNIT_ROCKET_ARTILLERY';
 
+INSERT INTO Tags (Tag, Vocabulary) VALUES
+    ('CLASS_ROCKET_ARTILLERY', 'ABILITY_CLASS');
+INSERT INTO Types (Type, Kind) VALUES
+    ('ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'KIND_ABILITY');
+INSERT INTO TypeTags (Type, Tag) VALUES
+    ('UNIT_ROCKET_ARTILLERY', 'CLASS_ROCKET_ARTILLERY'),
+    ('ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'CLASS_ROCKET_ARTILLERY');
 
+INSERT INTO UnitAbilities (UnitAbilityType, Name, Description) VALUES
+    ('ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_NAME', 'LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_DESC');
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
+('ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'CCB_ROCKET_ARTILLERY_STRENGTH_LATE');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_TECH_GUIDANCE_SYSTEMS', NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'Amount', '5');
 
+-- 2026/08/07 现代反坦克组（调整）  前置到“合成材料”解锁（原：复合材料），变为原子能单位，基础力：86（原：90），3移速，520锤（原：580锤）
+UPDATE Units SET Combat=86, BaseMoves=3, Cost=520, PrereqTech='TECH_SYNTHETIC_MATERIALS', Maintenance=7 WHERE UnitType='UNIT_MODERN_AT';
+
+-- 2026/08/07 机枪（调整）  基础造价上调至570锤（原540锤）（5%↑），3移速（不变）。完成制导系统后，攻击距离+1。
+UPDATE Units SET Cost=570 WHERE UnitType='UNIT_MACHINE_GUN';
+
+INSERT INTO Tags (Tag, Vocabulary) VALUES
+    ('CLASS_MACHINE_GUN', 'ABILITY_CLASS');
+INSERT INTO Types (Type, Kind) VALUES
+    ('ABILITY_CCB_MACHINE_GUN_RANGE_LATE', 'KIND_ABILITY');
+INSERT INTO TypeTags (Type, Tag) VALUES
+    ('UNIT_MACHINE_GUN', 'CLASS_ROCKET_ARTILLERY'),
+    ('ABILITY_CCB_MACHINE_GUN_RANGE_LATE', 'CLASS_ROCKET_ARTILLERY');
+
+INSERT INTO UnitAbilities (UnitAbilityType, Name, Description) VALUES
+    ('ABILITY_CCB_MACHINE_GUN_RANGE_LATE', 'LOC_ABILITY_CCB_MACHINE_GUN_RANGE_LATE_NAME', 'LOC_ABILITY_CCB_MACHINE_GUN_RANGE_LATE_DESC');
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
+('ABILITY_CCB_MACHINE_GUN_RANGE_LATE', 'CCB_ROCKET_ARTILLERY_STRENGTH_LATE');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'MODIFIER_UNIT_ADJUST_ATTACK_RANGE', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_TECH_GUIDANCE_SYSTEMS', NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'Amount', '1');
 
 --=======================================================================
 --******                        Spy                                ******
