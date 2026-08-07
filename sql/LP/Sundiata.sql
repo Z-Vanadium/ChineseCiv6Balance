@@ -15,6 +15,42 @@ INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
     ('DISTRICT_SUGUBA', 'BBG_SUGUBA_THEATER_SUNDIATA');
 INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
     ('TRAIT_LEADER_SAHEL_MERCHANTS', 'BBG_SUGUBA_THEATER_SUNDIATA');
+    
+-- 2026/08/07 书马丽（增强）  曼丁哥市场从相邻市中心、圣地、河流、绿洲、剧院+1信仰值。
+INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentDistrict) VALUES
+    ('CCB_SUGUBA_FAITH_CITY_CENTER_SUNDIATA', 'LOC_CCB_SUGUBA_FAITH_CITY_CENTER_SUNDIATA', 'YIELD_FAITH', 1, 'DISTRICT_CITY_CENTER');
+INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
+    ('DISTRICT_SUGUBA', 'CCB_SUGUBA_FAITH_CITY_CENTER_SUNDIATA');
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
+    ('TRAIT_LEADER_SAHEL_MERCHANTS', 'CCB_SUGUBA_FAITH_CITY_CENTER_SUNDIATA');
+
+INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentDistrict) VALUES
+    ('CCB_SUGUBA_FAITH_HOLY_SITE_SUNDIATA', 'LOC_CCB_SUGUBA_FAITH_HOLY_SITE_SUNDIATA', 'YIELD_FAITH', 1, 'DISTRICT_HOLY_SITE');
+INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
+    ('DISTRICT_SUGUBA', 'CCB_SUGUBA_FAITH_HOLY_SITE_SUNDIATA');
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
+    ('TRAIT_LEADER_SAHEL_MERCHANTS', 'CCB_SUGUBA_FAITH_HOLY_SITE_SUNDIATA');
+
+INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentFeature) VALUES
+    ('CCB_SUGUBA_FAITH_OASIS_SUNDIATA', 'LOC_CCB_SUGUBA_FAITH_OASIS_SUNDIATA', 'YIELD_FAITH', 1, 'FEATURE_OASIS');
+INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
+    ('DISTRICT_SUGUBA', 'CCB_SUGUBA_FAITH_OASIS_SUNDIATA');
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
+    ('TRAIT_LEADER_SAHEL_MERCHANTS', 'CCB_SUGUBA_FAITH_OASIS_SUNDIATA');
+
+INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentRiver) VALUES
+    ('CCB_SUGUBA_FAITH_RIVER_SUNDIATA', 'LOC_CCB_SUGUBA_FAITH_RIVER_SUNDIATA', 'YIELD_FAITH', 1, 1);
+INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
+    ('DISTRICT_SUGUBA', 'CCB_SUGUBA_FAITH_RIVER_SUNDIATA');
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
+    ('TRAIT_LEADER_SAHEL_MERCHANTS', 'CCB_SUGUBA_FAITH_RIVER_SUNDIATA');
+
+INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentDistrict) VALUES
+    ('CCB_SUGUBA_FAITH_THEATER_SUNDIATA', 'LOC_CCB_SUGUBA_FAITH_THEATER_SUNDIATA', 'YIELD_FAITH', 1, 'DISTRICT_THEATER');
+INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
+    ('DISTRICT_SUGUBA', 'CCB_SUGUBA_FAITH_THEATER_SUNDIATA');
+INSERT INTO ExcludedAdjacencies(TraitType, YieldChangeId) VALUES
+    ('TRAIT_LEADER_SAHEL_MERCHANTS', 'CCB_SUGUBA_FAITH_THEATER_SUNDIATA');
 
 -- and reverse
 -- 24/07/24 removed
@@ -49,3 +85,5 @@ UPDATE ModifierArguments SET VALUE='YIELD_CULTURE' WHERE ModifierId='SUNDIATA_KE
 
 -- 30% Gold discount on Great People patronage
 UPDATE ModifierArguments SET VALUE=30 WHERE ModifierId='SUNDIATA_KEITA_PURCHASE_GREAT_PEOPLE' AND Name='Amount';
+
+-- 
