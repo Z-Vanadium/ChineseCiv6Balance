@@ -3,8 +3,26 @@
 --=======================================================================
 --=                             SEOWON                                  =
 --=======================================================================
--- 2026/06/30 火车延后至金属铸造
-UPDATE Units SET PrereqTech='TECH_METAL_CASTING' WHERE UnitType='UNIT_KOREAN_HWACHA';
+-- 2026/08/07 火车基础力下降为42,57，弹道学后恢复45,60。
+UPDATE Units SET Combat=42, RangedCombat=57 WHERE UnitType='UNIT_KOREAN_HWACHA';
+
+INSERT INTO Tags (Tag, Vocabulary) VALUES
+    ('CLASS_KOREAN_HWACHA', 'ABILITY_CLASS');
+INSERT INTO Types (Type, Kind) VALUES
+    ('ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE', 'KIND_ABILITY');
+INSERT INTO TypeTags (Type, Tag) VALUES
+    ('UNIT_KOREAN_HWACHA', 'CLASS_KOREAN_HWACHA'),
+    ('ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE', 'CLASS_KOREAN_HWACHA');
+
+INSERT INTO UnitAbilities (UnitAbilityType, Name, Description) VALUES
+    ('ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE', 'LOC_ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE_NAME', 'LOC_ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE_DESC');
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
+('ABILITY_CCB_KOREAN_HWACHA_RANGE_LATE', 'CCB_KOREAN_HWACHA_RANGE_LATE');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('CCB_KOREAN_HWACHA_RANGE_LATE', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_TECH_BALLISTICS', NULL);
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('CCB_KOREAN_HWACHA_RANGE_LATE', 'Amount', '3');
+
 -- 04/07/24 Korean rework 
 -- +1 for every 2 mines
 INSERT INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldChange, TilesRequired, AdjacentImprovement) VALUES
