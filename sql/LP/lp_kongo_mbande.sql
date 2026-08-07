@@ -33,6 +33,7 @@ INSERT INTO RequirementSetRequirements(RequirementSetId, RequirementId) VALUES
 -- 	('TRAIT_LEADER_RELIGIOUS_CONVERT', 'BBG_MBANDE_THEATRE_MBANZA');
     
 -- 18/06/23 Mbande gets +10% culture & gold in cities with Mbanza
+-- 2026/08/07 移除
 INSERT INTO Requirements (RequirementId, RequirementType) VALUES
     ('BBG_REQUIREMENT_CITY_HAS_MBANZA', 'REQUIREMENT_CITY_HAS_DISTRICT');
 INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
@@ -52,9 +53,9 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('BBG_MODIFIER_MBANZA_ADDCULTUREYIELD', 'YieldType', 'YIELD_CULTURE'),
     ('BBG_MODIFIER_MBANZA_ADDGOLDYIELD', 'YieldType', 'YIELD_GOLD');
-INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
-	('TRAIT_LEADER_NZINGA_MBANDE', 'BBG_MODIFIER_MBANZA_ADDCULTUREYIELD'),
-	('TRAIT_LEADER_NZINGA_MBANDE', 'BBG_MODIFIER_MBANZA_ADDGOLDYIELD');
+-- INSERT INTO TraitModifiers(TraitType, ModifierId) VALUES
+-- 	('TRAIT_LEADER_NZINGA_MBANDE', 'BBG_MODIFIER_MBANZA_ADDCULTUREYIELD'),
+-- 	('TRAIT_LEADER_NZINGA_MBANDE', 'BBG_MODIFIER_MBANZA_ADDGOLDYIELD');
 
 -- 05/03/2024
 -- Mbande civilian units get forest and jungle free movement
@@ -86,8 +87,9 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_NZINGA_MBANDE', 'BBG_TRAIT_ARCHAEOLOGIST_COST');
 
 -- 2026/06/02 market +1 gpp
-INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
-('TRAIT_LEADER_NZINGA_MBANDE', 'CCB_KONGO_MERCHANT_GPP');
+-- 2026/08/07 移除
+-- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
+-- ('TRAIT_LEADER_NZINGA_MBANDE', 'CCB_KONGO_MERCHANT_GPP');
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
 ('CCB_KONGO_MERCHANT_GPP', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT', 0, 0, 0, NULL, 'BUILDING_IS_MARKET');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
@@ -100,10 +102,10 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 ('TRAIT_LEADER_NZINGA_MBANDE', 'TRAIT_DOUBLE_MUSICIAN_POINTS'),
 ('TRAIT_LEADER_NZINGA_MBANDE', 'TRAIT_DOUBLE_WRITER_POINTS');
 
--- 2026/07/12 移除商业中心和剧院广场从树林或雨林获得少量相邻加成；新增商业中心和剧院广场互给+1；新增拥有姆班赞的城市，在“⻜行”科技后每个区域提供 +2 旅游业绩
+-- 2026/08/07 商业中心和剧院广场互给+2；新增拥有姆班赞的城市，在“⻜行”科技后每个区域提供 +2 旅游业绩
 INSERT INTO Adjacency_YieldChanges(ID, Description, YieldType, YieldChange, AdjacentDistrict) VALUES
-    ('CCB_CH_Kongo_Theater', 'LOC_CCB_CH_KONGO_THEATER_ADJACENCY', 'YIELD_GOLD', 1, 'DISTRICT_THEATER'),
-    ('CCB_Theater_Kongo_CH', 'LOC_CCB_THEATER_KONGO_CH_ADJACENCY', 'YIELD_CULTURE', 1, 'DISTRICT_COMMERCIAL_HUB');
+    ('CCB_CH_Kongo_Theater', 'LOC_CCB_CH_KONGO_THEATER_ADJACENCY', 'YIELD_GOLD', 2, 'DISTRICT_THEATER'),
+    ('CCB_Theater_Kongo_CH', 'LOC_CCB_THEATER_KONGO_CH_ADJACENCY', 'YIELD_CULTURE', 2, 'DISTRICT_COMMERCIAL_HUB');
 INSERT INTO District_Adjacencies(DistrictType, YieldChangeId) VALUES
     ('DISTRICT_COMMERCIAL_HUB', 'CCB_CH_Kongo_Theater'),
     ('DISTRICT_THEATER', 'CCB_Theater_Kongo_CH');

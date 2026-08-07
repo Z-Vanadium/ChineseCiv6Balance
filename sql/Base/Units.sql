@@ -148,6 +148,8 @@ INSERT INTO RequirementSetRequirements(RequirementSetId, RequirementId) VALUES
 -- 30/06/25 SAM 125 anti air (stop all nukes)
 UPDATE Units SET AntiAirCombat=125, BaseMoves=5 WHERE UnitType='UNIT_MOBILE_SAM';
 
+-- 2026/08/07 战舰防空降低至 85（从90）
+UPDATE Units SET AntiAirCombat=85 WHERE UnitType='UNIT_BATTLESHIP';
 
 -- 16/12/22 Obsolescence
 -- 15/10/23 Added Varus
