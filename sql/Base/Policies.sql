@@ -584,3 +584,24 @@ INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
 ('REQ_CCB_UNIT_IS_GREAT_ADMIRAL', 'UnitType', 'UNIT_GREAT_ADMIRAL'), 
 ('REQ_CCB_UNIT_IS_GREAT_GENERAL', 'UnitType', 'UNIT_GREAT_GENERAL'), 
 ('REQ_CCB_UNIT_IS_COMANDANTE_GENERAL', 'UnitType', 'UNIT_COMANDANTE_GENERAL');
+
+-- ============ 2026-XX-XX（从 1.4.3 移植）E-Commerce（电子商务, POLICY_ECOMMERCE）============
+-- 在原效果（每条商路+2生产力+5金币）上额外增加"商路无法被掠夺"（海路/陆路全部免疫）
+-- 机制参考原版 MODIFIER_PLAYER_UNIT_ADJUST_TRADE_ROUTE_PLUNDER_IMMUNITY（里斯本/黄金时代纪念）
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+	('CCB_ECOMMERCE_PLUNDER_IMMUNITY_SEA',  'MODIFIER_PLAYER_UNIT_ADJUST_TRADE_ROUTE_PLUNDER_IMMUNITY'),
+	('CCB_ECOMMERCE_PLUNDER_IMMUNITY_LAND', 'MODIFIER_PLAYER_UNIT_ADJUST_TRADE_ROUTE_PLUNDER_IMMUNITY');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+	('CCB_ECOMMERCE_PLUNDER_IMMUNITY_SEA',  'DomainType', 'DOMAIN_SEA'),
+	('CCB_ECOMMERCE_PLUNDER_IMMUNITY_LAND', 'DomainType', 'DOMAIN_LAND');
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
+	('POLICY_ECOMMERCE', 'CCB_ECOMMERCE_PLUNDER_IMMUNITY_SEA'),
+	('POLICY_ECOMMERCE', 'CCB_ECOMMERCE_PLUNDER_IMMUNITY_LAND');
+
+-- ============ 2026-XX-XX（从 1.4.3 移植）着力点（Dedication）调整 ============
+-- 古典黄金面板"雄伟壮丽"→"此处有龙"（Policies_XP1.MinimumGameEra 决定出现时代）
+-- 1) "此处有龙"加入古典（原文艺复兴~现代）
+--    ⚠ ID 依据官方命名规则推断（迭起兴衰数据打包不可见）；若面板未出现需 Lua 枚举确认真实 ID
+UPDATE Policies_XP1 SET MinimumGameEra = 'ERA_CLASSICAL' WHERE PolicyType = 'POLICY_HERE_BE_DRAGONS';
+-- 2) "雄伟壮丽"移出古典（MinimumGameEra→RENAISSANCE，Maximum 原为 RENAISSANCE → 仅文艺复兴出现）
+UPDATE Policies_XP1 SET MinimumGameEra = 'ERA_RENAISSANCE' WHERE PolicyType = 'POLICY_MONUMENTALITY';

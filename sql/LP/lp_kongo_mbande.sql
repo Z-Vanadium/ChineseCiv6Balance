@@ -86,6 +86,16 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_NZINGA_MBANDE', 'BBG_TRAIT_ARCHAEOLOGIST_COST');
 
+-- 2026-XX-XX（从 1.4.3 移植）Mbande gets +50% Great Merchant points
+-- 注：1.6 上游曾做"市场+1大商点"（CCB_KONGO_MERCHANT_GPP）但已注释移除（2026/08/07）→ 无叠加
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+    ('CCB_MBANDE_GREAT_MERCHANT_POINTS_50', 'MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS_PERCENT');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('CCB_MBANDE_GREAT_MERCHANT_POINTS_50', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_MERCHANT'),
+    ('CCB_MBANDE_GREAT_MERCHANT_POINTS_50', 'Amount', '50');
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+    ('TRAIT_LEADER_NZINGA_MBANDE', 'CCB_MBANDE_GREAT_MERCHANT_POINTS_50');
+
 -- 2026/06/02 market +1 gpp
 -- 2026/08/07 移除
 -- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 

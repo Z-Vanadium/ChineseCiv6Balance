@@ -375,6 +375,12 @@
 			<File>scripts/bbg_script.lua</File>
 		</AddGameplayScripts>
 
+		<!-- CCB 传承卡升级状态机（从 1.4.3 移植） -->
+		<AddGameplayScripts id="CCB_LegacyCards">
+			<Criteria>XP1_AND_XP2</Criteria>
+			<File>scripts/ccb_legacycards.lua</File>
+		</AddGameplayScripts>
+
 		<AddUserInterfaces id="bbg_uitogameplay_dummy_xml">
 			<Properties>
 				<Context>InGame</Context>
@@ -537,6 +543,7 @@
 			<File>sql/Base/Scythia.sql</File>
 			<File>sql/Base/Spain.sql</File>
 			<File>sql/Base/Sumer.sql</File>
+			<File>sql/Base/LegacyCards.sql</File>
 		</UpdateDatabase>
 		<UpdateDatabase id="City_States">
 			<Properties>
@@ -1605,5 +1612,7 @@
 		<File>MABC/UI/RUIVO_MODULAR_UI.xml</File>
 		<File>MABC/标准写法.sql</File>
 		<File>sql/Base/Excluded_Adjacencies.sql</File>
+		<File>sql/Base/LegacyCards.sql</File>
+		<File>scripts/ccb_legacycards.lua</File>
 	</Files>
 </Mod>

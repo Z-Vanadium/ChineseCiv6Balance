@@ -4197,4 +4197,29 @@
 		</Replace>
 		
 	</LocalizedText>
+<Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_BUFF_MODIFIER_DESC" Language="en_US"><Text>From Oligarchy Legacy: +4 [ICON_STRENGTH] Combat Strength for melee, naval melee and anti-cavalry units.</Text></Replace>
+<Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_DESC" Language="en_US"><Text>From Oligarchy Legacy: +4 [ICON_STRENGTH] Combat Strength for melee, naval melee and anti-cavalry units.</Text></Replace>
+<Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_NAME" Language="en_US"><Text>Oligarchy Legacy</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DESC" Language="en_US"><Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields (max 5).[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_CULTURE] Culture per 2 Envoys.</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_NAME" Language="en_US"><Text>Autocracy Legacy - Diplomacy</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DESC" Language="en_US"><Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields (max 5).[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_NAME" Language="en_US"><Text>Autocracy Legacy - Faith</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DESC" Language="en_US"><Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields (max 5).[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_NAME" Language="en_US"><Text>Autocracy Legacy - Trade</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_DESC" Language="en_US"><Text>Land, Naval Melee and Anti-Cavalry units +4 [ICON_STRENGTH] Combat Strength.[NEWLINE]After Nationalism, Land Melee and Anti-Cavalry units +1 [ICON_MOVEMENT] Movement.</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_NAME" Language="en_US"><Text>Oligarchy Legacy - Arms</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_NAVAL_DESC" Language="en_US"><Text>Land, Naval Melee and Anti-Cavalry units +4 [ICON_STRENGTH] Combat Strength.[NEWLINE]Naval units gain +50% experience from combat.</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_NAVAL_NAME" Language="en_US"><Text>Oligarchy Legacy - Navy</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_DESC" Language="en_US"><Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_CULTURE] Culture per 2 Envoys in city-states.</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_NAME" Language="en_US"><Text>Republic Legacy - Diplomacy</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_FAITH_DESC" Language="en_US"><Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_FAITH_NAME" Language="en_US"><Text>Republic Legacy - Faith</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_TRADE_DESC" Language="en_US"><Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_TRADE_NAME" Language="en_US"><Text>Republic Legacy - Trade</Text></Replace>
+<Replace Tag="LOC_POLICY_ECOMMERCE_EXPANSION1_DESCRIPTION" Language="en_US">
+			<Text>+2 [ICON_PRODUCTION] Production and +5 [ICON_GOLD] Gold for all [ICON_TRADEROUTE] Trade Routes.[NEWLINE]Trade Routes cannot be plundered.</Text>
+		</Replace>
+<Replace Tag="LOC_TECH_CYBERNETICS_DESCRIPTION" Language="en_US">
+			<Text>All Modern, Atomic and Information Era military units gain +1 [ICON_MOVEMENT] Movement.[NEWLINE]Unlocks the Giant Death Robot upgrade: Improved Mobility[NEWLINE]+3 [ICON_MOVEMENT] Movement. Allows jumping over Mountain tiles.[NEWLINE]Giant Death Robots ignore Zone of Control.</Text>
+		</Replace>
 </GameData>

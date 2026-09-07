@@ -51,3 +51,8 @@ INSERT INTO GovernmentModifiers (GovernmentType, ModifierId) VALUES
 INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
     ('POLICY_GOV_AUTOCRACY', 'BBG_MONUMENT_FOOD_AUTOCRACY_1_DISTRICT'),
     ('POLICY_GOV_AUTOCRACY', 'BBG_MONUMENT_PRODUCTION_AUTOCRACY_1_DISTRICT');
+
+-- 2026-XX-XX Anarchy duration reduced: repeated-same-government penalty 4 -> 2 turns
+-- 原版 GOVERNMENT_BASE_ANARCHY_TURNS=2：首次切换政体 2 回合无政府；
+-- 重复进入相同政体时惩罚翻倍为 4 回合。改为 base=1 → 首次 1 回合、重复 2 回合。
+UPDATE GlobalParameters SET Value='1' WHERE Name='GOVERNMENT_BASE_ANARCHY_TURNS';

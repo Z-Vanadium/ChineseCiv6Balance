@@ -487,6 +487,40 @@ INSERT INTO Requirements (RequirementId, RequirementType) VALUES
 INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES 
 ('REQ_CCB_UNIT_IS_INFO_ERA', 'EraType', 'ERA_INFORMATION');
 
+-- ============ 2026-XX-XX 控制论（TECH_CYBERNETICS）调整（从 1.4.3 移植） ============
+-- 1) 效果范围拓宽：信息时代 → 现代/原子能/信息时代 单位 +1 移动
+--    （原 REQSET_CCB_UNIT_IS_INFO_ERA 被智能材料复用，不动它；新建组合需求集）
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+('REQSET_CCB_UNIT_ERA_MODERN_PLUS', 'REQUIREMENTSET_TEST_ANY');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+('REQSET_CCB_UNIT_ERA_MODERN_PLUS', 'REQ_CCB_UNIT_IS_MODERN_ERA'),
+('REQSET_CCB_UNIT_ERA_MODERN_PLUS', 'REQ_CCB_UNIT_IS_ATOMIC_ERA'),
+('REQSET_CCB_UNIT_ERA_MODERN_PLUS', 'REQ_CCB_UNIT_IS_INFO_ERA');
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES
+('REQ_CCB_UNIT_IS_MODERN_ERA', 'REQUIREMENT_UNIT_ERA_TYPE_MATCHES'),
+('REQ_CCB_UNIT_IS_ATOMIC_ERA', 'REQUIREMENT_UNIT_ERA_TYPE_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
+('REQ_CCB_UNIT_IS_MODERN_ERA', 'EraType', 'ERA_MODERN'),
+('REQ_CCB_UNIT_IS_ATOMIC_ERA', 'EraType', 'ERA_ATOMIC');
+UPDATE Modifiers SET SubjectRequirementSetId = 'REQSET_CCB_UNIT_ERA_MODERN_PLUS'
+WHERE ModifierId = 'CCB_CYB_INFO_UNIT_MOVE';
+
+-- 2) 完成控制论后，末日机甲（GDR）无视 ZOC
+--    机制：科技挂载天然满足"完成控制论"；GRANT_ABILITY 授予原版 ABILITY_IGNORE_ZOC；
+--    需求：SubjectRequirementSetId 只能引用 RequirementSets（不能直接引用 Requirements），
+--    故自建 TEST_ALL 集 CCB_REQSET_UNIT_IS_GDR 包装原版 Requirement REQUIRES_UNIT_GIANT_DEATH_ROBOT
+--    （原版 Requirement：Type=REQUIREMENT_UNIT_TAG_MATCHES, Arg Tag=CLASS_GIANT_DEATH_ROBOT）
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+('CCB_REQSET_UNIT_IS_GDR', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+('CCB_REQSET_UNIT_IS_GDR', 'REQUIRES_UNIT_GIANT_DEATH_ROBOT');
+INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES
+('TECH_CYBERNETICS', 'CCB_CYB_GDR_IGNORE_ZOC');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
+('CCB_CYB_GDR_IGNORE_ZOC', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY', 0, 0, 0, NULL, 'CCB_REQSET_UNIT_IS_GDR');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+('CCB_CYB_GDR_IGNORE_ZOC', 'AbilityType', 'ABILITY_IGNORE_ZOC');
+
 -- smart materials: all units +3 defense strength
 INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
 ('TECH_SMART_MATERIALS', 'CCB_SM_UNITS_DEFENSE_BONUS_GIVER');
