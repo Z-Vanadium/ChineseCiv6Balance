@@ -4195,8 +4195,6 @@
 		<Replace Tag="LOC_DISTRICT_SUK_DZONG_DESCRIPTION_XP2" Language="en_US">
 			<Text>A district unique to Tibet that replaces the [ICON_DISTRICT_HOLYSITE] Holy Site district and is cheaper to build.[NEWLINE][NEWLINE]Occupying units receives +5 [ICON_STRENGTH] Defensive Combat Strength.[NEWLINE]Buildings in the Dzong are 20% cheaper to purchase with [ICON_GOLD] Gold and [ICON_FAITH] Faith.</Text>
 		</Replace>
-		
-	</LocalizedText>
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_BUFF_MODIFIER_DESC" Language="en_US"><Text>From Oligarchy Legacy: +4 [ICON_STRENGTH] Combat Strength for melee, naval melee and anti-cavalry units.</Text></Replace>
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_DESC" Language="en_US"><Text>From Oligarchy Legacy: +4 [ICON_STRENGTH] Combat Strength for melee, naval melee and anti-cavalry units.</Text></Replace>
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_NAME" Language="en_US"><Text>Oligarchy Legacy</Text></Replace>
@@ -4222,4 +4220,6 @@
 <Replace Tag="LOC_TECH_CYBERNETICS_DESCRIPTION" Language="en_US">
 			<Text>All Modern, Atomic and Information Era military units gain +1 [ICON_MOVEMENT] Movement.[NEWLINE]Unlocks the Giant Death Robot upgrade: Improved Mobility[NEWLINE]+3 [ICON_MOVEMENT] Movement. Allows jumping over Mountain tiles.[NEWLINE]Giant Death Robots ignore Zone of Control.</Text>
 		</Replace>
+
+</LocalizedText>
 </GameData>

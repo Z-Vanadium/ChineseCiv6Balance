@@ -8684,7 +8684,6 @@
 		<Replace Tag="LOC_GOVERNMENT_JFD_POLIS_LEADER_TITLE_LIME_THULE_DAVE" Language="zh_Hans_CN"><Text>伊利图约克</Text></Replace>
 		<Replace Tag="LOC_GOVERNMENT_JFD_POLIS_LEADER_TITLE_LEU_ARGENTINA" Language="zh_Hans_CN"><Text>市长</Text></Replace>
 		<Replace Tag="LOC_GOVERNMENT_JFD_POLIS_LEADER_TITLE_LEU_ARGENTINA_FEMININE" Language="zh_Hans_CN"><Text>女市长</Text></Replace>
-	</LocalizedText>
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_BUFF_MODIFIER_DESC" Language="zh_Hans_CN">
 			<Text>来自寡头传承：陆地、海军近战与抗骑兵单位+4 [ICON_Strength] 战斗力。</Text>
 		</Replace>
@@ -8745,4 +8744,6 @@
 <Replace Tag="LOC_POLICY_ECOMMERCE_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>每条 [ICON_Traderoute] 商路+2 [ICON_Production] 生产力、+5 [ICON_Gold] 金币。[NEWLINE]商路无法被掠夺。</Text>
 		</Replace>
+
+</LocalizedText>
 </GameData>
