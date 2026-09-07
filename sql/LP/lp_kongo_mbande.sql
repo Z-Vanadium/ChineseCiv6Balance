@@ -96,16 +96,6 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
     ('TRAIT_LEADER_NZINGA_MBANDE', 'CCB_MBANDE_GREAT_MERCHANT_POINTS_50');
 
--- 2026/06/02 market +1 gpp
--- 2026/08/07 移除
--- INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
--- ('TRAIT_LEADER_NZINGA_MBANDE', 'CCB_KONGO_MERCHANT_GPP');
-INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_KONGO_MERCHANT_GPP', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT', 0, 0, 0, NULL, 'BUILDING_IS_MARKET');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_KONGO_MERCHANT_GPP', 'Amount', '1'), 
-('CCB_KONGO_MERCHANT_GPP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_MERCHANT');
-
 -- +50% theatre gpp from civ ua
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
 ('TRAIT_LEADER_NZINGA_MBANDE', 'TRAIT_DOUBLE_ARTIST_POINTS'),

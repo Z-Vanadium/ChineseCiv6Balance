@@ -856,7 +856,7 @@
 		</Row>
 		<!-- = leader ability (Nzinga Mbande) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_NZINGA_MBANDE_DESCRIPTION" Language="en_US">
-			<Text>+10% [ICON_GOLD] Gold and 10% [ICON_CULTURE] Culture in cities with a [ICON_DISTRICT_MBANZA] Mbanza (does not stack with multiples). [ICON_DISTRICT_MBANZA] Mbanza provides +2 adjacency to [ICON_DISTRICT_THEATER] Theater Squares and [ICON_DISTRICT_COMMERCIAL_HUB] Commercial Hubs. Archaeologists are 50% cheaper to purchase.[NEWLINE][NEWLINE]All civilian units ignore the Rainforest and Woods [ICON_MOVEMENT] Movement penalty.</Text>
+			<Text>+10% [ICON_GOLD] Gold and 10% [ICON_CULTURE] Culture in cities with a [ICON_DISTRICT_MBANZA] Mbanza (does not stack with multiples). [ICON_DISTRICT_MBANZA] Mbanza provides +2 adjacency to [ICON_DISTRICT_THEATER] Theater Squares and [ICON_DISTRICT_COMMERCIAL_HUB] Commercial Hubs. Archaeologists are 50% cheaper to purchase.[NEWLINE][NEWLINE]All civilian units ignore the Rainforest and Woods [ICON_MOVEMENT] Movement penalty.[NEWLINE]+50% [ICON_GreatMerchant] Great Merchant points.</Text>
 		</Replace>
 		<Row Tag="BBG_LOC_MBANDE_COMMERCIAL_MBANZA" Language="en_US">
 			<Text>+{1_num} [ICON_GOLD] Gold per adjacent Mbanza.</Text>

@@ -940,7 +940,7 @@
 		</Replace>
 		<!-- = leader ability (Nzinga Mbande) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_NZINGA_MBANDE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>每回合获得的 [ICON_GreatWriter] 大作家、[ICON_GreatArtist] 大艺术家和 [ICON_GreatMusician] 大音乐家点数 +50%。商业中心和剧院广场为彼此提供额外大量相邻加成。考古学家购买花费减少50%。[NEWLINE][NEWLINE]拥有姆班赞的城市获得下列加成：[NEWLINE][ICON_BULLET]研究“飞行”科技后，每个区域提供 +2 [ICON_Tourism] 旅游业绩。[NEWLINE][NEWLINE]所有平民单位在树林和雨林中移动时无 [ICON_Movement] 移动力减益。</Text>
+			<Text>每回合获得的 [ICON_GreatWriter] 大作家、[ICON_GreatArtist] 大艺术家和 [ICON_GreatMusician] 大音乐家点数 +50%。商业中心和剧院广场为彼此提供额外大量相邻加成。考古学家购买花费减少50%。[NEWLINE][NEWLINE]拥有姆班赞的城市获得下列加成：[NEWLINE][ICON_BULLET]研究“飞行”科技后，每个区域提供 +2 [ICON_Tourism] 旅游业绩。[NEWLINE][NEWLINE]所有平民单位在树林和雨林中移动时无 [ICON_Movement] 移动力减益。[NEWLINE]大商人点数+50%。</Text>
 		</Replace>
 		<!-- = unique unit = -->
 		<Replace Tag="LOC_UNIT_KONGO_SHIELD_BEARER_DESCRIPTION" Language="zh_Hans_CN">
