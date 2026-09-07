@@ -4239,5 +4239,8 @@
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MERCHANT_REPUBLIC_DESC" Language="en_US">
 			<Text>Internal trigger policy: grants free policy change on unlock, then becomes obsolete.</Text>
+		</Replace>
+<Replace Tag="LOC_POLICY_AUTOCRACY_DESC" Language="en_US">
+			<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields (max 5).</Text>
 		</Replace></LocalizedText>
 </GameData>

@@ -8763,5 +8763,8 @@
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MERCHANT_REPUBLIC_DESC" Language="zh_Hans_CN">
 			<Text>内部触发卡：解锁时触发免费换卡，随后自动过时隐藏。</Text>
+		</Replace>
+<Replace Tag="LOC_POLICY_AUTOCRACY_DESC" Language="zh_Hans_CN">
+			<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力（最多5次）。</Text>
 		</Replace></LocalizedText>
 </GameData>
