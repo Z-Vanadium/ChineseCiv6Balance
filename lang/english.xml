@@ -4221,5 +4221,23 @@
 			<Text>All Modern, Atomic and Information Era military units gain +1 [ICON_MOVEMENT] Movement.[NEWLINE]Unlocks the Giant Death Robot upgrade: Improved Mobility[NEWLINE]+3 [ICON_MOVEMENT] Movement. Allows jumping over Mountain tiles.[NEWLINE]Giant Death Robots ignore Zone of Control.</Text>
 		</Replace>
 
-</LocalizedText>
+
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MONARCHY_NAME" Language="en_US">
+			<Text>Monarchy Legacy Trigger (internal)</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MONARCHY_DESC" Language="en_US">
+			<Text>Internal trigger policy: grants free policy change on unlock, then becomes obsolete.</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_THEOCRACY_NAME" Language="en_US">
+			<Text>Theocracy Legacy Trigger (internal)</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_THEOCRACY_DESC" Language="en_US">
+			<Text>Internal trigger policy: grants free policy change on unlock, then becomes obsolete.</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MERCHANT_REPUBLIC_NAME" Language="en_US">
+			<Text>Merchant Republic Legacy Trigger (internal)</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MERCHANT_REPUBLIC_DESC" Language="en_US">
+			<Text>Internal trigger policy: grants free policy change on unlock, then becomes obsolete.</Text>
+		</Replace></LocalizedText>
 </GameData>

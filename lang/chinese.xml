@@ -8745,5 +8745,23 @@
 			<Text>每条 [ICON_Traderoute] 商路+2 [ICON_Production] 生产力、+5 [ICON_Gold] 金币。[NEWLINE]商路无法被掠夺。</Text>
 		</Replace>
 
-</LocalizedText>
+
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MONARCHY_NAME" Language="zh_Hans_CN">
+			<Text>君主传承触发（内部）</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MONARCHY_DESC" Language="zh_Hans_CN">
+			<Text>内部触发卡：解锁时触发免费换卡，随后自动过时隐藏。</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_THEOCRACY_NAME" Language="zh_Hans_CN">
+			<Text>神权传承触发（内部）</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_THEOCRACY_DESC" Language="zh_Hans_CN">
+			<Text>内部触发卡：解锁时触发免费换卡，随后自动过时隐藏。</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MERCHANT_REPUBLIC_NAME" Language="zh_Hans_CN">
+			<Text>商共传承触发（内部）</Text>
+		</Replace>
+<Replace Tag="LOC_CCB_POLICY_GOV_TRIGGER_MERCHANT_REPUBLIC_DESC" Language="zh_Hans_CN">
+			<Text>内部触发卡：解锁时触发免费换卡，随后自动过时隐藏。</Text>
+		</Replace></LocalizedText>
 </GameData>
