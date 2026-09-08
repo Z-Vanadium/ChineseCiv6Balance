@@ -428,6 +428,9 @@ UPDATE Boosts SET Unit1Type=NULL, NumItems=2, BoostClass='BOOST_TRIGGER_HAVE_X_B
 -- 2025/10/11 Stealth Technology : Own 2 lab
 UpDATE Boosts SET TriggerDescription='LOC_CCB_BOOST_TECH_STEALTH_TECHNOLOGY', TriggerLongDescription='LOC_CCB_BOOST_TECH_STEALTH_TECHNOLOGY', NumItems=2, BoostClass='BOOST_TRIGGER_HAVE_X_BUILDINGS', BuildingType='BUILDING_RESEARCH_LAB' WHERE TechnologyType='TECH_STEALTH_TECHNOLOGY';
 
+-- 2026/09/08 Exploration civic (unlocks Merchant Republic gov) : Own 2 Caravels -> Build 1 Consulate (Diplomatic Quarter T1)
+UPDATE Boosts SET Unit1Type=NULL, NumItems=1, BoostClass='BOOST_TRIGGER_HAVE_X_BUILDINGS', BuildingType='BUILDING_CONSULATE', TriggerDescription='LOC_CCB_BOOST_CIVIC_EXPLORATION', TriggerLongDescription='LOC_CCB_BOOST_CIVIC_EXPLORATION' WHERE CivicType='CIVIC_EXPLORATION';
+
 --=======================================================================
 --******                         BONUS                             ******
 --=======================================================================

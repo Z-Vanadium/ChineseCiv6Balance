@@ -2960,6 +2960,9 @@
 		<Replace Tag="LOC_BOOST_TRIGGER_HUMANISM" Language="en_US">
 			<Text>Own 2 Amphitheaters.</Text>
 		</Replace>
+		<Replace Tag="LOC_CCB_BOOST_CIVIC_EXPLORATION" Language="en_US">
+			<Text>Build 1 Consulate.</Text>
+		</Replace>
 		<Replace Tag="LOC_CIVIC_IDEOLOGY_DESCRIPTION" Language="en_US">
 				<Text>Grants the ability to construct an additional Spy. Grants open borders with all city-states.</Text>
 		</Replace>

@@ -3077,6 +3077,9 @@
 		<Replace Tag="LOC_CCB_BOOST_TECH_STEALTH_TECHNOLOGY" Language="zh_Hans_CN">
 			<Text>建造 2 个研究实验室。</Text>
 		</Replace>
+		<Replace Tag="LOC_CCB_BOOST_CIVIC_EXPLORATION" Language="zh_Hans_CN">
+			<Text>建造 1 座领事馆。</Text>
+		</Replace>
 		<Replace Tag="BBG_LOC_TECH_MILITARY_SCIENCE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>间谍容量 +1。军事工程师 +1 [ICON_Movement] 移动力。</Text>
 		</Replace>
