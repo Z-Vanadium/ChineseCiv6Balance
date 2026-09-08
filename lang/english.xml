@@ -2906,7 +2906,151 @@
 		<Replace Tag="BBG_LOC_TECH_MILITARY_ENGINEERING_DESCRIPTION" Language="en_US">
 			<Text>+1 [ICON_PRODUCTION] Production from the Quarry improvement.</Text>
 		</Replace>
-		<Replace Tag="LOC_TECH_MILITARY_SCIENCE_DESCRIPTION" Language="en_US">
+		<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_FASCISM_NAME" Language="en_US">
+	<Text>Oligarchy Legacy - Arms - Fascism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_FASCISM_DESC" Language="en_US">
+	<Text>Land, Naval Melee and Anti-Cavalry units +4 [ICON_STRENGTH] Combat Strength.[NEWLINE]After Nationalism, Land Melee and Anti-Cavalry units +1 [ICON_MOVEMENT] Movement.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_COMMUNISM_NAME" Language="en_US">
+	<Text>Oligarchy Legacy - Arms - Communism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_COMMUNISM_DESC" Language="en_US">
+	<Text>Land, Naval Melee and Anti-Cavalry units +4 [ICON_STRENGTH] Combat Strength.[NEWLINE]After Nationalism, Land Melee and Anti-Cavalry units +1 [ICON_MOVEMENT] Movement.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_DEMOCRACY_NAME" Language="en_US">
+	<Text>Oligarchy Legacy - Arms - Democracy</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_DEMOCRACY_DESC" Language="en_US">
+	<Text>Land, Naval Melee and Anti-Cavalry units +4 [ICON_STRENGTH] Combat Strength.[NEWLINE]After Nationalism, Land Melee and Anti-Cavalry units +1 [ICON_MOVEMENT] Movement.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_NAVAL_FASCISM_NAME" Language="en_US">
+	<Text>Oligarchy Legacy - Navy - Fascism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_NAVAL_FASCISM_DESC" Language="en_US">
+	<Text>Land, Naval Melee and Anti-Cavalry units +4 [ICON_STRENGTH] Combat Strength.[NEWLINE]Naval units gain +50% experience from combat.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_NAVAL_COMMUNISM_NAME" Language="en_US">
+	<Text>Oligarchy Legacy - Navy - Communism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_NAVAL_COMMUNISM_DESC" Language="en_US">
+	<Text>Land, Naval Melee and Anti-Cavalry units +4 [ICON_STRENGTH] Combat Strength.[NEWLINE]Naval units gain +50% experience from combat.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_NAVAL_DEMOCRACY_NAME" Language="en_US">
+	<Text>Oligarchy Legacy - Navy - Democracy</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_OLIGARCHY_NAVAL_DEMOCRACY_DESC" Language="en_US">
+	<Text>Land, Naval Melee and Anti-Cavalry units +4 [ICON_STRENGTH] Combat Strength.[NEWLINE]Naval units gain +50% experience from combat.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_FASCISM_NAME" Language="en_US">
+	<Text>Republic Legacy - Diplomacy - Fascism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_FASCISM_DESC" Language="en_US">
+	<Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys in city-states.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_COMMUNISM_NAME" Language="en_US">
+	<Text>Republic Legacy - Diplomacy - Communism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_COMMUNISM_DESC" Language="en_US">
+	<Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys in city-states.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_DEMOCRACY_NAME" Language="en_US">
+	<Text>Republic Legacy - Diplomacy - Democracy</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_DEMOCRACY_DESC" Language="en_US">
+	<Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys in city-states.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_FAITH_FASCISM_NAME" Language="en_US">
+	<Text>Republic Legacy - Faith - Fascism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_FAITH_FASCISM_DESC" Language="en_US">
+	<Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_FAITH_COMMUNISM_NAME" Language="en_US">
+	<Text>Republic Legacy - Faith - Communism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_FAITH_COMMUNISM_DESC" Language="en_US">
+	<Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_FAITH_DEMOCRACY_NAME" Language="en_US">
+	<Text>Republic Legacy - Faith - Democracy</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_FAITH_DEMOCRACY_DESC" Language="en_US">
+	<Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_TRADE_FASCISM_NAME" Language="en_US">
+	<Text>Republic Legacy - Trade - Fascism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_TRADE_FASCISM_DESC" Language="en_US">
+	<Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_TRADE_COMMUNISM_NAME" Language="en_US">
+	<Text>Republic Legacy - Trade - Communism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_TRADE_COMMUNISM_DESC" Language="en_US">
+	<Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_TRADE_DEMOCRACY_NAME" Language="en_US">
+	<Text>Republic Legacy - Trade - Democracy</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_REPUBLIC_TRADE_DEMOCRACY_DESC" Language="en_US">
+	<Text>All cities +1 [ICON_HOUSING] Housing, +1 [ICON_AMENITIES] Amenity.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_FASCISM_NAME" Language="en_US">
+	<Text>Autocracy Legacy - Diplomacy - Fascism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_FASCISM_DESC" Language="en_US">
+	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_COMMUNISM_NAME" Language="en_US">
+	<Text>Autocracy Legacy - Diplomacy - Communism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_COMMUNISM_DESC" Language="en_US">
+	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DEMOCRACY_NAME" Language="en_US">
+	<Text>Autocracy Legacy - Diplomacy - Democracy</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DEMOCRACY_DESC" Language="en_US">
+	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_FASCISM_NAME" Language="en_US">
+	<Text>Autocracy Legacy - Faith - Fascism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_FASCISM_DESC" Language="en_US">
+	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_COMMUNISM_NAME" Language="en_US">
+	<Text>Autocracy Legacy - Faith - Communism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_COMMUNISM_DESC" Language="en_US">
+	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DEMOCRACY_NAME" Language="en_US">
+	<Text>Autocracy Legacy - Faith - Democracy</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DEMOCRACY_DESC" Language="en_US">
+	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_FASCISM_NAME" Language="en_US">
+	<Text>Autocracy Legacy - Trade - Fascism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_FASCISM_DESC" Language="en_US">
+	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_COMMUNISM_NAME" Language="en_US">
+	<Text>Autocracy Legacy - Trade - Communism</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_COMMUNISM_DESC" Language="en_US">
+	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DEMOCRACY_NAME" Language="en_US">
+	<Text>Autocracy Legacy - Trade - Democracy</Text>
+</Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DEMOCRACY_DESC" Language="en_US">
+	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+</Replace>
+<Replace Tag="LOC_TECH_MILITARY_SCIENCE_DESCRIPTION" Language="en_US">
 			<Text>+1 Spy Capacity.</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_ROCKETRY_DESCRIPTION" Language="en_US">

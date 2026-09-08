@@ -43,6 +43,12 @@ local T2_BUILDINGS = {
 	['BUILDING_GOV_SPIES'] = true,
 	['BUILDING_GOV_FAITH'] = true,
 };
+-- 三级政体建筑（三座普通 Tier3：军事/文化/科学学院，一生一次）
+local T3_BUILDINGS = {
+	['BUILDING_GOV_MILITARY'] = true,
+	['BUILDING_GOV_CULTURE'] = true,
+	['BUILDING_GOV_SCIENCE'] = true,
+};
 
 -- 一级政体（key=集合键, card=原版一级传承卡）
 local T1_MAP = {
@@ -63,6 +69,21 @@ local function IsT2Government(govt)
 		or govt == 'GOVERNMENT_THEOCRACY'
 		or govt == 'GOVERNMENT_MERCHANT_REPUBLIC';
 end
+
+-- 三级政体判断（法西斯/共产/民主，2026-09 T3 升级用）
+local T3_GOVT_TO_SUFFIX = {
+	['GOVERNMENT_FASCISM']    = 'FASCISM',
+	['GOVERNMENT_COMMUNISM']  = 'COMMUNISM',
+	['GOVERNMENT_DEMOCRACY']  = 'DEMOCRACY',
+};
+local function IsT3Government(govt)
+	return T3_GOVT_TO_SUFFIX[govt] ~= nil;
+end
+
+-- ===========================================================================
+-- 属性键（T3 升级记录）
+-- ===========================================================================
+local PROP_T3_UPGRADED = 'CCB_LEGACY_T3_UPGRADED'; -- 已升三级卡集合（逗号分隔 t1Key 列表，与 PROP_UPGRADED 同键空间）
 
 -- ===========================================================================
 -- 集合工具（Property 存逗号分隔字符串）
@@ -297,6 +318,48 @@ function OnBuildingConstructed(playerID, cityID, buildingID)
 
 		player:SetProperty(PROP_UPGRADED, JoinList(upList));
 		PurgeUpgradedT1Cards(player);
+		return;
+	end
+
+	-- 三级政体建筑完成：升级全部已升二级卡为三级卡（按当时三级政体方向）
+	if T3_BUILDINGS[buildingType] then
+		print('[CCB-Legacy] T3 building, govt=' .. tostring(govtType));
+		if govtType == nil or not IsT3Government(govtType) then
+			print('[CCB-Legacy] not T3 govt, skip T3 upgrade');
+			return;
+		end
+		local suffix = T3_GOVT_TO_SUFFIX[govtType];
+		local upList = SplitList(player:GetProperty(PROP_UPGRADED));
+		local t3List = SplitList(player:GetProperty(PROP_T3_UPGRADED));
+		print('[CCB-Legacy] T3 candidates: ' .. JoinList(upList) .. ' | alreadyT3=' .. JoinList(t3List));
+
+		for _, u in ipairs(upList) do
+			local t1Key = string.match(u, '^([^:]+)');
+			local t2Card = string.match(u, ':([^:]+)');
+			if t1Key ~= nil and t2Card ~= nil then
+				-- 防重复：该线已升三则跳过（多卡并存时逐线升）
+				local alreadyT3 = false;
+				for _, t in ipairs(t3List) do
+					local k = string.match(t, '^([^:]+)');
+					if k == t1Key then alreadyT3 = true; break; end
+				end
+				if not alreadyT3 then
+					local t3Card = t2Card .. '_' .. suffix; -- POLICY_CCB_GOV_*_DIPLO -> *_DIPLO_FASCISM 等
+					if GameInfo.Policies[t3Card] ~= nil then
+						print('[CCB-Legacy] T3 upgrade ' .. t1Key .. '(' .. t2Card .. ') -> ' .. t3Card);
+						SwapCards(player, t2Card, t3Card);
+						table.insert(t3List, t1Key .. ':' .. t3Card);
+						print('[CCB-Legacy] T3 upgraded: ' .. t1Key .. ':' .. t3Card);
+					else
+						print('[CCB-Legacy] T3 card not found: ' .. tostring(t3Card));
+					end
+				end
+			end
+		end
+
+		player:SetProperty(PROP_T3_UPGRADED, JoinList(t3List));
+		PurgeUpgradedT1Cards(player); -- 防回插兜底（含已升三的线：一级卡仍不该装回）
+		return;
 	end
 end
 GameEvents.BuildingConstructed.Add(OnBuildingConstructed);
@@ -310,10 +373,10 @@ GameEvents.BuildingConstructed.Add(OnBuildingConstructed);
 --     T<净档 → 补挂负向对冲 → 严格"挂卡才生效 + 随使者数双向动态"。
 --     ⚠ 已知限制：Lua 动态效果无法显示在卡面（静态文本描述）。
 -- ===========================================================================
-local DIPLO_CARDS = {
-	['POLICY_CCB_GOV_REPUBLIC_DIPLO'] = true,
-	['POLICY_CCB_GOV_AUTOCRACY_DIPLO'] = true,
-};
+-- 卡名是否 DIPLO 线（二级 POLICY_CCB_GOV_*_DIPLO 与三级 *_DIPLO_* 均含 '_DIPLO' 段）
+local function IsDiploLineCard(cardType)
+	return cardType ~= nil and string.find(cardType, '_DIPLO', 1, true) ~= nil;
+end
 
 -- 读玩家数值属性（空值安全：GetProperty 对未设置属性返回空，不能直接塞 tonumber）
 local function PropNum(player, prop)
@@ -333,7 +396,7 @@ local function IsDiploCardEquipped(culture)
 		local policyHash = culture:GetSlotPolicy(i);
 		if policyHash ~= -1 then
 			local info = GameInfo.Policies[policyHash];
-			if info ~= nil and DIPLO_CARDS[info.PolicyType] then return true; end
+			if info ~= nil and IsDiploLineCard(info.PolicyType) then return true; end
 		end
 	end
 	return false;
@@ -347,12 +410,19 @@ function OnGameTurnStarted(turn)
 			-- 防回插（设计文档§七）：每回合检查已升级一级卡是否被手动装回，是则移出。
 			PurgeUpgradedT1Cards(player);
 
-			-- 使者产出（仅 DIPLO 升级持有者参与计算）
+			-- 使者产出（仅 DIPLO 升级持有者参与计算；二级/三级 DIPLO 卡均算）
 			local upList = SplitList(player:GetProperty(PROP_UPGRADED));
+			local t3List = SplitList(player:GetProperty(PROP_T3_UPGRADED));
 			local hasDiploUpgrade = false;
 			for _, u in ipairs(upList) do
 				local card = string.match(u, ':([^:]+)');
-				if card ~= nil and string.match(card, '_DIPLO$') then hasDiploUpgrade = true; break; end
+				if card ~= nil and IsDiploLineCard(card) then hasDiploUpgrade = true; break; end
+			end
+			if not hasDiploUpgrade then
+				for _, u in ipairs(t3List) do
+					local card = string.match(u, ':([^:]+)');
+					if card ~= nil and IsDiploLineCard(card) then hasDiploUpgrade = true; break; end
+				end
 			end
 			if hasDiploUpgrade then
 				local culture = GetCulture(player);
