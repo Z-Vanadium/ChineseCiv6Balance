@@ -376,7 +376,7 @@ function OnGameTurnStarted(turn)
 					for i = 1, target - net do
 						pos = pos + 1;
 						player:AttachModifierByID('CCB_ENVOY_FLAT_SCI_' .. pos);
-						player:AttachModifierByID('CCB_ENVOY_FLAT_CUL_' .. pos);
+						player:AttachModifierByID('CCB_ENVOY_FLAT_FAI_' .. pos);
 						print('[CCB-Legacy] p' .. tostring(playerID) .. ' envoy +tier ' .. tostring(pos)
 							.. ' (T=' .. tostring(target) .. ' envoys=' .. tostring(envoys)
 							.. ' equipped=' .. tostring(equipped) .. ')');
@@ -385,7 +385,7 @@ function OnGameTurnStarted(turn)
 					for i = 1, net - target do
 						neg = neg + 1;
 						player:AttachModifierByID('CCB_ENVOY_NEG_SCI_' .. neg);
-						player:AttachModifierByID('CCB_ENVOY_NEG_CUL_' .. neg);
+						player:AttachModifierByID('CCB_ENVOY_NEG_FAI_' .. neg);
 						print('[CCB-Legacy] p' .. tostring(playerID) .. ' envoy -tier ' .. tostring(neg)
 							.. ' (T=' .. tostring(target) .. ' net=' .. tostring(net)
 							.. ' equipped=' .. tostring(equipped) .. ')');

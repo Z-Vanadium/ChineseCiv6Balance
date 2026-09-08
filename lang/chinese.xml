@@ -8694,7 +8694,7 @@
 			<Text>寡头传承</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DESC" Language="zh_Hans_CN">
-			<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Culture] 文化。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Culture] 文化。</Text>
+			<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_NAME" Language="zh_Hans_CN">
 			<Text>独裁传承·外交升级</Text>
@@ -8724,7 +8724,7 @@
 			<Text>寡头传承·海权升级</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_DESC" Language="zh_Hans_CN">
-			<Text>所有城市+1 [ICON_Housing] 住房、+1 [ICON_Amenities] 宜居度。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Culture] 文化。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Culture] 文化。</Text>
+			<Text>所有城市+1 [ICON_Housing] 住房、+1 [ICON_Amenities] 宜居度。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_REPUBLIC_DIPLO_NAME" Language="zh_Hans_CN">
 			<Text>共和传承·外交升级</Text>
