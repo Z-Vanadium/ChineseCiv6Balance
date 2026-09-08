@@ -4257,5 +4257,11 @@
 		</Replace>
 <Replace Tag="LOC_ALLIANCE_LV3_RELIGIOUS_EFFECT_1" Language="en_US">
 			<Text>+5 [ICON_FAITH] Faith from each [ICON_CITIZEN] Citizen following your ally's religion.</Text>
+		</Replace>
+<Replace Tag="LOC_GOVT_INHERENT_BONUS_DEMOCRACY_XP2" Language="en_US">
+			<Text>Trade Routes to allied or suzerain city-states grant +4 [ICON_FOOD] Food and +4 [ICON_PRODUCTION] Production to both cities.</Text>
+		</Replace>
+<Replace Tag="LOC_POLICY_ARSENAL_OF_DEMOCRACY_DESCRIPTION" Language="en_US">
+			<Text>Trade Routes to allied cities or your suzerain city-states grant +4 [ICON_FOOD] Food and +4 [ICON_PRODUCTION] Production to both cities.</Text>
 		</Replace></LocalizedText>
 </GameData>

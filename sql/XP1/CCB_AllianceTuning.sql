@@ -16,3 +16,11 @@ UPDATE ModifierArguments SET Value='25' WHERE ModifierId='ALLIANCE_SCIENCE_SHARI
 UPDATE ModifierArguments SET Value='100' WHERE ModifierId='ALLIANCE_TOURISM_SHARING_FROM_ALLY' AND Name='Amount';
 UPDATE ModifierArguments SET Value='25' WHERE ModifierId='ALLIANCE_CULTURE_SHARING_FROM_ALLY' AND Name='Amount';
 UPDATE ModifierArguments SET Value='5' WHERE ModifierId='ALLIANCE_YIELDS_FROM_FOLLOWING_ALLY_RELIGION' AND Name='Amount';
+
+-- 6) 删除民主主义政体的同盟点数效果（DEMOCRACY_ALLIANCEPOINTS，Amount=1 ≈ 展示 +0.25/回合）
+--    该效果已迁入传承卡三级升级（民主补正 +5/回合，见 LegacyCards.sql T3 段），
+--    政体/卡面不再发放，避免叠加；对应文本见 lang 覆盖（去掉"同盟点数额外增加0.25"句）
+DELETE FROM GovernmentModifiers WHERE ModifierId='DEMOCRACY_ALLIANCEPOINTS';
+DELETE FROM PolicyModifiers WHERE ModifierId='DEMOCRACY_ALLIANCEPOINTS';
+DELETE FROM ModifierArguments WHERE ModifierId='DEMOCRACY_ALLIANCEPOINTS';
+DELETE FROM Modifiers WHERE ModifierId='DEMOCRACY_ALLIANCEPOINTS';

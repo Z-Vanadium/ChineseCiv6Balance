@@ -8781,5 +8781,11 @@
 		</Replace>
 <Replace Tag="LOC_ALLIANCE_LV3_RELIGIOUS_EFFECT_1" Language="zh_Hans_CN">
 			<Text>从每个信仰盟友宗教的 [ICON_Citizen] 公民处获得的 [ICON_FAITH] 信仰值+5</Text>
+		</Replace>
+<Replace Tag="LOC_GOVT_INHERENT_BONUS_DEMOCRACY_XP2" Language="zh_Hans_CN">
+			<Text>您通往盟友或宗主国城市的 [ICON_TradeRoute] 贸易路线为双边城市+4 [ICON_Food] 食物、+4 [ICON_Production] 生产力。</Text>
+		</Replace>
+<Replace Tag="LOC_POLICY_ARSENAL_OF_DEMOCRACY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>您通往盟友城市或旗下城邦的 [ICON_TradeRoute] 贸易路线为双边城市+4 [ICON_Food] 食物、+4 [ICON_Production] 生产力。</Text>
 		</Replace></LocalizedText>
 </GameData>
