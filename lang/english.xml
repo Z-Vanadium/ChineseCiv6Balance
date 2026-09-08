@@ -4242,5 +4242,20 @@
 		</Replace>
 <Replace Tag="LOC_POLICY_AUTOCRACY_DESC" Language="en_US">
 			<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV2_RESEARCH_EFFECT_1" Language="en_US">
+			<Text>Every 10 turns (on Standard speed) unlock a [ICON_TechBoosted] Eureka for a technology your ally has researched or boosted that you have not.</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV3_RESEARCH_EFFECT_1" Language="en_US">
+			<Text>+25% [ICON_SCIENCE] Science while researching the same technology as your ally, or technologies your ally has completed.</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV3_CULTURAL_EFFECT_1" Language="en_US">
+			<Text>Receive 100% of the [ICON_TOURISM] Tourism output of your ally's cities.</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV3_CULTURAL_EFFECT_2" Language="en_US">
+			<Text>Receive 25% of the [ICON_CULTURE] Culture output of your ally's cities.</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV3_RELIGIOUS_EFFECT_1" Language="en_US">
+			<Text>+5 [ICON_FAITH] Faith from each [ICON_CITIZEN] Citizen following your ally's religion.</Text>
 		</Replace></LocalizedText>
 </GameData>

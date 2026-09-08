@@ -8766,5 +8766,20 @@
 		</Replace>
 <Replace Tag="LOC_POLICY_AUTOCRACY_DESC" Language="zh_Hans_CN">
 			<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV2_RESEARCH_EFFECT_1" Language="zh_Hans_CN">
+			<Text>每10回合（标准游戏速度下）解锁1个您盟友已研究或提升、而您尚未研究之科技的 [ICON_TechBoosted] 尤里卡</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV3_RESEARCH_EFFECT_1" Language="zh_Hans_CN">
+			<Text>您和盟友同时研究同一科技、或研究对方已研究完成的科技时，+25% [ICON_Science] 科技值</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV3_CULTURAL_EFFECT_1" Language="zh_Hans_CN">
+			<Text>获得盟友城市产出 [ICON_Tourism] 旅游业绩的100%</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV3_CULTURAL_EFFECT_2" Language="zh_Hans_CN">
+			<Text>获得盟友城市产出 [ICON_Culture] 文化值的25%</Text>
+		</Replace>
+<Replace Tag="LOC_ALLIANCE_LV3_RELIGIOUS_EFFECT_1" Language="zh_Hans_CN">
+			<Text>从每个信仰盟友宗教的 [ICON_Citizen] 公民处获得的 [ICON_FAITH] 信仰值+5</Text>
 		</Replace></LocalizedText>
 </GameData>
