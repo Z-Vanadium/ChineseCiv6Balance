@@ -401,9 +401,15 @@ UPDATE Districts SET PlunderAmount=20 WHERE PlunderType IN ('PLUNDER_SCIENCE', '
 
 
 --=======================================================================
---******                        BOOSTS                             ******
+--******                       CIVIC TREE                          ******
 --=======================================================================
 
+-- 2026/09/08 Reformed Church : drop Guilds prerequisite (now only Divine Right)
+DELETE FROM CivicPrereqs WHERE Civic='CIVIC_REFORMED_CHURCH' AND PrereqCivic='CIVIC_GUILDS';
+
+--=======================================================================
+--******                        BOOSTS                             ******
+--=======================================================================
 
 -- 14/03/24 Nationalism boost is now upgrading a land unit to level 3
 UPDATE Boosts SET BoostClass='BOOST_TRIGGER_LAND_UNIT_LEVEL', NumItems=3 WHERE CivicType='CIVIC_NATIONALISM';
