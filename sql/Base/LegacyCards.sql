@@ -810,4 +810,26 @@ INSERT INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
 ('POLICY_CCB_GOV_AUTOCRACY_TRADE', 'POLICY_CCB_GOV_AUTOCRACY_TRADE_COMMUNISM'),
 ('POLICY_CCB_GOV_AUTOCRACY_TRADE', 'POLICY_CCB_GOV_AUTOCRACY_TRADE_DEMOCRACY');
 
+-- 6.4 T2 触发卡在二级/三级阶段的强制隐藏（2026-09 用户实测补充）
+--     原 §5 过时条件只绑"本线真实二级卡"：若玩家采用过对应政体（RequiresGovernmentUnlock=1 即解锁入池）
+--     但该线二级卡从未被 Lua 升级解锁（如升级失败/跨线场景），触发卡永不过时 → 残留到三级。
+--     触发卡只是"政体建筑完成瞬间免费换卡"的载体：任何一条线的真实升级卡（8 二级 + 24 三卡）
+--     解锁 → 三张触发卡全部过时（本线窗口逻辑不受影响，T2 实测弹窗照常）。
+INSERT INTO ObsoletePolicies (PolicyType, ObsoletePolicy)
+SELECT TRIGGER.PolicyType, REAL.PolicyType
+FROM (SELECT 'POLICY_CCB_GOV_TRIGGER_MONARCHY' AS PolicyType UNION ALL
+      SELECT 'POLICY_CCB_GOV_TRIGGER_THEOCRACY' UNION ALL
+      SELECT 'POLICY_CCB_GOV_TRIGGER_MERCHANT_REPUBLIC') TRIGGER
+CROSS JOIN (
+	-- 8 张二级真实卡
+	SELECT PolicyType FROM Policies WHERE PolicyType IN (
+		'POLICY_CCB_GOV_OLIGARCHY_MELEE','POLICY_CCB_GOV_OLIGARCHY_NAVAL',
+		'POLICY_CCB_GOV_REPUBLIC_DIPLO','POLICY_CCB_GOV_REPUBLIC_FAITH','POLICY_CCB_GOV_REPUBLIC_TRADE',
+		'POLICY_CCB_GOV_AUTOCRACY_DIPLO','POLICY_CCB_GOV_AUTOCRACY_FAITH','POLICY_CCB_GOV_AUTOCRACY_TRADE')
+	UNION
+	-- 24 张三卡
+	SELECT PolicyType FROM Policies WHERE PolicyType LIKE 'POLICY_CCB_GOV_%'
+	AND (PolicyType LIKE '%_FASCISM' OR PolicyType LIKE '%_COMMUNISM' OR PolicyType LIKE '%_DEMOCRACY')
+) REAL;
+
 
