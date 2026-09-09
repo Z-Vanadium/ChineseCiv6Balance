@@ -605,3 +605,37 @@ INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
 UPDATE Policies_XP1 SET MinimumGameEra = 'ERA_CLASSICAL' WHERE PolicyType = 'POLICY_HERE_BE_DRAGONS';
 -- 2) "雄伟壮丽"移出古典（MinimumGameEra→RENAISSANCE，Maximum 原为 RENAISSANCE → 仅文艺复兴出现）
 UPDATE Policies_XP1 SET MinimumGameEra = 'ERA_RENAISSANCE' WHERE PolicyType = 'POLICY_MONUMENTALITY';
+
+--==============================================================================================
+-- 2026-09-08 新增上位卡：帝国协约（POLICY_CCB_IMPERIAL_ENTENTE，现代"大众媒体"解锁）
+--   殖民链升级：殖民地办事处 → 殖民地税收 → 帝国协约（外交槽，链式过时，原版办事处→税收同机制）
+--   1) 继承效果 = 首都 8 格外殖民城 4 件套：+25%金 / +10%锤 / 发展加速15% / 每回合+3忠诚
+--      （数据归属：金锤在 COLONIALTAXES_*、发展/忠诚在 COLONIALOFFICES_*，共用 BBG 8 格需求集；
+--        殖民地税收卡面文字历来按 4 件套描述 → 本卡全挂齐，使卡面与数据一致）
+--   2) 新词条：与盟友的同盟点数每回合 +0.5（展示值）
+--      → 引擎 MODIFIER_PLAYER_ADJUST_ALLIANCE_POINTS，Amount=2
+--        （换算：Amount=1 ≈ 展示 +0.25/回合（民主/民主军械库同款）；CCB_T3 Amount=20 ≈ 展示 +5 交叉验证）
+--   3) 不设自定义图标（与 CCB_GOV 传承卡一致走默认槽位图标；精修需 UpdateIcons XML）
+--==============================================================================================
+INSERT INTO Types (Type, Kind) VALUES ('POLICY_CCB_IMPERIAL_ENTENTE', 'KIND_POLICY');
+INSERT INTO Policies (PolicyType, Name, Description, GovernmentSlotType, PrereqCivic) VALUES
+('POLICY_CCB_IMPERIAL_ENTENTE', 'LOC_POLICY_CCB_IMPERIAL_ENTENTE_NAME', 'LOC_POLICY_CCB_IMPERIAL_ENTENTE_DESCRIPTION', 'SLOT_DIPLOMATIC', 'CIVIC_MASS_MEDIA');
+
+-- 继承：殖民地税收（金/锤）+ 殖民地办事处（发展/忠诚）—— 全 4 效果（同一 8 格需求集）
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
+('POLICY_CCB_IMPERIAL_ENTENTE', 'COLONIALTAXES_FOREIGNGOLD'),
+('POLICY_CCB_IMPERIAL_ENTENTE', 'COLONIALTAXES_FOREIGNPRODUCTION'),
+('POLICY_CCB_IMPERIAL_ENTENTE', 'COLONIALOFFICES_FOREIGNGROWTH'),
+('POLICY_CCB_IMPERIAL_ENTENTE', 'COLONIALOFFICES_FOREIGNIDENTITY');
+
+-- 新词条：同盟点数 +0.5/回合（展示值；引擎 Amount=2）
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+('CCB_ENTENTE_ALLIANCE_POINTS', 'MODIFIER_PLAYER_ADJUST_ALLIANCE_POINTS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+('CCB_ENTENTE_ALLIANCE_POINTS', 'Amount', '2');
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
+('POLICY_CCB_IMPERIAL_ENTENTE', 'CCB_ENTENTE_ALLIANCE_POINTS');
+
+-- 过时链：研究"大众媒体"解锁帝国协约 → 殖民地税收过时隐藏并自动清槽（防双挂叠加）
+INSERT INTO ObsoletePolicies (PolicyType, ObsoletePolicy) VALUES
+('POLICY_COLONIAL_TAXES', 'POLICY_CCB_IMPERIAL_ENTENTE');
