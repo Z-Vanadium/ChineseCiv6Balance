@@ -116,5 +116,17 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 	('TRAIT_LEADER_MEDITERRANEAN', 'BBG_CLEO_FASTER_HUB_RIVER'),
 	('TRAIT_LEADER_MEDITERRANEAN', 'BBG_CLEO_FASTER_THEATER_RIVER');
 
+-- 2026/09 Cleopatra (Mediterranean's Bride, LEADER_CLEOPATRA): +1 prod to Commercial Hub on river
+-- 仅挂地中海新娘 trait；托勒密(LEADER_CLEOPATRA_ALT)不生效。Ramses IZ/HS 同款 engine 写法。
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+	('CCB_CLEO_RIVER_PROD_CH', 'MODIFIER_PLAYER_CITIES_RIVER_ADJACENCY');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+	('CCB_CLEO_RIVER_PROD_CH', 'Amount', 1),
+	('CCB_CLEO_RIVER_PROD_CH', 'Description', 'LOC_CCB_DISTRICT_RIVER_PROD'),
+	('CCB_CLEO_RIVER_PROD_CH', 'DistrictType', 'DISTRICT_COMMERCIAL_HUB'),
+	('CCB_CLEO_RIVER_PROD_CH', 'YieldType', 'YIELD_PRODUCTION');
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+	('TRAIT_LEADER_MEDITERRANEAN', 'CCB_CLEO_RIVER_PROD_CH');
+
 
 

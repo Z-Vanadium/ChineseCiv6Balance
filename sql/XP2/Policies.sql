@@ -1,6 +1,20 @@
 --===========================================================
 --                     Policies
 --===========================================================
+-- 2026/09 职业军事(POLICY_PROFESSIONAL_ARMY,雇佣兵红卡): 单位升级金币折扣 50% -> 40%
+--   军队现代化(FORCE_MODERNIZATION)与其共享 PROFESSIONAL_ARMY_UNITUPGRADEDISCOUNT(50%)
+--   → 给职业军事新建独立 40% modifier, 军队现代化保留原 50%(仅移动解锁市政,见下)
+INSERT OR IGNORE INTO Modifiers (ModifierId, ModifierType) VALUES
+    ('CCB_PROFESSIONAL_ARMY_DISCOUNT_40', 'MODIFIER_PLAYER_ADJUST_UNIT_UPGRADE_DISCOUNT_PERCENT');
+INSERT OR IGNORE INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('CCB_PROFESSIONAL_ARMY_DISCOUNT_40', 'Amount', '40');
+DELETE FROM PolicyModifiers WHERE PolicyType='POLICY_PROFESSIONAL_ARMY' AND ModifierId='PROFESSIONAL_ARMY_UNITUPGRADEDISCOUNT';
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
+    ('POLICY_PROFESSIONAL_ARMY', 'CCB_PROFESSIONAL_ARMY_DISCOUNT_40');
+
+-- 2026/09 军队现代化(POLICY_FORCE_MODERNIZATION): 解锁市政 城市化 -> 民族主义(数值不变)
+UPDATE Policies SET PrereqCivic='CIVIC_NATIONALISM' WHERE PolicyType='POLICY_FORCE_MODERNIZATION';
+
 -- fascism attack bonus working for GDR
 INSERT OR IGNORE INTO TypeTags (Type, Tag) VALUES ('ABILITY_FASCISM_ATTACK_BUFF', 'CLASS_GIANT_DEATH_ROBOT');
 INSERT OR IGNORE INTO TypeTags (Type, Tag) VALUES ('ABILITY_FASCISM_LEGACY_ATTACK_BUFF', 'CLASS_GIANT_DEATH_ROBOT');

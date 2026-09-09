@@ -3,6 +3,8 @@
 -- Grand Bazaar buff
 UPDATE Building_GreatPersonPoints SET PointsPerTurn=2 WHERE BuildingType='BUILDING_GRAND_BAZAAR';
 UPDATE Building_YieldChanges SET YieldChange=6 WHERE BuildingType='BUILDING_GRAND_BAZAAR' AND YieldType='YIELD_GOLD';
+-- 2026/09 Grand Bazaar prereq: Banking tech -> Guilds civic (cost unchanged, 用户确认)
+UPDATE Buildings SET PrereqTech=NULL, PrereqCivic='CIVIC_GUILDS' WHERE BuildingType='BUILDING_GRAND_BAZAAR';
 -- Grand Bazaar same ability than bank
 INSERT INTO BuildingModifiers(BuildingType, ModifierId) VALUES
     ('BUILDING_GRAND_BAZAAR', 'BBG_BANK_TRADEROUTE_FROM_DOMESTIC'),

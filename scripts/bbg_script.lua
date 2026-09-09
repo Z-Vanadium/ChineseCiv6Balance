@@ -2768,10 +2768,11 @@ function OnYongleCityPopulationChanged(cityOwner, cityID, change_amount)
 	end
 	local flag = GameInfo.Buildings['BUILDING_CCB_LIJIA_DUMMY'];
 	print("OnYongleCityPopulationChanged: flag", flag)
-	if pCity:GetBuildings():HasBuilding(flag.Index) == false and pCity:GetPopulation() >= 2 then
+	-- 2026/09 用户确认: 里甲门槛从 2 人口降为 1 人口(城市最低 1 人口 → 任何城市可进行)
+	if pCity:GetBuildings():HasBuilding(flag.Index) == false and pCity:GetPopulation() >= 1 then
 		pCity:GetBuildQueue():CreateBuilding(flag.Index);
 	end
-	if pCity:GetBuildings():HasBuilding(flag.Index) == true and pCity:GetPopulation() < 2 then
+	if pCity:GetBuildings():HasBuilding(flag.Index) == true and pCity:GetPopulation() < 1 then
 		pCity:GetBuildings():RemoveBuilding(flag.Index);
 	end
 end

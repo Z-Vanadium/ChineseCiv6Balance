@@ -291,7 +291,7 @@
 		</Replace>
 		<!-- = leader ability (Yongle) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_YONGLE_XP_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>至少拥有 2 [ICON_CITIZEN] 人口的城市可进行“里甲”项目，专注于以每回合的城市生产力来转换为 [Icon_Food] 食物（60%）、[Icon_Faith] 信仰值（70%）或者 [Icon_GOLD] 金币（150%）。10个人口或以上的大型城市，每一个人口便提供+1 [Icon_Gold] 金币、+0.7 [Icon_Science] 科技值以及+0.5 [Icon_Culture] 文化值。[NEWLINE][NEWLINE]每有城市达到13人口时，获得一项随机 [ICON_TechBoosted] 尤里卡（如可用）；每有城市达到18人口时，获得一项随机 [ICON_CivicBoosted] 鼓舞（如可用）。若相邻长城，长城获得1点 [ICON_Food] 食物。</Text>
+			<Text>至少拥有 1 [ICON_CITIZEN] 人口的城市可进行“里甲”项目，专注于以每回合的城市生产力来转换为 [Icon_Food] 食物（60%）、[Icon_Faith] 信仰值（70%）或者 [Icon_GOLD] 金币（150%）。10个人口或以上的大型城市，每一个人口便提供+1 [Icon_Gold] 金币、+0.7 [Icon_Science] 科技值以及+0.5 [Icon_Culture] 文化值。[NEWLINE][NEWLINE]每有城市达到13人口时，获得一项随机 [ICON_TechBoosted] 尤里卡（如可用）；每有城市达到18人口时，获得一项随机 [ICON_CivicBoosted] 鼓舞（如可用）。若相邻长城，长城获得1点 [ICON_Food] 食物。</Text>
 		</Replace>
 		<Replace Tag="LOC_PROJECT_LIJIA_FAITH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>此项目每回合提供等同于此城市生产力70%的 [ICON_Faith] 信仰值。</Text>
@@ -303,7 +303,7 @@
 			<Text>此项目每回合提供等同于此城市生产力150%的 [ICON_Gold] 金币。</Text>
 		</Replace>
 		<Row Tag="LOC_BUILDING_CCB_LIJIA_DUMMY_NAME" Language="zh_Hans_CN">
-			<Text>达到至少 2 [ICON_CITIZEN] 人口</Text>
+			<Text>达到至少 1 [ICON_CITIZEN] 人口</Text>
 		</Row>
 		<!-- = leader ability (Wu Zetian) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_WU_ZETIAN_DESCRIPTION" Language="zh_Hans_CN">
@@ -3308,6 +3308,12 @@
 		</Replace>
 		<Replace Tag="LOC_POLICY_COMMUNICATIONS_OFFICE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>[ICON_Governor] 总督每拥有一次升级，其所在城市每回合忠诚度+2。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_PROFESSIONAL_ARMY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>所有单位升级所需的 [ICON_Gold] 金币减少40%。</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_PROFESSIONAL_ARMY_DESCRIPTION_XP2" Language="zh_Hans_CN">
+			<Text>所有单位升级所需的 [ICON_Gold] 金币减少40%。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_RETINUES_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>所有单位生产和升级所需的战略资源减少50%。</Text>
@@ -8934,5 +8940,11 @@
 		</Replace>
 <Replace Tag="LOC_POLICY_ARSENAL_OF_DEMOCRACY_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>您通往盟友城市或旗下城邦的 [ICON_TradeRoute] 贸易路线为双边城市+4 [ICON_Food] 食物、+4 [ICON_Production] 生产力。</Text>
+		</Replace>
+<Replace Tag="LOC_POLICY_CCB_IMPERIAL_ENTENTE_NAME" Language="zh_Hans_CN">
+			<Text>帝国协约</Text>
+		</Replace>
+<Replace Tag="LOC_POLICY_CCB_IMPERIAL_ENTENTE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>[ICON_Capital] 首都8个单元格范围外的城市+25% [ICON_Gold] 金币、+10% [ICON_Production] 生产力、发展加速15%、每回合提供3点忠诚度。[NEWLINE]与盟友的同盟点数每回合额外增加0.5点。</Text>
 		</Replace></LocalizedText>
 </GameData>

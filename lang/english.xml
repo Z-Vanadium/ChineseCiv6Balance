@@ -831,6 +831,9 @@
 		<Row Tag="LOC_DISTRICT_HOLY_SITE_RIVER_FAITH" Language="en_US">
 			<Text>+{1_num} [ICON_FAITH] Faith from the river.</Text>
 		</Row>
+		<Replace Tag="LOC_CCB_DISTRICT_RIVER_PROD" Language="en_US">
+			<Text>+{1_num} [ICON_PRODUCTION] Production from the adjacent river.</Text>
+		</Replace>
 		<Row Tag="LOC_BBG_HOLY_SITE_RIVER_FOOD_ADJACENCY" Language="en_US">
 			<Text>+2 [ICON_FOOD] Food from the adjacent River.</Text>
 		</Row>
@@ -3272,6 +3275,12 @@
 		<Replace Tag="LOC_POLICY_RESOURCE_MANAGEMENT_DESCRIPTION_XP2" Language="en_US">
 			<Text>Gain 2 additional [ICON_RESOURCE_ALUMINUM] Aluminum and [ICON_RESOURCE_OIL] Oil resources per turn. Also gain +1 additional one for each improved resources of this type.</Text>
 		</Replace>
+		<Replace Tag="LOC_POLICY_PROFESSIONAL_ARMY_DESCRIPTION" Language="en_US">
+			<Text>40% discount on the [ICON_GOLD] Gold cost of upgrading units.</Text>
+		</Replace>
+		<Replace Tag="LOC_POLICY_PROFESSIONAL_ARMY_DESCRIPTION_XP2" Language="en_US">
+			<Text>40% discount on the [ICON_GOLD] Gold cost of upgrading units.</Text>
+		</Replace>
 		<!-- = Retinues = -->
 		<Replace Tag="LOC_POLICY_RETINUES_DESCRIPTION" Language="en_US">
 			<Text>50% resource discount on all unit production and upgrades.</Text>
@@ -4410,5 +4419,11 @@
 		</Replace>
 <Replace Tag="LOC_POLICY_ARSENAL_OF_DEMOCRACY_DESCRIPTION" Language="en_US">
 			<Text>Trade Routes to allied cities or your suzerain city-states grant +4 [ICON_FOOD] Food and +4 [ICON_PRODUCTION] Production to both cities.</Text>
+		</Replace>
+<Replace Tag="LOC_POLICY_CCB_IMPERIAL_ENTENTE_NAME" Language="en_US">
+			<Text>Imperial Entente</Text>
+		</Replace>
+<Replace Tag="LOC_POLICY_CCB_IMPERIAL_ENTENTE_DESCRIPTION" Language="en_US">
+			<Text>Cities outside of 8 tiles of your [ICON_Capital] Capital: +25% [ICON_GOLD] Gold, +10% [ICON_PRODUCTION] Production, +15% Growth, and +3 Loyalty per turn.[NEWLINE]Gain +0.5 Alliance Points per turn with your Allies.</Text>
 		</Replace></LocalizedText>
 </GameData>
