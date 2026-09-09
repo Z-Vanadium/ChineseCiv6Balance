@@ -598,14 +598,6 @@ INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
 	('POLICY_ECOMMERCE', 'CCB_ECOMMERCE_PLUNDER_IMMUNITY_SEA'),
 	('POLICY_ECOMMERCE', 'CCB_ECOMMERCE_PLUNDER_IMMUNITY_LAND');
 
--- ============ 2026-XX-XX（从 1.4.3 移植）着力点（Dedication）调整 ============
--- 古典黄金面板"雄伟壮丽"→"此处有龙"（Policies_XP1.MinimumGameEra 决定出现时代）
--- 1) "此处有龙"加入古典（原文艺复兴~现代）
---    ⚠ ID 依据官方命名规则推断（迭起兴衰数据打包不可见）；若面板未出现需 Lua 枚举确认真实 ID
-UPDATE Policies_XP1 SET MinimumGameEra = 'ERA_CLASSICAL' WHERE PolicyType = 'POLICY_HERE_BE_DRAGONS';
--- 2) "雄伟壮丽"移出古典（MinimumGameEra→RENAISSANCE，Maximum 原为 RENAISSANCE → 仅文艺复兴出现）
-UPDATE Policies_XP1 SET MinimumGameEra = 'ERA_RENAISSANCE' WHERE PolicyType = 'POLICY_MONUMENTALITY';
-
 --==============================================================================================
 -- 2026-09-08 新增上位卡：帝国协约（POLICY_CCB_IMPERIAL_ENTENTE，现代"大众媒体"解锁）
 --   殖民链升级：殖民地办事处 → 殖民地税收 → 帝国协约（外交槽，链式过时，原版办事处→税收同机制）
