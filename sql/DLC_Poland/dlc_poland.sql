@@ -7,7 +7,8 @@
 --==================
 -- 19/05/2021, 05/09/2021: Poland's Winged Hussar
 -- 2025/03/15 combat reduced to 60, revert with tech ballistics
-UPDATE Units SET Combat=60, PrereqCivic='CIVIC_REFORMED_CHURCH' WHERE UnitType='UNIT_POLISH_HUSSAR';
+-- 2026/09/08 基础力 60 -> 59；弹道学后加成 +4 -> +5（弹道学后净值维持 64）
+UPDATE Units SET Combat=59, PrereqCivic='CIVIC_REFORMED_CHURCH' WHERE UnitType='UNIT_POLISH_HUSSAR';
 
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 
 ('TRAIT_CIVILIZATION_GOLDEN_LIBERTY', 'CCB_POLISH_HUSSAR_COMBAT_REVERT_GIVER');
@@ -29,7 +30,7 @@ INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
 ('CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, NULL, NULL);
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD', 'Amount', '4');
+('CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD', 'Amount', '5');
 INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 ('CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD', 'Preview', 'LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD_DESC');
 
