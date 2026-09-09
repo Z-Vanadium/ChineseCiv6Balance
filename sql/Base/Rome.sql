@@ -8,9 +8,9 @@ UPDATE Modifiers SET SubjectRequirementSetId='BBG_UTILS_PLAYER_HAS_CIVIC_FOREIGN
 -- 2026/07/12 浴场：不再提供文化
 -- reverted 04/10/22
 -- back to the menu 07/07/25
--- 2026/09 用户确认：澡堂（罗马 UD，凯撒可用）每相邻 2 个区域提供 +1 文化（专业区域相邻加成同款结构）
-INSERT INTO District_Adjacencies (DistrictType, YieldChangeId) VALUES
-	('DISTRICT_BATH' , 'District_Culture');
+-- 2026/09 澡堂文化相邻改为凯撒专属（见 lp_rome_caesar.sql，罗马全体不享受）
+-- INSERT INTO District_Adjacencies (DistrictType, YieldChangeId) VALUES
+-- 	('DISTRICT_BATH' , 'District_Culture');
 
 -- 07/07/25 Bath no longer give amenity
 -- 2026/06/02 back

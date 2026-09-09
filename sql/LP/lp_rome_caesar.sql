@@ -147,3 +147,17 @@ UPDATE ModifierArguments SET Value=200 WHERE ModifierId='BARBARIAN_CAMP_GOLD_CAP
 -- 	('BBG_BATH_AMENITY_CAESAR', 'Amount', 1);
 -- INSERT INTO DistrictModifiers (DistrictType, ModifierId) VALUES
 -- 	('DISTRICT_BATH', 'BBG_BATH_AMENITY_CAESAR');
+
+-- 2026/09 澡堂（罗马UD）每相邻2个区域 +1 文化 —— 仅凯撒生效（图拉真等其他罗马领袖不享受）
+--   MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY = 引擎"区域相邻加成"类 modifier（曼彻斯特/狄奥多拉同款），
+--   挂领袖 trait → 只对凯撒玩家所有城市的澡堂区域按相邻区域数结算（TilesRequired=2 即每2个相邻区域 +1）
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+	('CCB_CAESAR_BATH_CULTURE', 'MODIFIER_PLAYER_CITIES_DISTRICT_ADJACENCY');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+	('CCB_CAESAR_BATH_CULTURE', 'Amount', 1),
+	('CCB_CAESAR_BATH_CULTURE', 'Description', 'LOC_DISTRICT_DISTRICT_CULTURE'),
+	('CCB_CAESAR_BATH_CULTURE', 'DistrictType', 'DISTRICT_BATH'),
+	('CCB_CAESAR_BATH_CULTURE', 'TilesRequired', 2),
+	('CCB_CAESAR_BATH_CULTURE', 'YieldType', 'YIELD_CULTURE');
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+	('TRAIT_LEADER_CAESAR', 'CCB_CAESAR_BATH_CULTURE');
