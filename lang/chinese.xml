@@ -1376,13 +1376,13 @@
 			<Text>文艺复兴时期波兰特色单位，替代胸甲骑兵。如果输出的伤害点数高于敌方，则会将防守的敌方单位弹至后方的单元格中。如防守单位无法后退，则将受到更高的伤害。[NEWLINE][NEWLINE]{LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_NAME}</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_NAME" Language="zh_Hans_CN">
-			<Text>研究“弹道学”科技后 +4 [ICON_STRENGTH] 战斗力。</Text>
+			<Text>研究“弹道学”科技后 +5 [ICON_STRENGTH] 战斗力。</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_DESC" Language="zh_Hans_CN">
 			<Text>{LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_NAME}</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_POLISH_HUSSAR_COMBAT_REVERT_MOD_DESC" Language="zh_Hans_CN">
-			<Text>+4 [ICON_STRENGTH] 战斗力，来自“弹道学”科技。</Text>
+			<Text>+5 [ICON_STRENGTH] 战斗力，来自“弹道学”科技。</Text>
 		</Replace>
 
 		<!-- == PORTUGAL == -->
