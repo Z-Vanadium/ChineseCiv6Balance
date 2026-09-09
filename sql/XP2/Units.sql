@@ -210,3 +210,6 @@ UPDATE Unit_RockbandResults_XP2 SET AlbumSales=40 WHERE ResultType='RESULT_OPENI
 UPDATE Unit_RockbandResults_XP2 SET AlbumSales=80 WHERE ResultType='RESULT_RISING_STARS';
 UPDATE Unit_RockbandResults_XP2 SET AlbumSales=120 WHERE ResultType='RESULT_HEADLINERS';
 UPDATE Unit_RockbandResults_XP2 SET AlbumSales=160 WHERE ResultType='RESULT_LEGENDS_OF_ROCK';
+
+-- 2026-09-08: Rock Band base faith purchase cost 300 -> 350（冷战解锁；用户定稿：直接上调原版 Cost，不做缩放补偿换算）
+UPDATE Units SET Cost=350 WHERE UnitType='UNIT_ROCK_BAND';
