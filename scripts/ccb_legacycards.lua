@@ -321,7 +321,10 @@ function OnBuildingConstructed(playerID, cityID, buildingID)
 		return;
 	end
 
-	-- 三级政体建筑完成：升级全部已升二级卡为三级卡（按当时三级政体方向）
+	-- 三级政体建筑完成：升级已升二级卡为三级卡（按当时三级政体方向）
+	-- ⚠ 2026-09 用户决策：一生最多升 1 张三卡（瑞典女王图书馆双卡场景平衡）
+	--   → 只升 PROP_UPGRADED 顺序第一条未升三的二级卡（=最早完成二级升级的线），
+	--     其余二级卡保持二级、可装备（对应线三卡未解锁 → Obsolete 不触发，天然保留）
 	if T3_BUILDINGS[buildingType] then
 		print('[CCB-Legacy] T3 building, govt=' .. tostring(govtType));
 		if govtType == nil or not IsT3Government(govtType) then
@@ -333,26 +336,25 @@ function OnBuildingConstructed(playerID, cityID, buildingID)
 		local t3List = SplitList(player:GetProperty(PROP_T3_UPGRADED));
 		print('[CCB-Legacy] T3 candidates: ' .. JoinList(upList) .. ' | alreadyT3=' .. JoinList(t3List));
 
+		-- 一生上限 1：已有任一三卡则不再升（重建市政广场再触发也不升第二条）
+		if #t3List > 0 then
+			print('[CCB-Legacy] T3 cap reached (1), skip');
+			return;
+		end
+
 		for _, u in ipairs(upList) do
 			local t1Key = string.match(u, '^([^:]+)');
 			local t2Card = string.match(u, ':([^:]+)');
 			if t1Key ~= nil and t2Card ~= nil then
-				-- 防重复：该线已升三则跳过（多卡并存时逐线升）
-				local alreadyT3 = false;
-				for _, t in ipairs(t3List) do
-					local k = string.match(t, '^([^:]+)');
-					if k == t1Key then alreadyT3 = true; break; end
-				end
-				if not alreadyT3 then
-					local t3Card = t2Card .. '_' .. suffix; -- POLICY_CCB_GOV_*_DIPLO -> *_DIPLO_FASCISM 等
-					if GameInfo.Policies[t3Card] ~= nil then
-						print('[CCB-Legacy] T3 upgrade ' .. t1Key .. '(' .. t2Card .. ') -> ' .. t3Card);
-						SwapCards(player, t2Card, t3Card);
-						table.insert(t3List, t1Key .. ':' .. t3Card);
-						print('[CCB-Legacy] T3 upgraded: ' .. t1Key .. ':' .. t3Card);
-					else
-						print('[CCB-Legacy] T3 card not found: ' .. tostring(t3Card));
-					end
+				local t3Card = t2Card .. '_' .. suffix; -- POLICY_CCB_GOV_*_DIPLO -> *_DIPLO_FASCISM 等
+				if GameInfo.Policies[t3Card] ~= nil then
+					print('[CCB-Legacy] T3 upgrade ' .. t1Key .. '(' .. t2Card .. ') -> ' .. t3Card);
+					SwapCards(player, t2Card, t3Card);
+					table.insert(t3List, t1Key .. ':' .. t3Card);
+					print('[CCB-Legacy] T3 upgraded: ' .. t1Key .. ':' .. t3Card);
+					break; -- 只升第一条未升三的线；其余二级卡保留
+				else
+					print('[CCB-Legacy] T3 card not found: ' .. tostring(t3Card));
 				end
 			end
 		end
