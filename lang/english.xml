@@ -1067,6 +1067,13 @@
 		<Replace Tag="LOC_ABILITY_ORDU_INCREASED_MOVEMENT_DESCRIPTION" Language="en_US">
 			<Text>+1 [ICON_MOVEMENT] Movement when starting on flat terrain.</Text>
 		</Replace>
+		<!-- = leader ability = -->
+		<Replace Tag="LOC_TRAIT_LEADER_GENGHIS_KHAN_ABILITY_DESCRIPTION" Language="en_US">
+			<Text>Light and Heavy Cavalry class units and the Keshig gain +3 [ICON_STRENGTH] Combat Strength. Defeated enemy cavalry class units have a chance to be captured.</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_GENGHIS_CAPTURE_PREVIEW_TEXT" Language="en_US">
+			<Text>Has a chance to capture defeated enemy cavalry class units.</Text>
+		</Replace>
 
 
 		<!-- == NORWAY == -->

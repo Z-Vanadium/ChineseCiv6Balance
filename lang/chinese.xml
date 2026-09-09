@@ -1197,7 +1197,10 @@
  		</Replace>
 		<!-- = leader ability = -->
 		<Replace Tag="LOC_TRAIT_LEADER_GENGHIS_KHAN_ABILITY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>轻重骑兵类单位 [ICON_Strength] 战斗力+3，击败敌方骑兵类单位后有几率将其俘获。</Text>
+			<Text>轻重骑兵类单位和怯薛歹+3 [ICON_Strength] 战斗力，击败骑兵类单位后有几率将其俘获。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_GENGHIS_CAPTURE_PREVIEW_TEXT" Language="zh_Hans_CN">
+			<Text>有几率俘获被击败的敌方骑兵类单位。</Text>
 		</Replace>
 
 		<!-- == NORWAY == -->
