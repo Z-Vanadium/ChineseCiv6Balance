@@ -2,14 +2,8 @@
 --******			  	B U I L D I N G S	 		  	  ******
 --==============================================================
 --Wonders
--- Taj Mahal +10% gold for all your cities if you are in golden age
-INSERT INTO Modifiers (ModifierId , ModifierType, SubjectRequirementSetId) VALUES
-	('TAJ_MAHAL_GOLD_MODIFIER_IN_ALL_CITIES', 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_MODIFIER', 'PLAYER_HAS_GOLDEN_AGE');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-    ('TAJ_MAHAL_GOLD_MODIFIER_IN_ALL_CITIES', 'YieldType', 'YIELD_GOLD'),
-    ('TAJ_MAHAL_GOLD_MODIFIER_IN_ALL_CITIES', 'Amount', '10');
-INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES
-	('BUILDING_TAJ_MAHAL', 'TAJ_MAHAL_GOLD_MODIFIER_IN_ALL_CITIES');
+-- 2026-09-09 移除：泰姬陵"黄金/英雄时代全城+10%金"（原 CCB 加成；改为奇观特性
+-- "黄金或黑暗时代可额外选择一个时代着力点"，实现见 ui/replacements/dedicationpopup_ccb.lua）
 
 --5.1 Kotoku Allows Monk Buy SQL
 INSERT INTO Unit_BuildingPrereqs(Unit, PrereqBuilding, NumSupported) VALUES

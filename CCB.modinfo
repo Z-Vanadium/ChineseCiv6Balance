@@ -380,6 +380,16 @@
 			<File>scripts/ccb_legacycards.lua</File>
 		</AddGameplayScripts>
 
+		<!-- CCB 泰姬陵特性：黄金/黑暗时代可额外选择一个时代着力点（ReplaceUIScript 替换着力点弹窗） -->
+		<ReplaceUIScript id="CCB_DedicationPopup">
+			<Criteria>XP1_OR_XP2</Criteria>
+			<Properties>
+				<LoadOrder>19999</LoadOrder>
+				<LuaContext>DedicationPopup</LuaContext>
+				<LuaReplace>ui/replacements/dedicationpopup_ccb.lua</LuaReplace>
+			</Properties>
+		</ReplaceUIScript>
+
 		<AddUserInterfaces id="bbg_uitogameplay_dummy_xml">
 			<Properties>
 				<Context>InGame</Context>
@@ -1564,6 +1574,7 @@
 		<File>sql/mod_associations/bbs/_bbs_utils.sql</File>
 		<!-- -->
 		<File>ui/replacements/worldrankings_bbg.lua</File>
+		<File>ui/replacements/dedicationpopup_ccb.lua</File>
 		<File>ui/replacements/endgamemenu_bbg.lua</File>
 		<File>ui/replacements/endgamemenu.xml</File>
 		<!--<File>ui/replacements/productionpanel_bbg.lua</File>-->

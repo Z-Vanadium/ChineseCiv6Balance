@@ -2332,7 +2332,7 @@
 			<Text>Grants 3 Archers, 3 Spearmen, and a Battering Ram. +35% [ICON_PRODUCTION] Production towards anti-cavalry units.[NEWLINE][NEWLINE]Must be built on flat land adjacent to an Encampment district with a Barracks.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="en_US">
-			<Text>+1 [ICON_GLORY_GOLDEN_AGE] Era Score from Historic Moment earned after this wonder is complete if that Moment is usually worth 2 or more [ICON_GLORY_GOLDEN_AGE] Era Score. All your cities gain +10% [ICON_GOLD] Gold when you are in [ICON_GLORY_GOLDEN_AGE] Golden or [ICON_GLORY_SUPER_GOLDEN_AGE] Heroic Age.[NEWLINE][NEWLINE]Must be built next to a River.</Text>
+			<Text>+1 [ICON_GLORY_GOLDEN_AGE] Era Score from Historic Moment earned after this wonder is complete if that Moment is usually worth 2 or more [ICON_GLORY_GOLDEN_AGE] Era Score. While in a [ICON_GLORY_GOLDEN_AGE] Golden or [ICON_GLORY_DARK_AGE] Dark Age, you may choose one additional Dedication.[NEWLINE][NEWLINE]Must be built next to a River.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_TEMPLE_ARTEMIS_DESCRIPTION" Language="en_US">
 			<Text>Each Camp, Pasture, and Plantation improvement within 4 tiles of this wonder provides +1 [ICON_AMENITIES] Amenity. Must be placed adjacent to a Camp improvement.</Text>
