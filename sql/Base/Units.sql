@@ -54,8 +54,10 @@ UPDATE Units SET Combat=80 WHERE UnitType='UNIT_AIRCRAFT_CARRIER';
 UPDATE Units SET Combat=90 WHERE UnitType='UNIT_DESTROYER';
 -- UPDATE Units SET Combat=75 WHERE UnitType='UNIT_ROCKET_ARTILLERY';
 UPDATE Units SET Combat=90 WHERE UnitType='UNIT_MECHANIZED_INFANTRY';
-UPDATE Units SET Combat=85, RangedCombat=95 WHERE UnitType='UNIT_NUCLEAR_SUBMARINE';
--- UPDATE Units SET Combat=80, RangedCombat=95 WHERE UnitType='UNIT_MISSILE_CRUISER';
+-- 2026/09/10 核潜艇远程 95 → 90
+UPDATE Units SET Combat=85, RangedCombat=90 WHERE UnitType='UNIT_NUCLEAR_SUBMARINE';
+-- 2026/09/10 导弹巡洋舰近战 75 → 80（远程保持 90；本行原为注释掉的历史提案 Combat=80/RangedCombat=95，现只取近战部分）
+UPDATE Units SET Combat=80 WHERE UnitType='UNIT_MISSILE_CRUISER';
 UPDATE Units SET Combat=140, AntiAirCombat=120 WHERE UnitType='UNIT_GIANT_DEATH_ROBOT';
 UPDATE ModifierArguments SET Value='20' WHERE ModifierId='GDR_AA_DEFENSE' AND Name='Amount';
 
