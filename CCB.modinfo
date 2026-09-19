@@ -1050,6 +1050,15 @@
 			<File>sql/Base/Excluded_Adjacencies.sql</File>
 		</UpdateDatabase>
 
+		<!-- CCB 后期单位远程能力（2026-09-10）：现代/原子能/信息时代的 近战·抗骑·海军近战·轻骑·重骑 获得射程1、远程力=近战-10
+		     必须排在 BBG_Expanded（LoadOrder 100000）之后，BBG 扩展的自定义单位才已存在 -->
+		<UpdateDatabase id="CCB_LateGameRanged">
+			<Properties>
+				<LoadOrder>100100</LoadOrder>
+			</Properties>
+			<File>sql/Base/CCB_LateGameRanged.sql</File>
+		</UpdateDatabase>
+
 
 		<UpdateDatabase id="BBG_XP2_SecretSocieties">
 			<Properties>
@@ -1615,6 +1624,7 @@
 		<File>sql/Base/Excluded_Adjacencies.sql</File>
 		<File>sql/XP1/CCB_AllianceTuning.sql</File>
 		<File>sql/Base/LegacyCards.sql</File>
+		<File>sql/Base/CCB_LateGameRanged.sql</File>
 		<File>scripts/ccb_legacycards.lua</File>
 	</Files>
 </Mod>
