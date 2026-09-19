@@ -2334,6 +2334,9 @@
 		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="en_US">
 			<Text>+1 [ICON_GLORY_GOLDEN_AGE] Era Score from Historic Moment earned after this wonder is complete if that Moment is usually worth 2 or more [ICON_GLORY_GOLDEN_AGE] Era Score. While in a [ICON_GLORY_GOLDEN_AGE] Golden or [ICON_GLORY_DARK_AGE] Dark Age, you may choose one additional Dedication.[NEWLINE][NEWLINE]Must be built next to a River.</Text>
 		</Replace>
+		<Replace Tag="LOC_FEATURE_CCB_PLANTED_FOREST_NAME" Language="en_US">
+			<Text>Planted Forest</Text>
+		</Replace>
 		<Replace Tag="LOC_BUILDING_FORBIDDEN_CITY_DESCRIPTION" Language="en_US">
 			<Text>+1 Wildcard policy slot[NEWLINE][NEWLINE]+0.25 Alliance Points per turn.[NEWLINE][NEWLINE]Must be built on flat land adjacent to the City Center.</Text>
 		</Replace>

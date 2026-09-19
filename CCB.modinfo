@@ -1068,6 +1068,21 @@
 			<File>sql/Base/CCB_LateGameRanged.sql</File>
 		</UpdateDatabase>
 
+		<!-- CCB 人工林（2026-09-19）：新建 FEATURE_CCB_PLANTED_FOREST（规则整表复制森林，仅外观不同）；
+		     种植后由 scripts/ccb_planted_forest.lua 替换为新特征；视觉走 ArtDefs/ 独立 Clutter 排列 -->
+		<UpdateDatabase id="CCB_PlantedForest">
+			<Properties>
+				<LoadOrder>11615</LoadOrder>
+			</Properties>
+			<File>sql/Base/CCB_PlantedForest.sql</File>
+		</UpdateDatabase>
+		<AddGameplayScripts id="CCB_PlantedForest_Script">
+			<Properties>
+				<LoadOrder>11615</LoadOrder>
+			</Properties>
+			<File>scripts/ccb_planted_forest.lua</File>
+		</AddGameplayScripts>
+
 
 		<UpdateDatabase id="BBG_XP2_SecretSocieties">
 			<Properties>
@@ -1635,6 +1650,8 @@
 		<File>sql/XP1/CCB_AllianceTuning.sql</File>
 		<File>sql/Base/LegacyCards.sql</File>
 		<File>sql/Base/CCB_LateGameRanged.sql</File>
+		<File>sql/Base/CCB_PlantedForest.sql</File>
 		<File>scripts/ccb_legacycards.lua</File>
+		<File>scripts/ccb_planted_forest.lua</File>
 	</Files>
 </Mod>
