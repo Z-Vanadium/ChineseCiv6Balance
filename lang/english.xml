@@ -555,7 +555,7 @@
 		</Replace>
 		<!-- = leader ability (Magnificence) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_MAGNIFICENCES_DESCRIPTION" Language="en_US">
-			<Text>Improved resources receive +1 [ICON_CULTURE] Culture after researching Craftsmanship. Chateau adjacent to a luxury resource receive +1 [ICON_AMENITIES] Amenity. Happy cities gain +5% Culture and grant +1 [ICON_GreatWriter] Great Writer, [ICON_GreatArtist] Great Artist, and [ICON_GreatMusician] Great Musician point from Theater Squares, these numbers are doubled if ecstatic. May initiate the Court Festival unique project in any city with a Theater Square district.</Text>
+			<Text>Improved resources receive +1 [ICON_CULTURE] Culture after researching Craftsmanship. Improved resources adjacent to a Theater Square receive +1 [ICON_CULTURE] Culture, as do improved resources adjacent to a Chateau. May initiate the Court Festival unique project in any city with a Theater Square district after researching Medieval Faires.[NEWLINE][NEWLINE]Happy cities gain +4% [ICON_CULTURE] Culture, and +1 [ICON_GreatWriter] Great Writer point in cities with a Theater Square;[NEWLINE]Ecstatic cities gain +7% [ICON_CULTURE] Culture, and +1 [ICON_GreatWriter] Great Writer and +1 [ICON_GreatArtist] Great Artist point in cities with a Theater Square;[NEWLINE]Euphoric cities gain +10% [ICON_CULTURE] Culture, and +1 [ICON_GreatWriter] Great Writer, +1 [ICON_GreatArtist] Great Artist and +1 [ICON_GreatMusician] Great Musician point in cities with a Theater Square.[NEWLINE](These happiness bonuses are mutually exclusive.)</Text>
 		</Replace>
 		<!-- = unique project (Magnificence) = -->
 		<Replace Tag="LOC_PROJECT_ECOURT_FESTIVAL_DESCRIPTION" Language="en_US">
