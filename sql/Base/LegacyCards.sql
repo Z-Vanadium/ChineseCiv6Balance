@@ -398,22 +398,25 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_UPG_FAITH_PCT', 'YieldType', 'YIELD_FAITH'),
 ('CCB_UPG_FAITH_PCT', 'Amount', 12);
 
--- 2.6 共和/独裁+神权：每个外国信徒 +0.5 文化、+0.5 信仰（依赖创立宗教）
---     ✅ 实测修复：ADD_PLAYER_BELIEF_YIELD 类型必带 PerXItems 参数（vanilla 韩国"外国城市信教"同款
---       TRAIT_SCIENCE_PER_FOREIGN_CITY_FOLLOWING_RELIGION 有 PerXItems=1）；缺参 → 产出恒 0。
---       探针 Amount=25 实测生效 → 改回正式 0.5
+-- 2.6 共和/独裁+神权：每 2 个外国信徒 +1 文化、+1 信仰（依赖创立宗教且外国信徒 > 0）
+--     ✅ 机制已实测：本类型在【政策卡】上可用（历史探针 Amount=25 生效）
+--       · ADD_PLAYER_BELIEF_YIELD 必带 PerXItems 参数，缺参 → 产出恒 0
+--         （vanilla 韩国同款 TRAIT_SCIENCE_PER_FOREIGN_CITY_FOLLOWING_RELIGION 带 PerXItems=1）
+--       · ⚠ 2026-09-19 修复：Amount 必须为【整数】—— 原写法 Amount=0.5 + PerXItems=1 实测不生效
+--         （引擎按整数求值，0.5 取整为 0 → 收益恒为 0；移速等通用效果不受影响）
+--         现改为 Amount=1 + PerXItems=2，与原设计"每信徒 0.5"等价
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
 ('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD'),
 ('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'BeliefYieldType', 'BELIEF_YIELD_PER_FOREIGN_FOLLOWER'),
 ('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'YieldType', 'YIELD_CULTURE'),
-('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'PerXItems', 1),
-('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'Amount', 0.5),
+('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'PerXItems', 2),
+('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'Amount', 1),
 ('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'BeliefYieldType', 'BELIEF_YIELD_PER_FOREIGN_FOLLOWER'),
 ('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'YieldType', 'YIELD_FAITH'),
-('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'PerXItems', 1),
-('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'Amount', 0.5);
+('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'PerXItems', 2),
+('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'Amount', 1);
 
 -- 2.6b 共和/独裁+神权：传教士、使徒 +1 移动力（2026-09 用户新增，数值定为 +1）
 --     单位类型需求（CLASS_APOSTLE 标签不存在 → 用 REQUIREMENT_UNIT_TYPE_MATCHES）
