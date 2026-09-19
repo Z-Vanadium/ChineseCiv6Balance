@@ -515,10 +515,16 @@ UPDATE Modifiers SET SubjectRequirementSetId = 'REQSET_CCB_UNIT_ERA_MODERN_PLUS'
 WHERE ModifierId = 'CCB_CYB_INFO_UNIT_MOVE';
 
 -- 2) 完成控制论后，末日机甲（GDR）无视 ZOC
---    机制：科技挂载天然满足"完成控制论"；GRANT_ABILITY 授予原版 ABILITY_IGNORE_ZOC；
+--    机制：科技挂载天然满足"完成控制论"；GRANT_ABILITY 授予 CCB 自建的【可授予型】能力。
 --    需求：SubjectRequirementSetId 只能引用 RequirementSets（不能直接引用 Requirements），
 --    故自建 TEST_ALL 集 CCB_REQSET_UNIT_IS_GDR 包装原版 Requirement REQUIRES_UNIT_GIANT_DEATH_ROBOT
 --    （原版 Requirement：Type=REQUIREMENT_UNIT_TAG_MATCHES, Arg Tag=CLASS_GIANT_DEATH_ROBOT）
+--    ⚠ 2026-09-10 修复：原先直接授予原版 ABILITY_IGNORE_ZOC 实测【不生效】——
+--      该能力是"常驻型"（UnitAbilities 定义无 Inactive 字段 → Inactive=0），效果范围只由 TypeTags 决定
+--      （仅 CLASS_HEAVY_CAVALRY/LIGHT_CAVALRY/NAVAL_RAIDER/RANGED_CAVALRY/WAR_CART/LONGSHIP），
+--      而 GDR 不带这些标签；对 Inactive=0 的能力做 GRANT_ABILITY 不会激活（同传承卡那条经验）。
+--      现改为自建 ABILITY_CCB_GDR_IGNORE_ZOC（Inactive=1，随授予生效、卸下失效），
+--      复用原版 modifier 类型与文本；原版 ABILITY_IGNORE_ZOC 不动 → 轻重骑兵等原有能力不受影响。
 INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
 ('CCB_REQSET_UNIT_IS_GDR', 'REQUIREMENTSET_TEST_ALL');
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
@@ -528,7 +534,23 @@ INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES
 INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
 ('CCB_CYB_GDR_IGNORE_ZOC', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY', 0, 0, 0, NULL, 'CCB_REQSET_UNIT_IS_GDR');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-('CCB_CYB_GDR_IGNORE_ZOC', 'AbilityType', 'ABILITY_IGNORE_ZOC');
+('CCB_CYB_GDR_IGNORE_ZOC', 'AbilityType', 'ABILITY_CCB_GDR_IGNORE_ZOC');
+
+-- 2.1) GDR 专属"无视 ZOC"能力（2026-09-10 新增）
+--      Inactive=1 → 只随 GRANT_ABILITY 授予生效（与传承卡 +4 力的能力框架同款结构）。
+--      能力必须与单位共享至少一个 ABILITY_CLASS 标签，授予才会激活；
+--      CLASS_GIANT_DEATH_ROBOT 是原版 GDR 自带标签（Vocabulary=ABILITY_CLASS），
+--      原版即用它给 GDR 挂了 WMD 抗性 / 上船可战 / 自动老练三个能力，属正统写法。
+INSERT OR IGNORE INTO Types (Type, Kind) VALUES
+('ABILITY_CCB_GDR_IGNORE_ZOC', 'KIND_ABILITY');
+INSERT OR IGNORE INTO TypeTags (Type, Tag) VALUES
+('ABILITY_CCB_GDR_IGNORE_ZOC', 'CLASS_GIANT_DEATH_ROBOT');
+INSERT OR IGNORE INTO UnitAbilities (UnitAbilityType, Name, Description, Inactive) VALUES
+('ABILITY_CCB_GDR_IGNORE_ZOC', 'LOC_ABILITY_IGNORE_ZOC_NAME', 'LOC_ABILITY_IGNORE_ZOC_DESCRIPTION', 1);
+INSERT OR IGNORE INTO Modifiers (ModifierId, ModifierType) VALUES
+('CCB_GDR_IGNORE_ZOC_MOD', 'MODIFIER_PLAYER_UNIT_ADJUST_IGNORE_ZOC');
+INSERT OR IGNORE INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
+('ABILITY_CCB_GDR_IGNORE_ZOC', 'CCB_GDR_IGNORE_ZOC_MOD');
 
 -- smart materials: all units +3 defense strength
 INSERT INTO TechnologyModifiers (TechnologyType, ModifierId) VALUES 
