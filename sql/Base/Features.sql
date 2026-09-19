@@ -22,6 +22,10 @@ INSERT OR IGNORE INTO Feature_YieldChanges (FeatureType, YieldType, YieldChange)
 INSERT OR IGNORE INTO Feature_YieldChanges (FeatureType, YieldType, YieldChange)
 	VALUES ('FEATURE_DEAD_SEA', 'YIELD_FOOD', 2);
 
+-- 2026/09/19 死海新增 +1 生产力（用户需求）
+INSERT OR IGNORE INTO Feature_YieldChanges (FeatureType, YieldType, YieldChange)
+	VALUES ('FEATURE_DEAD_SEA', 'YIELD_PRODUCTION', 1);
+
 INSERT OR IGNORE INTO Feature_YieldChanges (FeatureType, YieldType, YieldChange)
 	VALUES ('FEATURE_CRATER_LAKE', 'YIELD_FOOD', 2);
 UPDATE Feature_YieldChanges SET YieldChange=2 WHERE FeatureType='FEATURE_CRATER_LAKE' AND YieldType='YIELD_SCIENCE'; 

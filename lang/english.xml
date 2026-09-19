@@ -2415,7 +2415,26 @@
 			<Text>Two tile natural wonder. It appears as a Lake and provides +2 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +2 [ICON_CULTURE] Culture, +2 [ICON_GOLD] Gold.</Text>
 		</Replace>
 		<Replace Tag="LOC_FEATURE_DEAD_SEA_DESCRIPTION" Language="en_US">
-			<Text>Two tile natural wonder. It appears as a Lake and provides +2 [ICON_FOOD] Food, +2 [ICON_FAITH] Faith, +2 [ICON_CULTURE] Culture. Units heal completely if they heal for one turn adjacent to the Dead Sea.</Text>
+			<Text>Two tile natural wonder. It appears as a Lake and provides +2 [ICON_FOOD] Food, +2 [ICON_FAITH] Faith, +2 [ICON_CULTURE] Culture and +1 [ICON_PRODUCTION] Production. Units heal completely if they heal for one turn adjacent to the Dead Sea.</Text>
+		</Replace>
+		<!-- CCB Maps/BBM natural wonders: descriptions after the 2026-09-19 value & mechanic changes -->
+		<Replace Tag="LOC_FEATURE_SINAI_DESCRIPTION" Language="en_US">
+			<Text>One tile impassable natural wonder. Appears as a Mountain and provides +3 [ICON_Faith] Faith to adjacent tiles. Religious units that move next to Mount Sinai receive the ability 'Ten Commandments' (+15 [ICON_RELIGION] Religious Strength).</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_OLD_FAITHFUL_DESCRIPTION" Language="en_US">
+			<Text>One tile natural wonder. Provides +3 [ICON_SCIENCE] Science, +2 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production, +1 [ICON_Faith] Faith, and +1 [ICON_GOLD] Gold. Major adjacency bonus to Campus, Seowon and Observatory districts.</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_LAKE_VICTORIA_DESCRIPTION" Language="en_US">
+			<Text>Four tile natural wonder. Appears as a Lake and provides +2 [ICON_FOOD] Food, +2 [ICON_PRODUCTION] Production, +1 [ICON_CULTURE] Culture and +1 [ICON_GOLD] Gold.</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_SALAR_DE_UYUNI_DESCRIPTION" Language="en_US">
+			<Text>Four tile natural wonder. Provides +2 [ICON_SCIENCE] Science, +2 [ICON_PRODUCTION] Production and +4 [ICON_GOLD] Gold. If you own at least one Salar de Uyuni tile, Mines on resources in your empire provide +2 [ICON_GOLD] Gold.</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_BARRINGER_CRATER_DESCRIPTION" Language="en_US">
+			<Text>One tile natural wonder. Provides +5 [ICON_SCIENCE] Science, +2 [ICON_FOOD] Food and +3 [ICON_GOLD] Gold. +15% [ICON_PRODUCTION] Production toward Space Race Projects if you own this tile.</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_BIOLUMINESCENT_BAY_DESCRIPTION" Language="en_US">
+			<Text>One tile natural wonder. Appears as a Reef and provides +5 [ICON_SCIENCE] Science, +1 [ICON_FOOD] Food, and +1 [ICON_GOLD] Gold. +1 [ICON_GOLD] Gold on Fishing Boats if you own this tile.</Text>
 		</Replace>
 		<Replace Tag="LOC_FEATURE_GOBUSTAN_DESCRIPTION" Language="en_US">
 			<Text>Three tile natural wonder. It provides +4 [ICON_CULTURE] Culture and +4 [ICON_PRODUCTION] Production.</Text>

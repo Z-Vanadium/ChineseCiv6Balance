@@ -2506,7 +2506,26 @@
 			<Text>占2个单元格的自然奇观，表现为湖泊。提供+2 [ICON_FOOD] 食物、+1 [ICON_PRODUCTION] 生产力、+2 [ICON_CULTURE] 文化值、+2 [ICON_GOLD] 金币。</Text>
 		</Replace>
 		<Replace Tag="LOC_FEATURE_DEAD_SEA_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>占2个单元格的自然奇观，表现为湖泊。提供+2 [ICON_FOOD] 食物、+2 [ICON_Faith] 信仰值、+2 [ICON_Culture] 文化值。单位相邻死海时选择恢复一回合，可在此期间完全恢复。</Text>
+			<Text>占2个单元格的自然奇观，表现为湖泊。提供+2 [ICON_FOOD] 食物、+2 [ICON_Faith] 信仰值、+2 [ICON_Culture] 文化值、+1 [ICON_PRODUCTION] 生产力。单位相邻死海时选择恢复一回合，可在此期间完全恢复。</Text>
+		</Replace>
+		<!-- CCB 地图/BBM 新增自然奇观描述（2026-09-19 数值与机制调整后覆盖） -->
+		<Replace Tag="LOC_FEATURE_SINAI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>占1个单元格的自然奇观，无法通行，表现为山脉。为相邻单元格+3 [ICON_Faith] 信仰值。移动到西奈山附近的宗教单位将获得能力“摩西十诫”（+15 [ICON_RELIGION] 宗教战斗力）。</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_OLD_FAITHFUL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>占1个单元格的自然奇观。提供+3 [ICON_SCIENCE] 科技值、+2 [ICON_FOOD] 食物、+1 [ICON_PRODUCTION] 生产力、+1 [ICON_Faith] 信仰值、+1 [ICON_GOLD] 金币。为学院、书院与天文台提供大量相邻加成。</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_LAKE_VICTORIA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>占4个单元格的自然奇观，表现为湖泊。提供+2 [ICON_FOOD] 食物、+2 [ICON_PRODUCTION] 生产力、+1 [ICON_CULTURE] 文化、+1 [ICON_GOLD] 金币。</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_SALAR_DE_UYUNI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>占4个单元格的自然奇观。提供+2 [ICON_SCIENCE] 科技值、+2 [ICON_PRODUCTION] 生产力、+4 [ICON_GOLD] 金币。若你拥有至少1个乌尤尼盐沼单元格，则国内所有带资源的矿场额外+2 [ICON_GOLD] 金币。</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_BARRINGER_CRATER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>占1个单元格的自然奇观。提供+5 [ICON_SCIENCE] 科技值、+2 [ICON_FOOD] 食物、+3 [ICON_GOLD] 金币。若文明拥有至少1个该奇观单元格，则生产太空竞赛项目时+15% [ICON_PRODUCTION] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_FEATURE_BIOLUMINESCENT_BAY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>占1个单元格的自然奇观，表现为礁石。提供+5 [ICON_SCIENCE] 科技值、+1 [ICON_FOOD] 食物、+1 [ICON_GOLD] 金币。若文明拥有至少1个该奇观单元格，则渔船+1 [ICON_GOLD] 金币。</Text>
 		</Replace>
 		<Replace Tag="LOC_FEATURE_GOBUSTAN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>占3个单元格的自然奇观。提供+4 [ICON_CULTURE] 文化值、+4 [ICON_Production] 生产力。</Text>

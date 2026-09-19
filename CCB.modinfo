@@ -511,6 +511,15 @@
 			<File>sql/mod_associations/bbs/_bbs_utils.sql</File>
 		</UpdateDatabase>			
 		<!-- -->
+		<!-- CCB 地图/BBM 新增自然奇观的数值与机制调整：必须晚于 CCB 地图的 sql/bbs_new_wonders.sql（LoadOrder 20000） -->
+		<UpdateDatabase id="BBG_NaturalWonderBalance">
+			<Properties>
+				<LoadOrder>100110</LoadOrder>
+			</Properties>
+			<Criteria>BBS</Criteria>
+			<File>sql/mod_associations/bbs/CCB_NaturalWonderBalance.sql</File>
+		</UpdateDatabase>
+		<!-- -->
 		<UpdateDatabase id="BBG_Base">
 			<Properties>
 				<LoadOrder>11611</LoadOrder>
@@ -1571,6 +1580,7 @@
 		<File>sql/Secret_Societies.sql</File>
 		<!-- -->
 		<File>sql/mod_associations/bbs/_bbs_utils.sql</File>
+		<File>sql/mod_associations/bbs/CCB_NaturalWonderBalance.sql</File>
 		<!-- -->
 		<File>ui/replacements/worldrankings_bbg.lua</File>
 		<File>ui/replacements/dedicationpopup_ccb.lua</File>
