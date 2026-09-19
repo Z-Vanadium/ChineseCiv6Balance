@@ -2642,6 +2642,15 @@
 		<Replace Tag="LOC_BUILDING_CHICHEN_ITZA_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>帝国中所有雨林单元格 +1 [ICON_Production] 生产力, +1 [ICON_Culture] 文化值。[NEWLINE][NEWLINE]必须建在雨林。</Text>
 		</Replace>
+		<Replace Tag="LOC_BUILDING_FORBIDDEN_CITY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 通配符政策槽位[NEWLINE][NEWLINE]同盟点数的获取+0.25。[NEWLINE][NEWLINE]必须建在靠近市中心的平原上。</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_RUHR_VALLEY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>该城市+25% [ICON_Production] 生产力，该城市获得1个额外区域位，此城中每个矿山和采石场+1 [ICON_Production] 生产力。必须沿河而建，且与拥有工厂的工业区区域相邻。</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_PANAMA_CANAL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>修建完成后，将自动建造1或2个相邻运河区域。海军单位现可穿越运河奇观单元格。如 [ICON_TradeRoute] 贸易路线途径此处，其将从目的地的区域处获得成倍 [ICON_Gold] 金币。每条途径该城市的外国 [ICON_TradeRoute] 贸易路线为该城市+8 [ICON_Gold] 金币。[NEWLINE][NEWLINE]必须修建在平原单元格之上，同时建筑单元格两侧相邻的两个正对单元格必须满足以下条件：其中一块单元格必须能够修建与巴拿马运河单元格连接的运河区域；另一块单元格则必须为城市、水域或可以修建相连运河的单元格。</Text>
+		</Replace>
 		<Replace Tag="LOC_BUILDING_HAGIA_SOPHIA_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>神社提供2点 [ICON_SCIENCE] 科技值。[NEWLINE][NEWLINE]必须建在靠近圣地的平坦地形上，同时必须已创立宗教。</Text>
 		</Replace>

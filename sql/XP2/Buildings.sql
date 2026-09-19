@@ -188,3 +188,24 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
     ('ORSZAGHAZ_INFLUENCE_POINTS_BONUS', 'BonusType', 'GOVERNMENTBONUS_ENVOYS'),
     ('ORSZAGHAZ_INFLUENCE_POINTS_BONUS', 'Amount', 25),
     ('ORSZAGHAZ_ENVOYS_BONUS', 'Amount', 2);
+
+
+--==============================================================================================
+-- 2026-09-10 巴拿马运河 新增词条 + 两个奇观造价调整（用户需求）
+--==============================================================================================
+-- 巴拿马运河：每条【外国】商路经过该城市时 +8 金币
+--   机制取自瑞纳总督晋升「外币兑换」FOREIGN_EXCHANGE_GOLD_FROM_FOREIGN_TRADE_PASSING_THROUGH
+--   类型 MODIFIER_CITY_ADJUST_YIELD_FROM_FOREIGN_TRADE_ROUTES_PASSING_THROUGH（原版 Amount=3，此处 8）
+--   ⚠ 引擎语义为 foreign（外国）商路，即别国经过本城的商路；本国商路不计入
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+    ('CCB_PANAMA_CANAL_FOREIGN_TRADE_GOLD', 'MODIFIER_CITY_ADJUST_YIELD_FROM_FOREIGN_TRADE_ROUTES_PASSING_THROUGH');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+    ('CCB_PANAMA_CANAL_FOREIGN_TRADE_GOLD', 'YieldType', 'YIELD_GOLD'),
+    ('CCB_PANAMA_CANAL_FOREIGN_TRADE_GOLD', 'Amount', 8);
+INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES
+    ('BUILDING_PANAMA_CANAL', 'CCB_PANAMA_CANAL_FOREIGN_TRADE_GOLD');
+
+-- 造价调整（用户指定）：马丘比丘 400 → 340、巴拿马运河 920 → 780
+--   代码里的 Cost 是标准速基准值，引擎按 GameSpeeds.CostMultiplier 缩放（马拉松 300/史诗 150/标准 100/快速 67/联机 50）
+UPDATE Buildings SET Cost=340 WHERE BuildingType='BUILDING_MACHU_PICCHU';
+UPDATE Buildings SET Cost=780 WHERE BuildingType='BUILDING_PANAMA_CANAL';

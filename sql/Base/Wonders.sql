@@ -562,3 +562,33 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('BBG_OPERA_SYDNEY_ROCKBAND', 'Amount', 2);
 INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES
 	('BUILDING_SYDNEY_OPERA_HOUSE', 'BBG_OPERA_SYDNEY_ROCKBAND');
+
+
+--==============================================================================================
+-- 2026-09-10 紫禁城 / 鲁尔山谷 新增词条（用户需求）
+--==============================================================================================
+-- 紫禁城：同盟点数获取 +0.25/回合
+--   MODIFIER_PLAYER_ADJUST_ALLIANCE_POINTS，Amount=1 ≈ 面板显示 +0.25
+--   （换算依据：T3 民主卡 Amount=20 ≈ +5、帝国协约 Amount=2 ≈ +0.5，均为实测标定）
+--   玩家级修饰器挂建筑有原版先例：紫禁城自带的 FORBIDDEN_CITY_WILDCARD_GOVERNMENT_SLOT
+--   同样是玩家级类型（MODIFIER_PLAYER_CULTURE_ADJUST_GOVERNMENT_SLOTS_MODIFIER）
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+	('CCB_FORBIDDEN_CITY_ALLIANCE_POINTS', 'MODIFIER_PLAYER_ADJUST_ALLIANCE_POINTS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+	('CCB_FORBIDDEN_CITY_ALLIANCE_POINTS', 'Amount', 1);
+INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES
+	('BUILDING_FORBIDDEN_CITY', 'CCB_FORBIDDEN_CITY_ALLIANCE_POINTS');
+
+-- 鲁尔山谷 1/2：该城市生产力 +20% → +25%
+--   原 +20% 的实现是 RUHRVALLEY_ADDPRODUCTIONYIELD（MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_MODIFIER，Amount=20）
+UPDATE ModifierArguments SET Value='25'
+WHERE ModifierId='RUHRVALLEY_ADDPRODUCTIONYIELD' AND Name='Amount';
+
+-- 鲁尔山谷 2/2：该城市获得 1 个额外区域位
+--   类型 MODIFIER_SINGLE_CITY_EXTRA_DISTRICT（原版大工程师毕昇 GREATPERSON_EXTRA_DISTRICT_CAPACITY 同款，Amount=1）
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+	('CCB_RUHR_VALLEY_EXTRA_DISTRICT', 'MODIFIER_SINGLE_CITY_EXTRA_DISTRICT');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+	('CCB_RUHR_VALLEY_EXTRA_DISTRICT', 'Amount', 1);
+INSERT INTO BuildingModifiers (BuildingType, ModifierId) VALUES
+	('BUILDING_RUHR_VALLEY', 'CCB_RUHR_VALLEY_EXTRA_DISTRICT');

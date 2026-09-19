@@ -2334,6 +2334,15 @@
 		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="en_US">
 			<Text>+1 [ICON_GLORY_GOLDEN_AGE] Era Score from Historic Moment earned after this wonder is complete if that Moment is usually worth 2 or more [ICON_GLORY_GOLDEN_AGE] Era Score. While in a [ICON_GLORY_GOLDEN_AGE] Golden or [ICON_GLORY_DARK_AGE] Dark Age, you may choose one additional Dedication.[NEWLINE][NEWLINE]Must be built next to a River.</Text>
 		</Replace>
+		<Replace Tag="LOC_BUILDING_FORBIDDEN_CITY_DESCRIPTION" Language="en_US">
+			<Text>+1 Wildcard policy slot[NEWLINE][NEWLINE]+0.25 Alliance Points per turn.[NEWLINE][NEWLINE]Must be built on flat land adjacent to the City Center.</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_RUHR_VALLEY_DESCRIPTION" Language="en_US">
+			<Text>+25% [ICON_Production] Production in this city, this city gains 1 extra District capacity, and +1 [ICON_Production] Production for each Mine and Quarry in this city. Must be built along a River adjacent to an Industrial Zone district with a Factory.</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_PANAMA_CANAL_DESCRIPTION" Language="en_US">
+			<Text>Upon completion 1 or 2 adjacent Canal districts are automatically constructed. The Canal wonder tile can now be crossed by naval units. [ICON_TradeRoute] Trade Routes traveling through it can multiply the [ICON_Gold] Gold they get from districts at their destination. Each foreign [ICON_TradeRoute] Trade Route passing through this city provides +8 [ICON_Gold] Gold.[NEWLINE][NEWLINE]Must be built on a flat land tile where there are two adjacent tiles directly across the build tile from one another that meet the following criteria: one adjacent tile must be able to legally hold a Canal district connecting into the Panama Canal construction tile; the other must be either a city, a water tile, or be another tile that can hold a connecting Canal.</Text>
+		</Replace>
 		<Replace Tag="LOC_BUILDING_TEMPLE_ARTEMIS_DESCRIPTION" Language="en_US">
 			<Text>Each Camp, Pasture, and Plantation improvement within 4 tiles of this wonder provides +1 [ICON_AMENITIES] Amenity. Must be placed adjacent to a Camp improvement.</Text>
 		</Replace>
