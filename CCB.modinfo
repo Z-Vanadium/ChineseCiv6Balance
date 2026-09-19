@@ -1082,6 +1082,16 @@
 			</Properties>
 			<File>scripts/ccb_planted_forest.lua</File>
 		</AddGameplayScripts>
+		<!-- CCB 人工林美术（2026-09-19 第二步）：ModBuddy + AssetEditor 派生并 Cook 出的美术依赖包
+		     ArtDefs/Clutter.artdef  = 新 ClutterSet CLUTTER_CCB_PLANTED_FOREST（同一批松树资产，改排列与大小）
+		     ArtDefs/Features.artdef = 新特征条目 FEATURE_CCB_PLANTED_FOREST，其 Clutter 指向新 set
+		     ⚠ 由 CCB_PlantedForestArt 工程 Cook 产出；调整美术需回该工程重新 Cook 再覆盖本 .dep -->
+		<UpdateArt id="CCB_PlantedForestArt">
+			<Properties>
+				<LoadOrder>11615</LoadOrder>
+			</Properties>
+			<File>CCB_PlantedForestArt.dep</File>
+		</UpdateArt>
 
 
 		<UpdateDatabase id="BBG_XP2_SecretSocieties">
@@ -1653,5 +1663,8 @@
 		<File>sql/Base/CCB_PlantedForest.sql</File>
 		<File>scripts/ccb_legacycards.lua</File>
 		<File>scripts/ccb_planted_forest.lua</File>
+		<File>ArtDefs/Clutter.artdef</File>
+		<File>ArtDefs/Features.artdef</File>
+		<File>CCB_PlantedForestArt.dep</File>
 	</Files>
 </Mod>
