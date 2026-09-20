@@ -5291,9 +5291,6 @@
 		<Replace Tag="LOC_BUILDING_KOTOKU_IN_DESCRIPTION" Language="ru_RU">
 			<Text>+20% [ICON_Faith] веры в этом городе. Даёт 4 монахов-воинов. Позволяет покупать монахов-воинов в этом городе при любом веровании основателя доминирующей религии.[NEWLINE][NEWLINE]Можно построить только рядом со священным местом, в котором есть храм.</Text>
 		</Replace>
-		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="ru_RU">
-			<Text>+1 [ICON_GLORY_GOLDEN_AGE] очко к счету эпохи за каждый исторический момент, дающий не менее 2 [ICON_GLORY_GOLDEN_AGE] очков, после постройки этого чуда света. +10% к [ICON_GOLD] золоту во всех городах, если ваша цивилизация находится в [ICON_GLORY_GOLDEN_AGE] золотом или [ICON_GLORY_SUPER_GOLDEN_AGE] героическом веке.[NEWLINE][NEWLINE]Можно построить только рядом с рекой.</Text>
-		</Replace>
 		<Replace Tag="LOC_BUILDING_CHICHEN_ITZA_DESCRIPTION" Language="ru_RU">
 			<Text>+1 [ICON_Production] производства и +1 [ICON_Culture] культуры на всех клетках тропических лесов во всех городах.[NEWLINE][NEWLINE]Можно построить только в тропическом лесу.</Text>
 		</Replace>

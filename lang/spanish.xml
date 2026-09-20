@@ -2231,9 +2231,6 @@
 		<Replace Tag="LOC_BUILDING_KOTOKU_IN_DESCRIPTION" Language="es_ES">
 			<Text>+20% [ICON_Faith] Fe en esta ciudad. Otorga 4 Monjes Guerreros. Permite la compra de Monjes Guerreros en esta ciudad independientemente de la Religión de la ciudad.[NEWLINE][NEWLINE]Debe construirse junto a un distrito de Lugar Sagrado con un Templo.</Text>
 		</Replace>
-		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="es_ES">
-			<Text>+1 [ICON_GLORY_GOLDEN_AGE] Puntuación de la era del Momento histórico obtenido después de completar esta maravilla si ese Momento suele valer 2 o más [ICON_GLORY_GOLDEN_AGE] Puntuación de la era. Todas tus ciudades ganan +10 % [ICON_GOLD] de Oro cuando estás en [ICON_GLORY_GOLDEN_AGE] edad Dorada o [ICON_GLORY_SUPER_GOLDEN_AGE] Heroica.[NEWLINE][NEWLINE]Debe construirse junto a un Río.</Text>
-		</Replace>
 		<Replace Tag="LOC_BUILDING_CHICHEN_ITZA_DESCRIPTION" Language="es_ES">
 			<Text>+1 [ICON_Culture] Cultura y +1 [ICON_Production] Producción en todas las casillas de Selva tropical de tu imperio.[NEWLINE][NEWLINE]Debe construirse en Selva tropical.</Text>
 		</Replace>

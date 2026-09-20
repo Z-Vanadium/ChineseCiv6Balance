@@ -380,15 +380,10 @@
 			<File>scripts/ccb_legacycards.lua</File>
 		</AddGameplayScripts>
 
-		<!-- CCB 泰姬陵特性：黄金/黑暗时代可额外选择一个时代着力点（ReplaceUIScript 替换着力点弹窗） -->
-		<ReplaceUIScript id="CCB_DedicationPopup">
-			<Criteria>XP1_OR_XP2</Criteria>
-			<Properties>
-				<LoadOrder>19999</LoadOrder>
-				<LuaContext>DedicationPopup</LuaContext>
-				<LuaReplace>ui/replacements/dedicationpopup_ccb.lua</LuaReplace>
-			</Properties>
-		</ReplaceUIScript>
+		<!-- 2026-09-19 撤销：泰姬陵「额外选择一个时代着力点」的 ReplaceUIScript（DedicationPopup 覆盖）已移除。
+		     原因：UI 多选可行、但引擎按时代硬算容量（黄金/黑暗=1、英雄=2），第 2 条 COMMEMORATE 被静默拒绝 → 实际只有 1 个生效（docs/Civ6开发排坑实录.md §十.5）。
+		     替代方案（完成奇观弹窗三选一 + PLAYER_HAS_GOLDEN_AGE 需求驱动开关）已在探针中全项验证，源码归档 tools/archive/HGProbe_v0.1/，待用户设计三选项数值后再并入。
+		     文件 ui/replacements/dedicationpopup_ccb.lua 已移入 tools/archive/CCB_DedicationPopup_removed_20260919/ -->
 
 		<AddUserInterfaces id="bbg_uitogameplay_dummy_xml">
 			<Properties>
@@ -1092,6 +1087,17 @@
 			</Properties>
 			<File>CCB_PlantedForestArt.dep</File>
 		</UpdateArt>
+		<!-- CCB 人工林规则别名层（2026-09-19 用户反馈：人工林吃不到森林加成）
+		     ① 把"地块是森林"的需求整体改成特征类别 tag 判定（森林与人工林共用 CCB_CLASS_TREES）
+		     ② 对把 FEATURE_FOREST 当参数的修正器做孪生（圣杖教堂 / 生物圈 / 越南 / 神圣之路 / 泰迪）
+		     ③ 表复制以终态为准再同步一次（补 BBG_Expanded 后插入的行 + 相邻加成挂载链）
+		     LoadOrder 100200：排在全部常规规则与 BBG_Expanded(100000) 之后 -->
+		<UpdateDatabase id="CCB_PlantedForestRules">
+			<Properties>
+				<LoadOrder>100200</LoadOrder>
+			</Properties>
+			<File>sql/Base/CCB_PlantedForestRules.sql</File>
+		</UpdateDatabase>
 
 
 		<UpdateDatabase id="BBG_XP2_SecretSocieties">
@@ -1608,7 +1614,6 @@
 		<File>sql/mod_associations/bbs/CCB_NaturalWonderBalance.sql</File>
 		<!-- -->
 		<File>ui/replacements/worldrankings_bbg.lua</File>
-		<File>ui/replacements/dedicationpopup_ccb.lua</File>
 		<File>ui/replacements/endgamemenu_bbg.lua</File>
 		<File>ui/replacements/endgamemenu.xml</File>
 		<!--<File>ui/replacements/productionpanel_bbg.lua</File>-->
@@ -1661,6 +1666,7 @@
 		<File>sql/Base/LegacyCards.sql</File>
 		<File>sql/Base/CCB_LateGameRanged.sql</File>
 		<File>sql/Base/CCB_PlantedForest.sql</File>
+		<File>sql/Base/CCB_PlantedForestRules.sql</File>
 		<File>scripts/ccb_legacycards.lua</File>
 		<File>scripts/ccb_planted_forest.lua</File>
 		<File>ArtDefs/Clutter.artdef</File>

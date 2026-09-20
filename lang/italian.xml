@@ -1864,9 +1864,6 @@
 		<Replace Tag="LOC_BUILDING_KOTOKU_IN_DESCRIPTION" Language="it_IT">
 			<Text>+20% [ICON_Faith] Fede in questa città. Fornisce 4 Monaci guerrieri. Permette l'acquisto di Monaci guerrieri in questa città indindipendentemente dalla religione della città.[NEWLINE][NEWLINE]Dev'essere costruito in una casella adiacente a un distretto Luogo Santo che comprende un Tempio.</Text>
 		</Replace>
-		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="it_IT">
-			<Text>+1 [ICON_GLORY_GOLDEN_AGE] Punteggio Epoca dai Momenti storici ottenuti dopo il completamento di questa Meraviglia, a patto che il Momento valga normalmente almeno 2 [ICON_GLORY_GOLDEN_AGE] Punteggio Epoca. +10% [ICON_GOLD] Oro in tutte le città quando ti trovi in un' [ICON_GLORY_GOLDEN_AGE] Età dell'oro o [ICON_GLORY_SUPER_GOLDEN_AGE] Eroica.[NEWLINE][NEWLINE]Dev'essere costruito accanto a un fiume.</Text>
-		</Replace>
 		<Replace Tag="LOC_BUILDING_CHICHEN_ITZA_DESCRIPTION" Language="it_IT">
 			<Text>+1 [ICON_Culture] Cultura da tutte le caselle di foresta pluviale nel tuo impero. +1 [ICON_Production] Produzione da tutte le caselle di foresta pluviale nel tuo impero. Dev'essere costruita su una foresta pluviale.</Text>
 		</Replace>

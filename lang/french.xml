@@ -3441,9 +3441,6 @@
 		<Replace Tag="LOC_BUILDING_KOTOKU_IN_DESCRIPTION" Language="fr_FR">
       		<Text>Merveille de l'ère médiévale.[NEWLINE][NEWLINE][ICON_FAITH] Foi +20% dans cette ville.[NEWLINE]Octroie 4 Moines-guerriers et permet d'en former dans cette ville peu importe la [ICON_RELIGION] religion qu'elle suit, que vous en ayez fondé une ou non.[NEWLINE][NEWLINE]Doit être construite sur une case adjacente à un Lieu saint doté d'un temple. Le joueur peut uniquement recevoir des moines-guerriers s'il a créé une [ICON_RELIGION] religion ou si une [ICON_RELIGION] religion est dominante pour ce joueur ou dans sa ville.</Text>
     	</Replace>
-		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="fr_FR">
-      		<Text>Merveille de la Renaissance.[NEWLINE][NEWLINE]Score d'ère +1 pour chaque moment historique obtenu une fois cette merveille construite, si ce moment rapporte habituellement au moins 2 points.[NEWLINE][ICON_GOLD] Or +10% dans toutes vos villes quand vous êtes en [ICON_GLORY_GOLDEN_AGE] âge d'or ou en [ICON_GLORY_SUPER_GOLDEN_AGE] âge héroïque.[NEWLINE][NEWLINE]Doit être construite sur une case adjacente à une rivière.</Text>
-    	</Replace>
 		<Replace Tag="LOC_BUILDING_ST_BASILS_CATHEDRAL_DESCRIPTION" Language="fr_FR">
 			<Text>Merveille de la Renaissance.[NEWLINE][NEWLINE]Octroie une [ICON_GREATWORK_RELIC] relique.[NEWLINE][ICON_TOURISM] Tourisme religieux issu de cette ville +100%.[NEWLINE][ICON_FOOD] Nourriture +1, [ICON_PRODUCTION] Production +1 et [ICON_CULTURE] Culture +1 sur toutes les cases de toundra de cette ville.[NEWLINE][NEWLINE]Doit être construite sur une case adjacente à un Centre-ville.</Text>
 		</Replace>

@@ -2108,9 +2108,6 @@
 		<Replace Tag="LOC_BUILDING_KOTOKU_IN_DESCRIPTION" Language="ja_JP">
 			<Text>この都市の [ICON_Faith] 信仰力+20%。武僧を4つ得る。この都市の宗教に関係なく、この都市で武僧を購入できるようになる。[NEWLINE][NEWLINE]神殿のある聖地に隣接するタイルにのみ建設可能。</Text>
 		</Replace>
-		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="ja_JP">
-			<Text>この遺産が完成した後、[ICON_GLORY_GOLDEN_AGE]時代スコア2以上の歴史的瞬間が発生するたびに[ICON_GLORY_GOLDEN_AGE]時代スコア+1。川に隣接している必要がある。[NEWLINE]自文明が[ICON_GLORY_GOLDEN_AGE]黄金時代か[ICON_GLORY_SUPER_GOLDEN_AGE]英雄時代にある時、全都市の[ICON_GOLD]ゴールド産出+10%。</Text>
-		</Replace>
 		<Replace Tag="LOC_BUILDING_CHICHEN_ITZA_DESCRIPTION" Language="ja_JP">
 			<Text>自文明のすべての熱帯雨林に[ICON_Production]生産力+1、[ICON_Culture]文化力+1。熱帯雨林にのみ建設可能。</Text>
 		</Replace>

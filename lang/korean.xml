@@ -2339,9 +2339,6 @@
 		<Replace Tag="LOC_BUILDING_KOTOKU_IN_DESCRIPTION" Language="ko_KR">
 			<Text>이 도시에 [ICON_Faith] 신앙 +20%를 제공합니다. 전투승 유닛 4개를 제공합니다. 도시의 종교 상황과 관계 없이 이 도시에서 [ICON_Faith] 신앙을 소비하여 전투승을 훈련할 수 있습니다.[NEWLINE][NEWLINE]사원이 있는 성지 특수지구 옆에 지어야 합니다.</Text>
 		</Replace>
-		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="ko_KR">
-			<Text>이 불가사의를 완료하면 역사적 순간으로 2점 이상의 [ICON_GLORY_GOLDEN_AGE] 시대 점수를 얻을 때, 1점을 추가로 얻습니다. [ICON_GLORY_GOLDEN_AGE] 황금기나 [ICON_GLORY_SUPER_GOLDEN_AGE] 영웅기에 들어가면 모든 도시의 [Icon_Gold] 금 산출량이 +10% 증가합니다. [NEWLINE][NEWLINE]강 옆에 건설해야 합니다.</Text>
-		</Replace>
 		<Replace Tag="LOC_BUILDING_CHICHEN_ITZA_DESCRIPTION" Language="ko_KR">
 			<Text>제국의 모든 열대우림 타일에 [ICON_Culture] 문화 +1, [ICON_Production] 생산력 +1을 제공합니다.[NEWLINE][NEWLINE]열대우림에 지어야 합니다.</Text>
 		</Replace>
@@ -3970,6 +3967,7 @@
 		</Replace>
 		<Replace Tag="LOC_GOV_PROMO_LIME_TEO_OWL_EMISSARY_OUTPOST_NAME" Language="ko_KR"> <!-- L1 -->
 			<Text>와카 전초기지</Text>
+		</Replace>
 		<Replace Tag="LOC_GOV_PROMO_LIME_TEO_OWL_EMISSARY_OUTPOST_DESC" Language="ko_KR"> <!-- L1 -->
 			<Text>해당 도시국가로 교역로[ICON_TRADEROUTE]를 보내면 사절이 두개로 계산됩니다. 15타일 반경내의 상업중심지에 대한 생산력이[ICON_PRODUCTION] 25%증가합니다.</Text>
 		</Replace>

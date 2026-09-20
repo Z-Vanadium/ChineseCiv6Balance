@@ -2658,9 +2658,6 @@
 		<Replace Tag="LOC_BUILDING_KOTOKU_IN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>此城+20% [ICON_Faith] 信仰值。赠送4名武僧。允许在此城购买武僧。[NEWLINE][NEWLINE]必须建在拥有寺庙的圣地区域旁。获得武僧的前提条件是玩家创立了宗教，或此玩家/城市拥有主流宗教。</Text>
 		</Replace>
-		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>此奇观建成后，提供2点或以上 [ICON_GLORY_GOLDEN_AGE] 时代得分的历史时刻所提供的 [ICON_GLORY_GOLDEN_AGE] 时代得分+1。处于 [ICON_GLORY_GOLDEN_AGE] 黄金或 [ICON_GLORY_DARK_AGE] 黑暗时代时，可额外选择一个时代着力点。[NEWLINE][NEWLINE]必须建在河流旁。</Text>
-		</Replace>
 		<Replace Tag="LOC_BUILDING_CHICHEN_ITZA_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>帝国中所有雨林单元格 +1 [ICON_Production] 生产力, +1 [ICON_Culture] 文化值。[NEWLINE][NEWLINE]必须建在雨林。</Text>
 		</Replace>

@@ -3468,9 +3468,6 @@
 		<Replace Tag="LOC_BUILDING_KOTOKU_IN_DESCRIPTION" Language="pt_BR">
       		<Text>Maravilha da Era Medieval.[NEWLINE][NEWLINE][ICON_FAITH] Fé +20% nesta cidade.[NEWLINE]Concede 4 Monges Guerreiros e permite formá-los nesta cidade, independentemente da [ICON_RELIGION] religião que ela segue, mesmo que você tenha fundado uma ou não.[NEWLINE][NEWLINE]Deve ser construída em um painel adjacente a um Santuário com um templo. O jogador só pode receber monges guerreiros se tiver criado uma [ICON_RELIGION] religião ou se uma [ICON_RELIGION] religião for dominante para esse jogador ou na sua cidade.</Text>
     	</Replace>
-		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="pt_BR">
-      		<Text>Maravilha da Era Renacentista.[NEWLINE][NEWLINE]Pontuação de Era +1 para cada momento histórico obtido uma vez que esta maravilha estiver construída, se esse momento normalmente conceder pelo menos 2 pontos.[NEWLINE][ICON_GOLD] Ouro +10% em todas as suas cidades quando você estiver em [ICON_GLORY_GOLDEN_AGE] Era de Ouro ou em [ICON_GLORY_SUPER_GOLDEN_AGE] Era Heroica.[NEWLINE][NEWLINE]Deve ser construída em um painel adjacente a um rio.</Text>
-    	</Replace>
 		<Replace Tag="LOC_BUILDING_ST_BASILS_CATHEDRAL_DESCRIPTION" Language="pt_BR">
 			<Text>Maravilha da Era Renacentista.[NEWLINE][NEWLINE]Concede uma [ICON_GREATWORK_RELIC] relíquia.[NEWLINE][ICON_TOURISM] Turismo religioso gerado por esta cidade +100%.[NEWLINE][ICON_FOOD] Comida +1, [ICON_PRODUCTION] Produção +1 e [ICON_CULTURE] Cultura +1 em todos os paineis de tundra desta cidade.[NEWLINE][NEWLINE]Deve ser construída em um painel adjacente a um Centro da Cidade.</Text>
 		</Replace>
