@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <AssetObjects..ArtDefSet>
 	<m_Version>
-		<major>1</major>
+		<major>4</major>
 		<minor>0</minor>
-		<build>0</build>
-		<revision>0</revision>
+		<build>415</build>
+		<revision>178</revision>
 	</m_Version>
 	<m_TemplateName text="Clutter"/>
 	<m_RootCollections>
@@ -84,15 +84,15 @@
 										<m_ParamName text="Asset"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>0.450000</m_fValue>
+										<m_fValue>0.500000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
-										<m_nValue>5</m_nValue>
+										<m_nValue>7</m_nValue>
 										<m_ParamName text="Count"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>0.030000</m_fValue>
+										<m_fValue>0.050000</m_fValue>
 										<m_ParamName text="ScaleVariation"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
@@ -120,7 +120,7 @@
 										<m_ParamName text="IsCenterModel"/>
 									</Element>
 									<Element class="AssetObjects..BoolValue">
-										<m_bValue>true</m_bValue>
+										<m_bValue>false</m_bValue>
 										<m_ParamName text="AllowOverlap"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -145,15 +145,15 @@
 										<m_ParamName text="Asset"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>0.450000</m_fValue>
+										<m_fValue>0.500000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
-										<m_nValue>5</m_nValue>
+										<m_nValue>7</m_nValue>
 										<m_ParamName text="Count"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>0.030000</m_fValue>
+										<m_fValue>0.050000</m_fValue>
 										<m_ParamName text="ScaleVariation"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
@@ -181,7 +181,7 @@
 										<m_ParamName text="IsCenterModel"/>
 									</Element>
 									<Element class="AssetObjects..BoolValue">
-										<m_bValue>true</m_bValue>
+										<m_bValue>false</m_bValue>
 										<m_ParamName text="AllowOverlap"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -206,15 +206,76 @@
 										<m_ParamName text="Asset"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>0.450000</m_fValue>
+										<m_fValue>0.500000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
-										<m_nValue>5</m_nValue>
+										<m_nValue>8</m_nValue>
 										<m_ParamName text="Count"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>0.030000</m_fValue>
+										<m_fValue>0.050000</m_fValue>
+										<m_ParamName text="ScaleVariation"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="LowendReduction"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>true</m_bValue>
+										<m_ParamName text="ShowDecal"/>
+									</Element>
+									<Element class="AssetObjects..IntValue">
+										<m_nValue>3</m_nValue>
+										<m_ParamName text="Priority"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.000000</m_fValue>
+										<m_ParamName text="Width"/>
+									</Element>
+									<Element class="AssetObjects..StringValue">
+										<m_Value text="RotateZ"/>
+										<m_ParamName text="RotateMode"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="IsCenterModel"/>
+									</Element>
+									<Element class="AssetObjects..BoolValue">
+										<m_bValue>false</m_bValue>
+										<m_ParamName text="AllowOverlap"/>
+									</Element>
+									<Element class="AssetObjects..IntValue">
+										<m_nValue>0</m_nValue>
+										<m_ParamName text="MinCount"/>
+									</Element>
+								</m_Values>
+							</m_Fields>
+							<m_ChildCollections/>
+							<m_Name text="Forest Pine_03"/>
+							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
+						</Element>
+						<Element>
+							<m_Fields>
+								<m_Values>
+									<Element class="AssetObjects..BLPEntryValue">
+										<m_EntryName text="Tree_Pine_01"/>
+										<m_XLPClass text="Landmark"/>
+										<m_XLPPath text="clutter.xlp"/>
+										<m_BLPPackage text="environment/clutter"/>
+										<m_LibraryName text="Landmark"/>
+										<m_ParamName text="Asset"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.500000</m_fValue>
+										<m_ParamName text="Scale"/>
+									</Element>
+									<Element class="AssetObjects..IntValue">
+										<m_nValue>4</m_nValue>
+										<m_ParamName text="Count"/>
+									</Element>
+									<Element class="AssetObjects..FloatValue">
+										<m_fValue>0.100000</m_fValue>
 										<m_ParamName text="ScaleVariation"/>
 									</Element>
 									<Element class="AssetObjects..FloatValue">
@@ -252,7 +313,7 @@
 								</m_Values>
 							</m_Fields>
 							<m_ChildCollections/>
-							<m_Name text="Forest Pine_03"/>
+							<m_Name text="Forest Pine_001_decal"/>
 							<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
 						</Element>
 					</Element>
@@ -264,10 +325,6 @@
 						<m_CollectionName text="Layers"/>
 						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
 					</Element>
-					<Element>
-						<m_CollectionName text="Blends"/>
-						<m_ReplaceMergedCollectionElements>false</m_ReplaceMergedCollectionElements>
-					</Element>
 				</m_ChildCollections>
 				<m_Name text="CLUTTER_CCB_PLANTED_FOREST"/>
 				<m_AppendMergedParameterCollections>false</m_AppendMergedParameterCollections>
@@ -275,4 +332,3 @@
 		</Element>
 	</m_RootCollections>
 </AssetObjects..ArtDefSet>
-
