@@ -1671,6 +1671,7 @@
 		<File>scripts/ccb_planted_forest.lua</File>
 		<File>ArtDefs/Clutter.artdef</File>
 		<File>ArtDefs/Features.artdef</File>
+		<File>ArtDefs/StrategicView.artdef</File>
 		<File>CCB_PlantedForestArt.dep</File>
 	</Files>
 </Mod>

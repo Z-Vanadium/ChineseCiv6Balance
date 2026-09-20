@@ -67,7 +67,9 @@
 		</Element>
 		<Element>
 			<ConsumerName text="StrategicView_Sprite"/>
-			<ArtDefDependencyPaths/>
+			<ArtDefDependencyPaths>
+				<Element text="StrategicView.artdef"/>
+			</ArtDefDependencyPaths>
 			<LibraryDependencies>
 				<Element text="StrategicView_Sprite"/>
 				<Element text="StrategicView_DirectedAsset"/>
@@ -463,7 +465,9 @@
 		</Element>
 		<Element>
 			<LibraryName text="StrategicView_Sprite"/>
-			<PackageDependencies/>
+			<PackageDependencies>
+				<Element text="strategicview/ccb_plantedforest.blp"/>
+			</PackageDependencies>
 		</Element>
 		<Element>
 			<LibraryName text="StrategicView_TerrainBlend"/>
