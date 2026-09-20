@@ -12,6 +12,10 @@ include( "MapEnums" );
 local START_INDEX	:number = GameInfo.Yields["YIELD_FOOD"].Index;
 local END_INDEX		:number = GameInfo.Yields["YIELD_FAITH"].Index;
 
+-- CCB：人工林（FEATURE_CCB_PLANTED_FOREST）与树林共用同一套相邻加成展示
+-- （该特征由 CCB_PlantedForest.sql 新建，未装 CCB 时取不到，因此取值可能为 nil）
+local CCB_PLANTED_FOREST_INDEX = GameInfo.Features["FEATURE_CCB_PLANTED_FOREST"] and GameInfo.Features["FEATURE_CCB_PLANTED_FOREST"].Index or nil;
+
 
 local m_DistrictsWithAdjacencyBonuses	:table = {};
 for row in GameInfo.District_Adjacencies() do
@@ -41,6 +45,8 @@ function GetAdjacentIconArtdefName( targetDistrictType:string, plot:table, pkCit
 			return "Terrain_Jungle";
 		elseif iSubType == g_FEATURE_FOREST then
 			return "Terrain_Forest";
+		elseif CCB_PLANTED_FOREST_INDEX ~= nil and iSubType == CCB_PLANTED_FOREST_INDEX then
+			return "Terrain_Forest";	-- CCB 人工林：展示同"树林"
 		elseif iSubType == g_FEATURE_GEOTHERMAL_FISSURE then
 			return "Terrain_Generic_Resource";
 		elseif iSubType == g_FEATURE_REEF then
