@@ -47,32 +47,37 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 	('CCB_TAJ_REQSET_CITY_HAS_WORKSHOP', 'CCB_TAJ_REQ_CITY_HAS_WORKSHOP');
 
 --==============================================================================================
--- 3. 铭文之壁（Calligraphy）：拥有剧院广场的城市 +2 大作家点、+2 大艺术家点
---    （"人造奇观旅游业绩 +6"待定：见文件末尾）
+-- 3. 铭文之壁（Calligraphy）：拥有剧院广场的城市 +4 大作家点、+2 大艺术家点
+--    （2026-09-20 用户调整：大作家点 2 → 4）
 --==============================================================================================
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
 	('CCB_TAJ_CALLI_WRITER', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'BBG_CITY_HAS_DISTRICT_THEATER'),
 	('CCB_TAJ_CALLI_ARTIST', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'BBG_CITY_HAS_DISTRICT_THEATER');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CALLI_WRITER', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER'),
-	('CCB_TAJ_CALLI_WRITER', 'Amount', 2),
+	('CCB_TAJ_CALLI_WRITER', 'Amount', 4),
 	('CCB_TAJ_CALLI_ARTIST', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST'),
 	('CCB_TAJ_CALLI_ARTIST', 'Amount', 2);
 
 --==============================================================================================
--- 3b. 铭文之壁（追加）：书本类巨作（Great Works of Writing）旅游业绩 +100%
---     2026-09-19 用户定稿：原设计"人造奇观旅游 +6"替换为本条 —— 原因：① 引擎把奇观旅游表达为百分比，
---     无"每座奇观 +N 点"的平坦写法；② 该维度与着力点「愿你在此」（总督城 +150% 奇观旅游）重叠。
---     本条写法完全取自原版同款先例（玩家级、按巨作类别过滤）：
+-- 3b. 铭文之壁（追加）：巨作旅游业绩 +100%，按巨作类别过滤（两类各一条）
+--     ① 著作类（Great Works of Writing，GREATWORKOBJECT_WRITING）
+--     ② 宗教艺术类（GREATWORKOBJECT_RELIGIOUS —— 大艺术家创作的宗教主题艺术品）
+--     用户定稿：2026-09-19 首次（原设计"人造奇观旅游 +6"替换为本条）；2026-09-20 追加宗教艺术类
+--     写法完全取自原版同款先例（玩家级、按巨作类别过滤）：
 --       · OPERA_BALLET_BOOST_WRITING_TOURISM（歌剧与芭蕾市政）/ PRINTING_BOOST_WRITING_TOURISM（印刷术科技）
 --         = MODIFIER_PLAYER_CITIES_ADJUST_TOURISM + GreatWorkObjectType=GREATWORKOBJECT_WRITING + ScalingFactor=200
+--       · HERITAGE_RELIGIOUSTOURISM（世界议会「遗产组织」宗教类）→ 同写法、GreatWorkObjectType=GREATWORKOBJECT_RELIGIOUS
 --       · ScalingFactor 语义：200 = ×2（= +100%）、300 = ×3（圣物箱「遗物产出3倍」实证）
---       · 同族先例：HERITAGE_*TOURISM（世界议会遗产组织）、CURATOR_DOUBLE_WRITING_TOURISM
 --     维度核验：巨作旅游**未被任何着力点占用**（「愿你在此」加的是奇观旅游与魅力）✅ 符合 C 方案
 --==============================================================================================
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) VALUES
-	('CCB_TAJ_CALLI_WRITING_TOURISM', 'MODIFIER_PLAYER_CITIES_ADJUST_TOURISM', 'PLAYER_HAS_GOLDEN_AGE');
+	('CCB_TAJ_CALLI_WRITING_TOURISM',   'MODIFIER_PLAYER_CITIES_ADJUST_TOURISM', 'PLAYER_HAS_GOLDEN_AGE'),
+	('CCB_TAJ_CALLI_RELIGIOUS_TOURISM', 'MODIFIER_PLAYER_CITIES_ADJUST_TOURISM', 'PLAYER_HAS_GOLDEN_AGE');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CALLI_WRITING_TOURISM', 'GreatWorkObjectType', 'GREATWORKOBJECT_WRITING'),
-	('CCB_TAJ_CALLI_WRITING_TOURISM', 'ScalingFactor', 200);
+	('CCB_TAJ_CALLI_WRITING_TOURISM', 'ScalingFactor', 200),
+	('CCB_TAJ_CALLI_RELIGIOUS_TOURISM', 'GreatWorkObjectType', 'GREATWORKOBJECT_RELIGIOUS'),
+	('CCB_TAJ_CALLI_RELIGIOUS_TOURISM', 'ScalingFactor', 200);
+
 

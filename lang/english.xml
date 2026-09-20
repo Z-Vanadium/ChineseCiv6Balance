@@ -4475,7 +4475,7 @@
 			<Text>[COLOR:255,215,0,255]Parchin Kari[ENDCOLOR]: Builders gain +1 charge; +1 [ICON_GreatEngineer] Great Engineer point per Industrial Zone and +2 per Workshop</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_CALLIGRAPHY" Language="en_US">
-			<Text>[COLOR:255,215,0,255]Calligraphy[ENDCOLOR]: +2 [ICON_GreatWriter] Great Writer and +2 [ICON_GreatArtist] Great Artist points in cities with a Theater Square; +100% [ICON_TOURISM] Tourism from Great Works of Writing</Text>
+			<Text>[COLOR:255,215,0,255]Calligraphy[ENDCOLOR]: +4 [ICON_GreatWriter] Great Writer and +2 [ICON_GreatArtist] Great Artist points in cities with a Theater Square; +100% [ICON_TOURISM] Tourism from Great Works of Writing and from Religious Great Works of Art</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="en_US">
 			<Text>Decide Later</Text>
