@@ -5,7 +5,7 @@
 <Context Style="FontNormal14">
 	<Container Style="FullScreenVignetteConsumer" />
 
-	<Container ID="CCBTajRoot" Anchor="C,C" Size="860,500" ConsumeAllMouse="1">
+	<Container ID="CCBTajRoot" Anchor="C,C" Size="1520,520" ConsumeAllMouse="1">
 		<!-- 羊皮纸底 -->
 		<Image ID="CCBTajParchment" Anchor="C,C" Size="parent-24,parent-24" Texture="Ages_ParchmentNormal" StretchMode="Tile"/>
 
@@ -17,17 +17,17 @@
 			       ColorSet="White_Black" SmallCaps="24" SmallCapsLeading="0" SmallCapsType="EveryWord"
 			       String="LOC_CCB_TAJ_TITLE"/>
 
-			<Grid Anchor="C,T" Size="parent-60,62" Offset="0,70" Texture="Controls_SubContainer2"
+			<Grid Anchor="C,T" Size="parent-60,84" Offset="0,70" Texture="Controls_SubContainer2"
 			      SliceCorner="18,18" SliceSize="1,1" Color="79,62,42,255">
 				<Label ID="CCBTajHint" Anchor="C,C" Offset="0,1" Style="FontNormal14" ColorSet="White_Black"
-				       WrapWidth="720" Align="Center" String="LOC_CCB_TAJ_HINT"/>
+				       WrapWidth="1340" Align="Center" String="LOC_CCB_TAJ_HINT"/>
 			</Grid>
 
-			<!-- 三个选项 -->
-			<Stack ID="CCBTajButtons" Anchor="C,C" Offset="0,30" StackGrowth="Down" StackPadding="12">
-				<GridButton ID="CCBTajBtnCharbagh" Style="MainButton" Size="700,46" String="LOC_CCB_TAJ_BTN_CHARBAGH"/>
-				<GridButton ID="CCBTajBtnInlay"    Style="MainButton" Size="700,46" String="LOC_CCB_TAJ_BTN_INLAY"/>
-				<GridButton ID="CCBTajBtnCalli"    Style="MainButton" Size="700,46" String="LOC_CCB_TAJ_BTN_CALLIGRAPHY"/>
+			<!-- 三个选项（按钮宽度已加倍，容纳长文本） -->
+			<Stack ID="CCBTajButtons" Anchor="C,C" Offset="0,34" StackGrowth="Down" StackPadding="12">
+				<GridButton ID="CCBTajBtnCharbagh" Style="MainButton" Size="1400,46" String="LOC_CCB_TAJ_BTN_CHARBAGH"/>
+				<GridButton ID="CCBTajBtnInlay"    Style="MainButton" Size="1400,46" String="LOC_CCB_TAJ_BTN_INLAY"/>
+				<GridButton ID="CCBTajBtnCalli"    Style="MainButton" Size="1400,46" String="LOC_CCB_TAJ_BTN_CALLIGRAPHY"/>
 			</Stack>
 
 			<!-- 稍后决定（未选择时下回合会再次弹出） -->

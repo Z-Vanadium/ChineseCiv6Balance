@@ -4463,19 +4463,19 @@
 		</Replace>
 		<!-- === CCB Taj Mahal "Shah Jahan's Golden Age" three-way choice (2026-09-19) === -->
 		<Replace Tag="LOC_CCB_TAJ_TITLE" Language="en_US">
-			<Text>Shah Jahan's Golden Age</Text>
+			<Text>The Taj Mahal is complete: choose a boon that rises and falls with your Golden Age</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_HINT" Language="en_US">
-			<Text>The Taj Mahal is complete. Choose one imperial boon that rises and falls with your [ICON_GLORY_GOLDEN_AGE] Golden Age: it is active only during a Golden or Heroic Age, and switches off (and back on) automatically with the age.[NEWLINE](Your choice is recorded permanently; you may also decide later.)</Text>
+			<Text>Active only during a [ICON_GLORY_GOLDEN_AGE] Golden or Heroic Age; it switches off outside a Golden Age and returns when you enter one again. (Your choice is recorded permanently; you may also decide later.)</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_CHARBAGH" Language="en_US">
-			<Text>Charbagh: +1 [ICON_AMENITIES] Amenity in all cities (Golden Age only)</Text>
+			<Text>[COLOR:255,215,0,255]Charbagh[ENDCOLOR]: +1 [ICON_AMENITIES] Amenity in all cities</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_INLAY" Language="en_US">
-			<Text>Parchin Kari: Builders gain +1 charge; +1 [ICON_GreatEngineer] Great Engineer point per Industrial Zone and +2 per Workshop (Golden Age only)</Text>
+			<Text>[COLOR:255,215,0,255]Parchin Kari[ENDCOLOR]: Builders gain +1 charge; +1 [ICON_GreatEngineer] Great Engineer point per Industrial Zone and +2 per Workshop</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_CALLIGRAPHY" Language="en_US">
-			<Text>Calligraphy: +2 [ICON_GreatWriter] Great Writer and +2 [ICON_GreatArtist] Great Artist points in cities with a Theater Square; +100% [ICON_TOURISM] Tourism from Great Works of Writing (Golden Age only)</Text>
+			<Text>[COLOR:255,215,0,255]Calligraphy[ENDCOLOR]: +2 [ICON_GreatWriter] Great Writer and +2 [ICON_GreatArtist] Great Artist points in cities with a Theater Square; +100% [ICON_TOURISM] Tourism from Great Works of Writing</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="en_US">
 			<Text>Decide Later</Text>

@@ -8980,19 +8980,19 @@
 		</Replace>
 		<!-- === CCB 泰姬陵「沙贾汗的黄金时代」三选一（2026-09-19）=== -->
 		<Replace Tag="LOC_CCB_TAJ_TITLE" Language="zh_Hans_CN">
-			<Text>沙贾汗的黄金时代</Text>
+			<Text>泰姬陵落成，选择一项随黄金时代兴衰的帝国恩泽</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_HINT" Language="zh_Hans_CN">
-			<Text>泰姬陵落成。选择一项随黄金时代兴衰的帝国恩泽：仅在 [ICON_GLORY_GOLDEN_AGE] 黄金时代（含英雄时代）生效，非黄金时代自动失效、再入黄金时代自动恢复。[NEWLINE]（选择将永久记录；也可以先「稍后决定」）</Text>
+			<Text>仅在 [ICON_GLORY_GOLDEN_AGE] 黄金时代（含英雄时代）生效，非黄金时代自动失效，再次进入黄金时代时恢复。（选择后将永久记录，也可以稍后决定）</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_CHARBAGH" Language="zh_Hans_CN">
-			<Text>四分园：所有城市 +1 [ICON_AMENITIES] 宜居度（仅黄金时代）</Text>
+			<Text>[COLOR:255,215,0,255]四分园[ENDCOLOR]：所有城市 +1 [ICON_AMENITIES] 宜居度</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_INLAY" Language="zh_Hans_CN">
-			<Text>镶嵌工艺：建造者 +1 充能；每座工业区 +1 [ICON_GreatEngineer] 大工程师点数，每座工作坊 +2 [ICON_GreatEngineer] 大工程师点数（仅黄金时代）</Text>
+			<Text>[COLOR:255,215,0,255]镶嵌工艺[ENDCOLOR]：建造者 +1 充能；每座工业区 +1 [ICON_GreatEngineer] 大工程师点数，每座工作坊 +2 [ICON_GreatEngineer] 大工程师点数</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_CALLIGRAPHY" Language="zh_Hans_CN">
-			<Text>铭文之壁：拥有剧院广场的城市 +2 [ICON_GreatWriter] 大作家、+2 [ICON_GreatArtist] 大艺术家点数；[ICON_GreatWork_Writing] 书本类巨作 [ICON_TOURISM] 旅游业绩 +100%（仅黄金时代）</Text>
+			<Text>[COLOR:255,215,0,255]铭文之壁[ENDCOLOR]：拥有剧院广场的城市 +2 [ICON_GreatWriter] 大作家、+2 [ICON_GreatArtist] 大艺术家点数；[ICON_GreatWork_Writing] 书本类巨作 [ICON_TOURISM] 旅游业绩 +100%</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="zh_Hans_CN">
 			<Text>稍后决定</Text>
