@@ -21,9 +21,9 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CHARBAGH_AMENITY', 'Amount', 1);
 
 --==============================================================================================
--- 2. 镶嵌工艺（Parchin Kari）：建造者 +1 充能；每座工业区 +2 大工程师点；每座工作坊 +1 大工程师点
+-- 2. 镶嵌工艺（Parchin Kari）：建造者 +1 充能；每座工业区 +1 大工程师点；每座工作坊 +1 大工程师点
 --    原版先例：城邦斯德哥尔摩宗主 = MODIFIER_PLAYER_DISTRICTS_ADJUST_GREAT_PERSON_POINTS + DISTRICT_IS_INDUSTRIAL_ZONE → +1 大工程师点
---    （2026-09-20 用户调整：工业区 1→2、工作坊 2→1 —— 两者对调）
+--    调整沿革：2026-09-20 一轮（工业区 1→2、工作坊 2→1）；2026-09-20 二轮（工业区回退为 1，两者均为 +1）
 --==============================================================================================
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
 	-- 建造者 +1 充能：Subject 用原版 UNIT_IS_BUILDER 限定（金字塔同款写法）
@@ -33,7 +33,7 @@ INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectR
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_INLAY_BUILDER', 'Amount', 1),
 	('CCB_TAJ_INLAY_IZ_GEP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ENGINEER'),
-	('CCB_TAJ_INLAY_IZ_GEP', 'Amount', 2),
+	('CCB_TAJ_INLAY_IZ_GEP', 'Amount', 1),
 	('CCB_TAJ_INLAY_WORKSHOP_GEP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ENGINEER'),
 	('CCB_TAJ_INLAY_WORKSHOP_GEP', 'Amount', 1);
 
@@ -48,17 +48,28 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 	('CCB_TAJ_REQSET_CITY_HAS_WORKSHOP', 'CCB_TAJ_REQ_CITY_HAS_WORKSHOP');
 
 --==============================================================================================
--- 3. 铭文之壁（Calligraphy）：拥有剧院广场的城市 +2 大作家点、+2 大艺术家点
---    （2026-09-20 用户调整：大作家点曾试 2→4，因每回合 +4 偏多，回退为 2）
+-- 3. 铭文之壁（Calligraphy）：每座剧院广场 +1 大作家点；每座古罗马剧场（BUILDING_AMPHITHEATER）+1 大艺术家点
+--    调整沿革：2026-09-20 一轮（大作家点 2→4，随即回退）；二轮（大作家点定为 +1/剧院广场；
+--              大艺术家点由"每座剧院广场 +2"改为"每座古罗马剧场 +1" —— 用户口径"每座古罗马"= 剧院广场 T1 建筑）
 --==============================================================================================
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
 	('CCB_TAJ_CALLI_WRITER', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'BBG_CITY_HAS_DISTRICT_THEATER'),
-	('CCB_TAJ_CALLI_ARTIST', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'BBG_CITY_HAS_DISTRICT_THEATER');
+	('CCB_TAJ_CALLI_ARTIST', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CALLI_WRITER', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER'),
-	('CCB_TAJ_CALLI_WRITER', 'Amount', 2),
+	('CCB_TAJ_CALLI_WRITER', 'Amount', 1),
 	('CCB_TAJ_CALLI_ARTIST', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST'),
-	('CCB_TAJ_CALLI_ARTIST', 'Amount', 2);
+	('CCB_TAJ_CALLI_ARTIST', 'Amount', 1);
+
+-- 「城市拥有古罗马剧场」需求（做法同上面的"城市拥有工作坊"）
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES
+	('CCB_TAJ_REQ_CITY_HAS_AMPHITHEATER', 'REQUIREMENT_CITY_HAS_BUILDING');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
+	('CCB_TAJ_REQ_CITY_HAS_AMPHITHEATER', 'BuildingType', 'BUILDING_AMPHITHEATER');
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+	('CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+	('CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER', 'CCB_TAJ_REQ_CITY_HAS_AMPHITHEATER');
 
 --==============================================================================================
 -- 3b. 铭文之壁（追加）：巨作旅游业绩 +100%，按巨作类别过滤（两类各一条）
