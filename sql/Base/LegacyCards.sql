@@ -398,16 +398,24 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_UPG_FAITH_PCT', 'YieldType', 'YIELD_FAITH'),
 ('CCB_UPG_FAITH_PCT', 'Amount', 12);
 
--- 2.6 共和/独裁+神权：每 2 个外国信徒 +1 文化、+1 信仰（依赖创立宗教且外国信徒 > 0）
---     ✅ 机制已实测：本类型在【政策卡】上可用（历史探针 Amount=25 生效）
---       · ADD_PLAYER_BELIEF_YIELD 必带 PerXItems 参数，缺参 → 产出恒 0
---         （vanilla 韩国同款 TRAIT_SCIENCE_PER_FOREIGN_CITY_FOLLOWING_RELIGION 带 PerXItems=1）
---       · ⚠ 2026-09-19 修复：Amount 必须为【整数】—— 原写法 Amount=0.5 + PerXItems=1 实测不生效
---         （引擎按整数求值，0.5 取整为 0 → 收益恒为 0；移速等通用效果不受影响）
---         现改为 Amount=1 + PerXItems=2，与原设计"每信徒 0.5"等价
-INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
-('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD'),
-('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD');
+-- 2.6 共和/独裁+神权：每 2 个外国信徒 +1 文化、+1 信仰（不封顶 = 设计的 +0.5/信徒；需已创立宗教）
+--     ⚠ 2026-09-19 二次修复：改用【原版同构写法】
+--       · 原写法是 MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD —— 该类型在原版里【只】用在
+--         韩国"最后先知"的【永久领袖特性】上，且枚举只配 BELIEF_YIELD_PER_FOREIGN_CITY。
+--         用户实测（2026-09-19）：2 个外国信徒就给出 +15 文化/+15 信仰（≈16 倍偏差，引擎显然不是
+--         按"外国信徒总数"计数），且【卸下本卡并过 1 回合后数值不回落】
+--         → 判定引擎把它当"玩家级信仰产出"缓存：既不按我们以为的口径计数，也不随政策卡挂卸重算。
+--       · 现改为原版真正配 BELIEF_YIELD_PER_FOREIGN_FOLLOWER 的类型
+--         MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BELIEF_YIELD（与"教会天下""跨文化对话"同款），
+--         并补上原版同款门控 PLAYER_FOUNDED_RELIGION_REQUIREMENTS
+--         （= REQUIRES_PLAYER_FOUNDED_RELIGION，正对应卡面文案"需创立宗教"）。
+--       · 原版外面还要套 MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER，是因为"信条"天生属于宗教创始人；
+--         本卡是玩家政策卡，直接挂卡即为 player 作用域，不套外层可避免把效果泄漏给别国的宗教创始人。
+--       · 数值：Amount=1 + PerXItems=2 → floor(外国信徒 / 2)，不封顶（与设计 +0.5/信徒 一致）
+--         （Amount 必须为整数：原 Amount=0.5 被引擎取整为 0 → 收益恒 0）
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BELIEF_YIELD', 'PLAYER_FOUNDED_RELIGION_REQUIREMENTS'),
+('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BELIEF_YIELD', 'PLAYER_FOUNDED_RELIGION_REQUIREMENTS');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'BeliefYieldType', 'BELIEF_YIELD_PER_FOREIGN_FOLLOWER'),
 ('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'YieldType', 'YIELD_CULTURE'),
