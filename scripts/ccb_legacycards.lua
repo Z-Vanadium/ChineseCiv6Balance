@@ -524,7 +524,13 @@ local function UpdateForeignFollowerYield(player)
 			local iReligion = pReligion:GetReligionTypeCreated();
 			if iReligion ~= nil and iReligion >= 0 then
 				local okN, n = pcall(function() return player:GetStats():GetNumForeignFollowers(); end);
-				if okN and n ~= nil and n > 0 then followers = n; end
+				if okN and n ~= nil and n > 0 then
+					followers = n;
+				elseif not okN then
+					-- 读不到就让日志说话（下一次会据此加备用算法）
+					print('[CCB-Legacy] p' .. tostring(player:GetID())
+						.. ' GetNumForeignFollowers 失败: ' .. tostring(n));
+				end
 				target = math.floor(followers / 2);
 				if target > CCB_FF_MAX then target = CCB_FF_MAX; end
 			end
@@ -675,40 +681,60 @@ local function ProbeFF_ReligionName(iReligion)
 	return tostring(iReligion);
 end
 
--- 统计某玩家"创立宗教"的信徒分布
+-- 统计某玩家"创立宗教"的信徒分布（2026-09-20 加固：任何一步失败都只记录错误文本，绝不让整行探针失效）
 local function ProbeFF_CountFollowers(player, iReligion, out)
+	out.errs = out.errs or {};
 	local myID = player:GetID();
 	local function Scan(other, isMinor)
-		if other == nil or other.GetCities == nil then return; end
+		if other == nil then return; end
 		local okCities, cities = pcall(function() return other:GetCities(); end);
-		if not okCities or cities == nil then return; end
-		for _, city in cities do
-			local pRel = city:GetReligion();
-			if pRel ~= nil and pRel.GetReligionsInCity ~= nil then
-				local ok, list = pcall(function() return pRel:GetReligionsInCity(); end);
-				if ok and list ~= nil then
-					for _, entry in pairs(list) do
-						if entry.Religion == iReligion and entry.Followers ~= nil and entry.Followers > 0 then
-							if other:GetID() == myID then
-								out.own = out.own + entry.Followers;
-							elseif isMinor then
-								out.minor = out.minor + entry.Followers;
-								out.minorCities = out.minorCities + 1;
-							else
-								out.major = out.major + entry.Followers;
-								out.majorCities = out.majorCities + 1;
+		if not okCities then table.insert(out.errs, 'GetCities:' .. tostring(cities)); return; end
+		if cities == nil then return; end
+		local okLoop, errLoop = pcall(function()
+			for _, city in cities do
+				local okRel, pRel = pcall(function() return city:GetReligion(); end);
+				if not okRel then
+					table.insert(out.errs, 'GetReligion:' .. tostring(pRel));
+				elseif pRel ~= nil then
+					local okList, list = pcall(function() return pRel:GetReligionsInCity(); end);
+					if not okList then
+						table.insert(out.errs, 'GetReligionsInCity:' .. tostring(list));
+					elseif list ~= nil then
+						for _, entry in pairs(list) do
+							local rel, fol = entry.Religion, entry.Followers;
+							if rel == nil then rel = entry[1]; end
+							if fol == nil then fol = entry[2]; end
+							if rel == iReligion and fol ~= nil and fol > 0 then
+								if other:GetID() == myID then
+									out.own = out.own + fol;
+								elseif isMinor then
+									out.minor = out.minor + fol;
+									out.minorCities = out.minorCities + 1;
+								else
+									out.major = out.major + fol;
+									out.majorCities = out.majorCities + 1;
+								end
 							end
 						end
 					end
 				end
 			end
+		end);
+		if not okLoop then table.insert(out.errs, 'scan:' .. tostring(errLoop)); end
+	end
+	local okIds, ids = pcall(function() return PlayerManager.GetAliveMajorIDs(); end);
+	if okIds and ids ~= nil then
+		for _, pid in ipairs(ids) do
+			local ok, err = pcall(function() Scan(Players[pid], false); end);
+			if not ok then table.insert(out.errs, 'major:' .. tostring(err)); end
 		end
 	end
-	local ids = PlayerManager.GetAliveMajorIDs();
-	for _, pid in ipairs(ids) do Scan(Players[pid], false); end
-	local minors = PlayerManager.GetAliveMinors();	-- ⚠ 返回玩家对象
-	if minors ~= nil then
-		for _, minor in ipairs(minors) do Scan(minor, true); end
+	local okMinors, minors = pcall(function() return PlayerManager.GetAliveMinors(); end);
+	if okMinors and minors ~= nil then
+		for _, minor in ipairs(minors) do
+			local ok, err = pcall(function() Scan(minor, true); end);
+			if not ok then table.insert(out.errs, 'minor:' .. tostring(err)); end
+		end
 	end
 end
 
@@ -767,31 +793,29 @@ function OnForeignFollowerProbe(turn)
 					culture = okC and cultureYield or nil,
 					faith = okF and faithYield or nil };
 				if iReligion ~= nil and iReligion >= 0 then
-					local out = { own = 0, major = 0, minor = 0, majorCities = 0, minorCities = 0 };
+					local out = { own = 0, major = 0, minor = 0, majorCities = 0, minorCities = 0, errs = {} };
 					local ok = pcall(function() ProbeFF_CountFollowers(player, iReligion, out); end);
-					if ok then
-						local total = out.own + out.major + out.minor;
-						local fMajor = math.floor(out.major / 2);
-						local fAll = math.floor((out.major + out.minor) / 2);
-						local fTotal = math.floor(total / 2);
-						local fEngine = (nForeign >= 0) and math.floor(nForeign / 2) or -1;
-						print(string.format(
-							"[CCB-Probe-FF] T%d p%d 宗教=%s | 我方统计信徒: 本国=%d 外国主要=%d(%d城) 城邦=%d(%d城) 合计=%d | 引擎口径: 总信徒=%d 外国信徒=%d 信奉城市=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | Lua档位: FF净档=%d(应=%d) 使者正/负=%d/%d | 预测每2个+1: 引擎外国=%d",
-							turn, playerID, ProbeFF_ReligionName(iReligion),
-							out.own, out.major, out.majorCities, out.minor, out.minorCities, total,
-							nFollow, nForeign, (okN and nCitiesFaith) or -1,
-							(okC and cultureYield) or -1, dC, (okF and faithYield) or -1, dF,
-							ProbeFF_SlottedCCBCards(player),
-							PropNum(player, 'CCB_LEGACY_FF_NET'), fEngine,
-							PropNum(player, 'CCB_LEGACY_ENVOY_POS'), PropNum(player, 'CCB_LEGACY_ENVOY_NEG'),
-							fEngine));
-					else
-						print(string.format("[CCB-Probe-FF] T%d p%d 信徒统计失败（API 异常，看 Lua.log 上文）", turn, playerID));
+					if not ok then table.insert(out.errs, 'fatal'); end
+					local total = out.own + out.major + out.minor;
+					local fEngine = (nForeign >= 0) and math.floor(nForeign / 2) or -1;
+					local scanStr = string.format("我方统计: 本国=%d 外国主要=%d(%d城) 城邦=%d(%d城) 合计=%d",
+						out.own, out.major, out.majorCities, out.minor, out.minorCities, total);
+					if #out.errs > 0 then
+						scanStr = scanStr .. " [扫描错误: " .. table.concat(out.errs, '; ') .. "]";
 					end
+					print(string.format(
+						"[CCB-Probe-FF] T%d p%d 宗教=%s | 引擎口径: 总信徒=%d 外国信徒=%d 信奉城市=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | Lua: FF净档=%d 应=%d 使者正/负=%d/%d | %s",
+						turn, playerID, ProbeFF_ReligionName(iReligion),
+						nFollow, nForeign, (okN and nCitiesFaith) or -1,
+						(okC and cultureYield) or -1, dC, (okF and faithYield) or -1, dF,
+						ProbeFF_SlottedCCBCards(player),
+						PropNum(player, 'CCB_LEGACY_FF_NET'), fEngine,
+						PropNum(player, 'CCB_LEGACY_ENVOY_POS'), PropNum(player, 'CCB_LEGACY_ENVOY_NEG'),
+						scanStr));
 				else
-					print(string.format("[CCB-Probe-FF] T%d p%d 尚未创立宗教 | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s —— 本卡设计上需已创立宗教",
+					print(string.format("[CCB-Probe-FF] T%d p%d 尚未创立宗教 | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | 引擎口径: 总信徒=%d 外国信徒=%d —— 本卡设计上需已创立宗教",
 						turn, playerID, (okC and cultureYield) or -1, dC, (okF and faithYield) or -1, dF,
-						ProbeFF_SlottedCCBCards(player)));
+						ProbeFF_SlottedCCBCards(player), nFollow, nForeign));
 				end
 			end
 		end
