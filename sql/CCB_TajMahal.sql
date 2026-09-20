@@ -28,7 +28,7 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
 	-- 建造者 +1 充能：Subject 用原版 UNIT_IS_BUILDER 限定（金字塔同款写法）
 	('CCB_TAJ_INLAY_BUILDER',       'MODIFIER_PLAYER_UNITS_ADJUST_BUILDER_CHARGES',          'PLAYER_HAS_GOLDEN_AGE', 'UNIT_IS_BUILDER'),
-	('CCB_TAJ_INLAY_IZ_GEP',        'MODIFIER_PLAYER_DISTRICTS_ADJUST_GREAT_PERSON_POINTS',  'PLAYER_HAS_GOLDEN_AGE', 'DISTRICT_IS_INDUSTRIAL_ZONE'),
+	('CCB_TAJ_INLAY_IZ_GEP',        'MODIFIER_PLAYER_DISTRICTS_ADJUST_GREAT_PERSON_POINTS',  'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_DISTRICT_IS_IZ'),
 	('CCB_TAJ_INLAY_WORKSHOP_GEP',  'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_CITY_HAS_WORKSHOP');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_INLAY_BUILDER', 'Amount', 1),
@@ -46,6 +46,26 @@ INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
 	('CCB_TAJ_REQSET_CITY_HAS_WORKSHOP', 'REQUIREMENTSET_TEST_ALL');
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 	('CCB_TAJ_REQSET_CITY_HAS_WORKSHOP', 'CCB_TAJ_REQ_CITY_HAS_WORKSHOP');
+-- 注：BUILDING_WORKSHOP 无任何替代建筑（BuildingReplaces 实测为空）→ 无需列举替代物
+
+-- 「区域是工业区（含替代区域）」需求集 —— 2026-09-20 补
+--   引擎实测：原版「五年计划」POLICY_FIVE_YEAR_PLAN 就是用 DISTRICT_IS_INDUSTRIAL_ZONE 写的，
+--   而德国汉萨（DISTRICT_HANSA，DistrictReplaces→工业区）确实吃这个加成 → 引擎的区域类型判定会认替代关系。
+--   这里仍显式列举替代区域，做成 TEST_ANY：若引擎已归一化则等价（TEST_ANY 只取一次），未归一化则兜底。
+--   替代关系实测（DistrictReplaces 表）：DISTRICT_HANSA（德国）、DISTRICT_OPPIDUM（高卢）→ DISTRICT_INDUSTRIAL_ZONE
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES
+	('CCB_TAJ_REQ_DISTRICT_IS_HANSA',   'REQUIREMENT_DISTRICT_TYPE_MATCHES'),
+	('CCB_TAJ_REQ_DISTRICT_IS_OPPIDUM', 'REQUIREMENT_DISTRICT_TYPE_MATCHES');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
+	('CCB_TAJ_REQ_DISTRICT_IS_HANSA',   'DistrictType', 'DISTRICT_HANSA'),
+	('CCB_TAJ_REQ_DISTRICT_IS_OPPIDUM', 'DistrictType', 'DISTRICT_OPPIDUM');
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+	('CCB_TAJ_REQSET_DISTRICT_IS_IZ', 'REQUIREMENTSET_TEST_ANY');
+-- 直接复用原版需求行 REQUIRES_DISTRICT_IS_INDUSTRIAL_ZONE（Requirement 行可被多个集合共用，原版即如此）
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+	('CCB_TAJ_REQSET_DISTRICT_IS_IZ', 'REQUIRES_DISTRICT_IS_INDUSTRIAL_ZONE'),
+	('CCB_TAJ_REQSET_DISTRICT_IS_IZ', 'CCB_TAJ_REQ_DISTRICT_IS_HANSA'),
+	('CCB_TAJ_REQSET_DISTRICT_IS_IZ', 'CCB_TAJ_REQ_DISTRICT_IS_OPPIDUM');
 
 --==============================================================================================
 -- 3. 铭文之壁（Calligraphy）：每座剧院广场 +1 大作家点；每座古罗马剧场（BUILDING_AMPHITHEATER）+1 大艺术家点
@@ -53,7 +73,7 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 --              大艺术家点由"每座剧院广场 +2"改为"每座古罗马剧场 +1" —— 用户口径"每座古罗马"= 剧院广场 T1 建筑）
 --==============================================================================================
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
-	('CCB_TAJ_CALLI_WRITER', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'BBG_CITY_HAS_DISTRICT_THEATER'),
+	('CCB_TAJ_CALLI_WRITER', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_CITY_HAS_THEATER'),
 	('CCB_TAJ_CALLI_ARTIST', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CALLI_WRITER', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER'),
@@ -61,15 +81,43 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CALLI_ARTIST', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST'),
 	('CCB_TAJ_CALLI_ARTIST', 'Amount', 1);
 
--- 「城市拥有古罗马剧场」需求（做法同上面的"城市拥有工作坊"）
-INSERT INTO Requirements (RequirementId, RequirementType) VALUES
-	('CCB_TAJ_REQ_CITY_HAS_AMPHITHEATER', 'REQUIREMENT_CITY_HAS_BUILDING');
-INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
-	('CCB_TAJ_REQ_CITY_HAS_AMPHITHEATER', 'BuildingType', 'BUILDING_AMPHITHEATER');
+-- 「城市拥有剧院广场（含希腊卫城）」需求集 —— 2026-09-20 补
+--   替代关系实测：DISTRICT_ACROPOLIS（希腊）→ DISTRICT_THEATER
+--   TEST_ANY：城市同时有剧院广场与卫城时集合仍只判真一次；城市级修饰器每城只结算一次，不会重复加点
 INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
-	('CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER', 'REQUIREMENTSET_TEST_ALL');
+	('CCB_TAJ_REQSET_CITY_HAS_THEATER', 'REQUIREMENTSET_TEST_ANY');
+-- 复用 _utils.sql 自动生成的需求行 BBG_CITY_HAS_DISTRICT_ACROPOLIS_REQUIREMENT（由 Districts 表遍历生成）
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
-	('CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER', 'CCB_TAJ_REQ_CITY_HAS_AMPHITHEATER');
+	('CCB_TAJ_REQSET_CITY_HAS_THEATER', 'BBG_CITY_HAS_DISTRICT_THEATER_REQUIREMENT'),
+	('CCB_TAJ_REQSET_CITY_HAS_THEATER', 'BBG_CITY_HAS_DISTRICT_ACROPOLIS_REQUIREMENT');
+
+-- 「城市拥有古罗马剧场（含毛利会堂）」需求 —— 做法同上面的"城市拥有工作坊"
+--   替代关系实测：BUILDING_MARAE（毛利，XP2）→ BUILDING_AMPHITHEATER
+INSERT INTO Requirements (RequirementId, RequirementType) VALUES
+	('CCB_TAJ_REQ_CITY_HAS_AMPHITHEATER', 'REQUIREMENT_CITY_HAS_BUILDING'),
+	('CCB_TAJ_REQ_CITY_HAS_MARAE',        'REQUIREMENT_CITY_HAS_BUILDING');
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
+	('CCB_TAJ_REQ_CITY_HAS_AMPHITHEATER', 'BuildingType', 'BUILDING_AMPHITHEATER'),
+	('CCB_TAJ_REQ_CITY_HAS_MARAE',        'BuildingType', 'BUILDING_MARAE');
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+	('CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER', 'REQUIREMENTSET_TEST_ANY');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+	('CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER', 'CCB_TAJ_REQ_CITY_HAS_AMPHITHEATER'),
+	('CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER', 'CCB_TAJ_REQ_CITY_HAS_MARAE');
+
+--==============================================================================================
+-- 3c. 共享需求集修正（顺带）：BBG_CITY_HAS_DISTRICT_THEATER 补上希腊卫城
+--     背景：_utils.sql 按 Districts 表遍历生成 BBG_CITY_HAS_<DistrictType>（TEST_ALL，单条需求），
+--           因此"城市有剧院广场"判定只认 DISTRICT_THEATER，不认替代区域 DISTRICT_ACROPOLIS（希腊）。
+--     影响面：本集被 ① 凯瑟琳·寻欢作乐（大作家/大艺术家/大音乐家点数）② Sejong（书院+剧院）
+--           ③ Sundiata（苏古巴+剧院）复用 —— 修好后希腊卫城城市也能吃到这些效果。
+--     安全性：改为 TEST_ANY 后，引擎若已归一化替代关系则行为完全等价（只判真一次）；
+--           城市级修饰器每城只结算一次，绝不会重复加点。
+--==============================================================================================
+UPDATE RequirementSets SET RequirementSetType = 'REQUIREMENTSET_TEST_ANY'
+	WHERE RequirementSetId = 'BBG_CITY_HAS_DISTRICT_THEATER';
+INSERT OR IGNORE INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+	('BBG_CITY_HAS_DISTRICT_THEATER', 'BBG_CITY_HAS_DISTRICT_ACROPOLIS_REQUIREMENT');
 
 --==============================================================================================
 -- 3b. 铭文之壁（追加）：巨作旅游业绩 +100%，按巨作类别过滤（两类各一条）
