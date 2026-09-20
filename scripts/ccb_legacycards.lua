@@ -673,6 +673,16 @@ function OnForeignFollowerProbe(turn)
 				local okC, cultureYield = pcall(function() return player:GetCulture():GetCultureYield(); end);
 				local okF, faithYield = pcall(function() return pReligion:GetFaithYield(); end);
 				local okN, nCitiesFaith = pcall(function() return player:GetStats():GetNumCitiesFollowingReligion(); end);
+				-- 引擎自己的信徒口径（关键！BELIEF_YIELD_PER_FOREIGN_FOLLOWER 用的就是这个口径）
+				-- API 出处：MABC\RUIVO_STAT_MODULE_GP.lua:1973/1990（GetNumFollowers / GetNumForeignFollowers）
+				local nFollow, nForeign = -1, -1;
+				local okSt, pStats = pcall(function() return player:GetStats(); end);
+				if okSt and pStats ~= nil then
+					local okF1, v1 = pcall(function() return pStats:GetNumFollowers(); end);
+					local okF2, v2 = pcall(function() return pStats:GetNumForeignFollowers(); end);
+					if okF1 and v1 ~= nil then nFollow = v1; end
+					if okF2 and v2 ~= nil then nForeign = v2; end
+				end
 				-- 逐回合变化
 				local prev = PROBE_FF_PREV[playerID];
 				local dC, dF = 0, 0;
@@ -691,13 +701,14 @@ function OnForeignFollowerProbe(turn)
 						local fMajor = math.floor(out.major / 2);
 						local fAll = math.floor((out.major + out.minor) / 2);
 						local fTotal = math.floor(total / 2);
+						local fEngine = (nForeign >= 0) and math.floor(nForeign / 2) or -1;
 						print(string.format(
-							"[CCB-Probe-FF] T%d p%d 宗教=%s | 信徒: 本国=%d 外国主要=%d(%d城) 城邦=%d(%d城) 合计=%d | 引擎信奉城市数=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | 预测(每2个+1): 仅外国=%d 含城邦=%d 含本国=%d",
+							"[CCB-Probe-FF] T%d p%d 宗教=%s | 我方统计信徒: 本国=%d 外国主要=%d(%d城) 城邦=%d(%d城) 合计=%d | 引擎口径: 总信徒=%d 外国信徒=%d 信奉城市=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | 预测每2个+1: 引擎外国=%d 我方外国=%d 我方含城邦=%d 我方含本国=%d",
 							turn, playerID, ProbeFF_ReligionName(iReligion),
 							out.own, out.major, out.majorCities, out.minor, out.minorCities, total,
-							(okN and nCitiesFaith) or -1,
+							nFollow, nForeign, (okN and nCitiesFaith) or -1,
 							(okC and cultureYield) or -1, dC, (okF and faithYield) or -1, dF,
-							ProbeFF_SlottedCCBCards(player), fMajor, fAll, fTotal));
+							ProbeFF_SlottedCCBCards(player), fEngine, fMajor, fAll, fTotal));
 					else
 						print(string.format("[CCB-Probe-FF] T%d p%d 信徒统计失败（API 异常，看 Lua.log 上文）", turn, playerID));
 					end
