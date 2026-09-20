@@ -36,6 +36,8 @@ local function HidePopup()
 end
 
 local function OnChoice(choice)
+	-- 与玩家选择时代着力点相同的确认音效（原版 DedicationPopup.lua 同款：UI.PlaySound("Confirm_Dedication")）
+	UI.PlaySound("Confirm_Dedication");
 	local kParameters = {};
 	kParameters.OnStart = 'OnPlayerCommandSetObjectState';	-- Gameplay 侧由该事件接收
 	kParameters.ccbTajCommand = 'TAJ_CHOICE';
