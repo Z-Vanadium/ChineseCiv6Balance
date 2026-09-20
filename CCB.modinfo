@@ -385,6 +385,31 @@
 		     替代方案（完成奇观弹窗三选一 + PLAYER_HAS_GOLDEN_AGE 需求驱动开关）已在探针中全项验证，源码归档 tools/archive/HGProbe_v0.1/，待用户设计三选项数值后再并入。
 		     文件 ui/replacements/dedicationpopup_ccb.lua 已移入 tools/archive/CCB_DedicationPopup_removed_20260919/ -->
 
+		<!-- 泰姬陵「沙贾汗的黄金时代」三选一（2026-09-19 用户设计定稿；结构照已验证探针 tools/archive/HGProbe_v0.1/） -->
+		<UpdateDatabase id="CCB_TajMahal_DB">
+			<Properties>
+				<LoadOrder>16000</LoadOrder>
+			</Properties>
+			<Criteria>XP1_OR_XP2</Criteria>
+			<File>sql/CCB_TajMahal.sql</File>
+		</UpdateDatabase>
+		<AddGameplayScripts id="CCB_TajMahal_Scripts">
+			<Properties>
+				<LoadOrder>16017</LoadOrder>
+			</Properties>
+			<Criteria>XP1_OR_XP2</Criteria>
+			<File>scripts/ccb_tajmahal.lua</File>
+		</AddGameplayScripts>
+		<AddUserInterfaces id="CCB_TajMahal_UI">
+			<Properties>
+				<Context>InGame</Context>
+				<LoadOrder>16018</LoadOrder>
+			</Properties>
+			<Criteria>XP1_OR_XP2</Criteria>
+			<File>ui/ccb_tajmahal_popup.xml</File>
+			<File>ui/ccb_tajmahal_popup.lua</File>
+		</AddUserInterfaces>
+
 		<AddUserInterfaces id="bbg_uitogameplay_dummy_xml">
 			<Properties>
 				<Context>InGame</Context>
@@ -1612,6 +1637,11 @@
 		<!-- -->
 		<File>sql/mod_associations/bbs/_bbs_utils.sql</File>
 		<File>sql/mod_associations/bbs/CCB_NaturalWonderBalance.sql</File>
+		<!-- 泰姬陵「沙贾汗的黄金时代」三选一（2026-09-19） -->
+		<File>sql/CCB_TajMahal.sql</File>
+		<File>scripts/ccb_tajmahal.lua</File>
+		<File>ui/ccb_tajmahal_popup.xml</File>
+		<File>ui/ccb_tajmahal_popup.lua</File>
 		<!-- -->
 		<File>ui/replacements/worldrankings_bbg.lua</File>
 		<File>ui/replacements/endgamemenu_bbg.lua</File>

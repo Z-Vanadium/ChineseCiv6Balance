@@ -4460,5 +4460,25 @@
 		</Replace>
 <Replace Tag="LOC_POLICY_CCB_IMPERIAL_ENTENTE_DESCRIPTION" Language="en_US">
 			<Text>Cities outside of 8 tiles of your [ICON_Capital] Capital: +25% [ICON_GOLD] Gold, +10% [ICON_PRODUCTION] Production, +15% Growth, and +3 Loyalty per turn.[NEWLINE]Gain +0.5 Alliance Points per turn with your Allies.</Text>
-		</Replace></LocalizedText>
+		</Replace>
+		<!-- === CCB Taj Mahal "Shah Jahan's Golden Age" three-way choice (2026-09-19) === -->
+		<Replace Tag="LOC_CCB_TAJ_TITLE" Language="en_US">
+			<Text>Shah Jahan's Golden Age</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_TAJ_HINT" Language="en_US">
+			<Text>The Taj Mahal is complete. Choose one imperial boon that rises and falls with your [ICON_GLORY_GOLDEN_AGE] Golden Age: it is active only during a Golden or Heroic Age, and switches off (and back on) automatically with the age.[NEWLINE](Your choice is recorded permanently; you may also decide later.)</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_TAJ_BTN_CHARBAGH" Language="en_US">
+			<Text>Charbagh: +1 [ICON_AMENITIES] Amenity in all cities (Golden Age only)</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_TAJ_BTN_INLAY" Language="en_US">
+			<Text>Parchin Kari: Builders gain +1 charge; +1 [ICON_GreatEngineer] Great Engineer point per Industrial Zone and +2 per Workshop (Golden Age only)</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_TAJ_BTN_CALLIGRAPHY" Language="en_US">
+			<Text>Calligraphy: +2 [ICON_GreatWriter] Great Writer and +2 [ICON_GreatArtist] Great Artist points in cities with a Theater Square (Golden Age only)</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="en_US">
+			<Text>Decide Later</Text>
+		</Replace>
+	</LocalizedText>
 </GameData>

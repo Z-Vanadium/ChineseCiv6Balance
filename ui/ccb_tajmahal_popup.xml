@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CCB 泰姬陵「沙贾汗的黄金时代」三选一弹窗（原版风格：羊皮纸底 + 描金边框 + 蓝色主按钮）
+     文本一律走 LOC 键（Civ6 的 String 属性按本地化表查询，直接写中文会空白）
+     结构参照已验证探针 tools/archive/HGProbe_v0.1/ui/HGProbePopup.xml -->
+<Context Style="FontNormal14">
+	<Container Style="FullScreenVignetteConsumer" />
+
+	<Container ID="CCBTajRoot" Anchor="C,C" Size="860,500" ConsumeAllMouse="1">
+		<!-- 羊皮纸底 -->
+		<Image ID="CCBTajParchment" Anchor="C,C" Size="parent-24,parent-24" Texture="Ages_ParchmentNormal" StretchMode="Tile"/>
+
+		<!-- 描金外框 -->
+		<Grid ID="CCBTajFrame" Anchor="C,C" Size="parent-10,parent-10" Texture="Ages_FrameNormal"
+		      SliceTextureSize="134,134" SliceCorner="60,74" SliceSize="14,2">
+
+			<Label ID="CCBTajTitle" Anchor="C,T" Offset="0,26" Style="FontFlair18" FontStyle="glow"
+			       ColorSet="White_Black" SmallCaps="24" SmallCapsLeading="0" SmallCapsType="EveryWord"
+			       String="LOC_CCB_TAJ_TITLE"/>
+
+			<Grid Anchor="C,T" Size="parent-60,62" Offset="0,70" Texture="Controls_SubContainer2"
+			      SliceCorner="18,18" SliceSize="1,1" Color="79,62,42,255">
+				<Label ID="CCBTajHint" Anchor="C,C" Offset="0,1" Style="FontNormal14" ColorSet="White_Black"
+				       WrapWidth="720" Align="Center" String="LOC_CCB_TAJ_HINT"/>
+			</Grid>
+
+			<!-- 三个选项 -->
+			<Stack ID="CCBTajButtons" Anchor="C,C" Offset="0,30" StackGrowth="Down" StackPadding="12">
+				<GridButton ID="CCBTajBtnCharbagh" Style="MainButton" Size="700,46" String="LOC_CCB_TAJ_BTN_CHARBAGH"/>
+				<GridButton ID="CCBTajBtnInlay"    Style="MainButton" Size="700,46" String="LOC_CCB_TAJ_BTN_INLAY"/>
+				<GridButton ID="CCBTajBtnCalli"    Style="MainButton" Size="700,46" String="LOC_CCB_TAJ_BTN_CALLIGRAPHY"/>
+			</Stack>
+
+			<!-- 稍后决定（未选择时下回合会再次弹出） -->
+			<GridButton ID="CCBTajBtnLater" Style="MainButton" Size="220,41" Anchor="C,B" Offset="0,14"
+			            String="LOC_CCB_TAJ_BTN_LATER"/>
+		</Grid>
+	</Container>
+</Context>
