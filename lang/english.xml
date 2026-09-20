@@ -2417,6 +2417,10 @@
 		<Replace Tag="LOC_FEATURE_DEAD_SEA_DESCRIPTION" Language="en_US">
 			<Text>Two tile natural wonder. It appears as a Lake and provides +2 [ICON_FOOD] Food, +2 [ICON_FAITH] Faith, +2 [ICON_CULTURE] Culture and +1 [ICON_PRODUCTION] Production. Units heal completely if they heal for one turn adjacent to the Dead Sea.</Text>
 		</Replace>
+		<!-- Taj Mahal: vanilla description + the three-way choice (2026-09-20, user request) -->
+		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="en_US">
+			<Text>+1 Era Score from Historic Moment earned after this wonder is complete if that Moment is usually worth 2 or more Era Score. Once complete, you may choose an imperial boon that rises and falls with your Golden Age: Charbagh (+1 [ICON_AMENITIES] Amenity in all cities), Parchin Kari (Builders gain +1 charge; +2 [ICON_GreatEngineer] Great Engineer points per Industrial Zone in every city and +1 per Workshop), Calligraphy (+2 [ICON_GreatWriter] Great Writer and +2 [ICON_GreatArtist] Great Artist points per Theater Square, and +100% [ICON_TOURISM] Tourism from Great Works of Writing and from Religious Great Works of Art). Must be built next to a River.</Text>
+		</Replace>
 		<!-- CCB Maps/BBM natural wonders: descriptions after the 2026-09-19 value & mechanic changes -->
 		<Replace Tag="LOC_FEATURE_SINAI_DESCRIPTION" Language="en_US">
 			<Text>One tile impassable natural wonder. Appears as a Mountain and provides +3 [ICON_Faith] Faith to adjacent tiles. Religious units that move next to Mount Sinai receive the ability 'Ten Commandments' (+15 [ICON_RELIGION] Religious Strength).</Text>
@@ -4409,7 +4413,7 @@
 			<Text>+2 [ICON_PRODUCTION] Production and +5 [ICON_GOLD] Gold for all [ICON_TRADEROUTE] Trade Routes.[NEWLINE]Trade Routes cannot be plundered.</Text>
 		</Replace>
 <Replace Tag="LOC_TECH_CYBERNETICS_DESCRIPTION" Language="en_US">
-			<Text>All Modern, Atomic and Information Era military units gain +1 [ICON_MOVEMENT] Movement.[NEWLINE]Unlocks the Giant Death Robot upgrade: Improved Mobility[NEWLINE]+3 [ICON_MOVEMENT] Movement. Allows jumping over Mountain tiles.[NEWLINE]Giant Death Robots ignore Zone of Control.</Text>
+			<Text>All Modern, Atomic and Information Era military units gain +1 [ICON_MOVEMENT] Movement.[NEWLINE]Unlocks the Giant Death Robot upgrade: Improved Mobility[NEWLINE]+3 [ICON_MOVEMENT] Movement. Allows jumping over Mountain tiles.</Text>
 		</Replace>
 
 
