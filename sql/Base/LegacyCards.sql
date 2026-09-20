@@ -398,33 +398,51 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 ('CCB_UPG_FAITH_PCT', 'YieldType', 'YIELD_FAITH'),
 ('CCB_UPG_FAITH_PCT', 'Amount', 12);
 
--- 2.6 共和/独裁+神权：每 2 个外国信徒 +1 文化、+1 信仰（不封顶 = 设计的 +0.5/信徒；需已创立宗教）
---     ⚠ 2026-09-19 二次修复：改用【原版同构写法】
---       · 原写法是 MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD —— 该类型在原版里【只】用在
---         韩国"最后先知"的【永久领袖特性】上，且枚举只配 BELIEF_YIELD_PER_FOREIGN_CITY。
---         用户实测（2026-09-19）：2 个外国信徒就给出 +15 文化/+15 信仰（≈16 倍偏差，引擎显然不是
---         按"外国信徒总数"计数），且【卸下本卡并过 1 回合后数值不回落】
---         → 判定引擎把它当"玩家级信仰产出"缓存：既不按我们以为的口径计数，也不随政策卡挂卸重算。
---       · 现改为原版真正配 BELIEF_YIELD_PER_FOREIGN_FOLLOWER 的类型
---         MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BELIEF_YIELD（与"教会天下""跨文化对话"同款），
---         并补上原版同款门控 PLAYER_FOUNDED_RELIGION_REQUIREMENTS
---         （= REQUIRES_PLAYER_FOUNDED_RELIGION，正对应卡面文案"需创立宗教"）。
---       · 原版外面还要套 MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER，是因为"信条"天生属于宗教创始人；
---         本卡是玩家政策卡，直接挂卡即为 player 作用域，不套外层可避免把效果泄漏给别国的宗教创始人。
---       · 数值：Amount=1 + PerXItems=2 → floor(外国信徒 / 2)，不封顶（与设计 +0.5/信徒 一致）
---         （Amount 必须为整数：原 Amount=0.5 被引擎取整为 0 → 收益恒 0）
-INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
-('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BELIEF_YIELD', 'PLAYER_FOUNDED_RELIGION_REQUIREMENTS'),
-('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BELIEF_YIELD', 'PLAYER_FOUNDED_RELIGION_REQUIREMENTS');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'BeliefYieldType', 'BELIEF_YIELD_PER_FOREIGN_FOLLOWER'),
-('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'YieldType', 'YIELD_CULTURE'),
-('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'PerXItems', 2),
-('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'Amount', 1),
-('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'BeliefYieldType', 'BELIEF_YIELD_PER_FOREIGN_FOLLOWER'),
-('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'YieldType', 'YIELD_FAITH'),
-('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'PerXItems', 2),
-('CCB_UPG_FOREIGN_FOLLOWER_FAITH', 'Amount', 1);
+-- 2.6 共和/独裁+神权：每 2 个外国信徒 +1 文化、+1 信仰（帝国级、不封顶 = 设计的 +0.5/信徒）
+--
+--  ❌ 三次尝试用引擎原生修正器，全部不成立（2026-09-19 排坑结论，勿再走这条路）：
+--     ① `Amount=0.5` 小数被引擎按整数取整为 0 → 收益恒 0
+--     ② `MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD`（原版只用于韩国"最后先知"的永久特性，
+--        枚举只配 BELIEF_YIELD_PER_FOREIGN_CITY）→ 实测 2 个信徒给 +15，且卸卡后数值不回落
+--     ③ `MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BELIEF_YIELD` + `PLAYER_FOUNDED_RELIGION_REQUIREMENTS`
+--        （与"教会天下"同款）→ 增量变成 **每信徒 +7**（用户实测：2 信徒 +14、6 信徒 +42）
+--     ★ 根因：原版这些"信徒类"信条产出是**逐城结算**的 —— 凡信奉该宗教的城市各结算一次，
+--       所以实际等于「每座信奉城市 × ⌊外国信徒÷2⌋」，城市越多越离谱。
+--       → **引擎原生类型无法表达"帝国级、每 2 个外国信徒 +1"**，只能自己算。
+--
+--  ✅ 现方案：改用 Lua 自算 + 档位修正器（同"使者产出"那套已验证机制）
+--     · 逻辑在 `scripts/ccb_legacycards.lua` 的 UpdateForeignFollowerYield：
+--         目标档 T =（装了本线 FAITH 卡 且有已创立宗教）? ⌊引擎口径外国信徒 ÷ 2⌋ : 0
+--     · 产出用下述**二进制档位**（1/2/4/8/16/32/64/128/256）正负两套：
+--         升档 → 按二进制补挂 POS 档；降档 → 补挂等量 NEG 档对冲（引擎无 detach）
+--         → 任意目标最多只挂 9 个修正器，卸卡即归零、随信徒升降双向跟随、上限 511 信徒
+--     · 数值完全受控，不再受引擎口径与逐城复制影响
+DELETE FROM PolicyModifiers WHERE ModifierId IN
+    ('CCB_UPG_FOREIGN_FOLLOWER_CULTURE', 'CCB_UPG_FOREIGN_FOLLOWER_FAITH');
+
+INSERT INTO Modifiers (ModifierId, ModifierType)
+SELECT 'CCB_FF_' || S.Sign || '_' || Y.YCode || '_' || V.N, 'MODIFIER_PLAYER_ADJUST_YIELD_CHANGE'
+FROM (SELECT 'POS' AS Sign UNION ALL SELECT 'NEG') S
+CROSS JOIN (SELECT 'CUL' AS YCode, 'YIELD_CULTURE' AS YieldType
+            UNION ALL SELECT 'FAI', 'YIELD_FAITH') Y
+CROSS JOIN (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 4 UNION ALL SELECT 8 UNION ALL SELECT 16
+            UNION ALL SELECT 32 UNION ALL SELECT 64 UNION ALL SELECT 128 UNION ALL SELECT 256) V;
+
+INSERT INTO ModifierArguments (ModifierId, Name, Value)
+SELECT 'CCB_FF_' || S.Sign || '_' || Y.YCode || '_' || V.N, 'YieldType', Y.YieldType
+FROM (SELECT 'POS' AS Sign UNION ALL SELECT 'NEG') S
+CROSS JOIN (SELECT 'CUL' AS YCode, 'YIELD_CULTURE' AS YieldType
+            UNION ALL SELECT 'FAI', 'YIELD_FAITH') Y
+CROSS JOIN (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 4 UNION ALL SELECT 8 UNION ALL SELECT 16
+            UNION ALL SELECT 32 UNION ALL SELECT 64 UNION ALL SELECT 128 UNION ALL SELECT 256) V;
+
+INSERT INTO ModifierArguments (ModifierId, Name, Value)
+SELECT 'CCB_FF_' || S.Sign || '_' || Y.YCode || '_' || V.N, 'Amount',
+       CASE WHEN S.Sign = 'POS' THEN V.N ELSE -V.N END
+FROM (SELECT 'POS' AS Sign UNION ALL SELECT 'NEG') S
+CROSS JOIN (SELECT 'CUL' AS YCode UNION ALL SELECT 'FAI') Y
+CROSS JOIN (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 4 UNION ALL SELECT 8 UNION ALL SELECT 16
+            UNION ALL SELECT 32 UNION ALL SELECT 64 UNION ALL SELECT 128 UNION ALL SELECT 256) V;
 
 -- 2.6b 共和/独裁+神权：传教士、使徒 +1 移动力（2026-09 用户新增，数值定为 +1）
 --     单位类型需求（CLASS_APOSTLE 标签不存在 → 用 REQUIREMENT_UNIT_TYPE_MATCHES）
@@ -495,12 +513,10 @@ INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
 ('POLICY_CCB_GOV_REPUBLIC_DIPLO', 'CCB_REPUBLIC_BASE_HOUSING'),
 ('POLICY_CCB_GOV_REPUBLIC_DIPLO', 'CCB_REPUBLIC_BASE_AMENITY'),
 ('POLICY_CCB_GOV_REPUBLIC_DIPLO', 'CCB_UPG_INFLUENCE_PT'),
--- 共和+神权
+-- 共和+神权（外国信徒产出改由 Lua + CCB_FF_* 档位实现，不再挂引擎原生修正器）
 ('POLICY_CCB_GOV_REPUBLIC_FAITH', 'CCB_REPUBLIC_BASE_HOUSING'),
 ('POLICY_CCB_GOV_REPUBLIC_FAITH', 'CCB_REPUBLIC_BASE_AMENITY'),
 ('POLICY_CCB_GOV_REPUBLIC_FAITH', 'CCB_UPG_FAITH_PCT'),
-('POLICY_CCB_GOV_REPUBLIC_FAITH', 'CCB_UPG_FOREIGN_FOLLOWER_CULTURE'),
-('POLICY_CCB_GOV_REPUBLIC_FAITH', 'CCB_UPG_FOREIGN_FOLLOWER_FAITH'),
 ('POLICY_CCB_GOV_REPUBLIC_FAITH', 'CCB_UPG_RELIGIOUS_UNITS_MOVEMENT'),
 -- 共和+商共
 ('POLICY_CCB_GOV_REPUBLIC_TRADE', 'CCB_REPUBLIC_BASE_HOUSING'),
@@ -514,8 +530,6 @@ INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
 ('POLICY_CCB_GOV_AUTOCRACY_FAITH', 'CCB_AUTOCRACY_BASE_FOOD'),
 ('POLICY_CCB_GOV_AUTOCRACY_FAITH', 'CCB_AUTOCRACY_BASE_PROD'),
 ('POLICY_CCB_GOV_AUTOCRACY_FAITH', 'CCB_UPG_FAITH_PCT'),
-('POLICY_CCB_GOV_AUTOCRACY_FAITH', 'CCB_UPG_FOREIGN_FOLLOWER_CULTURE'),
-('POLICY_CCB_GOV_AUTOCRACY_FAITH', 'CCB_UPG_FOREIGN_FOLLOWER_FAITH'),
 ('POLICY_CCB_GOV_AUTOCRACY_FAITH', 'CCB_UPG_RELIGIOUS_UNITS_MOVEMENT'),
 -- 独裁+商共
 ('POLICY_CCB_GOV_AUTOCRACY_TRADE', 'CCB_AUTOCRACY_BASE_FOOD'),

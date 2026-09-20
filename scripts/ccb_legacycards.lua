@@ -29,6 +29,7 @@ local PROP_CURRENT_GOVT = 'CCB_LEGACY_CURRENT_GOVT'; -- 最近一次政体（存
 local PROP_ENVOY_MAX  = 'CCB_LEGACY_ENVOY_MAX_TIER'; -- 旧单向棘轮档位（仅作存档迁移读取）
 local PROP_ENVOY_POS  = 'CCB_LEGACY_ENVOY_POS';      -- 使者产出已挂正向增量数
 local PROP_ENVOY_NEG  = 'CCB_LEGACY_ENVOY_NEG';      -- 使者产出已挂负向增量数
+local PROP_FF_NET     = 'CCB_LEGACY_FF_NET';         -- 神权卡"外国信徒"当前净档位（= 已产生的文化/信仰/回合）
 
 -- 一级类建筑（普通 Tier1 三选一 + 瑞典女王图书馆 —— 均生成一级传承卡）
 local T1_BUILDINGS = {
@@ -478,6 +479,75 @@ local function IsDiploCardEquipped(culture)
 	return false;
 end
 
+-- FAITH 线升级卡（二级 POLICY_CCB_GOV_*_FAITH 与三级 *_FAITH_FASCISM / _COMMUNISM / _DEMOCRACY）是否正装备
+local function IsFaithCardEquipped(culture)
+	if culture == nil or culture.GetNumPolicySlots == nil or culture.GetSlotPolicy == nil then return false; end
+	local nSlots = culture:GetNumPolicySlots();
+	for i = 0, nSlots - 1 do
+		local policyHash = culture:GetSlotPolicy(i);
+		if policyHash ~= nil and policyHash ~= -1 then
+			local info = GameInfo.Policies[policyHash];
+			if info ~= nil and string.find(info.PolicyType, '_FAITH', 1, true) ~= nil then return true; end
+		end
+	end
+	return false;
+end
+
+-- ===========================================================================
+-- 神权升级卡「外国信徒 → 文化/信仰」产出（LegacyCards.sql 2.6，2026-09-19 改为 Lua 自算）
+--
+-- 为什么不走引擎原生修正器（三次实测全部失败，详见 LegacyCards.sql 2.6 注释）：
+--   · 0.5 小数被取整为 0；换类型后 2 个信徒给 +15；再换"教会天下同款类型"后变成每信徒 +7
+--   ★ 根因：原版"信徒类"信条产出是【逐城结算】的 → 等于「每座信奉城市 × ⌊外国信徒÷2⌋」，
+--     城市越多越离谱；引擎原生类型无法表达"帝国级、每 2 个外国信徒 +1"。
+--
+-- 现方案：每回合自算目标档 T，用【二进制档位】正负对冲（引擎无 detach）：
+--   目标 T =（装了 FAITH 卡 且 已创立宗教）? ⌊引擎口径外国信徒 ÷ 2⌋ : 0   （上限 511）
+--   升档 → 按 T−net 的二进制补挂 CCB_FF_POS_*；降档 → 按 net−T 的二进制补挂 CCB_FF_NEG_* 对冲
+--   → 任意 T 最多挂 9 个修正器；卸卡即归零；信徒升降双向跟随；不封顶（1~256 档位）
+--
+-- 引擎 API（出处已实证）：
+--   player:GetStats():GetNumForeignFollowers() —— MABC\RUIVO_STAT_MODULE_GP.lua:1990
+--   player:GetReligion():GetReligionTypeCreated() —— 原版 ReligionScreen.lua:123（-1 = 未创立宗教）
+-- ===========================================================================
+local CCB_FF_TIERS = { 256, 128, 64, 32, 16, 8, 4, 2, 1 };   -- 从大到小，便于二进制拆分
+local CCB_FF_MAX = 511;
+
+local function UpdateForeignFollowerYield(player)
+	local culture = GetCulture(player);
+	local equipped = IsFaithCardEquipped(culture);
+	local followers = 0;
+	local target = 0;
+	if equipped then
+		local okRel, pReligion = pcall(function() return player:GetReligion(); end);
+		if okRel and pReligion ~= nil and pReligion.GetReligionTypeCreated ~= nil then
+			local iReligion = pReligion:GetReligionTypeCreated();
+			if iReligion ~= nil and iReligion >= 0 then
+				local okN, n = pcall(function() return player:GetStats():GetNumForeignFollowers(); end);
+				if okN and n ~= nil and n > 0 then followers = n; end
+				target = math.floor(followers / 2);
+				if target > CCB_FF_MAX then target = CCB_FF_MAX; end
+			end
+		end
+	end
+	local net = PropNum(player, PROP_FF_NET);
+	if target == net then return; end
+	local delta = target - net;
+	local sign = (delta > 0) and 'POS' or 'NEG';
+	local remain = math.abs(delta);
+	for _, v in ipairs(CCB_FF_TIERS) do
+		if remain >= v then
+			remain = remain - v;
+			player:AttachModifierByID('CCB_FF_' .. sign .. '_CUL_' .. v);
+			player:AttachModifierByID('CCB_FF_' .. sign .. '_FAI_' .. v);
+		end
+	end
+	player:SetProperty(PROP_FF_NET, target);
+	print('[CCB-Legacy] p' .. tostring(player:GetID()) .. ' foreign-follower tier ' .. tostring(net)
+		.. ' -> ' .. tostring(target) .. ' (' .. sign .. ' ' .. tostring(math.abs(delta))
+		.. ' | followers=' .. tostring(followers) .. ' equipped=' .. tostring(equipped) .. ')');
+end
+
 function OnGameTurnStarted(turn)
 	local ids = PlayerManager.GetAliveMajorIDs();
 	for _, playerID in ipairs(ids) do
@@ -540,6 +610,9 @@ function OnGameTurnStarted(turn)
 				player:SetProperty(PROP_ENVOY_POS, pos);
 				player:SetProperty(PROP_ENVOY_NEG, neg);
 			end
+
+			-- 神权卡「外国信徒 → 文化/信仰」：Lua 自算 + 二进制档位（见 UpdateForeignFollowerYield 上方说明）
+			UpdateForeignFollowerYield(player);
 		end
 	end
 end
@@ -703,12 +776,15 @@ function OnForeignFollowerProbe(turn)
 						local fTotal = math.floor(total / 2);
 						local fEngine = (nForeign >= 0) and math.floor(nForeign / 2) or -1;
 						print(string.format(
-							"[CCB-Probe-FF] T%d p%d 宗教=%s | 我方统计信徒: 本国=%d 外国主要=%d(%d城) 城邦=%d(%d城) 合计=%d | 引擎口径: 总信徒=%d 外国信徒=%d 信奉城市=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | 预测每2个+1: 引擎外国=%d 我方外国=%d 我方含城邦=%d 我方含本国=%d",
+							"[CCB-Probe-FF] T%d p%d 宗教=%s | 我方统计信徒: 本国=%d 外国主要=%d(%d城) 城邦=%d(%d城) 合计=%d | 引擎口径: 总信徒=%d 外国信徒=%d 信奉城市=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | Lua档位: FF净档=%d(应=%d) 使者正/负=%d/%d | 预测每2个+1: 引擎外国=%d",
 							turn, playerID, ProbeFF_ReligionName(iReligion),
 							out.own, out.major, out.majorCities, out.minor, out.minorCities, total,
 							nFollow, nForeign, (okN and nCitiesFaith) or -1,
 							(okC and cultureYield) or -1, dC, (okF and faithYield) or -1, dF,
-							ProbeFF_SlottedCCBCards(player), fEngine, fMajor, fAll, fTotal));
+							ProbeFF_SlottedCCBCards(player),
+							PropNum(player, 'CCB_LEGACY_FF_NET'), fEngine,
+							PropNum(player, 'CCB_LEGACY_ENVOY_POS'), PropNum(player, 'CCB_LEGACY_ENVOY_NEG'),
+							fEngine));
 					else
 						print(string.format("[CCB-Probe-FF] T%d p%d 信徒统计失败（API 异常，看 Lua.log 上文）", turn, playerID));
 					end
