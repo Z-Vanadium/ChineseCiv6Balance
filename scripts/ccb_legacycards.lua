@@ -569,3 +569,126 @@ function CountEnvoys(player)
 end
 
 print("[CCB] Legacy Cards upgrade system (event-driven) loaded.");
+
+-- ===========================================================================
+-- [探针·临时 2026-09-19] 传承卡「外国信徒 → 文化/信仰」收益探针（拿到数据后必须整段删除）
+--
+-- 背景：用户实测「激活 2 个外国信徒 → +5 文化 / +5 信仰」，与设计（每信徒 +0.5，即每 2 个 +1）
+--       差一个数量级。而本卡用的 `MODIFIER_PLAYER_RELIGION_ADD_PLAYER_BELIEF_YIELD` 在原版里
+--       **只**与 `BELIEF_YIELD_PER_FOREIGN_CITY` 搭配（韩国"最后先知"= 每座外国城市 +1 科技）；
+--       原版配 `BELIEF_YIELD_PER_FOREIGN_FOLLOWER` 的是另一个类型
+--       `MODIFIER_PLAYER_RELIGION_ADD_RELIGIOUS_BELIEF_YIELD`（教会天下 / 跨文化对话，外面套
+--       `MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER` + `PLAYER_FOUNDED_RELIGION_REQUIREMENTS`）。
+--       → 因此必须实测：引擎在这套"非原版组合"下到底按什么口径计数、按什么公式给产出。
+--
+-- 本探针每回合打印一行：
+--   ① 引擎口径的信徒统计（本国 / 外国主要文明 / 城邦，分开统计——"外国"是否含城邦未知）
+--   ② 该玩家当前每回合 文化 / 信仰 总量
+--   ③ 该玩家政策槽里是否装着我们这条线的 FAITH 卡
+--   ④ 几个候选公式的预测值
+-- 用法：挂卡停 1 回合、卸卡再停 1 回合，把两行 [CCB-Probe-FF] 发回 → 用"产出差 ÷ 信徒数"反推公式。
+--
+-- API 出处（均为原版 UI 实证，勿改）：
+--   pPlayer:GetReligion():GetReligionTypeCreated()   —— ReligionScreen.lua:123（-1 = 未创立宗教）
+--   pPlayer:GetCulture():GetCultureYield()           —— WorldRankings.lua:37
+--   pPlayer:GetReligion():GetFaithYield()            —— WorldRankings.lua:48
+--   pCity:GetReligion():GetReligionsInCity()         —— CityBannerManager.lua:1230（字段 .Religion/.Followers）
+-- ===========================================================================
+local PROBE_FF_ENABLED = true;
+
+local function ProbeFF_ReligionName(iReligion)
+	local row = GameInfo.Religions[iReligion];
+	if row ~= nil then return row.ReligionType; end
+	return tostring(iReligion);
+end
+
+-- 统计某玩家"创立宗教"的信徒分布
+local function ProbeFF_CountFollowers(player, iReligion, out)
+	local myID = player:GetID();
+	local function Scan(other, isMinor)
+		if other == nil or other.GetCities == nil then return; end
+		local okCities, cities = pcall(function() return other:GetCities(); end);
+		if not okCities or cities == nil then return; end
+		for _, city in cities do
+			local pRel = city:GetReligion();
+			if pRel ~= nil and pRel.GetReligionsInCity ~= nil then
+				local ok, list = pcall(function() return pRel:GetReligionsInCity(); end);
+				if ok and list ~= nil then
+					for _, entry in pairs(list) do
+						if entry.Religion == iReligion and entry.Followers ~= nil and entry.Followers > 0 then
+							if other:GetID() == myID then
+								out.own = out.own + entry.Followers;
+							elseif isMinor then
+								out.minor = out.minor + entry.Followers;
+								out.minorCities = out.minorCities + 1;
+							else
+								out.major = out.major + entry.Followers;
+								out.majorCities = out.majorCities + 1;
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+	local ids = PlayerManager.GetAliveMajorIDs();
+	for _, pid in ipairs(ids) do Scan(Players[pid], false); end
+	local minors = PlayerManager.GetAliveMinors();	-- ⚠ 返回玩家对象
+	if minors ~= nil then
+		for _, minor in ipairs(minors) do Scan(minor, true); end
+	end
+end
+
+-- 政策槽里是否装着本线的 FAITH 卡（沿用 IsDiploCardEquipped 的取槽写法）
+local function ProbeFF_SlottedFaithCards(player)
+	local culture = player:GetCulture();
+	if culture == nil or culture.GetNumPolicySlots == nil or culture.GetSlotPolicy == nil then return "<未知>"; end
+	local found = {};
+	local nSlots = culture:GetNumPolicySlots();
+	for i = 0, nSlots - 1 do
+		local policyHash = culture:GetSlotPolicy(i);
+		if policyHash ~= nil and policyHash ~= -1 then
+			local info = GameInfo.Policies[policyHash];
+			if info ~= nil and string.find(info.PolicyType, '_FAITH', 1, true) ~= nil then
+				table.insert(found, info.PolicyType);
+			end
+		end
+	end
+	if #found == 0 then return "<未装FAITH卡>"; end
+	return table.concat(found, ',');
+end
+
+function OnForeignFollowerProbe(turn)
+	if not PROBE_FF_ENABLED then return; end
+	local ids = PlayerManager.GetAliveMajorIDs();
+	for _, playerID in ipairs(ids) do
+		local player = Players[playerID];
+		if player ~= nil and player:IsHuman() then
+			local okRel, pReligion = pcall(function() return player:GetReligion(); end);
+			if okRel and pReligion ~= nil and pReligion.GetReligionTypeCreated ~= nil then
+				local iReligion = pReligion:GetReligionTypeCreated();
+				local okC, cultureYield = pcall(function() return player:GetCulture():GetCultureYield(); end);
+				local okF, faithYield = pcall(function() return pReligion:GetFaithYield(); end);
+				if iReligion ~= nil and iReligion >= 0 then
+					local out = { own = 0, major = 0, minor = 0, majorCities = 0, minorCities = 0 };
+					local ok = pcall(function() ProbeFF_CountFollowers(player, iReligion, out); end);
+					if ok then
+						local fMajor, fAll = math.floor(out.major / 2), math.floor((out.major + out.minor) / 2);
+						print(string.format(
+							"[CCB-Probe-FF] T%d p%d 宗教=%s | 信徒: 本国=%d 外国主要=%d(%d城) 城邦=%d(%d城) | 产出: 文化=%.1f 信仰=%.1f | 卡=%s | 预测(每2个+1): 仅主要=%d 含城邦=%d",
+							turn, playerID, ProbeFF_ReligionName(iReligion),
+							out.own, out.major, out.majorCities, out.minor, out.minorCities,
+							(okC and cultureYield) or -1, (okF and faithYield) or -1,
+							ProbeFF_SlottedFaithCards(player), fMajor, fAll));
+					else
+						print(string.format("[CCB-Probe-FF] T%d p%d 信徒统计失败（API 异常，看 Lua.log 上文）", turn, playerID));
+					end
+				else
+					print(string.format("[CCB-Probe-FF] T%d p%d 尚未创立宗教（文化=%.1f 信仰=%.1f）—— 本卡设计上需已创立宗教",
+						turn, playerID, (okC and cultureYield) or -1, (okF and faithYield) or -1));
+				end
+			end
+		end
+	end
+end
+GameEvents.OnGameTurnStarted.Add(OnForeignFollowerProbe);
