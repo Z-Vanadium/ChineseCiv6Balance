@@ -8,8 +8,8 @@
 --	         → 黄金时代（含英雄时代）生效；非黄金自动失效；再入黄金自动恢复（引擎每回合求值，无残留）
 --	结构：   参照已验证探针 tools/archive/HGProbe_v0.1/（全项实测通过 2026-09-11）
 --	设计：   见 docs/泰姬陵设计方案.md（C 方案：选项只用"着力点未占用"的维度）
---	备注：   ⏳ 选项 3「铭文之壁」的"人造奇观旅游业绩 +6"待定讨论（引擎把奇观旅游表达为百分比，
---	         且该维度与着力点「愿你在此」重叠）——见文件末尾说明。
+--	备注：   选项 3「铭文之壁」的旅游条款按用户 2026-09-19 二次定稿改为 **书本类巨作旅游业绩 +100%**
+--	         （原"人造奇观旅游 +6"因引擎只支持百分比、且与着力点「愿你在此」同维度而废弃）
 ------------------------------------------------------------------------------
 
 --==============================================================================================
@@ -60,12 +60,19 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CALLI_ARTIST', 'Amount', 2);
 
 --==============================================================================================
--- 待接入：选项 3 的奇观旅游
---   用户设计值："所有人造奇观的旅游业绩增加 6 点"。
---   引擎限制：奇观旅游只能用百分比表达（MODIFIER_PLAYER_CITIES_ADJUST_TOURISM + BoostsWonders=true
---   + ScalingFactor=N），没有"每座奇观 +N 点"的平坦写法；且该维度已被着力点「愿你在此」占用
---   （原版 COMMEMORATION_TOURISM_GA_WONDERS = 总督城 +150% 奇观旅游）。
---   备选：① 奇观旅游 +X%（同维度叠加，违反 C 原则）② 巨作旅游 +X%（
---   MODIFIER_PLAYER_ADJUST_GREAT_WORK_OBJECT_TOURISM，无占用 ✅）③ 换维度（巨作槽位等）。
---   用户拍板后在此追加 1 条修饰器 + 挂载 + 文本。
+-- 3b. 铭文之壁（追加）：书本类巨作（Great Works of Writing）旅游业绩 +100%
+--     2026-09-19 用户定稿：原设计"人造奇观旅游 +6"替换为本条 —— 原因：① 引擎把奇观旅游表达为百分比，
+--     无"每座奇观 +N 点"的平坦写法；② 该维度与着力点「愿你在此」（总督城 +150% 奇观旅游）重叠。
+--     本条写法完全取自原版同款先例（玩家级、按巨作类别过滤）：
+--       · OPERA_BALLET_BOOST_WRITING_TOURISM（歌剧与芭蕾市政）/ PRINTING_BOOST_WRITING_TOURISM（印刷术科技）
+--         = MODIFIER_PLAYER_CITIES_ADJUST_TOURISM + GreatWorkObjectType=GREATWORKOBJECT_WRITING + ScalingFactor=200
+--       · ScalingFactor 语义：200 = ×2（= +100%）、300 = ×3（圣物箱「遗物产出3倍」实证）
+--       · 同族先例：HERITAGE_*TOURISM（世界议会遗产组织）、CURATOR_DOUBLE_WRITING_TOURISM
+--     维度核验：巨作旅游**未被任何着力点占用**（「愿你在此」加的是奇观旅游与魅力）✅ 符合 C 方案
 --==============================================================================================
+INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) VALUES
+	('CCB_TAJ_CALLI_WRITING_TOURISM', 'MODIFIER_PLAYER_CITIES_ADJUST_TOURISM', 'PLAYER_HAS_GOLDEN_AGE');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+	('CCB_TAJ_CALLI_WRITING_TOURISM', 'GreatWorkObjectType', 'GREATWORKOBJECT_WRITING'),
+	('CCB_TAJ_CALLI_WRITING_TOURISM', 'ScalingFactor', 200);
+

@@ -8992,7 +8992,7 @@
 			<Text>镶嵌工艺：建造者 +1 充能；每座工业区 +1 [ICON_GreatEngineer] 大工程师点数，每座工作坊 +2 [ICON_GreatEngineer] 大工程师点数（仅黄金时代）</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_CALLIGRAPHY" Language="zh_Hans_CN">
-			<Text>铭文之壁：拥有剧院广场的城市 +2 [ICON_GreatWriter] 大作家、+2 [ICON_GreatArtist] 大艺术家点数（仅黄金时代）</Text>
+			<Text>铭文之壁：拥有剧院广场的城市 +2 [ICON_GreatWriter] 大作家、+2 [ICON_GreatArtist] 大艺术家点数；[ICON_GreatWork_Writing] 书本类巨作 [ICON_TOURISM] 旅游业绩 +100%（仅黄金时代）</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="zh_Hans_CN">
 			<Text>稍后决定</Text>
