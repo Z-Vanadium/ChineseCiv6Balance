@@ -21,8 +21,9 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CHARBAGH_AMENITY', 'Amount', 1);
 
 --==============================================================================================
--- 2. 镶嵌工艺（Parchin Kari）：建造者 +1 充能；每座工业区 +1 大工程师点；每座工作坊 +2 大工程师点
+-- 2. 镶嵌工艺（Parchin Kari）：建造者 +1 充能；每座工业区 +2 大工程师点；每座工作坊 +1 大工程师点
 --    原版先例：城邦斯德哥尔摩宗主 = MODIFIER_PLAYER_DISTRICTS_ADJUST_GREAT_PERSON_POINTS + DISTRICT_IS_INDUSTRIAL_ZONE → +1 大工程师点
+--    （2026-09-20 用户调整：工业区 1→2、工作坊 2→1 —— 两者对调）
 --==============================================================================================
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
 	-- 建造者 +1 充能：Subject 用原版 UNIT_IS_BUILDER 限定（金字塔同款写法）
@@ -32,9 +33,9 @@ INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectR
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_INLAY_BUILDER', 'Amount', 1),
 	('CCB_TAJ_INLAY_IZ_GEP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ENGINEER'),
-	('CCB_TAJ_INLAY_IZ_GEP', 'Amount', 1),
+	('CCB_TAJ_INLAY_IZ_GEP', 'Amount', 2),
 	('CCB_TAJ_INLAY_WORKSHOP_GEP', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ENGINEER'),
-	('CCB_TAJ_INLAY_WORKSHOP_GEP', 'Amount', 2);
+	('CCB_TAJ_INLAY_WORKSHOP_GEP', 'Amount', 1);
 
 -- 「城市拥有工作坊」需求（工程内同类先例：Kotoku 的 REQUIREMENT_CITY_HAS_BUILDING）
 INSERT INTO Requirements (RequirementId, RequirementType) VALUES
@@ -47,15 +48,15 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 	('CCB_TAJ_REQSET_CITY_HAS_WORKSHOP', 'CCB_TAJ_REQ_CITY_HAS_WORKSHOP');
 
 --==============================================================================================
--- 3. 铭文之壁（Calligraphy）：拥有剧院广场的城市 +4 大作家点、+2 大艺术家点
---    （2026-09-20 用户调整：大作家点 2 → 4）
+-- 3. 铭文之壁（Calligraphy）：拥有剧院广场的城市 +2 大作家点、+2 大艺术家点
+--    （2026-09-20 用户调整：大作家点曾试 2→4，因每回合 +4 偏多，回退为 2）
 --==============================================================================================
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
 	('CCB_TAJ_CALLI_WRITER', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'BBG_CITY_HAS_DISTRICT_THEATER'),
 	('CCB_TAJ_CALLI_ARTIST', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'BBG_CITY_HAS_DISTRICT_THEATER');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CALLI_WRITER', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER'),
-	('CCB_TAJ_CALLI_WRITER', 'Amount', 4),
+	('CCB_TAJ_CALLI_WRITER', 'Amount', 2),
 	('CCB_TAJ_CALLI_ARTIST', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST'),
 	('CCB_TAJ_CALLI_ARTIST', 'Amount', 2);
 

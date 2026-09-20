@@ -8989,10 +8989,10 @@
 			<Text>[COLOR:255,215,0,255]四分园[ENDCOLOR]：所有城市 +1 [ICON_AMENITIES] 宜居度</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_INLAY" Language="zh_Hans_CN">
-			<Text>[COLOR:255,215,0,255]镶嵌工艺[ENDCOLOR]：建造者 +1 充能；每座工业区 +1 [ICON_GreatEngineer] 大工程师点数，每座工作坊 +2 [ICON_GreatEngineer] 大工程师点数</Text>
+			<Text>[COLOR:255,215,0,255]镶嵌工艺[ENDCOLOR]：建造者 +1 充能；每座工业区 +2 [ICON_GreatEngineer] 大工程师点数，每座工作坊 +1 [ICON_GreatEngineer] 大工程师点数</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_CALLIGRAPHY" Language="zh_Hans_CN">
-			<Text>[COLOR:255,215,0,255]铭文之壁[ENDCOLOR]：拥有剧院广场的城市 +4 [ICON_GreatWriter] 大作家、+2 [ICON_GreatArtist] 大艺术家点数；[ICON_GreatWork_Writing] 著作类巨作与 [ICON_GreatWork_Religious] 宗教艺术类巨作 [ICON_TOURISM] 旅游业绩 +100%</Text>
+			<Text>[COLOR:255,215,0,255]铭文之壁[ENDCOLOR]：拥有剧院广场的城市 +2 [ICON_GreatWriter] 大作家、+2 [ICON_GreatArtist] 大艺术家点数；[ICON_GreatWork_Writing] 著作类巨作与 [ICON_GreatWork_Religious] 宗教艺术类巨作 [ICON_TOURISM] 旅游业绩 +100%</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="zh_Hans_CN">
 			<Text>稍后决定</Text>
