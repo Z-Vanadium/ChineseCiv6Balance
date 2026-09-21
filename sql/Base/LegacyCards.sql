@@ -145,10 +145,29 @@ INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
 INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 ('CCB_OLIGARCHY_LEGACY_BUFF_CS', 'Preview', 'LOC_CCB_ABILITY_OLIGARCHY_BUFF_MODIFIER_DESC');
 -- 卡级修饰器（沿用 CCB_OLIGARCHY_BASE_CS 挂载点，挂在 T1 卡与两张某头升级卡上）
+--
+-- ★ 2026-09-21 改为「与政体共用同一能力」以消除 +8 双计（用户实测 2c）：
+--   引擎原生"处于该政体时隐藏该政体传承卡"只对 Governments.PolicyToUnlock 绑定的那张【一级卡】生效；
+--   我们的二级/三级升级卡不在规则内 → 在寡头政体内仍可装备 → 政体固有 +4 与卡片 +4 相加 = +8。
+--   曾试过"Lua 挂负向抵消能力（−4）"，实测无效：全游戏 Lua 脚本与本模组内，
+--   `AttachModifierByID` 从未用于 MODIFIER_PLAYER_UNITS_GRANT_ABILITY（只用于商路容量/间谍/科技等），
+--   运行时挂"授予能力"修正器不产生效果（日志可见 govt-offset 已挂 0->-1 但战斗力不变）。
+--   → 改为让【卡片直接授予政体用的那个能力 ABILITY_OLIGARCHY_MELEE_BUFF】：
+--     政体内 = 政体与该卡授予**同一个能力**（单位能力是集合语义，只生效一次）→ +4 ✓
+--     政体外 = 仅卡片授予该能力 → +4 ✓（传承卡离开政体后仍然有效）
+--   ⚠ 自建能力 ABILITY_CCB_OLIGARCHY_LEGACY_BUFF 保留但不再被引用（留作回退；若要回退只需把下面
+--     的 AbilityType 改回它，并重新启用 Lua 的 OLI 抵消档位——但那条路已知无效）。
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
 ('CCB_OLIGARCHY_BASE_CS', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-('CCB_OLIGARCHY_BASE_CS', 'AbilityType', 'ABILITY_CCB_OLIGARCHY_LEGACY_BUFF');
+('CCB_OLIGARCHY_BASE_CS', 'AbilityType', 'ABILITY_OLIGARCHY_MELEE_BUFF');
+-- 单位面板文本：直接给政体那个能力补上文本（政体固有 + 传承卡共用同一条能力 → 面板都显示"来自寡头传承 +4"）
+UPDATE UnitAbilities SET Name='LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_NAME',
+                         Description='LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_DESC'
+WHERE UnitAbilityType='ABILITY_OLIGARCHY_MELEE_BUFF';
+-- 面板明细行（原版同款 ModifierStrings Preview 钩子在政体那条修正器上）
+INSERT OR IGNORE INTO ModifierStrings (ModifierId, Context, Text) VALUES
+('OLIGARCHY_MELEE_BUFF', 'Preview', 'LOC_CCB_ABILITY_OLIGARCHY_BUFF_MODIFIER_DESC');
 
 -- ---- 1.2 共和基础：所有城市 +1住房 +1宜居度 ----
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
@@ -859,55 +878,31 @@ CROSS JOIN (
 
 
 --==============================================================================================
--- 6) 政体固有 × 传承卡基础效果 的「重复结算抵消」（2026-09-20 用户确认方案 B）
+-- 6) 政体固有 × 传承卡基础效果 的「重复结算抵消」（2026-09-20 用户确认）
 --
 --  问题（2026-09-10 挂起至今）：引擎原生"处于该政体时隐藏该政体传承卡"只覆盖
 --    `Governments.PolicyToUnlock` 一对一绑定的那张【一级卡】（其 RequiresGovernmentUnlock=1）。
 --    我们自建的二级/三级升级卡（ExplicitUnlock=1）不在规则内 → 在该政体内仍可装备 →
 --    政体固有 + 卡片基础 **同项双计**（寡头 +4→+8、古典共和 宜居/住房 +1→+2、独裁 粮/锤 +1→+2）。
 --
---  修法：由 Lua（`UpdateGovernmentDoubleOffset`）在"处于该线政体 **且** 装了该线传承卡"时，
---    挂一份**负向抵消**把重复的那一份扣掉；离开该状态时挂**正向抵消**还原（引擎无 detach → 正负池对冲）。
---    净额恒为"只算一次"，且**保留升级卡的其它附加效果**（+1 移速 / 海军经验 等不在抵消范围）。
+--  ★ 2026-09-21 实测修正（用户复测 2c 报"仍为 +8"）：
+--    · 寡头线原用"Lua 挂负向抵消**能力**（ABILITY_CCB_OLI_OFFSET_NEG，−4）" → **无效**。
+--      日志可见 Lua 判定与挂载都执行了（`[CCB-Legacy] p0 govt-offset OLIGARCHY 0->-1`），
+--      但单位战斗力不变。归因：**运行时 `AttachModifierByID` 挂 MODIFIER_PLAYER_UNITS_GRANT_ABILITY
+--      不产生效果** —— 全游戏 Lua 脚本 + 本模组中该 API 只用于商路容量/间谍/科技等修正器，
+--      从无"授予能力"先例。→ 寡头改走【数据层共用能力】（见 §1.1：卡片直接授予政体的
+--      ABILITY_OLIGARCHY_MELEE_BUFF），故此处删除寡头抵消段。
+--    · 共和/独裁仍用 Lua 负向抵消，但用的是**城市产出类**修正器（宜居/住房/粮/锤），
+--      与使者产出同一类、Lua 挂载已被实测证明可用（使者线"卸卡→归零"通过）。
 --
 --  ⚠ 抵消口径必须与"两份效果真正重叠的范围"一致，否则会多扣：
---    · 寡头：政体与卡片都是"对 近战/抗骑/海军近战 单位 +4"→ 范围相同 → 抵消同兵种 + 同类型
 --    · 古典共和：政体只在【有专业区域的城市】给，卡片是【全城市】给 → 抵消必须按【政体口径】
 --      （CITY_HAS_1_SPECIALTY_DISTRICT），否则无区域城市会被多扣 1
 --    · 独裁：政体的 +1 粮/锤 只对有纪念碑的城市生效（建筑产出），卡片要求【有纪念碑 + 有专业区域】→
 --      抵消按【卡片口径】（CCB_REQSET_AUTOCRACY_MONUMENT_SPECIALTY，该范围内两份必然同时生效）
 --==============================================================================================
 
--- 6.1 寡头：±4 战斗力抵消能力（同兵种标签；Inactive=1 以便随授予/收回）
-INSERT INTO Types (Type, Kind) VALUES
-('ABILITY_CCB_OLI_OFFSET_NEG', 'KIND_ABILITY'),
-('ABILITY_CCB_OLI_OFFSET_POS', 'KIND_ABILITY');
-INSERT INTO TypeTags (Type, Tag) VALUES
-('ABILITY_CCB_OLI_OFFSET_NEG', 'CLASS_MELEE'),
-('ABILITY_CCB_OLI_OFFSET_NEG', 'CLASS_NAVAL_MELEE'),
-('ABILITY_CCB_OLI_OFFSET_NEG', 'CLASS_ANTI_CAVALRY'),
-('ABILITY_CCB_OLI_OFFSET_POS', 'CLASS_MELEE'),
-('ABILITY_CCB_OLI_OFFSET_POS', 'CLASS_NAVAL_MELEE'),
-('ABILITY_CCB_OLI_OFFSET_POS', 'CLASS_ANTI_CAVALRY');
-INSERT INTO UnitAbilities (UnitAbilityType, Name, Description, Inactive) VALUES
-('ABILITY_CCB_OLI_OFFSET_NEG', NULL, NULL, 1),
-('ABILITY_CCB_OLI_OFFSET_POS', NULL, NULL, 1);
-INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
-('CCB_OLI_OFFSET_NEG_CS', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH'),
-('CCB_OLI_OFFSET_POS_CS', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-('CCB_OLI_OFFSET_NEG_CS', 'Amount', -4),
-('CCB_OLI_OFFSET_POS_CS', 'Amount', 4);
-INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
-('ABILITY_CCB_OLI_OFFSET_NEG', 'CCB_OLI_OFFSET_NEG_CS'),
-('ABILITY_CCB_OLI_OFFSET_POS', 'CCB_OLI_OFFSET_POS_CS');
--- 授予器（Lua 用 player:AttachModifierByID 挂载/对冲）
-INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
-('CCB_OLI_OFFSET_GRANT_NEG', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY'),
-('CCB_OLI_OFFSET_GRANT_POS', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY');
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-('CCB_OLI_OFFSET_GRANT_NEG', 'AbilityType', 'ABILITY_CCB_OLI_OFFSET_NEG'),
-('CCB_OLI_OFFSET_GRANT_POS', 'AbilityType', 'ABILITY_CCB_OLI_OFFSET_POS');
+-- （6.1 寡头抵消段已于 2026-09-21 删除：运行时授予能力无效，改用 §1.1 的"卡片与政体共用同一能力"）
 
 -- 6.2 古典共和：±1 宜居 / ±1 住房（按政体口径 = 有 1 个专业区域的城市）
 INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES

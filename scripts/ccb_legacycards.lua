@@ -576,8 +576,8 @@ end
 -- （由 Events.GovernmentChanged 维护；政体变更当场也会调用本函数，避免多算一整回合）
 -- ===========================================================================
 local OFFSET_LINES = {
-	{ prop = 'CCB_LEGACY_OFF_NET_OLI', govt = 'GOVERNMENT_OLIGARCHY', tag = 'OLIGARCHY',
-	  neg = { 'CCB_OLI_OFFSET_GRANT_NEG' }, pos = { 'CCB_OLI_OFFSET_GRANT_POS' } },
+	-- 寡头线已于 2026-09-21 移出：运行时 AttachModifierByID 挂"授予能力"无效（实测 +8 不变），
+	-- 改由数据层解决——卡片直接授予政体那个能力 ABILITY_OLIGARCHY_MELEE_BUFF（见 LegacyCards.sql §1.1）。
 	{ prop = 'CCB_LEGACY_OFF_NET_REP', govt = 'GOVERNMENT_CLASSICAL_REPUBLIC', tag = 'REPUBLIC',
 	  neg = { 'CCB_REP_OFFSET_NEG_AMENITY', 'CCB_REP_OFFSET_NEG_HOUSING' },
 	  pos = { 'CCB_REP_OFFSET_POS_AMENITY', 'CCB_REP_OFFSET_POS_HOUSING' } },
@@ -763,14 +763,14 @@ local function ProbeFF_CountFollowers(player, iReligion, out)
 		if not okCities then table.insert(out.errs, 'GetCities:' .. tostring(cities)); return; end
 		if cities == nil then return; end
 		local okLoop, errLoop = pcall(function()
-			for _, city in cities do
+			for _, city in ipairs(cities) do
 				local okRel, pRel = pcall(function() return city:GetReligion(); end);
 				if not okRel then
-					table.insert(out.errs, 'GetReligion:' .. tostring(pRel));
+					out.errs[#out.errs + 1] = 'GetReligion:' .. tostring(pRel);
 				elseif pRel ~= nil then
 					local okList, list = pcall(function() return pRel:GetReligionsInCity(); end);
 					if not okList then
-						table.insert(out.errs, 'GetReligionsInCity:' .. tostring(list));
+						out.errs[#out.errs + 1] = 'GetReligionsInCity:' .. tostring(list);
 					elseif list ~= nil then
 						for _, entry in pairs(list) do
 							local rel, fol = entry.Religion, entry.Followers;
@@ -792,20 +792,20 @@ local function ProbeFF_CountFollowers(player, iReligion, out)
 				end
 			end
 		end);
-		if not okLoop then table.insert(out.errs, 'scan:' .. tostring(errLoop)); end
+		if not okLoop then out.errs[#out.errs + 1] = 'scan:' .. tostring(errLoop); end
 	end
 	local okIds, ids = pcall(function() return PlayerManager.GetAliveMajorIDs(); end);
 	if okIds and ids ~= nil then
 		for _, pid in ipairs(ids) do
 			local ok, err = pcall(function() Scan(Players[pid], false); end);
-			if not ok then table.insert(out.errs, 'major:' .. tostring(err)); end
+			if not ok then out.errs[#out.errs + 1] = 'major:' .. tostring(err); end
 		end
 	end
 	local okMinors, minors = pcall(function() return PlayerManager.GetAliveMinors(); end);
 	if okMinors and minors ~= nil then
 		for _, minor in ipairs(minors) do
 			local ok, err = pcall(function() Scan(minor, true); end);
-			if not ok then table.insert(out.errs, 'minor:' .. tostring(err)); end
+			if not ok then out.errs[#out.errs + 1] = 'minor:' .. tostring(err); end
 		end
 	end
 end
@@ -836,9 +836,50 @@ local PROBE_FF_PREV = {};
 local function ProbeOffsetStr(player)
 	local parts = {};
 	for _, line in ipairs(OFFSET_LINES) do
-		table.insert(parts, string.sub(line.tag, 1, 3) .. '=' .. tostring(PropNum(player, line.prop)));
+		parts[#parts + 1] = string.sub(line.tag, 1, 3) .. '=' .. tostring(PropNum(player, line.prop));
 	end
 	return table.concat(parts, ',');
+end
+
+-- [探针] 抽样最多 3 个战斗单位：打印战斗力与能力列表
+--   用途：验证"卡片与政体共用同一能力"是否只生效一次（+4 而不是 +8）
+--   读取 API 出处：UnitPanel.lua:2225 unit:GetAbility() / :2243 unit:GetCombat()；单位遍历见本模组 Te_Kinich.lua
+local function ProbeUnitCombatReport(player)
+	local out = {};
+	local ok, err = pcall(function()
+		local units = player:GetUnits();
+		if units == nil then return; end
+		local shown = 0;
+		for _, u in units:Members() do
+			if shown >= 3 then break; end
+			local def = GameInfo.Units[u:GetUnitType()];
+			local cs = u:GetCombat();
+			if def ~= nil and cs ~= nil and cs > 0 then
+				shown = shown + 1;
+				local names = {};
+				local ab = u:GetAbility();
+				if ab ~= nil then
+					local list = ab:GetAbilities();
+					if list ~= nil then
+						for _, a in pairs(list) do
+							local nm = nil;
+							if type(a) == 'table' then
+								nm = a.AbilityType or a.Type or a.Name;
+							elseif type(a) == 'number' then
+								local row = GameInfo.UnitAbilities[a];
+								nm = (row ~= nil) and row.UnitAbilityType or tostring(a);
+							end
+							if nm ~= nil then names[#names + 1] = tostring(nm); end
+						end
+					end
+				end
+				out[#out + 1] = string.format("%s CS=%d ab[%s]", tostring(def.UnitType), cs, table.concat(names, ','));
+			end
+		end
+	end);
+	if not ok then return "单位读取失败:" .. tostring(err); end
+	if #out == 0 then return "<无战斗单位>"; end
+	return table.concat(out, ' || ');
 end
 
 function OnForeignFollowerProbe(turn)
@@ -885,7 +926,7 @@ function OnForeignFollowerProbe(turn)
 						scanStr = scanStr .. " [扫描错误: " .. table.concat(out.errs, '; ') .. "]";
 					end
 					print(string.format(
-						"[CCB-Probe-FF] T%d p%d 宗教=%s | 引擎口径: 总信徒=%d 外国信徒=%d 信奉城市=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | Lua: FF净档=%d 应=%d 使者正/负=%d/%d | 抵消[%s] 当前政体=%s | %s",
+						"[CCB-Probe-FF] T%d p%d 宗教=%s | 引擎口径: 总信徒=%d 外国信徒=%d 信奉城市=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | Lua: FF净档=%d 应=%d 使者正/负=%d/%d | 抵消[%s] 当前政体=%s | 单位: %s | %s",
 						turn, playerID, ProbeFF_ReligionName(iReligion),
 						nFollow, nForeign, (okN and nCitiesFaith) or -1,
 						(okC and cultureYield) or -1, dC, (okF and faithYield) or -1, dF,
@@ -893,12 +934,14 @@ function OnForeignFollowerProbe(turn)
 						PropNum(player, 'CCB_LEGACY_FF_NET'), fEngine,
 						PropNum(player, 'CCB_LEGACY_ENVOY_POS'), PropNum(player, 'CCB_LEGACY_ENVOY_NEG'),
 						ProbeOffsetStr(player), tostring(player:GetProperty('CCB_LEGACY_CURRENT_GOVT')),
+						ProbeUnitCombatReport(player),
 						scanStr));
 				else
-					print(string.format("[CCB-Probe-FF] T%d p%d 尚未创立宗教 | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | 引擎口径: 总信徒=%d 外国信徒=%d | 抵消[%s] 当前政体=%s —— 本卡设计上需已创立宗教",
+					print(string.format("[CCB-Probe-FF] T%d p%d 尚未创立宗教 | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | 引擎口径: 总信徒=%d 外国信徒=%d | 抵消[%s] 当前政体=%s | 单位: %s —— 本卡设计上需已创立宗教",
 						turn, playerID, (okC and cultureYield) or -1, dC, (okF and faithYield) or -1, dF,
 						ProbeFF_SlottedCCBCards(player), nFollow, nForeign,
-						ProbeOffsetStr(player), tostring(player:GetProperty('CCB_LEGACY_CURRENT_GOVT'))));
+						ProbeOffsetStr(player), tostring(player:GetProperty('CCB_LEGACY_CURRENT_GOVT')),
+						ProbeUnitCombatReport(player)));
 				end
 			end
 		end
