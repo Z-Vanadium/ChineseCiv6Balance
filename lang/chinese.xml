@@ -1672,28 +1672,34 @@
 			<Text>最早的空战单位，现代可用。[ICON_PROMOTION] 晋升时不会结束回合。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_FIGHTER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>原子能时代双翼机升级。[ICON_PROMOTION] 晋升时不会结束回合。</Text>
+			<Text>原子能时代双翼机升级。{LOC_ABILITY_CCB_FIGHTER_BOMBER_VS_TANK_DESC}[ICON_PROMOTION] 晋升时不会结束回合。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_BOMBER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>最早的轰炸单位，原子能时代可用。[ICON_PROMOTION] 晋升时不会结束回合。</Text>
+			<Text>最早的轰炸单位，原子能时代可用。{LOC_ABILITY_CCB_FIGHTER_BOMBER_VS_TANK_DESC}[ICON_PROMOTION] 晋升时不会结束回合。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_FIGHTER_BOMBER_VS_TANK_NAME" Language="zh_Hans_CN">
+			<Text>对地突击</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_FIGHTER_BOMBER_VS_TANK_DESC" Language="zh_Hans_CN">
+			<Text>与坦克、现代坦克作战时 +5 [ICON_STRENGTH] 战斗力。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_JET_FIGHTER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>信息时代战斗机升级。{LOC_ABILITY_CCB_JETFIGHTER_VS_CAVALRY_DESC}[ICON_PROMOTION] 晋升时不会结束回合。</Text>
+			<Text>信息时代战斗机升级。{LOC_ABILITY_CCB_JETFIGHTER_VS_ARMOR_DESC}[ICON_PROMOTION] 晋升时不会结束回合。</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_CCB_JETFIGHTER_VS_CAVALRY_NAME" Language="zh_Hans_CN">
-			<Text>{LOC_ABILITY_CCB_JETFIGHTER_VS_CAVALRY_DESC}[ICON_PROMOTION] 晋升时不会结束回合。</Text>
+		<Replace Tag="LOC_ABILITY_CCB_JETFIGHTER_VS_ARMOR_NAME" Language="zh_Hans_CN">
+			<Text>对地精确打击</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_CCB_JETFIGHTER_VS_CAVALRY_DESC" Language="zh_Hans_CN">
-			<Text>对阵骑兵单位 +5 [ICON_STRENGTH] 战斗力。</Text>
+		<Replace Tag="LOC_ABILITY_CCB_JETFIGHTER_VS_ARMOR_DESC" Language="zh_Hans_CN">
+			<Text>与坦克、现代坦克、直升飞机作战时 +10 [ICON_STRENGTH] 战斗力。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_JET_BOMBER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>信息时代轰炸机升级。{LOC_ABILITY_CCB_JETBOMBER_VS_CAVALRY_DESC}</Text>
+			<Text>信息时代轰炸机升级。{LOC_ABILITY_CCB_JETBOMBER_VS_ARMOR_DESC}</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_CCB_JETBOMBER_VS_CAVALRY_NAME" Language="zh_Hans_CN">
-			<Text>{LOC_ABILITY_CCB_JETBOMBER_VS_CAVALRY_DESC}</Text>
+		<Replace Tag="LOC_ABILITY_CCB_JETBOMBER_VS_ARMOR_NAME" Language="zh_Hans_CN">
+			<Text>对地饱和打击</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_CCB_JETBOMBER_VS_CAVALRY_DESC" Language="zh_Hans_CN">
-			<Text>对阵骑兵单位 +7 [ICON_STRENGTH] 战斗力。</Text>
+		<Replace Tag="LOC_ABILITY_CCB_JETBOMBER_VS_ARMOR_DESC" Language="zh_Hans_CN">
+			<Text>与坦克、现代坦克、直升飞机作战时 +10 [ICON_STRENGTH] 战斗力。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_ANTIAIR_GUN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>现代防空支援单位。为相邻1个单元格内的单位提供庇护以躲避空袭。</Text>
@@ -1773,7 +1779,7 @@
 			<Text>研究“制导系统”科技后 +5 [ICON_STRENGTH] 战斗力。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MODERN_ARMOR_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>又快又强大的信息时代重骑兵单位。+1 [ICON_Movement] 移动力。在友方领土防御时+5 [ICON_Strength] 战斗力，在非友方领土进攻时+5 [ICON_Strength] 战斗力。</Text>
+			<Text>又快又强大的信息时代重骑兵单位。+1 [ICON_Movement] 移动力。在友方领土防御时+5 [ICON_Strength] 战斗力，在非友方领土进攻时+5 [ICON_Strength] 战斗力。{LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_DESC}</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_ABILITY_STRENGTH_DEFENDING_FRIENDLY_NAME" Language="zh_Hans_CN">
 			<Text>在友方领土防御时+5 [ICON_Strength] 战斗力。</Text>
@@ -1809,7 +1815,13 @@
 			<Text>中世纪时代支援单位。需要军械库才能生产。可建造道路、铁路、堡垒、机场、导弹发射井和穿山隧道。其中一次建造次数也可用于完成20%的运河、水坝或水渠区域，或50%的防洪堤建筑。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_TANK_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>现代时代的快速重骑兵单位，无视控制区。在无树林、雨林或丘陵的平坦单元格上开始回合时获得+1 [ICON_MOVEMENT] 移动力。</Text>
+			<Text>现代时代的快速重骑兵单位，无视控制区。在无树林、雨林或丘陵的平坦单元格上开始回合时获得+1 [ICON_MOVEMENT] 移动力。{LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_DESC}</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_NAME" Language="zh_Hans_CN">
+			<Text>复合装甲</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_DESC" Language="zh_Hans_CN">
+			<Text>拥有 5 点远程防御力（防御远程攻击时 +5 [ICON_STRENGTH] 战斗力）。</Text>
 		</Replace>
 
 		<!-- === UNIT PROMOTIONS === -->
