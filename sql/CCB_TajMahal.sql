@@ -13,12 +13,34 @@
 ------------------------------------------------------------------------------
 
 --==============================================================================================
--- 1. 四分园（Charbagh）：所有城市 +1 宜居度
+-- 0. 奇观本体基础产出：+4 文化值（2026-09-20 用户追加）
+--    ⚠ 与三选一无关：这是泰姬陵**自身的地块产出**，恒定生效，**不随黄金时代开关**
+--      （故本条不带 OwnerRequirementSetId=PLAYER_HAS_GOLDEN_AGE）
+--    写法：Building_YieldChanges —— 原版奇观平坦产出的标准表（泰姬陵原版该表**无行**；
+--          全库实证样本：BUILDING_COLOSSEUM 有 +1 YIELD_CULTURE 行）
+--==============================================================================================
+INSERT OR REPLACE INTO Building_YieldChanges (BuildingType, YieldType, YieldChange) VALUES
+	('BUILDING_TAJ_MAHAL', 'YIELD_CULTURE', 4);
+
+--==============================================================================================
+-- 1. 四分园（Charbagh）：所有城市 +1 宜居度、+1 住房、发展速度 +15%
+--    2026-09-20 用户增强（原为"所有城市 +1 宜居度"单向，本次追加 住房 与 发展速度）
+--    引擎先例（均为"全城"量级，写法照抄）：
+--      · 宜居度：MODIFIER_PLAYER_CITIES_ADJUST_TRAIT_AMENITY（工程先例 瑞士/刚果）
+--      · 住房：  MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_HOUSING + Amount=1
+--               —— 原版**吴哥窟** ANGKORWAT_ADDHOUSING 同款（无 SubjectRequirementSetId → 全城 +1 住房）
+--      · 发展速度：MODIFIER_PLAYER_CITIES_ADJUST_CITY_GROWTH + Amount=15
+--               —— 原版**空中花园** HANGING_GARDEN_ADDGROWTH 同款（Amount=15 即 +15%）
+--    三者均挂 OwnerRequirementSetId=PLAYER_HAS_GOLDEN_AGE（随黄金时代开关，选项设计一致）
 --==============================================================================================
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId) VALUES
-	('CCB_TAJ_CHARBAGH_AMENITY', 'MODIFIER_PLAYER_CITIES_ADJUST_TRAIT_AMENITY', 'PLAYER_HAS_GOLDEN_AGE');
+	('CCB_TAJ_CHARBAGH_AMENITY', 'MODIFIER_PLAYER_CITIES_ADJUST_TRAIT_AMENITY',    'PLAYER_HAS_GOLDEN_AGE'),
+	('CCB_TAJ_CHARBAGH_HOUSING', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_HOUSING', 'PLAYER_HAS_GOLDEN_AGE'),
+	('CCB_TAJ_CHARBAGH_GROWTH',  'MODIFIER_PLAYER_CITIES_ADJUST_CITY_GROWTH',      'PLAYER_HAS_GOLDEN_AGE');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-	('CCB_TAJ_CHARBAGH_AMENITY', 'Amount', 1);
+	('CCB_TAJ_CHARBAGH_AMENITY', 'Amount', 1),
+	('CCB_TAJ_CHARBAGH_HOUSING', 'Amount', 1),
+	('CCB_TAJ_CHARBAGH_GROWTH',  'Amount', 15);
 
 --==============================================================================================
 -- 2. 镶嵌工艺（Parchin Kari）：建造者 +1 充能；每座工业区 +1 大工程师点；每座工作坊 +1 大工程师点
