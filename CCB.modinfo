@@ -11,9 +11,9 @@
 		<Name>CCB 1.7 WIP</Name>
 		<Version>1700</Version>
 		<Description>
-			中国特色平衡模组，取代BBG。
+			中国特色平衡模组，面向联机与人机对战。
 		</Description>
-		<Teaser>中国特色平衡模组，取代BBG。</Teaser>
+		<Teaser>中国特色平衡模组，面向联机与人机对战。</Teaser>
 		<Authors>github.com/Z-Vanadium/ChineseCiv6Balance</Authors>
 		<SpecialThanks>GLaYD, Violet, 千川白浪，Vanadium，煎包，猪脚，gDot，Alan, 小闹钟，以及bbg制作组以前的努力</SpecialThanks>
 		<CompatibleVersions>2.0</CompatibleVersions>
