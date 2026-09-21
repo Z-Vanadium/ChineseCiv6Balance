@@ -858,3 +858,83 @@ CROSS JOIN (
 ) REAL;
 
 
+--==============================================================================================
+-- 6) 政体固有 × 传承卡基础效果 的「重复结算抵消」（2026-09-20 用户确认方案 B）
+--
+--  问题（2026-09-10 挂起至今）：引擎原生"处于该政体时隐藏该政体传承卡"只覆盖
+--    `Governments.PolicyToUnlock` 一对一绑定的那张【一级卡】（其 RequiresGovernmentUnlock=1）。
+--    我们自建的二级/三级升级卡（ExplicitUnlock=1）不在规则内 → 在该政体内仍可装备 →
+--    政体固有 + 卡片基础 **同项双计**（寡头 +4→+8、古典共和 宜居/住房 +1→+2、独裁 粮/锤 +1→+2）。
+--
+--  修法：由 Lua（`UpdateGovernmentDoubleOffset`）在"处于该线政体 **且** 装了该线传承卡"时，
+--    挂一份**负向抵消**把重复的那一份扣掉；离开该状态时挂**正向抵消**还原（引擎无 detach → 正负池对冲）。
+--    净额恒为"只算一次"，且**保留升级卡的其它附加效果**（+1 移速 / 海军经验 等不在抵消范围）。
+--
+--  ⚠ 抵消口径必须与"两份效果真正重叠的范围"一致，否则会多扣：
+--    · 寡头：政体与卡片都是"对 近战/抗骑/海军近战 单位 +4"→ 范围相同 → 抵消同兵种 + 同类型
+--    · 古典共和：政体只在【有专业区域的城市】给，卡片是【全城市】给 → 抵消必须按【政体口径】
+--      （CITY_HAS_1_SPECIALTY_DISTRICT），否则无区域城市会被多扣 1
+--    · 独裁：政体的 +1 粮/锤 只对有纪念碑的城市生效（建筑产出），卡片要求【有纪念碑 + 有专业区域】→
+--      抵消按【卡片口径】（CCB_REQSET_AUTOCRACY_MONUMENT_SPECIALTY，该范围内两份必然同时生效）
+--==============================================================================================
+
+-- 6.1 寡头：±4 战斗力抵消能力（同兵种标签；Inactive=1 以便随授予/收回）
+INSERT INTO Types (Type, Kind) VALUES
+('ABILITY_CCB_OLI_OFFSET_NEG', 'KIND_ABILITY'),
+('ABILITY_CCB_OLI_OFFSET_POS', 'KIND_ABILITY');
+INSERT INTO TypeTags (Type, Tag) VALUES
+('ABILITY_CCB_OLI_OFFSET_NEG', 'CLASS_MELEE'),
+('ABILITY_CCB_OLI_OFFSET_NEG', 'CLASS_NAVAL_MELEE'),
+('ABILITY_CCB_OLI_OFFSET_NEG', 'CLASS_ANTI_CAVALRY'),
+('ABILITY_CCB_OLI_OFFSET_POS', 'CLASS_MELEE'),
+('ABILITY_CCB_OLI_OFFSET_POS', 'CLASS_NAVAL_MELEE'),
+('ABILITY_CCB_OLI_OFFSET_POS', 'CLASS_ANTI_CAVALRY');
+INSERT INTO UnitAbilities (UnitAbilityType, Name, Description, Inactive) VALUES
+('ABILITY_CCB_OLI_OFFSET_NEG', NULL, NULL, 1),
+('ABILITY_CCB_OLI_OFFSET_POS', NULL, NULL, 1);
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+('CCB_OLI_OFFSET_NEG_CS', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH'),
+('CCB_OLI_OFFSET_POS_CS', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+('CCB_OLI_OFFSET_NEG_CS', 'Amount', -4),
+('CCB_OLI_OFFSET_POS_CS', 'Amount', 4);
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
+('ABILITY_CCB_OLI_OFFSET_NEG', 'CCB_OLI_OFFSET_NEG_CS'),
+('ABILITY_CCB_OLI_OFFSET_POS', 'CCB_OLI_OFFSET_POS_CS');
+-- 授予器（Lua 用 player:AttachModifierByID 挂载/对冲）
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+('CCB_OLI_OFFSET_GRANT_NEG', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY'),
+('CCB_OLI_OFFSET_GRANT_POS', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+('CCB_OLI_OFFSET_GRANT_NEG', 'AbilityType', 'ABILITY_CCB_OLI_OFFSET_NEG'),
+('CCB_OLI_OFFSET_GRANT_POS', 'AbilityType', 'ABILITY_CCB_OLI_OFFSET_POS');
+
+-- 6.2 古典共和：±1 宜居 / ±1 住房（按政体口径 = 有 1 个专业区域的城市）
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+('CCB_REP_OFFSET_NEG_AMENITY', 'MODIFIER_PLAYER_CITIES_ADJUST_POLICY_AMENITY', 'CITY_HAS_1_SPECIALTY_DISTRICT'),
+('CCB_REP_OFFSET_POS_AMENITY', 'MODIFIER_PLAYER_CITIES_ADJUST_POLICY_AMENITY', 'CITY_HAS_1_SPECIALTY_DISTRICT'),
+('CCB_REP_OFFSET_NEG_HOUSING', 'MODIFIER_PLAYER_CITIES_ADJUST_POLICY_HOUSING', 'CITY_HAS_1_SPECIALTY_DISTRICT'),
+('CCB_REP_OFFSET_POS_HOUSING', 'MODIFIER_PLAYER_CITIES_ADJUST_POLICY_HOUSING', 'CITY_HAS_1_SPECIALTY_DISTRICT');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+('CCB_REP_OFFSET_NEG_AMENITY', 'Amount', -1),
+('CCB_REP_OFFSET_POS_AMENITY', 'Amount', 1),
+('CCB_REP_OFFSET_NEG_HOUSING', 'Amount', -1),
+('CCB_REP_OFFSET_POS_HOUSING', 'Amount', 1);
+
+-- 6.3 独裁：±1 粮食 / ±1 生产力（按卡片口径 = 有纪念碑 + 有专业区域的城市）
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+('CCB_AUT_OFFSET_NEG_FOOD', 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_CHANGE', 'CCB_REQSET_AUTOCRACY_MONUMENT_SPECIALTY'),
+('CCB_AUT_OFFSET_POS_FOOD', 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_CHANGE', 'CCB_REQSET_AUTOCRACY_MONUMENT_SPECIALTY'),
+('CCB_AUT_OFFSET_NEG_PROD', 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_CHANGE', 'CCB_REQSET_AUTOCRACY_MONUMENT_SPECIALTY'),
+('CCB_AUT_OFFSET_POS_PROD', 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_CHANGE', 'CCB_REQSET_AUTOCRACY_MONUMENT_SPECIALTY');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+('CCB_AUT_OFFSET_NEG_FOOD', 'Amount', -1),
+('CCB_AUT_OFFSET_NEG_FOOD', 'YieldType', 'YIELD_FOOD'),
+('CCB_AUT_OFFSET_POS_FOOD', 'Amount', 1),
+('CCB_AUT_OFFSET_POS_FOOD', 'YieldType', 'YIELD_FOOD'),
+('CCB_AUT_OFFSET_NEG_PROD', 'Amount', -1),
+('CCB_AUT_OFFSET_NEG_PROD', 'YieldType', 'YIELD_PRODUCTION'),
+('CCB_AUT_OFFSET_POS_PROD', 'Amount', 1),
+('CCB_AUT_OFFSET_POS_PROD', 'YieldType', 'YIELD_PRODUCTION');
+
+

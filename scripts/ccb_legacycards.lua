@@ -307,6 +307,11 @@ function OnGovernmentChanged(playerID, govtIndex)
 		.. ' idx=' .. tostring(govtIndex) .. ' type=' .. tostring(govtType));
 	if govtType ~= nil then
 		player:SetProperty(PROP_CURRENT_GOVT, govtType);
+		-- 政体已切换 → 立刻重算"重复结算抵消"（否则要多算一整回合双份）
+		-- 注：本函数定义在文件后段（全局函数），此处按调用期解析；加载期事件不触发，已加 nil 保护
+		if UpdateGovernmentDoubleOffset ~= nil then
+			UpdateGovernmentDoubleOffset(player);
+		end
 	end
 	-- [探针·临时 2026-09-10 · 任务已挂起] 方案 D（T1 政体内隐藏该线传承卡）可行性验证
 	--   挂起原因：当前改验其它内容；探针会改写 T1 卡的过时状态 → 污染存档，勿在正式测试档启用
@@ -554,6 +559,70 @@ local function UpdateForeignFollowerYield(player)
 		.. ' | followers=' .. tostring(followers) .. ' equipped=' .. tostring(equipped) .. ')');
 end
 
+-- ===========================================================================
+-- 政体固有 × 传承卡基础效果 的「重复结算抵消」（方案 B，2026-09-20 用户确认）
+--
+-- 问题：引擎原生"处于该政体时隐藏该政体传承卡"只覆盖 Governments.PolicyToUnlock 绑定的那张【一级卡】；
+--       我们自建的二级/三级升级卡不在规则内 → 在该政体内仍可装备 → 政体固有与卡片基础同项双计：
+--         寡头 +4→+8 战斗力｜古典共和 宜居/住房 +1→+2｜独裁 粮/锤 +1→+2
+-- 修法：Lua 每回合判断「当前处于该线政体 且 槽里有该线传承卡」→ 挂【负向抵消】扣掉重复那一份；
+--       状态解除 → 挂【正向抵消】还原（引擎无 detach → 正负池对冲，净额恒为"只算一次"）。
+--       升级卡的其它附加效果（+1 移速 / 海军经验 / T3 方向效果）不在抵消范围，照常生效。
+-- 口径：抵消范围必须等于"两份效果真正重叠的范围"（详见 LegacyCards.sql §6 注释）
+--   · 寡头   → 同兵种（近战/抗骑/海军近战）+ ±4 战斗力能力
+--   · 共和   → 按【政体口径】CITY_HAS_1_SPECIALTY_DISTRICT（卡片是全城市，政体只给有区域的城市）
+--   · 独裁   → 按【卡片口径】CCB_REQSET_AUTOCRACY_MONUMENT_SPECIALTY
+-- 当前政体读取：player:GetGovernment() 不存在（见本文件顶部 API 备注）→ 用 PROP_CURRENT_GOVT
+-- （由 Events.GovernmentChanged 维护；政体变更当场也会调用本函数，避免多算一整回合）
+-- ===========================================================================
+local OFFSET_LINES = {
+	{ prop = 'CCB_LEGACY_OFF_NET_OLI', govt = 'GOVERNMENT_OLIGARCHY', tag = 'OLIGARCHY',
+	  neg = { 'CCB_OLI_OFFSET_GRANT_NEG' }, pos = { 'CCB_OLI_OFFSET_GRANT_POS' } },
+	{ prop = 'CCB_LEGACY_OFF_NET_REP', govt = 'GOVERNMENT_CLASSICAL_REPUBLIC', tag = 'REPUBLIC',
+	  neg = { 'CCB_REP_OFFSET_NEG_AMENITY', 'CCB_REP_OFFSET_NEG_HOUSING' },
+	  pos = { 'CCB_REP_OFFSET_POS_AMENITY', 'CCB_REP_OFFSET_POS_HOUSING' } },
+	{ prop = 'CCB_LEGACY_OFF_NET_AUT', govt = 'GOVERNMENT_AUTOCRACY', tag = 'AUTOCRACY',
+	  neg = { 'CCB_AUT_OFFSET_NEG_FOOD', 'CCB_AUT_OFFSET_NEG_PROD' },
+	  pos = { 'CCB_AUT_OFFSET_POS_FOOD', 'CCB_AUT_OFFSET_POS_PROD' } },
+};
+
+-- 政策槽里是否装了该线的传承卡（一级/二级/三级都算，卡名含该线关键字）
+local function HasLineCardSlotted(culture, tag)
+	if culture == nil or culture.GetNumPolicySlots == nil or culture.GetSlotPolicy == nil then return false; end
+	local nSlots = culture:GetNumPolicySlots();
+	for i = 0, nSlots - 1 do
+		local h = culture:GetSlotPolicy(i);
+		if h ~= nil and h ~= -1 then
+			local info = GameInfo.Policies[h];
+			if info ~= nil and string.find(info.PolicyType, tag, 1, true) ~= nil then return true; end
+		end
+	end
+	return false;
+end
+
+function UpdateGovernmentDoubleOffset(player)
+	if player == nil then return; end
+	local culture = GetCulture(player);
+	if culture == nil then return; end
+	local curGovt = player:GetProperty(PROP_CURRENT_GOVT);
+	for _, line in ipairs(OFFSET_LINES) do
+		local desired = 0;
+		if curGovt == line.govt and HasLineCardSlotted(culture, line.tag) then desired = -1; end
+		local net = PropNum(player, line.prop);
+		if desired ~= net then
+			local steps = math.abs(desired - net);
+			local ids = (desired < net) and line.neg or line.pos;
+			for _ = 1, steps do
+				for _, id in ipairs(ids) do player:AttachModifierByID(id); end
+			end
+			player:SetProperty(line.prop, desired);
+			print('[CCB-Legacy] p' .. tostring(player:GetID()) .. ' govt-offset ' .. line.tag
+				.. ' ' .. tostring(net) .. '->' .. tostring(desired)
+				.. ' (govt=' .. tostring(curGovt) .. ')');
+		end
+	end
+end
+
 function OnGameTurnStarted(turn)
 	local ids = PlayerManager.GetAliveMajorIDs();
 	for _, playerID in ipairs(ids) do
@@ -619,6 +688,9 @@ function OnGameTurnStarted(turn)
 
 			-- 神权卡「外国信徒 → 文化/信仰」：Lua 自算 + 二进制档位（见 UpdateForeignFollowerYield 上方说明）
 			UpdateForeignFollowerYield(player);
+
+			-- 政体固有 × 传承卡基础效果 的重复结算抵消（方案 B，见 UpdateGovernmentDoubleOffset 上方说明）
+			UpdateGovernmentDoubleOffset(player);
 		end
 	end
 end
@@ -760,6 +832,15 @@ end
 -- 上一回合产出（用于打印逐回合变化，判断"卸卡后数值有没有掉"）
 local PROBE_FF_PREV = {};
 
+-- 重复结算抵消的当前状态（0 = 未抵消；-1 = 已挂一份负向抵消）
+local function ProbeOffsetStr(player)
+	local parts = {};
+	for _, line in ipairs(OFFSET_LINES) do
+		table.insert(parts, string.sub(line.tag, 1, 3) .. '=' .. tostring(PropNum(player, line.prop)));
+	end
+	return table.concat(parts, ',');
+end
+
 function OnForeignFollowerProbe(turn)
 	if not PROBE_FF_ENABLED then return; end
 	local ids = PlayerManager.GetAliveMajorIDs();
@@ -804,18 +885,20 @@ function OnForeignFollowerProbe(turn)
 						scanStr = scanStr .. " [扫描错误: " .. table.concat(out.errs, '; ') .. "]";
 					end
 					print(string.format(
-						"[CCB-Probe-FF] T%d p%d 宗教=%s | 引擎口径: 总信徒=%d 外国信徒=%d 信奉城市=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | Lua: FF净档=%d 应=%d 使者正/负=%d/%d | %s",
+						"[CCB-Probe-FF] T%d p%d 宗教=%s | 引擎口径: 总信徒=%d 外国信徒=%d 信奉城市=%d | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | Lua: FF净档=%d 应=%d 使者正/负=%d/%d | 抵消[%s] 当前政体=%s | %s",
 						turn, playerID, ProbeFF_ReligionName(iReligion),
 						nFollow, nForeign, (okN and nCitiesFaith) or -1,
 						(okC and cultureYield) or -1, dC, (okF and faithYield) or -1, dF,
 						ProbeFF_SlottedCCBCards(player),
 						PropNum(player, 'CCB_LEGACY_FF_NET'), fEngine,
 						PropNum(player, 'CCB_LEGACY_ENVOY_POS'), PropNum(player, 'CCB_LEGACY_ENVOY_NEG'),
+						ProbeOffsetStr(player), tostring(player:GetProperty('CCB_LEGACY_CURRENT_GOVT')),
 						scanStr));
 				else
-					print(string.format("[CCB-Probe-FF] T%d p%d 尚未创立宗教 | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | 引擎口径: 总信徒=%d 外国信徒=%d —— 本卡设计上需已创立宗教",
+					print(string.format("[CCB-Probe-FF] T%d p%d 尚未创立宗教 | 产出: 文化=%.1f(Δ%+.1f) 信仰=%.1f(Δ%+.1f) | 卡=%s | 引擎口径: 总信徒=%d 外国信徒=%d | 抵消[%s] 当前政体=%s —— 本卡设计上需已创立宗教",
 						turn, playerID, (okC and cultureYield) or -1, dC, (okF and faithYield) or -1, dF,
-						ProbeFF_SlottedCCBCards(player), nFollow, nForeign));
+						ProbeFF_SlottedCCBCards(player), nFollow, nForeign,
+						ProbeOffsetStr(player), tostring(player:GetProperty('CCB_LEGACY_CURRENT_GOVT'))));
 				end
 			end
 		end
