@@ -43,7 +43,8 @@ UPDATE Units SET Combat=85,  Bombard=115      WHERE UnitType='UNIT_JET_BOMBER';
 
 --==============================================================================================
 -- CCB 空地 / 装甲对抗体系（2026-09-20 用户需求 · 兵种平衡）
---   ① 坦克 / 现代坦克：固有「5 点远程防御」= 防御远程攻击时 +5 战斗力
+--   ① 坦克 / 现代坦克 / 直升飞机：固有「5 点远程防御」= 防御远程攻击时 +5 战斗力
+--      —— 直升飞机为 2026-09-20 用户追加（同一能力，按 CLASS_HELICOPTER 标签授予）
 --   ② 战斗机 / 轰炸机：与坦克、现代坦克作战时 +5 战斗力
 --   ③ 喷气式战斗机 / 喷气式轰炸机：与坦克、现代坦克、直升飞机作战时 +10 战斗力
 --      —— ③ 取代原「对阵骑兵 +5 / +7」词条。原实现的两点问题：
@@ -62,9 +63,11 @@ UPDATE Units SET Combat=85,  Bombard=115      WHERE UnitType='UNIT_JET_BOMBER';
 --==============================================================================================
 
 -- ── 目标标签登记 ──────────────────────────────────────────────────────────────
---   CCB_CLASS_TANK            = 坦克类（坦克 + 现代坦克）
+--   CCB_CLASS_TANK            = 坦克类（坦克 + 现代坦克）—— 用于"空袭加成目标"与"远程防御"两处
 --   CCB_CLASS_FIGHTER_BOMBER  = 战斗机 / 轰炸机（含替代战斗机的美国 P-51 野马）
 --   CLASS_JET_FIGHTER/BOMBER  = 沿用本工程原标签（喷气式两机）
+--   直升飞机用原版标签 CLASS_HELICOPTER：**只挂"远程防御"这一条能力**，不并入 CCB_CLASS_TANK
+--     —— 否则战斗机/轰炸机的"对坦克类 +5"会连带打到直升飞机（用户口径：+5 只对坦克/现代坦克）
 INSERT INTO Tags (Tag, Vocabulary) VALUES
 	('CCB_CLASS_TANK',           'ABILITY_CLASS'),
 	('CCB_CLASS_FIGHTER_BOMBER', 'ABILITY_CLASS'),
@@ -77,7 +80,8 @@ INSERT INTO TypeTags (Type, Tag) VALUES
 	('UNIT_FIGHTER',      'CCB_CLASS_FIGHTER_BOMBER'),
 	('UNIT_BOMBER',       'CCB_CLASS_FIGHTER_BOMBER'),
 	('UNIT_AMERICAN_P51', 'CCB_CLASS_FIGHTER_BOMBER'),
-	('ABILITY_CCB_TANK_RANGED_DEFENSE',      'CCB_CLASS_TANK'),
+	('ABILITY_CCB_RANGED_DEFENSE',           'CCB_CLASS_TANK'),      -- 坦克 / 现代坦克
+	('ABILITY_CCB_RANGED_DEFENSE',           'CLASS_HELICOPTER'),    -- 直升飞机（2026-09-20 追加）
 	('ABILITY_CCB_FIGHTER_BOMBER_VS_TANK',   'CCB_CLASS_FIGHTER_BOMBER'),
 	('ABILITY_CCB_JETFIGHTER_VS_ARMOR',      'CLASS_JET_FIGHTER'),
 	('UNIT_JET_FIGHTER',                     'CLASS_JET_FIGHTER'),
@@ -102,19 +106,19 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 	('CCB_RANGED_DEFENSE_REQUIREMENTS',           'RANGED_COMBAT_REQUIREMENTS'),
 	('CCB_RANGED_DEFENSE_REQUIREMENTS',           'PLAYER_IS_DEFENDER_REQUIREMENTS');
 
--- ── ① 坦克 / 现代坦克：5 点远程防御 ───────────────────────────────────────────
+-- ── ① 坦克 / 现代坦克 / 直升飞机：5 点远程防御 ────────────────────────────────
 INSERT INTO Types (Type, Kind) VALUES
-	('ABILITY_CCB_TANK_RANGED_DEFENSE', 'KIND_ABILITY');
+	('ABILITY_CCB_RANGED_DEFENSE', 'KIND_ABILITY');
 INSERT INTO UnitAbilities (UnitAbilityType, Name, Description) VALUES
-	('ABILITY_CCB_TANK_RANGED_DEFENSE', 'LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_NAME', 'LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_DESC');
+	('ABILITY_CCB_RANGED_DEFENSE', 'LOC_ABILITY_CCB_RANGED_DEFENSE_NAME', 'LOC_ABILITY_CCB_RANGED_DEFENSE_DESC');
 INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
-	('ABILITY_CCB_TANK_RANGED_DEFENSE', 'CCB_TANK_RANGED_DEFENSE_MODIFIER');
+	('ABILITY_CCB_RANGED_DEFENSE', 'CCB_RANGED_DEFENSE_MODIFIER');
 INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
-	('CCB_TANK_RANGED_DEFENSE_MODIFIER', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 'CCB_RANGED_DEFENSE_REQUIREMENTS');
+	('CCB_RANGED_DEFENSE_MODIFIER', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 'CCB_RANGED_DEFENSE_REQUIREMENTS');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-	('CCB_TANK_RANGED_DEFENSE_MODIFIER', 'Amount', 5);
+	('CCB_RANGED_DEFENSE_MODIFIER', 'Amount', 5);
 INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
-	('CCB_TANK_RANGED_DEFENSE_MODIFIER', 'Preview', 'LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_DESC');
+	('CCB_RANGED_DEFENSE_MODIFIER', 'Preview', 'LOC_ABILITY_CCB_RANGED_DEFENSE_DESC');
 
 -- ── ② 战斗机 / 轰炸机：与坦克类作战 +5 ────────────────────────────────────────
 INSERT INTO Types (Type, Kind) VALUES
@@ -158,14 +162,18 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 	('CCB_JETBOMBER_VS_ARMOR_MODIFIER', 'Preview', 'LOC_ABILITY_CCB_JETBOMBER_VS_ARMOR_DESC');
 
--- ── 旧「对阵骑兵」词条清理（旧 ID 链：能力 / 修饰器 / 预览串 / 类型） ───────────
-DELETE FROM UnitAbilityModifiers WHERE ModifierId IN ('CCB_JETFIGHTER_VS_CAVALRY_MODIFIER', 'CCB_JETBOMBER_VS_CAVALRY_MODIFIER');
-DELETE FROM ModifierStrings       WHERE ModifierId IN ('CCB_JETFIGHTER_VS_CAVALRY_MODIFIER', 'CCB_JETBOMBER_VS_CAVALRY_MODIFIER');
-DELETE FROM ModifierArguments     WHERE ModifierId IN ('CCB_JETFIGHTER_VS_CAVALRY_MODIFIER', 'CCB_JETBOMBER_VS_CAVALRY_MODIFIER');
-DELETE FROM Modifiers             WHERE ModifierId IN ('CCB_JETFIGHTER_VS_CAVALRY_MODIFIER', 'CCB_JETBOMBER_VS_CAVALRY_MODIFIER');
-DELETE FROM UnitAbilities         WHERE UnitAbilityType IN ('ABILITY_CCB_JETFIGHTER_VS_CAVALRY', 'ABILITY_CCB_JETBOMBER_VS_CAVALRY');
-DELETE FROM TypeTags              WHERE Type IN ('ABILITY_CCB_JETFIGHTER_VS_CAVALRY', 'ABILITY_CCB_JETBOMBER_VS_CAVALRY');
-DELETE FROM Types                 WHERE Type IN ('ABILITY_CCB_JETFIGHTER_VS_CAVALRY', 'ABILITY_CCB_JETBOMBER_VS_CAVALRY');
+-- ── 旧词条清理（旧 ID 链：能力 / 修饰器 / 预览串 / 类型） ───────────────────────
+--   (a) 旧「对阵骑兵 +5/+7」两机（2026-09-20 作废）
+--   (b) 中间版本 `ABILITY_CCB_TANK_RANGED_DEFENSE`（后改名为 ABILITY_CCB_RANGED_DEFENSE
+--       并纳入直升飞机）—— 留着会让坦克同时吃到新旧两条 → +10；引擎每次启动整库重建，
+--       正常不会残留，此处仅作幂等保险
+DELETE FROM UnitAbilityModifiers WHERE ModifierId IN ('CCB_JETFIGHTER_VS_CAVALRY_MODIFIER', 'CCB_JETBOMBER_VS_CAVALRY_MODIFIER', 'CCB_TANK_RANGED_DEFENSE_MODIFIER');
+DELETE FROM ModifierStrings       WHERE ModifierId IN ('CCB_JETFIGHTER_VS_CAVALRY_MODIFIER', 'CCB_JETBOMBER_VS_CAVALRY_MODIFIER', 'CCB_TANK_RANGED_DEFENSE_MODIFIER');
+DELETE FROM ModifierArguments     WHERE ModifierId IN ('CCB_JETFIGHTER_VS_CAVALRY_MODIFIER', 'CCB_JETBOMBER_VS_CAVALRY_MODIFIER', 'CCB_TANK_RANGED_DEFENSE_MODIFIER');
+DELETE FROM Modifiers             WHERE ModifierId IN ('CCB_JETFIGHTER_VS_CAVALRY_MODIFIER', 'CCB_JETBOMBER_VS_CAVALRY_MODIFIER', 'CCB_TANK_RANGED_DEFENSE_MODIFIER');
+DELETE FROM UnitAbilities         WHERE UnitAbilityType IN ('ABILITY_CCB_JETFIGHTER_VS_CAVALRY', 'ABILITY_CCB_JETBOMBER_VS_CAVALRY', 'ABILITY_CCB_TANK_RANGED_DEFENSE');
+DELETE FROM TypeTags              WHERE Type IN ('ABILITY_CCB_JETFIGHTER_VS_CAVALRY', 'ABILITY_CCB_JETBOMBER_VS_CAVALRY', 'ABILITY_CCB_TANK_RANGED_DEFENSE');
+DELETE FROM Types                 WHERE Type IN ('ABILITY_CCB_JETFIGHTER_VS_CAVALRY', 'ABILITY_CCB_JETBOMBER_VS_CAVALRY', 'ABILITY_CCB_TANK_RANGED_DEFENSE');
 
 -- 2025/12/08 all civ: plane promotion no finish move
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES 

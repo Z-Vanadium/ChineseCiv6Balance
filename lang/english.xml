@@ -1495,17 +1495,21 @@
 		</Replace>
 		<!-- = Tank = -->		
 		<Replace Tag="LOC_UNIT_TANK_DESCRIPTION" Language="en_US">
-			<Text>Fast-moving Modern era heavy cavalry unit that ignores zone of control. Gains 1 bonus [ICON_MOVEMENT] Movement if it begins a turn on a flat tile with no Woods, Rainforest, or Hills.[NEWLINE][NEWLINE]{LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_DESC}</Text>
+			<Text>Fast-moving Modern era heavy cavalry unit that ignores zone of control. Gains 1 bonus [ICON_MOVEMENT] Movement if it begins a turn on a flat tile with no Woods, Rainforest, or Hills.[NEWLINE][NEWLINE]{LOC_ABILITY_CCB_RANGED_DEFENSE_DESC}</Text>
+		</Replace>
+		<!-- = Helicopter = -->
+		<Replace Tag="LOC_UNIT_HELICOPTER_DESCRIPTION" Language="en_US">
+			<Text>Fast-moving Atomic era light cavalry unit.[NEWLINE][NEWLINE]{LOC_ABILITY_CCB_RANGED_DEFENSE_DESC}</Text>
 		</Replace>
 		<!-- = Modern Armor = -->
 		<Replace Tag="LOC_UNIT_MODERN_ARMOR_DESCRIPTION" Language="en_US">
-			<Text>Information era heavy cavalry unit that is fast and strong. Gains 1 bonus [ICON_Movement] Movement if it begins a turn on a flat tile with no Woods, Rainforest, or Hills.[NEWLINE][NEWLINE]+5 [ICON_STRENGTH] Combat Strenth when defending inside friendly territory and +5 [ICON_STRENGTH] Combat Strength when attacking outside friendly territory.[NEWLINE][NEWLINE]{LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_DESC}</Text>
+			<Text>Information era heavy cavalry unit that is fast and strong. Gains 1 bonus [ICON_Movement] Movement if it begins a turn on a flat tile with no Woods, Rainforest, or Hills.[NEWLINE][NEWLINE]+5 [ICON_STRENGTH] Combat Strenth when defending inside friendly territory and +5 [ICON_STRENGTH] Combat Strength when attacking outside friendly territory.[NEWLINE][NEWLINE]{LOC_ABILITY_CCB_RANGED_DEFENSE_DESC}</Text>
 		</Replace>
 		<!-- = CCB 空地/装甲对抗体制：能力词条（2026-09-20 兵种平衡） = -->
-		<Replace Tag="LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_NAME" Language="en_US">
-			<Text>Composite Armor</Text>
+		<Replace Tag="LOC_ABILITY_CCB_RANGED_DEFENSE_NAME" Language="en_US">
+			<Text>Armor Plating</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_CCB_TANK_RANGED_DEFENSE_DESC" Language="en_US">
+		<Replace Tag="LOC_ABILITY_CCB_RANGED_DEFENSE_DESC" Language="en_US">
 			<Text>Has 5 Ranged Defense (+5 [ICON_STRENGTH] Combat Strength when defending against ranged attacks).</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_CCB_FIGHTER_BOMBER_VS_TANK_NAME" Language="en_US">
@@ -1537,7 +1541,7 @@
 			<Text>Information era Fighter upgrade. {LOC_ABILITY_CCB_JETFIGHTER_VS_ARMOR_DESC}[ICON_PROMOTION] Promotion does not end the turn.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_JET_BOMBER_DESCRIPTION" Language="en_US">
-			<Text>Information era Bomber upgrade. {LOC_ABILITY_CCB_JETBOMBER_VS_ARMOR_DESC}</Text>
+			<Text>Information era Bomber upgrade. {LOC_ABILITY_CCB_JETBOMBER_VS_ARMOR_DESC}[ICON_PROMOTION] Promotion does not end the turn.</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_ABILITY_STRENGTH_DEFENDING_FRIENDLY_NAME" Language="en_US">
 			<Text>Entrenched</Text>
