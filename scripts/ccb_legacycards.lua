@@ -843,22 +843,25 @@ end
 
 -- [探针] 抽样最多 3 个战斗单位：打印战斗力与能力列表
 --   用途：验证"卡片与政体共用同一能力"是否只生效一次（+4 而不是 +8）
---   读取 API 出处：UnitPanel.lua:2225 unit:GetAbility() / :2243 unit:GetCombat()；单位遍历见本模组 Te_Kinich.lua
+--   读取 API 出处：UnitPanel.lua:2225 unit:GetAbility() / :2243 unit:GetCombat()
+--   ⚠ 单位遍历写法需容错：本模组 Te_Kinich.lua 用 `GetUnits():Members()`，但实测
+--     在 gameplay 环境下该迭代器可能给出非单位对象（`u.GetUnitType` 为 nil）→ 依次尝试
+--     Members() / ipairs / pairs，取第一个能给出"像单位"的对象的方式，并在日志里报告方式。
 local function ProbeUnitCombatReport(player)
 	local out = {};
+	local how = "?";
 	local ok, err = pcall(function()
 		local units = player:GetUnits();
-		if units == nil then return; end
-		local shown = 0;
-		for _, u in units:Members() do
-			if shown >= 3 then break; end
+		if units == nil then how = "无GetUnits"; return; end
+		local fn = function(u)
+			if #out >= 3 then return; end
+			if u == nil or u.GetUnitType == nil then return; end
 			local def = GameInfo.Units[u:GetUnitType()];
 			local cs = u:GetCombat();
 			if def ~= nil and cs ~= nil and cs > 0 then
-				shown = shown + 1;
 				local names = {};
 				local ab = u:GetAbility();
-				if ab ~= nil then
+				if ab ~= nil and ab.GetAbilities ~= nil then
 					local list = ab:GetAbilities();
 					if list ~= nil then
 						for _, a in pairs(list) do
@@ -876,10 +879,27 @@ local function ProbeUnitCombatReport(player)
 				out[#out + 1] = string.format("%s CS=%d ab[%s]", tostring(def.UnitType), cs, table.concat(names, ','));
 			end
 		end
+		-- 方式 1：Members() 迭代器
+		if units.Members ~= nil then
+			local ok1 = pcall(function()
+				for _, u in units:Members() do fn(u); end
+			end);
+			if ok1 and #out > 0 then how = "Members"; return; end
+		end
+		-- 方式 2：ipairs（容器本身是数组，与 GetCities 同类）
+		local ok2 = pcall(function()
+			for _, u in ipairs(units) do fn(u); end
+		end);
+		if ok2 and #out > 0 then how = "ipairs"; return; end
+		-- 方式 3：pairs
+		local ok3 = pcall(function()
+			for _, u in pairs(units) do fn(u); end
+		end);
+		if ok3 then how = "pairs"; end
 	end);
-	if not ok then return "单位读取失败:" .. tostring(err); end
-	if #out == 0 then return "<无战斗单位>"; end
-	return table.concat(out, ' || ');
+	if not ok then return "单位读取失败(" .. tostring(err) .. ")"; end
+	if #out == 0 then return "<无战斗单位/" .. how .. ">"; end
+	return table.concat(out, ' || ') .. " [" .. how .. "]";
 end
 
 function OnForeignFollowerProbe(turn)
