@@ -8,7 +8,7 @@
 --	   对玩家【当时拥有的全部未升级一级卡】分别升级为对应二级升级卡
 --	3) 迟来的一级卡（升级后才获得）保持一级，等待市政广场重建后再次升级
 --	4) 商共线升级 → 被动 +2 商路容量（永久 Attach，仅一次）
---	✅ 引擎 API（探针实测，2026-09）：
+--	✅ 引擎 API（游戏内实测确认，2026-09；当时用的临时探针已全部移除）：
 --	   Events.GovernmentChanged(pID, govtIndex)  ← Gameplay 可用！govtIndex 是 Index（数字）
 --	   Events.GovDistrictPolicyUnlocked(pID, policyIndex) ← Gameplay 可用
 --	   GameEvents.BuildingConstructed(pID,cID,bIdx,...)  ← 建筑完成（Events 表里没有它！）
@@ -231,74 +231,7 @@ end
 -- 事件A：政体切换 → 记录玩家当前政体
 -- Events.GovernmentChanged(pID, govtIndex) —— govtIndex 是 Index（数字）
 -- ===========================================================================
--- ===========================================================================
--- [探针·临时 2026-09-10] 政体卡"动态隐藏"可行性验证（验证完必须整段删除）
---   背景：寡头政体内「政体自带 +4」与「传承卡 +4」同项双计 → +8
---   目标方案 D：处于某 T1 政体时，把该线全部传承卡（T1/二级/三级）隐藏
---   引擎已知：政策可用性 = IsPolicyUnlocked and not IsPolicyObsolete（GovernmentScreen.lua）
---            过时由静态表 ObsoletePolicies 驱动；原版 Lua 未使用任何 setter
---   本探针回答两个问题：
---     ① PlayerCulture 是否存在"设置过时/锁定"类 API（有则最简实现）
---     ② 对"已解锁"的卡重复调用 UnlockPolicy，是否会重新触发过时重算
---        （若会 → 可用"解锁触发卡"实现动态隐藏；若不会 → 需换实现路径）
---   ⚠ 副作用：会重新解锁寡头 T1 卡（可能临时清除其过时状态）→ 只跑专用测试档
--- ===========================================================================
-local PROBE_METHODS = {
-	'SetPolicyObsolete', 'SetPolicyUnlocked', 'LockPolicy', 'UnlockPolicy',
-	'IsPolicyObsolete', 'IsPolicyUnlocked', 'MakePolicyObsolete',
-	'SetPolicyAvailable', 'SetPolicyLocked', 'RemovePolicy',
-};
-local function RunLegacyProbe(player, govtType)
-	local culture = GetCulture(player);
-	if culture == nil then
-		print('[CCB-PROBE] culture nil, player=' .. tostring(player:GetID()));
-		return;
-	end
-	local methodReport = {};
-	for _, name in ipairs(PROBE_METHODS) do
-		local ok, v = pcall(function() return culture[name]; end);
-		table.insert(methodReport, name .. '=' .. (ok and tostring(v) or 'ERR'));
-	end
-	print('[CCB-PROBE] govt=' .. tostring(govtType) .. ' methods: ' .. table.concat(methodReport, ' '));
 
-	local t1 = GameInfo.Policies['POLICY_GOV_OLIGARCHY'];
-	local t2 = GameInfo.Policies['POLICY_CCB_GOV_OLIGARCHY_MELEE'];
-	local t3 = GameInfo.Policies['POLICY_CCB_GOV_OLIGARCHY_MELEE_FASCISM'];
-	if t1 == nil or t2 == nil then
-		print('[CCB-PROBE] policy rows missing (t1=' .. tostring(t1) .. ' t2=' .. tostring(t2) .. ')');
-		return;
-	end
-	print('[CCB-PROBE] state: T1 obsolete=' .. tostring(culture:IsPolicyObsolete(t1.Hash))
-		.. ' unlocked=' .. tostring(culture:IsPolicyUnlocked(t1.Hash))
-		.. ' | T2 obsolete=' .. tostring(culture:IsPolicyObsolete(t2.Hash))
-		.. ' unlocked=' .. tostring(culture:IsPolicyUnlocked(t2.Hash))
-		.. ' | T3 unlocked=' .. tostring(t3 ~= nil and culture:IsPolicyUnlocked(t3.Hash) or false));
-
-	if not culture:IsPolicyUnlocked(t2.Hash) then
-		print('[CCB-PROBE] T2 (寡头二级卡) 尚未解锁 → 跳过重算测试（避免污染存档）；请用"已升级过寡头线"的档再试');
-		return;
-	end
-
-	-- 步骤1：重新解锁 T1 卡 → 预期清除其过时状态（= 你观察到的漏洞机制）
-	pcall(function() culture:UnlockPolicy(t1.Index); end);
-	print('[CCB-PROBE] step1 re-unlock T1 → T1 obsolete=' .. tostring(culture:IsPolicyObsolete(t1.Hash))
-		.. ' unlocked=' .. tostring(culture:IsPolicyUnlocked(t1.Hash)));
-
-	-- 步骤2【关键】：对已解锁的 T2 再调一次 UnlockPolicy → 过时是否被重新置起？
-	pcall(function() culture:UnlockPolicy(t2.Index); end);
-	print('[CCB-PROBE] step2 re-unlock T2 → T1 obsolete=' .. tostring(culture:IsPolicyObsolete(t1.Hash)));
-
-	-- 步骤3：同样对 T3（若已解锁）试一次，观察是否影响 T2 的过时
-	if t3 ~= nil and culture:IsPolicyUnlocked(t3.Hash) then
-		pcall(function() culture:UnlockPolicy(t3.Index); end);
-		print('[CCB-PROBE] step3 re-unlock T3 → T2 obsolete=' .. tostring(culture:IsPolicyObsolete(t2.Hash)));
-	end
-end
-
--- ===========================================================================
--- 事件A：政体切换 → 记录玩家当前政体
--- Events.GovernmentChanged(pID, govtIndex) —— govtIndex 是 Index（数字）
--- ===========================================================================
 function OnGovernmentChanged(playerID, govtIndex)
 	local player = Players[playerID];
 	if player == nil then return; end
@@ -313,12 +246,6 @@ function OnGovernmentChanged(playerID, govtIndex)
 			UpdateGovernmentDoubleOffset(player);
 		end
 	end
-	-- [探针·临时 2026-09-10 · 任务已挂起] 方案 D（T1 政体内隐藏该线传承卡）可行性验证
-	--   挂起原因：当前改验其它内容；探针会改写 T1 卡的过时状态 → 污染存档，勿在正式测试档启用
-	--   恢复验证时：取消下面 3 行注释，重启游戏并切换一次 T1 政体即可
-	-- if govtType ~= nil and T1_MAP[govtType] ~= nil then
-	-- 	RunLegacyProbe(player, govtType);
-	-- end
 end
 Events.GovernmentChanged.Add(OnGovernmentChanged);
 
