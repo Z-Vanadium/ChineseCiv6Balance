@@ -8972,5 +8972,11 @@
         <Row Tag="LOC_BBG_FRONT_BBCC_SETTING_YIELD_2_DESC" Language="de_DE">
             <Text>Garantierte +3 [ICON_FOOD] Nahrung / +1 [ICON_PRODUCTION] Produktion für [ICON_DISTRICT_CITY_CENTER] Stadtzentren auf flachen Feldern.[NEWLINE]Garantierte +2 [ICON_FOOD] Nahrung / +2 [ICON_PRODUCTION] Produktion für [ICON_DISTRICT_CITY_CENTER] Stadtzentren auf Hügelnfeldern.[NEWLINE][ICON_DISTRICT_CITY_CENTER] Stadtzentren erhalten das Maximum zwischen garantiertem Ertrag und Feldertrag nach Entfernung von entfernbaren Merkmalen.</Text>
         </Row>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_NAME" Language="de_DE">
+			<Text>[COLOR_RED]TO_TRANSLATE: Can Move After Attacking</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="de_DE">
+			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>

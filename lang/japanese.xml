@@ -4366,10 +4366,11 @@
     <Replace Tag="LOC_RESOURCE_P0K_PLUMS_NAME" Language="ja_JP">
       <Text>プラム</Text>
     </Replace>
-    
-    
-    
-    
-    
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_NAME" Language="ja_JP">
+			<Text>[COLOR_RED]TO_TRANSLATE: Can Move After Attacking</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="ja_JP">
+			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>

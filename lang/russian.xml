@@ -6644,5 +6644,11 @@
 		<Replace Tag="LOC_BBG_FRONT_BBCC_SETTING_YIELD_2_DESC" Language="ru_RU">
 			<Text>Гарантирует +3 [ICON_FOOD] и +1 [ICON_PRODUCTION], если город расположен на ровной клетке.[NEWLINE]Гарантирует +2 [ICON_FOOD] и +2 [ICON_PRODUCTION], если город расположен на холме.[NEWLINE]Центр города получает максимальный доход между гарантированным доходом и базовым доходом клетки. (Например, при основании города на клетке холма с [ICON_RESOURCE_SHEEP] овцой 3[ICON_FOOD]/1[ICON_Production] центр города будет иметь 3[ICON_FOOD] от овцы (так как это больше, чем гарантированный доход в 2[ICON_FOOD]) и 2[ICON_Production] от гарантированного дохода (так как это больше [ICON_Production], чем приносит клетка с овцой))</Text>
 		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_NAME" Language="ru_RU">
+			<Text>[COLOR_RED]TO_TRANSLATE: Can Move After Attacking</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="ru_RU">
+			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>

@@ -7287,5 +7287,11 @@
 		<Row Tag="LOC_BBG_FRONT_BBCC_SETTING_YIELD_2_DESC" Language="pt_BR">
 			<Text>Rendimentos garantidos :[NEWLINE]Paineis planos : 3[ICON_FOOD]1[ICON_PRODUCTION]0[ICON_GOLD]0[ICON_FAITH]0[ICON_CULTURE]0[ICON_SCIENCE][NEWLINE]Colinas : 2[ICON_FOOD]2[ICON_PRODUCTION]0[ICON_GOLD]0[ICON_FAITH]0[ICON_CULTURE]0[ICON_SCIENCE][NEWLINE]Para cada tipo de rendimento, seu centro urbano obtém o maior valor entre o rendimento garantido e o rendimento do jogo base.</Text>
 		</Row>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_NAME" Language="pt_BR">
+			<Text>[COLOR_RED]TO_TRANSLATE: Can Move After Attacking</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="pt_BR">
+			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>

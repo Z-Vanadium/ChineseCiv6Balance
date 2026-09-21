@@ -3247,7 +3247,7 @@
 		</Replace>
 		<!-- == Tier 4 Governments == -->
 		<Replace Tag="LOC_GOVT_INHERENT_BONUS_CORPORATE_LIBERTARIANISM" Language="en_US">
-			<Text>Commercial Hubs and Encampments provide cities with +10% [ICON_PRODUCTION] Production, and accumulating resources with improvements provide +1 per turn.</Text>
+			<Text>Commercial Hubs and Encampments provide cities with +10% [ICON_PRODUCTION] Production, and accumulating resources with improvements provide +1 per turn. All combat units can move after attacking.</Text>
 		</Replace>
 		<Replace Tag="LOC_GOVT_ACCUMULATED_BONUS_BRIEF_CORPORATE_LIBERTARIANISM" Language="en_US">
 			<Text>Gain +5 Oil, Aluminum, and Uranium per turn.</Text>
@@ -4521,6 +4521,12 @@
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="en_US">
 			<Text>Decide Later</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_NAME" Language="en_US">
+			<Text>Can Move After Attacking</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="en_US">
+			<Text>All combat units can move after attacking.</Text>
 		</Replace>
 	</LocalizedText>
 </GameData>

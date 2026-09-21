@@ -3539,5 +3539,11 @@
 		<Row Tag="LOC_BBG_FRONT_BBCC_SETTING_YIELD_2_DESC" Language="es_ES">
 			<Text>+3 [ICON_FOOD] +1 [ICON_PRODUCTION] garantizados para el Centro de la Ciudad plano.[NEWLINE]+2 [ICON_FOOD] +2 [ICON_PRODUCTION] garantizados para el Centro de la Ciudad con colinas.[NEWLINE]Los Centros de las ciudades obtienen el máximo entre el rendimiento garantizado y el rendimiento de casillas después de la eliminación de recursos extraíbles.</Text>
 		</Row>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_NAME" Language="es_ES">
+			<Text>[COLOR_RED]TO_TRANSLATE: Can Move After Attacking</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="es_ES">
+			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>

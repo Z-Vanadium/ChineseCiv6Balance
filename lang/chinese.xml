@@ -9013,5 +9013,14 @@
 		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="zh_Hans_CN">
 			<Text>稍后决定</Text>
 		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_NAME" Language="zh_Hans_CN">
+			<Text>攻击后可移动</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="zh_Hans_CN">
+			<Text>所有战斗单位攻击后可移动。</Text>
+		</Replace>
+		<Replace Tag="LOC_GOVT_INHERENT_BONUS_CORPORATE_LIBERTARIANISM" Language="zh_Hans_CN">
+			<Text>商业中心与军营向城市提供+10% [ICON_Production] 生产力；改良设施产出的资源每回合+1。所有战斗单位攻击后可移动。</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>

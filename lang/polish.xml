@@ -1378,5 +1378,11 @@
 		<Replace Tag="LOC_BBG_FRONT_BETA_BAN_TRADE_TREATY_DESC" Language="pl_PL">
 			<Text>Temporary option :[NEWLINE]Remove the Trade Treaty Resolution from World Congress.[NEWLINE](This Resolution is gonna be edited in BBG 4.8 and this option will be delete)</Text>
 		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_NAME" Language="pl_PL">
+			<Text>[COLOR_RED]TO_TRANSLATE: Can Move After Attacking</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="pl_PL">
+			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>
