@@ -91,30 +91,30 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 	('CCB_TAJ_REQSET_DISTRICT_IS_IZ', 'CCB_TAJ_REQ_DISTRICT_IS_OPPIDUM');
 
 --==============================================================================================
--- 3. 铭文之壁（Calligraphy）：每座剧院广场 +1 大作家点、+1 大艺术家点；
---                            每座古罗马剧场（BUILDING_AMPHITHEATER）再 +1 大作家点、+1 大艺术家点
---    → 剧院城已建古罗马剧场时，该城合计 +2 大作家点、+2 大艺术家点（四个城市级修饰器相加，同类相加不冲突）
---    调整沿革：2026-09-20 一轮（大作家点 2→4，随即回退）；二轮（大作家点定为 +1/剧院广场；
---              大艺术家点由"每座剧院广场 +2"改为"每座古罗马剧场 +1" —— 用户口径"每座古罗马"= 剧院广场 T1 建筑）；
---              三轮（大作家点 2→1）；**四轮（用户"选项3增强，每座剧院给1大作家点数、1大艺术家点数；
---              每座古罗马再额外给1大作家点数"）→ 剧院广场 补上大艺术家点；古罗马剧场 追加 +1 大作家点**
---    修饰器 ID 说明：`CCB_TAJ_CALLI_WRITER` / `CCB_TAJ_CALLI_ARTIST` 沿用旧 ID（语义未变，避免读档时挂载记录失配），
---              新增的"剧院广场→大艺术家""古罗马剧场→大作家"用新 ID
+-- 3. 铭文之壁（Calligraphy）· 伟人点三条：
+--      每座剧院广场 → +1 大作家点、+1 大艺术家点
+--      每座古罗马剧场（BUILDING_AMPHITHEATER）→ +1 大作家点（**不给大艺术家点**）
+--    → 剧院城已建古罗马剧场时，该城合计 **+2 大作家点、+1 大艺术家点**（三条城市级修饰器相加，同类相加不冲突）
+--    调整沿革：一轮（大作家点 2→4，随即回退）；二轮（大作家点定为 +1/剧院广场；大艺术家点由"每座剧院广场 +2"
+--              改为"每座古罗马剧场 +1"）；三轮（大作家点 2→1）；
+--              四轮（每座剧院 +1 作家 +1 艺术家、古罗马再各 +1）；**五轮（用户精确口径：古罗马只给大作家点，
+--              **不给**大艺术家点 —— 即摘除"古罗马→大艺术家"**）
+--    修饰器 ID 说明：`CCB_TAJ_CALLI_WRITER`（剧院→作家）沿用旧 ID；"剧院→艺术家"/"古罗马→作家"用新 ID；
+--              旧 ID `CCB_TAJ_CALLI_ARTIST`（古罗马→艺术家）**五轮已删除** —— 若某存档在四轮版本里已选过选项 3，
+--              该存档里可能残留一条指向已删修饰器的挂载记录，请用**未选择过**的档验证（见设计文档 §4 头注）
+--    巨作旅游两条（著作类 / 宗教艺术类巨作 +100%）**保持不变**（用户 2026-09-20 确认"原来的业绩补正保留"）
 --==============================================================================================
 INSERT INTO Modifiers (ModifierId, ModifierType, OwnerRequirementSetId, SubjectRequirementSetId) VALUES
 	('CCB_TAJ_CALLI_WRITER',         'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_CITY_HAS_THEATER'),
 	('CCB_TAJ_CALLI_ARTIST_THEATER', 'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_CITY_HAS_THEATER'),
-	('CCB_TAJ_CALLI_WRITER_AMPHI',   'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER'),
-	('CCB_TAJ_CALLI_ARTIST',         'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER');
+	('CCB_TAJ_CALLI_WRITER_AMPHI',   'MODIFIER_PLAYER_CITIES_ADJUST_GREAT_PERSON_POINT_BASE', 'PLAYER_HAS_GOLDEN_AGE', 'CCB_TAJ_REQSET_CITY_HAS_AMPHITHEATER');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_TAJ_CALLI_WRITER',         'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER'),
 	('CCB_TAJ_CALLI_WRITER',         'Amount', 1),
 	('CCB_TAJ_CALLI_ARTIST_THEATER', 'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST'),
 	('CCB_TAJ_CALLI_ARTIST_THEATER', 'Amount', 1),
 	('CCB_TAJ_CALLI_WRITER_AMPHI',   'GreatPersonClassType', 'GREAT_PERSON_CLASS_WRITER'),
-	('CCB_TAJ_CALLI_WRITER_AMPHI',   'Amount', 1),
-	('CCB_TAJ_CALLI_ARTIST',         'GreatPersonClassType', 'GREAT_PERSON_CLASS_ARTIST'),
-	('CCB_TAJ_CALLI_ARTIST',         'Amount', 1);
+	('CCB_TAJ_CALLI_WRITER_AMPHI',   'Amount', 1);
 
 -- 「城市拥有剧院广场（含希腊卫城）」需求集 —— 2026-09-20 补
 --   替代关系实测：DISTRICT_ACROPOLIS（希腊）→ DISTRICT_THEATER
