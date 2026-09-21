@@ -2419,7 +2419,7 @@
 		</Replace>
 		<!-- Taj Mahal: vanilla description + the three-way choice (2026-09-20, user request) -->
 		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="en_US">
-			<Text>+1 Era Score from Historic Moment earned after this wonder is complete if that Moment is usually worth 2 or more Era Score. Once complete, you may choose an imperial boon that rises and falls with your Golden Age: Charbagh (+1 [ICON_Amenities] Amenity, +1 [ICON_Housing] Housing and +15% growth in all cities), Parchin Kari (Builders gain +1 charge; +1 [ICON_GreatEngineer] Great Engineer point per Industrial Zone in every city and +1 per Workshop), Calligraphy (+1 [ICON_GreatWriter] Great Writer point per Theater Square and +1 [ICON_GreatArtist] Great Artist point per Amphitheater, and +100% [ICON_TOURISM] Tourism from Great Works of Writing and from Religious Great Works of Art). Must be built next to a River.</Text>
+			<Text>+1 Era Score from Historic Moment earned after this wonder is complete if that Moment is usually worth 2 or more Era Score. Once complete, you may choose an imperial boon that rises and falls with your Golden Age: Charbagh (+1 [ICON_Amenities] Amenity, +1 [ICON_Housing] Housing and +15% growth in all cities), Parchin Kari (Builders gain +1 charge; +1 [ICON_GreatEngineer] Great Engineer point per Industrial Zone in every city and +2 per Workshop), Calligraphy (+1 [ICON_GreatWriter] Great Writer point and +1 [ICON_GreatArtist] Great Artist point per Theater Square, plus +1 more of each per Amphitheater, and +100% [ICON_TOURISM] Tourism from Great Works of Writing and from Religious Great Works of Art). Must be built next to a River.</Text>
 		</Replace>
 		<!-- CCB Maps/BBM natural wonders: descriptions after the 2026-09-19 value & mechanic changes -->
 		<Replace Tag="LOC_FEATURE_SINAI_DESCRIPTION" Language="en_US">
@@ -4476,10 +4476,10 @@
 			<Text>[COLOR:255,215,0,255]Charbagh[ENDCOLOR]: +1 [ICON_Amenities] Amenity, +1 [ICON_Housing] Housing and +15% growth in all cities</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_INLAY" Language="en_US">
-			<Text>[COLOR:255,215,0,255]Parchin Kari[ENDCOLOR]: Builders gain +1 charge; +1 [ICON_GreatEngineer] Great Engineer point per Industrial Zone and +1 per Workshop</Text>
+			<Text>[COLOR:255,215,0,255]Parchin Kari[ENDCOLOR]: Builders gain +1 charge; +1 [ICON_GreatEngineer] Great Engineer point per Industrial Zone and +2 per Workshop</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_CALLIGRAPHY" Language="en_US">
-			<Text>[COLOR:255,215,0,255]Calligraphy[ENDCOLOR]: +1 [ICON_GreatWriter] Great Writer point per Theater Square and +1 [ICON_GreatArtist] Great Artist point per Amphitheater; +100% [ICON_TOURISM] Tourism from Great Works of Writing and from Religious Great Works of Art</Text>
+			<Text>[COLOR:255,215,0,255]Calligraphy[ENDCOLOR]: +1 [ICON_GreatWriter] Great Writer and +1 [ICON_GreatArtist] Great Artist point per Theater Square, and +1 more of each per Amphitheater; +100% [ICON_TOURISM] Tourism from Great Works of Writing and from Religious Great Works of Art</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="en_US">
 			<Text>Decide Later</Text>

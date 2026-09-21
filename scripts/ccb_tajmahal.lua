@@ -13,10 +13,12 @@ local PROP_TAJ_CHOICE = 'CCB_TAJ_CHOICE';
 
 -- 选项 → 修饰器清单（1 四分园 / 2 镶嵌工艺 / 3 铭文之壁）
 -- 2026-09-20 增强：选项 1 由"全城 +1 宜居"扩为"全城 +1 宜居 +1 住房 +15% 发展速度"（三条修饰器）
+--                 选项 2 工作坊大工程师点 1→2；选项 3 剧院广场补大艺术家点、古罗马剧场补大作家点（共四条）
 local TAJ_CHOICE_MODIFIERS = {
 	[1] = { 'CCB_TAJ_CHARBAGH_AMENITY', 'CCB_TAJ_CHARBAGH_HOUSING', 'CCB_TAJ_CHARBAGH_GROWTH' },
 	[2] = { 'CCB_TAJ_INLAY_BUILDER', 'CCB_TAJ_INLAY_IZ_GEP', 'CCB_TAJ_INLAY_WORKSHOP_GEP' },
-	[3] = { 'CCB_TAJ_CALLI_WRITER', 'CCB_TAJ_CALLI_ARTIST', 'CCB_TAJ_CALLI_WRITING_TOURISM', 'CCB_TAJ_CALLI_RELIGIOUS_TOURISM' },
+	[3] = { 'CCB_TAJ_CALLI_WRITER', 'CCB_TAJ_CALLI_ARTIST_THEATER', 'CCB_TAJ_CALLI_WRITER_AMPHI', 'CCB_TAJ_CALLI_ARTIST',
+	        'CCB_TAJ_CALLI_WRITING_TOURISM', 'CCB_TAJ_CALLI_RELIGIOUS_TOURISM' },
 };
 
 function OnCCBTajMahalCommand(ePlayer, params)

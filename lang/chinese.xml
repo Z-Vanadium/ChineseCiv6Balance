@@ -2510,7 +2510,7 @@
 		</Replace>
 		<!-- 泰姬陵：原版描述 + 三选一新机制说明（2026-09-20 用户要求） -->
 		<Replace Tag="LOC_BUILDING_TAJ_MAHAL_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>此奇观建成后，提供2点或以上时代得分的历史时刻所提供的时代得分+1。完成后，可以选择随黄金时代兴衰的帝国恩泽：四分园（所有城市 +1 [ICON_Amenities] 宜居度、+1 [ICON_Housing] 住房、发展速度 +15%）、镶嵌工艺（建造者 +1 劳动力次数；每座城市的工业区 +1 [ICON_GreatEngineer] 大工程师点数，每座工作坊 +1 [ICON_GreatEngineer] 大工程师点数）、铭文之壁（每座剧院广场 +1 [ICON_GreatWriter] 大作家点数，每座古罗马剧场 +1 [ICON_GreatArtist] 大艺术家点数，著作类与宗教艺术类巨作 [ICON_TOURISM] 旅游业绩各 +100%）。必须建在河流旁。</Text>
+			<Text>此奇观建成后，提供2点或以上时代得分的历史时刻所提供的时代得分+1。完成后，可以选择随黄金时代兴衰的帝国恩泽：四分园（所有城市 +1 [ICON_Amenities] 宜居度、+1 [ICON_Housing] 住房、发展速度 +15%）、镶嵌工艺（建造者 +1 劳动力次数；每座城市的工业区 +1 [ICON_GreatEngineer] 大工程师点数，每座工作坊 +2 [ICON_GreatEngineer] 大工程师点数）、铭文之壁（每座剧院广场 +1 [ICON_GreatWriter] 大作家点数、+1 [ICON_GreatArtist] 大艺术家点数，每座古罗马剧场额外 +1 [ICON_GreatWriter] 大作家点数与 +1 [ICON_GreatArtist] 大艺术家点数，著作类与宗教艺术类巨作 [ICON_TOURISM] 旅游业绩各 +100%）。必须建在河流旁。</Text>
 		</Replace>
 		<!-- CCB 地图/BBM 新增自然奇观描述（2026-09-19 数值与机制调整后覆盖） -->
 		<Replace Tag="LOC_FEATURE_SINAI_DESCRIPTION" Language="zh_Hans_CN">
@@ -8993,10 +8993,10 @@
 			<Text>[COLOR:255,215,0,255]四分园[ENDCOLOR]：所有城市 +1 [ICON_Amenities] 宜居度、+1 [ICON_Housing] 住房、发展速度 +15%</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_INLAY" Language="zh_Hans_CN">
-			<Text>[COLOR:255,215,0,255]镶嵌工艺[ENDCOLOR]：建造者 +1 充能；每座工业区 +1 [ICON_GreatEngineer] 大工程师点数，每座工作坊 +1 [ICON_GreatEngineer] 大工程师点数</Text>
+			<Text>[COLOR:255,215,0,255]镶嵌工艺[ENDCOLOR]：建造者 +1 充能；每座工业区 +1 [ICON_GreatEngineer] 大工程师点数，每座工作坊 +2 [ICON_GreatEngineer] 大工程师点数</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_CALLIGRAPHY" Language="zh_Hans_CN">
-			<Text>[COLOR:255,215,0,255]铭文之壁[ENDCOLOR]：每座剧院广场 +1 [ICON_GreatWriter] 大作家点数，每座古罗马剧场 +1 [ICON_GreatArtist] 大艺术家点数；[ICON_GreatWork_Writing] 著作类巨作与 [ICON_GreatWork_Religious] 宗教艺术类巨作 [ICON_TOURISM] 旅游业绩 +100%</Text>
+			<Text>[COLOR:255,215,0,255]铭文之壁[ENDCOLOR]：每座剧院广场 +1 [ICON_GreatWriter] 大作家、+1 [ICON_GreatArtist] 大艺术家点数；每座古罗马剧场再各 +1；[ICON_GreatWork_Writing] 著作类巨作与 [ICON_GreatWork_Religious] 宗教艺术类巨作 [ICON_TOURISM] 旅游业绩 +100%</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_TAJ_BTN_LATER" Language="zh_Hans_CN">
 			<Text>稍后决定</Text>
