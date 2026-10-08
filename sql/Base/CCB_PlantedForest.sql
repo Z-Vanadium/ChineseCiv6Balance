@@ -36,3 +36,17 @@ INSERT OR IGNORE INTO Adjacency_YieldChanges (ID, Description, YieldType, YieldC
 SELECT 'CCBPF_' || ID, Description, YieldType, YieldChange, TilesRequired, OtherDistrictAdjacent, AdjacentSeaResource, AdjacentTerrain, 'FEATURE_CCB_PLANTED_FOREST', AdjacentRiver, AdjacentWonder, AdjacentNaturalWonder, AdjacentImprovement, AdjacentDistrict, PrereqCivic, PrereqTech, ObsoleteCivic, ObsoleteTech, AdjacentResource, AdjacentResourceClass, Self FROM Adjacency_YieldChanges WHERE AdjacentFeature = 'FEATURE_FOREST';
 
 -- 说明：Resource_ValidFeatures / StartBiasFeatures 属地图生成期规则，人工林是游戏中途出现，无需复制
+
+--==============================================================================================
+-- 灾害补正对齐（2026-09-20 BUG 修复 · 用户实测"火烧后人工林变原始树林，并拿到异常的粮食/生产力补正"）
+--   ⚠ **加载顺序陷阱（本次 BUG 的真根因）**：
+--     BBG/CCB 1.6 的灾害规则在 `sql/NFP/new_bbg_disasters.sql`，其 LoadOrder 是 **11642**，
+--     而本文件是 **11615** → 上面那条 `RandomEvent_Yields` 整表复制**先执行**，拿到的是**原版**取值：
+--       · 原版 FEATURE_FOREST 的火灾行 = `YIELD_PRODUCTION`
+--       · BBG 1.6 才把它改成 `YIELD_FOOD`（= CCB 规则"树林新生补食物、丛林新生补生产力"）
+--     → 复制出来的人工林行停留在"生产"，于是人工林着火后按 **+1 生产力** 结算，属异常。
+--   修法：显式对齐成与**修正后的森林行**完全一致（食物 +1 / 持续 6 回合）。
+--     一行一特征，引擎按"地块当前特征"取行 → 人工林只吃这一行，不会与森林行叠加。
+--==============================================================================================
+UPDATE RandomEvent_Yields SET YieldType='YIELD_FOOD', Amount=1, Turn=6
+	WHERE RandomEventType='RANDOM_EVENT_FOREST_FIRE' AND FeatureType='FEATURE_CCB_PLANTED_FOREST';
