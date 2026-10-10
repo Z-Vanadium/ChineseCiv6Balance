@@ -23,8 +23,12 @@
 --   （只能通过我们的面板花金币解锁）。观感问题由本次实测判定，正式版再决定隐藏策略。
 -- ===========================================================================
 
+-- ⚠ Kind 值必须是 KIND_TECH（**不是** KIND_TECHNOLOGY —— 列名叫 TechnologyType 但 Kind 只有 KIND_TECH/KIND_CIVIC）。
+--   2026-10-10 实测踩坑：写成 KIND_TECHNOLOGY → [Gameplay] ERROR: Invalid Reference on Types.Kind
+--   → 连带 FOREIGN KEY constraint failed → gameplay 库加载失败回滚，游戏报"模组错误"。
+--   核对方式：原版 TECH_IRRIGATION 的 Types 行 = ('TECH_IRRIGATION', 'KIND_TECH')。
 INSERT INTO Types (Type, Kind) VALUES
-	('TECH_CCB_PROBE_PLANTATION', 'KIND_TECHNOLOGY');
+	('TECH_CCB_PROBE_PLANTATION', 'KIND_TECH');
 
 INSERT INTO Technologies (TechnologyType, Name, Description, Cost, Repeatable, EraType, UITreeRow, AdvisorType) VALUES
 	('TECH_CCB_PROBE_PLANTATION', 'LOC_TECH_CCB_PROBE_PLANTATION_NAME', 'LOC_TECH_CCB_PROBE_PLANTATION_DESC',
