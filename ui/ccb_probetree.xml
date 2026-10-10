@@ -20,63 +20,81 @@
 	<!-- ===== 主窗口 ===== -->
 	<Container Style="FullScreenVignetteConsumer" />
 
-	<Container ID="CCBProbeTreeRoot" Anchor="C,C" Size="1180,800" ConsumeAllMouse="1">
+	<Container ID="CCBProbeTreeRoot" Anchor="C,C" Size="1200,980" ConsumeAllMouse="1">
 		<Image ID="CCBProbeTreeParchment" Anchor="C,C" Size="parent-24,parent-24"
 		       Texture="Ages_ParchmentNormal" StretchMode="Tile"/>
 
 		<Grid ID="CCBProbeTreeFrame" Anchor="C,C" Size="parent-10,parent-10"
 		      Texture="Ages_FrameNormal" SliceTextureSize="134,134" SliceCorner="60,74" SliceSize="14,2">
 
-			<Label ID="CCBProbeTreeTitle" Anchor="C,T" Offset="0,20" Style="FontFlair18" FontStyle="glow"
+			<Label ID="CCBProbeTreeTitle" Anchor="C,T" Offset="0,18" Style="FontFlair18" FontStyle="glow"
 			       ColorSet="White_Black" SmallCaps="24" SmallCapsLeading="0" SmallCapsType="EveryWord"
 			       String="LOC_CCB_PROBE_TREE_TITLE"/>
 
-			<Label ID="CCBProbeTreeHint" Anchor="C,T" Offset="0,62" Style="FontNormal14" ColorSet="White_Black"
-			       WrapWidth="1100" Align="Center" String="LOC_CCB_PROBE_TREE_HINT"/>
+			<Label ID="CCBProbeTreeHint" Anchor="C,T" Offset="0,58" Style="FontNormal14" ColorSet="White_Black"
+			       WrapWidth="1120" Align="Center" String="LOC_CCB_PROBE_TREE_HINT"/>
 
 			<!-- ===== 可研究对象卡片 ===== -->
-			<Grid ID="CCBProbeNodeCard" Anchor="C,T" Offset="0,124" Size="1080,214"
+			<Grid ID="CCBProbeNodeCard" Anchor="C,T" Offset="0,116" Size="1100,206"
 			      Texture="Controls_SubContainer2" SliceCorner="18,18" SliceSize="1,1" Color="79,62,42,255">
-				<Label ID="CCBProbeNodeName" Anchor="C,T" Offset="0,14" Style="FontFlair18" ColorSet="White_Black"
+				<Label ID="CCBProbeNodeName" Anchor="C,T" Offset="0,12" Style="FontFlair18" ColorSet="White_Black"
 				       String="LOC_CCB_PROBE_NODE_NAME"/>
-				<Label ID="CCBProbeNodeEffect" Anchor="C,T" Offset="0,48" Style="FontNormal14" ColorSet="White_Black"
-				       WrapWidth="1020" Align="Center" String="LOC_CCB_PROBE_NODE_EFFECT"/>
-				<Label ID="CCBProbeNodeReq" Anchor="C,T" Offset="0,86" Style="FontNormal14" ColorSet="White_Black"
+				<Label ID="CCBProbeNodeEffect" Anchor="C,T" Offset="0,44" Style="FontNormal14" ColorSet="White_Black"
+				       WrapWidth="1040" Align="Center" String="LOC_CCB_PROBE_NODE_EFFECT"/>
+				<Label ID="CCBProbeNodeReq" Anchor="C,T" Offset="0,82" Style="FontNormal14" ColorSet="White_Black"
 				       String="LOC_CCB_PROBE_NODE_REQ"/>
-				<Label ID="CCBProbeNodeCost" Anchor="C,T" Offset="0,110" Style="FontNormal14" ColorSet="White_Black"
+				<Label ID="CCBProbeNodeCost" Anchor="C,T" Offset="0,104" Style="FontNormal14" ColorSet="White_Black"
 				       String="LOC_CCB_PROBE_NODE_COST"/>
-				<Label ID="CCBProbeNodeStatus" Anchor="C,T" Offset="0,136" Style="FontNormal14" ColorSet="White_Black"
-				       WrapWidth="1020" Align="Center" String=""/>
-				<GridButton ID="CCBProbeNodeUnlock" Anchor="C,B" Offset="0,14" Style="MainButton" Size="420,44"
+				<Label ID="CCBProbeNodeStatus" Anchor="C,T" Offset="0,128" Style="FontNormal14" ColorSet="White_Black"
+				       WrapWidth="1040" Align="Center" String=""/>
+				<GridButton ID="CCBProbeNodeUnlock" Anchor="C,B" Offset="0,12" Style="MainButton" Size="420,42"
 				            String="LOC_CCB_PROBE_NODE_BUTTON"/>
 			</Grid>
 
-			<!-- ===== 效果矩阵 ===== -->
-			<Label ID="CCBProbeMatrixTitle" Anchor="C,T" Offset="0,352" Style="FontFlair18" ColorSet="White_Black"
+			<!-- ===== 第一轮矩阵（已实测：除 M10/M13 外均生效） ===== -->
+			<Label ID="CCBProbeMatrixTitle" Anchor="C,T" Offset="0,336" Style="FontFlair18" ColorSet="White_Black"
 			       String="LOC_CCB_PROBE_MATRIX_TITLE"/>
-			<Label ID="CCBProbeMatrixHint" Anchor="C,T" Offset="0,384" Style="FontNormal14" ColorSet="White_Black"
-			       WrapWidth="1100" Align="Center" String="LOC_CCB_PROBE_MATRIX_HINT"/>
+			<Label ID="CCBProbeMatrixHint" Anchor="C,T" Offset="0,366" Style="FontNormal14" ColorSet="White_Black"
+			       WrapWidth="1120" Align="Center" String="LOC_CCB_PROBE_MATRIX_HINT"/>
 
-			<Stack ID="CCBProbeMatrixLeft" Anchor="C,T" Offset="-280,416" StackGrowth="Down" StackPadding="6">
-				<GridButton ID="CCBProbeM1"  Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M1"/>
-				<GridButton ID="CCBProbeM2"  Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M2"/>
-				<GridButton ID="CCBProbeM3"  Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M3"/>
-				<GridButton ID="CCBProbeM4"  Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M4"/>
-				<GridButton ID="CCBProbeM5"  Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M5"/>
-				<GridButton ID="CCBProbeM6"  Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M6"/>
-				<GridButton ID="CCBProbeM7"  Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M7"/>
+			<Stack ID="CCBProbeMatrixLeft" Anchor="C,T" Offset="-286,396" StackGrowth="Down" StackPadding="6">
+				<GridButton ID="CCBProbeM1"  Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M1"/>
+				<GridButton ID="CCBProbeM2"  Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M2"/>
+				<GridButton ID="CCBProbeM3"  Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M3"/>
+				<GridButton ID="CCBProbeM4"  Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M4"/>
+				<GridButton ID="CCBProbeM5"  Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M5"/>
+				<GridButton ID="CCBProbeM6"  Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M6"/>
+				<GridButton ID="CCBProbeM7"  Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M7"/>
 			</Stack>
 
-			<Stack ID="CCBProbeMatrixRight" Anchor="C,T" Offset="280,416" StackGrowth="Down" StackPadding="6">
-				<GridButton ID="CCBProbeM8"  Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M8"/>
-				<GridButton ID="CCBProbeM9"  Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M9"/>
-				<GridButton ID="CCBProbeM10" Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M10"/>
-				<GridButton ID="CCBProbeM11" Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M11"/>
-				<GridButton ID="CCBProbeM12" Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M12"/>
-				<GridButton ID="CCBProbeM13" Style="MainButton" Size="530,34" String="LOC_CCB_PROBE_M13"/>
+			<Stack ID="CCBProbeMatrixRight" Anchor="C,T" Offset="286,396" StackGrowth="Down" StackPadding="6">
+				<GridButton ID="CCBProbeM8"  Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M8"/>
+				<GridButton ID="CCBProbeM9"  Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M9"/>
+				<GridButton ID="CCBProbeM10" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M10"/>
+				<GridButton ID="CCBProbeM11" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M11"/>
+				<GridButton ID="CCBProbeM12" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M12"/>
+				<GridButton ID="CCBProbeM13" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_M13"/>
 			</Stack>
 
-			<GridButton ID="CCBProbeTreeClose" Anchor="C,B" Offset="0,12" Style="MainButton" Size="220,38"
+			<!-- ===== 第二轮矩阵（单位战斗力其它通道 / 单位类 / 区域类 / ★Trait 通道） ===== -->
+			<Label ID="CCBProbeMatrixTitle2" Anchor="C,T" Offset="0,662" Style="FontFlair18" ColorSet="White_Black"
+			       String="LOC_CCB_PROBE_MATRIX_TITLE2"/>
+
+			<Stack ID="CCBProbeMatrixLeft2" Anchor="C,T" Offset="-286,692" StackGrowth="Down" StackPadding="6">
+				<GridButton ID="CCBProbeR2" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_R2"/>
+				<GridButton ID="CCBProbeR3" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_R3"/>
+				<GridButton ID="CCBProbeR4" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_R4"/>
+				<GridButton ID="CCBProbeR5" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_R5"/>
+			</Stack>
+
+			<Stack ID="CCBProbeMatrixRight2" Anchor="C,T" Offset="286,692" StackGrowth="Down" StackPadding="6">
+				<GridButton ID="CCBProbeR6" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_R6"/>
+				<GridButton ID="CCBProbeR7" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_R7"/>
+				<GridButton ID="CCBProbeR8" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_R8"/>
+				<GridButton ID="CCBProbeR9" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_R9"/>
+			</Stack>
+
+			<GridButton ID="CCBProbeTreeClose" Anchor="C,B" Offset="0,10" Style="MainButton" Size="220,36"
 			            String="LOC_CCB_PROBE_TREE_CLOSE"/>
 		</Grid>
 	</Container>

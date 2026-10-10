@@ -28,6 +28,15 @@ local MATRIX = {
 	M11 = '所有单位+1移动（PLAYER_UNITS_ADJUST_MOVEMENT）',
 	M12 = '所有单位+1射程（PLAYER_UNITS_ADJUST_ATTACK_RANGE）',
 	M13 = '授予能力（PLAYER_UNITS_GRANT_ABILITY，对照项）',
+	-- 第二轮：单位战斗力其它通道 / 单位类 / 区域类 / ★Trait 通道
+	R2  = '单位+5防御时战斗力（UNITS_ADJUST_STRENGTH_WHEN_DEFENDING）',
+	R3  = '单位+5本国领土战斗力（UNITS_ADJUST_FRIENDLY_TERRITORY_COMBAT）',
+	R4  = '单位每回合+10治疗（UNITS_ADJUST_HEAL_PER_TURN）',
+	R5  = '建造者+100%生产力（UNITS_ADJUST_UNIT_PRODUCTION）',
+	R6  = '所有区域+1大工程师点（DISTRICTS_ADJUST_GREAT_PERSON_POINTS）',
+	R7  = '每区域+1文化（CITIES_ADJUST_CITY_YIELD_PER_DISTRICT）',
+	R8  = '★授予 Trait A（Trait 效果=帝国+1科技）',
+	R9  = '★授予 Trait B（Trait 效果=授予能力→单位+5战斗力）',
 };
 
 local function TechIndex(techType)

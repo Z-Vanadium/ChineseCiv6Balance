@@ -27,6 +27,15 @@ local MATRIX_BUTTONS = {
 	{ ctrl = 'CCBProbeM11', key = 'M11' },
 	{ ctrl = 'CCBProbeM12', key = 'M12' },
 	{ ctrl = 'CCBProbeM13', key = 'M13' },
+	-- 第二轮
+	{ ctrl = 'CCBProbeR2',  key = 'R2'  },
+	{ ctrl = 'CCBProbeR3',  key = 'R3'  },
+	{ ctrl = 'CCBProbeR4',  key = 'R4'  },
+	{ ctrl = 'CCBProbeR5',  key = 'R5'  },
+	{ ctrl = 'CCBProbeR6',  key = 'R6'  },
+	{ ctrl = 'CCBProbeR7',  key = 'R7'  },
+	{ ctrl = 'CCBProbeR8',  key = 'R8'  },
+	{ ctrl = 'CCBProbeR9',  key = 'R9'  },
 };
 
 local m_injected = false;

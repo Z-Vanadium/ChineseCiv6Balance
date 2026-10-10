@@ -9066,6 +9066,21 @@
 		<Replace Tag="LOC_CCB_PROBE_M11" Language="zh_Hans_CN"><Text>M11 所有单位 +1 移动力（★看单位面板）</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_M12" Language="zh_Hans_CN"><Text>M12 所有单位 +1 攻击距离（★看单位面板）</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_M13" Language="zh_Hans_CN"><Text>M13 授予能力（对照项，预期不生效）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_MATRIX_TITLE2" Language="zh_Hans_CN"><Text>第二轮矩阵：为"战斗力"找零污染通道 + 区域类 + ★Trait 隐形旗标</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R2" Language="zh_Hans_CN"><Text>R2 单位 +5 防御时战斗力（看单位面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R3" Language="zh_Hans_CN"><Text>R3 单位 +5 本国领土战斗力（看单位面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R4" Language="zh_Hans_CN"><Text>R4 单位每回合 +10 治疗（看单位面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R5" Language="zh_Hans_CN"><Text>R5 建造者 +100% 生产力（看城市生产列表）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R6" Language="zh_Hans_CN"><Text>R6 所有区域 +1 大工程师点（看伟人面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R7" Language="zh_Hans_CN"><Text>R7 每区域 +1 文化（看城市面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R8" Language="zh_Hans_CN"><Text>★R8 授予隐形 Trait A（应看到 帝国 +1 科技）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R9" Language="zh_Hans_CN"><Text>★R9 授予隐形 Trait B（应看到 单位 +5 战斗力）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_TRAIT_A_NAME" Language="zh_Hans_CN"><Text>探针 Trait A【临时】</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_TRAIT_A_DESC" Language="zh_Hans_CN"><Text>帝国 +1 科技（仅探针用）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_TRAIT_B_NAME" Language="zh_Hans_CN"><Text>探针 Trait B【临时】</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_TRAIT_B_DESC" Language="zh_Hans_CN"><Text>授予"全战斗单位 +5 战斗力"能力（仅探针用）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_ABILITY_COMBAT_NAME" Language="zh_Hans_CN"><Text>探针战斗强化【临时】</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_ABILITY_COMBAT_DESC" Language="zh_Hans_CN"><Text>+5 战斗力（仅探针用）</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_NODE_REQ" Language="zh_Hans_CN">
 			<Text>前置条件：完成「灌溉」科技</Text>
 		</Replace>

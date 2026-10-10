@@ -4573,6 +4573,21 @@
 		<Replace Tag="LOC_CCB_PROBE_M11" Language="en_US"><Text>M11 All units +1 Movement (unit panel)</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_M12" Language="en_US"><Text>M12 All units +1 Range (unit panel)</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_M13" Language="en_US"><Text>M13 Grant ability (control item, expected to fail)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_MATRIX_TITLE2" Language="en_US"><Text>Round 2 matrix: other combat-strength channels + district class + invisible Trait flag</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R2" Language="en_US"><Text>R2 Units +5 Combat Strength when defending (unit panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R3" Language="en_US"><Text>R3 Units +5 Combat Strength in own territory (unit panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R4" Language="en_US"><Text>R4 Units heal +10 per turn (unit panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R5" Language="en_US"><Text>R5 Builders +100% production (city production list)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R6" Language="en_US"><Text>R6 All districts +1 Great Engineer point (great people panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R7" Language="en_US"><Text>R7 +1 Culture per district (city panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R8" Language="en_US"><Text>*R8 Grant invisible Trait A (expect Empire +1 Science)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_R9" Language="en_US"><Text>*R9 Grant invisible Trait B (expect Units +5 Combat Strength)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_TRAIT_A_NAME" Language="en_US"><Text>Probe Trait A [temp]</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_TRAIT_A_DESC" Language="en_US"><Text>Empire +1 Science (probe only)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_TRAIT_B_NAME" Language="en_US"><Text>Probe Trait B [temp]</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_TRAIT_B_DESC" Language="en_US"><Text>Grants an ability giving all combat units +5 Combat Strength (probe only)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_ABILITY_COMBAT_NAME" Language="en_US"><Text>Probe Combat Boost [temp]</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_ABILITY_COMBAT_DESC" Language="en_US"><Text>+5 Combat Strength (probe only)</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_NODE_REQ" Language="en_US">
 			<Text>Requires: Irrigation</Text>
 		</Replace>
