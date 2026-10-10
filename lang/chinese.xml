@@ -9033,7 +9033,7 @@
 			<Text>打开新科技树（验证探针）</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_PROBE_TREE_HINT" Language="zh_Hans_CN">
-			<Text>[探针] 本次验证：左上按钮栏能否加入自建按钮、能否自建"可研究对象"、能否用金币解锁、以及效果能否由数据层承载。临时内容，测完即删。</Text>
+			<Text>[探针·路线A] 本版**不再新增任何科技/市政行**：节点状态只存在 Lua，效果在解锁时运行时挂载 → 原版科技树/市政树/研究下拉/文明百科都应完全看不到我们的内容。下方"效果矩阵"用于一次性验证 13 类修正器能否运行时生效。临时内容，测完即删。</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_CCB_PROBE_PLANTATION_NAME" Language="zh_Hans_CN">
 			<Text>种植园机械化【探针】</Text>
@@ -9042,8 +9042,30 @@
 			<Text>【探针节点】完成「灌溉」后可花费金币解锁：所有种植园改良的产出 +1 [ICON_Production] 生产力。</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_PROBE_NODE_EFFECT" Language="zh_Hans_CN">
-			<Text>效果：所有种植园改良 +1 [ICON_Production] 生产力</Text>
+			<Text>效果：所有城市 +1 [ICON_Production] 生产力（运行时挂载；原设计"每个种植园 +1 锤"待矩阵结果后按城折算实现）</Text>
 		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_NAME" Language="zh_Hans_CN">
+			<Text>城市工业改造【探针节点】</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_MATRIX_TITLE" Language="zh_Hans_CN">
+			<Text>效果矩阵（点一下即挂载到本国，用于判定"哪些效果能运行时给"）</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_MATRIX_HINT" Language="zh_Hans_CN">
+			<Text>用法：逐个点击 → 回到游戏看对应面板（顶栏产出 / 城市面板 / 单位面板）是否变化 → 把 Lua.log 里 [CCB-Probe-Tree] 的行发回。13 项互相叠加，建议一次点一两个再核对。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_M1" Language="zh_Hans_CN"><Text>M1 帝国 +1 科技（看顶栏）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M2" Language="zh_Hans_CN"><Text>M2 帝国 +1 文化（看顶栏）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M3" Language="zh_Hans_CN"><Text>M3 帝国 +2 金币（看顶栏）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M4" Language="zh_Hans_CN"><Text>M4 全城 +2 生产（看城市面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M5" Language="zh_Hans_CN"><Text>M5 全城 +10% 生产（看城市面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M6" Language="zh_Hans_CN"><Text>M6 全城 +1 宜居（看城市面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M7" Language="zh_Hans_CN"><Text>M7 全城 +1 住房（看城市面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M8" Language="zh_Hans_CN"><Text>M8 全城 +15% 发展速度（看城市面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M9" Language="zh_Hans_CN"><Text>M9 每人口 +1 科技（看城市面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M10" Language="zh_Hans_CN"><Text>M10 所有单位 +5 战斗力（★看单位面板，关键项）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M11" Language="zh_Hans_CN"><Text>M11 所有单位 +1 移动力（★看单位面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M12" Language="zh_Hans_CN"><Text>M12 所有单位 +1 攻击距离（★看单位面板）</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M13" Language="zh_Hans_CN"><Text>M13 授予能力（对照项，预期不生效）</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_NODE_REQ" Language="zh_Hans_CN">
 			<Text>前置条件：完成「灌溉」科技</Text>
 		</Replace>

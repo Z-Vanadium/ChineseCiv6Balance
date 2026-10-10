@@ -1,23 +1,37 @@
 ------------------------------------------------------------------------------
 --	FILE:   ccb_probetree.lua
---	PURPOSE: [探针·临时 2026-09-22] 新科技树面板 · UI 侧（验证完必须整段删除）
---	① 往左上 LaunchBar 的 ButtonStack 注入一个按钮（与科技/市政/政体同排）
---	   方式：LookUpControl("/InGame/LaunchBar/ButtonStack") + BuildInstanceForControl(本文件模板)
---	   注入后复刻原版 LaunchBar.RealizeBacking()（Base\Assets\UI\LaunchBar.lua:498-517）
---	   重算背景条宽度并广播 LuaEvents.LaunchBar_Resize —— 原版不会知道我们后加的按钮。
---	② 点击按钮弹出主窗口（AddUserInterfaces 上下文默认隐藏 → SetHide(false) + QueuePopup）
---	③ "解锁"按钮 → UI.RequestPlayerOperation(EXECUTE_SCRIPT) → scripts/ccb_probetree.lua
+--	PURPOSE: [探针·临时] 新科技树面板 · UI 侧
+--	① 往左上 LaunchBar.ButtonStack 注入按钮（LookUpControl + BuildInstanceForControl），
+--	   注入后复刻原版 LaunchBar.RealizeBacking()（LaunchBar.lua:498-517）重算背景宽度
+--	② 弹窗：节点卡片（解锁）+ 效果矩阵（13 个候选 modifier，逐一点击验证）
+--	③ 解锁/矩阵请求 → UI.RequestPlayerOperation(EXECUTE_SCRIPT) → scripts/ccb_probetree.lua
 --	日志前缀：[CCB-Probe-Tree]
 ------------------------------------------------------------------------------
 
-local NODE_TECH     = 'TECH_CCB_PROBE_PLANTATION';
 local PREREQ_TECH   = 'TECH_IRRIGATION';
 local PROP_UNLOCKED = 'CCB_PROBE_TREE_UNLOCKED';
 local COST_GOLD     = 150;
 
+-- 矩阵按钮 → 效果键（与 scripts/ccb_probetree.lua 的 MATRIX 表一一对应）
+local MATRIX_BUTTONS = {
+	{ ctrl = 'CCBProbeM1',  key = 'M1'  },
+	{ ctrl = 'CCBProbeM2',  key = 'M2'  },
+	{ ctrl = 'CCBProbeM3',  key = 'M3'  },
+	{ ctrl = 'CCBProbeM4',  key = 'M4'  },
+	{ ctrl = 'CCBProbeM5',  key = 'M5'  },
+	{ ctrl = 'CCBProbeM6',  key = 'M6'  },
+	{ ctrl = 'CCBProbeM7',  key = 'M7'  },
+	{ ctrl = 'CCBProbeM8',  key = 'M8'  },
+	{ ctrl = 'CCBProbeM9',  key = 'M9'  },
+	{ ctrl = 'CCBProbeM10', key = 'M10' },
+	{ ctrl = 'CCBProbeM11', key = 'M11' },
+	{ ctrl = 'CCBProbeM12', key = 'M12' },
+	{ ctrl = 'CCBProbeM13', key = 'M13' },
+};
+
 local m_injected = false;
 local m_alert    = nil;
-local RefreshPanel;		-- 前向声明：下面多个函数会用到
+local RefreshPanel;		-- 前向声明
 
 local function TechIndex(techType)
 	local row = GameInfo.Technologies[techType];
@@ -29,7 +43,6 @@ end
 -- 左上 LaunchBar 按钮注入
 -- ===========================================================================
 local function FixLaunchBarBacking(stack)
-	-- 复刻原版 RealizeBacking 的尺寸换算（+116 / -20 / 原值）
 	stack:CalculateSize();
 	local w = stack:GetSizeX();
 	local backing = ContextPtr:LookUpControl('/InGame/LaunchBar/LaunchBacking');
@@ -38,7 +51,7 @@ local function FixLaunchBarBacking(stack)
 	if backing ~= nil then backing:SetSizeX(w + 116); end
 	if tile    ~= nil then tile:SetSizeX(w - 20); end
 	if shadow  ~= nil then shadow:SetSizeX(w); end
-	LuaEvents.LaunchBar_Resize(w);	-- 通知其它上下文（DiploRibbon 等）宽度已变
+	LuaEvents.LaunchBar_Resize(w);
 	print(string.format('[CCB-Probe-Tree] LaunchBar 背景宽度已重算: stackW=%.0f', w));
 end
 
@@ -115,18 +128,29 @@ function RefreshPanel()
 end
 
 -- ===========================================================================
--- 解锁请求（UI → Gameplay）
+-- 请求（UI → Gameplay）
 -- ===========================================================================
-local function OnUnlockClicked()
-	local localPlayerID = Game.GetLocalPlayer();
+local function SendUnlock()
+	local pid = Game.GetLocalPlayer();
 	print('[CCB-Probe-Tree] UI 请求解锁节点');
 	UI.PlaySound('Confirm_Dedication');
+	UI.RequestPlayerOperation(pid, PlayerOperations.EXECUTE_SCRIPT, {
+		OnStart = 'OnPlayerCommandSetObjectState',
+		ccbProbeCommand = 'UNLOCK_NODE',
+		playerID = pid,
+	});
+end
 
-	local kParameters = {};
-	kParameters.OnStart = 'OnPlayerCommandSetObjectState';	-- gameplay 侧由该事件接收
-	kParameters.ccbProbeCommand = 'UNLOCK_NODE';
-	kParameters.playerID = localPlayerID;
-	UI.RequestPlayerOperation(localPlayerID, PlayerOperations.EXECUTE_SCRIPT, kParameters);
+local function SendMatrix(key)
+	local pid = Game.GetLocalPlayer();
+	print('[CCB-Probe-Tree] UI 请求矩阵效果 ' .. tostring(key));
+	UI.PlaySound('Main_Menu_Mouse_Over');
+	UI.RequestPlayerOperation(pid, PlayerOperations.EXECUTE_SCRIPT, {
+		OnStart = 'OnPlayerCommandSetObjectState',
+		ccbProbeCommand = 'MATRIX',
+		playerID = pid,
+		effectKey = key,
+	});
 end
 
 -- ===========================================================================
@@ -135,15 +159,25 @@ end
 local function Initialize()
 	ContextPtr:SetHide(true);
 
-	Controls.CCBProbeNodeUnlock:RegisterCallback(Mouse.eLClick, OnUnlockClicked);
+	Controls.CCBProbeNodeUnlock:RegisterCallback(Mouse.eLClick, SendUnlock);
 	Controls.CCBProbeTreeClose:RegisterCallback(Mouse.eLClick, function() HidePanel(); end);
 
-	-- HUD 就绪后再注入（原版面板通用钩子：LaunchBar/TopPanel/WorldTracker 均用 LoadGameViewStateDone）
-	Events.LoadGameViewStateDone.Add(function()
-		InjectLaunchBarButton();
-	end);
+	local wired, missing = 0, {};
+	for _, entry in ipairs(MATRIX_BUTTONS) do
+		local ctrl = Controls[entry.ctrl];
+		if ctrl ~= nil then
+			ctrl:RegisterCallback(Mouse.eLClick, function() SendMatrix(entry.key); end);
+			wired = wired + 1;
+		else
+			missing[#missing + 1] = entry.ctrl;
+		end
+	end
+	print(string.format('[CCB-Probe-Tree] 矩阵按钮已接线 %d/%d%s', wired, #MATRIX_BUTTONS,
+		(#missing > 0) and ('（缺失: ' .. table.concat(missing, ',') .. '）') or ''));
+
+	Events.LoadGameViewStateDone.Add(function() InjectLaunchBarButton(); end);
 	Events.LocalPlayerTurnBegin.Add(function()
-		InjectLaunchBarButton();	-- 兜底重试（首帧 LaunchBar 可能还没建好）
+		InjectLaunchBarButton();
 		RefreshPanel();
 	end);
 	Events.TurnBegin.Add(function() RefreshPanel(); end);

@@ -4540,7 +4540,7 @@
 			<Text>Open the new tech tree (validation probe)</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_PROBE_TREE_HINT" Language="en_US">
-			<Text>[PROBE] Validates: a custom button in the top-left HUD bar, a researchable node, unlocking with Gold, and effects carried by the data layer. Temporary content, removed after testing.</Text>
+			<Text>[PROBE / route A] This build adds NO tech or civic rows: node state lives in Lua only and effects are runtime-attached on unlock, so the vanilla tech tree, civics tree, research chooser and Civilopedia should show nothing of ours. The effect matrix below validates which of 13 modifier types can be runtime-attached. Temporary content.</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_CCB_PROBE_PLANTATION_NAME" Language="en_US">
 			<Text>Plantation Mechanization [PROBE]</Text>
@@ -4549,8 +4549,30 @@
 			<Text>[PROBE] All Plantation improvements provide +1 [ICON_Production] Production.</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_PROBE_NODE_EFFECT" Language="en_US">
-			<Text>Effect: all Plantation improvements +1 [ICON_Production] Production</Text>
+			<Text>Effect: all cities +1 [ICON_Production] Production (runtime-attached; the original per-Plantation version awaits the matrix results)</Text>
 		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_NAME" Language="en_US">
+			<Text>Urban Industrial Retooling [PROBE NODE]</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_MATRIX_TITLE" Language="en_US">
+			<Text>Effect matrix (click to attach to your player; tells us which effects can be granted at runtime)</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_MATRIX_HINT" Language="en_US">
+			<Text>Click one or two at a time, then check the matching panel (top bar yields / city panel / unit panel) and send back the [CCB-Probe-Tree] lines from Lua.log. Effects stack, so verify incrementally.</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_M1" Language="en_US"><Text>M1 Empire +1 Science (top bar)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M2" Language="en_US"><Text>M2 Empire +1 Culture (top bar)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M3" Language="en_US"><Text>M3 Empire +2 Gold (top bar)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M4" Language="en_US"><Text>M4 All cities +2 Production (city panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M5" Language="en_US"><Text>M5 All cities +10% Production (city panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M6" Language="en_US"><Text>M6 All cities +1 Amenity (city panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M7" Language="en_US"><Text>M7 All cities +1 Housing (city panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M8" Language="en_US"><Text>M8 All cities +15% Growth (city panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M9" Language="en_US"><Text>M9 +1 Science per Citizen (city panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M10" Language="en_US"><Text>M10 All units +5 Combat Strength (unit panel - key item)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M11" Language="en_US"><Text>M11 All units +1 Movement (unit panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M12" Language="en_US"><Text>M12 All units +1 Range (unit panel)</Text></Replace>
+		<Replace Tag="LOC_CCB_PROBE_M13" Language="en_US"><Text>M13 Grant ability (control item, expected to fail)</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_NODE_REQ" Language="en_US">
 			<Text>Requires: Irrigation</Text>
 		</Replace>
