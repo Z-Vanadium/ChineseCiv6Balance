@@ -4532,5 +4532,51 @@
 		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="en_US">
 			<Text>All combat units can move after attacking.</Text>
 		</Replace>
+		<!-- [探针·临时 2026-09-22] 新科技树面板（验证完必须删除本节） -->
+		<Replace Tag="LOC_CCB_PROBE_TREE_TITLE" Language="en_US">
+			<Text>New Tech Tree (validation probe)</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_TREE_LAUNCH_TIP" Language="en_US">
+			<Text>Open the new tech tree (validation probe)</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_TREE_HINT" Language="en_US">
+			<Text>[PROBE] Validates: a custom button in the top-left HUD bar, a researchable node, unlocking with Gold, and effects carried by the data layer. Temporary content, removed after testing.</Text>
+		</Replace>
+		<Replace Tag="LOC_TECH_CCB_PROBE_PLANTATION_NAME" Language="en_US">
+			<Text>Plantation Mechanization [PROBE]</Text>
+		</Replace>
+		<Replace Tag="LOC_TECH_CCB_PROBE_PLANTATION_DESC" Language="en_US">
+			<Text>[PROBE] All Plantation improvements provide +1 [ICON_Production] Production.</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_EFFECT" Language="en_US">
+			<Text>Effect: all Plantation improvements +1 [ICON_Production] Production</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_REQ" Language="en_US">
+			<Text>Requires: Irrigation</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_COST" Language="en_US">
+			<Text>Cost: 150 [ICON_Gold] Gold</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_BUTTON" Language="en_US">
+			<Text>Unlock for 150 [ICON_Gold] Gold</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_LOCKED" Language="en_US">
+			<Text>Not unlocked.</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_NOPREREQ" Language="en_US">
+			<Text>Locked: research Irrigation first.</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_NOGOLD" Language="en_US">
+			<Text>Not enough Gold.</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_READY" Language="en_US">
+			<Text>Available to unlock.</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_DONE" Language="en_US">
+			<Text>Unlocked (effect active).</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_TREE_CLOSE" Language="en_US">
+			<Text>Close</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>

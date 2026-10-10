@@ -9025,5 +9025,51 @@
 		<Replace Tag="LOC_GOVT_INHERENT_BONUS_CORPORATE_LIBERTARIANISM" Language="zh_Hans_CN">
 			<Text>商业中心与军营向城市提供+10% [ICON_Production] 生产力；改良设施产出的资源每回合+1。所有战斗单位攻击后可移动。</Text>
 		</Replace>
+		<!-- [探针·临时 2026-09-22] 新科技树面板（验证完必须删除本节） -->
+		<Replace Tag="LOC_CCB_PROBE_TREE_TITLE" Language="zh_Hans_CN">
+			<Text>新科技树（验证探针）</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_TREE_LAUNCH_TIP" Language="zh_Hans_CN">
+			<Text>打开新科技树（验证探针）</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_TREE_HINT" Language="zh_Hans_CN">
+			<Text>[探针] 本次验证：左上按钮栏能否加入自建按钮、能否自建"可研究对象"、能否用金币解锁、以及效果能否由数据层承载。临时内容，测完即删。</Text>
+		</Replace>
+		<Replace Tag="LOC_TECH_CCB_PROBE_PLANTATION_NAME" Language="zh_Hans_CN">
+			<Text>种植园机械化【探针】</Text>
+		</Replace>
+		<Replace Tag="LOC_TECH_CCB_PROBE_PLANTATION_DESC" Language="zh_Hans_CN">
+			<Text>【探针节点】完成「灌溉」后可花费金币解锁：所有种植园改良的产出 +1 [ICON_Production] 生产力。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_EFFECT" Language="zh_Hans_CN">
+			<Text>效果：所有种植园改良 +1 [ICON_Production] 生产力</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_REQ" Language="zh_Hans_CN">
+			<Text>前置条件：完成「灌溉」科技</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_COST" Language="zh_Hans_CN">
+			<Text>解锁花费：150 [ICON_Gold] 金币</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_BUTTON" Language="zh_Hans_CN">
+			<Text>花费 150 [ICON_Gold] 金币解锁</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_LOCKED" Language="zh_Hans_CN">
+			<Text>尚未解锁。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_NOPREREQ" Language="zh_Hans_CN">
+			<Text>未满足前置：需先完成「灌溉」科技。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_NOGOLD" Language="zh_Hans_CN">
+			<Text>金币不足。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_READY" Language="zh_Hans_CN">
+			<Text>可以解锁。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_NODE_STATUS_DONE" Language="zh_Hans_CN">
+			<Text>已解锁（效果已生效）。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_TREE_CLOSE" Language="zh_Hans_CN">
+			<Text>关闭</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>
