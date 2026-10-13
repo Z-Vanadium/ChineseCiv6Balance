@@ -58,9 +58,15 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO TraitModifiers VALUES
     ('TRAIT_LEADER_YONGLE', 'BBG_YONGLE_WALL_FOOD_ADJACENT');
 
--- 2026/06/30 里甲项目需要 2 人口（虚拟建筑）
--- LOC_BUILDING_CCB_LIJIA_DUMMY_NAME: 达到至少 2 人口
-INSERT INTO Types(Type, Kind) VALUES
-	('BUILDING_CCB_LIJIA_DUMMY', 'KIND_BUILDING');
-INSERT INTO Buildings (BuildingType, NAME, Cost, InternalOnly, MustPurchase) VALUES ('BUILDING_CCB_LIJIA_DUMMY', 'LOC_BUILDING_CCB_LIJIA_DUMMY_NAME', 1, 1, 1);
-UPDATE Projects SET RequiredBuilding='BUILDING_CCB_LIJIA_DUMMY' WHERE ProjectType LIKE 'PROJECT_LIJIA_%';
+--==============================================================================================
+-- 里甲 · 人口门槛：**已移除虚拟市中心建筑**（2026-09-20 用户决定）
+--   旧做法（2026/06/30 加）：新建 InternalOnly/MustPurchase 的虚拟市中心建筑 BUILDING_CCB_LIJIA_DUMMY，
+--     把三个里甲项目的 `RequiredBuilding` 指向它，再由 Lua（scripts/bbg_script.lua 的
+--     OnYongleCityPopulationChanged）按人口给城市挂/摘这个建筑 → 门槛先是 2 人口，后降到 1 人口。
+--   现做法：**整段摘除**（SQL 的 Types/Buildings/Projects 三行 + Lua 函数与钩子 + 中文 LOC），
+--     里甲不再有任何人口前置 —— 与**上游 BBG** 的 Yongle.sql 完全一致：
+--       BBG 通篇只改项目转化率、+人口产出、13/18 人口的尤里卡/鼓舞、长城食物，**从不给里甲设人口门槛**；
+--       而原版 `Projects` 表**没有**任何人口列，任何城市（≥1 人口）都能执行里甲。
+--   ⚠ 不保留任何 RequiredBuilding 赋值：本文件每次启动在干净库上重跑，不设置即回到原版 NULL。
+--   ⚠ 产出一律未动：PROJECT_LIJIA_FOOD 60% / FAITH 70% / GOLD 150%（见上），+0.7科技/+0.5文化/+1金币亦未动。
+--==============================================================================================

@@ -2757,25 +2757,12 @@ end
 -- ===========================================================================
 -- Yongle
 -- ===========================================================================
-function OnYongleCityPopulationChanged(cityOwner, cityID, change_amount)
-	local pPlayer = Players[cityOwner];
-	if pPlayer == nil or PlayerConfigurations[cityOwner]:GetLeaderTypeName() ~= "LEADER_YONGLE" then
-		return
-	end
-	local pCity = CityManager.GetCity(cityOwner, cityID)
-	if pCity == nil then
-		return
-	end
-	local flag = GameInfo.Buildings['BUILDING_CCB_LIJIA_DUMMY'];
-	print("OnYongleCityPopulationChanged: flag", flag)
-	-- 2026/09 用户确认: 里甲门槛从 2 人口降为 1 人口(城市最低 1 人口 → 任何城市可进行)
-	if pCity:GetBuildings():HasBuilding(flag.Index) == false and pCity:GetPopulation() >= 1 then
-		pCity:GetBuildQueue():CreateBuilding(flag.Index);
-	end
-	if pCity:GetBuildings():HasBuilding(flag.Index) == true and pCity:GetPopulation() < 1 then
-		pCity:GetBuildings():RemoveBuilding(flag.Index);
-	end
-end
+-- 2026-09-20 用户决定：**移除里甲的人口门槛**（连同虚拟建筑 BUILDING_CCB_LIJIA_DUMMY）
+--   —— 与上游 BBG 一致：BBG 只改里甲的转化率/人口产出，从不设门槛；原版 Projects 表也没有人口列，
+--      任何城市（≥1 人口）都能执行里甲。
+--   原先这里有一个 OnYongleCityPopulationChanged 回调（按人口给城市挂/摘那个虚拟建筑）+ 在
+--   OnPlayerSetup 里注册 GameEvents.OnCityPopulationChanged，两者均已整段删除。
+-- ===========================================================================
 -- ===========================================================================
 -- Mvemba
 -- ===========================================================================
@@ -4494,11 +4481,6 @@ function Initialize()
 			--5.6. Disable: GameEvents.GameplayMvembaCityRemovedFromMap.Add(OnGameplayMvembaCityRemovedFromMap)
 			--5.6. Disable: GameEvents.GameplayMvembaGiftCity.Add(OnGameplayMvembaGiftCity)
 			--5.6. Disable: print("Mvemba religious hooks added")
-
-		-- 永乐 2 人口虚拟建筑
-		elseif PlayerConfigurations[iPlayerID]:GetLeaderTypeName() == "LEADER_YONGLE" then
-			GameEvents.OnCityPopulationChanged.Add(OnYongleCityPopulationChanged);
-			print("Yongle population hook added")
 		end
 	end
 	if BBCC_MODE ~= -1 then

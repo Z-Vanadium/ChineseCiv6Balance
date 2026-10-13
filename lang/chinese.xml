@@ -302,9 +302,7 @@
 		<Replace Tag="LOC_PROJECT_LIJIA_GOLD_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>此项目每回合提供等同于此城市生产力150%的 [ICON_Gold] 金币。</Text>
 		</Replace>
-		<Row Tag="LOC_BUILDING_CCB_LIJIA_DUMMY_NAME" Language="zh_Hans_CN">
-			<Text>达到至少 1 [ICON_CITIZEN] 人口</Text>
-		</Row>
+		<!-- 2026-09-20 移除里甲人口门槛：删去虚拟建筑 BUILDING_CCB_LIJIA_DUMMY 的中文名（LOC_BUILDING_CCB_LIJIA_DUMMY_NAME） -->
 		<!-- = leader ability (Wu Zetian) = -->
 		<Replace Tag="LOC_TRAIT_LEADER_WU_ZETIAN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>进攻性间谍的行动效果提升 1 级。进攻性间谍任务成功时，获得目标城市该回合 [ICON_Faith] 信仰值的 100% 和 [ICON_Culture] 文化值、 [ICON_SCIENCE] 科技值的 50%。解锁“行政部门”市政后获得 1 名免费间谍（和一个额外的间谍容量）。可以使用[ICON_Faith] 信仰值购买间谍。[NEWLINE]位于侦察单位 3 单元格范围的陆地单位 +3 [ICON_Strength] 战斗力。[NEWLINE][NEWLINE]建成市政广场建筑或外交区建筑时获得一项随机 [ICON_TechBoosted] 尤里卡和 [ICON_CivicBoosted] 鼓舞（如可用）。若相邻长城，长城获得1点 [ICON_Science] 科技值</Text>
