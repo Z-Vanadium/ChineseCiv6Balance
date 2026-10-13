@@ -109,12 +109,12 @@ INSERT INTO Traits (TraitType, Name, Description, InternalOnly) VALUES
 	('TRAIT_CCB_PROBE_A', 'LOC_CCB_PROBE_TRAIT_A_NAME', 'LOC_CCB_PROBE_TRAIT_A_DESC', 1),
 	('TRAIT_CCB_PROBE_B', 'LOC_CCB_PROBE_TRAIT_B_NAME', 'LOC_CCB_PROBE_TRAIT_B_DESC', 1);
 
--- Trait A：帝国 +1 科技
+-- Trait A：帝国 +3 科技（取 +3 便于在读数里一眼判定"授予 Trait"是否生效）
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
 	('CCB_PROBE_TRAIT_A_SCI', 'MODIFIER_PLAYER_ADJUST_YIELD_CHANGE');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 	('CCB_PROBE_TRAIT_A_SCI', 'YieldType', 'YIELD_SCIENCE'),
-	('CCB_PROBE_TRAIT_A_SCI', 'Amount', 1);
+	('CCB_PROBE_TRAIT_A_SCI', 'Amount', 3);
 INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 	('TRAIT_CCB_PROBE_A', 'CCB_PROBE_TRAIT_A_SCI');
 

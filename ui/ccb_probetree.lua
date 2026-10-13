@@ -162,6 +162,16 @@ local function SendMatrix(key)
 	});
 end
 
+local function SendReadout()
+	local pid = Game.GetLocalPlayer();
+	print('[CCB-Probe-Tree] UI 请求打印读数');
+	UI.RequestPlayerOperation(pid, PlayerOperations.EXECUTE_SCRIPT, {
+		OnStart = 'OnPlayerCommandSetObjectState',
+		ccbProbeCommand = 'READOUT',
+		playerID = pid,
+	});
+end
+
 -- ===========================================================================
 -- 生命周期
 -- ===========================================================================
@@ -169,6 +179,7 @@ local function Initialize()
 	ContextPtr:SetHide(true);
 
 	Controls.CCBProbeNodeUnlock:RegisterCallback(Mouse.eLClick, SendUnlock);
+	Controls.CCBProbeReadout:RegisterCallback(Mouse.eLClick, SendReadout);
 	Controls.CCBProbeTreeClose:RegisterCallback(Mouse.eLClick, function() HidePanel(); end);
 
 	local wired, missing = 0, {};

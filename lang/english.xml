@@ -4558,8 +4558,9 @@
 			<Text>Effect matrix (click to attach to your player; tells us which effects can be granted at runtime)</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_PROBE_MATRIX_HINT" Language="en_US">
-			<Text>Click one or two at a time, then check the matching panel (top bar yields / city panel / unit panel) and send back the [CCB-Probe-Tree] lines from Lua.log. Effects stack, so verify incrementally.</Text>
+			<Text>Click one at a time: a readout (science/turn, culture/turn, gold, per-city production, sample unit CS and moves) is printed automatically BEFORE and AFTER each attach, so Lua.log alone tells whether the effect applied. A manual Print readout button is provided too. Effects stack, so verify incrementally.</Text>
 		</Replace>
+		<Replace Tag="LOC_CCB_PROBE_READOUT" Language="en_US"><Text>Print readout (science/culture/gold/city production/unit CS)</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_M1" Language="en_US"><Text>M1 Empire +1 Science (top bar)</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_M2" Language="en_US"><Text>M2 Empire +1 Culture (top bar)</Text></Replace>
 		<Replace Tag="LOC_CCB_PROBE_M3" Language="en_US"><Text>M3 Empire +2 Gold (top bar)</Text></Replace>

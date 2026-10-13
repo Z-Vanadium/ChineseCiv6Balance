@@ -83,8 +83,60 @@ local function ReadGold(player)
 	return -1, false;
 end
 
--- 统一封装"运行时挂载"并打印真实结果（探针核心动作）
+-- [客观读数] 打印"会被效果改变的数值"，用于点击前后对比判定是否真的生效
+--   科技/回合 = PlayerTechs:GetScienceYield()（原版 TopPanel.lua:107 同款）
+--   文化/回合 = PlayerCulture:GetCultureYield()（原版 ARXManager.lua:155 同款）
+--   金币      = PlayerTreasury:GetGoldBalance()
+--   样本单位   = Unit:GetCombat() / Unit:GetMovesRemaining()（工程内 bbg_script.lua 同款）
+local function Readout(player, tag)
+	local parts = {};
+
+	local okSci, sci = pcall(function() return player:GetTechs():GetScienceYield(); end);
+	local okCul, cul = pcall(function() return player:GetCulture():GetCultureYield(); end);
+	local gold, goldOk = ReadGold(player);
+	parts[#parts + 1] = '科技/回合=' .. (okSci and string.format('%.1f', sci) or 'ERR');
+	parts[#parts + 1] = '文化/回合=' .. (okCul and string.format('%.1f', cul) or 'ERR');
+	parts[#parts + 1] = '金币=' .. (goldOk and tostring(gold) or 'ERR');
+
+	local prodIdx = YieldTypes.PRODUCTION;
+	local cityParts = {};
+	EachIn(player:GetCities(), function(city)
+		local ok, y = pcall(function() return city:GetYield(prodIdx); end);
+		cityParts[#cityParts + 1] = ok and string.format('%.1f', y) or 'ERR';
+		return 1;
+	end);
+	parts[#parts + 1] = '各城生产=[' .. table.concat(cityParts, ',') .. ']';
+
+	local unitParts = {};
+	local function Consider(u)
+		if #unitParts >= 3 or u == nil or u.GetUnitType == nil then return; end
+		local okCS, cs = pcall(function() return u:GetCombat(); end);
+		if not okCS or cs == nil or cs <= 0 then return; end
+		local okMV, mv = pcall(function() return u:GetMovesRemaining(); end);
+		local okT, t = pcall(function() return u:GetUnitType(); end);
+		unitParts[#unitParts + 1] = string.format('%s CS=%d 移动=%s', tostring(okT and t or '?'), cs,
+			okMV and string.format('%.0f', mv) or '?');
+	end
+	local units = player:GetUnits();
+	if units ~= nil then
+		if units.Members ~= nil then
+			pcall(function() for _, u in units:Members() do Consider(u); end end);
+		end
+		if #unitParts == 0 then
+			pcall(function() for _, u in ipairs(units) do Consider(u); end end);
+		end
+		if #unitParts == 0 then
+			pcall(function() for _, u in pairs(units) do Consider(u); end end);
+		end
+	end
+	parts[#parts + 1] = '单位[' .. ((#unitParts > 0) and table.concat(unitParts, ' | ') or '无') .. ']';
+
+	print(string.format('[CCB-Probe-Tree] 读数(%s)：%s', tag, table.concat(parts, '  ')));
+end
+
+-- 统一封装"运行时挂载"：挂载前读数 → 挂载 → 挂载后读数（据此客观判定效果是否生效）
 local function AttachAndReport(player, modifierId, label)
+	Readout(player, '挂载前 ' .. modifierId);
 	local ok, err = pcall(function()
 		player:AttachModifierByID(modifierId);
 	end);
@@ -92,7 +144,8 @@ local function AttachAndReport(player, modifierId, label)
 		print(string.format('[CCB-Probe-Tree] ✗ 挂载失败 %s（%s）：%s', modifierId, label, tostring(err)));
 		return false;
 	end
-	print(string.format('[CCB-Probe-Tree] ✓ 已挂载 %s（%s）—— 请在游戏内核对对应面板数值是否变化', modifierId, label));
+	print(string.format('[CCB-Probe-Tree] ✓ 已挂载 %s（%s）', modifierId, label));
+	Readout(player, '挂载后 ' .. modifierId);
 	return true;
 end
 
@@ -153,6 +206,12 @@ function OnCCBProbeTreeCommand(ePlayer, params)
 		local modifierId = 'CCB_PROBE_' .. key;
 		print(string.format('[CCB-Probe-Tree] 矩阵请求 %s = %s', modifierId, MATRIX[key]));
 		AttachAndReport(player, modifierId, MATRIX[key]);
+		return;
+	end
+
+	-- ===== ③ 手动打印读数（不确定时随时点） =====
+	if params.ccbProbeCommand == 'READOUT' then
+		Readout(player, '手动');
 		return;
 	end
 end

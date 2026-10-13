@@ -94,8 +94,10 @@
 				<GridButton ID="CCBProbeR9" Style="MainButton" Size="540,32" String="LOC_CCB_PROBE_R9"/>
 			</Stack>
 
-			<GridButton ID="CCBProbeTreeClose" Anchor="C,B" Offset="0,10" Style="MainButton" Size="220,36"
-			            String="LOC_CCB_PROBE_TREE_CLOSE"/>
+			<Stack ID="CCBProbeBottomStack" Anchor="C,B" Offset="0,10" StackGrowth="Right" StackPadding="12">
+				<GridButton ID="CCBProbeReadout" Style="MainButton" Size="320,36" String="LOC_CCB_PROBE_READOUT"/>
+				<GridButton ID="CCBProbeTreeClose" Style="MainButton" Size="220,36" String="LOC_CCB_PROBE_TREE_CLOSE"/>
+			</Stack>
 		</Grid>
 	</Container>
 </Context>
