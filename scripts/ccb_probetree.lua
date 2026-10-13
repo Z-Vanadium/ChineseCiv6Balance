@@ -87,13 +87,20 @@ end
 --   科技/回合 = PlayerTechs:GetScienceYield()（原版 TopPanel.lua:107 同款）
 --   文化/回合 = PlayerCulture:GetCultureYield()（原版 ARXManager.lua:155 同款）
 --   金币      = PlayerTreasury:GetGoldBalance()
---   样本单位   = Unit:GetCombat() / Unit:GetMovesRemaining()（工程内 bbg_script.lua 同款）
+--   样本单位   = Unit:GetCombat() / Unit:GetMovesRemaining()
+--   单位取样走 3 条路：容器 Members() → ipairs/pairs → **地图扫描兜底**
+--     （2026-10-14 实测：容器路径一直取不到单位（读数始终 单位[无]），故加诊断与兜底，
+--       地图扫描写法取自本工程 scripts/ccb_planted_forest.lua:73 Map.GetPlotCount()）
 local function Readout(player, tag)
 	local parts = {};
+	local turn = -1;
+	local okTurn, t = pcall(function() return Game.GetCurrentGameTurn(); end);
+	if okTurn and t ~= nil then turn = t; end
 
 	local okSci, sci = pcall(function() return player:GetTechs():GetScienceYield(); end);
 	local okCul, cul = pcall(function() return player:GetCulture():GetCultureYield(); end);
 	local gold, goldOk = ReadGold(player);
+	parts[#parts + 1] = 'T' .. tostring(turn);
 	parts[#parts + 1] = '科技/回合=' .. (okSci and string.format('%.1f', sci) or 'ERR');
 	parts[#parts + 1] = '文化/回合=' .. (okCul and string.format('%.1f', cul) or 'ERR');
 	parts[#parts + 1] = '金币=' .. (goldOk and tostring(gold) or 'ERR');
@@ -107,29 +114,63 @@ local function Readout(player, tag)
 	end);
 	parts[#parts + 1] = '各城生产=[' .. table.concat(cityParts, ',') .. ']';
 
+	-- ---- 单位取样 ----
 	local unitParts = {};
+	local diag = {};
+	local myID = player:GetID();
 	local function Consider(u)
 		if #unitParts >= 3 or u == nil or u.GetUnitType == nil then return; end
 		local okCS, cs = pcall(function() return u:GetCombat(); end);
 		if not okCS or cs == nil or cs <= 0 then return; end
 		local okMV, mv = pcall(function() return u:GetMovesRemaining(); end);
-		local okT, t = pcall(function() return u:GetUnitType(); end);
-		unitParts[#unitParts + 1] = string.format('%s CS=%d 移动=%s', tostring(okT and t or '?'), cs,
+		local okT, tp = pcall(function() return u:GetUnitType(); end);
+		unitParts[#unitParts + 1] = string.format('%s CS=%d 移动=%s', tostring(okT and tp or '?'), cs,
 			okMV and string.format('%.0f', mv) or '?');
 	end
+
 	local units = player:GetUnits();
+	diag[#diag + 1] = 'GetUnits=' .. ((units ~= nil) and 'ok' or 'nil');
 	if units ~= nil then
 		if units.Members ~= nil then
-			pcall(function() for _, u in units:Members() do Consider(u); end end);
+			local ok1, err1 = pcall(function() for _, u in units:Members() do Consider(u); end end);
+			if not ok1 then diag[#diag + 1] = 'MembersErr=' .. tostring(err1); end
+		else
+			diag[#diag + 1] = 'Members=nil';
 		end
 		if #unitParts == 0 then
-			pcall(function() for _, u in ipairs(units) do Consider(u); end end);
+			local ok2, err2 = pcall(function() for _, u in ipairs(units) do Consider(u); end end);
+			if not ok2 then diag[#diag + 1] = 'ipairsErr=' .. tostring(err2); end
 		end
 		if #unitParts == 0 then
-			pcall(function() for _, u in pairs(units) do Consider(u); end end);
+			local ok3, err3 = pcall(function() for _, u in pairs(units) do Consider(u); end end);
+			if not ok3 then diag[#diag + 1] = 'pairsErr=' .. tostring(err3); end
 		end
 	end
+
+	-- 兜底：地图扫描（保证能取到单位，同时便于判断容器路径为何失败）
+	local scanned = 0;
+	if #unitParts == 0 then
+		local count = Map.GetPlotCount();
+		for i = 0, count - 1 do
+			local plot = Map.GetPlotByIndex(i);
+			if plot ~= nil then
+				local okU, u = pcall(function() return plot:GetUnit(); end);
+				if okU and u ~= nil then
+					local okO, owner = pcall(function() return u:GetOwner(); end);
+					if okO and owner == myID then
+						scanned = scanned + 1;
+						Consider(u);
+					end
+				end
+			end
+		end
+		diag[#diag + 1] = 'mapScan=' .. tostring(scanned);
+	end
+
 	parts[#parts + 1] = '单位[' .. ((#unitParts > 0) and table.concat(unitParts, ' | ') or '无') .. ']';
+	if #unitParts == 0 then
+		parts[#parts + 1] = '诊断{' .. table.concat(diag, ',') .. '}';
+	end
 
 	print(string.format('[CCB-Probe-Tree] 读数(%s)：%s', tag, table.concat(parts, '  ')));
 end
@@ -217,5 +258,18 @@ function OnCCBProbeTreeCommand(ePlayer, params)
 end
 
 GameEvents.OnPlayerCommandSetObjectState.Add(OnCCBProbeTreeCommand);
+
+-- [每回合读数] 记录数值随时间的变化，用于判定"效果何时开始生效"
+--   （本次要回答的问题：R9 授予 Trait B 的 +5 战斗力是立即生效、还是过回合/其它操作后才生效；
+--     以及用户观察到的"点 M10 才 +5"到底是 M10 的功劳还是 R9 早已生效）
+local function ProbeTurnReadout(turn)
+	for _, pid in ipairs(PlayerManager.GetAliveMajorIDs()) do
+		local p = Players[pid];
+		if p ~= nil and p:IsHuman() then
+			Readout(p, '回合开始');
+		end
+	end
+end
+GameEvents.OnGameTurnStarted.Add(ProbeTurnReadout);
 
 print('[CCB-Probe-Tree] gameplay probe loaded.');
