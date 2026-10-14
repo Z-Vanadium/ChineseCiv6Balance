@@ -2232,7 +2232,7 @@
 			<Text>+3 [ICON_InfluencePerTurn] Influence Points per turn. When this civilization captures or kills an enemy Spy, receive 200 [ICON_SCIENCE] Science (on Standard speed) for every level of the enemy Spy.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_CONSULATE_DESCRIPTION" Language="en_US">
-			<Text>+2 Influence Points per turn. +1 [ICON_FAVOR] Diplomatic Favor per turn for each Alliance you have. Enemy Spy's level is reduced by 1 when targeting this city or cities with Encampments.</Text>
+			<Text>+2 [ICON_InfluencePerTurn] Influence Points per turn. Enemy Spy's level is reduced by 1 when targeting this city or cities with Encampments.</Text>
 		</Replace>
 		<!-- == Encampment Buildings == -->
 		<Replace Tag="LOC_BUILDING_BARRACKS_DESCRIPTION" Language="en_US">
@@ -4590,9 +4590,7 @@
 		<Replace Tag="LOC_CCB_DQ_ALLY_FAVOR_DESC" Language="en_US">
 			<Text>Diplomatic Quarter: +1 [ICON_FAVOR] Diplomatic Favor per turn for each Alliance.</Text>
 		</Replace>
-		<Replace Tag="LOC_CCB_CONSULATE_ALLY_FAVOR_DESC" Language="en_US">
-			<Text>Consulate: +1 [ICON_FAVOR] Diplomatic Favor per turn for each Alliance.</Text>
-		</Replace>
+		<!-- ⚠ 2026-10-15 removed LOC_CCB_CONSULATE_ALLY_FAVOR_DESC (Consulate no longer grants Favor; only the Diplomatic Quarter does) -->
 		<!-- = CCB 生产面板「清空队列」按钮（2026-10-14） = -->
 		<Replace Tag="LOC_CCB_QUEUE_CLEAR_BTN" Language="en_US">
 			<Text>Clear</Text>
