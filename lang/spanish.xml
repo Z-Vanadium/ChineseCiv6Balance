@@ -2595,7 +2595,7 @@
 			<Text>¡Has enviado a una persona a la luna con éxito! Otorga una bonificación única a Cultura [ICON_Culture] equivalente a 5 veces tu Ciencia [ICON_Science] por turno y marca el segundo paso hacia la victoria científica.</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="es_ES">
-			<Text>+2 Movimiento [ICON_Movement] a unidades embarcadas. +50% Turismo [ICON_Tourism] por Grandes Obras de Arte.</Text>
+			<Text>+2 Movimiento [ICON_Movement] a unidades embarcadas. +2 al Movimiento [ICON_Movement] para todas las unidades navales. +50% Turismo [ICON_Tourism] por Grandes Obras de Arte.</Text>
 		</Replace>
 		<Replace Tag="BBG_LOC_TECH_MILITARY_ENGINEERING_DESCRIPTION" Language="es_ES">
 			<Text>+1 a la Producción[ICON_Production] para mejoras de Cantera.</Text>

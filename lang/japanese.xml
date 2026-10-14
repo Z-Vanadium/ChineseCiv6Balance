@@ -2569,7 +2569,7 @@
 			<Text>人類の月面に降り立たせることに成功しました！ 1ターンで得られる [ICON_Science] 科学力の5倍に相当する [ICON_Culture] 文化力ボーナスが発生 (1回のみ) し、科学による勝利に向けた次なる一歩を踏み出せます。</Text>
 		</Replace>
     <Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="ja_JP">
-      <Text>乗船したユニットの[ICON_Movement]移動力+2。芸術の傑作からの[ICON_Tourism]観光力+50%。</Text>
+      <Text>乗船したユニットの[ICON_Movement]移動力+2。すべての海洋ユニットの[ICON_Movement]移動力+2。芸術の傑作からの[ICON_Tourism]観光力+50%。</Text>
     </Replace>
     <Replace Tag="BBG_LOC_TECH_MILITARY_ENGINEERING_DESCRIPTION" Language="ja_JP">
       <Text>採石場の[ICON_Production]生産力+1。</Text>

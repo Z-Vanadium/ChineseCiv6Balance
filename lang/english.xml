@@ -3141,7 +3141,7 @@
 			<Text>+2 [ICON_PRODUCTION] Production from the Quarry improvement.</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="en_US">
-			<Text>+2 [ICON_MOVEMENT] Movement for embarked units. +50% [ICON_TOURISM] Tourism for Great Works of Art.</Text>
+			<Text>+2 [ICON_MOVEMENT] Movement for embarked units. +2 [ICON_Movement] Movement for all naval units. +50% [ICON_TOURISM] Tourism for Great Works of Art.</Text>
 		</Replace>
 		<Replace Tag="LOC_BOOST_TRIGGER_STEEL" Language="en_US">
 			<Text>Build Renaissance Walls.</Text>

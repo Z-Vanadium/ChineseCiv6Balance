@@ -2028,7 +2028,7 @@
 			<Text>Hai mandato il primo uomo sulla luna! Fornisce un bonus una tantum di [ICON_Culture] Cultura pari a 5 volte la tua [ICON_Science] Scienza per turno e segna il secondo passo verso la Vittoria scientifica. Blondx è fiero di te!</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="it_IT">
-			<Text>+2 al [ICON_Movement] movimento delle unità imbarcate. +50% [ICON_TOURISM] Turismo per i [ICON_GreatWork_Portrait] Ritratti, i [ICON_GreatWork_Landscape] Paesaggi, le [ICON_GreatWork_Sculpture] Sculture e [ICON_GreatWork_Religious] Capolavori religiosi.</Text>
+			<Text>+2 al [ICON_Movement] movimento delle unità imbarcate. +2 al [ICON_Movement] movimento di tutte le unità navali. +50% [ICON_TOURISM] Turismo per i [ICON_GreatWork_Portrait] Ritratti, i [ICON_GreatWork_Landscape] Paesaggi, le [ICON_GreatWork_Sculpture] Sculture e [ICON_GreatWork_Religious] Capolavori religiosi.</Text>
 		</Replace>
 
 

@@ -5718,7 +5718,7 @@
 			<Text>Ваша лунная экспедиция завершается успешно! Это дает разовый бонус к [ICON_Culture] культуре, равный 5-кратному размеру вашей [ICON_Science] науки за ход. Означает второй шаг к научной победе.</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="ru_RU">
-			<Text>+2 [ICON_MOVEMENT] ОП погруженным на борт юнитам. [NEWLINE]+50% к [ICON_TOURISM] туризму от шедевров изобразительного искусства.</Text>
+			<Text>+2 [ICON_MOVEMENT] ОП погруженным на борт юнитам. +2 [ICON_Movement] перемещения для всех морских юнитов. [NEWLINE]+50% к [ICON_TOURISM] туризму от шедевров изобразительного искусства.</Text>
 		</Replace>
 		<Replace Tag="BBG_LOC_TECH_MILITARY_ENGINEERING_DESCRIPTION" Language="ru_RU">
 			<Text>Каменоломни получают +1 [ICON_Production] производства.</Text>

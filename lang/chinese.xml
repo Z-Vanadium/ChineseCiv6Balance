@@ -3205,7 +3205,7 @@
 			<Text>所有单位防御时 +3 [ICON_STRENGTH] 战斗力。（智能材料）</Text>
 		</Row>
 		<Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>水运单位+2 [ICON_Movement] 移动力。[ICON_GreatWork_Landscape] 艺术巨作+50% [ICON_Tourism] 旅游业绩。</Text>
+			<Text>水运单位+2 [ICON_Movement] 移动力。所有海军单位+2 [ICON_Movement] 移动力。[ICON_GreatWork_Landscape] 艺术巨作+50% [ICON_Tourism] 旅游业绩。</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_SYNTHETIC_MATERIALS_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>营地产出的 [ICON_Gold] 金币+2。所有伐木场改良设施+1 [ICON_Production] 生产力。</Text>

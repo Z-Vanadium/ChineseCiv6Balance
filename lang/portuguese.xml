@@ -4114,7 +4114,7 @@
       		<Text>Pode ser construído apenas por engenheiros militares. Não consome carga, mas custa 1 unidade de [ICON_RESOURCE_IRON] Ferro. Melhora significativamente a velocidade de [ICON_MOVEMENT] movimento das unidades que se deslocam de um trecho de ferro para outro. As [ICON_TRADEROUTE] rotas comerciais que utilizam ferrovias podem multiplicar [ICON_GOLD] Ouro recebido dos [ICON_DISTRICT] distritos da cidade de destino.</Text>
     	</Replace>
 		<Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="pt_BR">
-			<Text>[ICON_MOVEMENT] MV +2 para unidades embarcadas. [NEWLINE][ICON_TOURISM] Turismo +50% para [ICON_GREATWORK_PORTRAIT] retratos, [ICON_GREATWORK_LANDSCAPE] paisagens, [ICON_GREATWORK_SCULPTURE] esculturas e [ICON_GREATWORK_RELIGIOUS] obras-primas religiosas.</Text>
+			<Text>[ICON_MOVEMENT] MV +2 para unidades embarcadas. [ICON_Movement] MV +2 para todas as unidades navais. [NEWLINE][ICON_TOURISM] Turismo +50% para [ICON_GREATWORK_PORTRAIT] retratos, [ICON_GREATWORK_LANDSCAPE] paisagens, [ICON_GREATWORK_SCULPTURE] esculturas e [ICON_GREATWORK_RELIGIOUS] obras-primas religiosas.</Text>
 		</Replace>
 		<Replace Tag="BBG_LOC_TECH_MILITARY_ENGINEERING_DESCRIPTION" Language="pt_BR">
 			<Text>[ICON_PRODUCTION] Produção +1 para pedreiras.</Text>

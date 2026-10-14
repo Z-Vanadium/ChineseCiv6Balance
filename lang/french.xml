@@ -4087,7 +4087,7 @@
       		<Text>Ne peut être construit que par des ingénieurs militaires. Ne consomme pas de charge, mais coûte 1 unité de [ICON_RESOURCE_IRON] Fer. Améliore grandement la vitesse de [ICON_MOVEMENT] déplacement des unités se déplaçant d'une case de chemin de fer à une autre. Les [ICON_TRADEROUTE] routes commerciales qui empruntent des voies ferrées peuvent multiplier [ICON_GOLD] l'Or reçu des [ICON_DISTRICT] quartiers de la ville de destination.</Text>
     	</Replace>
 		<Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="fr_FR">
-			<Text>[ICON_MOVEMENT] PM +2 pour les unités embarquées.[NEWLINE][ICON_TOURISM] Tourisme +50% pour les [ICON_GREATWORK_PORTRAIT] portraits, les [ICON_GREATWORK_LANDSCAPE] paysages, les [ICON_GREATWORK_SCULPTURE] sculptures et les [ICON_GREATWORK_RELIGIOUS] chefs-d'oeuvre religieux.</Text>
+			<Text>[ICON_MOVEMENT] PM +2 pour les unités embarquées. [ICON_Movement] PM +2 pour toutes les unités navales.[NEWLINE][ICON_TOURISM] Tourisme +50% pour les [ICON_GREATWORK_PORTRAIT] portraits, les [ICON_GREATWORK_LANDSCAPE] paysages, les [ICON_GREATWORK_SCULPTURE] sculptures et les [ICON_GREATWORK_RELIGIOUS] chefs-d'oeuvre religieux.</Text>
 		</Replace>
 		<Replace Tag="BBG_LOC_TECH_MILITARY_ENGINEERING_DESCRIPTION" Language="fr_FR">
 			<Text>[ICON_PRODUCTION] Production +1 pour les carrières.</Text>

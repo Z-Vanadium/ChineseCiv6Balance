@@ -3854,7 +3854,7 @@
 			<Text>Kann nur von "Militärpionieren" gebaut werden. Verbraucht keine Ladung, jedoch 1 [ICON_RESOURCE_IRON] Eisen.[NEWLINE][NEWLINE]Verbessert die [ICON_MOVEMENT] Bewegung von [ICON_UNIT] Einheiten, die sich von einem Schienengleis zum anderen bewegen erheblich. [ICON_TradeRoute] Handelswege, die über Schienen reisen, können das [ICON_GOLD] Gold, das sie von [ICON_DISTRICT] Bezirken am Zielort erhalten, vervielfachen.</Text>
 		</Replace>
 		<Replace Tag="LOC_TECH_STEAM_POWER_DESCRIPTION" Language="de_DE">
-			<Text>+2 [ICON_MOVEMENT] Bewegung für eingeschiffte [ICON_UNIT] Einheiten. +50% [ICON_TOURISM] Tourismus für [ICON_GREATWORK_LANDSCAPE] Große Werke der Kunst.</Text>
+			<Text>+2 [ICON_MOVEMENT] Bewegung für eingeschiffte [ICON_UNIT] Einheiten. +2 [ICON_Movement] Fortbewegung für alle Marineeinheiten. +50% [ICON_TOURISM] Tourismus für [ICON_GREATWORK_LANDSCAPE] Große Werke der Kunst.</Text>
 		</Replace>
 		<Replace Tag="BBG_LOC_TECH_MILITARY_ENGINEERING_DESCRIPTION" Language="de_DE">
 			<Text>+1 [ICON_PRODUCTION] Produktion für jede "Steinbruch"-Verbesserung.</Text>

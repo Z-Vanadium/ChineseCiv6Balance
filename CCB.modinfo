@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Release ModID-->
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e00" version="1500"> -->
 
@@ -1088,6 +1088,16 @@
 			<File>sql/Base/CCB_LateGameRanged.sql</File>
 		</UpdateDatabase>
 
+		<!-- CCB 蒸汽动力 · 海军单位 +2 移动力（2026-09-20 用户需求）
+		     原版把"水运单位(embarked)"与"海军单位(sea)"拆成两套独立效果；蒸汽动力原本只有水运那条，
+		     本文件补一条 MODIFIER_PLAYER_UNITS_ADJUST_SEA_MOVEMENT（写法照抄原版「数学」科技 MATHEMATICS_ADJUST_SEA_MOVEMENT）
+		     LoadOrder 11699：排在 BBG/CCB 常规批次（11600~11670）之后 -->
+		<UpdateDatabase id="CCB_SteamPower">
+			<Properties>
+				<LoadOrder>11699</LoadOrder>
+			</Properties>
+			<File>sql/Base/CCB_SteamPower.sql</File>
+		</UpdateDatabase>
 		<!-- CCB 人工林（2026-09-19）：新建 FEATURE_CCB_PLANTED_FOREST（规则整表复制森林，仅外观不同）；
 		     种植后由 scripts/ccb_planted_forest.lua 替换为新特征；视觉走 ArtDefs/ 独立 Clutter 排列 -->
 		<UpdateDatabase id="CCB_PlantedForest">
@@ -1695,6 +1705,7 @@
 		<File>sql/XP1/CCB_AllianceTuning.sql</File>
 		<File>sql/Base/LegacyCards.sql</File>
 		<File>sql/Base/CCB_LateGameRanged.sql</File>
+		<File>sql/Base/CCB_SteamPower.sql</File>
 		<File>sql/Base/CCB_PlantedForest.sql</File>
 		<File>sql/Base/CCB_PlantedForestRules.sql</File>
 		<File>scripts/ccb_legacycards.lua</File>
