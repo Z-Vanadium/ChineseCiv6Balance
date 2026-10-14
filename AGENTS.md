@@ -24,7 +24,7 @@ sql/bbcc/            ← BBCC sub-mod (yield mode selection)
 scripts/             ← Core Lua gameplay scripts (bbg_script.lua is main, ~4500 lines)
 lua/BBG_Expanded/    ← Lua scripts for BBG Expanded civs/leaders
 ui/replacements/     ← UI override scripts (world rankings, unit panel, trade panel)
-lang/                ← Localization：**只维护 chinese / japanese / english 三个文件**（其余 8 个语言文件不再改，见「Localization workflow」）
+lang/                ← Localization：**只维护 chinese / english 两个文件**（其余 9 个语言文件不再改，见「Localization workflow」）
 config/              ← Front-end config (game setup screen)
 data/                ← Custom icons
 MABC/                ← More Adjacency Bonus sub-module (self-contained)
@@ -90,17 +90,19 @@ Files guard on `Criteria` blocks in modinfo. Common criteria:
 
 ## Localization workflow
 
-**⚠ 只维护 3 种语言：`lang/chinese.xml`（zh_Hans_CN）/ `lang/japanese.xml`（ja_JP）/ `lang/english.xml`（en_US）**
-（用户 2026-10-14 指示：**文本改动只改中 / 日 / 英，不要动其它 8 个语言文件** —— french / german / italian / korean / polish / portuguese / russian / spanish。
-其它语言保持现状：历史译文不必回滚，但**新增或修改文案时不要扩到它们**。唯一例外见下第 6 条。）
+**⚠ 只维护 2 种语言：`lang/chinese.xml`（zh_Hans_CN）/ `lang/english.xml`（en_US）**
+（用户 2026-10-14 指示，**2026-10-15 收窄**：**文本改动只改中文与英文**，不要动其它 **9** 个语言文件 ——
+japanese / french / german / italian / korean / polish / portuguese / russian / spanish。
+其它语言一律保持现状：历史译文不必回滚，但**新增或修改文案时不要扩到它们**。唯一例外见下第 6 条。）
 
-1. 文案**手写**中/日/英三份（zh 优先）——这三个都不用 `[COLOR_RED]TO_TRANSLATE:` 前缀
+1. 文案**手写**中/英两份（zh 优先）——这两个都不用 `[COLOR_RED]TO_TRANSLATE:` 前缀
 2. 每个语言文件是 `<LocalizedText>` 根 + `<Replace Tag="..." Language="...">` 条目（Tag + Language 双键）
 3. **新增键**：插在文件末尾 `</LocalizedText>` 之前即可；**改现有键**：用正则框出该条目、**只在块内**替换，块内计数必须是 1（同一句在整份文件里可能出现 2~10 次 → 见 `docs/Civ6开发排坑实录.md` §十三.E）
 4. Use `[ICON_X]` markup for game icons and `[NEWLINE]` for line breaks
-5. ⚠ `dev_script/lang_update.py` 是上游工具、**默认会同时写 8 个其它语言** —— 已按本规则改成只写 `japanese.xml`；若从上游/别处拿到旧版，不要直接跑
-6. ⚠ **其余 8 个语言一律不管**（用户 2026-10-14 复核："以后的文本同步工作只考虑中日英"）：即便某处文案与数值/条件强绑定（尤里卡数字、造价、时代字样…），导致那 8 个语言显示**错数**，也**不改它们**；只在交付说明里提一句即可，不必专门询问。
-7. ⚠ 读写语言文件一律用文件工具或 Python（`encoding='utf-8'` + `newline=''`）：`italian.xml`/`spanish.xml` 是 **LF**、其余 9 个是 **CRLF**；用 PowerShell 的 `Get-Content`/`WriteAllText` 会按 GBK 往返**永久损坏**文件（排坑实录 §十三.A）
+5. ⚠ `dev_script/lang_update.py` 是上游工具、**默认会同时写 8 个其它语言** —— 已按本规则改成**只写 `english.xml`**（`FILES` 表已清空）；若从上游/别处拿到旧版，不要直接跑
+6. ⚠ **其余 9 个语言一律不管**（用户 2026-10-15 复核："后续的文本同步只需要同步中文和英文，不再同步日本部分"）：即便某处文案与数值/条件强绑定（尤里卡数字、造价、时代字样…），导致这 9 个语言（**含日文**）显示**错数**，也**不改它们**；只在交付说明里提一句即可，不必专门询问。
+7. ⚠ **`lang/japanese.xml` 仍然保留、仍然在 modinfo 里加载**（3 处登记照旧）—— 已同步过的日文在游戏里照常显示，**不回退、不删除**；只是从 2026-10-15 起**不再新增或修改**其中的文案。
+8. ⚠ 读写语言文件一律用文件工具或 Python（`encoding='utf-8'` + `newline=''`）：`italian.xml`/`spanish.xml` 是 **LF**、其余 9 个是 **CRLF**；用 PowerShell 的 `Get-Content`/`WriteAllText` 会按 GBK 往返**永久损坏**文件（排坑实录 §十三.A）
 
 ## BBG Expanded
 
