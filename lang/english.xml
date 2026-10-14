@@ -1501,6 +1501,10 @@
 		<Replace Tag="LOC_UNIT_HELICOPTER_DESCRIPTION" Language="en_US">
 			<Text>Fast-moving Atomic era light cavalry unit.[NEWLINE][NEWLINE]{LOC_ABILITY_CCB_RANGED_DEFENSE_DESC}</Text>
 		</Replace>
+		<!-- = Drone (2026-10-14: Moves 3->4; ignores-terrain entry also written into the description) = -->
+		<Replace Tag="LOC_UNIT_DRONE_DESCRIPTION" Language="en_US">
+			<Text>Atomic era support unit. Adds +1 [ICON_Range] Range and +5 [ICON_Bombard] Bombard Strength to Siege class units within 1 hex.[NEWLINE]{LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC}</Text>
+		</Replace>
 		<!-- = Modern Armor = -->
 		<Replace Tag="LOC_UNIT_MODERN_ARMOR_DESCRIPTION" Language="en_US">
 			<Text>Information era heavy cavalry unit that is fast and strong. Gains 1 bonus [ICON_Movement] Movement if it begins a turn on a flat tile with no Woods, Rainforest, or Hills.[NEWLINE][NEWLINE]+5 [ICON_STRENGTH] Combat Strenth when defending inside friendly territory and +5 [ICON_STRENGTH] Combat Strength when attacking outside friendly territory.[NEWLINE][NEWLINE]{LOC_ABILITY_CCB_RANGED_DEFENSE_DESC}</Text>
