@@ -4602,16 +4602,12 @@
 			<Text>Clear all items queued in this city (the item currently in production is kept). Disabled while the queue is empty.</Text>
 		</Replace>
 		<!-- = CCB 生产面板「连点」按钮（2026-10-14；口径 5 → 4） = -->
-		<Replace Tag="LOC_CCB_QUEUE_MULTI_BTN" Language="en_US">
-			<Text>X4</Text>
-		</Replace>
-		<!-- = CCB 生产面板「连点」按钮（2026-10-14；口径 5 → 4） = -->
 		<Replace Tag="LOC_CCB_QUEUE_MULTI_TT_OFF" Language="en_US">
-			<Text>X4 multi-queue: OFF. When ON, clicking a unit/building/project in the queue (or multi-queue) adds 4 copies at once (does not apply to purchases, wonders or districts). Hold Ctrl while clicking to multi-queue temporarily.</Text>
+			<Text>X5 multi-queue: OFF. When ON, clicking a unit/building/project in the queue (or multi-queue) adds 5 copies at once (does not apply to purchases, wonders or districts). Hold Ctrl while clicking to multi-queue temporarily.</Text>
 		</Replace>
 		<!-- = CCB 生产面板「连点」按钮（2026-10-14；口径 5 → 4） = -->
 		<Replace Tag="LOC_CCB_QUEUE_MULTI_TT_ON" Language="en_US">
-			<Text>X4 multi-queue: ON. Clicking a unit/building/project in the queue (or multi-queue) adds 4 copies at once (does not apply to purchases, wonders or districts). Click again to turn off.</Text>
+			<Text>X5 multi-queue: ON. Clicking a unit/building/project in the queue (or multi-queue) adds 5 copies at once (does not apply to purchases, wonders or districts). Click again to turn off.</Text>
 		</Replace>
 </LocalizedText>
 </GameData>

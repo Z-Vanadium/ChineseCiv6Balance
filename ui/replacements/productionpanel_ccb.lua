@@ -1,10 +1,10 @@
 --==============================================================================================
--- CCB：生产面板「X4 连点」开关（用户 2026-10-14 需求）—— ui/replacements/productionpanel_ccb.lua
+-- CCB：生产面板「X5 连点」开关（用户 2026-10-14 需求）—— ui/replacements/productionpanel_ccb.lua
 --
--- 需求：生产面板（多队列）里点一次项目，就连续排入 4 个，方便后期铺队列。
+-- 需求：生产面板（多队列）里点一次项目，就连续排入 5 个，方便后期铺队列。
 -- 口径（用户 2026-10-14 确认）：
 --   ① 固定 5 次；② **不作用于购买**；③ **不作用于奇观与区域**（它们需要放置，一次只能放一个）；
---   ④ 按钮与「滚动到 建筑/奇观/单位/项目」那 4 个小按钮同一排，激活时高亮，按钮文字就是 X4；
+--   ④ 按钮与「滚动到 建筑/奇观/单位/项目」那 4 个小按钮同一排，激活时高亮，按钮文字就是 X5；
 --   ⑤ 另外支持 **Ctrl+点击** 临时连点。
 --
 -- 机制依据（原版 Base\Assets\UI\Panels\ProductionPanel.lua）：
@@ -31,7 +31,7 @@
 include "ProductionPanel";
 
 -- ── 常量与状态 ─────────────────────────────────────────────────────────────────────────
-local CCB_MULTI_TIMES :number = 4;   -- 连点次数（口径：用户 2026-10-14 由 5 调为 4）
+local CCB_MULTI_TIMES :number = 5;   -- 连点次数（用户 2026-10-14 定稿口径：**5**）
 
 local m_ccbMultiEnabled :boolean = false;    -- 按钮开关
 local m_ccbCtrlDown  :boolean = false;    -- Ctrl（或 Shift）是否按住
@@ -174,7 +174,7 @@ end
 -- ⚠ 必须重新注册：Initialize() 里注册的是覆盖前的旧函数对象
 ContextPtr:SetInputHandler( OnInputHandler, true );
 
--- ── 按钮①：连点开关（X4）──────────────────────────────────────────────────────────────────────
+-- ── 按钮①：连点开关（X5）──────────────────────────────────────────────────────────────────────
 local function CCB_RefreshMultiButton()
 	if Controls.CCBQueueMultiButton == nil then return; end
 	Controls.CCBQueueMultiButton:SetSelected( m_ccbMultiEnabled );
@@ -239,7 +239,7 @@ if Controls.CCBQueueMultiButton ~= nil then
 else
 	-- 说明 ProductionPanel.xml 被别的 UI 模组覆盖了（本 MOD 的按钮不存在）→ 只失去按钮功能，
 	-- Ctrl+点击 的临时连点仍然可用。
-	print( "[CCB] ProductionPanel.xml 未生效（CCBQueueMultiButton 不存在）：X4 按钮不可用，Ctrl+点击仍可连点。" );
+	print( "[CCB] ProductionPanel.xml 未生效（CCBQueueMultiButton 不存在）：X5 按钮不可用，Ctrl+点击仍可连点。" );
 end
 
 if Controls.CCBClearQueueButton ~= nil then
