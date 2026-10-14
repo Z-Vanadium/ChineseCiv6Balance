@@ -2,7 +2,8 @@
 -- CCB 强化堡垒 + 军事工程师/堡垒提前解锁（2026-09-20 用户需求）
 --
 --   ① 军事工程师 UNIT_MILITARY_ENGINEER：解锁科技 军事工程学 → **工程（TECH_ENGINEERING）**；
---      建筑前置 = **兵营 或 马厩**（`Unit_BuildingPrereqs` 是**或列表**，两行即"有其一即可"）。
+--      建筑前置 = **兵营 或 马厩（含其文明替代建筑：马其顿皇家学堂 / 蒙古蒙古包）**
+--      （`Unit_BuildingPrereqs` 是**或列表**，多行即"有其一即可"；替代建筑必须显式列出，理由见下方注释）。
 --      ⚠ 该表是**或列表**（先例：使徒 = 神庙/木条教堂/帕萨特 三选一）→ 写入前必须先清空该单位原有行，
 --        否则会留下配套模组写的 BUILDING_LEU_ESTANCIA（阿根廷建筑），变成"庄园城以外造不了"。
 --      本文件 LoadOrder **100300**，排在全部常规批次与配套模组（CCB 文明拓展 = 99100）之后，
@@ -54,15 +55,27 @@ UPDATE Improvements SET PrereqTech = 'TECH_ENGINEERING' WHERE ImprovementType = 
 
 -- 2026-10-14 用户需求：研究「工程」后，**拥有兵营 或 马厩**的城市可生产军事工程师。
 -- ⚠ `Unit_BuildingPrereqs` 是**或列表**（先例：使徒同时列 神庙/木条教堂/帕萨特 → 三选一），
---   所以两行 = "有其一即可"，不需要额外需求集。
+--   所以多行 = "有其一即可"，不需要额外需求集。
 -- ⚠ 但正因为它**是或列表**：只删军械库那一行会留下配套模组写入的 `BUILDING_LEU_ESTANCIA`
 --   （阿根廷建筑，"庄园城以外造不了"，反而更糟）→ 必须先**整单位清空**再写入，
 --   见 `docs\Civ6开发排坑实录.md` §十五。
+-- ⚠⚠ **替代建筑（文明 UD）必须显式列出**：引擎**不会**把"替代兵营的建筑"当成"兵营"
+--   —— 依据：上游 BBG 在 04/07/26 那批改动里，除了本体两行，还**专门**在
+--   `sql\DLC_Macedon_Persia\Macedon.sql` 补了 `BUILDING_BASILIKOI_PAIDES`、
+--   在 `sql\XP1\Mongolia.sql` 补了 `BUILDING_ORDU`；本工程 `sql\XP2\Buildings.sql`
+--   （马厩给马 / 兵营给铁）也是同一个套路：用 `BuildingReplaces` 展开替代建筑。
+--   → 这里同样用**查询展开**，一次覆盖"本体 + 全部替代建筑"（当前 = 兵营 / 马厩 /
+--      马其顿「皇家学堂」/ 蒙古「蒙古包」），以后再冒出替代建筑（含配套模组）也自动跟上
+--      （本文件 LoadOrder **100300**，晚于配套模组 99100 ⇒ 它们的 BuildingReplaces 已就位）。
+--   ※ 祖鲁的「伊坎达」是**区域**（替代兵营区），不是兵营建筑 → 祖鲁照常造兵营/马厩，不受影响。
 -- `NumSupported = -1` = 不限数量（与使徒 / 传教士 / 审判官等原版行一致）。
 DELETE FROM Unit_BuildingPrereqs WHERE Unit = 'UNIT_MILITARY_ENGINEER';
-INSERT INTO Unit_BuildingPrereqs (Unit, PrereqBuilding, NumSupported) VALUES
-	('UNIT_MILITARY_ENGINEER', 'BUILDING_BARRACKS', -1),
-	('UNIT_MILITARY_ENGINEER', 'BUILDING_STABLE', -1);
+INSERT OR IGNORE INTO Unit_BuildingPrereqs (Unit, PrereqBuilding, NumSupported)
+SELECT 'UNIT_MILITARY_ENGINEER', b.BuildingType, -1
+FROM Buildings b
+LEFT JOIN BuildingReplaces br ON b.BuildingType = br.CivUniqueBuildingType
+WHERE b.BuildingType IN ('BUILDING_BARRACKS', 'BUILDING_STABLE')
+   OR br.ReplacesBuildingType IN ('BUILDING_BARRACKS', 'BUILDING_STABLE');
 
 -- ── ③ 新改良：整行复制堡垒，仅改 类型 / 名称 / 描述 / 解锁科技 ────────────────────────
 INSERT INTO Types (Type, Kind) VALUES
