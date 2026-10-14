@@ -1856,7 +1856,7 @@
 			<Text>Forniscono un Costruttore gratuito. Tutti i Costruttori possono realizzare 1 [ICON_Charges] miglioramento extra. Devono essere costruite in un deserto (anche terreni allagati) senza colline.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION" Language="it_IT">
-			<Text>Fornisce 3 Arcieri, 3 Lancieri e un Ariete. +35% alla [ICON_PRODUCTION] Produzione per la costruzione di unità anti-cavalleria. Dev'essere costruita su terreno pianeggiante adiacente a un distretto Accampamento che include una Caserma.</Text>
+			<Text>Fornisce 3 Arcieri, 3 Lancieri e un Ariete. +35% alla [ICON_PRODUCTION] Produzione per la costruzione di unità anti-cavalleria di epoche precedenti all'Epoca moderna. Dev'essere costruita su terreno pianeggiante adiacente a un distretto Accampamento che include una Caserma.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_ORSZAGHAZ_DESCRIPTION" Language="it_IT">
 			<Text>+3 [ICON_Favor] Supporto diplomatico per turno per ogni città stato di cui sei sovrano.[NEWLINE][NEWLINE]Dev'essere costruito lungo un fiume.</Text>

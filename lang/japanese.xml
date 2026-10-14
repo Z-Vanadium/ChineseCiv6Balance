@@ -2100,7 +2100,7 @@
 			<Text>建設すると「外交による勝利」ポイント+3。6タイル以内のすべての都市の忠誠心が常に100%になる。陸地と港区域に隣接した沿岸にのみ建設可能。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION" Language="ja_JP">
-			<Text>弓兵3、槍兵3、破城槌1を得る。対騎兵ユニットの生産に対して [ICON_Production] 生産力+35%。兵舎が存在する兵営区域に隣接した平坦な土地にのみ建設可能。</Text>
+			<Text>弓兵3、槍兵3、破城槌1を得る。近代以前の対騎兵ユニットの生産に対して [ICON_Production] 生産力+35%。兵舎が存在する兵営区域に隣接した平坦な土地にのみ建設可能。</Text>
 		</Replace>
     <Replace Tag="LOC_BUILDING_ORSZAGHAZ_DESCRIPTION" Language="ja_JP">
       <Text>毎ターンの [ICON_InfluencePerTurn] 影響力ポイント+25%。宗主国となっている都市国家１つにつき[ICON_Favor]外交的支持+3。 [ICON_ENVOY] 代表団+2。[NEWLINE][NEWLINE]川に隣接した場所に建設しなければならない。</Text>

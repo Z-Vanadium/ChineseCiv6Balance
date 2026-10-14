@@ -3103,7 +3103,7 @@
 		</Replace>
 		<!-- = Zeus-Statue = -->
 		<Replace Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION" Language="de_DE">
-			<Text>Dieses [ICON_DISTRICT_WONDER] Weltwunder der Klassik wird nach Erforschung der Ausrichtung "Militärausbildung" freigeschaltet:[NEWLINE][NEWLINE]• +3 [ICON_GOLD] Gold.[NEWLINE]• Gewährt sofort 3 "Bogenschützen", 3 "Speerträger" und einen "Rammbock".[NEWLINE]• +35% [ICON_PRODUCTION] Produktion für Kavallerie-Abwehr-[ICON_UNIT] Einheiten in deinem Reich.[NEWLINE]• +1000 [ICON_TOURISM] Tourismus durch Rockkonzerte.[NEWLINE][NEWLINE]Muss auf einem flachen Landfeld, angrenzend an einen [ICON_DISTRICT_ENCAMPMENT] Lager-Bezirk mit einer "Kaserne" gebaut werden.[NEWLINE][NEWLINE]Grundkosten:[NEWLINE]200 [ICON_PRODUCTION] Produktion (Online-Geschwindigkeit).</Text>
+			<Text>Dieses [ICON_DISTRICT_WONDER] Weltwunder der Klassik wird nach Erforschung der Ausrichtung "Militärausbildung" freigeschaltet:[NEWLINE][NEWLINE]• +3 [ICON_GOLD] Gold.[NEWLINE]• Gewährt sofort 3 "Bogenschützen", 3 "Speerträger" und einen "Rammbock".[NEWLINE]• +35% [ICON_PRODUCTION] Produktion für Kavallerie-Abwehr-[ICON_UNIT] Einheiten vor der Moderne in deinem Reich.[NEWLINE]• +1000 [ICON_TOURISM] Tourismus durch Rockkonzerte.[NEWLINE][NEWLINE]Muss auf einem flachen Landfeld, angrenzend an einen [ICON_DISTRICT_ENCAMPMENT] Lager-Bezirk mit einer "Kaserne" gebaut werden.[NEWLINE][NEWLINE]Grundkosten:[NEWLINE]200 [ICON_PRODUCTION] Produktion (Online-Geschwindigkeit).</Text>
 		</Replace>
 		<!-- = Mausoleum von Halikarnassos = -->
 		<Replace Tag="LOC_BUILDING_HALICARNASSUS_MAUSOLEUM_DESCRIPTION" Language="de_DE">

@@ -2371,7 +2371,7 @@
 			<Text>+3 Diplomatic Victory Points when built. All your cities within 6 tiles are always 100% Loyal.[NEWLINE][NEWLINE]Must be built on the Coast, adjacent to land and a Harbor district.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION" Language="en_US">
-			<Text>Grants 3 Archers, 3 Spearmen, and a Battering Ram. +35% [ICON_PRODUCTION] Production towards anti-cavalry units.[NEWLINE][NEWLINE]Must be built on flat land adjacent to an Encampment district with a Barracks.</Text>
+			<Text>Grants 3 Archers, 3 Spearmen, and a Battering Ram. +35% [ICON_PRODUCTION] Production towards pre-Modern era anti-cavalry units.[NEWLINE][NEWLINE]Must be built on flat land adjacent to an Encampment district with a Barracks.</Text>
 		</Replace>
 		<Replace Tag="LOC_FEATURE_CCB_PLANTED_FOREST_NAME" Language="en_US">
 			<Text>Planted Forest</Text>

@@ -1088,6 +1088,16 @@
 			<File>sql/Base/CCB_LateGameRanged.sql</File>
 		</UpdateDatabase>
 
+		<!-- CCB 宙斯像 · 抗骑兵生产加成限定"现代之前"（2026-09-20 用户需求）
+		     原版那条 STAUEZEUS_ANTI_CAVALRY_PRODUCTION 的 EraType=NO_ERA（不限时代）；
+		     摘掉它，改按 5 个时代（远古/古典/中世纪/文艺复兴/工业）各挂一条，写法照抄原版政策线
+		     LoadOrder 11698：排在 BBG/CCB 常规批次（11600~11670）之后 -->
+		<UpdateDatabase id="CCB_StatueOfZeus">
+			<Properties>
+				<LoadOrder>11698</LoadOrder>
+			</Properties>
+			<File>sql/Base/CCB_StatueOfZeus.sql</File>
+		</UpdateDatabase>
 		<!-- CCB 蒸汽动力 · 海军单位 +2 移动力（2026-09-20 用户需求）
 		     原版把"水运单位(embarked)"与"海军单位(sea)"拆成两套独立效果；蒸汽动力原本只有水运那条，
 		     本文件补一条 MODIFIER_PLAYER_UNITS_ADJUST_SEA_MOVEMENT（写法照抄原版「数学」科技 MATHEMATICS_ADJUST_SEA_MOVEMENT）
@@ -1706,6 +1716,7 @@
 		<File>sql/Base/LegacyCards.sql</File>
 		<File>sql/Base/CCB_LateGameRanged.sql</File>
 		<File>sql/Base/CCB_SteamPower.sql</File>
+		<File>sql/Base/CCB_StatueOfZeus.sql</File>
 		<File>sql/Base/CCB_PlantedForest.sql</File>
 		<File>sql/Base/CCB_PlantedForestRules.sql</File>
 		<File>scripts/ccb_legacycards.lua</File>

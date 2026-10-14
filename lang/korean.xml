@@ -2331,7 +2331,7 @@
 			<Text>무료 건설자 1명을 제공합니다. 모든 건설자의 [ICON_Charges] 건설 횟수가 +1 증가합니다. [NEWLINE][NEWLINE]언덕이 없는 사막(범람원 포함)에 지어야 합니다.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION" Language="ko_KR">
-			<Text>궁수 3명, 창병 3명, 공성추 1개를 부여합니다. 대기병 유닛 생성에 대한 [ICON_PRODUCTION] 생산력 +35%를 부여합니다. [NEWLINE][NEWLINE]병영이 있는 주둔지 특수지구에 인접한 평지에 지어야 합니다.</Text>
+			<Text>궁수 3명, 창병 3명, 공성추 1개를 부여합니다. 대기병 유닛 생성에 대한 [ICON_PRODUCTION] 생산력 +35%를 부여합니다. (현대 시대 이전 유닛만 적용) [NEWLINE][NEWLINE]병영이 있는 주둔지 특수지구에 인접한 평지에 지어야 합니다.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_ORSZAGHAZ_DESCRIPTION" Language="ko_KR">
 			<Text>[ICON_InfluencePerTurn] 우호도 점수가 +25% 증가합니다. 종주국인 도시 국가 당 [ICON_Favor] 외교적 환심 +3을 얻습니다. [ICON_Envoy] 사절 2명을 획득합니다.[NEWLINE][NEWLINE]강에 건설해야 합니다.</Text>

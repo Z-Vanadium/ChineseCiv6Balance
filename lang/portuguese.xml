@@ -3445,7 +3445,7 @@
 			<Text>Maravilha da Era Clássica.[NEWLINE][NEWLINE]Concede todos os [ICON_TECHBOOSTED] Eurêkas das eras Antiga e Clássica ao ser concluída.[NEWLINE]Concede um [ICON_TECHBOOSTED] Eurêka aleatório toda vez que um jogador recruta um [ICON_GREATSCIENTIST] Grande Cientista.[NEWLINE][NEWLINE]Deve ser construída em um Painel plano adjacente a um Campus com biblioteca.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION" Language="pt_BR">
-			<Text>Maravilha da Era Clássica.[NEWLINE][NEWLINE]Concede 3 Arqueiros, 3 Lanceiros e 1 Aríete.[NEWLINE][ICON_PRODUCTION] Produção +35% para unidades de anti-cavalaria em todo o seu Império.[NEWLINE][NEWLINE]Deve ser construída em um terreno plano adjacente a um Acampamento com uma Caserna.</Text>
+			<Text>Maravilha da Era Clássica.[NEWLINE][NEWLINE]Concede 3 Arqueiros, 3 Lanceiros e 1 Aríete.[NEWLINE][ICON_PRODUCTION] Produção +35% para unidades de anti-cavalaria de eras anteriores à Era Moderna em todo o seu Império.[NEWLINE][NEWLINE]Deve ser construída em um terreno plano adjacente a um Acampamento com uma Caserna.</Text>
     	</Replace>
 		<Replace Tag="LOC_BUILDING_HALICARNASSUS_MAUSOLEUM_DESCRIPTION" Language="pt_BR">
 			<Text>Maravilha da Era Clássica.[NEWLINE][NEWLINE][ICON_SCIENCE] Ciência +1, [ICON_CULTURE] Cultura +1 e [ICON_FAITH] Fé +1 para todos os paineis costeiros da cidade.[NEWLINE][NEWLINE]Os [ICON_GREATENGINEER] Grandes engenheiros ganham 1 carga adicional.[NEWLINE][NEWLINE]Deve ser construída adjacente a um Porto.</Text>

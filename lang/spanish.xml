@@ -2223,7 +2223,7 @@
 			<Text>Otorga un Constructor gratis y +1 carga [ICON_Charges] para todos los Constructores existentes y nuevos.[NEWLINE][NEWLINE]Debe construirse en una loseta de Desierto plana (incluidas los Terrenos de aluvion).</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION" Language="es_ES">
-			<Text>Otorga 3 Arqueros, 3 Lanceros y un Ariete. +35 % [ICON_PRODUCTION] Producción para unidades anticaballería.[NEWLINE][NEWLINE]Debe construirse en un terreno llano adyacente a un distrito de Campamento con un Cuartel.</Text>
+			<Text>Otorga 3 Arqueros, 3 Lanceros y un Ariete. +35 % [ICON_PRODUCTION] Producción para unidades anticaballería de antes de la Época Moderna.[NEWLINE][NEWLINE]Debe construirse en un terreno llano adyacente a un distrito de Campamento con un Cuartel.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_ORSZAGHAZ_DESCRIPTION" Language="es_ES">
 		    <Text>+25% [ICON_InfluencePerTurn] Puntos de Influencia por turno.[NEWLINE]+3 [ICON_FAVOR] Favor Diplomático por cada Ciudad-Estado de la que seas Soberano.[NEWLINE]+2 [ICON_ENVOY] Enviados.[NEWLINE][NEWLINE]Debe construirse en un Río.</Text>

@@ -2667,7 +2667,7 @@
 			<Text>赠予1个免费建造者。所有已拥有和新生产的建造者获得1点额外 [ICON_Charges] 劳动力。[NEWLINE][NEWLINE]必须建在没有丘陵的沙漠上（包括沙漠泛滥平原）。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>提供3名弓箭手、3名枪兵，以及1台破城槌。生产抗骑兵单位时+35% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]必须建在与军营区域（须拥有兵营）相邻的平地上。</Text>
+			<Text>提供3名弓箭手、3名枪兵，以及1台破城槌。生产现代时代之前的抗骑兵单位时+35% [ICON_PRODUCTION] 生产力。[NEWLINE][NEWLINE]必须建在与军营区域（须拥有兵营）相邻的平地上。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_ORSZAGHAZ_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>每回合从每个宗主的城邦获得额外+3 [ICON_Favor] 外交支持。+25% [ICON_InfluencePerTurn] 影响力点数。获得2个 [ICON_Envoy] 使者。[NEWLINE][NEWLINE]必须修建在河边。</Text>

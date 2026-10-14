@@ -3418,7 +3418,7 @@
 			<Text>Merveille de l'ère classique.[NEWLINE][NEWLINE]Octroie tous les [ICON_TECHBOOSTED] Eurêka des ères antique et classique à sa complétion.[NEWLINE]Octroie un [ICON_TECHBOOSTED] Eurêka aléatoire chaque fois qu'un joueur recrute un [ICON_GREATSCIENTIST] Savant illustre.[NEWLINE][NEWLINE]Doit être construite sur une case plate adjacente à un Campus doté d'une bibliothèque.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_STATUE_OF_ZEUS_DESCRIPTION" Language="fr_FR">
-      		<Text>Merveille de l'ère classique.[NEWLINE][NEWLINE]Octroie 3 Archers, 3 Lanciers et 1 Bélier.[NEWLINE][ICON_PRODUCTION] Production +35% pour les unités d'anti-cavalerie pour votre Empire.[NEWLINE][NEWLINE]Doit être construite sur une case plate adjacente à un Campement doté d'une caserne.</Text>
+      		<Text>Merveille de l'ère classique.[NEWLINE][NEWLINE]Octroie 3 Archers, 3 Lanciers et 1 Bélier.[NEWLINE][ICON_PRODUCTION] Production +35% pour les unités d'anti-cavalerie d'avant l'Ère moderne pour votre Empire.[NEWLINE][NEWLINE]Doit être construite sur une case plate adjacente à un Campement doté d'une caserne.</Text>
     	</Replace>
 		<Replace Tag="LOC_BUILDING_HALICARNASSUS_MAUSOLEUM_DESCRIPTION" Language="fr_FR">
 			<Text>Merveille de l'ère classique.[NEWLINE][NEWLINE][ICON_SCIENCE] Science +1, [ICON_CULTURE] Culture +1 et [ICON_FAITH] Foi +1 pour toutes les cases de côte de la ville.[NEWLINE][NEWLINE]Les [ICON_GREATENGINEER] Ingénieurs illustres gagnent 1 charge supplémentaire.[NEWLINE][NEWLINE]Doit être construite adjacente à un Port.</Text>
