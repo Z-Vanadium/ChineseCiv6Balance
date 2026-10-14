@@ -4402,5 +4402,17 @@
 		<Replace Tag="LOC_CCB_QUEUE_X5_TT_ON" Language="ja_JP">
 			<Text>X5 連続追加：オン。キュー（マルチキュー）でユニット/建物/プロジェクトをクリックすると 5 個まとめて追加します（購入・遺産・区域には適用されません）。もう一度押すとオフになります。</Text>
 		</Replace>
+		<Replace Tag="LOC_DISTRICT_DIPLOMATIC_QUARTER_EXPANSION2_DESCRIPTION" Language="ja_JP">
+			<Text>同盟1つごとに自文明の [ICON_FAVOR] 外交的支持+1。都心に隣接して建設すると [ICON_ENVOY] 代表団+1。この区域とその隣接区域を狙う敵のスパイ活動は通常より2レベル下がる。同時に存在できるのは1つの文明につき1つに限られる。</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_CONSULATE_DESCRIPTION" Language="ja_JP">
+			<Text>ターンごとの影響力ポイント+2。同盟1つごとに [ICON_FAVOR] 外交的支持+1。この都市や兵営区域のある都市を狙う敵スパイのレベルが1低下する。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_DQ_ALLY_FAVOR_DESC" Language="ja_JP">
+			<Text>外交街：同盟1つごとに [ICON_Favor] 外交的支持+1。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_CONSULATE_ALLY_FAVOR_DESC" Language="ja_JP">
+			<Text>領事館：同盟1つごとに [ICON_Favor] 外交的支持+1。</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

@@ -2232,7 +2232,7 @@
 			<Text>+3 [ICON_InfluencePerTurn] Influence Points per turn. When this civilization captures or kills an enemy Spy, receive 200 [ICON_SCIENCE] Science (on Standard speed) for every level of the enemy Spy.</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_CONSULATE_DESCRIPTION" Language="en_US">
-			<Text>+2 [ICON_InfluencePerTurn] Influence Points per turn. Enemy Spy's level is reduced by 1 when targeting this city or cities with Encampments.</Text>
+			<Text>+2 Influence Points per turn. +1 [ICON_FAVOR] Diplomatic Favor per turn for each Alliance you have. Enemy Spy's level is reduced by 1 when targeting this city or cities with Encampments.</Text>
 		</Replace>
 		<!-- == Encampment Buildings == -->
 		<Replace Tag="LOC_BUILDING_BARRACKS_DESCRIPTION" Language="en_US">
@@ -4595,6 +4595,15 @@
 		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
 		<Replace Tag="LOC_CCB_QUEUE_X5_TT_ON" Language="en_US">
 			<Text>X5 multi-queue: ON. Clicking a unit/building/project in the queue (or multi-queue) adds 5 copies at once (does not apply to purchases, wonders or districts). Click again to turn off.</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_DIPLOMATIC_QUARTER_EXPANSION2_DESCRIPTION" Language="en_US">
+			<Text>Your civilization receives +1 [ICON_FAVOR] Diplomatic Favor per turn for each Alliance you have. +1 [ICON_ENVOY] Envoy if built next to the city center. Enemy Spies operate at 2 levels below normal targeting this district and adjacent districts. Only 1 can exist in your empire at a time.</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_DQ_ALLY_FAVOR_DESC" Language="en_US">
+			<Text>Diplomatic Quarter: +1 [ICON_FAVOR] Diplomatic Favor per turn for each Alliance.</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_CONSULATE_ALLY_FAVOR_DESC" Language="en_US">
+			<Text>Consulate: +1 [ICON_FAVOR] Diplomatic Favor per turn for each Alliance.</Text>
 		</Replace>
 </LocalizedText>
 </GameData>

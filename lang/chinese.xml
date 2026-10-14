@@ -2335,7 +2335,7 @@
 			<Text>每回合 [ICON_InfluencePerTurn] 影响力点数+3。俘获或杀死间谍时，该间谍每有一级升级则提供200 [ICON_Science] 科技（标准速度下）。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_CONSULATE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>每回合 [ICON_InfluencePerTurn] 影响力点数+2。敌方间谍以此城市或拥有军营的城市为目标时，其效力降低一级。</Text>
+			<Text>每回合影响力点数+2。每有一个同盟，再 +1 [ICON_FAVOR] 外交支持。敌方间谍以此城市或拥有军营的城市为目标时，其效力降低一级。</Text>
 		</Replace>
 		<Replace Tag="LOC_BUILDING_GOV_TALL_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>有 [ICON_Governor] 总督的城市+1 [ICON_Amenities] 宜居度、+3 [ICON_FOOD] 食物和+3 [ICON_Housing] 住房。[NEWLINE]无 [ICON_Governor] 总督的城市-2忠诚度。[NEWLINE]奖励1个 [Icon_Governor] 总督头衔。</Text>
@@ -9076,6 +9076,15 @@
 		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
 		<Replace Tag="LOC_CCB_QUEUE_X5_TT_ON" Language="zh_Hans_CN">
 			<Text>X5 连点：开启。在队列（多队列）中点击单位/建筑/项目会连续排入 5 个（不作用于购买、奇观与区域）。再点一次关闭。</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_DIPLOMATIC_QUARTER_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>每有一个同盟，您的文明每回合获得 +1 [ICON_FAVOR] 外交支持。如建在市中心旁，则+1 [ICON_ENVOY] 使者。敌方间谍将此区域和相邻区域当做目标时，其效果将降低2级。文明中一次仅限建造一座此区域。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_DQ_ALLY_FAVOR_DESC" Language="zh_Hans_CN">
+			<Text>外交区：每有一个同盟 +1 [ICON_Favor] 外交支持。</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_CONSULATE_ALLY_FAVOR_DESC" Language="zh_Hans_CN">
+			<Text>领事馆：每有一个同盟 +1 [ICON_Favor] 外交支持。</Text>
 		</Replace>
 </LocalizedText>
 </GameData>

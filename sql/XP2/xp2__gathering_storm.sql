@@ -504,3 +504,80 @@ INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
 --09/03/2024 moai buildable next rainforest and forest
 DELETE FROM Improvement_InvalidAdjacentFeatures WHERE ImprovementType = 'IMPROVEMENT_MOAI';
 
+--==============================================================================================
+-- ******  外交区 / 领事馆：外交支持改为「每有一个同盟 +1/回合」（用户 2026-10-14 决定）  ******
+--   原版口径：外交区靠两条修正器吃"与外国文明互换的代表团 / 大使馆"——每个使团 +1 外交支持/回合
+--     （DIPLOMATIC_QUARTER_DELEGATION_FAVOR / _EMBASSY_FAVOR，定义见 DLC\Ethiopia\Data\Ethiopia_Expansion2.xml，
+--      挂在 DistrictModifiers 上）。用户要求简化：不再需要逐个谈使团。
+--   新口径（用户定稿）：**外交区本身 +1×N、领事馆（外交区一级建筑）再 +1×N，N = 同盟数量**。
+--     注：同盟本身的外交支持是引擎自动给的（全局参数 WORLD_CONGRESS_ALLIANCE_FAVOR_PER_TURN=1），
+--         本改动只是把"使团换支持"换成"同盟换支持"，不去动那条。
+--   实现（**纯数据、无 Lua**）：
+--     ① 拆掉原版两条使团修正器（替换而非叠加）；
+--     ② 用 REQUIREMENT_PLAYER_HAS_MANY_ALLIANCES + 参数 MinOwnerAlliances=n 做 6 档"同盟数量"门槛
+--        （原版先例：议程 TRAIT_AGENDA_PREFER_NOFAVOR 用 MinOwnerAlliances=1 表"至少 1 个同盟"，
+--          并用 CheckForFewer=1 表达"更少" → 说明该参数语义是"≥ n"）；
+--     ③ 每档一条 MODIFIER_PLAYER_ADJUST_EXTRA_FAVOR_PER_TURN（Amount=1）：
+--          外交区 → DistrictModifiers（原版同类修正器就挂这里）
+--          领事馆 → BuildingModifiers（先例：市政广场「外交部」建筑 GOVCITYSTATES_ADJUST_FAVOR Amount=3，
+--                                    以及 BBG 的 Amani 总督按政体层级分档，同为"主题需求集"用法）
+--        6 档叠加 = 同盟数 × 1；同盟数 > 6 时封顶 +6（5v5 以上的局才会触到）。
+--   ⚠ 分层叠加依赖 MinOwnerAlliances 的"≥"语义；若实测为"恰好 n"，则只有第 1 档生效，
+--     届时改走 Lua 棘轮（计数用 player:GetDiplomacy():GetAllianceLevel(playerID)，写法照 ccb_legacycards.lua
+--     的使者/外国信徒档位）。已记入 docs\Civ6开发排坑实录.md。
+--==============================================================================================
+DELETE FROM DistrictModifiers WHERE DistrictType='DISTRICT_DIPLOMATIC_QUARTER'
+    AND ModifierId IN ('DIPLOMATIC_QUARTER_DELEGATION_FAVOR', 'DIPLOMATIC_QUARTER_EMBASSY_FAVOR');
+
+INSERT INTO Requirements (RequirementId, RequirementType)
+SELECT 'CCB_REQ_HAS_ALLIANCE_' || T.N, 'REQUIREMENT_PLAYER_HAS_MANY_ALLIANCES'
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T;
+
+INSERT INTO RequirementArguments (RequirementId, Name, Value)
+SELECT 'CCB_REQ_HAS_ALLIANCE_' || T.N, 'MinOwnerAlliances', T.N
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T;
+
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType)
+SELECT 'CCB_REQSET_HAS_ALLIANCE_' || T.N, 'REQUIREMENTSET_TEST_ALL'
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T;
+
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId)
+SELECT 'CCB_REQSET_HAS_ALLIANCE_' || T.N, 'CCB_REQ_HAS_ALLIANCE_' || T.N
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T;
+
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId)
+SELECT 'CCB_DQ_ALLY_FAVOR_' || T.N, 'MODIFIER_PLAYER_ADJUST_EXTRA_FAVOR_PER_TURN', 'CCB_REQSET_HAS_ALLIANCE_' || T.N
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T
+UNION ALL
+SELECT 'CCB_CONSULATE_ALLY_FAVOR_' || T.N, 'MODIFIER_PLAYER_ADJUST_EXTRA_FAVOR_PER_TURN', 'CCB_REQSET_HAS_ALLIANCE_' || T.N
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T;
+
+INSERT INTO ModifierArguments (ModifierId, Name, Value)
+SELECT 'CCB_DQ_ALLY_FAVOR_' || T.N, 'Amount', 1
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T
+UNION ALL
+SELECT 'CCB_CONSULATE_ALLY_FAVOR_' || T.N, 'Amount', 1
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T;
+
+INSERT INTO DistrictModifiers (DistrictType, ModifierId)
+SELECT 'DISTRICT_DIPLOMATIC_QUARTER', 'CCB_DQ_ALLY_FAVOR_' || T.N
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T;
+
+INSERT INTO BuildingModifiers (BuildingType, ModifierId)
+SELECT 'BUILDING_CONSULATE', 'CCB_CONSULATE_ALLY_FAVOR_' || T.N
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T;
+
+-- 悬停/明细文本（原版 Summary + Preview 钩子，同 MEDIC_INCREASE_HEAL_RATE 写法）
+INSERT INTO ModifierStrings (ModifierId, Context, Text)
+SELECT 'CCB_DQ_ALLY_FAVOR_' || T.N, 'Summary', 'LOC_CCB_DQ_ALLY_FAVOR_DESC'
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T
+UNION ALL
+SELECT 'CCB_DQ_ALLY_FAVOR_' || T.N, 'Preview', 'LOC_CCB_DQ_ALLY_FAVOR_DESC'
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T
+UNION ALL
+SELECT 'CCB_CONSULATE_ALLY_FAVOR_' || T.N, 'Summary', 'LOC_CCB_CONSULATE_ALLY_FAVOR_DESC'
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T
+UNION ALL
+SELECT 'CCB_CONSULATE_ALLY_FAVOR_' || T.N, 'Preview', 'LOC_CCB_CONSULATE_ALLY_FAVOR_DESC'
+FROM (SELECT 1 AS N UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) T;
+
