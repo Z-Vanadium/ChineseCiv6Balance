@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Release ModID-->
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e00" version="1500"> -->
 
@@ -408,33 +408,6 @@
 			<Criteria>XP1_OR_XP2</Criteria>
 			<File>ui/ccb_tajmahal_popup.xml</File>
 			<File>ui/ccb_tajmahal_popup.lua</File>
-		</AddUserInterfaces>
-
-		<!-- [探针·临时 2026-09-22] 新科技树面板（左上按钮 + 自建"可研究对象" + 金币解锁）
-		     验证完必须删除：本块 + sql/Base/CCB_Probe_TreePanel.sql + scripts/ccb_probetree.lua
-		     + ui/ccb_probetree.xml/.lua + lang 里的 LOC_CCB_PROBE_*/LOC_TECH_CCB_PROBE_* + <Files> 4 行 -->
-		<UpdateDatabase id="CCB_ProbeTree_DB">
-			<Properties>
-				<LoadOrder>16050</LoadOrder>
-			</Properties>
-			<Criteria>XP1_OR_XP2</Criteria>
-			<File>sql/Base/CCB_Probe_TreePanel.sql</File>
-		</UpdateDatabase>
-		<AddGameplayScripts id="CCB_ProbeTree_Scripts">
-			<Properties>
-				<LoadOrder>16051</LoadOrder>
-			</Properties>
-			<Criteria>XP1_OR_XP2</Criteria>
-			<File>scripts/ccb_probetree.lua</File>
-		</AddGameplayScripts>
-		<AddUserInterfaces id="CCB_ProbeTree_UI">
-			<Properties>
-				<Context>InGame</Context>
-				<LoadOrder>16052</LoadOrder>
-			</Properties>
-			<Criteria>XP1_OR_XP2</Criteria>
-			<File>ui/ccb_probetree.xml</File>
-			<File>ui/ccb_probetree.lua</File>
 		</AddUserInterfaces>
 
 		<AddUserInterfaces id="bbg_uitogameplay_dummy_xml">
@@ -1669,12 +1642,7 @@
 		<File>scripts/ccb_tajmahal.lua</File>
 		<File>ui/ccb_tajmahal_popup.xml</File>
 		<File>ui/ccb_tajmahal_popup.lua</File>
-		<!-- [探针·临时 2026-09-22] 新科技树面板（验证完删除这 4 行） -->
-		<File>sql/Base/CCB_Probe_TreePanel.sql</File>
-		<File>scripts/ccb_probetree.lua</File>
-		<File>ui/ccb_probetree.xml</File>
-		<File>ui/ccb_probetree.lua</File>
-		<!-- -->
+<!-- -->
 		<File>ui/replacements/worldrankings_bbg.lua</File>
 		<File>ui/replacements/endgamemenu_bbg.lua</File>
 		<File>ui/replacements/endgamemenu.xml</File>
