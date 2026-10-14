@@ -4414,5 +4414,13 @@
 		<Replace Tag="LOC_CCB_CONSULATE_ALLY_FAVOR_DESC" Language="ja_JP">
 			<Text>領事館：同盟1つごとに [ICON_Favor] 外交的支持+1。</Text>
 		</Replace>
+		<!-- = CCB 生产面板「清空队列」按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_CLEAR_BTN" Language="ja_JP">
+			<Text>全消去</Text>
+		</Replace>
+		<!-- = CCB 生产面板「清空队列」按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_CLEAR_TT" Language="ja_JP">
+			<Text>この都市の待機中のキューをすべて削除します（生産中の項目は残ります）。キューが空のときは使用できません。</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

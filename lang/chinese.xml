@@ -9086,5 +9086,13 @@
 		<Replace Tag="LOC_CCB_CONSULATE_ALLY_FAVOR_DESC" Language="zh_Hans_CN">
 			<Text>领事馆：每有一个同盟 +1 [ICON_Favor] 外交支持。</Text>
 		</Replace>
+		<!-- = CCB 生产面板「清空队列」按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_CLEAR_BTN" Language="zh_Hans_CN">
+			<Text>清空</Text>
+		</Replace>
+		<!-- = CCB 生产面板「清空队列」按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_CLEAR_TT" Language="zh_Hans_CN">
+			<Text>清除该城市正在排队的全部项目（正在生产的那个保留）。队列为空时此按钮不可用。</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

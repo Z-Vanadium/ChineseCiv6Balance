@@ -188,6 +188,50 @@ function CCB_OnQueueX5Clicked()
 	UI.PlaySound( m_ccbX5Enabled and "Confirm_Production" or "Main_Menu_Mouse_Over" );
 end
 
+-- ── 按钮②：清空该城市队列（2026-10-14 用户需求）────────────────────────────────────────
+-- 依据：原版 `RemoveQueueItem(index)`（ProductionHelper.lua）=
+--         PARAM_INSERT_MODE = VALUE_REMOVE_AT + PARAM_QUEUE_LOCATION = index 的 BUILD 操作；
+--       队列索引 **1..MAX_QUEUE_SIZE 对应"排队中的项目"，0 = 正在生产的那一项**
+--       （原版 RefreshQueue：GetAt(i) 的槽位号写 i+1、注释 "Start at 2"，以及 GetSize() - 1 都印证这点）。
+--       ⇒ 清空 = 从 GetSize()-1 递减到 1 逐个 RemoveQueueItem（由后往前，避免索引位移）
+--       ⇒ **正在生产的项目不会被取消**（那是另一个字段，本按钮不碰）。
+local function CCB_GetQueuedCount()
+	local pCity = UI.GetHeadSelectedCity();
+	if pCity == nil then return 0; end
+	local pBuildQueue = pCity:GetBuildQueue();
+	if pBuildQueue == nil then return 0; end
+	local nQueued = pBuildQueue:GetSize() - 1;                      -- 减掉"正在生产"那一项
+	if nQueued < 0 then nQueued = 0; end
+	if nQueued > MAX_QUEUE_SIZE then nQueued = MAX_QUEUE_SIZE; end  -- 防御性夹取
+	return nQueued;
+end
+
+local function CCB_RefreshClearButton()
+	if Controls.CCBClearQueueButton == nil then return; end
+	Controls.CCBClearQueueButton:SetDisabled( CCB_GetQueuedCount() <= 0 );
+end
+
+function CCB_OnClearQueueClicked()
+	local nQueued = CCB_GetQueuedCount();
+	if nQueued <= 0 then
+		UI.PlaySound( "Main_Menu_Mouse_Over" );
+		return;
+	end
+	for i = nQueued, 1, -1 do
+		RemoveQueueItem( i );                                       -- 原版全局函数（内部同样取 UI.GetHeadSelectedCity()）
+	end
+	UI.PlaySound( "Confirm_Production" );
+	CCB_RefreshClearButton();
+end
+
+-- 队列一有变化（原版自身也会调 RefreshQueue 刷界面）就同步"清空"按钮的禁用态
+local fVanillaRefreshQueue = RefreshQueue;
+function RefreshQueue( playerID, cityID )
+	fVanillaRefreshQueue( playerID, cityID );
+	CCB_RefreshClearButton();
+end
+
+-- ── 控件接线（原版 Initialize() 在脚本加载时就跑完了；新控件的回调要在自己文件顶层注册）──
 if Controls.CCBQueueX5Button ~= nil then
 	Controls.CCBQueueX5Button:RegisterCallback( Mouse.eLClick, CCB_OnQueueX5Clicked );
 	Controls.CCBQueueX5Button:RegisterCallback( Mouse.eMouseEnter, function() UI.PlaySound( "Main_Menu_Mouse_Over" ); end );
@@ -196,4 +240,12 @@ else
 	-- 说明 ProductionPanel.xml 被别的 UI 模组覆盖了（本 MOD 的按钮不存在）→ 只失去按钮功能，
 	-- Ctrl+点击 的临时连点仍然可用。
 	print( "[CCB] ProductionPanel.xml 未生效（CCBQueueX5Button 不存在）：X5 按钮不可用，Ctrl+点击仍可连点。" );
+end
+
+if Controls.CCBClearQueueButton ~= nil then
+	Controls.CCBClearQueueButton:RegisterCallback( Mouse.eLClick, CCB_OnClearQueueClicked );
+	Controls.CCBClearQueueButton:RegisterCallback( Mouse.eMouseEnter, function() UI.PlaySound( "Main_Menu_Mouse_Over" ); end );
+	CCB_RefreshClearButton();
+else
+	print( "[CCB] ProductionPanel.xml 未生效（CCBClearQueueButton 不存在）：清空队列按钮不可用。" );
 end

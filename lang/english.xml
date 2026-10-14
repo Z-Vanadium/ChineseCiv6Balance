@@ -4605,5 +4605,13 @@
 		<Replace Tag="LOC_CCB_CONSULATE_ALLY_FAVOR_DESC" Language="en_US">
 			<Text>Consulate: +1 [ICON_FAVOR] Diplomatic Favor per turn for each Alliance.</Text>
 		</Replace>
+		<!-- = CCB 生产面板「清空队列」按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_CLEAR_BTN" Language="en_US">
+			<Text>Clear</Text>
+		</Replace>
+		<!-- = CCB 生产面板「清空队列」按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_CLEAR_TT" Language="en_US">
+			<Text>Clear all items queued in this city (the item currently in production is kept). Disabled while the queue is empty.</Text>
+		</Replace>
 </LocalizedText>
 </GameData>
