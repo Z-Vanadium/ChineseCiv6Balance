@@ -1396,5 +1396,11 @@
 		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC" Language="pl_PL">
 			<Text>[COLOR_RED]TO_TRANSLATE: From the Discipline policy card: +1 Sight range for recon units.</Text>
 		</Replace>
+		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="pl_PL">
+			<Text>Zbuduj 1 dzielnicę osiedlową.</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="pl_PL">
+			<Text>Atomowa jednostka wsparcia. Zwiększa leczenie sąsiadujących jednostek o 20. Zapewnia jednostkom dodatkowy [ICON_Movement] punkt ruchu, jeśli rozpoczęły ruch w sąsiedztwie konwoju.</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

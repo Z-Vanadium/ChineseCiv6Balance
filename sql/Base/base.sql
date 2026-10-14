@@ -381,6 +381,21 @@ DELETE FROM StartingBoostedTechnologies WHERE Technology='TECH_GUIDANCE_SYSTEMS'
 INSERT INTO StartingBoostedTechnologies (Era, Technology) VALUES
     ('ERA_ATOMIC', 'TECH_GUIDANCE_SYSTEMS');
 
+-- 2026/10/14 卫生设备（用户需求）：前置 科学理论 → **金属铸造**；树位前移；造价与**弹道学**一致；尤里卡 2 社区 → 1 社区
+--   ⚠ 与上面制导系统同款：本段必须写在 L346「全局科技造价 ×1.05」之后，造价用子查询抄弹道学当期值。
+--   ⚠ 布局机制同 §十四.F：Eras.TechTreeLayoutMethod='Cost' → 同造价=同列。科学理论与弹道学造价同为 976.5（同列），
+--     其 UITreeRow 分别为 -1 与 1 → 卫生设备取 UITreeRow=0 即"位于二者之间"。时代仍为工业时代（前置换成文艺复兴的金属铸造，
+--     与弹道学完全同构：工业时代科技 + 金属铸造前置）。
+--   ⚠ 尤里卡条件：Boosts.NumItems 2 → 1（`BOOST_TRIGGER_HAVE_X_DISTRICTS` + DISTRICT_NEIGHBORHOOD）；
+--     科技树上的条件文案是**静态文本**（`LOC_BOOST_TRIGGER_SANITATION`，各语言都硬编码了数字 2）→ 已同步改到 1（lang/*.xml）。
+UPDATE Technologies SET UITreeRow=0,
+    Cost=(SELECT Cost FROM Technologies WHERE TechnologyType='TECH_BALLISTICS')
+WHERE TechnologyType='TECH_SANITATION';
+DELETE FROM TechnologyPrereqs WHERE Technology='TECH_SANITATION' AND PrereqTech='TECH_SCIENTIFIC_THEORY';
+INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
+    ('TECH_SANITATION', 'TECH_METAL_CASTING');
+UPDATE Boosts SET NumItems=1 WHERE TechnologyType='TECH_SANITATION';
+
 -- 2026/02/26 Nuclear Fusion requires Composite
 INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
     ('TECH_NUCLEAR_FUSION', 'TECH_COMPOSITES');

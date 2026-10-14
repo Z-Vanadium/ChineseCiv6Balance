@@ -1971,7 +1971,7 @@
 			<Text>[ICON_MOVEMENT] PM +1 para unidades de combate corpo a corpo, Anti-Cavalaria e combate à distância do jogador que iniciam o turno em um raio de um painel.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="pt_BR">
-			<Text>Unidade de apoio da era moderna. Aumenta a cura das unidades adjacentes em 20. [ICON_MOVEMENT] PM +1 para as unidades que começam o turno adjacentes ao comboio de suprimentos.</Text>
+			<Text>Unidade de apoio da era atômica. Aumenta a cura das unidades adjacentes em 20. [ICON_MOVEMENT] PM +1 para as unidades que começam o turno adjacentes ao comboio de suprimentos.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_ANTIAIR_GUN_DESCRIPTION" Language="pt_BR">
 			<Text>Unidade antiaérea da era moderna que cobre ataques aéreos num raio de 1 painel.</Text>
@@ -4269,7 +4269,7 @@
 			<Text>Possua 2 estaleiros navais.</Text>
 		</Replace>
 		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="pt_BR">
-			<Text>Possua 2 bairros residenciais.</Text>
+			<Text>Possua 1 bairro residencial.</Text>
 		</Replace>
 		<Replace Tag="LOC_BOOST_TRIGGER_ECONOMICS" Language="pt_BR">
 			<Text>Possua 2 bancos.</Text>

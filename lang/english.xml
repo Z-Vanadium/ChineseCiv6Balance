@@ -1627,6 +1627,9 @@
 		<Replace Tag="LOC_UNIT_MEDIC_DESCRIPTION" Language="en_US">
 			<Text>Industrial era support unit. Can heal adjacent units. Grants +1 Movement to Melee, Anti-Cav, and Ranged Units.</Text>
 		</Replace>
+		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="en_US">
+			<Text>Atomic era support unit. Heals 20 HP for units within 1 tile. Gives units 1 bonus [ICON_Movement] Movement if the move is started adjacent to the Convoy.</Text>
+		</Replace>
 		<!-- = Anti-Air = -->
 		<Replace Tag="LOC_UNIT_ANTIAIR_GUN_DESCRIPTION" Language="en_US">
 			<Text>Modern era anti-air support unit. Provides cover from air attacks up to 1 hex away from the weapon.</Text>
@@ -4577,6 +4580,9 @@
 		</Replace>
 		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_DESC" Language="en_US">
 			<Text>On a Reinforced Fort: ignores terrain and features when determining line of sight for ranged attacks (Mountains still block).</Text>
+		</Replace>
+		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="en_US">
+			<Text>Build 1 Neighborhood.</Text>
 		</Replace>
 </LocalizedText>
 </GameData>

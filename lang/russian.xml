@@ -6662,5 +6662,11 @@
 		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC" Language="ru_RU">
 			<Text>[COLOR_RED]TO_TRANSLATE: From the Discipline policy card: +1 Sight range for recon units.</Text>
 		</Replace>
+		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="ru_RU">
+			<Text>Постройте 1 район «Пригород».</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="ru_RU">
+			<Text>Юнит поддержки Атомной эры. Ускоряет лечение соседних юнитов на 20. Дает юнитам 1 дополнительное [ICON_Movement] ОП при начале движения с соседней клетки.</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

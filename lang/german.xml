@@ -4013,7 +4013,7 @@
 			<Text>Baut 2 "Schiffswerften".</Text>
 		</Replace>
 		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="de_DE">
-			<Text>Baut 2 [ICON_DISTRICT_NEIGHBORHOOD] Wohnviertel-Bezirke.</Text>
+			<Text>Baut 1 [ICON_DISTRICT_NEIGHBORHOOD] Wohnviertel-Bezirk.</Text>
 		</Replace>
 		<Replace Tag="LOC_BOOST_TRIGGER_ECONOMICS" Language="de_DE">
 			<Text>Baut 2 "Banken".</Text>
@@ -8989,6 +8989,9 @@
 		</Replace>
 		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC" Language="de_DE">
 			<Text>[COLOR_RED]TO_TRANSLATE: From the Discipline policy card: +1 Sight range for recon units.</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="de_DE">
+			<Text>Unterstützungseinheit des Atomzeitalters. Erhöht die Heilung für angrenzende Einheiten um 20. Gewährt Einheiten 1 Bonus [ICON_Movement] Fortbewegung, wenn der Zug neben dem Konvoi beginnt.</Text>
 		</Replace>
 </LocalizedText>
 </GameData>

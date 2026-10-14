@@ -1950,7 +1950,7 @@
 			<Text>[ICON_MOVEMENT] PM +1 pour les unités de combat rapproché, anti-cavalerie et combat à distance du joueur qui commencent leur tour dans un rayon d'une case.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="fr_FR">
-			<Text>Unité de soutien de l'ère moderne. Augmente le soin des unités adjacentes par 20. [ICON_MOVEMENT] PM +1 pour les unités qui commencent leur tour adjacentes au convoi de ravitaillement.</Text>
+			<Text>Unité de soutien de l'ère atomique. Augmente le soin des unités adjacentes par 20. [ICON_MOVEMENT] PM +1 pour les unités qui commencent leur tour adjacentes au convoi de ravitaillement.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_ANTIAIR_GUN_DESCRIPTION" Language="fr_FR">
 			<Text>Unité antiaérienne de l'ère moderne couvre des attaques aériennes dans un rayon de 1 case.</Text>
@@ -4242,7 +4242,7 @@
 			<Text>Possédez 2 chantiers navals.</Text>
 		</Replace>
 		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="fr_FR">
-			<Text>Possédez 2 quartiers résidentiels.</Text>
+			<Text>Possédez 1 quartier résidentiel.</Text>
 		</Replace>
 		<Replace Tag="LOC_BOOST_TRIGGER_ECONOMICS" Language="fr_FR">
 			<Text>Possédez 2 banques.</Text>

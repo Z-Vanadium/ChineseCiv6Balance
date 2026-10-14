@@ -1735,6 +1735,9 @@
 		<Replace Tag="LOC_UNIT_MEDIC_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>工业时代支援单位。能治疗邻近单位。为相邻近战、抗骑兵和远程单位+1 [ICON_Movement] 移动力。</Text>
 		</Replace>
+		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>原子能时代支援单位。为1个单元格内的单位回复20生命值。如单位从补给车队旁开始移动，则+1 [ICON_Movement] 移动力。</Text>
+		</Replace>
 		<Replace Tag="LOC_UNIT_AIRCRAFT_CARRIER_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>原子能时代的近战海军单位可运输空中单位。若与具有防空力量的单位相邻，防御空袭时+25 [ICON_Strength] 战斗力。</Text>
 		</Replace>
@@ -9058,6 +9061,9 @@
 		</Replace>
 		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_DESC" Language="zh_Hans_CN">
 			<Text>位于强化堡垒中：计算射击视线时无视地形与地貌的阻挡（山脉单元格除外）。</Text>
+		</Replace>
+		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="zh_Hans_CN">
+			<Text>建造1个社区。</Text>
 		</Replace>
 </LocalizedText>
 </GameData>

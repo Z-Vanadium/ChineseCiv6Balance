@@ -4197,5 +4197,11 @@
 		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC" Language="ko_KR">
 			<Text>[COLOR_RED]TO_TRANSLATE: From the Discipline policy card: +1 Sight range for recon units.</Text>
 		</Replace>
+		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="ko_KR">
+			<Text>주택가 1곳을 건설하십시오.</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="ko_KR">
+			<Text>원자력 시대 지원 유닛입니다. 인접 유닛의 치료 효과가 20 증가합니다. 호송대에 인접해 있을 때 이동을 시작하면 [ICON_Movement] 이동력이 1 증가합니다.</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

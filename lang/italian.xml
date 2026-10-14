@@ -2789,6 +2789,12 @@
 		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC" Language="it_IT">
 			<Text>[COLOR_RED]TO_TRANSLATE: From the Discipline policy card: +1 Sight range for recon units.</Text>
 		</Replace>
+		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="it_IT">
+			<Text>Costruisci 1 Quartiere residenziale.</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="it_IT">
+			<Text>Unità di supporto di epoca atomica. Aumenta di 20 la capacità di curarsi delle unità adiacenti. Dà alle unità 1 punto di [ICON_Movement] movimento bonus se la loro mossa parte da una casella adiacente al Convoglio.</Text>
+		</Replace>
 </LocalizedText>
 </GameData>
 
