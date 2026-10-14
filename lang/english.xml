@@ -3084,55 +3084,55 @@
 	<Text>Autocracy Legacy - Diplomacy - Fascism</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_FASCISM_DESC" Language="en_US">
-	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+	<Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_COMMUNISM_NAME" Language="en_US">
 	<Text>Autocracy Legacy - Diplomacy - Communism</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_COMMUNISM_DESC" Language="en_US">
-	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+	<Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DEMOCRACY_NAME" Language="en_US">
 	<Text>Autocracy Legacy - Diplomacy - Democracy</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DEMOCRACY_DESC" Language="en_US">
-	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+	<Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_FASCISM_NAME" Language="en_US">
 	<Text>Autocracy Legacy - Faith - Fascism</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_FASCISM_DESC" Language="en_US">
-	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+	<Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_COMMUNISM_NAME" Language="en_US">
 	<Text>Autocracy Legacy - Faith - Communism</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_COMMUNISM_DESC" Language="en_US">
-	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+	<Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DEMOCRACY_NAME" Language="en_US">
 	<Text>Autocracy Legacy - Faith - Democracy</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DEMOCRACY_DESC" Language="en_US">
-	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+	<Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_FASCISM_NAME" Language="en_US">
 	<Text>Autocracy Legacy - Trade - Fascism</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_FASCISM_DESC" Language="en_US">
-	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
+	<Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]Gain +500 [ICON_GOLD] Gold when capturing an enemy city.[NEWLINE]Unit upgrade cost -10%.</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_COMMUNISM_NAME" Language="en_US">
 	<Text>Autocracy Legacy - Trade - Communism</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_COMMUNISM_DESC" Language="en_US">
-	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
+	<Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]Encampment, Campus and Industrial Zone districts provide +2 [ICON_FOOD] Food and +2 [ICON_PRODUCTION] Production.</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DEMOCRACY_NAME" Language="en_US">
 	<Text>Autocracy Legacy - Trade - Democracy</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DEMOCRACY_DESC" Language="en_US">
-	<Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
+	<Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).[NEWLINE]+5 Alliance Points per turn.[NEWLINE]International Trade Routes provide +25% [ICON_TOURISM] Tourism.</Text>
 </Replace>
 <Replace Tag="LOC_TECH_MILITARY_SCIENCE_DESCRIPTION" Language="en_US">
 			<Text>+1 Spy Capacity.</Text>
@@ -4435,11 +4435,11 @@
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_BUFF_MODIFIER_DESC" Language="en_US"><Text>From Oligarchy Legacy: +4 [ICON_STRENGTH] Combat Strength for melee, naval melee and anti-cavalry units.</Text></Replace>
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_DESC" Language="en_US"><Text>From Oligarchy Legacy: +4 [ICON_STRENGTH] Combat Strength for melee, naval melee and anti-cavalry units.</Text></Replace>
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_NAME" Language="en_US"><Text>Oligarchy Legacy</Text></Replace>
-<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DESC" Language="en_US"><Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DESC" Language="en_US"><Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.</Text></Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_NAME" Language="en_US"><Text>Autocracy Legacy - Diplomacy</Text></Replace>
-<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DESC" Language="en_US"><Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DESC" Language="en_US"><Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.</Text></Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_NAME" Language="en_US"><Text>Autocracy Legacy - Faith</Text></Replace>
-<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DESC" Language="en_US"><Text>Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]Each Government/Diplomatic Quarter building grants its city +1 of all yields.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).</Text></Replace>
+<Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DESC" Language="en_US"><Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+10% [ICON_GOLD] Gold per turn.[NEWLINE]+2 [ICON_TRADEROUTE] Trade Route capacity (passive).</Text></Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_NAME" Language="en_US"><Text>Autocracy Legacy - Trade</Text></Replace>
 <Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_DESC" Language="en_US"><Text>Land, Naval Melee and Anti-Cavalry units +4 [ICON_STRENGTH] Combat Strength.[NEWLINE]After Nationalism, Land Melee and Anti-Cavalry units +1 [ICON_MOVEMENT] Movement.</Text></Replace>
 <Replace Tag="LOC_CCB_POLICY_OLIGARCHY_MELEE_NAME" Language="en_US"><Text>Oligarchy Legacy - Arms</Text></Replace>

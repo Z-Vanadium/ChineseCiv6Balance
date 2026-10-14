@@ -8751,19 +8751,19 @@
 			<Text>寡头传承</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DESC" Language="zh_Hans_CN">
-			<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。</Text>
+			<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_NAME" Language="zh_Hans_CN">
 			<Text>独裁传承·外交升级</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DESC" Language="zh_Hans_CN">
-			<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+12% [ICON_Faith] 回合信仰。[NEWLINE]从每个外国信徒获得+0.5 [ICON_Culture] 文化、+0.5 [ICON_Faith] 信仰（需创立宗教）。[NEWLINE]传教士、使徒+1 [ICON_Movement] 移动力。</Text>
+			<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+12% [ICON_Faith] 回合信仰。[NEWLINE]从每个外国信徒获得+0.5 [ICON_Culture] 文化、+0.5 [ICON_Faith] 信仰（需创立宗教）。[NEWLINE]传教士、使徒+1 [ICON_Movement] 移动力。</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_NAME" Language="zh_Hans_CN">
 			<Text>独裁传承·信仰升级</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DESC" Language="zh_Hans_CN">
-			<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+10% [ICON_Gold] 回合金币。[NEWLINE]永久获得+2 [ICON_Traderoute] 商路容量（被动）。</Text>
+			<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+10% [ICON_Gold] 回合金币。[NEWLINE]永久获得+2 [ICON_Traderoute] 商路容量（被动）。</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_NAME" Language="zh_Hans_CN">
 			<Text>独裁传承·商贸升级</Text>
@@ -8892,55 +8892,55 @@
 	<Text>独裁传承·外交·法西斯升级</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_FASCISM_DESC" Language="zh_Hans_CN">
-	<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。[NEWLINE]夺取敌方城市时获得 +500 [ICON_Gold] 金币。[NEWLINE]单位升级费用-10%。</Text>
+	<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。[NEWLINE]夺取敌方城市时获得 +500 [ICON_Gold] 金币。[NEWLINE]单位升级费用-10%。</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_COMMUNISM_NAME" Language="zh_Hans_CN">
 	<Text>独裁传承·外交·共产升级</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_COMMUNISM_DESC" Language="zh_Hans_CN">
-	<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。[NEWLINE]每个军营、学院和工业区区域+2 [ICON_Food] 粮食、+2 [ICON_Production] 生产力。</Text>
+	<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。[NEWLINE]每个军营、学院和工业区区域+2 [ICON_Food] 粮食、+2 [ICON_Production] 生产力。</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DEMOCRACY_NAME" Language="zh_Hans_CN">
 	<Text>独裁传承·外交·民主升级</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DEMOCRACY_DESC" Language="zh_Hans_CN">
-	<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。[NEWLINE]同盟点数+5。[NEWLINE]国际商路提供+25% [ICON_Tourism] 旅游业绩。</Text>
+	<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。[NEWLINE]同盟点数+5。[NEWLINE]国际商路提供+25% [ICON_Tourism] 旅游业绩。</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_FASCISM_NAME" Language="zh_Hans_CN">
 	<Text>独裁传承·信仰·法西斯升级</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_FASCISM_DESC" Language="zh_Hans_CN">
-	<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+12% [ICON_Faith] 回合信仰。[NEWLINE]从每个外国信徒获得+0.5 [ICON_Culture] 文化、+0.5 [ICON_Faith] 信仰（需创立宗教）。[NEWLINE]传教士、使徒+1 [ICON_Movement] 移动力。[NEWLINE]夺取敌方城市时获得 +500 [ICON_Gold] 金币。[NEWLINE]单位升级费用-10%。</Text>
+	<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+12% [ICON_Faith] 回合信仰。[NEWLINE]从每个外国信徒获得+0.5 [ICON_Culture] 文化、+0.5 [ICON_Faith] 信仰（需创立宗教）。[NEWLINE]传教士、使徒+1 [ICON_Movement] 移动力。[NEWLINE]夺取敌方城市时获得 +500 [ICON_Gold] 金币。[NEWLINE]单位升级费用-10%。</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_COMMUNISM_NAME" Language="zh_Hans_CN">
 	<Text>独裁传承·信仰·共产升级</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_COMMUNISM_DESC" Language="zh_Hans_CN">
-	<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+12% [ICON_Faith] 回合信仰。[NEWLINE]从每个外国信徒获得+0.5 [ICON_Culture] 文化、+0.5 [ICON_Faith] 信仰（需创立宗教）。[NEWLINE]传教士、使徒+1 [ICON_Movement] 移动力。[NEWLINE]每个军营、学院和工业区区域+2 [ICON_Food] 粮食、+2 [ICON_Production] 生产力。</Text>
+	<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+12% [ICON_Faith] 回合信仰。[NEWLINE]从每个外国信徒获得+0.5 [ICON_Culture] 文化、+0.5 [ICON_Faith] 信仰（需创立宗教）。[NEWLINE]传教士、使徒+1 [ICON_Movement] 移动力。[NEWLINE]每个军营、学院和工业区区域+2 [ICON_Food] 粮食、+2 [ICON_Production] 生产力。</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DEMOCRACY_NAME" Language="zh_Hans_CN">
 	<Text>独裁传承·信仰·民主升级</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DEMOCRACY_DESC" Language="zh_Hans_CN">
-	<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+12% [ICON_Faith] 回合信仰。[NEWLINE]从每个外国信徒获得+0.5 [ICON_Culture] 文化、+0.5 [ICON_Faith] 信仰（需创立宗教）。[NEWLINE]传教士、使徒+1 [ICON_Movement] 移动力。[NEWLINE]同盟点数+5。[NEWLINE]国际商路提供+25% [ICON_Tourism] 旅游业绩。</Text>
+	<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+12% [ICON_Faith] 回合信仰。[NEWLINE]从每个外国信徒获得+0.5 [ICON_Culture] 文化、+0.5 [ICON_Faith] 信仰（需创立宗教）。[NEWLINE]传教士、使徒+1 [ICON_Movement] 移动力。[NEWLINE]同盟点数+5。[NEWLINE]国际商路提供+25% [ICON_Tourism] 旅游业绩。</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_FASCISM_NAME" Language="zh_Hans_CN">
 	<Text>独裁传承·商贸·法西斯升级</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_FASCISM_DESC" Language="zh_Hans_CN">
-	<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+10% [ICON_Gold] 回合金币。[NEWLINE]永久获得+2 [ICON_Traderoute] 商路容量（被动）。[NEWLINE]夺取敌方城市时获得 +500 [ICON_Gold] 金币。[NEWLINE]单位升级费用-10%。</Text>
+	<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+10% [ICON_Gold] 回合金币。[NEWLINE]永久获得+2 [ICON_Traderoute] 商路容量（被动）。[NEWLINE]夺取敌方城市时获得 +500 [ICON_Gold] 金币。[NEWLINE]单位升级费用-10%。</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_COMMUNISM_NAME" Language="zh_Hans_CN">
 	<Text>独裁传承·商贸·共产升级</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_COMMUNISM_DESC" Language="zh_Hans_CN">
-	<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+10% [ICON_Gold] 回合金币。[NEWLINE]永久获得+2 [ICON_Traderoute] 商路容量（被动）。[NEWLINE]每个军营、学院和工业区区域+2 [ICON_Food] 粮食、+2 [ICON_Production] 生产力。</Text>
+	<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+10% [ICON_Gold] 回合金币。[NEWLINE]永久获得+2 [ICON_Traderoute] 商路容量（被动）。[NEWLINE]每个军营、学院和工业区区域+2 [ICON_Food] 粮食、+2 [ICON_Production] 生产力。</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DEMOCRACY_NAME" Language="zh_Hans_CN">
 	<Text>独裁传承·商贸·民主升级</Text>
 </Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_TRADE_DEMOCRACY_DESC" Language="zh_Hans_CN">
-	<Text>拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]每完成一个市政或外交区建筑，其所在城市+1 [ICON_Science] 科技、[ICON_Culture] 文化、[ICON_Gold] 金币、[ICON_Faith] 信仰、[ICON_Food] 粮食、[ICON_Production] 生产力。[NEWLINE]+10% [ICON_Gold] 回合金币。[NEWLINE]永久获得+2 [ICON_Traderoute] 商路容量（被动）。[NEWLINE]同盟点数+5。[NEWLINE]国际商路提供+25% [ICON_Tourism] 旅游业绩。</Text>
+	<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+10% [ICON_Gold] 回合金币。[NEWLINE]永久获得+2 [ICON_Traderoute] 商路容量（被动）。[NEWLINE]同盟点数+5。[NEWLINE]国际商路提供+25% [ICON_Tourism] 旅游业绩。</Text>
 </Replace>
 <Replace Tag="LOC_POLICY_ECOMMERCE_EXPANSION1_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>每条 [ICON_Traderoute] 商路+2 [ICON_Production] 生产力、+5 [ICON_Gold] 金币。[NEWLINE]商路无法被掠夺。</Text>
