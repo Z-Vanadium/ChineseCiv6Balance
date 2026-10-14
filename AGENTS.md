@@ -99,7 +99,7 @@ Files guard on `Criteria` blocks in modinfo. Common criteria:
 3. **新增键**：插在文件末尾 `</LocalizedText>` 之前即可；**改现有键**：用正则框出该条目、**只在块内**替换，块内计数必须是 1（同一句在整份文件里可能出现 2~10 次 → 见 `docs/Civ6开发排坑实录.md` §十三.E）
 4. Use `[ICON_X]` markup for game icons and `[NEWLINE]` for line breaks
 5. ⚠ `dev_script/lang_update.py` 是上游工具、**默认会同时写 8 个其它语言** —— 已按本规则改成只写 `japanese.xml`；若从上游/别处拿到旧版，不要直接跑
-6. ⚠ **例外（需先问用户）**：与数值/条件强绑定的文案（尤里卡数字、造价数字、时代字样等）只改中/日/英时，其余语言会显示**错数**。遇到这类改动先跟用户确认是"只改三国"还是"这处破例同步"。
+6. ⚠ **其余 8 个语言一律不管**（用户 2026-10-14 复核："以后的文本同步工作只考虑中日英"）：即便某处文案与数值/条件强绑定（尤里卡数字、造价、时代字样…），导致那 8 个语言显示**错数**，也**不改它们**；只在交付说明里提一句即可，不必专门询问。
 7. ⚠ 读写语言文件一律用文件工具或 Python（`encoding='utf-8'` + `newline=''`）：`italian.xml`/`spanish.xml` 是 **LF**、其余 9 个是 **CRLF**；用 PowerShell 的 `Get-Content`/`WriteAllText` 会按 GBK 往返**永久损坏**文件（排坑实录 §十三.A）
 
 ## BBG Expanded
