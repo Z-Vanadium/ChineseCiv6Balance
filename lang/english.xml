@@ -3171,6 +3171,19 @@
 		<Replace Tag="LOC_PROJECT_LAUNCH_MOON_LANDING_POPUP" Language="en_US">
 			<Text>You successfully land a person on the moon! Grants a [ICON_CULTURE] Culture bonus equal to 5 times your [ICON_SCIENCE] Science per turn, and marks the second step towards the Science Victory.</Text>
 		</Replace>
+		<!-- = Nuclear projects (2026-10-14): Research Lab requirement + Online-speed production cost = -->
+		<Replace Tag="LOC_PROJECT_MANHATTAN_PROJECT_DESCRIPTION" Language="en_US">
+			<Text>Allows for the creation of Nuclear Devices. This city must have a Research Lab.</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_OPERATION_IVY_DESCRIPTION" Language="en_US">
+			<Text>Allows for the creation of Thermonuclear Devices. This city must have a Research Lab.</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_BUILD_NUCLEAR_DEVICE_DESCRIPTION" Language="en_US">
+			<Text>Adds one Nuclear Device to your nation's inventory. Requires [ICON_Resource_Uranium] Uranium. Maintenance is 14 [ICON_Gold] Gold.[NEWLINE]Production cost: 600 (Online speed).</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_BUILD_THERMONUCLEAR_DEVICE_DESCRIPTION" Language="en_US">
+			<Text>Adds a Thermonuclear Device to your nation's inventory. Requires [ICON_Resource_Uranium] Uranium. Maintenance is 16 [ICON_Gold] Gold.[NEWLINE]Production cost: 850 (Online speed).</Text>
+		</Replace>
 
 
 		<!-- === CULTURE TREE DESCRIPTIONS === -->

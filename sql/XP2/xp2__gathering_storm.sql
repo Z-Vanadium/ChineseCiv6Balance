@@ -282,6 +282,12 @@ UPDATE Projects SET Cost=1700 WHERE ProjectType='PROJECT_BUILD_THERMONUCLEAR_DEV
 UPDATE Project_ResourceCosts SET StartProductionCost=15 WHERE ProjectType='PROJECT_BUILD_NUCLEAR_DEVICE';
 UPDATE Project_ResourceCosts SET StartProductionCost=30 WHERE ProjectType='PROJECT_BUILD_THERMONUCLEAR_DEVICE';
 
+-- 2026/10/14 核项目前置（用户需求）：曼哈顿计划 / 常春藤行动 需要所在城市拥有「研究实验室」
+--   写法照 BBG（BetterBalancedGame\sql\XP2\xp2__gathering_storm.sql）：用引擎原生列 Projects.RequiredBuilding
+--   —— 语义 = "建造该项目的城市自身必须拥有此建筑"，无需自建 RequirementSet。
+--   常春藤行动（解锁热核装置的项目）一并加：BBG 原做法就是两个一起加，口径一致。
+UPDATE Projects SET RequiredBuilding='BUILDING_RESEARCH_LAB' WHERE ProjectType IN ('PROJECT_MANHATTAN_PROJECT', 'PROJECT_OPERATION_IVY');
+
 -- 2026/02/26 wmds: fallout duration reduced to 5/5 (from 5/10)
 UPDATE WMDs SET FalloutDuration=10 WHERE WeaponType='WMD_NUCLEAR_DEVICE';
 UPDATE WMDs SET FalloutDuration=10 WHERE WeaponType='WMD_THERMONUCLEAR_DEVICE';

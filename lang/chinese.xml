@@ -3177,6 +3177,19 @@
 		<Replace Tag="LOC_PROJECT_LAUNCH_MOON_LANDING_POPUP" Language="zh_Hans_CN">
 			<Text>你已经成功完成载人登月计划！您获得相当于您 [ICON_Science] 科技值5倍的 [ICON_Culture] 文化值奖励。您向科技胜利迈向了第二步。</Text>
 		</Replace>
+		<!-- = 核项目（2026-10-14 用户需求）：曼哈顿/常春藤前置研究实验室 + 装置项目标注联机速造价 = -->
+		<Replace Tag="LOC_PROJECT_MANHATTAN_PROJECT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>允许创建核装置。此城市需要拥有研究实验室。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_OPERATION_IVY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>允许创建热核装置。此城市需要拥有研究实验室。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_BUILD_NUCLEAR_DEVICE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>为您的国家财产增加一项核装置。需要 [ICON_Resource_Uranium] 铀。维护费是14 [ICON_Gold] 金币。[NEWLINE]项目所需生产力：600（联机速）。</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_BUILD_THERMONUCLEAR_DEVICE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>为您的国家财产增加一项热核装置。需要 [ICON_Resource_Uranium] 铀。维护费是16 [ICON_Gold] 金币。[NEWLINE]项目所需生产力：850（联机速）。</Text>
+		</Replace>
 		<Replace Tag="LOC_TECH_SEASTEADS_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>奖励1点外交胜利点数。[NEWLINE]农场、牧场和渔场改良设施提供 +1 [ICON_FOOD] 食物。</Text>
 		</Replace>
