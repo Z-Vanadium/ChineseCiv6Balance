@@ -396,6 +396,11 @@ INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
     ('TECH_SANITATION', 'TECH_METAL_CASTING');
 UPDATE Boosts SET NumItems=1 WHERE TechnologyType='TECH_SANITATION';
 
+-- 2026/10/14 化学（用户需求）：**额外增加**一个前置「科学理论」（原有的 可替换部件 / 卫生设备 保留）
+--   化学现为 3 前置；注意卫生设备自身的前置已在上面改成金属铸造，科学理论则是 天文学 + 银行业。
+INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
+    ('TECH_CHEMISTRY', 'TECH_SCIENTIFIC_THEORY');
+
 -- 2026/02/26 Nuclear Fusion requires Composite
 INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
     ('TECH_NUCLEAR_FUSION', 'TECH_COMPOSITES');

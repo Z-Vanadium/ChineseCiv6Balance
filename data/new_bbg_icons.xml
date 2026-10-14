@@ -7,5 +7,13 @@
 		<Row Name="ICON_VICTORY_TRADITIONAL_DOMINATION" Atlas="ICON_ATLAS_VICTORIES" Index="3"/>
 	
 		<Row Name="ICON_GREATWORK_EUCLID"		Atlas="ICON_ATLAS_GREATWORKS"			Index="0"/>
+
+		<!-- 2026-10-14 强化堡垒（CCB_IMPROVEMENT_REINFORCED_FORT）：科技树/建造面板按 "ICON_" + 改良类型名取图标，
+		     该改良此前没有图标定义 → 科技树上显示异常。这里补定义，沿用原版「堡垒」的图标
+		     （ICON_IMPROVEMENT_FORT = ICON_ATLAS_UNIT_ACTIONS / Index 12，取自 Base\Assets\UI\Icons\Icons_UnitActions.xml）。
+		     ⚠ 一次给出三种可能的名字（引擎约定其实是 "ICON_" + 类型名；另两个是保险别名，指向同一图集格）。 -->
+		<Row Name="ICON_CCB_IMPROVEMENT_REINFORCED_FORT"			Atlas="ICON_ATLAS_UNIT_ACTIONS" Index="12"/>
+		<Row Name="ICON_IMPROVEMENT_CCB_IMPROVEMENT_REINFORCED_FORT"	Atlas="ICON_ATLAS_UNIT_ACTIONS" Index="12"/>
+		<Row Name="ICON_IMPROVEMENT_REINFORCED_FORT"				Atlas="ICON_ATLAS_UNIT_ACTIONS" Index="12"/>
   	</IconDefinitions>                                                                
 </GameInfo>  

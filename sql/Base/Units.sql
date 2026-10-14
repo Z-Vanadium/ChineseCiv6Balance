@@ -195,11 +195,14 @@ UPDATE Units SET Cost=200 WHERE UnitType='UNIT_PIKEMAN';
 UPDATE Units SET Cost=290 WHERE UnitType='UNIT_PIKE_AND_SHOT';
 
 --18/12/23 Medic to military science + reduction cost
--- 2026/10/14 医疗兵（用户需求）：解锁科技 军事学 → **卫生设备**；造价 300 不变
-UPDATE Units SET PrereqTech='TECH_SANITATION' WHERE UnitType='UNIT_MEDIC';
+-- 2026/10/14 医疗兵（用户需求）：解锁科技 **军事学**（当天先改到卫生设备、随后用户改回军事学）；造价 300 不变
+UPDATE Units SET PrereqTech='TECH_MILITARY_SCIENCE' WHERE UnitType='UNIT_MEDIC';
 UPDATE Units SET Cost=300 WHERE UnitType='UNIT_MEDIC';
 -- 2026/10/14 补给车队（用户需求）：解锁科技 内燃机 → **联合作战**；造价 450 不变
 UPDATE Units SET PrereqTech='TECH_COMBINED_ARMS' WHERE UnitType='UNIT_SUPPLY_CONVOY';
+-- 2026/10/14 攻城塔（用户需求）：升级对象 医疗兵 → **观察气球**（医疗兵不再能由攻城塔升级而来）
+--   ⚠ `UnitUpgrades` 只有 (Unit, UpgradeUnit) 两列，PK 即这两列 → 直接 UPDATE 该行；攻城锤→攻城塔 那条不动。
+UPDATE UnitUpgrades SET UpgradeUnit='UNIT_OBSERVATION_BALLOON' WHERE Unit='UNIT_SIEGE_TOWER';
 
 --19/12/23 Medic gives movement point to melee ranged and anticav
 INSERT INTO Types (Type, Kind) VALUES
