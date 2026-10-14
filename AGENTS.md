@@ -43,10 +43,11 @@ dev_script/          ← Dev utilities (Python localization updater)
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1450"> -->
 
 <!-- WIP ModID -->
-<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1300">
+<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1900">
 ```
 
 Also update `<Name>` accordingly. **WIP mod never gets uploaded.** Beta and Release use their own UUIDs.
+（当前本地 WIP = `…66e08` / **1900** / 显示名 **CCB 1.9 WIP**；2026-10-15 由 1700 /「CCB 1.7 WIP」升级；已发布的正式版 = `…66e00` / 1800 /「CCB正式版1.8」。）
 
 ## Version numbering
 

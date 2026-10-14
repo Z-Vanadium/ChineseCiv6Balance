@@ -6,10 +6,10 @@
 <!-- <Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e05" version="1505"> -->
 
 <!-- WIP ModID -->
-<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1700">
+<Mod id="8af4fe8e-5406-7d72-d9d6-a8f5d1b66e08" version="1900">
 	<Properties>
-		<Name>CCB 1.7 WIP</Name>
-		<Version>1700</Version>
+		<Name>CCB 1.9 WIP</Name>
+		<Version>1900</Version>
 		<Description>
 			中国特色平衡模组，面向联机与人机对战。
 		</Description>
