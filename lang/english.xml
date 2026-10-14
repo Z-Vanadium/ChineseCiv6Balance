@@ -4588,5 +4588,13 @@
 		<Replace Tag="LOC_FORMATION_CLASS_CCB_MILITARY_ENGINEER_NAME" Language="en_US">
 			<Text>Military Engineer</Text>
 		</Replace>
+		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_X5_TT_OFF" Language="en_US">
+			<Text>X5 multi-queue: OFF. When ON, clicking a unit/building/project in the queue (or multi-queue) adds 5 copies at once (does not apply to purchases, wonders or districts). Hold Ctrl while clicking to multi-queue temporarily.</Text>
+		</Replace>
+		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_X5_TT_ON" Language="en_US">
+			<Text>X5 multi-queue: ON. Clicking a unit/building/project in the queue (or multi-queue) adds 5 copies at once (does not apply to purchases, wonders or districts). Click again to turn off.</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

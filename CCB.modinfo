@@ -1360,6 +1360,24 @@
 				<LuaReplace>ui/replacements/mapsearchpanel_ccb.lua</LuaReplace>
 			</Properties>
 		</ReplaceUIScript>
+		<!-- 2026-10-14 用户需求：生产面板「X5 连点」开关（点一次排 5 个；不作用于购买/奇观/区域；Ctrl+点击临时连点）
+		     · productionpanel_ccb.lua = include 原版 ProductionPanel 后只覆盖 6 个"加入队列"入口 + 输入处理器
+		       （用 GetBuildInsertMode 写入的 PARAM_INSERT_MODE 自行判断是否处于队列模式，不碰原版私有 local）
+		     · ProductionPanel.xml = **同名覆盖**原版布局（523 行整份照抄），只在"滚动到 建筑/奇观/单位/项目"
+		       那排按钮后面加一个 X5 按钮（控件 ID CCBQueueX5Button） -->
+		<ReplaceUIScript id="CCB_ProductionPanel">
+			<Properties>
+				<LoadOrder>19999</LoadOrder>
+				<LuaContext>ProductionPanel</LuaContext>
+				<LuaReplace>ui/replacements/productionpanel_ccb.lua</LuaReplace>
+			</Properties>
+		</ReplaceUIScript>
+		<ImportFiles id="CCB_ProductionPanelXML">
+			<Properties>
+				<LoadOrder>19999</LoadOrder>
+			</Properties>
+			<File>ui/replacements/ProductionPanel.xml</File>
+		</ImportFiles>
 		<!--
 		<ReplaceUIScript id="productionpanel_bbg">
 			<Criteria>BBGTS_ProductionPanel_BBG_Expansion2</Criteria>
@@ -1709,6 +1727,8 @@
 		<File>ui/replacements/unitpanel_bbg.lua</File>
 		<File>ui/replacements/unitflagmanager_ccb.lua</File>
 		<File>ui/replacements/mapsearchpanel_ccb.lua</File>
+		<File>ui/replacements/productionpanel_ccb.lua</File>
+		<File>ui/replacements/ProductionPanel.xml</File>
 		<File>ui/replacements/tradesupport.lua</File>
 		<File>ui/replacements/compatibility/traderoutechooser.lua</File>
 		<File>ui/replacements/compatibility/tradeoverview.lua</File>

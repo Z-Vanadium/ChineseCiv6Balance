@@ -4394,5 +4394,13 @@
 		<Replace Tag="LOC_FORMATION_CLASS_CCB_MILITARY_ENGINEER_NAME" Language="ja_JP">
 			<Text>軍事工兵</Text>
 		</Replace>
+		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_X5_TT_OFF" Language="ja_JP">
+			<Text>X5 連続追加：オフ。オンにすると、キュー（マルチキュー）でユニット/建物/プロジェクトをクリックした際に 5 個まとめて追加します（購入・遺産・区域には適用されません）。Ctrl を押しながらのクリックで一時的に連続追加できます。</Text>
+		</Replace>
+		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_X5_TT_ON" Language="ja_JP">
+			<Text>X5 連続追加：オン。キュー（マルチキュー）でユニット/建物/プロジェクトをクリックすると 5 個まとめて追加します（購入・遺産・区域には適用されません）。もう一度押すとオフになります。</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

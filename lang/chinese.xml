@@ -9069,5 +9069,13 @@
 		<Replace Tag="LOC_FORMATION_CLASS_CCB_MILITARY_ENGINEER_NAME" Language="zh_Hans_CN">
 			<Text>军事工程师</Text>
 		</Replace>
+		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_X5_TT_OFF" Language="zh_Hans_CN">
+			<Text>X5 连点：关闭。开启后，在队列（多队列）中点击单位/建筑/项目时会连续排入 5 个（不作用于购买、奇观与区域）。按住 Ctrl 点击可临时连点。</Text>
+		</Replace>
+		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
+		<Replace Tag="LOC_CCB_QUEUE_X5_TT_ON" Language="zh_Hans_CN">
+			<Text>X5 连点：开启。在队列（多队列）中点击单位/建筑/项目会连续排入 5 个（不作用于购买、奇观与区域）。再点一次关闭。</Text>
+		</Replace>
 </LocalizedText>
 </GameData>
