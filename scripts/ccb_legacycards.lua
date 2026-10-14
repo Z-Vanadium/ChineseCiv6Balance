@@ -487,21 +487,35 @@ local function UpdateForeignFollowerYield(player)
 end
 
 -- ===========================================================================
--- 政体固有 × 传承卡基础效果 的「重复结算抵消」（方案 B，2026-09-20 用户确认）
+-- 政体固有 × 传承卡效果 的「重复结算抵消」（方案 B，2026-09-20 用户确认；2026-10-14 扩到独裁全类）
 --
 -- 问题：引擎原生"处于该政体时隐藏该政体传承卡"只覆盖 Governments.PolicyToUnlock 绑定的那张【一级卡】；
---       我们自建的二级/三级升级卡不在规则内 → 在该政体内仍可装备 → 政体固有与卡片基础同项双计：
---         寡头 +4→+8 战斗力｜古典共和 宜居/住房 +1→+2｜独裁 粮/锤 +1→+2
--- 修法：Lua 每回合判断「当前处于该线政体 且 槽里有该线传承卡」→ 挂【负向抵消】扣掉重复那一份；
+--       我们自建的二级/三级升级卡不在规则内 → 在该政体内仍可装备 → 政体固有与卡片效果同项双计：
+--         寡头 +4→+8 战斗力｜古典共和 宜居/住房 +1→+2｜独裁 粮/锤 +1→+2、宫殿/广场区/外交区/其中的建筑 各 +1→+2
+-- 修法：Lua 每回合判断「当前处于该线政体 且 槽里装着该线的 CCB 升级卡」→ 挂【负向抵消】扣掉重复那一份；
 --       状态解除 → 挂【正向抵消】还原（引擎无 detach → 正负池对冲，净额恒为"只算一次"）。
---       升级卡的其它附加效果（+1 移速 / 海军经验 / T3 方向效果）不在抵消范围，照常生效。
--- 口径：抵消范围必须等于"两份效果真正重叠的范围"（详见 LegacyCards.sql §6 注释）
+--       升级卡的其它附加效果（移速 / 海军经验 / T3 方向效果 / 影响力 / 信仰% / 金币%）不在抵消范围，照常生效。
+-- 口径：抵消范围必须等于"两份效果真正重叠的范围"（详见 LegacyCards.sql §6 与 Policies_XP1_or_XP2.sql §5.2.7）
 --   · 寡头   → 同兵种（近战/抗骑/海军近战）+ ±4 战斗力能力
 --   · 共和   → 按【政体口径】CITY_HAS_1_SPECIALTY_DISTRICT（卡片是全城市，政体只给有区域的城市）
---   · 独裁   → 按【卡片口径】CCB_REQSET_AUTOCRACY_MONUMENT_SPECIALTY
+--   · 独裁   → ① 纪念碑粮/锤按【卡片口径】CCB_REQSET_AUTOCRACY_MONUMENT_SPECIALTY（既有 2 条）
+--              ② 2026-10-14 新增 8 类 × 6 产出：宫殿 / 市政广场区本身 / 外交区本身 /
+--                 市政广场三建筑（GOVT1/2/3）/ 领事馆 / 大法官厅 —— id 由下方两张表拼出，
+--                 必须与 Policies_XP1_or_XP2.sql §5.2.7 用 CROSS JOIN 生成的 id 完全一致
 -- 当前政体读取：player:GetGovernment() 不存在（见本文件顶部 API 备注）→ 用 PROP_CURRENT_GOVT
 -- （由 Events.GovernmentChanged 维护；政体变更当场也会调用本函数，避免多算一整回合）
 -- ===========================================================================
+-- 独裁线抵消：8 类 × 6 产出（+ 既有纪念碑粮/锤 2 条）
+local AUT_OFFSET_CATS = { 'PALACE', 'PLAZA', 'DQ', 'GOVT1', 'GOVT2', 'GOVT3', 'CONSULATE', 'CHANCERY' };
+local AUT_OFFSET_YIELDS = { 'YIELD_FOOD', 'YIELD_PRODUCTION', 'YIELD_GOLD', 'YIELD_SCIENCE', 'YIELD_CULTURE', 'YIELD_FAITH' };
+local AUT_OFFSET_NEG = { 'CCB_AUT_OFFSET_NEG_FOOD', 'CCB_AUT_OFFSET_NEG_PROD' };
+local AUT_OFFSET_POS = { 'CCB_AUT_OFFSET_POS_FOOD', 'CCB_AUT_OFFSET_POS_PROD' };
+for _, cat in ipairs(AUT_OFFSET_CATS) do
+	for _, y in ipairs(AUT_OFFSET_YIELDS) do
+		table.insert(AUT_OFFSET_NEG, 'CCB_AUT_OFFSET_NEG_' .. cat .. '_' .. y);
+		table.insert(AUT_OFFSET_POS, 'CCB_AUT_OFFSET_POS_' .. cat .. '_' .. y);
+	end
+end
 local OFFSET_LINES = {
 	-- 寡头线已于 2026-09-21 移出：运行时 AttachModifierByID 挂"授予能力"无效（实测 +8 不变），
 	-- 改由数据层解决——卡片直接授予政体那个能力 ABILITY_OLIGARCHY_MELEE_BUFF（见 LegacyCards.sql §1.1）。
@@ -509,19 +523,24 @@ local OFFSET_LINES = {
 	  neg = { 'CCB_REP_OFFSET_NEG_AMENITY', 'CCB_REP_OFFSET_NEG_HOUSING' },
 	  pos = { 'CCB_REP_OFFSET_POS_AMENITY', 'CCB_REP_OFFSET_POS_HOUSING' } },
 	{ prop = 'CCB_LEGACY_OFF_NET_AUT', govt = 'GOVERNMENT_AUTOCRACY', tag = 'AUTOCRACY',
-	  neg = { 'CCB_AUT_OFFSET_NEG_FOOD', 'CCB_AUT_OFFSET_NEG_PROD' },
-	  pos = { 'CCB_AUT_OFFSET_POS_FOOD', 'CCB_AUT_OFFSET_POS_PROD' } },
+	  neg = AUT_OFFSET_NEG, pos = AUT_OFFSET_POS },
 };
 
--- 政策槽里是否装了该线的传承卡（一级/二级/三级都算，卡名含该线关键字）
-local function HasLineCardSlotted(culture, tag)
+-- 政策槽里是否装了【该线的 CCB 升级卡】（二级/三级自建卡：id 以 POLICY_CCB_GOV_ 开头且含该线关键字）
+-- ⚠ 不能用"卡名含该线关键字"来判定：一级传承卡 POLICY_GOV_AUTOCRACY / POLICY_GOV_CLASSICAL_REPUBLIC
+--   名字里也含关键字，而它在本政体内会被引擎隐藏 → 若把一级卡也算进来，会在"政体内只装一级卡"时多扣一份
+local function HasUpgradeCardSlotted(culture, tag)
 	if culture == nil or culture.GetNumPolicySlots == nil or culture.GetSlotPolicy == nil then return false; end
 	local nSlots = culture:GetNumPolicySlots();
 	for i = 0, nSlots - 1 do
 		local h = culture:GetSlotPolicy(i);
 		if h ~= nil and h ~= -1 then
 			local info = GameInfo.Policies[h];
-			if info ~= nil and string.find(info.PolicyType, tag, 1, true) ~= nil then return true; end
+			if info ~= nil and info.PolicyType ~= nil
+				and string.find(info.PolicyType, 'POLICY_CCB_GOV_', 1, true) == 1
+				and string.find(info.PolicyType, tag, 1, true) ~= nil then
+				return true;
+			end
 		end
 	end
 	return false;
@@ -534,7 +553,7 @@ function UpdateGovernmentDoubleOffset(player)
 	local curGovt = player:GetProperty(PROP_CURRENT_GOVT);
 	for _, line in ipairs(OFFSET_LINES) do
 		local desired = 0;
-		if curGovt == line.govt and HasLineCardSlotted(culture, line.tag) then desired = -1; end
+		if curGovt == line.govt and HasUpgradeCardSlotted(culture, line.tag) then desired = -1; end
 		local net = PropNum(player, line.prop);
 		if desired ~= net then
 			local steps = math.abs(desired - net);
@@ -647,3 +666,4 @@ function CountEnvoys(player)
 end
 
 print("[CCB] Legacy Cards upgrade system (event-driven) loaded.");
+print("[CCB] autocracy double-offset ids: " .. tostring(#AUT_OFFSET_NEG) .. " neg / " .. tostring(#AUT_OFFSET_POS) .. " pos (2 monument + 8 categories x 6 yields)");
