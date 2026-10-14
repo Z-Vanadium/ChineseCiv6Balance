@@ -3317,7 +3317,7 @@
 		</Replace>
 		<!-- = Discipline = -->
 		<Replace Tag="LOC_POLICY_DISCIPLINE_DESCRIPTION" Language="en_US">
-			<Text>+10 [ICON_STRENGTH] Unit Combat Strength when fighting [ICON_BARBARIAN] Barbarians.</Text>
+			<Text>+10 [ICON_STRENGTH] Unit Combat Strength when fighting [ICON_BARBARIAN] Barbarians.[NEWLINE]+1 Sight range for recon units.</Text>
 		</Replace>
 		<!-- = Drill Manuals = -->
 		<Replace Tag="LOC_POLICY_DRILL_MANUALS_DESCRIPTION" Language="en_US">
@@ -4452,6 +4452,12 @@
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_BUFF_MODIFIER_DESC" Language="en_US"><Text>From Oligarchy Legacy: +4 [ICON_STRENGTH] Combat Strength for melee, naval melee and anti-cavalry units.</Text></Replace>
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_DESC" Language="en_US"><Text>From Oligarchy Legacy: +4 [ICON_STRENGTH] Combat Strength for melee, naval melee and anti-cavalry units.</Text></Replace>
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_NAME" Language="en_US"><Text>Oligarchy Legacy</Text></Replace>
+		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_NAME" Language="en_US">
+			<Text>Discipline</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC" Language="en_US">
+			<Text>From the Discipline policy card: +1 Sight range for recon units.</Text>
+		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DESC" Language="en_US"><Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+25% Influence Point gain.[NEWLINE]+1 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith per 2 Envoys.[NEWLINE]Envoys provide at most 10 [ICON_SCIENCE] Science and 10 [ICON_FAITH] Faith.</Text></Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_NAME" Language="en_US"><Text>Autocracy Legacy - Diplomacy</Text></Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_FAITH_DESC" Language="en_US"><Text>In a city with a Monument, the Palace, Government Plaza, Diplomatic Quarter and their buildings each grant +1 of all yields.[NEWLINE]Cities with a Monument and a specialty district +1 [ICON_FOOD] Food, +1 [ICON_PRODUCTION] Production.[NEWLINE]+12% [ICON_FAITH] Faith per turn.[NEWLINE]+0.5 [ICON_CULTURE] Culture and +0.5 [ICON_FAITH] Faith per foreign follower (requires founded religion).[NEWLINE]Missionaries and Apostles +1 [ICON_MOVEMENT] Movement.</Text></Replace>

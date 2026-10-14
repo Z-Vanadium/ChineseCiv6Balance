@@ -4191,5 +4191,11 @@
 		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="ko_KR">
 			<Text>[COLOR_RED]TO_TRANSLATE: This unit ignores terrain movement costs.</Text>
 		</Replace>
+		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_NAME" Language="ko_KR">
+			<Text>규율</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC" Language="ko_KR">
+			<Text>[COLOR_RED]TO_TRANSLATE: From the Discipline policy card: +1 Sight range for recon units.</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

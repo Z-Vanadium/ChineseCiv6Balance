@@ -9,6 +9,39 @@
 -- Buff Discipline +5 -> +10
 UPDATE ModifierArguments SET Value='10' WHERE ModifierId='DISCIPLINE_BARBARIANCOMBAT' AND Name='Amount';
 
+--==============================================================================================
+-- 2026/10/14 纪律（POLICY_DISCIPLINE · 法典解锁 · 军事槽）：在原有效果上新增「侦查单位 +1 视野范围」
+--   链路 = 政策卡授予单位能力（与 §1.1 寡头传承，以及原版 POLICY_TWILIGHT_VALOR / POLICY_INQUISITION /
+--   POLICY_RELIGIOUS_ORDERS / POLICY_CYBER_WARFARE / POLICY_FINEST_HOUR 同款）：
+--     卡片 → MODIFIER_PLAYER_UNITS_GRANT_ABILITY → 单位能力（Inactive=1，TypeTags=CLASS_RECON）
+--          → 能力挂 MODIFIER_PLAYER_UNIT_ADJUST_SIGHT（Amount=1）
+--   ⚠ 视野修正器 MODIFIER_PLAYER_UNIT_ADJUST_SIGHT 全库只由【单位能力 / 晋升】承载（无"直接挂政策卡"先例）
+--     → 不试直挂，直接走本工程已实测通过的授予能力链路（寡头 +4，用户 2026-09-21 复测通过）。
+--   ⚠ Inactive 必须 =1（原版寡头同款）：Inactive=0 会让带该 TypeTags 的兵种【天生常驻】此能力
+--     （与卡无关、卸卡不消失）—— 2026-09 在寡头那条上实测过该 BUG。
+--   口径 CLASS_RECON 覆盖 8 个单位：侦察兵 / 游骑兵 / 特种部队 / 散兵 + 克里、印加、图勒、苏格兰的侦查类特色单位
+--     （用户 2026-10-14 选定"整条侦查线"，而非仅侦察兵本体）。
+--==============================================================================================
+INSERT INTO Types (Type, Kind) VALUES
+('ABILITY_CCB_DISCIPLINE_RECON_SIGHT', 'KIND_ABILITY');
+INSERT INTO TypeTags (Type, Tag) VALUES
+('ABILITY_CCB_DISCIPLINE_RECON_SIGHT', 'CLASS_RECON');
+INSERT INTO UnitAbilities (UnitAbilityType, Name, Description, Inactive) VALUES
+('ABILITY_CCB_DISCIPLINE_RECON_SIGHT', 'LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_NAME', 'LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC', 1);
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+('CCB_DISCIPLINE_RECON_SIGHT', 'MODIFIER_PLAYER_UNIT_ADJUST_SIGHT'),
+('CCB_DISCIPLINE_GRANT_RECON_SIGHT', 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+('CCB_DISCIPLINE_RECON_SIGHT', 'Amount', 1),
+('CCB_DISCIPLINE_GRANT_RECON_SIGHT', 'AbilityType', 'ABILITY_CCB_DISCIPLINE_RECON_SIGHT');
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
+('ABILITY_CCB_DISCIPLINE_RECON_SIGHT', 'CCB_DISCIPLINE_RECON_SIGHT');
+-- 单位面板明细行（原版同款 ModifierStrings Preview 钩子，寡头那条同款写法）
+INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
+('CCB_DISCIPLINE_RECON_SIGHT', 'Preview', 'LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC');
+INSERT INTO PolicyModifiers (PolicyType, ModifierId) VALUES
+('POLICY_DISCIPLINE', 'CCB_DISCIPLINE_GRANT_RECON_SIGHT');
+
 -- Bastillon ""bugfix"" (Value is doubled, so put 2*+3 instead of 2*+5)
 UPDATE ModifierArguments SET Value='3' WHERE ModifierId='BASTIONS_RANGEDSTRIKE' AND Name='Amount';
 -- 02/07/24 Bastion ranged strength removed

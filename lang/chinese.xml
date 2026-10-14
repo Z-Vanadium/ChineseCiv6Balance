@@ -1655,7 +1655,7 @@
 			<Text>现代抗骑兵类单位。+1 [ICON_MOVEMENT] 移动力。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MODERN_AT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>原子能时代的抗骑兵类单位。+1 [ICON_MOVEMENT] 移动力。</Text>
+			<Text>原子能时代的抗骑兵类单位。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MACHINE_GUN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>原子能时代远程单位。[NEWLINE]{LOC_ABILITY_CCB_MACHINE_GUN_RANGE_LATE_DESC}</Text>
@@ -3354,7 +3354,7 @@
 			<Text>商业中心中的建筑将产出额外的 [ICON_Gold] 金币值：如城市 [ICON_CITIZEN] 人口大于等于13点，+50%金币值；如区域拥有至少+4相邻加成，+50%金币值。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_DISCIPLINE_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>同 [ICON_BARBARIAN] 蛮族战斗时，+10 [ICON_Strength] 单位战斗力。</Text>
+			<Text>同 [ICON_BARBARIAN] 蛮族战斗时，+10 [ICON_Strength] 单位战斗力。[NEWLINE]侦查单位+1视野范围。</Text>
 		</Replace>
 		<Replace Tag="LOC_POLICY_LIMES_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>为防御建筑+50% [ICON_Production] 生产力。</Text>
@@ -8760,6 +8760,12 @@
 		</Replace>
 <Replace Tag="LOC_CCB_ABILITY_OLIGARCHY_LEGACY_BUFF_NAME" Language="zh_Hans_CN">
 			<Text>寡头传承</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_NAME" Language="zh_Hans_CN">
+			<Text>纪律</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_ABILITY_DISCIPLINE_RECON_SIGHT_DESC" Language="zh_Hans_CN">
+			<Text>来自「纪律」政策卡：侦查单位+1视野范围。</Text>
 		</Replace>
 <Replace Tag="LOC_CCB_POLICY_AUTOCRACY_DIPLO_DESC" Language="zh_Hans_CN">
 			<Text>拥有纪念碑的城市，宫殿、市政广场、外交区以及其中的建筑，各+1 全产出。[NEWLINE]拥有纪念碑和特色区域的城市+1 [ICON_Food] 粮食、+1 [ICON_Production] 生产力。[NEWLINE]+25%影响力点数获取。[NEWLINE]城邦中每2个使者提供+1 [ICON_Science] 科技、+1 [ICON_Faith] 信仰。[NEWLINE]使者最多提供10 [ICON_Science] 科技、10 [ICON_Faith] 信仰。</Text>
