@@ -93,12 +93,12 @@
                       </Button>
 
                       <!-- CCB 2026-10-14（用户需求）：下面两个按钮接在「滚动到 建筑/奇观/单位/项目」这排后面。
-                           ① CCBQueueX5Button「X5」= 连点开关：激活后点一次队列项目 = 连续排入 5 个
+                           ① CCBQueueMultiButton「X4」= 连点开关：激活后点一次队列项目 = 连续排入 4 个
                               （只在队列/多队列模式下生效；不作用于购买、奇观与区域——后两者需放置，保持 1 次）。
                            ② CCBClearQueueButton「清空」= 清掉该城市**正在排队**的全部项目（正在生产的那个保留）；
                               队列为空时按钮为禁用态。双击不做特殊处理，单击即执行。
                            两者的回调/高亮/禁用态都在 ui/replacements/productionpanel_ccb.lua 里维护。 -->
-                      <Button	ID="CCBQueueX5Button" Size="40,40"  Texture="LaunchBar_Hook_ButtonSmall" Style="ButtonNormalText" String="X5" TextOffset="0,1" UseSelectedTextures="1" ToolTip="LOC_CCB_QUEUE_X5_TT_OFF"/>
+                      <Button	ID="CCBQueueMultiButton" Size="40,40"  Texture="LaunchBar_Hook_ButtonSmall" Style="ButtonNormalText" String="LOC_CCB_QUEUE_MULTI_BTN" TextOffset="0,1" UseSelectedTextures="1" ToolTip="LOC_CCB_QUEUE_MULTI_TT_OFF"/>
                       <Button	ID="CCBClearQueueButton" Size="40,40"  Texture="LaunchBar_Hook_ButtonSmall" Style="ButtonNormalText" String="LOC_CCB_QUEUE_CLEAR_BTN" TextOffset="0,1" ToolTip="LOC_CCB_QUEUE_CLEAR_TT"/>
                     </Stack>
                   </Container>

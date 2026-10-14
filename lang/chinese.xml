@@ -3180,13 +3180,9 @@
 		<Replace Tag="LOC_PROJECT_LAUNCH_MOON_LANDING_POPUP" Language="zh_Hans_CN">
 			<Text>你已经成功完成载人登月计划！您获得相当于您 [ICON_Science] 科技值5倍的 [ICON_Culture] 文化值奖励。您向科技胜利迈向了第二步。</Text>
 		</Replace>
-		<!-- = 核项目（2026-10-14 用户需求）：曼哈顿/常春藤前置研究实验室 + 装置项目标注联机速造价 = -->
-		<Replace Tag="LOC_PROJECT_MANHATTAN_PROJECT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>允许创建核装置。此城市需要拥有研究实验室。</Text>
-		</Replace>
-		<Replace Tag="LOC_PROJECT_OPERATION_IVY_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>允许创建热核装置。此城市需要拥有研究实验室。</Text>
-		</Replace>
+		<!-- = 核装置项目（2026-10-14 用户需求）：标注联机速造价。
+		     ⚠ 曼哈顿/常春藤的"需要研究实验室"文案已于同日稍后撤回（SQL 里的 RequiredBuilding 也一并删除），
+		        这两条描述现在走原版文本。 = -->
 		<Replace Tag="LOC_PROJECT_BUILD_NUCLEAR_DEVICE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>为您的国家财产增加一项核装置。需要 [ICON_Resource_Uranium] 铀。维护费是14 [ICON_Gold] 金币。[NEWLINE]项目所需生产力：600（联机速）。</Text>
 		</Replace>
@@ -9069,14 +9065,6 @@
 		<Replace Tag="LOC_FORMATION_CLASS_CCB_MILITARY_ENGINEER_NAME" Language="zh_Hans_CN">
 			<Text>军事工程师</Text>
 		</Replace>
-		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
-		<Replace Tag="LOC_CCB_QUEUE_X5_TT_OFF" Language="zh_Hans_CN">
-			<Text>X5 连点：关闭。开启后，在队列（多队列）中点击单位/建筑/项目时会连续排入 5 个（不作用于购买、奇观与区域）。按住 Ctrl 点击可临时连点。</Text>
-		</Replace>
-		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
-		<Replace Tag="LOC_CCB_QUEUE_X5_TT_ON" Language="zh_Hans_CN">
-			<Text>X5 连点：开启。在队列（多队列）中点击单位/建筑/项目会连续排入 5 个（不作用于购买、奇观与区域）。再点一次关闭。</Text>
-		</Replace>
 		<Replace Tag="LOC_DISTRICT_DIPLOMATIC_QUARTER_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>每有一个同盟，您的文明每回合获得 +1 [ICON_FAVOR] 外交支持。如建在市中心旁，则+1 [ICON_ENVOY] 使者。敌方间谍将此区域和相邻区域当做目标时，其效果将降低2级。文明中一次仅限建造一座此区域。</Text>
 		</Replace>
@@ -9093,6 +9081,18 @@
 		<!-- = CCB 生产面板「清空队列」按钮（2026-10-14） = -->
 		<Replace Tag="LOC_CCB_QUEUE_CLEAR_TT" Language="zh_Hans_CN">
 			<Text>清除该城市正在排队的全部项目（正在生产的那个保留）。队列为空时此按钮不可用。</Text>
+		</Replace>
+		<!-- = CCB 生产面板「连点」按钮（2026-10-14；口径 5 → 4） = -->
+		<Replace Tag="LOC_CCB_QUEUE_MULTI_BTN" Language="zh_Hans_CN">
+			<Text>X4</Text>
+		</Replace>
+		<!-- = CCB 生产面板「连点」按钮（2026-10-14；口径 5 → 4） = -->
+		<Replace Tag="LOC_CCB_QUEUE_MULTI_TT_OFF" Language="zh_Hans_CN">
+			<Text>X4 连点：关闭。开启后，在队列（多队列）中点击单位/建筑/项目时会连续排入 4 个（不作用于购买、奇观与区域）。按住 Ctrl 点击可临时连点。</Text>
+		</Replace>
+		<!-- = CCB 生产面板「连点」按钮（2026-10-14；口径 5 → 4） = -->
+		<Replace Tag="LOC_CCB_QUEUE_MULTI_TT_ON" Language="zh_Hans_CN">
+			<Text>X4 连点：开启。在队列（多队列）中点击单位/建筑/项目会连续排入 4 个（不作用于购买、奇观与区域）。再点一次关闭。</Text>
 		</Replace>
 </LocalizedText>
 </GameData>

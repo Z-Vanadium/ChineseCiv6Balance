@@ -3178,13 +3178,9 @@
 		<Replace Tag="LOC_PROJECT_LAUNCH_MOON_LANDING_POPUP" Language="en_US">
 			<Text>You successfully land a person on the moon! Grants a [ICON_CULTURE] Culture bonus equal to 5 times your [ICON_SCIENCE] Science per turn, and marks the second step towards the Science Victory.</Text>
 		</Replace>
-		<!-- = Nuclear projects (2026-10-14): Research Lab requirement + Online-speed production cost = -->
-		<Replace Tag="LOC_PROJECT_MANHATTAN_PROJECT_DESCRIPTION" Language="en_US">
-			<Text>Allows for the creation of Nuclear Devices. This city must have a Research Lab.</Text>
-		</Replace>
-		<Replace Tag="LOC_PROJECT_OPERATION_IVY_DESCRIPTION" Language="en_US">
-			<Text>Allows for the creation of Thermonuclear Devices. This city must have a Research Lab.</Text>
-		</Replace>
+		<!-- = Nuclear device projects (2026-10-14): Online-speed production cost.
+		     NOTE: the Research Lab requirement text was reverted the same day (the SQL RequiredBuilding too),
+		     so those two descriptions now come from vanilla. = -->
 		<Replace Tag="LOC_PROJECT_BUILD_NUCLEAR_DEVICE_DESCRIPTION" Language="en_US">
 			<Text>Adds one Nuclear Device to your nation's inventory. Requires [ICON_Resource_Uranium] Uranium. Maintenance is 14 [ICON_Gold] Gold.[NEWLINE]Production cost: 600 (Online speed).</Text>
 		</Replace>
@@ -4588,14 +4584,6 @@
 		<Replace Tag="LOC_FORMATION_CLASS_CCB_MILITARY_ENGINEER_NAME" Language="en_US">
 			<Text>Military Engineer</Text>
 		</Replace>
-		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
-		<Replace Tag="LOC_CCB_QUEUE_X5_TT_OFF" Language="en_US">
-			<Text>X5 multi-queue: OFF. When ON, clicking a unit/building/project in the queue (or multi-queue) adds 5 copies at once (does not apply to purchases, wonders or districts). Hold Ctrl while clicking to multi-queue temporarily.</Text>
-		</Replace>
-		<!-- = CCB 生产面板 X5 连点按钮（2026-10-14） = -->
-		<Replace Tag="LOC_CCB_QUEUE_X5_TT_ON" Language="en_US">
-			<Text>X5 multi-queue: ON. Clicking a unit/building/project in the queue (or multi-queue) adds 5 copies at once (does not apply to purchases, wonders or districts). Click again to turn off.</Text>
-		</Replace>
 		<Replace Tag="LOC_DISTRICT_DIPLOMATIC_QUARTER_EXPANSION2_DESCRIPTION" Language="en_US">
 			<Text>Your civilization receives +1 [ICON_FAVOR] Diplomatic Favor per turn for each Alliance you have. +1 [ICON_ENVOY] Envoy if built next to the city center. Enemy Spies operate at 2 levels below normal targeting this district and adjacent districts. Only 1 can exist in your empire at a time.</Text>
 		</Replace>
@@ -4612,6 +4600,18 @@
 		<!-- = CCB 生产面板「清空队列」按钮（2026-10-14） = -->
 		<Replace Tag="LOC_CCB_QUEUE_CLEAR_TT" Language="en_US">
 			<Text>Clear all items queued in this city (the item currently in production is kept). Disabled while the queue is empty.</Text>
+		</Replace>
+		<!-- = CCB 生产面板「连点」按钮（2026-10-14；口径 5 → 4） = -->
+		<Replace Tag="LOC_CCB_QUEUE_MULTI_BTN" Language="en_US">
+			<Text>X4</Text>
+		</Replace>
+		<!-- = CCB 生产面板「连点」按钮（2026-10-14；口径 5 → 4） = -->
+		<Replace Tag="LOC_CCB_QUEUE_MULTI_TT_OFF" Language="en_US">
+			<Text>X4 multi-queue: OFF. When ON, clicking a unit/building/project in the queue (or multi-queue) adds 4 copies at once (does not apply to purchases, wonders or districts). Hold Ctrl while clicking to multi-queue temporarily.</Text>
+		</Replace>
+		<!-- = CCB 生产面板「连点」按钮（2026-10-14；口径 5 → 4） = -->
+		<Replace Tag="LOC_CCB_QUEUE_MULTI_TT_ON" Language="en_US">
+			<Text>X4 multi-queue: ON. Clicking a unit/building/project in the queue (or multi-queue) adds 4 copies at once (does not apply to purchases, wonders or districts). Click again to turn off.</Text>
 		</Replace>
 </LocalizedText>
 </GameData>
