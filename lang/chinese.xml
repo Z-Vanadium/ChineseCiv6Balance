@@ -9054,7 +9054,7 @@
 			<Text>强化堡垒</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_IMPROVEMENT_REINFORCED_FORT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>进驻单位+4 [ICON_Strength] 防御力、+1[ICON_VISIBILITY] 视野，并自动获得两回合驻扎加成。位于其中的 [ICON_Range] 远程与攻城单位拥有最高射击高度：计算射击视线时无视地形与地貌的阻挡（山脉单元格仍然阻挡）。研究「弹道学」后取代堡垒。可直接修建在树林、雨林与人工林上（不砍伐）。</Text>
+			<Text>进驻单位+4 [ICON_Strength] 防御力、+1视野，并自动获得两回合驻扎加成。位于其中的 [ICON_Range] 远程与攻城单位拥有最高射击高度：计算射击视线时无视地形与地貌的阻挡（山脉单元格仍然阻挡）。研究「弹道学」后取代堡垒。可直接修建在树林、雨林与人工林上。</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_NAME" Language="zh_Hans_CN">
 			<Text>最高射击高度</Text>

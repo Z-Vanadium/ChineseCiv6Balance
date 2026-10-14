@@ -4422,5 +4422,17 @@
 		<Replace Tag="LOC_CCB_QUEUE_CLEAR_TT" Language="ja_JP">
 			<Text>この都市の待機中のキューをすべて削除します（生産中の項目は残ります）。キューが空のときは使用できません。</Text>
 		</Replace>
+		<Replace Tag="LOC_CCB_IMPROVEMENT_REINFORCED_FORT_NAME" Language="ja_JP">
+			<Text>強化要塞</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_IMPROVEMENT_REINFORCED_FORT_DESCRIPTION" Language="ja_JP">
+			<Text>駐留ユニットは防御力+4 [ICON_Strength]、視界+1、さらに2ターン分の防御陣地効果を自動的に得る。このタイル上の [ICON_Range] 遠隔・攻城ユニットは最高射点を得る：攻撃時の視線判定で地形と地形物の遮蔽を無視する（山岳は依然として遮る）。「弾道学」の研究後、要塞に取って代わる。森林・熱帯雨林・人工林の上に直接建設できる。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_NAME" Language="ja_JP">
+			<Text>最高射点</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_DESC" Language="ja_JP">
+			<Text>強化要塞の上：遠隔攻撃の視線判定で地形と地形物の遮蔽を無視する（山岳は除く）。</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

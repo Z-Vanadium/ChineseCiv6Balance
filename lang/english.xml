@@ -4573,7 +4573,7 @@
 			<Text>Reinforced Fort</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_IMPROVEMENT_REINFORCED_FORT_DESCRIPTION" Language="en_US">
-			<Text>Units occupying it receive +4 [ICON_Strength] Combat Strength and +1 [ICON_VISIBILITY] Sight, and automatically gain two turns of fortification. [ICON_Range] Ranged and Siege units on this tile hold the highest ground: they ignore terrain and features when determining line of sight for their attacks (Mountains still block). Replaces the Fort once Ballistics is researched. Can be built directly on Woods, Rainforest and Planted Forest without removing them.</Text>
+			<Text>Units occupying it receive +4 [ICON_Strength] Combat Strength and +1 Sight, and automatically gain two turns of fortification. [ICON_Range] Ranged and Siege units on this tile hold the highest ground: they ignore terrain and features when determining line of sight for their attacks (Mountains still block). Replaces the Fort once Ballistics is researched. Can be built directly on Woods, Rainforest and Planted Forest.</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_NAME" Language="en_US">
 			<Text>High Ground Fire</Text>
