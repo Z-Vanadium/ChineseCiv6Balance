@@ -1138,7 +1138,10 @@
 		<!-- CCB 人工林美术（2026-09-19 第二步）：ModBuddy + AssetEditor 派生并 Cook 出的美术依赖包
 		     ArtDefs/Clutter.artdef  = 新 ClutterSet CLUTTER_CCB_PLANTED_FOREST（同一批松树资产，改排列与大小）
 		     ArtDefs/Features.artdef = 新特征条目 FEATURE_CCB_PLANTED_FOREST，其 Clutter 指向新 set
-		     ⚠ 由 CCB_PlantedForestArt 工程 Cook 产出；调整美术需回该工程重新 Cook 再覆盖本 .dep -->
+		     ⚠ 由 CCB_PlantedForestArt 工程 Cook 产出；调整美术需回该工程重新 Cook 再覆盖本 .dep
+		     2026-10-14 追加：本 .dep 的 `Improvements` consumer 现在也声明 ArtDefs/Improvements.artdef
+		     （= 强化堡垒 CCB_IMPROVEMENT_REINFORCED_FORT 的美术条目，整段照抄原版 IMPROVEMENT_FORT、
+		       模型用原版 LM_FORT → 引用原版现成资产，**无需重新 Cook**） -->
 		<UpdateArt id="CCB_PlantedForestArt">
 			<Properties>
 				<LoadOrder>11615</LoadOrder>
@@ -1738,6 +1741,7 @@
 		<File>ArtDefs/Clutter.artdef</File>
 		<File>ArtDefs/Features.artdef</File>
 		<File>ArtDefs/StrategicView.artdef</File>
+		<File>ArtDefs/Improvements.artdef</File>
 		<File>CCB_PlantedForestArt.dep</File>
 	</Files>
 </Mod>

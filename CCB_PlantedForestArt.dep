@@ -255,7 +255,9 @@
 		</Element>
 		<Element>
 			<ConsumerName text="Improvements"/>
-			<ArtDefDependencyPaths/>
+			<ArtDefDependencyPaths>
+				<Element text="Improvements.artdef"/>
+			</ArtDefDependencyPaths>
 			<LibraryDependencies/>
 			<LoadsLibraries>false</LoadsLibraries>
 		</Element>
@@ -392,6 +394,10 @@
 			<ArtDefDependencyPaths>
 				<Element text="Clutter.artdef"/>
 			</ArtDefDependencyPaths>
+		</Element>
+		<Element>
+			<ArtDefPath text="Improvements.artdef"/>
+			<ArtDefDependencyPaths/>
 		</Element>
 	</ArtDefDependencies>
 	<LibraryDependencies>

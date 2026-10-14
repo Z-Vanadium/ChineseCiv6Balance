@@ -1804,7 +1804,7 @@
 			<Text>中世纪时代的强力重骑兵单位。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MILITARY_ENGINEER_ALT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>古典时代支援单位。可建造道路、铁路、堡垒、强化堡垒、机场、导弹发射井和穿山隧道。其中一次建造次数也可用于完成20%的运河、水坝或水渠区域，或50%的防洪堤建筑。</Text>
+			<Text>古典时代支援单位，需要所在城市拥有兵营或马厩。可建造道路、铁路、堡垒、机场、导弹发射井和穿山隧道（研究「弹道学」后，堡垒由强化堡垒取代）。其中一次建造次数也可用于完成20%的运河、水坝或水渠区域，或50%的防洪堤建筑。</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_TANK_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>现代时代的快速重骑兵单位，无视控制区。在无树林、雨林或丘陵的平坦单元格上开始回合时获得+1 [ICON_MOVEMENT] 移动力。{LOC_ABILITY_CCB_RANGED_DEFENSE_DESC}</Text>
@@ -2315,7 +2315,7 @@
 			<Text>解锁建造者建造滑雪场的能力。[NEWLINE][NEWLINE]+4 [ICON_Tourism] 旅游业绩。提供1点 [ICON_AMENITIES] 宜居度。只能建在山脉上。无法与另一座滑雪场相邻。无法被掠夺、改良或移除。</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_FORT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>进驻单位+4 [ICON_Strength] 防御力、+1视野，并自动获得两回合驻扎加成。</Text>
+			<Text>进驻单位+4 [ICON_Strength] 防御力、+1视野，并自动获得两回合驻扎加成。研究「弹道学」后由强化堡垒取代。</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_LUMBER_MILL_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>解锁建造者建造伐木场的能力。[NEWLINE][NEWLINE]+2 [ICON_PRODUCTION] 生产力。研究"弹道学"后+1 [ICON_PRODUCTION] 生产力，研究"合成材料"后再+1 [ICON_PRODUCTION] 生产力。仅能建造在树林单元格上，或在研究"重商主义"后建造在雨林单元格上。</Text>
@@ -9051,7 +9051,7 @@
 			<Text>强化堡垒</Text>
 		</Replace>
 		<Replace Tag="LOC_CCB_IMPROVEMENT_REINFORCED_FORT_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>进驻单位+4 [ICON_Strength] 防御力、+1[ICON_VISIBILITY] 视野，并自动获得两回合驻扎加成。位于其中的 [ICON_Range] 远程与攻城单位拥有最高射击高度：计算射击视线时无视地形与地貌的阻挡（山脉单元格仍然阻挡）。</Text>
+			<Text>进驻单位+4 [ICON_Strength] 防御力、+1[ICON_VISIBILITY] 视野，并自动获得两回合驻扎加成。位于其中的 [ICON_Range] 远程与攻城单位拥有最高射击高度：计算射击视线时无视地形与地貌的阻挡（山脉单元格仍然阻挡）。研究「弹道学」后取代堡垒。可直接修建在树林、雨林与人工林上（不砍伐）。</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_NAME" Language="zh_Hans_CN">
 			<Text>最高射击高度</Text>

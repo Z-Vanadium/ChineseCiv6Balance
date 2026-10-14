@@ -2969,7 +2969,7 @@
 			<Text>Desbloqueia a habilidade de Construtor que permite construir uma central geotérmica.[NEWLINE][NEWLINE][ICON_PRODUCTION] Produção +2, [ICON_SCIENCE] Ciência +1 e [ICON_POWER] Eletricidade +3. [ICON_PRODUCTION] Produção +1, [ICON_SCIENCE] Ciência +1 e [ICON_POWER] Eletricidade +3 com Materiais Sintéticos. Deve ser construída em uma fenda geotérmica.</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_FORT_DESCRIPTION" Language="pt_BR">
-			<Text>A unidade ocupante ganha automaticamente 2 turnos de fortificação, +1 Visão e +4 [ICON_STRENGTH] Força de Combate em defesa.</Text>
+			<Text>A unidade ocupante ganha automaticamente 2 turnos de fortificação, +1 Visão e +4 [ICON_STRENGTH] Força de Combate em defesa. Substituído pelo Forte Reforçado após pesquisar Balística.</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_AIRSTRIP_DESCRIPTION" Language="pt_BR">
 			<Text>Desbloqueia a habilidade de engenheiro militar para construir uma pista de pouso.[NEWLINE][NEWLINE]Pode abrigar 3 unidades aéreas. Só pode ser construída em Painel plano. Atratividade para os Paineis adjacentes -1.</Text>

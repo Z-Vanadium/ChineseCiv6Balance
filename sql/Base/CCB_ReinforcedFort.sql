@@ -2,22 +2,41 @@
 -- CCB 强化堡垒 + 军事工程师/堡垒提前解锁（2026-09-20 用户需求）
 --
 --   ① 军事工程师 UNIT_MILITARY_ENGINEER：解锁科技 军事工程学 → **工程（TECH_ENGINEERING）**；
---      并**删除其全部建筑前置**（用户 2026-09-20 拍板"删掉该前置"）——
---      ⚠ 军械库 BUILDING_ARMORY 本身由军事工程学解锁，不删则本项等于空操作（单位仍要等中世纪）；
---      ⚠ 且该表是**或列表**，配套模组还写了一条 BUILDING_LEU_ESTANCIA（阿根廷建筑）→ 必须一并删除
---        （详见下方 ① 处注释）。本文件 LoadOrder **100300**，排在全部常规批次与配套模组之后，
---        确保这两项改动不会被后加载的模组覆盖。
---   ② 堡垒 IMPROVEMENT_FORT：解锁科技 军事工程学 → **工程**（弹道学尤里卡"造 2 座堡垒"不受影响）。
+--      建筑前置 = **兵营 或 马厩**（`Unit_BuildingPrereqs` 是**或列表**，两行即"有其一即可"）。
+--      ⚠ 该表是**或列表**（先例：使徒 = 神庙/木条教堂/帕萨特 三选一）→ 写入前必须先清空该单位原有行，
+--        否则会留下配套模组写的 BUILDING_LEU_ESTANCIA（阿根廷建筑），变成"庄园城以外造不了"。
+--      本文件 LoadOrder **100300**，排在全部常规批次与配套模组（CCB 文明拓展 = 99100）之后，
+--      确保这些改动不会被后加载的模组覆盖（详见排坑实录 §十五）。
+--   ② 堡垒 IMPROVEMENT_FORT：解锁科技 军事工程学 → **工程**（弹道学尤里卡"造 2 座堡垒"不受影响）；
+--      并新增 ④「弹道学后由强化堡垒取代」的授权链。
 --
 --   ③ 新改良「强化堡垒」CCB_IMPROVEMENT_REINFORCED_FORT：
 --      · 由**弹道学（TECH_BALLISTICS）**解锁，**军事工程师**建造（消耗 1 次建造次数）
 --      · **整行复制堡垒**（49 列，含 DefenseModifier=+4 / GrantFortification=2 / 可境外建造 / 可修复 /
 --        可掠夺 / 可通行 / 图标沿用 ICON_IMPROVEMENT_FORT），并复制其 10 条可建造地形 + 1 条可建造特征
+--      · **可在树林 / 雨林 / 人工林上直接修建**（不砍伐）：追加 3 条 `Improvement_ValidFeatures`
+--        —— 该表语义 = "该地貌存在时也可建"（先例：伐木场建在森林/雨林上、钓鱼船建在礁石上），
+--           所以树木**不会被移除**；与"先清除树林再建"是两回事
+--      · **美术与堡垒完全一致**：图标沿用 `ICON_IMPROVEMENT_FORT`；模型 / 战略视图走新加的
+--        `ArtDefs/Improvements.artdef`（条目整段照抄原版 IMPROVEMENT_FORT → 模型仍是原版 LM_FORT 地标；
+--         引用的全是原版现成资产，**不需要 AssetEditor 重新烘焙**）
 --      · 追加进 BBG 的「防御改良」分类 `IMPROVEMENT_IS_DEFENSIVE`
 --        → 于是它同样吃到"进驻防御改良 +1 视野"（ABILITY_DEFENSIVE_IMPROVEMENT_BONUS_SIGHT）等
 --          **全部以"防御改良"为条件的既有效果** —— 这就是"继承堡垒全部效果"的落点
 --
---   ④ 新效果「最高射击高度」：位于强化堡垒中的 **远程（CLASS_RANGED）/ 攻城（CLASS_SIEGE）** 单位
+--   ④ 「弹道学后强化堡垒**取代**堡垒」（2026-10-14 用户需求）：
+--      引擎**没有**改良的"过时"机制（`Improvements` 无 ObsoleteTech 列，也没有能移除"可建清单"的修正器）
+--      → 改用原版**城邦特色改良的授权链**实现"科技一到手就收回"：
+--        原版先例（运行时库可查）：TraitModifiers(MINOR_CIV_GRANADA_TRAIT → MINOR_CIV_GRANADA_UNIQUE_INFLUENCE_BONUS)
+--          └ MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER（SubjectRequirementSetId = PLAYER_IS_SUZERAIN）
+--              └ MODIFIER_PLAYER_ADJUST_VALID_IMPROVEMENT（ImprovementType = IMPROVEMENT_ALCAZAR）
+--        照此办理：堡垒默认不可建（`TraitType` 指向一个没人拥有的内部 trait，写法同 IMPROVEMENT_CITY_PARK），
+--        再由**全局修正器**在"**已研究工程 且 尚未研究弹道学**"时把它授权回来
+--        （"尚未"用 `Requirements.Inverse=1` 取反 —— 原版同款先例 `REQUIRES_PLAYER_HAS_NO_STEEL`）。
+--        需求集每回合动态求值 → 研究完弹道学授权当即失效，堡垒从建造列表消失，只剩强化堡垒。
+--        ⚠ 弹道学尤里卡"造 2 座堡垒"不受影响（研究弹道学**之前**堡垒一直可建）。
+--
+--   ⑤ 新效果「最高射击高度」：位于强化堡垒中的 **远程（CLASS_RANGED）/ 攻城（CLASS_SIEGE）** 单位
 --      在计算**射击视线**时无视地形与地貌阻挡：
 --        MODIFIER_PLAYER_UNIT_ADJUST_SEE_THROUGH_TERRAIN  （无视地形）
 --      + MODIFIER_PLAYER_UNIT_ADJUST_SEE_THROUGH_FEATURES （无视地貌）
@@ -29,15 +48,21 @@
 --          需回报后另想办法（见测试清单）。
 --==============================================================================================
 
--- ── ① / ② 解锁科技调整 + 删除军械库前置 ─────────────────────────────────────────────
+-- ── ① / ② 解锁科技调整 + 军事工程师建筑前置（兵营 或 马厩） ─────────────────────────
 UPDATE Units SET PrereqTech = 'TECH_ENGINEERING' WHERE UnitType = 'UNIT_MILITARY_ENGINEER';
 UPDATE Improvements SET PrereqTech = 'TECH_ENGINEERING' WHERE ImprovementType = 'IMPROVEMENT_FORT';
 
+-- 2026-10-14 用户需求：研究「工程」后，**拥有兵营 或 马厩**的城市可生产军事工程师。
 -- ⚠ `Unit_BuildingPrereqs` 是**或列表**（先例：使徒同时列 神庙/木条教堂/帕萨特 → 三选一），
---   所以"只删军械库那一行"会留下配套模组写入的 `BUILDING_LEU_ESTANCIA`（阿根廷建筑）
---   → 变成"只有庄园城能造军事工程师"，反而更糟（实测库内该单位当时正是这两行）。
---   因此这里**删除该单位的全部建筑前置** → 军事工程师与军械库/庄园彻底解耦，研究完「工程」后任意城市可造。
+--   所以两行 = "有其一即可"，不需要额外需求集。
+-- ⚠ 但正因为它**是或列表**：只删军械库那一行会留下配套模组写入的 `BUILDING_LEU_ESTANCIA`
+--   （阿根廷建筑，"庄园城以外造不了"，反而更糟）→ 必须先**整单位清空**再写入，
+--   见 `docs\Civ6开发排坑实录.md` §十五。
+-- `NumSupported = -1` = 不限数量（与使徒 / 传教士 / 审判官等原版行一致）。
 DELETE FROM Unit_BuildingPrereqs WHERE Unit = 'UNIT_MILITARY_ENGINEER';
+INSERT INTO Unit_BuildingPrereqs (Unit, PrereqBuilding, NumSupported) VALUES
+	('UNIT_MILITARY_ENGINEER', 'BUILDING_BARRACKS', -1),
+	('UNIT_MILITARY_ENGINEER', 'BUILDING_STABLE', -1);
 
 -- ── ③ 新改良：整行复制堡垒，仅改 类型 / 名称 / 描述 / 解锁科技 ────────────────────────
 INSERT INTO Types (Type, Kind) VALUES
@@ -55,7 +80,9 @@ SELECT
 	'CCB_IMPROVEMENT_REINFORCED_FORT', 'LOC_CCB_IMPROVEMENT_REINFORCED_FORT_NAME', BarbarianCamp,
 	'TECH_BALLISTICS', PrereqCivic, Buildable, 'LOC_CCB_IMPROVEMENT_REINFORCED_FORT_DESCRIPTION',
 	RemoveOnEntry, DispersalGold, PlunderType, PlunderAmount, Goody, TilesPerGoody, GoodyRange, Icon,
-	TraitType, Housing, TilesRequired, SameAdjacentValid, RequiresRiver, EnforceTerrain, BuildInLine,
+	-- ⚠ TraitType 必须显式写 NULL：本文件 ④ 会把 IMPROVEMENT_FORT 的 TraitType 改成内部 trait 让它默认不可建，
+	--   而本 INSERT 是"整行复制堡垒"——若沿用 TraitType 列，强化堡垒会连"不可建"一起继承（顺序陷阱）。
+	NULL, Housing, TilesRequired, SameAdjacentValid, RequiresRiver, EnforceTerrain, BuildInLine,
 	CanBuildOutsideTerritory, BuildOnFrontier, AirSlots, DefenseModifier, GrantFortification, MinimumAppeal,
 	Coast, YieldFromAppeal, WeaponSlots, ReligiousUnitHealRate, Appeal, OnePerCity, YieldFromAppealPercent,
 	ValidAdjacentTerrainAmount, Domain, AdjacentSeaResource, RequiresAdjacentBonusOrLuxury, MovementChange,
@@ -76,7 +103,54 @@ INSERT INTO Improvement_ValidBuildUnits (ImprovementType, UnitType, ConsumesChar
 SELECT 'CCB_IMPROVEMENT_REINFORCED_FORT', UnitType, ConsumesCharge, ValidRepairOnly
 FROM Improvement_ValidBuildUnits WHERE ImprovementType = 'IMPROVEMENT_FORT';
 
--- ── ④-a 「地块是强化堡垒」需求（同时用于把新改良并入"防御改良"分类） ──────────────────
+-- 树林 / 雨林 / 人工林上也能修（不砍伐）—— 2026-10-14 用户需求：
+--   `Improvement_ValidFeatures` 的语义是"**该地貌存在时也可以建**"（先例：伐木场在森林/雨林上、
+--   圣地在森林上、钓鱼船在礁石上）→ 地貌**保留**，不会像"先清除地貌再建"那样砍掉树木。
+--   人工林 = CCB 自建特征 `FEATURE_CCB_PLANTED_FOREST`（种植后由 scripts/ccb_planted_forest.lua 替换）。
+INSERT INTO Improvement_ValidFeatures (ImprovementType, FeatureType, PrereqTech, PrereqCivic) VALUES
+	('CCB_IMPROVEMENT_REINFORCED_FORT', 'FEATURE_FOREST', NULL, NULL),
+	('CCB_IMPROVEMENT_REINFORCED_FORT', 'FEATURE_JUNGLE', NULL, NULL),
+	('CCB_IMPROVEMENT_REINFORCED_FORT', 'FEATURE_CCB_PLANTED_FOREST', NULL, NULL);
+
+-- ── ④ 弹道学后「强化堡垒」取代「堡垒」 ──────────────────────────────────────────────
+-- 机制出处：原版城邦特色改良的授权链（见文件头 ④ 说明）。三步：
+--   (a) 堡垒挂上一个"没人拥有"的内部 trait → 默认谁都不能建（同 IMPROVEMENT_CITY_PARK 的写法）
+INSERT INTO Types (Type, Kind) VALUES
+	('CCB_TRAIT_LEGACY_FORT', 'KIND_TRAIT');
+INSERT INTO Traits (TraitType, Name, Description, InternalOnly) VALUES
+	('CCB_TRAIT_LEGACY_FORT', NULL, NULL, 1);
+UPDATE Improvements SET TraitType = 'CCB_TRAIT_LEGACY_FORT' WHERE ImprovementType = 'IMPROVEMENT_FORT';
+
+--   (b) 需求："已研究工程" 且 "**尚未**研究弹道学"（后者用 Inverse=1 取反，原版同款先例 REQUIRES_PLAYER_HAS_NO_STEEL）
+INSERT INTO Requirements (RequirementId, RequirementType, Inverse) VALUES
+	('CCB_REQ_PLAYER_HAS_ENGINEERING', 'REQUIREMENT_PLAYER_HAS_TECHNOLOGY', 0),
+	('CCB_REQ_PLAYER_LACKS_BALLISTICS', 'REQUIREMENT_PLAYER_HAS_TECHNOLOGY', 1);
+INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
+	('CCB_REQ_PLAYER_HAS_ENGINEERING', 'TechnologyType', 'TECH_ENGINEERING'),
+	('CCB_REQ_PLAYER_LACKS_BALLISTICS', 'TechnologyType', 'TECH_BALLISTICS');
+INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+	('CCB_REQSET_FORT_VALID_BEFORE_BALLISTICS', 'REQUIREMENTSET_TEST_ALL');
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+	('CCB_REQSET_FORT_VALID_BEFORE_BALLISTICS', 'CCB_REQ_PLAYER_HAS_ENGINEERING'),
+	('CCB_REQSET_FORT_VALID_BEFORE_BALLISTICS', 'CCB_REQ_PLAYER_LACKS_BALLISTICS');
+
+--   (c) 授权修正器（子）：让玩家"可建堡垒"；父修正器：对**所有玩家**附加，条件 = 上面的需求集
+--       （`MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER` 的 Subject 需求集是**逐玩家**求值的，
+--         原版同款：GOV_BUILDING_* → MODIFIER_ALL_PLAYERS_ADJUST_GOVERNOR_POINTS + PLAYER_HAS_GOV_BUILDING_*）
+INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
+	('CCB_FORT_VALID_BEFORE_BALLISTICS', 'MODIFIER_PLAYER_ADJUST_VALID_IMPROVEMENT');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+	('CCB_FORT_VALID_BEFORE_BALLISTICS', 'ImprovementType', 'IMPROVEMENT_FORT');
+
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+	('CCB_FORT_VALID_PARENT', 'MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER', 'CCB_REQSET_FORT_VALID_BEFORE_BALLISTICS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+	('CCB_FORT_VALID_PARENT', 'ModifierId', 'CCB_FORT_VALID_BEFORE_BALLISTICS');
+
+INSERT INTO GameModifiers (ModifierId) VALUES
+	('CCB_FORT_VALID_PARENT');
+
+-- ── ⑤-a 「地块是强化堡垒」需求（同时用于把新改良并入"防御改良"分类） ──────────────────
 INSERT INTO Requirements (RequirementId, RequirementType) VALUES
 	('CCB_REQ_PLOT_HAS_REINFORCED_FORT', 'REQUIREMENT_PLOT_IMPROVEMENT_TYPE_MATCHES');
 INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
@@ -91,7 +165,7 @@ INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 	('CCB_REQSET_UNIT_IS_IN_REINFORCED_FORT', 'CCB_REQ_PLOT_HAS_REINFORCED_FORT');
 
--- ── ④-b 能力：最高射击高度（远程 / 攻城 常驻持有，效果仅在该地块生效） ────────────────
+-- ── ⑤-b 能力：最高射击高度（远程 / 攻城 常驻持有，效果仅在该地块生效） ────────────────
 INSERT INTO Types (Type, Kind) VALUES
 	('ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND', 'KIND_ABILITY');
 INSERT INTO TypeTags (Type, Tag) VALUES

@@ -2942,7 +2942,7 @@
 			<Text>Débloque la compétence de Bâtisseur permettant de construire une centrale géothermique.[NEWLINE][NEWLINE][ICON_PRODUCTION] Production +2, [ICON_SCIENCE] Science +1 et [ICON_POWER] Électricité +3. [ICON_PRODUCTION] Production +1, [ICON_SCIENCE] Science +1 et [ICON_POWER] Électricité +3 à Matériaux Synthétiques. Doit être construit sur une fissure géothermique.</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_FORT_DESCRIPTION" Language="fr_FR">
-			<Text>L'unité occupante gagne automatiquement 2 tours de retranchement, +1 Vision et gagne +4 [ICON_STRENGTH] Puissance de combat en défense.</Text>
+			<Text>L'unité occupante gagne automatiquement 2 tours de retranchement, +1 Vision et gagne +4 [ICON_STRENGTH] Puissance de combat en défense. Remplacé par le fort renforcé une fois la Balistique découverte.</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_AIRSTRIP_DESCRIPTION" Language="fr_FR">
 			<Text>Débloque la compétence d'ingénieur militaire permettant de construire une piste d'atterrissage.[NEWLINE][NEWLINE]Peut héberger 3 unités aériennes. Ne peut être construite que sur un terrain plat. Attrait pour les cases adjacentes -1.</Text>
