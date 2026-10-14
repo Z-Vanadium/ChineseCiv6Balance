@@ -4584,5 +4584,9 @@
 		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="en_US">
 			<Text>Build 1 Neighborhood.</Text>
 		</Replace>
+		<!-- = CCB 军事工程师队形类别（FormationClass，2026-10-14） = -->
+		<Replace Tag="LOC_FORMATION_CLASS_CCB_MILITARY_ENGINEER_NAME" Language="en_US">
+			<Text>Military Engineer</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

@@ -4390,5 +4390,9 @@
 		<Replace Tag="LOC_UNIT_SUPPLY_CONVOY_DESCRIPTION" Language="ja_JP">
 			<Text>原子力時代の支援ユニット。隣接するユニットの回復力が20向上する。護送船団に隣接した状態で移動を開始した場合、ボーナスとして [ICON_Movement] 移動力+1。</Text>
 		</Replace>
+		<!-- = CCB 军事工程师队形类别（FormationClass，2026-10-14） = -->
+		<Replace Tag="LOC_FORMATION_CLASS_CCB_MILITARY_ENGINEER_NAME" Language="ja_JP">
+			<Text>軍事工兵</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

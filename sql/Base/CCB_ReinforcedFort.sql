@@ -47,6 +47,9 @@
 --      ⚠ 山脉：`TERRAIN_*_MOUNTAIN` 的 `SightThroughModifier=2`（丘陵=1、平原=0）且 `Impassable=1`
 --        → 预期**仍然阻挡**射击视线；若实测发现山脉也被绕过，则引擎只认"地形"标志、无法用数据区分，
 --          需回报后另想办法（见测试清单）。
+--
+--   ⑥ 军事工程师的**队形类别**（`FormationClass`）：新开 `FORMATION_CLASS_CCB_MILITARY_ENGINEER`
+--      （用户 2026-10-14 需求：让它能与**观测气球 / 补给车队 / 无人机**同格）—— 机制与 UI 兜底见文件末 ⑥ 段。
 --==============================================================================================
 
 -- ── ① / ② 解锁科技调整 + 军事工程师建筑前置（兵营 或 马厩） ─────────────────────────
@@ -201,3 +204,28 @@ INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
 INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
 	('CCB_FORT_HIGH_GROUND_TERRAIN', 'Preview', 'LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_DESC'),
 	('CCB_FORT_HIGH_GROUND_FEATURES', 'Preview', 'LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_DESC');
+
+-- ── ⑥ 军事工程师的队形类别：新开一类，让它能与支援单位同格（2026-10-14 用户需求） ──────────
+-- 需求：军事工程师要能与**观测气球 / 补给车队 / 无人机**在同一单元格。
+-- 机制：Civ6 的堆叠规则 = **一个格子每种 `FormationClass` 只能有一个单位**
+--   （所以「战斗单位 + 支援 + 平民」可以三层同格；原版百科「编队」页也是这么写的）。
+--   军事工程师与气球 / 补给车队 / 无人机**同为 `FORMATION_CLASS_SUPPORT`** → 天然互斥，怎么摆都挤不到一起。
+--   → 给军事工程师**单独开一个队形类别**：与支援类不再冲突，同时与战斗单位、平民**仍然**能同格（类别各不相同）。
+-- ⚠ 改的是 **`FormationClass`**，**不是** `PromotionClass`：
+--   晋升类别与堆叠毫无关系（例证：侦察兵与勇士同为 `FORMATION_CLASS_LAND_COMBAT`、晋升类别不同 —— 照样不能同格）。
+--   军事工程师的 `PromotionClass` 保持 `PROMOTION_CLASS_SUPPORT` 不变
+--   → Reyna「承包商」等"按支援类生成"的加成照旧生效（见下方 LoadOrder 说明）。
+-- ⚠⚠ 原版 UI 对 FormationClass 是**硬编码 5 类**，自定义类别会掉进 `else`／取到 nil，必须同时补 UI 兜底
+--   （本 MOD 已加两个，见 `ui/replacements/unitflagmanager_ccb.lua` / `mapsearchpanel_ccb.lua`）：
+--     · `UnitFlagManager.lua` 的旗帜样式判断**没有 else** → 未知类别会**完全不出旗帜**（单位等于无法选中）→ 必须兜底；
+--     · `MapSearchPanel.lua` 会用 `FormationClassNameMap[类别]` 取名字，nil 时代码执行 `t[nil]=true` → **Lua 报错** → pcall 兜底；
+--     · `ProductionPanel.lua` 的单位图标、`MapSearchPanel` 的类别名列表：只是显示差异，本次不处理。
+-- ⚠ 本文件 LoadOrder **100300** 晚于所有"按 FormationClass 生成"的 BBG/CCB 脚本
+--   （例：Reyna「承包商」按 `WHERE FormationClass='FORMATION_CLASS_SUPPORT'` 逐单位生成金币折扣）
+--   → 这些生成结果仍把军事工程师算作支援 ✔ 行为不变。
+--   **不要**把这个改动提到那些脚本之前，否则那些加成会静默丢失。
+INSERT INTO Types (Type, Kind) VALUES
+	('FORMATION_CLASS_CCB_MILITARY_ENGINEER', 'KIND_FORMATION_CLASS');
+INSERT INTO UnitFormationClasses (FormationClassType, Name) VALUES
+	('FORMATION_CLASS_CCB_MILITARY_ENGINEER', 'LOC_FORMATION_CLASS_CCB_MILITARY_ENGINEER_NAME');
+UPDATE Units SET FormationClass = 'FORMATION_CLASS_CCB_MILITARY_ENGINEER' WHERE UnitType = 'UNIT_MILITARY_ENGINEER';

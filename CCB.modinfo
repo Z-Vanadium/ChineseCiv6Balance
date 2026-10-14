@@ -1338,6 +1338,25 @@
 				<LuaReplace>ui/replacements/unitpanel_bbg.lua</LuaReplace>
 			</Properties>
 		</ReplaceUIScript>
+		<!-- 2026-10-14：军事工程师新开队形类别 FORMATION_CLASS_CCB_MILITARY_ENGINEER
+		     （见 sql/Base/CCB_ReinforcedFort.sql ⑥）后，原版 UI 两处硬编码需要兜底：
+		       · UnitFlagManager：旗帜样式判断没有 else → 未知类别会完全没有旗帜（单位不可选）→ 必须兜底
+		       · MapSearchPanel：FormationClassNameMap 取到 nil 时会 t[nil]=true 报 Lua 错 → pcall 兜底
+		     两个文件内部都是 `include` 原版 + 只覆盖出问题的那个函数（与 unitpanel_bbg.lua 同构）。 -->
+		<ReplaceUIScript id="CCB_UnitFlagManager">
+			<Properties>
+				<LoadOrder>19999</LoadOrder>
+				<LuaContext>UnitFlagManager</LuaContext>
+				<LuaReplace>ui/replacements/unitflagmanager_ccb.lua</LuaReplace>
+			</Properties>
+		</ReplaceUIScript>
+		<ReplaceUIScript id="CCB_MapSearchPanel">
+			<Properties>
+				<LoadOrder>19999</LoadOrder>
+				<LuaContext>MapSearchPanel</LuaContext>
+				<LuaReplace>ui/replacements/mapsearchpanel_ccb.lua</LuaReplace>
+			</Properties>
+		</ReplaceUIScript>
 		<!--
 		<ReplaceUIScript id="productionpanel_bbg">
 			<Criteria>BBGTS_ProductionPanel_BBG_Expansion2</Criteria>
@@ -1685,6 +1704,8 @@
 		<!--<File>ui/replacements/productionpanel_bbg.lua</File>-->
 		<File>ui/replacements/tradeoverview_bbg.lua</File>
 		<File>ui/replacements/unitpanel_bbg.lua</File>
+		<File>ui/replacements/unitflagmanager_ccb.lua</File>
+		<File>ui/replacements/mapsearchpanel_ccb.lua</File>
 		<File>ui/replacements/tradesupport.lua</File>
 		<File>ui/replacements/compatibility/traderoutechooser.lua</File>
 		<File>ui/replacements/compatibility/tradeoverview.lua</File>

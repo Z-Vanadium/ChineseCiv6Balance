@@ -9065,5 +9065,9 @@
 		<Replace Tag="LOC_BOOST_TRIGGER_SANITATION" Language="zh_Hans_CN">
 			<Text>建造1个社区。</Text>
 		</Replace>
+		<!-- = CCB 军事工程师队形类别（FormationClass，2026-10-14） = -->
+		<Replace Tag="LOC_FORMATION_CLASS_CCB_MILITARY_ENGINEER_NAME" Language="zh_Hans_CN">
+			<Text>军事工程师</Text>
+		</Replace>
 </LocalizedText>
 </GameData>
