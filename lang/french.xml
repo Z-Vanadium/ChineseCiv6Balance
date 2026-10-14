@@ -1817,7 +1817,7 @@
 			<Text>Unité de siège de l'ère moderne. Déplacement et attaque dans le même tour impossible sans la promotion Équipage expert. [ICON_STRENGTH] Puissance de combat +5 contre les Centres-villes.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION" Language="fr_FR">
-			<Text>Unité de siège de l'ère de l'information. Déplacement et attaque dans le même tour impossible sans la promotion Équipage expert. [ICON_STRENGTH] Puissance de combat +5 contre les Centres-villes.</Text>
+			<Text>Unité de siège de l'ère atomique. Déplacement et attaque dans le même tour impossible sans la promotion Équipage expert. [ICON_STRENGTH] Puissance de combat +5 contre les Centres-villes.</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_NAME" Language="fr_FR">
 			<Text>[ICON_STRENGTH] Puissance de combat +5 contre les Centres-villes.</Text>
@@ -1956,7 +1956,7 @@
 			<Text>Unité antiaérienne de l'ère moderne couvre des attaques aériennes dans un rayon de 1 case.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MOBILE_SAM_DESCRIPTION" Language="fr_FR">
-			<Text>Unité antiaérienne de l'ère de l'information couvre des attaques aériennes et nucléaires dans un rayon de 1 case.</Text>
+			<Text>Unité antiaérienne de l'ère atomique couvre des attaques aériennes et nucléaires dans un rayon de 1 case.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MILITARY_ENGINEER_ALT_DESCRIPTION" Language="fr_FR">
 			<Text>Unité de soutien de l'ère médiévale. Peut, une fois les prérequis technologiques et dogmatiques atteints, construire des routes, des chemins de fer, des forts, des pistes d'atterrissage, des silos à missiles et des tunnels de montagne. Peut utiliser une [ICON_CHARGES] pour construire 20% d'un Canal, d'un Barrage ou d'un Aqueduc, et 50% d'une barrière anti-inondations. La formation nécessite une armurerie.</Text>
@@ -8747,5 +8747,11 @@
 		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="fr_FR">
 			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
 		</Replace>
-	</LocalizedText>
+			<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_NAME" Language="fr_FR">
+			<Text>[COLOR_RED]TO_TRANSLATE: Ignores Terrain</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="fr_FR">
+			<Text>[COLOR_RED]TO_TRANSLATE: This unit ignores terrain movement costs.</Text>
+		</Replace>
+</LocalizedText>
 </GameData>

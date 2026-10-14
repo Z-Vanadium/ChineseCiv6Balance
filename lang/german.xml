@@ -1783,7 +1783,7 @@
 			<Text>Belagerungs-[ICON_UNIT] Einheit der Moderne. [ICON_MOVEMENT] Bewegung und [ICON_RANGED] Fernkampf-Angriff in derselben [ICON_TURN] Runde, ohne die [ICON_PROMOTION] Beförderung „Erfahrene Besatzung“, nicht möglich.+5 [ICON_STRENGTH] Kampfstärke gegen verteidigungsfähige [ICON_DISTRICT] Bezirke (die [ICON_STRENGTH] Kampfstärke besitzen)</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION" Language="de_DE">
-			<Text>Belagerungs-[ICON_UNIT] Einheit des Informationszeitalters. [ICON_MOVEMENT] Bewegung und [ICON_RANGED] Fernkampf-Angriff in derselben [ICON_TURN] Runde, ohne die [ICON_PROMOTION] Beförderung „Erfahrene Besatzung“, nicht möglich.+5 [ICON_STRENGTH] Kampfstärke gegen verteidigungsfähige [ICON_DISTRICT] Bezirke (die [ICON_STRENGTH] Kampfstärke besitzen)</Text>
+			<Text>Belagerungs-[ICON_UNIT] Einheit des Atomzeitalters. [ICON_MOVEMENT] Bewegung und [ICON_RANGED] Fernkampf-Angriff in derselben [ICON_TURN] Runde, ohne die [ICON_PROMOTION] Beförderung „Erfahrene Besatzung“, nicht möglich.+5 [ICON_STRENGTH] Kampfstärke gegen verteidigungsfähige [ICON_DISTRICT] Bezirke (die [ICON_STRENGTH] Kampfstärke besitzen)</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_NAME" Language="de_DE">
 			<Text>+5 [ICON_STRENGTH] Kampfstärke gegen verteidigungsfähige [ICON_DISTRICT] Bezirke (die [ICON_STRENGTH] Kampfstärke besitzen)</Text>
@@ -1867,7 +1867,7 @@
 			<Text>Anti-Luft Unterstützungs-[ICON_UNIT] Einheit der Moderne. Bietet Schutz vor Luftangriffen bis zu 1 Feld entfernt von der Waffe.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MOBILE_SAM_DESCRIPTION" Language="de_DE">
-  			<Text>Informationszeitalter Anti-Luft-Unterstützungseinheit. Bietet Schutz vor Luft- und Nuklearangriffen bis zu 1 Feld von der Waffe entfernt.</Text>
+  			<Text>Atomzeitalter Anti-Luft-Unterstützungseinheit. Bietet Schutz vor Luft- und Nuklearangriffen bis zu 1 Feld von der Waffe entfernt.</Text>
   		</Replace>
 		<Replace Tag="LOC_UNIT_MILITARY_ENGINEER_ALT_DESCRIPTION" Language="de_DE">
 			<Text>Unterstützungseinheit des Mittelalters. Benötigt die "Waffenkammer" im [ICON_DISTRICT_ENCAMPMENT] Lager-Bezirk zur Herstellung. Kann Straßen, Eisenbahnen, Forts, Flugplätze, Raketensilos und Bergtunnel ausbauen. Jede [ICON_CHARGES] Ladung kann auch verwendet werden, um jeweils 20% von [ICON_DISTRICT_CANAL] Kanal-, [ICON_DISTRICT_DAM] Damm- oder [ICON_DISTRICT_AQUEDUCT] Aquädukt-Bezirken oder 50% von "Hochwassersperren" zu errichten.</Text>
@@ -8978,5 +8978,11 @@
 		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="de_DE">
 			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
 		</Replace>
-	</LocalizedText>
+			<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_NAME" Language="de_DE">
+			<Text>[COLOR_RED]TO_TRANSLATE: Ignores Terrain</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="de_DE">
+			<Text>[COLOR_RED]TO_TRANSLATE: This unit ignores terrain movement costs.</Text>
+		</Replace>
+</LocalizedText>
 </GameData>

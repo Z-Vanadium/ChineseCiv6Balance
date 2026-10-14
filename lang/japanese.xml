@@ -1386,7 +1386,7 @@
     </Row>
     <!-- = Rocket Artillery = -->
     <Replace Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION" Language="ja_JP">
-      <Text>情報時代の攻囲ユニット。都市を攻撃する際に力を発揮する。「熟練搭乗員」レベルアップを獲得しているか移動力が増加しているかでない限り、同じターンに移動と攻撃の両方をおこなうことはできない。都心に対する [ICON_STRENGTH] 戦闘力+5。</Text>
+      <Text>原子力時代の攻囲ユニット。都市を攻撃する際に力を発揮する。「熟練搭乗員」レベルアップを獲得しているか移動力が増加しているかでない限り、同じターンに移動と攻撃の両方をおこなうことはできない。都心に対する [ICON_STRENGTH] 戦闘力+5。</Text>
     </Replace>
 
 		<!-- === UNIT PROMOTIONS === -->
@@ -4372,5 +4372,11 @@
 		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="ja_JP">
 			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
 		</Replace>
-	</LocalizedText>
+			<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_NAME" Language="ja_JP">
+			<Text>[COLOR_RED]TO_TRANSLATE: Ignores Terrain</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="ja_JP">
+			<Text>[COLOR_RED]TO_TRANSLATE: This unit ignores terrain movement costs.</Text>
+		</Replace>
+</LocalizedText>
 </GameData>

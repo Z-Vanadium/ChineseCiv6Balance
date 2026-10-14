@@ -1532,7 +1532,7 @@
 		</Row>
 		<!-- = Rocket Artillery = -->
 		<Replace Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION" Language="ko_KR">
-			<Text>도시 공격에 적합한 정보 시대 공성 유닛입니다. 전문 승무원 진급을 획득하기 전에는 같은 턴에 이동하고 공격할 수 없습니다. 방어 가능한 특수지구 공격 시 [ICON_Strength] 전투력이 +5 증가합니다.</Text>
+			<Text>도시 공격에 적합한 원자력 시대 공성 유닛입니다. 전문 승무원 진급을 획득하기 전에는 같은 턴에 이동하고 공격할 수 없습니다. 방어 가능한 특수지구 공격 시 [ICON_Strength] 전투력이 +5 증가합니다.</Text>
 		</Replace>
 		<!-- == Support Units == -->
 		<Replace Tag="LOC_UNIT_MEDIC_DESCRIPTION" Language="ko_KR">
@@ -4185,5 +4185,11 @@
 		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="ko_KR">
 			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
 		</Replace>
-	</LocalizedText>
+			<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_NAME" Language="ko_KR">
+			<Text>[COLOR_RED]TO_TRANSLATE: Ignores Terrain</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="ko_KR">
+			<Text>[COLOR_RED]TO_TRANSLATE: This unit ignores terrain movement costs.</Text>
+		</Replace>
+</LocalizedText>
 </GameData>

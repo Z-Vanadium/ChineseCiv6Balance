@@ -467,26 +467,33 @@ INSERT INTO ModifierStrings (ModifierId, Context , Text) VALUES
     ('BBG_ARTILLERY_DEFENSIBLE_DISTRICTS', 'Preview', 'LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_DESC');
 
 -- 2026/08/07 火箭炮（调整）  前置到“火箭研究”解锁（原：制导系统），变为原子能单位，基础力：65,90（原：70,100），3射程，3移速，生产力：600锤（原：680）。完成制导系统后，基础力+5提升为70,95。
-UPDATE Units SET Combat=65, Bombard=90, Cost=600, PrereqTech='TECH_ROCKETRY', Maintenance=7 WHERE UnitType='UNIT_ROCKET_ARTILLERY';
+-- 2026/10/14 火箭炮（二次调整 · 用户需求）：解锁科技改为“制导系统”，基础力 65 → 70（把原来“完成制导系统后 +5”并入基础值），
+--   并删除「完成制导系统后 +5 战斗力」的整条能力链路（Tags/TypeTags/UnitAbilities/UnitAbilityModifiers/Modifiers/ModifierArguments/ModifierStrings）
+--   与对应文本（lang 里的 LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_*）。
+--   ⚠ 数据库每次全量重建（见排坑实录 §1.4），删掉 INSERT 即等于删除该数据，无需写 DELETE。
+UPDATE Units SET Combat=70, Bombard=90, Cost=600, PrereqTech='TECH_GUIDANCE_SYSTEMS', Maintenance=7 WHERE UnitType='UNIT_ROCKET_ARTILLERY';
+
+-- 2026/10/14 无人机（用户需求）：基础移速 3 → 4；新增词条「该单位移动时无视地形影响」
+--   链路照原版直升机：ABILITY_IGNORE_TERRAIN_COST → UnitAbilityModifiers → MOD_IGNORE_TERRAIN_COST
+--   （MODIFIER_PLAYER_UNIT_ADJUST_IGNORE_TERRAIN_COST，参数 Ignore=1 / Type=ALL）。
+--   ⚠ 复用原版修正器 MOD_IGNORE_TERRAIN_COST，但**不写 ModifierStrings**：那是按 ModifierId 唯一的，
+--     再插一行会与直升机的预览文案冲突（(ModifierId, Context) 主键），且语义相同无需改。
+--   ⚠ 用独立标签 CLASS_CCB_DRONE 而不是把它塞进 CLASS_HELICOPTER：后者会连带授予直升机的
+--     远程防护 / 无视渡河消耗等能力。本标签只挂 UNIT_DRONE（原版 CLASS_DRONE 还被一个能力共用，故不复用）。
+UPDATE Units SET BaseMoves=4 WHERE UnitType='UNIT_DRONE';
 
 INSERT INTO Tags (Tag, Vocabulary) VALUES
-    ('CLASS_ROCKET_ARTILLERY', 'ABILITY_CLASS');
+    ('CLASS_CCB_DRONE', 'ABILITY_CLASS');
 INSERT INTO Types (Type, Kind) VALUES
-    ('ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'KIND_ABILITY');
+    ('ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST', 'KIND_ABILITY');
 INSERT INTO TypeTags (Type, Tag) VALUES
-    ('UNIT_ROCKET_ARTILLERY', 'CLASS_ROCKET_ARTILLERY'),
-    ('ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'CLASS_ROCKET_ARTILLERY');
+    ('UNIT_DRONE', 'CLASS_CCB_DRONE'),
+    ('ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST', 'CLASS_CCB_DRONE');
 
 INSERT INTO UnitAbilities (UnitAbilityType, Name, Description) VALUES
-    ('ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_NAME', 'LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_DESC');
-INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES 
-('ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'CCB_ROCKET_ARTILLERY_STRENGTH_LATE');
-INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
-('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH', 0, 0, 0, 'BBG_UTILS_PLAYER_HAS_TECH_GUIDANCE_SYSTEMS', NULL);
-INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
-('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'Amount', '5');
-INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
-	('CCB_ROCKET_ARTILLERY_STRENGTH_LATE', 'Preview', 'LOC_ABILITY_CCB_ROCKET_ARTILLERY_STRENGTH_LATE_DESC');
+    ('ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST', 'LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_NAME', 'LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC');
+INSERT INTO UnitAbilityModifiers (UnitAbilityType, ModifierId) VALUES
+    ('ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST', 'MOD_IGNORE_TERRAIN_COST');
 
 -- 2026/08/07 现代反坦克组（调整）  前置到“合成材料”解锁（原：复合材料），变为原子能单位，基础力：86（原：90），3移速，520锤（原：580锤）
 UPDATE Units SET Combat=86, BaseMoves=3, Cost=520, PrereqTech='TECH_SYNTHETIC_MATERIALS', Maintenance=7 WHERE UnitType='UNIT_MODERN_AT';

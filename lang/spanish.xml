@@ -1437,7 +1437,7 @@
 			<Text>Unidad de apoyo antiaérea de la Época Moderna. Ofrece protección contra ataques aéreos a 1 hexágono del arma.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MOBILE_SAM_DESCRIPTION" Language="es_ES">
-			<Text>Unidad de apoyo antiaéreo de la Era de la Información. Proporciona cobertura contra ataques aéreos y nucleares hasta 1 casilla de distancia de la unidad.</Text>
+			<Text>Unidad de apoyo antiaéreo de la Era Atómica. Proporciona cobertura contra ataques aéreos y nucleares hasta 1 casilla de distancia de la unidad.</Text>
 		</Replace>
 		
 		<!-- == GDR == -->
@@ -3545,5 +3545,11 @@
 		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="es_ES">
 			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
 		</Replace>
-	</LocalizedText>
+			<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_NAME" Language="es_ES">
+			<Text>[COLOR_RED]TO_TRANSLATE: Ignores Terrain</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="es_ES">
+			<Text>[COLOR_RED]TO_TRANSLATE: This unit ignores terrain movement costs.</Text>
+		</Replace>
+</LocalizedText>
 </GameData>

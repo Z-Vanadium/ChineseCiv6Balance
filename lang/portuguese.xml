@@ -1838,7 +1838,7 @@
 			<Text>Unidade de cerco da Era Moderna. Movimento e ataque no mesmo turno são impossíveis sem a promoção Equipe experiente. [ICON_STRENGTH] Força de combate +5 contra Centros da Cidade.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION" Language="pt_BR">
-			<Text>Unidade de cerco da Era da Informação. Movimento e ataque no mesmo turno são impossíveis sem a promoção Equipe experiente. [ICON_STRENGTH] Força de combate +5 contra Centros da Cidade.</Text>
+			<Text>Unidade de cerco da Era Atômica. Movimento e ataque no mesmo turno são impossíveis sem a promoção Equipe experiente. [ICON_STRENGTH] Força de combate +5 contra Centros da Cidade.</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_NAME" Language="pt_BR">
 			<Text>[ICON_STRENGTH] Força de combate +5 contra os Centros urbanos.</Text>
@@ -1977,7 +1977,7 @@
 			<Text>Unidade antiaérea da era moderna que cobre ataques aéreos num raio de 1 painel.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MOBILE_SAM_DESCRIPTION" Language="pt_BR">
-			<Text>Unidade antiaérea da era da informação que cobre ataques aéreos e nucleares em um raio de 1 painel.</Text>
+			<Text>Unidade antiaérea da era atômica que cobre ataques aéreos e nucleares em um raio de 1 painel.</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_MILITARY_ENGINEER_ALT_DESCRIPTION" Language="pt_BR">
 			<Text>Unidade de apoio da era medieval. Pode, uma vez atingidos os pré-requisitos tecnológicos e doutrinários, construir estradas, ferrovias, fortes, pistas de pouso, silos de mísseis e túneis em montanhas. Pode usar uma [ICON_CHARGES] Carga para construir 20% de um Canal, uma Barragem ou um Aqueduto, e 50% de uma barreira anti-inundações. O treinamento requer uma arsenal.</Text>
@@ -7293,5 +7293,11 @@
 		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="pt_BR">
 			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
 		</Replace>
-	</LocalizedText>
+			<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_NAME" Language="pt_BR">
+			<Text>[COLOR_RED]TO_TRANSLATE: Ignores Terrain</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="pt_BR">
+			<Text>[COLOR_RED]TO_TRANSLATE: This unit ignores terrain movement costs.</Text>
+		</Replace>
+</LocalizedText>
 </GameData>

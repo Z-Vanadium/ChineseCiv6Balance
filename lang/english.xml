@@ -1608,7 +1608,7 @@
 		</Row>
 		<!-- = Rocket Artillery = -->
 		<Replace Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION" Language="en_US">
-			<Text>Information era siege unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion. +5 [ICON_STRENGTH] Combat Strength against City Centers.</Text>
+			<Text>Atomic era siege unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion. +5 [ICON_STRENGTH] Combat Strength against City Centers.</Text>
 		</Replace>
 		<!-- == Support Units == -->
 		<!-- = Military Engineer = -->
@@ -1625,7 +1625,7 @@
 		</Replace>
 		<!-- = Mobile SAM = -->
 		<Replace Tag="LOC_UNIT_MOBILE_SAM_DESCRIPTION" Language="en_US">
-  			<Text>Information era anti-air support unit. Provides cover from air and nuclear attacks up to 1 hex away from the weapon.</Text>
+  			<Text>Atomic era anti-air support unit. Provides cover from air and nuclear attacks up to 1 hex away from the weapon.</Text>
   		</Replace>
 		<!-- == GDR == -->
 		<Replace Tag="LOC_UNIT_GIANT_DEATH_ROBOT_DESCRIPTION" Language="en_US">
@@ -4532,5 +4532,11 @@
 		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="en_US">
 			<Text>All combat units can move after attacking.</Text>
 		</Replace>
-	</LocalizedText>
+			<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_NAME" Language="en_US">
+			<Text>Ignores Terrain</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="en_US">
+			<Text>This unit ignores terrain movement costs.</Text>
+		</Replace>
+</LocalizedText>
 </GameData>

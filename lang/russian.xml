@@ -4391,7 +4391,7 @@
 			<Text>Осадный юнит Нового времени. Идеален для атаки городов. +5 [ICON_STRENGTH] боевой мощи против городов. Не может перемещаться и атаковать в тот же ход, пока не заслужит повышение «Опытная команда».</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_ROCKET_ARTILLERY_DESCRIPTION" Language="ru_RU">
-			<Text>Осадный юнит Информационной эры. Идеален для атаки городов. +5 [ICON_STRENGTH] боевой мощи против городов. Не может перемещаться и атаковать в тот же ход, пока не заслужит повышение «Опытная команда».</Text>
+			<Text>Осадный юнит Атомной эры. Идеален для атаки городов. +5 [ICON_STRENGTH] боевой мощи против городов. Не может перемещаться и атаковать в тот же ход, пока не заслужит повышение «Опытная команда».</Text>
 		</Replace>
 		<Replace Tag="LOC_BBG_ABILITY_ARTILLERY_DEFENSIBLE_DISTRICTS_NAME" Language="ru_RU">
 			<Text>+5 [ICON_STRENGTH] боевой мощи против городов.</Text>
@@ -6650,5 +6650,11 @@
 		<Replace Tag="LOC_ABILITY_CCB_CORPLIB_MOVE_AFTER_ATTACK_DESC" Language="ru_RU">
 			<Text>[COLOR_RED]TO_TRANSLATE: All combat units can move after attacking.</Text>
 		</Replace>
-	</LocalizedText>
+			<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_NAME" Language="ru_RU">
+			<Text>[COLOR_RED]TO_TRANSLATE: Ignores Terrain</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="ru_RU">
+			<Text>[COLOR_RED]TO_TRANSLATE: This unit ignores terrain movement costs.</Text>
+		</Replace>
+</LocalizedText>
 </GameData>

@@ -363,6 +363,24 @@ INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
 UPDATE Technologies SET UITreeRow=0 WHERE TechnologyType='TECH_LASERS';
 UPDATE Technologies SET UITreeRow=1 WHERE TechnologyType='TECH_GUIDANCE_SYSTEMS';
 
+-- 2026/10/14 制导系统（用户需求）：信息时代 → 原子能时代；造价与「核裂变」相同；科技树位置在核裂变与合成材料之间。
+--   ⚠ 必须写在本文件 L346 那条「全局科技造价 ×1.05（非远古/古典）」**之后**：
+--     那条会把制导系统 1850 乘成 1942.5，本行取的是核裂变同期的已乘值 1743 → 最终与核裂变完全一致。
+--     若写到 L346 之前，会被再乘一次（1743 × 1.05 = 1830.15）。
+--   ⚠ 科技树的“列”是按造价分的（Eras.TechTreeLayoutMethod='Cost'，TechTree.lua L377-414：同造价 = 同列），
+--     所以“造价与核裂变相同”本身就保证了与电脑/核裂变/合成材料同列；UITreeRow=1 使其落在核裂变(0)与合成材料(2)之间。
+--     前置改为「高级弹道学 + 联合作战」，与核裂变的前置完全一致（依赖连线也一致）。
+UPDATE Technologies SET EraType='ERA_ATOMIC', UITreeRow=1,
+    Cost=(SELECT Cost FROM Technologies WHERE TechnologyType='TECH_NUCLEAR_FISSION')
+WHERE TechnologyType='TECH_GUIDANCE_SYSTEMS';
+DELETE FROM TechnologyPrereqs WHERE Technology='TECH_GUIDANCE_SYSTEMS' AND PrereqTech='TECH_ROCKETRY';
+INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
+    ('TECH_GUIDANCE_SYSTEMS', 'TECH_COMBINED_ARMS');
+-- 时代归属在「高级开局预置鼓舞」表里也要跟着改（原版把制导系统列在信息时代）
+DELETE FROM StartingBoostedTechnologies WHERE Technology='TECH_GUIDANCE_SYSTEMS';
+INSERT INTO StartingBoostedTechnologies (Era, Technology) VALUES
+    ('ERA_ATOMIC', 'TECH_GUIDANCE_SYSTEMS');
+
 -- 2026/02/26 Nuclear Fusion requires Composite
 INSERT INTO TechnologyPrereqs (Technology, PrereqTech) VALUES
     ('TECH_NUCLEAR_FUSION', 'TECH_COMPOSITES');
