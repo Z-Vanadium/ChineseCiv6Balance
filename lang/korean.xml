@@ -422,10 +422,10 @@
 		</Replace>
 		<!-- = unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Language="ko_KR">
-			<Text>이집트 특유의 스핑크스를 지을 수 있는 건설자의 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Faith] 신앙 +2 및 [ICON_Culture] 문화 +1을 제공합니다. 매력도 +1을 제공합니다. 불가사의 옆에 지으면 [ICON_Faith] 신앙 +1 및 [ICON_Culture] 문화 +1을 추가 제공합니다. 범람원이 아닌 사막에 지으면 [ICON_Food] 식량 +1 및 [ICON_PRODUCTION] 생산력 +1을 추가 제공합니다. 범람원에 지으면 [ICON_CULTURE] 문화 +1을 제공합니다.[NEWLINE][NEWLINE]외교부 사회 제도를 발견하면 [ICON_CULTURE] 문화를 추가로 제공합니다. 비행을 연구하면 [ICON_TOURISM] 관광을 제공합니다. 다른 스핑크스 옆에 지을 수 없습니다. 설원 또는 설원 언덕에 지을 수 없습니다.</Text>
+			<Text>이집트 특유의 스핑크스를 지을 수 있는 건설자의 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Faith] 신앙 +2 및 [ICON_Culture] 문화 +1을 제공합니다. 매력도 +1을 제공합니다. 불가사의 옆에 지으면 [ICON_Faith] 신앙 +1 및 [ICON_Culture] 문화 +1을 추가 제공합니다. 범람원이 아닌 사막에 지으면 [ICON_Food] 식량 +1 및 [ICON_PRODUCTION] 생산력 +1을 추가 제공합니다.봉건제 사회 제도를 연구하면 초원 또는 초원 (언덕)에 지을 경우 [ICON_PRODUCTION] 생산력 +1, 평원 또는 평원 (언덕)에 지을 경우 [ICON_Food] 식량 +1을 추가 제공합니다. 범람원에 지으면 [ICON_CULTURE] 문화 +1을 제공합니다.[NEWLINE][NEWLINE]외교부 사회 제도를 발견하면 [ICON_CULTURE] 문화를 추가로 제공합니다. 비행을 연구하면 [ICON_TOURISM] 관광을 제공합니다. 다른 스핑크스 옆에 지을 수 없습니다. 설원 또는 설원 언덕에 지을 수 없습니다.</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_SPHINX_EXPANSION2_DESCRIPTION" Language="ko_KR">
-			<Text>이집트 특유의 스핑크스를 지을 수 있는 건설자의 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Faith] 신앙 +2 및 [ICON_Culture] 문화 +1을 제공합니다. 매력도 +2를 제공합니다.[NEWLINE][NEWLINE]불가사의 옆에 지으면 [ICON_Faith] 신앙 +1 및 [ICON_Culture] 문화 +1을 추가 제공합니다. 범람원이 아닌 사막에 지으면 [ICON_Food] 식량 +1 및 [ICON_PRODUCTION] 생산력 +1을 추가 제공합니다. 범람원에 지으면 [ICON_CULTURE] 문화 +1을 제공합니다.[NEWLINE][NEWLINE]외교부 사회 제도를 발견하면 [ICON_CULTURE] 문화를 추가로 제공합니다. 비행을 연구하면 [ICON_TOURISM] 관광을 제공합니다. 다른 스핑크스 옆에 지을 수 없습니다. 설원 또는 설원 언덕에 지을 수 없습니다.</Text>
+			<Text>이집트 특유의 스핑크스를 지을 수 있는 건설자의 능력을 잠금 해제합니다.[NEWLINE][NEWLINE][ICON_Faith] 신앙 +2 및 [ICON_Culture] 문화 +1을 제공합니다. 매력도 +2를 제공합니다.[NEWLINE][NEWLINE]불가사의 옆에 지으면 [ICON_Faith] 신앙 +1 및 [ICON_Culture] 문화 +1을 추가 제공합니다. 범람원이 아닌 사막에 지으면 [ICON_Food] 식량 +1 및 [ICON_PRODUCTION] 생산력 +1을 추가 제공합니다.봉건제 사회 제도를 연구하면 초원 또는 초원 (언덕)에 지을 경우 [ICON_PRODUCTION] 생산력 +1, 평원 또는 평원 (언덕)에 지을 경우 [ICON_Food] 식량 +1을 추가 제공합니다. 범람원에 지으면 [ICON_CULTURE] 문화 +1을 제공합니다.[NEWLINE][NEWLINE]외교부 사회 제도를 발견하면 [ICON_CULTURE] 문화를 추가로 제공합니다. 비행을 연구하면 [ICON_TOURISM] 관광을 제공합니다. 다른 스핑크스 옆에 지을 수 없습니다. 설원 또는 설원 언덕에 지을 수 없습니다.</Text>
 		</Replace>
 
 		<!-- == ELEANOR (LEADER) == -->

@@ -473,7 +473,7 @@
 		</Replace>
 		<!-- = unique improvement = -->
 		<Replace Tag="LOC_IMPROVEMENT_SPHINX_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>“技艺”市政解锁建造者建造埃及特色改良“狮身人面像”的能力。[NEWLINE][NEWLINE]提供 +2 [ICON_Faith] 信仰值，+1 [ICON_Culture] 文化值，向周围单元格提供+1魅力。[NEWLINE][NEWLINE]与奇观相邻则额外 +1 [ICON_Faith] 信仰值和 +1 [ICON_CULTURE] 文化值。[NEWLINE]若在沙漠或沙漠丘陵（非泛滥平原）上建造则提供 +1 [ICON_FOOD] 食物和 +1 [ICON_PRODUCTION] 生产力；在泛滥平原上建造则 +1 [ICON_CULTURE] 文化值。[NEWLINE]“外交部门”市政后 +1 [ICON_CULTURE] 文化值。[NEWLINE]研究“飞行”科技则提供 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]不能建在雪地，雪地丘陵或另一个狮身人面像旁。</Text>
+			<Text>“技艺”市政解锁建造者建造埃及特色改良“狮身人面像”的能力。[NEWLINE][NEWLINE]提供 +2 [ICON_Faith] 信仰值，+1 [ICON_Culture] 文化值，向周围单元格提供+1魅力。[NEWLINE][NEWLINE]与奇观相邻则额外 +1 [ICON_Faith] 信仰值和 +1 [ICON_CULTURE] 文化值。[NEWLINE]若在沙漠或沙漠丘陵（非泛滥平原）上建造则提供 +1 [ICON_FOOD] 食物和 +1 [ICON_PRODUCTION] 生产力；在泛滥平原上建造则 +1 [ICON_CULTURE] 文化值。完成「封建主义」市政后，在草原或草原丘陵上额外 +1 [ICON_PRODUCTION] 生产力，在平原或平原丘陵上额外 +1 [ICON_FOOD] 食物。[NEWLINE]“外交部门”市政后 +1 [ICON_CULTURE] 文化值。[NEWLINE]研究“飞行”科技则提供 [ICON_TOURISM] 旅游业绩。[NEWLINE][NEWLINE]不能建在雪地，雪地丘陵或另一个狮身人面像旁。</Text>
 		</Replace>
 		<Replace Tag="LOC_IMPROVEMENT_SPHINX_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>{LOC_IMPROVEMENT_SPHINX_DESCRIPTION}</Text>
