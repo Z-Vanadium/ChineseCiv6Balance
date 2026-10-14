@@ -1341,7 +1341,10 @@
 		<!-- 2026-10-14：军事工程师新开队形类别 FORMATION_CLASS_CCB_MILITARY_ENGINEER
 		     （见 sql/Base/CCB_ReinforcedFort.sql ⑥）后，原版 UI 两处硬编码需要兜底：
 		       · UnitFlagManager：旗帜样式判断没有 else → 未知类别会完全没有旗帜（单位不可选）→ 必须兜底
-		       · MapSearchPanel：FormationClassNameMap 取到 nil 时会 t[nil]=true 报 Lua 错 → pcall 兜底
+		       · MapSearchPanel：FormationClassNameMap 取到 nil 时会 t[nil]=true 报 Lua 错
+		         → 完整修复＝把 GetPlotSearchTerms 逐字搬过来 + 重建它用到的 3 个文件级 local
+		           （ResourceClassNameMap / GreatWorkTypeNameMap / FormationClassNameMap，后者登记新类别）
+		           + nil 兜底。⚠ 早先用 pcall 兜底的版本会让"那一格"的搜索词全丢（搜单位名返回 0，用户实测发现）
 		     两个文件内部都是 `include` 原版 + 只覆盖出问题的那个函数（与 unitpanel_bbg.lua 同构）。 -->
 		<ReplaceUIScript id="CCB_UnitFlagManager">
 			<Properties>
