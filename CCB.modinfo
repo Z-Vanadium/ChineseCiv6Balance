@@ -1378,6 +1378,22 @@
 			</Properties>
 			<File>ui/replacements/ProductionPanel.xml</File>
 		</ImportFiles>
+		<!-- 2026-10-15：科技树「工程」栏不显示堡垒 —— 走**官方挂载点**修，不做整份 UI 替换。
+		     原版 `Base\Assets\UI\TechAndCivicUnlockables.lua` 末尾有一句
+		         include("TechAndCivicUnlockables_", true);
+		     → 引擎按**文件名前缀**扫描 VFS，把所有 `TechAndCivicUnlockables_*.lua` 依次 include 进来
+		       （Firaxis 官方用法：DLC\Ethiopia\UI\Loaders\TechAndCivicUnlockables_Ethiopia.lua）——
+		       这是留给模组覆盖**共享 UI 库函数**的官方钩子，不必照抄原版文件、也不受 LuaContext 限制。
+		     该文件只覆盖 `CanEverUnlock`：给 CCB 的内部 trait（CCB_TRAIT_LEGACY_FORT）开白名单，
+		     让堡垒在科技树里照常列出；**数据机制不变**（弹道学后仍由授权链收回、从建造列表消失）。
+		     ⚠ 文件名必须保持 `TechAndCivicUnlockables_<后缀>.lua`，且 `<Files>` 与本段**两处**都要登记，
+		       否则引擎扫不到、本文件静默失效（详见该文件头注释与 docs\Civ6开发排坑实录.md）。 -->
+		<ImportFiles id="CCB_UI_Loaders">
+			<Properties>
+				<LoadOrder>19999</LoadOrder>
+			</Properties>
+			<File>ui/Loaders/TechAndCivicUnlockables_CCB.lua</File>
+		</ImportFiles>
 		<!--
 		<ReplaceUIScript id="productionpanel_bbg">
 			<Criteria>BBGTS_ProductionPanel_BBG_Expansion2</Criteria>
@@ -1732,6 +1748,8 @@
 		<File>ui/replacements/tradesupport.lua</File>
 		<File>ui/replacements/compatibility/traderoutechooser.lua</File>
 		<File>ui/replacements/compatibility/tradeoverview.lua</File>
+		<!-- 官方 UI 挂载点（文件名前缀钩子 `include("TechAndCivicUnlockables_")`，见 InGameActions 内 CCB_UI_Loaders） -->
+		<File>ui/Loaders/TechAndCivicUnlockables_CCB.lua</File>
 		<!--
 		<File>ui/bbg_customplacement.lua</File>		
 		<File>ui/replacements/strategicview_mapplacement.lua</File>
