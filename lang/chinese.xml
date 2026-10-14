@@ -9027,5 +9027,18 @@
 		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="zh_Hans_CN">
 			<Text>该单位移动时无视地形影响。</Text>
 		</Replace>
+		<!-- = 强化堡垒（CCB_IMPROVEMENT_REINFORCED_FORT）与"最高射击高度" = -->
+		<Replace Tag="LOC_CCB_IMPROVEMENT_REINFORCED_FORT_NAME" Language="zh_Hans_CN">
+			<Text>强化堡垒</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_IMPROVEMENT_REINFORCED_FORT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>进驻单位+4 [ICON_Strength] 防御力、+1[ICON_VISIBILITY] 视野，并自动获得两回合驻扎加成。位于其中的 [ICON_Range] 远程与攻城单位拥有最高射击高度：计算射击视线时无视地形与地貌的阻挡（山脉单元格仍然阻挡）。</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_NAME" Language="zh_Hans_CN">
+			<Text>最高射击高度</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_DESC" Language="zh_Hans_CN">
+			<Text>位于强化堡垒中：计算射击视线时无视地形与地貌的阻挡（山脉单元格除外）。</Text>
+		</Replace>
 </LocalizedText>
 </GameData>

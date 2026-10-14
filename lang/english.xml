@@ -1617,7 +1617,7 @@
 		<!-- == Support Units == -->
 		<!-- = Military Engineer = -->
 		<Replace Tag="LOC_UNIT_MILITARY_ENGINEER_ALT_DESCRIPTION" Language="en_US">
-			<Text>Medieval era support unit. Requires an Armory to produce. Can construct Roads, Railroads, Forts, Airstrips, Missile Silos, and Mountain Tunnel improvements. One of their build charges can also be used to complete 20% of a Canal, Dam or Aqueduct district or 50% of a Flood Barrier building.</Text>
+			<Text>Classical era support unit. Can construct Roads, Railroads, Forts, Reinforced Forts, Airstrips, Missile Silos, and Mountain Tunnel improvements. One of their build charges can also be used to complete 20% of a Canal, Dam or Aqueduct district or 50% of a Flood Barrier building.</Text>
 		</Replace>
 		<!-- = Medic = -->
 		<Replace Tag="LOC_UNIT_MEDIC_DESCRIPTION" Language="en_US">
@@ -4541,6 +4541,19 @@
 		</Replace>
 		<Replace Tag="LOC_ABILITY_CCB_DRONE_IGNORE_TERRAIN_COST_DESC" Language="en_US">
 			<Text>This unit ignores terrain movement costs.</Text>
+		</Replace>
+		<!-- = Reinforced Fort (CCB_IMPROVEMENT_REINFORCED_FORT) & High Ground Fire = -->
+		<Replace Tag="LOC_CCB_IMPROVEMENT_REINFORCED_FORT_NAME" Language="en_US">
+			<Text>Reinforced Fort</Text>
+		</Replace>
+		<Replace Tag="LOC_CCB_IMPROVEMENT_REINFORCED_FORT_DESCRIPTION" Language="en_US">
+			<Text>Units occupying it receive +4 [ICON_Strength] Combat Strength and +1 [ICON_VISIBILITY] Sight, and automatically gain two turns of fortification. [ICON_Range] Ranged and Siege units on this tile hold the highest ground: they ignore terrain and features when determining line of sight for their attacks (Mountains still block).</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_NAME" Language="en_US">
+			<Text>High Ground Fire</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CCB_REINFORCED_FORT_HIGH_GROUND_DESC" Language="en_US">
+			<Text>On a Reinforced Fort: ignores terrain and features when determining line of sight for ranged attacks (Mountains still block).</Text>
 		</Replace>
 </LocalizedText>
 </GameData>
